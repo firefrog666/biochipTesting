@@ -4,11 +4,13 @@ public class Edge extends Node{
 	boolean on;
 	boolean SA1 = false;
 	boolean SA0 = false;
+	public boolean isHorizontal;
 	int weight;
-	public Int4 coordinate;
+	//public Int4 coordinate;
 	
 	public Edge(){
 		super();
+		//coordinate = new Int4();
 	}
 	
 	
@@ -18,6 +20,7 @@ public class Edge extends Node{
 		SA0 = false;
 		weight = 0;
 		coordinate = new Int4();
+		isHorizontal = true;
 		
 	}
 	

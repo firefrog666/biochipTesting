@@ -1,32 +1,32 @@
 package biochipTesting;
-import gurobiILP.*;
+//import gurobiILP.*;
 
 import java.util.ArrayList;
 
 import java.util.Stack;
 
-import gurobi.GRBException;
+//import gurobi.GRBException;
 
 public class TestBench {
 	
 	
 	
-	public static void main(String arg[]) throws GRBException{
+	public static void main(String arg[]) {
 		
-		Enviroment env = new Enviroment();
-		
-		
+//		Enviroment env = new Enviroment();
+//		
+//		
+
+//		ArrayList<String> varNames = graph.variables;
+//		ArrayList<Integer> varTypes = graph.variableTypes;
+//		
+//		env.setVars(varNames,varTypes);
+//		env.setContrains(graph.ILP);
+//		env.setObjective(graph.obj);
+//		env.run();
 		Graph graph;
-		graph = new Graph(3);
+		graph = new Graph();
 		graph.getILPContrains();
-		ArrayList<String> varNames = graph.variables;
-		ArrayList<Integer> varTypes = graph.variableTypes;
-		
-		env.setVars(varNames,varTypes);
-		env.setContrains(graph.ILP);
-		env.setObjective(graph.obj);
-		env.run();
-		
 		graph.findPathsTest();
 		graph.findCutsTest();
 		

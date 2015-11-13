@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Node {
 	int number;
-	protected Int2 coordinate;
+	protected Int4 coordinate;
 	//protected Edge[] adjEdges;
 	protected Node[] adjNodes;
 	protected ArrayList<Node> adjNodesList;
@@ -12,6 +12,7 @@ public class Node {
 	public Node(){
 		this.number = 0;
 		adjNodesList = new ArrayList<Node>();
+		coordinate = new Int4();
 	}
 	
 	public Node(int i)
@@ -47,7 +48,7 @@ public class Node {
 		coordinate.y = y;
 	}
 	
-	public Int2 getCoordinate(){
+	public Int4 getCoordinate(){
 		return coordinate;
 	}
 }

@@ -22,8 +22,11 @@ public class Graph {
 	Node exit;
 	int width;
 	int height;
-	HashMap<Integer,Edge> hashEdges;
+	HashMap<Integer,Edge> hashEdges;  
 	HashMap<Integer,Node> hashNodes; //Hash Node by its coordinates i*100 + j; 
+	HashMap<Integer,Edge> hashEdgesHori; // hash horizontal edges by coordinate of left down point
+	HashMap<Integer,Edge> hashEdgesVert; // hash vertical edges by coordinate of left down point
+ 	
 	HashMap<Edge,String> hashVariables;
 	HashMap<Edge, String> hashBinaries;
 	ArrayList<ArrayList<Edge>> paths;
@@ -32,12 +35,17 @@ public class Graph {
 	ArrayList<String> variables;
 	ArrayList<Integer> variableTypes;
 	String obj;
+	
 
 	
 	public Graph(){
 		
 		hashVariables = new HashMap<Edge,String>() ;
 		hashBinaries = new HashMap<Edge, String>();
+		hashEdgesHori = new HashMap<Integer,Edge>();
+		hashEdgesVert = new HashMap<Integer,Edge>();
+		hashEdges = new HashMap<Integer,Edge>();
+		hashNodes  = new HashMap<Integer,Node>();
 		randomInit();
 		//init3_3();		
 	}
@@ -76,7 +84,8 @@ public class Graph {
 		hashNodes = new HashMap<Integer, Node>();
 		for(int i = 0; i< width; i++){
 			for(int j =0; j < height ; j ++){
-				nodes[id].setNumber(id);				
+				nodes[id].setNumber(id);
+				nodes[id].setCoordinate(i, j);
 				hashNodes.put(i*100+j, nodes[id]);
 				id ++;
 			}
@@ -148,8 +157,20 @@ public class Graph {
 			for(Node adjNode: adjNodes){
 				if(node.number < adjNode.number){
 					Edge edge = new Edge(i);i++;
+					edge.coordinate.x = node.coordinate.x;
+					edge.coordinate.y = node.coordinate.y;
+					edge.coordinate.s = adjNode.coordinate.x;
+					edge.coordinate.t = adjNode.coordinate.y;
+					if(node.coordinate.x == adjNode.coordinate.x)
+						edge.isHorizontal = true;
+					else
+						edge.isHorizontal = false;
 					edges.add(edge);
 					hashEdges.put(adjNode.number * 10 + node.number, edge);
+					if(edge.isHorizontal)
+						hashEdgesHori.put(edge.coordinate.x * 100 + edge.coordinate.y, edge);
+					else
+						hashEdgesVert.put(edge.coordinate.x*100 + edge.coordinate.y, edge);
 				}
 			}
 		}
@@ -211,13 +232,21 @@ public class Graph {
 			jointNodes.add(adjNode);
 		}
 		
-		
-		
-		
-		
 		return jointNodes;
 	}
 	
+	//connect means edge between two node is note wall
+	public ArrayList<Node> getConnectedNodes(Node node){
+		ArrayList<Node> connectedNodes = new ArrayList<Node>();
+		Node[] adjNodes = node.getAdjNodes();
+		for(Node adjNode:adjNodes){
+			
+			if(!(getEdge(adjNode,node) instanceof Wall))
+				connectedNodes.add(adjNode);
+		}
+		
+		return connectedNodes;
+	}
 public void findPathsTest(){
 		
 		Node node = this.entrance;
@@ -338,7 +367,7 @@ public void findPathsTest(){
 			for(Edge e:paths.get(j)){
 				e.turnOn();
 			}
-			if (DFS() == false)
+			if (DFSTest() == false)
 				return false;
 		}
 		
@@ -353,7 +382,7 @@ public void findPathsTest(){
 			for(Edge e:cuts.get(j)){
 				e.turnOff();
 			}
-			if (DFS() == true)
+			if (DFSTest() == true)
 				return false;
 		}
 		
@@ -375,7 +404,9 @@ public void findPathsTest(){
 		return flow;
 	}
 	
-	public boolean DFS(){
+	
+	//for testing if there is a flow from source to sensor
+	public boolean DFSTest(){
 		Stack<Node> stack = new Stack<Node>();
 		ArrayList<Node> discoveredNodes = new ArrayList<Node>();
 		ArrayList<Node> cnctNodes;
@@ -396,6 +427,37 @@ public void findPathsTest(){
 			if(cnctNodes.size() >0){				
 				for( Node cnctNode:cnctNodes){											
 						if(cnctNode == this.exit)	
+							return true;
+						else
+							stack.add(cnctNode);
+				}
+			}			
+		}
+		
+		return false;
+	}
+	
+	public boolean DFS(Node start, Node end){
+		Stack<Node> stack = new Stack<Node>();
+		ArrayList<Node> discoveredNodes = new ArrayList<Node>();
+		ArrayList<Node> cnctNodes;
+		stack.add(start);
+		Node node;
+		
+		
+ 		
+		while(!stack.isEmpty()){
+			node = stack.pop();
+			
+			if(discoveredNodes.contains(node))
+				continue;
+			else
+				discoveredNodes.add(node);
+			
+			cnctNodes= getConnectedNodes(node);
+			if(cnctNodes.size() >0){				
+				for( Node cnctNode:cnctNodes){											
+						if(cnctNode == end)	
 							return true;
 						else
 							stack.add(cnctNode);
@@ -677,8 +739,8 @@ public void findPathsTest(){
 	public ArrayList<ArrayList<Edge>> findPaths(){
 		ArrayList<ArrayList<Edge>> paths = new ArrayList<ArrayList<Edge>>();
 		ArrayList<Edge> path = new ArrayList<Edge>();
-		ArrayList<Edge> targetEdgesHori = new ArrayList<Edge>();
-		ArrayList<Edge> targetEdgesVert = new ArrayList<Edge>();
+		HashMap<Integer,Edge> targetEdgesHori = new HashMap<Integer,Edge>();
+		HashMap<Integer,Edge> targetEdgesVert = new HashMap<Integer,Edge>();
 		
 		while(!targetEdgesVert.isEmpty()){
 			path = greedyWalk(targetEdgesVert,Direction.North);
@@ -693,13 +755,99 @@ public void findPathsTest(){
 		return paths;
 	}
 	
-	public ArrayList<Edge> greedyWalk(ArrayList<Edge> targetEdges,Direction dir){
+	public Node greedyNodeToEdge(ArrayList<Edge>path, HashMap<Integer,Edge> targetEdges, Edge nextEdge,Node start,Direction dir){
+		Node nextNode = null;
+		
+		return nextNode;		
+	}
+	
+	public Edge findNextTargetEdge(HashMap<Integer,Edge> targetEdges, Node start, Direction dir){
+		Edge targetEdge = null;
+		switch(dir){
+		case East:
+			for(int j = start.coordinate.y; j < width; j ++){
+				Edge e = targetEdges.get(start.coordinate.x*100 + j);
+				if( e != null){
+					return e;
+				}
+			}
+			Node node = hashNodes.get((start.coordinate.x + 1)*100 + width -1);
+			if(node == exit)
+				return null;
+			else{
+				return findNextTargetEdge(targetEdges, node, Direction.West);
+			}
+			
+		case West:
+			for(int j = start.coordinate.y; j >= 0 ; j --){
+				Edge e = targetEdges.get(start.coordinate.x*100 + j);
+				if( e != null){
+					return e;
+				}
+			}
+			node = hashNodes.get((start.coordinate.x + 1)*100 + 0 -1);
+			if(node == exit)
+				return null;
+			else{
+				return findNextTargetEdge(targetEdges, node, Direction.East);
+			}
+			
+		case North:
+			for(int i = start.coordinate.x; i < height ; i++){
+				Edge e = targetEdges.get(i * 100 + start.coordinate.y);
+				if( e != null){
+					return e;
+				}
+			}
+			node = hashNodes.get(0*100 + start.coordinate.y + 1);
+			if(node == exit)
+				return null;
+			else{
+				return findNextTargetEdge(targetEdges, node, Direction.South);
+			}
+			
+		case South:
+			for(int i = start.coordinate.x; i >=0 ; i--){
+				Edge e = targetEdges.get(i * 100 + start.coordinate.y);
+				if( e != null){
+					return e;
+				}
+			}
+			node = hashNodes.get((height -1 )*100 + start.coordinate.y + 1);
+			if(node == exit)
+				return null;
+			else{
+				return findNextTargetEdge(targetEdges, node, Direction.North);
+			}
+			
+		}
+		
+		
+		return targetEdge;
+	}
+	
+	
+	public ArrayList<Edge> greedyWalk(HashMap<Integer,Edge> targetEdges,Direction dir){
 		ArrayList<Edge> path = new ArrayList<Edge>();
+		Node nextNode;
+		switch(dir){
+		case East:
+			Edge nextEdge = findNextTargetEdge(targetEdges, entrance, Direction.East);
+			if(nextEdge == null)
+				return null;
+			nextNode = greedyNodeToEdge(path, targetEdges,nextEdge,entrance,Direction.East);
+			break;
+		case North:			
+			break;
+		}
+			
+		
 		
 		return path;
 	}
 	
-	public void sortEdges(ArrayList<Edge> edges){
+	public void sortEdges(ArrayList<Edge> edges, ArrayList<Edge> targetEdgesHori, ArrayList<Edge> targetEdgesVert){
+		
 		
 	}
 	
