@@ -24,30 +24,35 @@ public class Graph {
 	int height;
 	HashMap<Integer,Edge> hashEdges;  
 	HashMap<Integer,Node> hashNodes; //Hash Node by its coordinates i*100 + j; 
-	HashMap<Integer,Edge> hashEdgesHori; // hash horizontal edges by coordinate of left down point
-	HashMap<Integer,Edge> hashEdgesVert; // hash vertical edges by coordinate of left down point
+	//HashMap<Integer,Edge> hashEdgesHori; // hash horizontal edges by coordinate of left down point
+	//HashMap<Integer,Edge> hashEdgesVert; // hash vertical edges by coordinate of left down point
+	HashMap<Integer,Edge> hashTarEdges;
  	
 	HashMap<Edge,String> hashVariables;
 	HashMap<Edge, String> hashBinaries;
 	ArrayList<ArrayList<Edge>> paths;
+	ArrayList<ArrayList<Node>> pathsNode;
 	ArrayList<ArrayList<Edge>> cuts;
 	ArrayList<String> ILP;
 	ArrayList<String> variables;
 	ArrayList<Integer> variableTypes;
 	String obj;
-	
+	 
 
 	
 	public Graph(){
 		
 		hashVariables = new HashMap<Edge,String>() ;
 		hashBinaries = new HashMap<Edge, String>();
-		hashEdgesHori = new HashMap<Integer,Edge>();
-		hashEdgesVert = new HashMap<Integer,Edge>();
+		//hashEdgesHori = new HashMap<Integer,Edge>();
+		//hashEdgesVert = new HashMap<Integer,Edge>();
 		hashEdges = new HashMap<Integer,Edge>();
 		hashNodes  = new HashMap<Integer,Node>();
+		hashTarEdges = new HashMap<Integer,Edge>();
 		randomInit();
-		detourWalk(Dir.East,hashEdgesHori, hashEdgesVert);
+		pathsNode = new ArrayList<ArrayList<Node>>();
+		pathsNode.add(detourWalk(Dir.East,hashTarEdges));
+		pathsNode.add(detourWalk(Dir.North,hashTarEdges));
 		//init3_3();		
 	}
 
@@ -92,6 +97,8 @@ public class Graph {
 			}
 		}
 		
+		
+		
 		//assign joint nodes to each node
 		for(int i = 0; i< width; i++){
 			for(int j =0; j < height ; j ++){
@@ -108,7 +115,11 @@ public class Graph {
 		
 		getHashEdges();
 		
-		
+		Wall aWall = new Wall();
+		aWall.setCoordinate(1, 0, 1, 1);
+		aWall.isHorizontal = true;
+		hashEdges.replace(aWall.hashValue(),aWall);
+		hashTarEdges.remove(aWall.hashValue());
 		entrance = nodes[0];
 		exit = nodes[height * width - 1];
 	}
@@ -148,6 +159,10 @@ public class Graph {
 		exit = nodes[8];
 	}
 	
+	public<K,T> void replaceHashMap(HashMap<K,T> hashMap, T o, K key){
+		hashMap.replace(key, o);
+	}
+	
 	public void getHashEdges(){
 		
 		hashEdges = new HashMap<Integer, Edge>();
@@ -167,13 +182,24 @@ public class Graph {
 					else
 						edge.isHorizontal = false;
 					edges.add(edge);
-					hashEdges.put(adjNode.number * 10 + node.number, edge);
-					if(edge.isHorizontal)
-						hashEdgesHori.put(edge.coordinate.x * 100 + edge.coordinate.y, edge);
-					else
-						hashEdgesVert.put(edge.coordinate.x*100 + edge.coordinate.y, edge);
+					hashEdges.put(hash2Nodes(adjNode,node), edge);
+//					if(edge.isHorizontal)
+//						hashEdgesHori.put(edge.coordinate.x * 100 + edge.coordinate.y, edge);
+//					else
+//						hashEdgesVert.put(edge.coordinate.x*100 + edge.coordinate.y, edge);
+					
+					hashTarEdges.put(edge.hashValue(), edge);
 				}
 			}
+		}
+	}
+	
+	public int hash2Nodes(Node a, Node b){
+		if(a.number < b.number){
+			return a.coordinate.x * 1000000 + a.coordinate.y * 10000 + b.coordinate.x * 100 + b.coordinate.y;
+		}
+		else{
+			return b.coordinate.x * 1000000 + b.coordinate.y * 10000 + a.coordinate.x * 100 + a.coordinate.y;
 		}
 	}
 	
@@ -185,38 +211,22 @@ public class Graph {
 		return getEdge(nodes[a], nodes[b]);
 	}
 	
-	public Edge getEdge(Node a, Node b){
-		int bigNumber, smallNumber;
-		if(a.number < b.number){
-			bigNumber = b.number; 
-			smallNumber =a.number;
-		}				
-		else{
-			bigNumber = a.number; 
-			smallNumber =b.number;					
-		}
+	public Edge getEdge(Node a, Node b){		
 		
-		return hashEdges.get(bigNumber *10 + smallNumber);
+		return hashEdges.get(hash2Nodes(a,b));
 	}
 	
 	public ArrayList<Node> getCnctNodes(Node node){
-		int bigNumber, smallNumber;
+		
 		ArrayList<Node> cnctNodes = new ArrayList<Node>();
 		Node[] adjNodes = node.getAdjNodes();
 		Edge edge = null;
 		for(Node adjNode:adjNodes){
 				
-			if(adjNode.number < node.number){
-				bigNumber = node.number; 
-				smallNumber =adjNode.number;
-			}				
-			else{
-				bigNumber = adjNode.number; 
-				smallNumber =node.number;					
-			}
+		
 			
-			if(hashEdges.containsKey(bigNumber * 10 + smallNumber)){
-				edge = hashEdges.get(bigNumber * 10 + smallNumber);
+			if(hashEdges.containsKey(hash2Nodes(adjNode,node))){
+				edge = hashEdges.get(hash2Nodes(adjNode,node));
 			}
 			
 			if (edge.on)
@@ -558,9 +568,13 @@ public void findPathsTest(){
 	
 	public ArrayList<Edge> pathNodeToEdge(ArrayList<Node> pathNode){
 		ArrayList<Edge> pathEdge = new ArrayList<Edge>();
+		Node a;
+		Node b;
 		for(int i = 0; i< pathNode.size() -1; i ++){
 			int j = i+1;
-			Edge e = getEdge(i,j);
+			a = pathNode.get(i);
+			b = pathNode.get(j);
+			Edge e = getEdge(a,b);
 			pathEdge.add(e);
 		}
 		return pathEdge;
@@ -799,45 +813,7 @@ public void findPathsTest(){
 		return rotateClkWise(rotateClkWise(dir));
 	}
 	
-	public Node greedyNodeToEdge(ArrayList<Node>path, ArrayList<Node>checkPoints,ArrayList<Dir> checkPointDirs,HashMap<Integer,Edge> targetEdges, Edge targetEdge,Node start,Dir dir){
-		
-		Node nextNode = null;
-		Node nextStart;
-		Node checkPoint;
-		Dir checkPointDir;
-		// move to the longitude of target edge
-		switch(dir){
-		case East:
-			if(start.coordinate.x == targetEdge.coordinate.x){
-				nextNode = move1Step(start,dir);
-				if(nextNode != null){
-					if(nodeIsOnEdge(nextNode,targetEdge)){
-						nextStart = move1Step(nextNode,dir);
-						path.add(nextNode);path.add(nextStart);
-						return nextStart;
-					}
-					else if (path.contains(nextNode)){
-						checkPoint = checkPoints.remove(checkPoints.size()-1);
-						checkPointDir = checkPointDirs.remove(checkPointDirs.size()-1);
-						stackPopUtilCheckPoint(path,checkPoint);
-						nextNode = greedyNodeToEdge(path,checkPoints, checkPointDirs, targetEdges, targetEdge,nextNode,checkPointDir);
-					}
-					else{		
-						
-						nextNode = greedyNodeToEdge(path,checkPoints,checkPointDirs, targetEdges, targetEdge,nextNode,dir);
-						return nextNode;
-					}
-						
-				}
-				// if nextNode == null
-				else{
-					
-				}
-			}
-			
-		}
-		return nextNode;		
-	}
+	
 	
 	
 //	if(node.coordinate.x == targetEdge.coordinate.x){
@@ -974,16 +950,55 @@ public void findPathsTest(){
 	
 	
 	
+	public boolean dirContainEdge(Node node, Dir searchDir, HashMap<Integer,Edge> targetEdges){
+		Dir d = reverseDir(searchDir);
+		return reverseDirContainEdge(node,d,targetEdges);
+		
+	}
 	
 	
-	
-	public boolean lowerContainEdge(Node node, HashMap<Integer,Edge> targetEdges){
-		for(int i = 0; i < node.coordinate.x;i++){
-			for (int j = 0; j< width-1; j++){
-				if(targetEdges.containsKey(hashEdges.get(i*100+j))){
-					return true;
+	public boolean reverseDirContainEdge(Node node, Dir searchDir,HashMap<Integer,Edge> targetEdges){
+		
+		switch(searchDir){
+		case East:
+			for(int i = 0; i < node.coordinate.x;i++){
+				for (int j = 0; j< width-1; j++){
+					if(targetEdges.containsKey(i*100+j)){
+						return true;
+					}
 				}
 			}
+			break;
+		case North:
+			for(int j = 0; j < node.coordinate.y;j++){
+				for (int i = 0; i < height-1; i++){
+					if(targetEdges.containsKey(i*100+j)){
+						return true;
+					}
+				}
+			}
+			break;
+		case South:		
+			for(int i = node.coordinate.x+1; i < height -1;i++){
+				for (int j = 0; j< width -1; j++){
+					if(targetEdges.containsKey(i*100)){
+						return true;
+					}
+				}
+			}
+			break;
+		case West:
+			for(int i = 0; i < height -1;i++){
+				for (int j = node.coordinate.y +1; j< width -1; j++){
+					if(targetEdges.containsKey(i*100+j)){
+						return true;
+					}
+				}
+			}
+			break;
+		default:
+			break;
+		
 		}
 		
 			
@@ -991,6 +1006,7 @@ public void findPathsTest(){
 	}
 	
 	public boolean leftContainEdge(Node node, ArrayList<Edge> targetEdges){
+		
 		for(int j = 0; j < node.coordinate.y;j++){
 			for (int i = 0; j< height-1; i++){
 				if(targetEdges.contains(hashEdges.get(i*100+j))){
@@ -998,7 +1014,6 @@ public void findPathsTest(){
 				}
 			}
 		}
-		
 			
 	    return false;
 	}
@@ -1024,7 +1039,7 @@ public void findPathsTest(){
 			
 	}
 	
-	public Dir selectDirCheckPoint(ArrayList<Node> path, ArrayList<Node> checkPoints, ArrayList<ArrayList<Dir>> checkPointDirList,
+	public Dir selectCheckPointDir(ArrayList<Node> path, ArrayList<Node> checkPoints, ArrayList<ArrayList<Dir>> checkPointDirList,
 			 HashMap<Integer,Edge> targetEdges,Dir searchDir){
 		Dir dir = null;
 		Node checkPoint = checkPoints.get(checkPoints.size()-1);
@@ -1050,136 +1065,134 @@ public void findPathsTest(){
 		}
 		
 		for(Dir d:checkPointDirs){
-			if(lowerContainEdge(checkPoint,targetEdges)){
-				if(d == Dir.South){
+			if(dirContainEdge(checkPoint,d,targetEdges)){				
 					checkPointDirs.remove(d);
 					return d;
-				}
-			}
-			else{
-				if(d == Dir.North){
-					checkPointDirs.remove(d);
-					return d;
-				}
 			}
 		}
+			
+		
 		
 		
 		return dir;
 	}
 	
+	public ArrayList<Dir> nodeDirOptions(Node node){
+		ArrayList<Dir> dirOptions = new ArrayList<Dir>();
+		for(Dir d:Dir.values()){
+			if(thereIsWay(node,d)){
+				dirOptions.add(d);
+			}
+		}
+		return dirOptions; 
+	}
 	
 	
-	public ArrayList<Node>  detourWalk(Dir startDir,HashMap<Integer,Edge> targetEdgesHor,HashMap<Integer,Edge> targetEdgeVer){
+	public ArrayList<Node>  detourWalk(Dir startDir,HashMap<Integer,Edge> targetEdges){
 		ArrayList<Node> path = new ArrayList<Node>();
+		ArrayList<Edge>pathEdges;
+		ArrayList<Node> popPath = new ArrayList<Node>();
+		ArrayList<Edge> popPathEdge = new ArrayList<Edge>();
 		ArrayList<Node> checkPoints = new ArrayList<Node>();
 		ArrayList<ArrayList<Dir>> checkPointDirs = new ArrayList<ArrayList<Dir>>();
 		ArrayList<Dir> dirOptions;
 		Node checkPoint;
+		HashMap<Integer,Edge> tarEdgeClone = (HashMap<Integer, Edge>) targetEdges.clone();
 		
 		Node node = entrance;
 		Node nextNode;
-		Edge edge;
-		Dir dir = startDir;
+		Edge newEdge;
+		Dir nextStepDir = startDir;
+		Dir startDirTemp = startDir; 
 		Dir pathDirReverse = reverseDir(startDir);
+		path.add(entrance);
 		
-		switch(startDir){
-		case East:
-			nextNode = move1Step(node,dir);
-			while(nextNode != null){
-				if(path.contains(nextNode)){
+			while(move1Step(node,nextStepDir) != exit){				
+				node = move1Step(node,nextStepDir);
+				//go into path
+				if(path.contains(node)){
+					popPath.clear();
+					popPathEdge.clear();
 					checkPoint = checkPoints.get(checkPoints.size()-1);
-					stackPopUtilCheckPoint(path,checkPoint);
-					dir = selectDirCheckPoint(path,checkPoints,checkPointDirs,targetEdgesHor,startDir);
-					nextNode = move1Step(nextNode,dir);
-					pathDirReverse = reverseDir(dir);
-					dir = startDir;
+					stackPopUtilCheckPoint(path,checkPoint,popPath);
+					popPathEdge = pathNodeToEdge(popPath);
+					for(Edge e:popPathEdge){
+						tarEdgeClone.put(e.hashValue(), e);
+					}
+					
+					nextStepDir = selectCheckPointDir(path,checkPoints,checkPointDirs,tarEdgeClone,startDir);
+					node = move1Step(node,nextStepDir);
+					path.add(node);
+					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
+					tarEdgeClone.remove(newEdge.hashValue());
+					pathDirReverse = reverseDir(nextStepDir);
+					nextStepDir = startDir;
+				}			
+				//no edge in startDir
+				else if(!thereIsWay(node,startDirTemp)){
+					for(Dir d:nodeDirOptions(node)){
+						if(d != pathDirReverse && d != startDirTemp){
+							if(d == startDir || d == reverseDir(startDir)){
+								startDirTemp =d;
+								nextStepDir = d;
+								break;
+							}
+							else if(dirContainEdge(node,d,tarEdgeClone)){
+								nextStepDir = d;
+								break;
+							}						
+						}
+					}
+					//didn't find a dir contains targetEdge, choose a random direction
+					if(!thereIsWay(node,nextStepDir)){
+						for(Dir d:nodeDirOptions(node)){
+							if(d != pathDirReverse && d != nextStepDir){
+								
+								nextStepDir = d;
+								break;
+							}
+						}
+					}
+					
+					//add node to path, add check point and check point directions
+					
+					path.add(node);
+					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
+					tarEdgeClone.remove(newEdge.coordinate.x*100 + newEdge.coordinate.y);
+					dirOptions = nodeDirOptions(node);
+					dirOptions.remove(nextStepDir);
+					dirOptions.remove(pathDirReverse);
+					
+					pathDirReverse = getDir2Nodes(move1Step(node,nextStepDir),node);
+					if(dirOptions.size()>0){
+						checkPoints.add(node);
+						checkPointDirs.add(dirOptions);
+					}
 					
 				}
-				else{
-					dirOptions = new ArrayList<Dir>();
-					path.add(nextNode);
-					for(Dir d:Dir.values()){
-						if(d != dir && d != pathDirReverse){
-							Node n = move1Step(nextNode,d);
-							if( n != null){
-								dirOptions.add(d);
-							}
-						}					
-						
-					}
-					if(dirOptions.size()>0)
-						checkPoints.add(nextNode);					
-					pathDirReverse = reverseDir(dir);
-					node = nextNode;
-					nextNode = move1Step(nextNode,dir);
-				}
-				
-			}
-			
-			//Now the nextNode = null
-			//if reach exit
-			if(node == exit){
-				break;
-			}
-			
-			//move up or move down
-			if(lowerContainEdge(node,targetEdgesHor)){
-				nextNode = move1Step(node,Dir.South);
-				if(nextNode != null){
-					dirOptions = new ArrayList<Dir>();
-					path.add(nextNode);
-					for(Dir d:Dir.values()){
-						if(d != Dir.South && d != pathDirReverse){
-							Node n = move1Step(nextNode,d);
-							if( n != null){
-								dirOptions.add(d);
-							}
-						}		
-					}
-					if(dirOptions.size()>0)
-						checkPoints.add(nextNode);					
-					pathDirReverse = reverseDir(dir);
-					node = nextNode;
-					nextNode = move1Step(nextNode,startDir);
-				}
+				//there is edge in dir
+				else if(thereIsWay(node,nextStepDir)){
+					path.add(node);
+					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
+					tarEdgeClone.remove(newEdge.coordinate.x*100 + newEdge.coordinate.y);
+					dirOptions = nodeDirOptions(node);
+					dirOptions.remove(nextStepDir);
+					dirOptions.remove(pathDirReverse);
 					
-			}
-			else{
-				nextNode = move1Step(node,Dir.North);
-				if(nextNode != null){
-					dirOptions = new ArrayList<Dir>();
-					path.add(nextNode);
-					for(Dir d:Dir.values()){
-						if(d != Dir.North && d != pathDirReverse){
-							Node n = move1Step(nextNode,d);
-							if( n != null){
-								dirOptions.add(d);
-							}
-						}		
+					pathDirReverse = getDir2Nodes(move1Step(node,nextStepDir),node);
+					if(dirOptions.size()>0){
+						checkPoints.add(node);
+						checkPointDirs.add(dirOptions);
 					}
-					if(dirOptions.size()>0)
-						checkPoints.add(nextNode);					
-					pathDirReverse = reverseDir(dir);
-					node = nextNode;
-					nextNode = move1Step(nextNode,startDir);
 				}
 			}
 			
-		case North:
-			break;
-		case South:
-			break;
-		case West:
-			break;
-		default:
-			break;
+			path.add(exit);
+			pathEdges = pathNodeToEdge(path);
+			for(Edge e:pathEdges){
+				targetEdges.remove(e.hashValue());
 			
-			
-			
-			
-				
-		}
+			}
 		
 		return path;
 		
@@ -1228,6 +1241,58 @@ public void findPathsTest(){
 		else
 			return true;
 	}
+	public boolean thereIsWay(Node a, Dir dir){
+		Node b;
+		Edge e = null;
+		switch(dir){
+		case East:
+			b = getNode(a.coordinate.x, a.coordinate.y+1);
+			if(b == null)
+				return false;
+			else{
+				e = getEdge(a,b);
+				if(e == null || e instanceof Wall)
+					return false;
+			}
+			break;
+		case North:
+			b = getNode(a.coordinate.x+1, a.coordinate.y);
+			if(b == null)
+				return false;
+			else{
+				e = getEdge(a,b);
+				if(e == null || e instanceof Wall)
+					return false;
+			}
+			break;
+		case South:
+			b = getNode(a.coordinate.x-1, a.coordinate.y);
+			if(b == null)
+				return false;
+			else{
+				e = getEdge(a,b);
+				if(e == null || e instanceof Wall)
+					return false;
+			}
+			break;
+		case West:
+			b = getNode(a.coordinate.x, a.coordinate.y-1);
+			if(b == null)
+				return false;
+			else{
+				e = getEdge(a,b);
+				if(e == null || e instanceof Wall)
+					return false;
+			}
+			break;
+		default:
+			break;
+		
+		}
+		return true;
+	}
+	
+	
 	
 	public boolean go(Node start, ArrayList<Node> stack, ArrayList<Node> checkPoints, Dir dir){
 		
@@ -1250,56 +1315,17 @@ public void findPathsTest(){
 		return true;
 	}
 	
-	public <T> void stackPopUtilCheckPoint(ArrayList<T> stack, T checkPoint){
+	public <T> void stackPopUtilCheckPoint(ArrayList<T> stack, T checkPoint,ArrayList<T> popStack){
 		T o = stack.remove(stack.size()-1);
-		if(o == checkPoint)
+		popStack.add(o);
+		if(o == checkPoint){
 			stack.add(o);
-		else
-			stackPopUtilCheckPoint(stack,checkPoint);
-	}
-	public void goHorizontal(Dir horDirection, Dir verDirection, Node start, ArrayList<Node> path, 
-			ArrayList<Edge> targetEdges){
- 		ArrayList<Node> checkPoints = new ArrayList<Node>();
-		Boolean thereIsaWay = true;
-		Node checkPoint;
-		
-		HashMap<Integer, Edge> hashEdgeByCoordinate = new HashMap<Integer,Edge>();
-		
-		switch(horDirection){
-		case East:	
-			thereIsaWay = go(start,path,checkPoints,Dir.East);
-			while(thereIsaWay){
-				thereIsaWay = go(start,path,checkPoints,Dir.East);
-			}
-			checkPoint = checkPoints.remove(checkPoints.size());
-			stackPopUtilCheckPoint(path, checkPoint);
-			// there is no way East, go up or down?
-			//if there is target edges down, aim for down
-			
-			for(int i  = 0; i < start.coordinate.y - 1; i++){
-				if(hashEdgeByCoordinate.containsKey(i)){
-					 go(start, path, checkPoints,Dir.South);
-					 
-					 break;
-				}
-			}
-			
-				
-			//if(hashEdgeByCoordinate)
-			
-			break;
-		case West:
-			break;
-		default:
-			break;
+			popStack.remove(o);
 		}
-			
-		 
-		
-		// if hit the brink go up
-		// if hit the wall go up or down
-		// if get the longitude of exit, go to the latitude of exit
+		else
+			stackPopUtilCheckPoint(stack,checkPoint,popStack);
 	}
+
 	
 	public void goVertical(){
 		

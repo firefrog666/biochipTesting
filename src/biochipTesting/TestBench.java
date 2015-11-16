@@ -25,7 +25,7 @@ public class TestBench {
 //		env.setObjective(graph.obj);
 //		env.run();
 		Graph graph;
-		graph = new Graph();
+ 		graph = new Graph();
 		//graph.getILPContrains();
 		//graph.findPathsTest();
 		//graph.findCutsTest();
