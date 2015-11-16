@@ -53,5 +53,10 @@ public class Edge extends Node{
 		coordinate.t = t;
 	}
 	
+	public int hashValue(){
+		int hash = coordinate.x * 1000000 + coordinate.y * 10000 + coordinate.s * 100 + coordinate.t;
+		return hash;
+	}
+	
 
 }

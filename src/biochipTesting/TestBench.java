@@ -26,9 +26,9 @@ public class TestBench {
 //		env.run();
 		Graph graph;
 		graph = new Graph();
-		graph.getILPContrains();
-		graph.findPathsTest();
-		graph.findCutsTest();
+		//graph.getILPContrains();
+		//graph.findPathsTest();
+		//graph.findCutsTest();
 		
 		if(!graph.pathTest())
 			System.out.println("there is at least one SA0 fault in this chip");

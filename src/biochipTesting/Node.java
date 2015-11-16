@@ -51,4 +51,8 @@ public class Node {
 	public Int4 getCoordinate(){
 		return coordinate;
 	}
+	public int hashValue(){
+		int hash = coordinate.x * 100+ coordinate.y ;
+		return hash;
+	}
 }
