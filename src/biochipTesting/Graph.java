@@ -1,5 +1,6 @@
 package biochipTesting;
 import java.util.Random;
+import java.util.Set;
 import java.util.Stack;
 
 import javax.swing.SpringLayout.Constraints;
@@ -50,11 +51,31 @@ public class Graph {
 		hashNodes  = new HashMap<Integer,Node>();
 		hashTarEdges = new HashMap<Integer,Edge>();
 		randomInit();
+		
 		pathsNode = new ArrayList<ArrayList<Node>>();
 		pathsNode.add(detourWalk(Dir.East,hashTarEdges));
 		pathsNode.add(detourWalk(Dir.North,hashTarEdges));
+		Set<Integer> keySet;
+		Integer[] keySetInt;
+		ArrayList<Node> path = new ArrayList<Node>();
+ 		while(hashTarEdges.size()>0){
+ 			path.clear();
+			keySet = hashTarEdges.keySet();
+			 keySetInt = (Integer[]) keySet.toArray();
+			 Integer aKey = keySetInt[0];
+			 Edge tarEdge = hashTarEdges.remove(aKey);
+			 Node a = getNode(tarEdge.coordinate.x,tarEdge.coordinate.y);
+			 Node b = getNode(tarEdge.coordinate.s,tarEdge.coordinate.t);
+			 
+			 DFS(a,entrance,path);
+			 DFS(b,exit,path);
+			 
+		}
+		
 		//init3_3();		
 	}
+	
+	
 
 	public Graph(int i){
 		//creat a default grid with the size of i
@@ -448,36 +469,7 @@ public void findPathsTest(){
 		return false;
 	}
 	
-	public boolean DFS(Node start, Node end){
-		Stack<Node> stack = new Stack<Node>();
-		ArrayList<Node> discoveredNodes = new ArrayList<Node>();
-		ArrayList<Node> cnctNodes;
-		stack.add(start);
-		Node node;
-		
-		
- 		
-		while(!stack.isEmpty()){
-			node = stack.pop();
-			
-			if(discoveredNodes.contains(node))
-				continue;
-			else
-				discoveredNodes.add(node);
-			
-			cnctNodes= getConnectedNodes(node);
-			if(cnctNodes.size() >0){				
-				for( Node cnctNode:cnctNodes){											
-						if(cnctNode == end)	
-							return true;
-						else
-							stack.add(cnctNode);
-				}
-			}			
-		}
-		
-		return false;
-	}
+	
 	
 	public ArrayList<Edge> getJointEdges(Node node){
 		ArrayList <Edge> edges = new ArrayList<Edge>();
@@ -956,41 +948,45 @@ public void findPathsTest(){
 		
 	}
 	
+	public int hash4Int(int a,int b, int c, int d){
+		assert(a == c || b ==d);
+		return a * 1000000 + b*10000+c*100+d;
+	}
 	
 	public boolean reverseDirContainEdge(Node node, Dir searchDir,HashMap<Integer,Edge> targetEdges){
 		
 		switch(searchDir){
-		case East:
-			for(int i = 0; i < node.coordinate.x;i++){
-				for (int j = 0; j< width-1; j++){
-					if(targetEdges.containsKey(i*100+j)){
+		case North:
+			for(int i = 0; i <= node.coordinate.x -1;i++){
+				for (int j = 0; j<= width-2; j++){
+					if(targetEdges.containsKey(hash4Int(i,j,i,j+1))){
 						return true;
 					}
 				}
 			}
 			break;
-		case North:
-			for(int j = 0; j < node.coordinate.y;j++){
-				for (int i = 0; i < height-1; i++){
-					if(targetEdges.containsKey(i*100+j)){
+		case East:
+			for(int j = 0; j <= node.coordinate.y -1;j++){
+				for (int i = 0; i <= height-2; i++){
+					if(targetEdges.containsKey(hash4Int(i,j,i+1,j))){
 						return true;
 					}
 				}
 			}
 			break;
 		case South:		
-			for(int i = node.coordinate.x+1; i < height -1;i++){
-				for (int j = 0; j< width -1; j++){
-					if(targetEdges.containsKey(i*100)){
+			for(int i = node.coordinate.x+1; i <= height -1;i++){
+				for (int j = 0; j<= width -2; j++){
+					if(targetEdges.containsKey(hash4Int(i,j,i,j+1))){
 						return true;
 					}
 				}
 			}
 			break;
 		case West:
-			for(int i = 0; i < height -1;i++){
-				for (int j = node.coordinate.y +1; j< width -1; j++){
-					if(targetEdges.containsKey(i*100+j)){
+			for(int i = 0; i <= height -2;i++){
+				for (int j = node.coordinate.y +1; j<= width -1; j++){
+					if(targetEdges.containsKey(hash4Int(i,j,i+1,j))){
 						return true;
 					}
 				}
@@ -1005,18 +1001,7 @@ public void findPathsTest(){
 	    return false;
 	}
 	
-	public boolean leftContainEdge(Node node, ArrayList<Edge> targetEdges){
-		
-		for(int j = 0; j < node.coordinate.y;j++){
-			for (int i = 0; j< height-1; i++){
-				if(targetEdges.contains(hashEdges.get(i*100+j))){
-					return true;
-				}
-			}
-		}
-			
-	    return false;
-	}
+
 	
 	
 	public Dir getDir2Nodes(Node a, Node b){
@@ -1121,12 +1106,10 @@ public void findPathsTest(){
 					}
 					
 					nextStepDir = selectCheckPointDir(path,checkPoints,checkPointDirs,tarEdgeClone,startDir);
-					node = move1Step(node,nextStepDir);
-					path.add(node);
-					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
-					tarEdgeClone.remove(newEdge.hashValue());
+					node = checkPoint;
 					pathDirReverse = reverseDir(nextStepDir);
-					nextStepDir = startDir;
+					
+//					==[=[=[[=[=[=[[
 				}			
 				//no edge in startDir
 				else if(!thereIsWay(node,startDirTemp)){
@@ -1136,13 +1119,21 @@ public void findPathsTest(){
 								startDirTemp =d;
 								nextStepDir = d;
 								break;
-							}
-							else if(dirContainEdge(node,d,tarEdgeClone)){
-								nextStepDir = d;
-								break;
-							}						
+							}													
 						}
 					}
+					
+					if(!thereIsWay(node,nextStepDir)){
+						for(Dir d:nodeDirOptions(node)){
+							if(d != pathDirReverse && d != startDirTemp){								
+								if(dirContainEdge(node,d,tarEdgeClone)){
+									nextStepDir = d;
+									break;
+								}						
+							}
+						}
+					}
+					
 					//didn't find a dir contains targetEdge, choose a random direction
 					if(!thereIsWay(node,nextStepDir)){
 						for(Dir d:nodeDirOptions(node)){
@@ -1171,20 +1162,35 @@ public void findPathsTest(){
 					
 				}
 				//there is edge in dir
-				else if(thereIsWay(node,nextStepDir)){
+				else if(thereIsWay(node,startDirTemp)){
 					path.add(node);
+					nextStepDir = startDirTemp;
 					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
 					tarEdgeClone.remove(newEdge.coordinate.x*100 + newEdge.coordinate.y);
 					dirOptions = nodeDirOptions(node);
-					dirOptions.remove(nextStepDir);
+					dirOptions.remove(startDirTemp);
 					dirOptions.remove(pathDirReverse);
 					
-					pathDirReverse = getDir2Nodes(move1Step(node,nextStepDir),node);
+					pathDirReverse = getDir2Nodes(move1Step(node,startDirTemp),node);
 					if(dirOptions.size()>0){
 						checkPoints.add(node);
 						checkPointDirs.add(dirOptions);
 					}
 				}
+//				else if(thereIsWay(node,nextStepDir)){
+//					path.add(node);
+//					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
+//					tarEdgeClone.remove(newEdge.coordinate.x*100 + newEdge.coordinate.y);
+//					dirOptions = nodeDirOptions(node);
+//					dirOptions.remove(nextStepDir);
+//					dirOptions.remove(pathDirReverse);
+//					
+//					pathDirReverse = getDir2Nodes(move1Step(node,nextStepDir),node);
+//					if(dirOptions.size()>0){
+//						checkPoints.add(node);
+//						checkPointDirs.add(dirOptions);
+//					}
+//				}
 			}
 			
 			path.add(exit);
@@ -1320,18 +1326,86 @@ public void findPathsTest(){
 		popStack.add(o);
 		if(o == checkPoint){
 			stack.add(o);
-			popStack.remove(o);
+			//popStack.remove(o);
 		}
 		else
 			stackPopUtilCheckPoint(stack,checkPoint,popStack);
 	}
 
 	
-	public void goVertical(){
+	public void pathThroughEdge(Edge edge){
 		
 	}
 	
-	
+	public void DFS(Node start, Node end, ArrayList<Node> path){
+		Stack<Node> stack = new Stack<Node>();
+		//ArrayList<Node> path = new ArrayList<Node>();
+		ArrayList<Node> checkPoints = new ArrayList<Node>();
+		ArrayList<ArrayList<Node>> checkPointsOption = new  ArrayList<ArrayList<Node>>();
+		ArrayList<Node> discoveredNodes = new ArrayList<Node>();
+		ArrayList<Node> cnctNodes;
+		ArrayList<Node> popStack = new ArrayList<Node>();
+		stack.add(start);
+		Node node = start;
+		Node checkPoint;
+		ArrayList<Node> options  = new ArrayList<Node>();
+		cnctNodes = getConnectedNodes(start);
+		if(cnctNodes.size()>1){
+			checkPoints.add(start);
+			node = cnctNodes.remove(cnctNodes.size()-1);
+			checkPointsOption.add(cnctNodes);
+		}
+		
+		path.add(start);
+		
+ 		
+		while(node != end){
+			
+			cnctNodes = getConnectedNodes(node);
+			for(Node n:cnctNodes){
+				if(path.contains(n)){
+					cnctNodes.remove(n);
+				}
+			}
+			
+			if(path.contains(node)){
+				checkPoint = checkPoints.get(checkPoints.size()-1);
+				stackPopUtilCheckPoint(path, checkPoint, popStack);
+				options = checkPointsOption.get(checkPointsOption.size()-1);
+				node = options.remove(options.size()-1);
+				if(options.size() == 0){
+					checkPointsOption.remove(options);
+					checkPoints.remove(checkPoint);
+				}
+				continue;
+			}
+			
+			if(cnctNodes.size() == 0){
+				checkPoint = checkPoints.get(checkPoints.size()-1);
+				stackPopUtilCheckPoint(path, checkPoint, popStack);
+				options = checkPointsOption.get(checkPointsOption.size()-1);
+				node = options.remove(options.size()-1);
+				if(options.size() == 0){
+					checkPointsOption.remove(options);
+					checkPoints.remove(checkPoint);
+				}
+			}
+			else if (cnctNodes.size() == 1){
+				path.add(node);
+				node = cnctNodes.get(0);
+			}
+			else if(cnctNodes.size() >1){
+				path.add(node);
+				checkPoints.add(node);
+				//cnctNodes.remove(node);
+				node = cnctNodes.remove(cnctNodes.size()-1);
+				checkPointsOption.add(cnctNodes);
+			}
+				
+		}
+		path.add(end);
+		//return false;
+	}
 }
 	
 	
