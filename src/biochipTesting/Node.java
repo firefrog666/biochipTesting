@@ -6,7 +6,7 @@ public class Node {
 	int number;
 	protected Int4 coordinate;
 	//protected Edge[] adjEdges;
-	protected Node[] adjNodes;
+	private Node[] adjNodes;
 	protected ArrayList<Node> adjNodesList;
 	
 	public Node(){
@@ -18,6 +18,7 @@ public class Node {
 	public Node(int i)
 	{
 		adjNodesList = new ArrayList<Node>();
+		coordinate = new Int4();
 		this.number = i;
 	}
 	
@@ -36,10 +37,10 @@ public class Node {
 	
 	public void setAdjNodes(Node node) {
 		adjNodesList.add(node);
-		adjNodes = adjNodesList.toArray(new Node[adjNodesList.size()]);
+		//adjNodes = adjNodesList.toArray(new Node[adjNodesList.size()]);
 	}
 	public Node[] getAdjNodes() {
-		return this.adjNodes;
+		return adjNodesList.toArray(new Node[adjNodesList.size()]);
 		
 	}
 	

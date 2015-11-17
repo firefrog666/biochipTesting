@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 
 public class Graph {
@@ -23,10 +25,9 @@ public class Graph {
 	Node exit;
 	int width;
 	int height;
-	HashMap<Integer,Edge> hashEdges;  
+	Map<Integer,Edge> hashEdges;  
 	HashMap<Integer,Node> hashNodes; //Hash Node by its coordinates i*100 + j; 
-	//HashMap<Integer,Edge> hashEdgesHori; // hash horizontal edges by coordinate of left down point
-	//HashMap<Integer,Edge> hashEdgesVert; // hash vertical edges by coordinate of left down point
+	
 	HashMap<Integer,Edge> hashTarEdges;
  	
 	HashMap<Edge,String> hashVariables;
@@ -44,9 +45,7 @@ public class Graph {
 	public Graph(){
 		
 		hashVariables = new HashMap<Edge,String>() ;
-		hashBinaries = new HashMap<Edge, String>();
-		//hashEdgesHori = new HashMap<Integer,Edge>();
-		//hashEdgesVert = new HashMap<Integer,Edge>();
+		hashBinaries = new HashMap<Edge, String>();	
 		hashEdges = new HashMap<Integer,Edge>();
 		hashNodes  = new HashMap<Integer,Node>();
 		hashTarEdges = new HashMap<Integer,Edge>();
@@ -55,24 +54,35 @@ public class Graph {
 		pathsNode = new ArrayList<ArrayList<Node>>();
 		pathsNode.add(detourWalk(Dir.East,hashTarEdges));
 		pathsNode.add(detourWalk(Dir.North,hashTarEdges));
-		Set<Integer> keySet;
-		Integer[] keySetInt;
+		
+		//Set<Integer> keySet;
+		//Integer[] keySetInt;
 		ArrayList<Node> path = new ArrayList<Node>();
- 		while(hashTarEdges.size()>0){
- 			path.clear();
-			keySet = hashTarEdges.keySet();
-			 keySetInt = (Integer[]) keySet.toArray();
-			 Integer aKey = keySetInt[0];
-			 Edge tarEdge = hashTarEdges.remove(aKey);
-			 Node a = getNode(tarEdge.coordinate.x,tarEdge.coordinate.y);
-			 Node b = getNode(tarEdge.coordinate.s,tarEdge.coordinate.t);
-			 
-			 DFS(a,entrance,path);
-			 DFS(b,exit,path);
+		Entry<Integer, Edge> entry;
+ 		while(hashTarEdges.size()>0){ 			
+ 			entry = hashTarEdges.entrySet().iterator().next();
+ 			path.clear();			
+			Edge tarEdge = hashTarEdges.remove(entry.getKey());
+			Node a = getNode(tarEdge.coordinate.x,tarEdge.coordinate.y);
+			Node b = getNode(tarEdge.coordinate.s,tarEdge.coordinate.t);
+			path.add(b);path.add(a);
+			DFS(a,entrance,path);
+			reverseList(path);
+			DFS(b,exit,path);
+			pathsNode.add(path);
 			 
 		}
 		
-		//init3_3();		
+			
+	}
+	
+	public <T> void reverseList(ArrayList<T> list){
+		ArrayList<T> stack = (ArrayList<T>) list.clone();
+		list.clear();
+		
+		for(int i = stack.size()-1; i>=0; i--){
+			list.add(stack.get(i));
+		}
 	}
 	
 	
@@ -95,7 +105,7 @@ public class Graph {
 		width = rnd.nextInt(upBound)+lowBound;
 		height = rnd.nextInt(upBound)+lowBound;
 		
-		width = 3;
+		width = 4;
 		height = 3;
 		
 		nodes = new Node[width * height];
@@ -109,8 +119,8 @@ public class Graph {
 		
 		int id = 0;
 		hashNodes = new HashMap<Integer, Node>();
-		for(int i = 0; i< width; i++){
-			for(int j =0; j < height ; j ++){
+		for(int i = 0; i< height; i++){
+			for(int j =0; j < width ; j ++){
 				nodes[id].setNumber(id);
 				nodes[id].setCoordinate(i, j);
 				hashNodes.put(i*100+j, nodes[id]);
@@ -121,8 +131,8 @@ public class Graph {
 		
 		
 		//assign joint nodes to each node
-		for(int i = 0; i< width; i++){
-			for(int j =0; j < height ; j ++){
+		for(int i = 0; i< height; i++){
+			for(int j =0; j < width; j ++){
 				if(i>=1)
 					getNode(i,j).setAdjNodes(getNode(i-1,j));
 				if(j>=1)
@@ -204,10 +214,7 @@ public class Graph {
 						edge.isHorizontal = false;
 					edges.add(edge);
 					hashEdges.put(hash2Nodes(adjNode,node), edge);
-//					if(edge.isHorizontal)
-//						hashEdgesHori.put(edge.coordinate.x * 100 + edge.coordinate.y, edge);
-//					else
-//						hashEdgesVert.put(edge.coordinate.x*100 + edge.coordinate.y, edge);
+
 					
 					hashTarEdges.put(edge.hashValue(), edge);
 				}
@@ -624,7 +631,7 @@ public void findPathsTest(){
 	
 	public ArrayList<Edge> findCutOfNode(Node node,ArrayList<Node> S, ArrayList<Node> SBrinkTemp){
 		ArrayList<Edge> cutEdges = new ArrayList<Edge>();
-		for(Node adjNode:node.adjNodes){
+		for(Node adjNode:node.getAdjNodes()){
 			if(!S.contains(adjNode)){
 				Edge e = getEdge(node,adjNode);
 				if(e instanceof Hole){
@@ -1350,19 +1357,28 @@ public void findPathsTest(){
 		Node checkPoint;
 		ArrayList<Node> options  = new ArrayList<Node>();
 		cnctNodes = getConnectedNodes(start);
+		Node[] nodes = cnctNodes.toArray(new Node[cnctNodes.size()]);
+		for(int i = 0; i < cnctNodes.size();i++){
+			Node n = nodes[i];
+			if(path.contains(n)){
+				cnctNodes.remove(n);
+			}
+		}
 		if(cnctNodes.size()>1){
 			checkPoints.add(start);
 			node = cnctNodes.remove(cnctNodes.size()-1);
 			checkPointsOption.add(cnctNodes);
 		}
 		
-		path.add(start);
+		//path.add(start);
 		
  		
 		while(node != end){
 			
 			cnctNodes = getConnectedNodes(node);
-			for(Node n:cnctNodes){
+			nodes = cnctNodes.toArray(new Node[cnctNodes.size()]);
+			for(int i = 0; i < cnctNodes.size();i++){
+				Node n = nodes[i];
 				if(path.contains(n)){
 					cnctNodes.remove(n);
 				}
