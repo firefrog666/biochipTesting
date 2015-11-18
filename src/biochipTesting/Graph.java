@@ -1,13 +1,9 @@
 package biochipTesting;
 import java.util.Random;
-import java.util.Set;
+
 import java.util.Stack;
-
-import javax.swing.SpringLayout.Constraints;
-
-import java.time.Year;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +14,8 @@ public class Graph {
 	
 	private static final int upBound = 10; 
 	private static final int lowBound = 3; 
+	
+	
 	
 	Node[] nodes;
 	List<Edge> edges;
@@ -42,21 +40,21 @@ public class Graph {
 	 
 
 	
-	public Graph(){
+	public Graph(int w, int h){
 		
 		hashVariables = new HashMap<Edge,String>() ;
 		hashBinaries = new HashMap<Edge, String>();	
 		hashEdges = new HashMap<Integer,Edge>();
 		hashNodes  = new HashMap<Integer,Node>();
 		hashTarEdges = new HashMap<Integer,Edge>();
-		randomInit();
-		
+		cuts = new ArrayList<ArrayList<Edge>>();
+		init(w,h);	
+	}
+	
+	public void findPaths(){
 		pathsNode = new ArrayList<ArrayList<Node>>();
 		pathsNode.add(detourWalk(Dir.East,hashTarEdges));
 		pathsNode.add(detourWalk(Dir.North,hashTarEdges));
-		
-		//Set<Integer> keySet;
-		//Integer[] keySetInt;
 		ArrayList<Node> path = new ArrayList<Node>();
 		Entry<Integer, Edge> entry;
  		while(hashTarEdges.size()>0){ 			
@@ -72,8 +70,6 @@ public class Graph {
 			pathsNode.add(path);
 			 
 		}
-		
-			
 	}
 	
 	public <T> void reverseList(ArrayList<T> list){
@@ -94,19 +90,21 @@ public class Graph {
 		hashBinaries = new HashMap<Edge, String>();
 		cuts = new ArrayList<ArrayList<Edge>>();
 		paths =new ArrayList<ArrayList<Edge>>();
-		ILP = new ArrayList<String>();
+		
 		
 		init3_3();
 		//findCuts();
 	}	
 	
-	public void randomInit(){
-		Random rnd = new Random();
-		width = rnd.nextInt(upBound)+lowBound;
-		height = rnd.nextInt(upBound)+lowBound;
+	
+	
+	public void init(int w, int h){
+		//Random rnd = new Random();
+		//width = rnd.nextInt(upBound)+lowBound;
+		//height = rnd.nextInt(upBound)+lowBound;
 		
-		width = 4;
-		height = 3;
+		width = w;
+		height = h;
 		
 		nodes = new Node[width * height];
 		hashEdges = new HashMap<Integer, Edge>(); 
@@ -599,48 +597,66 @@ public void findPathsTest(){
 	
 	
 	public void findCuts(){
-		//ArrayList<Edge> pathEdge = pathNodeToEdge(criticalPath);
+		
 		ArrayList<Node> S = new ArrayList<Node>();
 		ArrayList<Node> Sbrink = new ArrayList<Node>();
-		ArrayList<Node> SbrnkTemp = new ArrayList<Node>();
-		//ArrayList<Node> T;
+		ArrayList<Node> SbrnkCache = new ArrayList<Node>();		
 		ArrayList<Edge> cut = new ArrayList<Edge>();
 		Node start;
 		
-		start = entrance;
+ 		start = entrance;
 		S.add(start);
 		Sbrink.add(start);
 		for(int i = 0; i < (width -1  + height -1 ); i ++){
-			cut.clear();
+			cut = new ArrayList<Edge>();
 			// what will happen if I change S during the loop
 			for(Node node:Sbrink){				
-				for(Edge e:findCutOfNode(node, S,SbrnkTemp))
+				for(Edge e:findCutOfNode(node, S,SbrnkCache))
 					cut.add(e);		
 				
 			}
-			S.addAll(SbrnkTemp);
+			S.addAll(SbrnkCache);
 			Sbrink.clear();
-			Sbrink.addAll(SbrnkTemp);
-			SbrnkTemp.clear();
+			Sbrink.addAll(SbrnkCache);
+			SbrnkCache.clear();
 			cuts.add(cut);
 			
 		}		
 	}
 	
+	public void setEdgeWall(int x, int y, int s, int t){
+		Edge wall = new Wall();
+		wall.setCoordinate(x,y,s,t);
+		assert(hashEdges.size()>0);
+		hashEdges.replace(hash4Int(x,y,s,t),wall);
+		
+	}
+	
+	public void setEdgeHole(int x,int y, int s, int t){
+		Edge hole = new Hole();
+		hole.setCoordinate(x,y,s,t);
+		assert(hashEdges.size()>0);
+		hashEdges.replace(hash4Int(x,y,s,t),hole);
+	}
+	
+	public Edge getEdge(int x, int y, int s, int t){
+		Edge e = hashEdges.get(hash4Int(x,y,s,t));
+		return e;
+	}
 	
 	
-	public ArrayList<Edge> findCutOfNode(Node node,ArrayList<Node> S, ArrayList<Node> SBrinkTemp){
+	public ArrayList<Edge> findCutOfNode(Node node,ArrayList<Node> S, ArrayList<Node> sBrinkCache){
 		ArrayList<Edge> cutEdges = new ArrayList<Edge>();
 		for(Node adjNode:node.getAdjNodes()){
 			if(!S.contains(adjNode)){
 				Edge e = getEdge(node,adjNode);
 				if(e instanceof Hole){
 					S.add(adjNode);
-					cutEdges.addAll(findCutOfNode(adjNode,S,SBrinkTemp));
+					cutEdges.addAll(findCutOfNode(adjNode,S,sBrinkCache));
 				}
 				else{
-					if(!SBrinkTemp.contains(adjNode))
-						SBrinkTemp.add(adjNode);
+					if(!sBrinkCache.contains(adjNode))
+						sBrinkCache.add(adjNode);
 					cutEdges.add(e);
 				}
 				
@@ -750,24 +766,7 @@ public void findPathsTest(){
 	
 	
 	
-	public ArrayList<ArrayList<Edge>> findPaths(){
-		ArrayList<ArrayList<Edge>> paths = new ArrayList<ArrayList<Edge>>();
-		ArrayList<Edge> path = new ArrayList<Edge>();
-		HashMap<Integer,Edge> targetEdgesHori = new HashMap<Integer,Edge>();
-		HashMap<Integer,Edge> targetEdgesVert = new HashMap<Integer,Edge>();
-		
-		while(!targetEdgesVert.isEmpty()){
-			path = greedyWalk(targetEdgesVert,Dir.North);
-			paths.add(path);
-		}
-		
-		while(!targetEdgesHori.isEmpty()){
-			path = greedyWalk(targetEdgesHori, Dir.East);
-			paths.add(path);
-		}
-		
-		return paths;
-	}
+
 	
 	public Dir rotateClkWise(Dir dir){
 		switch(dir){
@@ -814,26 +813,7 @@ public void findPathsTest(){
 	
 	
 	
-	
-//	if(node.coordinate.x == targetEdge.coordinate.x){
-//		nextNode = move1Step(node,Direction.East);
-//		while(nextNode != null){
-//			path.add(nextNode);
-//			
-//			for(Direction d:Direction.values()){
-//				if(d == Direction.South || d != Direction.North){
-//					Node n = move1Step(node,dir);
-//					if( n != null)
-//						checkPoints.add(node);
-//				}
-//			}
-//			
-//			if(nodeIsOnEdge(nextNode,targetEdge)){
-//				nextStart = move1Step(nextNode,Direction.East);
-//				return nextStart;
-//			}
-//		}
-//	}
+
 	public  boolean nodeIsOnEdge(Node node, Edge edge){
 		if ((node.coord.x == edge.coord.x && node.coord.y == edge.coord.y) || 
 				(node.coord.x == edge.coord.s && node.coord.y == edge.coord.t) )
@@ -1115,8 +1095,7 @@ public void findPathsTest(){
 					nextStepDir = selectCheckPointDir(path,checkPoints,checkPointDirs,tarEdgeClone,startDir);
 					node = checkPoint;
 					pathDirReverse = reverseDir(nextStepDir);
-					
-//					==[=[=[[=[=[=[[
+
 				}			
 				//no edge in startDir
 				else if(!thereIsWay(node,startDirTemp)){
@@ -1184,20 +1163,7 @@ public void findPathsTest(){
 						checkPointDirs.add(dirOptions);
 					}
 				}
-//				else if(thereIsWay(node,nextStepDir)){
-//					path.add(node);
-//					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
-//					tarEdgeClone.remove(newEdge.coordinate.x*100 + newEdge.coordinate.y);
-//					dirOptions = nodeDirOptions(node);
-//					dirOptions.remove(nextStepDir);
-//					dirOptions.remove(pathDirReverse);
-//					
-//					pathDirReverse = getDir2Nodes(move1Step(node,nextStepDir),node);
-//					if(dirOptions.size()>0){
-//						checkPoints.add(node);
-//						checkPointDirs.add(dirOptions);
-//					}
-//				}
+
 			}
 			
 			path.add(exit);
@@ -1211,14 +1177,6 @@ public void findPathsTest(){
 		
 	}
 	
-//	public void goHorizontal1Step(Boolean arrowEast, Boolean arrowNorth, Node node){
-//		if(arrowEast){
-//			Node nextNode = moveEast(node);
-//			Edge edge = getEdge(node,nextNode);
-//			//if(edge instanceof Wall)
-//				
-//		}
-//	}
 	public Node move1Step(Node start,Dir dir){
 		Node nextNode;
 		switch(dir){
@@ -1352,10 +1310,10 @@ public void findPathsTest(){
 		
 		
 		Stack<Node> stack = new Stack<Node>();
-		//ArrayList<Node> path = new ArrayList<Node>();
+		
 		ArrayList<Node> checkPoints = new ArrayList<Node>();
 		ArrayList<ArrayList<Node>> checkPointsOption = new  ArrayList<ArrayList<Node>>();
-		ArrayList<Node> discoveredNodes = new ArrayList<Node>();
+		
 		ArrayList<Node> cnctNodes;
 		ArrayList<Node> popStack = new ArrayList<Node>();
 		stack.add(start);
@@ -1398,8 +1356,7 @@ public void findPathsTest(){
 			node = cnctNodes.remove(cnctNodes.size()-1);
 			checkPointsOption.add(cnctNodes);
 		}
-		
-		//path.add(start);
+	
 		
  		
 		while(node != end){
@@ -1458,14 +1415,14 @@ public void findPathsTest(){
 			else if(cnctNodes.size() >1){
 				path.add(node);
 				checkPoints.add(node);
-				//cnctNodes.remove(node);
+				
 				node = cnctNodes.remove(cnctNodes.size()-1);
 				checkPointsOption.add(cnctNodes);
 			}
 				
 		}
 		path.add(end);
-		//return false;
+		
 	}
 }
 	

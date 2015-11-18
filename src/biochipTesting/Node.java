@@ -7,7 +7,7 @@ public class Node {
 	protected Int4 coord;
 	//protected Edge[] adjEdges;
 	private Node[] adjNodes;
-	protected ArrayList<Node> adjNodesList;
+	private ArrayList<Node> adjNodesList;
 	
 	public Node(){
 		this.number = 0;
