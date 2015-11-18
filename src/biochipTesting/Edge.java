@@ -19,7 +19,7 @@ public class Edge extends Node{
 		SA1 = false;
 		SA0 = false;
 		weight = 0;
-		coordinate = new Int4();
+		coord = new Int4();
 		isHorizontal = true;
 		
 	}
@@ -47,14 +47,14 @@ public class Edge extends Node{
 	}
 	
 	public void setCoordinate(int x, int y, int s, int t  ){
-		coordinate.x = x;
-		coordinate.y = y;
-		coordinate.s = s;
-		coordinate.t = t;
+		coord.x = x;
+		coord.y = y;
+		coord.s = s;
+		coord.t = t;
 	}
 	
 	public int hashValue(){
-		int hash = coordinate.x * 1000000 + coordinate.y * 10000 + coordinate.s * 100 + coordinate.t;
+		int hash = coord.x * 1000000 + coord.y * 10000 + coord.s * 100 + coord.t;
 		return hash;
 	}
 	

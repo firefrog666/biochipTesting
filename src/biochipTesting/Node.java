@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Node {
 	int number;
-	protected Int4 coordinate;
+	protected Int4 coord;
 	//protected Edge[] adjEdges;
 	private Node[] adjNodes;
 	protected ArrayList<Node> adjNodesList;
@@ -12,13 +12,13 @@ public class Node {
 	public Node(){
 		this.number = 0;
 		adjNodesList = new ArrayList<Node>();
-		coordinate = new Int4();
+		coord = new Int4();
 	}
 	
 	public Node(int i)
 	{
 		adjNodesList = new ArrayList<Node>();
-		coordinate = new Int4();
+		coord = new Int4();
 		this.number = i;
 	}
 	
@@ -45,15 +45,15 @@ public class Node {
 	}
 	
 	public void setCoordinate(int x, int y){
-		coordinate.x = x;
-		coordinate.y = y;
+		coord.x = x;
+		coord.y = y;
 	}
 	
 	public Int4 getCoordinate(){
-		return coordinate;
+		return coord;
 	}
 	public int hashValue(){
-		int hash = coordinate.x * 100+ coordinate.y ;
+		int hash = coord.x * 100+ coord.y ;
 		return hash;
 	}
 }

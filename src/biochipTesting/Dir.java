@@ -5,6 +5,8 @@ public enum Dir {
 		East,
 		West,
 		North,
-		South;
+		South,
+		Middle
+		
 		
 }

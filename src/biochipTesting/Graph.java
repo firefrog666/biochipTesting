@@ -63,12 +63,12 @@ public class Graph {
  			entry = hashTarEdges.entrySet().iterator().next();
  			path.clear();			
 			Edge tarEdge = hashTarEdges.remove(entry.getKey());
-			Node a = getNode(tarEdge.coordinate.x,tarEdge.coordinate.y);
-			Node b = getNode(tarEdge.coordinate.s,tarEdge.coordinate.t);
+			Node a = getNode(tarEdge.coord.x,tarEdge.coord.y);
+			Node b = getNode(tarEdge.coord.s,tarEdge.coord.t);
 			path.add(b);path.add(a);
-			DFS(a,entrance,path);
+			DFS(a,entrance,path,b);
 			reverseList(path);
-			DFS(b,exit,path);
+			DFS(b,exit,path,a);
 			pathsNode.add(path);
 			 
 		}
@@ -204,11 +204,11 @@ public class Graph {
 			for(Node adjNode: adjNodes){
 				if(node.number < adjNode.number){
 					Edge edge = new Edge(i);i++;
-					edge.coordinate.x = node.coordinate.x;
-					edge.coordinate.y = node.coordinate.y;
-					edge.coordinate.s = adjNode.coordinate.x;
-					edge.coordinate.t = adjNode.coordinate.y;
-					if(node.coordinate.x == adjNode.coordinate.x)
+					edge.coord.x = node.coord.x;
+					edge.coord.y = node.coord.y;
+					edge.coord.s = adjNode.coord.x;
+					edge.coord.t = adjNode.coord.y;
+					if(node.coord.x == adjNode.coord.x)
 						edge.isHorizontal = true;
 					else
 						edge.isHorizontal = false;
@@ -224,10 +224,10 @@ public class Graph {
 	
 	public int hash2Nodes(Node a, Node b){
 		if(a.number < b.number){
-			return a.coordinate.x * 1000000 + a.coordinate.y * 10000 + b.coordinate.x * 100 + b.coordinate.y;
+			return a.coord.x * 1000000 + a.coord.y * 10000 + b.coord.x * 100 + b.coord.y;
 		}
 		else{
-			return b.coordinate.x * 1000000 + b.coordinate.y * 10000 + a.coordinate.x * 100 + a.coordinate.y;
+			return b.coord.x * 1000000 + b.coord.y * 10000 + a.coord.x * 100 + a.coord.y;
 		}
 	}
 	
@@ -835,8 +835,8 @@ public void findPathsTest(){
 //		}
 //	}
 	public  boolean nodeIsOnEdge(Node node, Edge edge){
-		if ((node.coordinate.x == edge.coordinate.x && node.coordinate.y == edge.coordinate.y) || 
-				(node.coordinate.x == edge.coordinate.s && node.coordinate.y == edge.coordinate.t) )
+		if ((node.coord.x == edge.coord.x && node.coord.y == edge.coord.y) || 
+				(node.coord.x == edge.coord.s && node.coord.y == edge.coord.t) )
 			return true;
 		else
 			return false;
@@ -864,13 +864,13 @@ public void findPathsTest(){
 		Edge targetEdge = null;
 		switch(dir){
 		case East:
-			for(int j = start.coordinate.y; j < width; j ++){
-				Edge e = targetEdges.get(start.coordinate.x*100 + j);
+			for(int j = start.coord.y; j < width; j ++){
+				Edge e = targetEdges.get(start.coord.x*100 + j);
 				if( e != null){
 					return e;
 				}
 			}
-			Node node = hashNodes.get((start.coordinate.x + 1)*100 + width -1);
+			Node node = hashNodes.get((start.coord.x + 1)*100 + width -1);
 			if(node == exit)
 				return null;
 			else{
@@ -878,13 +878,13 @@ public void findPathsTest(){
 			}
 			
 		case West:
-			for(int j = start.coordinate.y; j >= 0 ; j --){
-				Edge e = targetEdges.get(start.coordinate.x*100 + j);
+			for(int j = start.coord.y; j >= 0 ; j --){
+				Edge e = targetEdges.get(start.coord.x*100 + j);
 				if( e != null){
 					return e;
 				}
 			}
-			node = hashNodes.get((start.coordinate.x + 1)*100 + 0 -1);
+			node = hashNodes.get((start.coord.x + 1)*100 + 0 -1);
 			if(node == exit)
 				return null;
 			else{
@@ -892,13 +892,13 @@ public void findPathsTest(){
 			}
 			
 		case North:
-			for(int i = start.coordinate.x; i < height ; i++){
-				Edge e = targetEdges.get(i * 100 + start.coordinate.y);
+			for(int i = start.coord.x; i < height ; i++){
+				Edge e = targetEdges.get(i * 100 + start.coord.y);
 				if( e != null){
 					return e;
 				}
 			}
-			node = hashNodes.get(0*100 + start.coordinate.y + 1);
+			node = hashNodes.get(0*100 + start.coord.y + 1);
 			if(node == exit)
 				return null;
 			else{
@@ -906,13 +906,13 @@ public void findPathsTest(){
 			}
 			
 		case South:
-			for(int i = start.coordinate.x; i >=0 ; i--){
-				Edge e = targetEdges.get(i * 100 + start.coordinate.y);
+			for(int i = start.coord.x; i >=0 ; i--){
+				Edge e = targetEdges.get(i * 100 + start.coord.y);
 				if( e != null){
 					return e;
 				}
 			}
-			node = hashNodes.get((height -1 )*100 + start.coordinate.y + 1);
+			node = hashNodes.get((height -1 )*100 + start.coord.y + 1);
 			if(node == exit)
 				return null;
 			else{
@@ -964,7 +964,7 @@ public void findPathsTest(){
 		
 		switch(searchDir){
 		case North:
-			for(int i = 0; i <= node.coordinate.x -1;i++){
+			for(int i = 0; i <= node.coord.x -1;i++){
 				for (int j = 0; j<= width-2; j++){
 					if(targetEdges.containsKey(hash4Int(i,j,i,j+1))){
 						return true;
@@ -973,7 +973,7 @@ public void findPathsTest(){
 			}
 			break;
 		case East:
-			for(int j = 0; j <= node.coordinate.y -1;j++){
+			for(int j = 0; j <= node.coord.y -1;j++){
 				for (int i = 0; i <= height-2; i++){
 					if(targetEdges.containsKey(hash4Int(i,j,i+1,j))){
 						return true;
@@ -982,7 +982,7 @@ public void findPathsTest(){
 			}
 			break;
 		case South:		
-			for(int i = node.coordinate.x+1; i <= height -1;i++){
+			for(int i = node.coord.x+1; i <= height -1;i++){
 				for (int j = 0; j<= width -2; j++){
 					if(targetEdges.containsKey(hash4Int(i,j,i,j+1))){
 						return true;
@@ -992,7 +992,7 @@ public void findPathsTest(){
 			break;
 		case West:
 			for(int i = 0; i <= height -2;i++){
-				for (int j = node.coordinate.y +1; j<= width -1; j++){
+				for (int j = node.coord.y +1; j<= width -1; j++){
 					if(targetEdges.containsKey(hash4Int(i,j,i+1,j))){
 						return true;
 					}
@@ -1012,15 +1012,15 @@ public void findPathsTest(){
 	
 	
 	public Dir getDir2Nodes(Node a, Node b){
-		if(a.coordinate.x == b.coordinate.x){
-			if(a.coordinate.y > b.coordinate.y)
+		if(a.coord.x == b.coord.x){
+			if(a.coord.y > b.coord.y)
 				return Dir.West;
 			else
 				return Dir.East;			
 		}
 		//a.y ==b.y
 		else{
-			if(a.coordinate.x < b.coordinate.x){
+			if(a.coord.x < b.coord.x){
 				return Dir.North;
 			}
 			else
@@ -1156,7 +1156,7 @@ public void findPathsTest(){
 					
 					path.add(node);
 					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
-					tarEdgeClone.remove(newEdge.coordinate.x*100 + newEdge.coordinate.y);
+					tarEdgeClone.remove(newEdge.coord.x*100 + newEdge.coord.y);
 					dirOptions = nodeDirOptions(node);
 					dirOptions.remove(nextStepDir);
 					dirOptions.remove(pathDirReverse);
@@ -1173,7 +1173,7 @@ public void findPathsTest(){
 					path.add(node);
 					nextStepDir = startDirTemp;
 					newEdge = getEdge(path.get(path.size()-2), path.get(path.size()-1));
-					tarEdgeClone.remove(newEdge.coordinate.x*100 + newEdge.coordinate.y);
+					tarEdgeClone.remove(newEdge.coord.x*100 + newEdge.coord.y);
 					dirOptions = nodeDirOptions(node);
 					dirOptions.remove(startDirTemp);
 					dirOptions.remove(pathDirReverse);
@@ -1223,22 +1223,22 @@ public void findPathsTest(){
 		Node nextNode;
 		switch(dir){
 		case East:
-			nextNode = hashNodes.get(start.coordinate.x*100 + start.coordinate.y +1);
+			nextNode = hashNodes.get(start.coord.x*100 + start.coord.y +1);
 			if(nextNode != null)
 				return nextNode;
 			break;
 		case West:
-			nextNode = hashNodes.get(start.coordinate.x*100 + start.coordinate.y -1);
+			nextNode = hashNodes.get(start.coord.x*100 + start.coord.y -1);
 			if(nextNode != null)
 				return nextNode;
 			break;
 		case North:
-			nextNode = hashNodes.get((start.coordinate.x+1)*100 + start.coordinate.y);
+			nextNode = hashNodes.get((start.coord.x+1)*100 + start.coord.y);
 			if(nextNode != null)
 				return nextNode;
 			break;
 		case South:
-			nextNode = hashNodes.get((start.coordinate.x-1)*100 + start.coordinate.y);
+			nextNode = hashNodes.get((start.coord.x-1)*100 + start.coord.y);
 			if(nextNode != null)
 				return nextNode;
 			break;
@@ -1259,7 +1259,7 @@ public void findPathsTest(){
 		Edge e = null;
 		switch(dir){
 		case East:
-			b = getNode(a.coordinate.x, a.coordinate.y+1);
+			b = getNode(a.coord.x, a.coord.y+1);
 			if(b == null)
 				return false;
 			else{
@@ -1269,7 +1269,7 @@ public void findPathsTest(){
 			}
 			break;
 		case North:
-			b = getNode(a.coordinate.x+1, a.coordinate.y);
+			b = getNode(a.coord.x+1, a.coord.y);
 			if(b == null)
 				return false;
 			else{
@@ -1279,7 +1279,7 @@ public void findPathsTest(){
 			}
 			break;
 		case South:
-			b = getNode(a.coordinate.x-1, a.coordinate.y);
+			b = getNode(a.coord.x-1, a.coord.y);
 			if(b == null)
 				return false;
 			else{
@@ -1289,7 +1289,7 @@ public void findPathsTest(){
 			}
 			break;
 		case West:
-			b = getNode(a.coordinate.x, a.coordinate.y-1);
+			b = getNode(a.coord.x, a.coord.y-1);
 			if(b == null)
 				return false;
 			else{
@@ -1344,7 +1344,13 @@ public void findPathsTest(){
 		
 	}
 	
-	public void DFS(Node start, Node end, ArrayList<Node> path){
+	
+	
+	public void DFS(Node start, Node end, ArrayList<Node> path,Node critNode){
+		
+		Dir[] dirEndToCrit = new Dir[2];
+		
+		
 		Stack<Node> stack = new Stack<Node>();
 		//ArrayList<Node> path = new ArrayList<Node>();
 		ArrayList<Node> checkPoints = new ArrayList<Node>();
@@ -1356,8 +1362,31 @@ public void findPathsTest(){
 		Node node = start;
 		Node checkPoint;
 		ArrayList<Node> options  = new ArrayList<Node>();
-		cnctNodes = getConnectedNodes(start);
-		Node[] nodes = cnctNodes.toArray(new Node[cnctNodes.size()]);
+		
+		boolean stepBack = false;
+		if(end.coord.x < critNode.coord.x ){
+			dirEndToCrit[0] = Dir.North;
+		}
+		else if (end.coord.x == critNode.coord.x ){
+			dirEndToCrit[0] = Dir.Middle;
+		}
+		else
+			dirEndToCrit[0] = Dir.South;
+		
+		
+		if(end.coord.y <= critNode.coord.y ){
+			dirEndToCrit[1] = Dir.West;
+		}
+		else if (end.coord.y == critNode.coord.y ){
+			dirEndToCrit[1] = Dir.Middle;
+		}
+		else
+			dirEndToCrit[1] = Dir.West;
+		
+		
+		
+		cnctNodes = getConnectedNodes(start);		
+		Node[] nodes = cnctNodes.toArray(new Node[cnctNodes.size()]);		
 		for(int i = 0; i < cnctNodes.size();i++){
 			Node n = nodes[i];
 			if(path.contains(n)){
@@ -1384,7 +1413,22 @@ public void findPathsTest(){
 				}
 			}
 			
-			if(path.contains(node)){
+			
+			if(dirEndToCrit[0] == Dir.West || dirEndToCrit[1] == Dir.South){
+				
+				if(node.coord.x >= critNode.coord.x && node.coord.y>= node.coord.y)
+					stepBack = true;
+			}
+			else if (dirEndToCrit[0] == Dir.East || dirEndToCrit[1] == Dir.South){
+				if(node.coord.x <= critNode.coord.x && node.coord.y <= node.coord.y)
+					stepBack = true;
+			}
+			
+			
+			if(path.contains(node))
+				stepBack = true;
+			
+			if(stepBack){
 				checkPoint = checkPoints.get(checkPoints.size()-1);
 				stackPopUtilCheckPoint(path, checkPoint, popStack);
 				options = checkPointsOption.get(checkPointsOption.size()-1);
@@ -1393,6 +1437,7 @@ public void findPathsTest(){
 					checkPointsOption.remove(options);
 					checkPoints.remove(checkPoint);
 				}
+				stepBack = false;
 				continue;
 			}
 			
