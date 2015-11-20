@@ -144,11 +144,7 @@ public class Graph {
 		
 		getHashEdges();
 		
-		Wall aWall = new Wall();
-		aWall.setCoordinate(1, 0, 1, 1);
-		aWall.isHorizontal = true;
-		hashEdges.replace(aWall.hashValue(),aWall);
-		hashTarEdges.remove(aWall.hashValue());
+		
 		entrance = nodes[0];
 		exit = nodes[height * width - 1];
 	}
@@ -594,24 +590,30 @@ public void findPathsTest(){
 		
 	}
 	
+	public ArrayList<Edge> findCriticalPath(){
+		ArrayList<Edge> critPath = new ArrayList<Edge>();
+		return critPath;
+	}
 	
-	
-	public void findCuts(){
+	public void findCuts(ArrayList<Edge> criticalPath){
 		
 		ArrayList<Node> S = new ArrayList<Node>();
 		ArrayList<Node> Sbrink = new ArrayList<Node>();
 		ArrayList<Node> SbrnkCache = new ArrayList<Node>();		
 		ArrayList<Edge> cut = new ArrayList<Edge>();
+		int nextEdgeP;
+		
 		Node start;
 		
  		start = entrance;
 		S.add(start);
 		Sbrink.add(start);
-		for(int i = 0; i < (width -1  + height -1 ); i ++){
+		for(int i = 0; i <= criticalPath.size()-1; i ++){
+			nextEdgeP = i;
 			cut = new ArrayList<Edge>();
 			// what will happen if I change S during the loop
 			for(Node node:Sbrink){				
-				for(Edge e:findCutOfNode(node, S,SbrnkCache))
+				for(Edge e:findCutOfNode(node, S,SbrnkCache,criticalPath,nextEdgeP))
 					cut.add(e);		
 				
 			}
@@ -628,9 +630,24 @@ public void findPathsTest(){
 		Edge wall = new Wall();
 		wall.setCoordinate(x,y,s,t);
 		assert(hashEdges.size()>0);
-		hashEdges.replace(hash4Int(x,y,s,t),wall);
+		hashEdges.replace(hash4Int(x,y,s,t),wall);	
+		hashTarEdges.remove(wall.hashValue());
 		
 	}
+	
+ 	public void setHoles(ArrayList<Hole>holes){
+		for(Hole hole:holes){
+			//setEdgeHole(hole.getCoordinate().x,hole.getCoordinate().y,hole.getCoordinate().s,hole.getCoordinate().t);
+			hashEdges.replace(hole.hashValue(), hole);
+		}
+	}
+ 	
+ 	public void setWalls(ArrayList<Wall> walls){
+ 		for(Wall wall:walls){
+ 			hashEdges.replace(wall.hashValue(), wall);
+ 			hashTarEdges.remove(wall.hashValue());
+ 		}
+ 	}
 	
 	public void setEdgeHole(int x,int y, int s, int t){
 		Edge hole = new Hole();
@@ -645,24 +662,58 @@ public void findPathsTest(){
 	}
 	
 	
-	public ArrayList<Edge> findCutOfNode(Node node,ArrayList<Node> S, ArrayList<Node> sBrinkCache){
+	public ArrayList<Edge> findCutOfNode(Node node,ArrayList<Node> S, ArrayList<Node> sBrinkCache, 
+											ArrayList<Edge> critPath,int nextEdgeP){
 		ArrayList<Edge> cutEdges = new ArrayList<Edge>();
 		for(Node adjNode:node.getAdjNodes()){
 			if(!S.contains(adjNode)){
 				Edge e = getEdge(node,adjNode);
+				
+				if(adjNode == exit){
+					if(!sBrinkCache.contains(node))
+						sBrinkCache.add(node);
+					cutEdges.add(e);
+					
+					continue;
+				}
+				
+				if(critPath.contains(e)){
+					if(e != critPath.get(nextEdgeP)){
+						if(!sBrinkCache.contains(node))
+							sBrinkCache.add(node);
+						continue;
+					}
+					// e == nextEdge
+					else{
+						if(e instanceof Hole){
+							S.add(adjNode);
+							cutEdges.addAll(findCutOfNode(adjNode,S,sBrinkCache,critPath,nextEdgeP++));
+							continue;
+						 }
+						else{
+							if(!sBrinkCache.contains(adjNode))
+								sBrinkCache.add(adjNode);
+							cutEdges.add(e);
+						}
+					}
+			
+				}
+				
 				if(e instanceof Hole){
 					S.add(adjNode);
-					cutEdges.addAll(findCutOfNode(adjNode,S,sBrinkCache));
+					cutEdges.addAll( findCutOfNode(adjNode,S,sBrinkCache,critPath,nextEdgeP++));
+					continue;
 				}
 				else{
 					if(!sBrinkCache.contains(adjNode))
 						sBrinkCache.add(adjNode);
 					cutEdges.add(e);
+					continue;
 				}
 				
 			}
-		}	
-		
+			
+		}
 		return cutEdges;
 	}
 	
@@ -683,7 +734,7 @@ public void findPathsTest(){
 			constrain = "";
 			if(node != entrance & node != exit){
 				for(Edge e:getJointEdges(node)){
-					String variable = "x" + e.number;
+					String variable = "x" + e.number; 
 					String binary = "y" +e.number;
 					if(!hashVariables.containsKey(e)){
 						hashVariables.put(e, variable);
@@ -1257,7 +1308,8 @@ public void findPathsTest(){
 			}
 			break;
 		default:
-			break;
+			return false;
+			
 		
 		}
 		return true;
