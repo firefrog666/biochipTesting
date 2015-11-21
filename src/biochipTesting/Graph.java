@@ -64,11 +64,14 @@ public class Graph {
 			Node a = getNode(tarEdge.coord.x,tarEdge.coord.y);
 			Node b = getNode(tarEdge.coord.s,tarEdge.coord.t);
 			path.add(b);path.add(a);
-			DFS(a,entrance,path,b);
+			DFS(a,entrance,path,b,hashTarEdges);
 			reverseList(path);
-			DFS(b,exit,path,a);
-			pathsNode.add(path);
-			 
+			DFS(b,exit,path,a,hashTarEdges);
+			pathsNode.add((ArrayList<Node>) path.clone());
+			for(Node n:path){
+				hashTarEdges.remove(n);
+			}
+			
 		}
 	}
 	
@@ -1354,9 +1357,22 @@ public void findPathsTest(){
 		
 	}
 	
+	public ArrayList<Node> dirOptions(Node node, ArrayList<Node> path){
+		ArrayList <Node> dirOptions;
+		ArrayList<Node> wrongDirs = new ArrayList<Node>();
+		Node n;
+		dirOptions = getConnectedNodes(node);		
+		//Node[] nodes = dirOptions.toArray(new Node[dirOptions.size()]);		
+		if(path.size()>1){
+			dirOptions.remove(path.get(path.size()-2));
+		}
+		
+		//dirOptions.removeAll(wrongDirs);
+		
+		return dirOptions;
+	}
 	
-	
-	public void DFS(Node start, Node end, ArrayList<Node> path,Node critNode){
+	public void DFS(Node start, Node end, ArrayList<Node> path,Node critNode, HashMap<Integer,Edge> tarEdges){
 		
 		Dir[] dirEndToCrit = new Dir[2];
 		
@@ -1375,37 +1391,37 @@ public void findPathsTest(){
 		
 		boolean stepBack = false;
 		if(end.coord.x < critNode.coord.x ){
-			dirEndToCrit[0] = Dir.North;
+			dirEndToCrit[0] = Dir.South;
 		}
 		else if (end.coord.x == critNode.coord.x ){
 			dirEndToCrit[0] = Dir.Middle;
 		}
 		else
-			dirEndToCrit[0] = Dir.South;
+			dirEndToCrit[0] = Dir.North;
 		
 		
-		if(end.coord.y <= critNode.coord.y ){
+		if(end.coord.y < critNode.coord.y ){
 			dirEndToCrit[1] = Dir.West;
 		}
 		else if (end.coord.y == critNode.coord.y ){
 			dirEndToCrit[1] = Dir.Middle;
 		}
 		else
-			dirEndToCrit[1] = Dir.West;
+			dirEndToCrit[1] = Dir.East;
 		
-		
-		
-		cnctNodes = getConnectedNodes(start);		
-		Node[] nodes = cnctNodes.toArray(new Node[cnctNodes.size()]);		
-		for(int i = 0; i < cnctNodes.size();i++){
-			Node n = nodes[i];
-			if(path.contains(n)){
-				cnctNodes.remove(n);
-			}
+		if(node == end){
+			if(!path.contains(node))
+				path.add(node);			
+			return;
+			
 		}
+			
+		cnctNodes = dirOptions(start,path);		
+	
 		if(cnctNodes.size()>1){
 			checkPoints.add(start);
-			node = cnctNodes.remove(cnctNodes.size()-1);
+			node = dfsNodeDirBestGuess(node, cnctNodes, tarEdges);
+			cnctNodes.remove(node);
 			checkPointsOption.add(cnctNodes);
 		}
 	
@@ -1413,23 +1429,16 @@ public void findPathsTest(){
  		
 		while(node != end){
 			
-			cnctNodes = getConnectedNodes(node);
-			nodes = cnctNodes.toArray(new Node[cnctNodes.size()]);
-			for(int i = 0; i < cnctNodes.size();i++){
-				Node n = nodes[i];
-				if(path.contains(n)){
-					cnctNodes.remove(n);
-				}
-			}
+			cnctNodes = dirOptions(node,path);	
 			
 			
-			if(dirEndToCrit[0] == Dir.West || dirEndToCrit[1] == Dir.South){
+			if(dirEndToCrit[0] == Dir.South || dirEndToCrit[1] == Dir.West){
 				
-				if(node.coord.x >= critNode.coord.x && node.coord.y>= node.coord.y)
+				if(node.coord.x >= critNode.coord.x && node.coord.y>= critNode.coord.y)
 					stepBack = true;
 			}
-			else if (dirEndToCrit[0] == Dir.East || dirEndToCrit[1] == Dir.South){
-				if(node.coord.x <= critNode.coord.x && node.coord.y <= node.coord.y)
+			else if (dirEndToCrit[0] == Dir.North || dirEndToCrit[1] == Dir.East){
+				if(node.coord.x <= critNode.coord.x && node.coord.y <= critNode.coord.y)
 					stepBack = true;
 			}
 			
@@ -1468,7 +1477,8 @@ public void findPathsTest(){
 				path.add(node);
 				checkPoints.add(node);
 				
-				node = cnctNodes.remove(cnctNodes.size()-1);
+				node = dfsNodeDirBestGuess(node, cnctNodes, tarEdges);
+				cnctNodes.remove(node);
 				checkPointsOption.add(cnctNodes);
 			}
 				
@@ -1476,6 +1486,46 @@ public void findPathsTest(){
 		path.add(end);
 		
 	}
+	
+	public Node dfsNodeDirBestGuess(Node node, ArrayList<Node> cnctNodes, HashMap<Integer,Edge> tarEdges){
+		
+		for(Node cnctNode: cnctNodes){
+			if(cnctNode.coord.x < node.coord.x){
+				for(int i = cnctNode.coord.x; i>=1; i--){
+					if(tarEdges.containsKey(hash4Int(i-1,cnctNode.coord.y,i,cnctNode.coord.y))){
+						return cnctNode;
+					}
+				}
+			}
+			else if(cnctNode.coord.x > node.coord.x){
+				for(int i = cnctNode.coord.x; i<=height -1; i++){
+					if(tarEdges.containsKey(hash4Int(i,cnctNode.coord.y,i+1,cnctNode.coord.y))){
+						return cnctNode;
+					}
+				}
+			}
+			
+			if(cnctNode.coord.y < node.coord.y){
+				for(int j = cnctNode.coord.y; j>=1; j--){
+					if(tarEdges.containsKey(hash4Int(cnctNode.coord.x,j-1,cnctNode.coord.x,j))){
+						return cnctNode;
+					}
+				}
+			}
+			else if(cnctNode.coord.y > node.coord.y){
+				for(int j = cnctNode.coord.y; j<=width -1; j++){
+					if(tarEdges.containsKey(hash4Int(cnctNode.coord.x,j,cnctNode.coord.x,j+1))){
+						return cnctNode;
+					}
+				}
+			}			
+			
+		}
+		
+		return cnctNodes.get(cnctNodes.size()-1);
+		
+	}
+	
 }
 	
 	

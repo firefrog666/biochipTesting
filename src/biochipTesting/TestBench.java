@@ -97,10 +97,7 @@ public class TestBench {
 						System.out.println(nNode.getNodeName() + " s : " + eElement.getAttribute("s"));
 						System.out.println(nNode.getNodeName() + " t : " + eElement.getAttribute("t"));
 						
-//						System.out.println("First Name : " + eElement.getElementsByTagName("firstname").item(0).getTextContent());
-//						System.out.println("Last Name : " + eElement.getElementsByTagName("lastname").item(0).getTextContent());
-//						System.out.println("Nick Name : " + eElement.getElementsByTagName("nickname").item(0).getTextContent());
-//						System.out.println("Salary : " + eElement.getElementsByTagName("salary").item(0).getTextContent());
+
 	
 					}
 				}
@@ -132,12 +129,7 @@ public class TestBench {
 						System.out.println(nNode.getNodeName() + " y : " + eElement.getAttribute("y"));
 						System.out.println(nNode.getNodeName() + " s : " + eElement.getAttribute("s"));
 						System.out.println(nNode.getNodeName() + " t : " + eElement.getAttribute("t"));
-						
-//						System.out.println("First Name : " + eElement.getElementsByTagName("firstname").item(0).getTextContent());
-//						System.out.println("Last Name : " + eElement.getElementsByTagName("lastname").item(0).getTextContent());
-//						System.out.println("Nick Name : " + eElement.getElementsByTagName("nickname").item(0).getTextContent());
-//						System.out.println("Salary : " + eElement.getElementsByTagName("salary").item(0).getTextContent());
-	
+
 					}
 				}
 		    } 
