@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<bioChip width="4" height="4">
-	<wall id="1001" x ="1" y="0" s="1" t="1">
-	</wall>
+<bioChip width="3" height="3">
+	<!---wall id="1001" x ="1" y="0" s="1" t="1">
+	</wall-->
 	<!---hole id="2001" x ="0" y="0" s="1" t="0">	
 	</hole-->
 </bioChip>

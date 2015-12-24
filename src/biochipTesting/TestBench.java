@@ -1,9 +1,12 @@
 package biochipTesting;
-//import gurobiILP.*;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+
+import gurobi.GRBException;
+import gurobiILP.*;
+
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
@@ -20,7 +23,7 @@ public class TestBench {
 	private static final String dataPath =  "/home/ga63quk/workspace/biochipTestGit/biochipTesting/src/data.xml";
 	
 	
-	public static void main(String arg[]) {
+	public static void main(String arg[]) throws GRBException {
 		ArrayList<Wall> walls = new ArrayList<Wall>();
 		ArrayList<Hole> holes = new ArrayList<Hole>();
 		
@@ -31,7 +34,20 @@ public class TestBench {
  		graph.setWalls(walls);
  		
  		//graph.findCuts(graph.findCriticalPath());
- 		graph.findPaths();
+ 		//graph.findPaths();
+ 		graph.getAcyclicILP();
+ 		
+ 		Enviroment env = new Enviroment();
+		//acyclicPathILP();
+		
+		
+		ArrayList<String> varNames = graph.variables;
+		ArrayList<Integer> varTypes = graph.variableTypes;
+		
+		env.setVars(varNames,varTypes);
+		env.setContrains(graph.ILP);
+		env.setObjective(graph.obj);
+		env.run();
  		
 		
 		if(!graph.pathTest())

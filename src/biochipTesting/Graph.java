@@ -14,6 +14,7 @@ public class Graph {
 	
 	private static final int upBound = 10; 
 	private static final int lowBound = 3; 
+	private static final int M = 10000;
 	
 	
 	
@@ -28,7 +29,8 @@ public class Graph {
 	
 	HashMap<Integer,Edge> hashTarEdges;
  	
-	HashMap<Edge,String> hashVariables;
+	HashMap<Integer,HashMap<Edge,String>> hashWVariables;
+	HashMap<Edge,String> hashXVariables;
 	HashMap<Edge, String> hashBinaries;
 	ArrayList<ArrayList<Edge>> paths;
 	ArrayList<ArrayList<Node>> pathsNode;
@@ -42,7 +44,9 @@ public class Graph {
 	
 	public Graph(int w, int h){
 		
-		hashVariables = new HashMap<Edge,String>() ;
+		hashWVariables = new HashMap<Integer,HashMap<Edge,String>>() ;
+		ILP = new ArrayList<String>();
+		hashXVariables = new HashMap<Edge,String>() ;
 		hashBinaries = new HashMap<Edge, String>();	
 		hashEdges = new HashMap<Integer,Edge>();
 		hashNodes  = new HashMap<Integer,Node>();
@@ -89,7 +93,7 @@ public class Graph {
 	public Graph(int i){
 		//creat a default grid with the size of i
 		//assume i = 3
-		hashVariables = new HashMap<Edge,String>() ;
+		//hashWVariables = new HashMap<Edge,String>() ;
 		hashBinaries = new HashMap<Edge, String>();
 		cuts = new ArrayList<ArrayList<Edge>>();
 		paths =new ArrayList<ArrayList<Edge>>();
@@ -240,7 +244,7 @@ public class Graph {
 		
 		return hashEdges.get(hash2Nodes(a,b));
 	}
-	
+	//return nodes not blocked by wall nor closed valve 
 	public ArrayList<Node> getCnctNodes(Node node){
 		
 		ArrayList<Node> cnctNodes = new ArrayList<Node>();
@@ -271,7 +275,7 @@ public class Graph {
 		return jointNodes;
 	}
 	
-	//connect means edge between two node is note wall
+	//connect means edge between two node is not wall
 	public ArrayList<Node> getConnectedNodes(Node node){
 		ArrayList<Node> connectedNodes = new ArrayList<Node>();
 		Node[] adjNodes = node.getAdjNodes();
@@ -724,86 +728,185 @@ public void findPathsTest(){
 	public String setILPObj(){
 		String obj = "";
 		for(Edge e:getJointEdges(entrance)){
-			obj += "+" + hashVariables.get(e);
+			obj += "+" + hashWVariables.get(e);
 		}
 		return obj;
 	}
 	
-	public void getILPContrains(){
+//	public void getILPContrains(){
+//		variables = new ArrayList<String>();
+//		variableTypes = new ArrayList<Integer>();
+//		String constrain = "";
+//		for(Node node:nodes){
+//			constrain = "";
+//			if(node != entrance & node != exit){
+//				for(Edge e:getJointEdges(node)){
+//					String variable = "x" + e.number; 
+//					String binary = "y" +e.number;
+//					if(!hashWVariables.containsKey(e)){
+//						hashWVariables.put(e, variable);
+//						hashBinaries.put(e, binary);
+//						variables.add(variable);
+//						variableTypes.add(0);
+//						variables.add(binary);
+//						variableTypes.add(1);
+//					}
+//					if(e instanceof Wall)
+//						continue;
+//					
+//					if(isInflow(e,node))
+//						constrain += "+" + variable;
+//					else
+//						constrain += "-" + variable;
+//				}
+//				constrain += "= 0";
+//				ILP.add(constrain);
+//			}
+//			
+//		}
+//		
+//		//flow >= 1 for every edge connect to entrance and exit
+//		
+//		for(Edge e: getJointEdges(entrance) ){
+//			constrain = "";
+//			String varialbe = hashWVariables.get(e);
+//			
+//			constrain = varialbe + ">=1";	
+//			ILP.add(constrain);
+//		}
+//		
+//		for(Edge e:getJointEdges(exit)){
+//			constrain = "";
+//			String variable = hashWVariables.get(e);
+//			constrain = variable + ">=1";
+//			ILP.add(constrain);
+//			
+//		}
+//		//for every edge except extrance and exit 
+//		ArrayList<Edge> internalEdges =  new ArrayList<Edge>();
+//		
+//		for(Edge e:edges){
+//			internalEdges.add(e);		
+//		}
+//		
+//		for(Edge e:getJointEdges(entrance)){
+//			internalEdges.remove(e);
+//		}
+//		
+//		for(Edge e:getJointEdges(exit)){
+//			internalEdges.remove(e);
+//		}
+//		
+//		for(Edge e:internalEdges){
+//			constrain = "";
+//			String variable = hashWVariables.get(e);
+//			String binary = hashBinaries.get(e);
+//			constrain = variable+"+ 1000"+binary+" >=1";
+//			ILP.add(constrain);
+//			constrain = variable + "+1000"+ binary +"<= 999";
+//			ILP.add(constrain);		
+//		}
+//		obj = setILPObj();
+//		
+//	}
+	
+	public void getAcyclicILP(){
 		variables = new ArrayList<String>();
 		variableTypes = new ArrayList<Integer>();
-		String constrain = "";
-		for(Node node:nodes){
-			constrain = "";
-			if(node != entrance & node != exit){
-				for(Edge e:getJointEdges(node)){
-					String variable = "x" + e.number; 
-					String binary = "y" +e.number;
-					if(!hashVariables.containsKey(e)){
-						hashVariables.put(e, variable);
-						hashBinaries.put(e, binary);
-						variables.add(variable);
-						variableTypes.add(0);
-						variables.add(binary);
+		String xVariable;
+		String wVariable;
+		String yVariable; 
+		String constraint = "";
+		HashMap<Edge, String> hashWVariables1dim;
+		for(int i = 0; i <= height + width - 1; i++){
+			hashWVariables1dim = new HashMap<Edge,String>(); 
+			for(Edge edge:edges){
+				if(!(edge instanceof Wall)){						
+					
+					wVariable = "w" + i +  edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t;	
+					
+					if(!hashWVariables1dim.containsKey(edge)){
+						hashWVariables1dim.put(edge, wVariable);
+						variables.add(wVariable);
 						variableTypes.add(1);
 					}
-					if(e instanceof Wall)
-						continue;
 					
-					if(isInflow(e,node))
-						constrain += "+" + variable;
-					else
-						constrain += "-" + variable;
 				}
-				constrain += "= 0";
-				ILP.add(constrain);
+			}
+			hashWVariables.put(i, hashWVariables1dim);
+			
+			for(Node node:nodes){
+				yVariable = "y" + i + node.coord.x + node.coord.y;
+				variables.add(yVariable);
+				variableTypes.add(1);
+				
+				for(Node cnctNode:getConnectedNodes(node)){
+					Edge edge = getEdge(node,cnctNode);
+					wVariable = hashWVariables1dim.get(edge); 
+					constraint = constraint + wVariable + "+";					
+				}
+				
+				if(node == entrance || node == exit){
+					constraint =constraint + yVariable + " = 1"; 
+				}
+				else{
+					constraint = constraint + yVariable + " = 2";
+				}
+				ILP.add(constraint);
+				constraint = "";
 			}
 			
-		}
-		
-		//flow >= 1 for every edge connect to entrance and exit
-		
-		for(Edge e: getJointEdges(entrance) ){
-			constrain = "";
-			String varialbe = hashVariables.get(e);
 			
-			constrain = varialbe + ">=1";	
-			ILP.add(constrain);
-		}
-		
-		for(Edge e:getJointEdges(exit)){
-			constrain = "";
-			String variable = hashVariables.get(e);
-			constrain = variable + ">=1";
-			ILP.add(constrain);
 			
 		}
-		//for every edge except extrance and exit 
-		ArrayList<Edge> internalEdges =  new ArrayList<Edge>();
 		
-		for(Edge e:edges){
-			internalEdges.add(e);		
+		
+		obj = "";
+		for(Edge edge:edges){			
+			for(int i = 0; i <= height + width -1; i++){
+				if(!(edge instanceof Wall)){		
+					//only init xVarialbe once
+					HashMap<Edge,String> test = hashWVariables.get(i);
+					wVariable = test.get(edge);
+					//wVariable = hashWVariables.get(i).get(edge);
+					constraint = constraint +"+" + wVariable;				
+				}
+			}
+			constraint += ">= 1";
+			ILP.add(constraint);
+			constraint = "";
 		}
 		
-		for(Edge e:getJointEdges(entrance)){
-			internalEdges.remove(e);
+		for(int i =0; i <= height + width -1; i++){
+			xVariable = "x" + i;
+	
+			variables.add(xVariable);
+			variableTypes.add(1);
+
+			for(Edge edge:edges){				
+				wVariable = hashWVariables.get(i).get(edge);
+				constraint = constraint +"+" + wVariable;			
+			}
+ 			constraint += "-" + M + xVariable + "<=0";
+ 			ILP.add(constraint);
+ 			constraint = "";
+ 			
+ 			obj += "+" + xVariable;
+ 			
 		}
 		
-		for(Edge e:getJointEdges(exit)){
-			internalEdges.remove(e);
-		}
 		
-		for(Edge e:internalEdges){
-			constrain = "";
-			String variable = hashVariables.get(e);
-			String binary = hashBinaries.get(e);
-			constrain = variable+"+ 1000"+binary+" >=1";
-			ILP.add(constrain);
-			constrain = variable + "+1000"+ binary +"<= 999";
-			ILP.add(constrain);		
-		}
-		obj = setILPObj();
-		
+		//set obj
+//		obj += "+" + xVariable;
+//		//xVariable = "x" + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t;
+//		if(!hashXVariables.containsKey(edge)){
+//			hashXVariables.put(edge, xVariable);
+//			variables.add(xVariable);
+//			variableTypes.add(1);
+//		constraint += "-" + M + xVariable + "<=0";
+//		ILP.add(constraint);
+//		constraint = "";
+////		}
 	}
 	
 	public boolean isInflow(Edge e, Node n){

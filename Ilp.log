@@ -187,3 +187,62 @@ Best objective 2.000000000000e+00, best bound 2.000000000000e+00, gap 0.0%
 
 Gurobi 6.0.5 (linux64) logging started Wed 11 Nov 2015 11:00:14 AM CET
 
+
+Gurobi 6.0.5 (linux64) logging started Tue 22 Dec 2015 05:14:11 PM CET
+
+
+Gurobi 6.0.5 (linux64) logging started Tue 22 Dec 2015 05:15:49 PM CET
+
+
+Gurobi 6.0.5 (linux64) logging started Tue 22 Dec 2015 05:19:08 PM CET
+
+
+Gurobi 6.0.5 (linux64) logging started Tue 22 Dec 2015 05:19:44 PM CET
+
+
+Gurobi 6.0.5 (linux64) logging started Tue 22 Dec 2015 05:26:54 PM CET
+
+Optimize a model with 152 rows, 344 columns and 712 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+04]
+  Objective range [1e+00, 1e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 18
+Presolve removed 9 rows and 57 columns
+Presolve time: 0.01s
+Presolved: 143 rows, 287 columns, 647 nonzeros
+Variable types: 0 continuous, 287 integer (287 binary)
+
+Root relaxation: objective 8.000000e+00, 480 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+*    0     0               0       8.0000000    8.00000  0.00%     -    0s
+
+Explored 0 nodes (508 simplex iterations) in 0.03 seconds
+Thread count was 4 (of 4 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.000000000000e+00, best bound 8.000000000000e+00, gap 0.0%
+
+Gurobi 6.0.5 (linux64) logging started Tue 22 Dec 2015 05:56:03 PM CET
+
+Optimize a model with 160 rows, 328 columns and 888 nonzeros
+Coefficient statistics:
+  Matrix range    [1e+00, 1e+04]
+  Objective range [1e+00, 1e+00]
+  Bounds range    [1e+00, 1e+00]
+  RHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 8
+Presolve removed 17 rows and 64 columns
+Presolve time: 0.01s
+Presolved: 143 rows, 264 columns, 624 nonzeros
+Variable types: 0 continuous, 264 integer (264 binary)
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds
+Thread count was 4 (of 4 available processors)
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.000000000000e+00, best bound 8.000000000000e+00, gap 0.0%
