@@ -30,6 +30,7 @@ public class Graph {
 	HashMap<Integer,Edge> hashTarEdges;
  	
 	HashMap<Integer,HashMap<Edge,String>> hashWVariables;
+	HashMap<Integer,HashMap<Edge,String>> hashCVariables;
 	HashMap<Edge,String> hashXVariables;
 	HashMap<Edge, String> hashBinaries;
 	ArrayList<ArrayList<Edge>> paths;
@@ -816,10 +817,15 @@ public void findPathsTest(){
 		String xVariable;
 		String wVariable;
 		String yVariable; 
+		String cVariable; // if one node is connected to source or terminal
 		String constraint = "";
 		HashMap<Edge, String> hashWVariables1dim;
-		for(int i = 0; i <= height + width - 1; i++){
+		HashMap<Node, String> hashCVariables1dim;
+		HashMap<String, String> hashZVariables1dim; // if 
+		for(int i = 0; i <= height -1 + width - 1 -1 ; i++){
 			hashWVariables1dim = new HashMap<Edge,String>(); 
+			hashCVariables1dim = new HashMap<Node, String>();
+			
 			for(Edge edge:edges){
 				if(!(edge instanceof Wall)){						
 					
@@ -837,8 +843,16 @@ public void findPathsTest(){
 			
 			for(Node node:nodes){
 				yVariable = "y" + i + node.coord.x + node.coord.y;
+				cVariable = "c" + i + node.coord.x + node.coord.y;
+				
+				if(!hashCVariables1dim.containsKey(node)){
+					hashCVariables1dim.put(node, cVariable);
+					variables.add(cVariable);
+					variableTypes.add(1);
+				}
 				variables.add(yVariable);
 				variableTypes.add(1);
+				
 				
 				for(Node cnctNode:getConnectedNodes(node)){
 					Edge edge = getEdge(node,cnctNode);
@@ -850,11 +864,64 @@ public void findPathsTest(){
 					constraint =constraint + yVariable + " = 1"; 
 				}
 				else{
-					constraint = constraint + yVariable + " = 2";
+					constraint = constraint +"2"+yVariable + " = 2";
 				}
 				ILP.add(constraint);
 				constraint = "";
 			}
+			String orConstraint = "";
+			String degreeConstraint = "";
+			for(Node node:nodes){
+				cVariable = hashCVariables1dim.get(node);
+				orConstraint = cVariable;
+				degreeConstraint = cVariable;
+				for(Node cnctNode:getConnectedNodes(node)){
+					Edge edge = getEdge(node,cnctNode);
+					wVariable = hashWVariables1dim.get(edge);
+					String cnctCVariable = hashCVariables1dim.get(cnctNode);
+					
+					String zVarialbe =  "z" + i  + cnctNode.coord.x + cnctNode.coord.y + node.coord.x + node.coord.y;
+					variables.add(zVarialbe);
+					variableTypes.add(1);
+					//z0 >= c0 + w0 -1
+					//z0 <= c0
+					//z0 <= w0
+					constraint =  cnctCVariable + "+" + wVariable + "-" + zVarialbe + " >= 1";
+					ILP.add(constraint);
+					constraint = zVarialbe + "-" + cnctCVariable + "<=0";
+					ILP.add(constraint);
+					constraint = zVarialbe + "-" + wVariable + "<=0";
+					ILP.add(constraint);
+					// c <= z0 + z1 + z2 ...
+					// c >= z0, c >=z1 c>= z2...
+					orConstraint +=  "-" + zVarialbe;
+					
+					constraint = cVariable + "-" + zVarialbe + ">=0";
+					ILP.add(constraint);
+					constraint = "";
+					//if degree of node >= 1, c = 1 or c = 0
+					// c <= w0 + w1 + w2
+					// c >= w0, c>= w1, c >= w2
+					degreeConstraint += "-" + wVariable;
+					constraint  = cVariable + "-" + wVariable + " >= 0";
+					ILP.add(constraint);
+					constraint = "";
+				}
+				orConstraint += "<=0";
+				ILP.add(orConstraint);
+				orConstraint = "";
+				//if degree of node >= 1, c = 1 or c = 0
+				degreeConstraint += "<=0";
+				ILP.add(degreeConstraint);
+				degreeConstraint = "";
+				
+				
+				
+				
+				
+			}
+			
+			
 			
 			
 			
@@ -863,7 +930,7 @@ public void findPathsTest(){
 		
 		obj = "";
 		for(Edge edge:edges){			
-			for(int i = 0; i <= height + width -1; i++){
+			for(int i = 0; i <= height -1 + width -1 -1; i++){
 				if(!(edge instanceof Wall)){		
 					//only init xVarialbe once
 					HashMap<Edge,String> test = hashWVariables.get(i);
@@ -877,7 +944,7 @@ public void findPathsTest(){
 			constraint = "";
 		}
 		
-		for(int i =0; i <= height + width -1; i++){
+		for(int i =0; i <= height -1  + width -1 -1; i++){
 			xVariable = "x" + i;
 	
 			variables.add(xVariable);
