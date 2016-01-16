@@ -30,7 +30,6 @@ public class Graph {
 	HashMap<Integer,Edge> hashTarEdges;
  	
 	HashMap<Integer,HashMap<Edge,String>> hashWVariables;
-	HashMap<Integer,HashMap<Edge,String>> hashCVariables;
 	HashMap<Edge,String> hashXVariables;
 	HashMap<Edge, String> hashBinaries;
 	ArrayList<ArrayList<Edge>> paths;
@@ -193,7 +192,7 @@ public class Graph {
 	}
 	
 	public<K,T> void replaceHashMap(HashMap<K,T> hashMap, T o, K key){
-		hashMap.replace(key, o);
+		hashMap.put(key, o);
 	}
 	
 	public void getHashEdges(){
@@ -237,6 +236,12 @@ public class Graph {
 		return hashNodes.get(a*100+b);
 	}
 	
+	private boolean aLeftOrUnderb(Node a, Node b){
+		if(a.coord.x < b.coord.x || a.coord.y < b.coord.y )
+			return true;
+		else
+			return false;
+	}
 	public Edge getEdge(int a, int b){
 		return getEdge(nodes[a], nodes[b]);
 	}
@@ -638,7 +643,7 @@ public void findPathsTest(){
 		Edge wall = new Wall();
 		wall.setCoordinate(x,y,s,t);
 		assert(hashEdges.size()>0);
-		hashEdges.replace(hash4Int(x,y,s,t),wall);	
+		hashEdges.put(hash4Int(x,y,s,t),wall);	
 		hashTarEdges.remove(wall.hashValue());
 		
 	}
@@ -646,13 +651,13 @@ public void findPathsTest(){
  	public void setHoles(ArrayList<Hole>holes){
 		for(Hole hole:holes){
 			//setEdgeHole(hole.getCoordinate().x,hole.getCoordinate().y,hole.getCoordinate().s,hole.getCoordinate().t);
-			hashEdges.replace(hole.hashValue(), hole);
+			hashEdges.put(hole.hashValue(), hole);
 		}
 	}
  	
  	public void setWalls(ArrayList<Wall> walls){
  		for(Wall wall:walls){
- 			hashEdges.replace(wall.hashValue(), wall);
+ 			hashEdges.put(wall.hashValue(), wall);
  			hashTarEdges.remove(wall.hashValue());
  		}
  	}
@@ -661,7 +666,7 @@ public void findPathsTest(){
 		Edge hole = new Hole();
 		hole.setCoordinate(x,y,s,t);
 		assert(hashEdges.size()>0);
-		hashEdges.replace(hash4Int(x,y,s,t),hole);
+		hashEdges.put(hash4Int(x,y,s,t),hole);
 	}
 	
 	public Edge getEdge(int x, int y, int s, int t){
@@ -817,15 +822,17 @@ public void findPathsTest(){
 		String xVariable;
 		String wVariable;
 		String yVariable; 
-		String cVariable; // if one node is connected to source or terminal
+		String iVariable; // current on each edge
+		String vVariable; // voltage on each edge 
 		String constraint = "";
 		HashMap<Edge, String> hashWVariables1dim;
-		HashMap<Node, String> hashCVariables1dim;
-		HashMap<String, String> hashZVariables1dim; // if 
-		for(int i = 0; i <= height -1 + width - 1 -1 ; i++){
+		HashMap<Edge, String> hashIVariables1dim;
+		HashMap<Edge, String> hashVVariables1dim;	
+		HashMap<Node,String> hashYVariables1dim;
+		ArrayList<String> iConstraint1dim;
+		
+		for(int i = 0; i <= height -1 + width-1 - 1; i++){
 			hashWVariables1dim = new HashMap<Edge,String>(); 
-			hashCVariables1dim = new HashMap<Node, String>();
-			
 			for(Edge edge:edges){
 				if(!(edge instanceof Wall)){						
 					
@@ -840,20 +847,13 @@ public void findPathsTest(){
 				}
 			}
 			hashWVariables.put(i, hashWVariables1dim);
-			
+			hashYVariables1dim = new HashMap<Node,String>();
 			for(Node node:nodes){
 				yVariable = "y" + i + node.coord.x + node.coord.y;
-				cVariable = "c" + i + node.coord.x + node.coord.y;
-				
-				if(!hashCVariables1dim.containsKey(node)){
-					hashCVariables1dim.put(node, cVariable);
-					variables.add(cVariable);
-					variableTypes.add(1);
+				if(!hashYVariables1dim.containsKey(node)){
+					variables.add(yVariable);
+					variableTypes.add(1);				
 				}
-				variables.add(yVariable);
-				variableTypes.add(1);
-				
-				
 				for(Node cnctNode:getConnectedNodes(node)){
 					Edge edge = getEdge(node,cnctNode);
 					wVariable = hashWVariables1dim.get(edge); 
@@ -864,73 +864,244 @@ public void findPathsTest(){
 					constraint =constraint + yVariable + " = 1"; 
 				}
 				else{
-					constraint = constraint +"2"+yVariable + " = 2";
+					constraint = constraint + "2" + yVariable + " = 2";
 				}
 				ILP.add(constraint);
 				constraint = "";
 			}
-			String orConstraint = "";
-			String degreeConstraint = "";
-			for(Node node:nodes){
-				cVariable = hashCVariables1dim.get(node);
-				orConstraint = cVariable;
-				degreeConstraint = cVariable;
-				for(Node cnctNode:getConnectedNodes(node)){
-					Edge edge = getEdge(node,cnctNode);
-					wVariable = hashWVariables1dim.get(edge);
-					String cnctCVariable = hashCVariables1dim.get(cnctNode);
+			
+			
+			hashIVariables1dim = new HashMap<Edge,String>();
+			hashVVariables1dim = new HashMap<Edge,String>();
+			for(Edge edge:edges){
+				if(!(edge instanceof Wall)){					
+					iVariable = "i" + i + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t;	
+					vVariable = "v" + i + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t;
+					if(!hashIVariables1dim.containsKey(edge)){
+						hashIVariables1dim.put(edge, iVariable);
+						hashVVariables1dim.put(edge,vVariable);
+						variables.add(iVariable);
+						
+						variableTypes.add(0);
+						variables.add(vVariable);
+						variableTypes.add(0);
+					}
 					
-					String zVarialbe =  "z" + i  + cnctNode.coord.x + cnctNode.coord.y + node.coord.x + node.coord.y;
-					variables.add(zVarialbe);
-					variableTypes.add(1);
-					//z0 >= c0 + w0 -1
-					//z0 <= c0
-					//z0 <= w0
-					constraint =  cnctCVariable + "+" + wVariable + "-" + zVarialbe + " >= 1";
-					ILP.add(constraint);
-					constraint = zVarialbe + "-" + cnctCVariable + "<=0";
-					ILP.add(constraint);
-					constraint = zVarialbe + "-" + wVariable + "<=0";
-					ILP.add(constraint);
-					// c <= z0 + z1 + z2 ...
-					// c >= z0, c >=z1 c>= z2...
-					orConstraint +=  "-" + zVarialbe;
-					
-					constraint = cVariable + "-" + zVarialbe + ">=0";
-					ILP.add(constraint);
-					constraint = "";
-					//if degree of node >= 1, c = 1 or c = 0
-					// c <= w0 + w1 + w2
-					// c >= w0, c>= w1, c >= w2
-					degreeConstraint += "-" + wVariable;
-					constraint  = cVariable + "-" + wVariable + " >= 0";
-					ILP.add(constraint);
-					constraint = "";
 				}
-				orConstraint += "<=0";
-				ILP.add(orConstraint);
-				orConstraint = "";
-				//if degree of node >= 1, c = 1 or c = 0
-				degreeConstraint += "<=0";
-				ILP.add(degreeConstraint);
-				degreeConstraint = "";
-				
-				
-				
-				
-				
 			}
 			
+			//set Kirchhoff Circuit Laws to calculate i on each edge
+			//each used edge (w(edge) = 1), i(edge) <> 0
 			
+			//create iVariable vVariable for every edge  
 			
+			// current conservation
+			// i01 + i02 + i03 + i04 = 0
+			String iConstraint = "";
 			
+			iConstraint1dim = new ArrayList<String>();
 			
+			for(Node node:nodes){
+				if(node != entrance && node != exit){					
+					for(Node cnctNode:getConnectedNodes(node)){
+						Edge edge = getEdge(node,cnctNode);
+						iVariable = hashIVariables1dim.get(edge);
+						wVariable = hashWVariables1dim.get(edge);
+						if(aLeftOrUnderb(node,cnctNode)){
+							iVariable = "+" + iVariable;
+						}
+						else
+						{
+							iVariable = "-" + iVariable;
+						}
+						String key = "i" + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t; 
+						constraint = iVariable + "-" + M + wVariable + "<= 0";
+						if(!iConstraint1dim.contains(key)){							
+							ILP.add(constraint);
+							constraint = "";
+						}
+						
+						constraint = iVariable + "+" + M + wVariable + ">= 0";
+						if(!iConstraint1dim.contains(key)){						
+							ILP.add(constraint);
+							constraint = "";
+						}
+						
+						iConstraint +=  iVariable;
+					}
+					
+					iConstraint += "=0";
+					ILP.add(iConstraint);
+					iConstraint = "";
+				}
 		}
+			
+		// voltage conservation	
+		// v01 + v12 + v23 + v34 = 0;
+		
+		for(int j = 0; j <= width - 1 -1; j++){
+			for(int k = 0; k <= height -1 -1; k++){
+				Node node0,node1,node2,node3;
+				Edge edge0,edge1,edge2,edge3;
+				node0 = getNode(j,k);
+				node1 = getNode(j,k+1);
+				node2 = getNode(j +1,k+1);
+				node3 = getNode(j+1,k);
+				
+				edge0 = getEdge(node0,node1);
+				edge1 = getEdge(node1,node2);
+				edge2 = getEdge(node2,node3);
+				edge3 = getEdge(node3,node0);
+				
+				
+				String iVariable0,vVariable0,wVariable0;
+				String iVariable1,vVariable1,wVariable1;
+				String iVariable2,vVariable2,wVariable2;
+				String iVariable3,vVariable3,wVariable3;
+				
+				//edge0
+				if(!(edge0 instanceof Wall)){
+					iVariable0 = hashIVariables1dim.get(edge0);
+					vVariable0 = hashVVariables1dim.get(edge0);
+					wVariable0 = hashWVariables1dim.get(edge0);
+				}
+				else
+				{
+					iVariable0 = "i" + i +  edge0.coord.x + edge0.coord.y + edge0.coord.s+edge0.coord.t;
+					vVariable0 = "i" + i +  edge0.coord.x + edge0.coord.y + edge0.coord.s+edge0.coord.t;
+					wVariable0 = "i" + i +  edge0.coord.x + edge0.coord.y + edge0.coord.s+edge0.coord.t;
+					hashWVariables1dim.put(edge0,wVariable0); variables.add(wVariable0);variableTypes.add(1);
+					hashIVariables1dim.put(edge0,iVariable0); variables.add(iVariable0);variableTypes.add(0);
+					hashVVariables1dim.put(edge0,vVariable0); variables.add(vVariable0); variableTypes.add(0);
+					constraint = wVariable0 + "=0";
+				}
+				
+				//edge1
+				if(!(edge1 instanceof Wall)){
+					iVariable1= hashIVariables1dim.get(edge1);
+					vVariable1 = hashVVariables1dim.get(edge1);
+					wVariable1 = hashWVariables1dim.get(edge1);
+				}
+				else
+				{
+					iVariable1 = "i" + i +  edge1.coord.x + edge1.coord.y + edge1.coord.s+edge1.coord.t;
+					vVariable1 = "i" + i +  edge1.coord.x + edge1.coord.y + edge1.coord.s+edge1.coord.t;
+					wVariable1 = "i" + i +  edge1.coord.x + edge1.coord.y + edge1.coord.s+edge1.coord.t;
+					hashWVariables1dim.put(edge1,wVariable1); variables.add(wVariable1);variableTypes.add(1);
+					hashIVariables1dim.put(edge1,iVariable1); variables.add(iVariable1);variableTypes.add(0);
+					hashVVariables1dim.put(edge1,vVariable1); variables.add(vVariable1); variableTypes.add(0);
+					constraint = wVariable1 + "=0";
+				}
+				
+				//edge2
+				if(!(edge2 instanceof Wall)){
+					iVariable2= hashIVariables1dim.get(edge2);
+					vVariable2 = hashVVariables1dim.get(edge2);
+					wVariable2 = hashWVariables1dim.get(edge2);
+				}
+				else
+				{
+					iVariable2 = "i" + i +  edge2.coord.x + edge2.coord.y + edge2.coord.s+edge2.coord.t;
+					vVariable2 = "i" + i +  edge2.coord.x + edge2.coord.y + edge2.coord.s+edge2.coord.t;
+					wVariable2 = "i" + i +  edge2.coord.x + edge2.coord.y + edge2.coord.s+edge2.coord.t;
+					hashWVariables1dim.put(edge2,wVariable2); variables.add(wVariable2);variableTypes.add(1);
+					hashIVariables1dim.put(edge2,iVariable2); variables.add(iVariable2);variableTypes.add(0);
+					hashVVariables1dim.put(edge2,vVariable2); variables.add(vVariable2); variableTypes.add(0);
+					constraint = wVariable2 + "=0";
+				}
+				
+				//edge3
+				if(!(edge3 instanceof Wall)){
+					iVariable3= hashIVariables1dim.get(edge3);
+					vVariable3 = hashVVariables1dim.get(edge3);
+					wVariable3 = hashWVariables1dim.get(edge3);
+				}
+				else
+				{
+					iVariable3 = "i" + i +  edge3.coord.x + edge3.coord.y + edge3.coord.s+edge3.coord.t;
+					vVariable3 = "i" + i +  edge3.coord.x + edge3.coord.y + edge3.coord.s+edge3.coord.t;
+					wVariable3 = "i" + i +  edge3.coord.x + edge3.coord.y + edge3.coord.s+edge3.coord.t;
+					hashWVariables1dim.put(edge3,wVariable3); variables.add(wVariable3);variableTypes.add(1);
+					hashIVariables1dim.put(edge3,iVariable3); variables.add(iVariable3);variableTypes.add(0);
+					hashVVariables1dim.put(edge3,vVariable3); variables.add(vVariable3); variableTypes.add(0);
+					constraint = wVariable3 + "=0";
+				}
+				
+				// -M(1-w) <= v <= M(1-w), -M*W <= i <= M*w
+				//v+M*W <= M			
+				//v - M*w >= -M
+				// i+ m*w >=0
+				// i - M*W <= 0
+				
+				String c00 = vVariable0 +  "+" + M + wVariable0 + "<=" + M;
+				String c01 = vVariable0 + "-" + M + wVariable0 + ">=" + "-" + M;
+				String c02 = iVariable0 + "-" + M + wVariable0 + "<=0";
+				String c03 = iVariable0 + "+" + M +  wVariable0 + ">=0";
+				ILP.add(c00);ILP.add(c01);
+				//ILP.add(c02);ILP.add(c03);
+				
+				String c10 = vVariable1 + "+" + M + wVariable1 + "<=" + M;
+				String c11 = vVariable1 + "-" + M + wVariable1 + ">=" + "-" + M;
+				String c12 = iVariable1 + "-" + M + wVariable1 + "<=0";
+				String c13 = iVariable1 + "+" + M +  wVariable1 + ">=0";
+				ILP.add(c10);ILP.add(c11);
+				//ILP.add(c12);ILP.add(c13);
+				
+				String c20 = vVariable2 + "+" + M + wVariable2 + "<=" + M;
+				String c21 = vVariable2 + "-" + M + wVariable2 + ">=" + "-" + M;
+				String c22 = iVariable2 + "-" + M + wVariable2 + "<=0";
+				String c23 = iVariable2 + "+" + M +  wVariable2 + ">=0";
+				ILP.add(c20);ILP.add(c21);
+				//ILP.add(c22);ILP.add(c23);
+				
+				String c30 = vVariable3 + "+" + M + wVariable3 + "<=" + M;
+				String c31 = vVariable3 + "-" + M + wVariable3 + ">=" + "-" + M;
+				String c32 = iVariable3 + "-" + M + wVariable3 + "<=0";
+				String c33 = iVariable3 + "+" + M +  wVariable3 + ">=0";
+				ILP.add(c30);ILP.add(c31);
+				//ILP.add(c32);ILP.add(c33);
+				
+				//v1 + v2 + v3 + v4 = 0
+				
+				constraint = iVariable0 + "+" +  vVariable0 + 
+						"+" + iVariable1 + "+" + vVariable1 +
+						"+" + iVariable2 + "+"  + vVariable2 +
+						"-" + iVariable3 + "-"  + vVariable3 + " = 0";
+				ILP.add(constraint);
+				constraint = "";
+			}
+		}
+		
+		
+		// if w = 1, then i <> 0
+		for(Edge edge:edges){
+			String bVariable = "b" + i + edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t; // a temp binary variable
+			variables.add(bVariable);
+			variableTypes.add(1);
+			
+			wVariable = hashWVariables1dim.get(edge);
+			iVariable = hashIVariables1dim.get(edge); 
+			//constraint = iVariable + "+" +M + wVariable + ">=0"; ILP.add(constraint);
+			//constraint = iVariable + "-" +M + wVariable + "<=0"; ILP.add(constraint);
+			//i + w -1 >(b-1)M, i+w -1 <bM
+			//i + w -M*b>1-M, i+w - M*b < 1
+			//means i+w - M*b >= 1 - M + 1, i + w - M*b <= 0 
+			constraint = iVariable +"+"+ wVariable + "-" + M + bVariable + ">=" + (1-M +1); ILP.add(constraint);
+			constraint = "";
+			constraint = iVariable + "+" + wVariable + "-" + M + bVariable + "<=0"; ILP.add(constraint);
+			constraint = "";
+		}
+			
+			
+			
+			
+			
+	}
 		
 		
 		obj = "";
 		for(Edge edge:edges){			
-			for(int i = 0; i <= height -1 + width -1 -1; i++){
+			for(int i = 0; i <= height-1 + width-1 -1; i++){
 				if(!(edge instanceof Wall)){		
 					//only init xVarialbe once
 					HashMap<Edge,String> test = hashWVariables.get(i);
@@ -944,7 +1115,7 @@ public void findPathsTest(){
 			constraint = "";
 		}
 		
-		for(int i =0; i <= height -1  + width -1 -1; i++){
+		for(int i =0; i <= height-1 + width-1 -1; i++){
 			xVariable = "x" + i;
 	
 			variables.add(xVariable);
@@ -961,6 +1132,11 @@ public void findPathsTest(){
  			obj += "+" + xVariable;
  			
 		}
+		
+		
+		
+	
+		
 		
 		
 		//set obj

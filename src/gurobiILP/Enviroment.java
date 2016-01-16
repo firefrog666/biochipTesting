@@ -160,8 +160,8 @@ public class Enviroment {
 			  	case "init":
 			  		if( c >= 48 & c <58 ){			 
 			  			coef = coef + c;
-//						System.out.println("now " + state);
-//						System.out.println(c);
+						//System.out.println("now " + state);
+						//System.out.println(c);
 					}
 			  		else if ( (c >= 64 & c <91) || (c>= 97 & c < 122) ){
 						
@@ -180,8 +180,8 @@ public class Enviroment {
 							if(!variable.isEmpty())
 								 constrain.varibleNames.add(variable);
 						}
-//						System.out.println("now " + state);			 
-//						System.out.println(c);
+						//System.out.println("now " + state);			 
+						//System.out.println(c);
 					}
 			  		else if(c == '-'){
 			  			coef += "-";
@@ -191,8 +191,8 @@ public class Enviroment {
 			  	case "cofficient":
 			  		if( c >= 48 & c <58 ){			 
 			  			coef = coef + c;
-//						System.out.println("now " + state);
-//						System.out.println(c);
+						//System.out.println("now " + state);
+						//System.out.println(c);
 					}
 			  		else if ( (c >= 64 & c <91) || (c>= 97 & c < 122) ){
 						
@@ -211,8 +211,8 @@ public class Enviroment {
 							if(!variable.isEmpty())
 								 constrain.varibleNames.add(variable);
 						}
-//						System.out.println("now " + state);			 
-//						System.out.println(c);
+						//System.out.println("now " + state);			 
+						//System.out.println(c);
 					}	  		
 			  		
 					break;
@@ -250,8 +250,8 @@ public class Enviroment {
 						variable = "";
 						if(c == '-')
 							coef = coef + '-'; 
-//						System.out.println("now " + state);
-//						System.out.println(c);
+						//System.out.println("now " + state);
+						//System.out.println(c);
 			  		}
 			  		else if (c == '=') {
 			  			state = "bound";
@@ -295,7 +295,7 @@ public class Enviroment {
 					break;
 					
 			  	case "bound":		  		
-			  		if (c >= 48 & c <58)
+			  		if (c >= 48 & c <58 || c == '-' || c == '+')
 			  			bound = bound + c;
 			  		if(i == instruction.length()-1)
 						 constrain.bound = Integer.parseInt(bound);
@@ -308,6 +308,8 @@ public class Enviroment {
 			
 					  
 		  }
+		  state = "";
+		  
 	  }
 	
 }
