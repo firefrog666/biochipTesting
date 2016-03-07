@@ -1,5 +1,8 @@
 package gurobiILP;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -19,6 +22,7 @@ public class Enviroment {
 	GRBModel model;
 	ArrayList<GRBVar> grbVars;
 	GRBLinExpr expr;
+	private static final int BOUND = 10000000;
 	
 	
 	public Enviroment() throws GRBException{
@@ -76,7 +80,7 @@ public class Enviroment {
 			System.out.println(grbVar.get(GRB.StringAttr.VarName) + 
 					 " " + grbVar.get(GRB.DoubleAttr.X));
 		}
-		
+		 	
 //		System.out.println(x1.get(GRB.StringAttr.VarName)
 //              + " " +x2.get(GRB.DoubleAttr.X));
 		
@@ -88,7 +92,15 @@ public class Enviroment {
 		grbVars = new ArrayList<GRBVar>();
 		
 		for(Var var:vars){
-			GRBVar temp = model.addVar(var.lowbound, var.upbound, 0.0, GRB.INTEGER, var.name);
+			GRBVar temp;
+			if(var.type == 0){
+				 temp = model.addVar(var.lowbound, var.upbound, 0.0, GRB.CONTINUOUS, var.name);				
+			}
+			else{
+				temp = model.addVar(var.lowbound, var.upbound, 0.0, GRB.BINARY, var.name);
+			}
+			
+			
 			hashGrbVars.put(var.name, temp);
 			grbVars.add(temp);
 		}
@@ -100,15 +112,17 @@ public class Enviroment {
 			Var var = new Var();
 			//variable
 			if(varTypes.get(i) == 0){
-				var.lowbound = -100;
-				var.upbound = 100;
+				var.lowbound = -1 * BOUND;
+				var.upbound = BOUND;
 				var.name = varNames.get(i);
+				var.type = 0;
 			}
 			//binary
 			else{
 				var.lowbound = 0;
 				var.upbound = 1;
 				var.name = varNames.get(i);
+				var.type = 1;
 			}
 			vars.add(var);	
 			
@@ -311,5 +325,75 @@ public class Enviroment {
 		  state = "";
 		  
 	  }
+	
+	public void writeFile() throws FileNotFoundException, UnsupportedEncodingException{
+		PrintWriter writer = new PrintWriter("/home/ga63quk/workspace/IlpSolverCpp/Release/lp.txt", "UTF-8");
+		String OBJ = "";
+		String Constraint = "";
+		String Bound = "";
+		String Binaries = "";
+		String Generals = "";
+		writer.println("Minimize");
+		//write object
+		int count = 0;
+		String varName;
+		Integer cof;
+		for(int i=0; i<=obj.varibleNames.size()-1; i++){
+			varName = obj.varibleNames.get(i);
+			cof = obj.cofficient.get(i);
+			OBJ += cof + " ";
+			OBJ += varName + " ";
+			if(i != obj.varibleNames.size() -1)
+				OBJ += " + ";
+			
+		}
+		
+		//writer.println(OBJ);
+		//write constraints
+		writer.println("Subject to");
+		count = 0;
+		for(Constrain constraint:constrains){
+			 Constraint = "";
+			 for(int i=0; i<=constraint.varibleNames.size()-1; i++){
+				 varName = constraint.varibleNames.get(i);
+				 cof =  constraint.cofficient.get(i);
+				 Constraint += cof + " ";
+				 Constraint += varName + " ";
+				 if(i != constraint.varibleNames.size()-1){
+					 Constraint += " + ";
+				 }
+			 }
+			 //
+			 Constraint += constraint.operators+ " ";
+			 Constraint += " " + constraint.bound;
+			 writer.println(Constraint);			
+		}
+		// write bounds
+//		writer.println("Bounds");
+//		for(Var var:vars){
+//			Bound = var.lowbound + " <= " + var.name + " <= " + var.upbound; 
+//			writer.println(Bound);
+//		}
+		
+		//write Binarys and 
+		for(Var var:vars){
+			if(var.lowbound  == 0){
+				Binaries += var.name + " ";
+			}
+			else{
+				Generals += var.name + " ";
+			}
+		}
+		writer.println("Binaries");
+		writer.println(Binaries);
+		writer.println("Generals");
+		writer.println(Generals);
+		writer.println("END");
+		
+	
+		//System.out.println("this is good");
+		writer.flush();
+		writer.close();
+	}
 	
 }

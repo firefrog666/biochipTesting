@@ -1,7 +1,24 @@
 <?xml version="1.0"?>
-<bioChip width="10" height="10">
-	<!---wall id="1001" x ="1" y="0" s="1" t="1">
-	</wall-->
+<bioChip width="5" height="5">
+	<wall id="0001" x ="0" y="0" s="0" t="1">
+	</wall>
+	<wall id="0010" x ="0" y="0" s="1" t="0">
+	</wall>
+	<wall id="0304" x ="0" y="3" s="0" t="4">
+	</wall>
+	<wall id="0414" x ="0" y="4" s="1" t="4">
+	</wall>
+	<wall id="3040" x ="3" y="0" s="4" t="0">
+	</wall>
+	<wall id="4041" x ="4" y="0" s="4" t="1">
+	</wall>
+	<wall id="4344" x ="4" y="3" s="4" t="4">
+	</wall>
+	<wall id="3444" x ="3" y="4" s="4" t="4">
+	</wall>
+	
+	
+	
 	<!---hole id="2001" x ="0" y="0" s="1" t="0">	
 	</hole-->
 </bioChip>
