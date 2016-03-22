@@ -30,33 +30,49 @@ public class GraphShaper {
 		Int2 second;
 		Int2 center;
 		Int2 temp;
+		boolean reverse = false;
 		for(Graph subGraph:subGraphs){			
 			for(ArrayList<Int2> pathVertex : paths){
 				for(int i = 0 ; i <= pathVertex.size()-2; i ++){
 					first = pathVertex.get(i);
 					second = pathVertex.get(i+1);
+					while(second.equals(first)){
+						i++;
+						second = pathVertex.get(i);
+					}
+						
+					if(first.x > second.x || first.y > second.y){
+						temp = first;
+						first = second;
+						second = temp;
+						reverse = true;
+					}
+					
 					center = subGraph.center;
 					if(first.x == center.x && second.x == center.x){
 						if(first.y < center. y && second.y > center.y){
 							subGraph.setHeadsTails(direction.West, direction.East);
 						}
+						
 						else if(first.y <center.y && second.y == center.y){
-							
-							for(int j = i+1; j <= pathVertex.size()-1; j++){
-								temp = pathVertex.get(j);
-								if(temp.y > center.y){
-									subGraph.setHeadsTails(direction.East, direction.West);
-									break;
-								}
-								if(temp.x > center.x){
-									subGraph.setHeadsTails(direction.East, direction.North);
-									break;
-								}
-								if(temp.x < center.x){
-									subGraph.setHeadsTails(direction.East, direction.South);
-									break;
+							if(reverse){
+								for(int j = i+1; j <= pathVertex.size()-1; j++){
+									temp = pathVertex.get(j);
+									if(temp.y > center.y){
+										subGraph.setHeadsTails(direction.East, direction.West);
+										break;
+									}
+									if(temp.x > center.x){
+										subGraph.setHeadsTails(direction.East, direction.North);
+										break;
+									}
+									if(temp.x < center.x){
+										subGraph.setHeadsTails(direction.East, direction.South);
+										break;
+									}
 								}
 							}
+							
 						}
 						
 					
