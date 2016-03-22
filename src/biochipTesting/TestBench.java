@@ -20,11 +20,13 @@ import java.util.Stack;
 //import gurobi.GRBException;
 
 public class TestBench {
-	private static int WIDTH = 20;
-	private static int HEIGHT = 20;
+	private static int WIDTH = 2;
+	private static int HEIGHT = 2;
+			
 	private static final String dataPath =  "/home/ga63quk/workspace/biochipTestGit/biochipTesting/src/data.xml";
 	
-	
+	ArrayList<ArrayList<Int2>> pathsVertex;
+		
 	public static void main(String arg[]) throws GRBException, FileNotFoundException, UnsupportedEncodingException {
 		
 		//printSystem();
@@ -33,15 +35,18 @@ public class TestBench {
 		
 		//readXml(dataPath,walls,holes);
 		Graph graph;
- 		graph = new Graph(WIDTH,HEIGHT);
+		graph = new Graph(WIDTH,HEIGHT);
+ 		//graph = new Graph(WIDTH,HEIGHT, true); //generate cut
  		graph.setHoles(holes);
  		graph.setWalls(walls);
  		
  		//graph.findCuts(graph.findCriticalPath());
  		//graph.findPaths();
- 		//graph.getAcyclicILP();
- 		graph.getAcyclicILPExactRoute();
+ 		graph.getAcyclicILP();
  		
+ 		//graph.getAcyclicILPExactRoute();
+ 		//graph.getCuts();
+ 		//graph.getOneLongestPath();
  		Enviroment env = new Enviroment();
 		//acyclicPathILP();
 		
@@ -50,9 +55,9 @@ public class TestBench {
 		ArrayList<Integer> varTypes = graph.variableTypes;
 		
 		env.setVars(varNames,varTypes);
-		env.setContrains(graph.ILP);
+		//env.setContrains(graph.ILP);
 		env.setObjective(graph.obj);
-		env.writeFile();
+		env.writeFile(graph.ILP);
 		//env.run();
  		
 		
@@ -191,6 +196,11 @@ public class TestBench {
 		    }
 		  
 		
-	}
+			
+		}
+	
+	
+	
+	
 	
 }

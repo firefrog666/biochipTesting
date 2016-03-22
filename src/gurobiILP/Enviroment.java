@@ -326,14 +326,17 @@ public class Enviroment {
 		  
 	  }
 	
-	public void writeFile() throws FileNotFoundException, UnsupportedEncodingException{
-		PrintWriter writer = new PrintWriter("/home/ga63quk/workspace/IlpSolverCpp/Release/lp.txt", "UTF-8");
+	public void writeFile(ArrayList<String> instructions) throws FileNotFoundException, UnsupportedEncodingException{
+		PrintWriter writer = new PrintWriter("/home/ga63quk/workspace/IlpSolverCpp/Release/lp.lp", "UTF-8");
 		String OBJ = "";
 		String Constraint = "";
 		String Bound = "";
-		String Binaries = "";
+		ArrayList<String> binaryArray = new ArrayList<String>();
+		ArrayList<String> generalArray = new ArrayList<String>();
+		
 		String Generals = "";
-		writer.println("Minimize");
+		//writer.println("Minimize");
+		writer.println("Maximize");
 		//write object
 		int count = 0;
 		String varName;
@@ -352,22 +355,26 @@ public class Enviroment {
 		//write constraints
 		writer.println("Subject to");
 		count = 0;
-		for(Constrain constraint:constrains){
-			 Constraint = "";
-			 for(int i=0; i<=constraint.varibleNames.size()-1; i++){
-				 varName = constraint.varibleNames.get(i);
-				 cof =  constraint.cofficient.get(i);
-				 Constraint += cof + " ";
-				 Constraint += varName + " ";
-				 if(i != constraint.varibleNames.size()-1){
-					 Constraint += " + ";
-				 }
-			 }
-			 //
-			 Constraint += constraint.operators+ " ";
-			 Constraint += " " + constraint.bound;
-			 writer.println(Constraint);			
+		for(String instruction:instructions){
+			writer.println(instruction);
 		}
+//		for(Constrain constraint:constrains){
+//			 Constraint = "";
+//			 for(int i=0; i<=constraint.varibleNames.size()-1; i++){
+//				 varName = constraint.varibleNames.get(i);
+//				 cof =  constraint.cofficient.get(i);
+//				 Constraint += cof + " ";
+//				 Constraint += varName + " ";
+//				 if(i != constraint.varibleNames.size()-1){
+//					 Constraint += " + ";
+//				 }
+//			 }
+//			 //
+//			 Constraint += constraint.operators+ " ";
+//			 Constraint += " " + constraint.bound;
+//			 writer.println(Constraint);			
+//		}
+		
 		// write bounds
 //		writer.println("Bounds");
 //		for(Var var:vars){
@@ -377,17 +384,22 @@ public class Enviroment {
 		
 		//write Binarys and 
 		for(Var var:vars){
-			if(var.lowbound  == 0){
-				Binaries += var.name + " ";
+			if(var.lowbound  == 0){				
+				binaryArray.add(var.name);
 			}
 			else{
-				Generals += var.name + " ";
+				generalArray.add(var.name);
 			}
 		}
 		writer.println("Binaries");
-		writer.println(Binaries);
+		for(String binary:binaryArray){
+			writer.println(binary);
+		}
+		
 		writer.println("Generals");
-		writer.println(Generals);
+		for(String general:generalArray){
+			writer.println(general);
+		}
 		writer.println("END");
 		
 	

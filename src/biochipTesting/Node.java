@@ -9,6 +9,12 @@ public class Node {
 	private Node[] adjNodes;
 	private ArrayList<Node> adjNodesList;
 	
+	public Node(Node node){
+		this.coord = node.coord;
+		this.number = node.number;
+		this.adjNodesList = new ArrayList<Node>();
+	}
+	
 	public Node(){
 		this.number = 0;
 		adjNodesList = new ArrayList<Node>();

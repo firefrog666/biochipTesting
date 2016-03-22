@@ -8,6 +8,14 @@ public class Edge extends Node{
 	int weight;
 	//public Int4 coordinate;
 	
+	public Edge(Edge e){
+		on = e.on;
+		SA1 = e.SA1;
+		SA0 = e.SA0;
+		isHorizontal = e.isHorizontal;
+		coord = e.coord;
+	}
+	
 	public Edge(){
 		super();
 		//coordinate = new Int4();
