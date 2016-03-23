@@ -12,8 +12,7 @@ import java.util.Map.Entry;
 
 public class Graph {
 	
-	private static final int upBound = 10; 
-	private static final int lowBound = 3; 
+
 	private static final int M = 10000;
 	private static final int maxPaths = 4;
 	private static final int numberOfJoints = 20;	
@@ -45,8 +44,12 @@ public class Graph {
 	private ArrayList<direction> heads;
 	private ArrayList<direction> tails;
 	
+	private Graph conciseGraph;
+	private ArrayList<Graph> subGraphs;
+	private ArrayList<ArrayList<Int2>> concisePaths; 
 	
 	private ArrayList<ArrayList<Edge>> cuts;
+	
 	
 	
 	public Int4 boundingBox;
@@ -55,42 +58,15 @@ public class Graph {
 	public ArrayList<String> variables;
 	public ArrayList<Integer> variableTypes;
 	public String obj;
+	
+	public ArrayList<Float> splitX; //start at -0.5 end at height + 0.5
+	public ArrayList<Float> splitY;
 	 
 	public Graph(){
 		
-	}
+	}	
 	
 	
-	
-	public void setHeadsTails(direction head,direction tail){
-		// if head and tail are already in the queue, do nothing
-		// zheli yinggai bu tai dui ,zenme cai neng bao zheng zhge shi dui de ne ?
-		if(heads.contains(head)){
-			int i = heads.indexOf(head);
-			if(tails.get(i) == tail)
-				return;			
-		}
-		
-		if(tails.contains(head)){
-			int j = tails.indexOf(head);
-			if(heads.get(j) == tail)
-				return;
-		}
-		
-		//else add tails and head
-		
-		heads.add(head);
-		tails.add(tail);
-		
-	}
-	
-	public void setHeads(ArrayList<direction> h){
-		heads = h;
-	}
-	
-	public void setTails(ArrayList<direction> t){
-		tails = t;
-	}
 	
 	
 	public Graph(int w, int h){
@@ -102,7 +78,7 @@ public class Graph {
 		//hashBinaries = new HashMap<Edge, String>();	
 		hashEdges = new HashMap<Integer,Edge>();
 		hashNodes  = new HashMap<Integer,Node>();
-		hashTarEdges = new HashMap<Integer,Edge>();
+		//hashTarEdges = new HashMap<Integer,Edge>();
 		cuts = new ArrayList<ArrayList<Edge>>();
 		init(w,h);	
 	}
@@ -114,7 +90,7 @@ public class Graph {
 		//hashBinaries = new HashMap<Edge, String>();	
 		hashEdges = new HashMap<Integer,Edge>();
 		hashNodes  = new HashMap<Integer,Node>();
-		hashTarEdges = new HashMap<Integer,Edge>();
+		//hashTarEdges = new HashMap<Integer,Edge>();
 		cuts = new ArrayList<ArrayList<Edge>>();
 		brinkR = new ArrayList<Edge>();
 		brinkL = new ArrayList<Edge>();
@@ -142,7 +118,48 @@ public class Graph {
 	}
 	
 	
+	//split graph into 1 conciseGraph and several subGraph;
 	
+	public void splitGraph(){
+		int x = splitX.size() + 1;
+		int y = splitY.size() + 1;
+		conciseGraph = new Graph(x , y);
+		
+		for(Float )
+		
+	}
+	
+
+	
+	public void setHeadsTails(direction head,direction tail){
+		// if head and tail are already in the queue, do nothing
+		
+		if(heads.contains(head)){
+			int i = heads.indexOf(head);
+			if(tails.get(i) == tail)
+				return;			
+		}
+		
+		if(tails.contains(head)){
+			int j = tails.indexOf(head);
+			if(heads.get(j) == tail)
+				return;
+		}
+		
+		//else add tails and head
+		
+		heads.add(head);
+		tails.add(tail);
+		
+	}
+	
+	public void setHeads(ArrayList<direction> h){
+		heads = h;
+	}
+	
+	public void setTails(ArrayList<direction> t){
+		tails = t;
+	}
 	private Graph extractSubGraph( ArrayList<Node> nodesForSub){
 		// edges are from graph
 		Graph subGraph = new Graph();
@@ -182,22 +199,12 @@ public class Graph {
 		return nodesForSub;
 	}
 	
-	public Int4 leftLowRightUpper(int row, int column){
-		Int4 lfru = new Int4();
-		
-		
-		return lfru;
-		
-	}
+
 	
 	
 	
 	
-	public void init(int w, int h){
-		//Random rnd = new Random();
-		//width = rnd.nextInt(upBound)+lowBound;
-		//height = rnd.nextInt(upBound)+lowBound;
-		
+	public void init(int w, int h){		
 		width = w;
 		height = h;
 		
@@ -2389,7 +2396,7 @@ private void getHashEdgesCut(){
 		wall.setCoordinate(x,y,s,t);
 		assert(hashEdges.size()>0);
 		hashEdges.put(hash4Int(x,y,s,t),wall);	
-		hashTarEdges.remove(wall.hashValue());
+		//hashTarEdges.remove(wall.hashValue());
 		
 	}
 	
@@ -2404,7 +2411,7 @@ private void getHashEdgesCut(){
  	public void setWalls(ArrayList<Wall> walls){
  		for(Wall wall:walls){
  			hashEdges.put(wall.hashValue(), wall);
- 			hashTarEdges.remove(wall.hashValue());
+ 			//hashTarEdges.remove(wall.hashValue());
  		}
  		edges = new ArrayList<Edge>(hashEdges.values());
  	}
