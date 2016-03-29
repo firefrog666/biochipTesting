@@ -45,8 +45,8 @@ public class Node {
 		adjNodesList.add(node);
 		//adjNodes = adjNodesList.toArray(new Node[adjNodesList.size()]);
 	}
-	public Node[] getAdjNodes() {
-		return adjNodesList.toArray(new Node[adjNodesList.size()]);
+	public ArrayList<Node> getAdjNodes() {
+		return adjNodesList;
 		
 	}
 	

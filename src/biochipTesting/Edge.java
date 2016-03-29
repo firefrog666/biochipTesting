@@ -21,6 +21,24 @@ public class Edge extends Node{
 		//coordinate = new Int4();
 	}
 	
+	public Edge(Node a, Node b){
+		assert(!(a.coord.x == b.coord.x && a.coord.y == b.coord.y) );
+		assert(a.coord.x == b.coord.x || a.coord.y == b.coord.y);
+		Node temp;
+		if(a.coord.x > b.coord.x || a.coord.y > b.coord.y){
+			temp = a;
+			a = b;
+			b = temp;
+		}
+		
+		coord.x = a.coord.x;
+		coord.y = a.coord.y;
+		coord.s = b.coord.x;
+		coord.t = b.coord.y;
+			
+		
+		
+	}
 	
 	public Edge(int i){
 		this.number = i;

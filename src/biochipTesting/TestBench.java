@@ -20,8 +20,8 @@ import java.util.Stack;
 //import gurobi.GRBException;
 
 public class TestBench {
-	private static int WIDTH = 2;
-	private static int HEIGHT = 2;
+	private static int WIDTH = 4;
+	private static int HEIGHT = 4;
 			
 	private static final String dataPath =  "/home/ga63quk/workspace/biochipTestGit/biochipTesting/src/data.xml";
 	
@@ -36,28 +36,34 @@ public class TestBench {
 		//readXml(dataPath,walls,holes);
 		Graph graph;
 		graph = new Graph(WIDTH,HEIGHT);
+		graph.splitY = new ArrayList<Double>();
+		graph.splitX = new ArrayList<Double>();
+		graph.splitY.add(-0.5);graph.splitY.add(1.5);graph.splitY.add(3.5);
+		graph.splitX.add(-0.5);graph.splitX.add(1.5);graph.splitX.add(3.5);
+		graph.splitGraph();
+		
  		//graph = new Graph(WIDTH,HEIGHT, true); //generate cut
- 		graph.setHoles(holes);
- 		graph.setWalls(walls);
- 		
- 		//graph.findCuts(graph.findCriticalPath());
- 		//graph.findPaths();
- 		graph.getAcyclicILP();
- 		
- 		//graph.getAcyclicILPExactRoute();
- 		//graph.getCuts();
- 		//graph.getOneLongestPath();
- 		Enviroment env = new Enviroment();
-		//acyclicPathILP();
-		
-		
-		ArrayList<String> varNames = graph.variables;
-		ArrayList<Integer> varTypes = graph.variableTypes;
-		
-		env.setVars(varNames,varTypes);
-		//env.setContrains(graph.ILP);
-		env.setObjective(graph.obj);
-		env.writeFile(graph.ILP);
+// 		graph.setHoles(holes);
+// 		graph.setWalls(walls);
+// 		
+// 		//graph.findCuts(graph.findCriticalPath());
+// 		//graph.findPaths();
+// 		graph.getAcyclicILP();
+// 		
+// 		//graph.getAcyclicILPExactRoute();
+// 		//graph.getCuts();
+// 		//graph.getOneLongestPath();
+// 		Enviroment env = new Enviroment();
+//		//acyclicPathILP();
+//		
+//		
+//		ArrayList<String> varNames = graph.variables;
+//		ArrayList<Integer> varTypes = graph.variableTypes;
+//		
+//		env.setVars(varNames,varTypes);
+//		//env.setContrains(graph.ILP);
+//		env.setObjective(graph.obj);
+//		env.writeFile(graph.ILP);
 		//env.run();
  		
 		

@@ -1,0 +1,9 @@
+Maximize
+ 
+Subject To
+ R40: 2 useTailp0tail00 = 1
+Bounds
+ useTailp0tail00 free
+Generals
+ useTailp0tail00
+End

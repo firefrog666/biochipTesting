@@ -1,5 +1,5 @@
 package biochipTesting;
 
 public enum direction {
-	North, South, East, West
+	North, South, East, West,Source,Terminal
 }

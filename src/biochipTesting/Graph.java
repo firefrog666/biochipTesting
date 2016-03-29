@@ -1,13 +1,25 @@
 package biochipTesting;
-import java.util.Random;
+//import java.util.Random;
 
 import java.util.Stack;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
+//import java.io.FileNotFoundException;
+//import java.io.PrintWriter;
+//import java.io.UnsupportedEncodingException;
+
 import java.util.HashMap;
-import java.util.List;
+//import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
+//import java.util.Map.Entry;
+
+
+
+import gurobiILP.*;
 
 
 public class Graph {
@@ -15,16 +27,17 @@ public class Graph {
 
 	private static final int M = 10000;
 	private static final int maxPaths = 4;
-	private static final int numberOfJoints = 20;	
-	
+	private static final int numberOfJoints = 5;	
+	public boolean isSplit;
 	
 	 
-	
-	private Node[] nodes;
+	public HashMap<String,Integer> pathReuslts;
+	public ArrayList<ArrayList<Int2>> pathsVertex;
+	private ArrayList<Node> nodes;
 //	private ArrayList<Node> nodes;
 	private ArrayList<Edge> edges;
-	private Node entrance;
-	private Node exit;
+	public Node entrance;
+	public Node exit;
 	private int width;
 	private int height;
 	private Map<Integer,Edge> hashEdges;  
@@ -46,6 +59,7 @@ public class Graph {
 	
 	private Graph conciseGraph;
 	private ArrayList<Graph> subGraphs;
+	private HashMap<Int2,Graph> hashSubGraphs;
 	private ArrayList<ArrayList<Int2>> concisePaths; 
 	
 	private ArrayList<ArrayList<Edge>> cuts;
@@ -59,11 +73,17 @@ public class Graph {
 	public ArrayList<Integer> variableTypes;
 	public String obj;
 	
-	public ArrayList<Float> splitX; //start at -0.5 end at height + 0.5
-	public ArrayList<Float> splitY;
+	
+	public ArrayList<Double> splitX; //start at -0.5 end at height + 0.5
+	public ArrayList<Double> splitY;
 	 
 	public Graph(){
-		
+		heads = new ArrayList<direction>();
+		tails = new ArrayList<direction>();
+		ILP = new ArrayList<String>();
+		variableTypes = new ArrayList<Integer>();
+		variables = new ArrayList<String>();
+		isSplit = false;
 	}	
 	
 	
@@ -80,7 +100,13 @@ public class Graph {
 		hashNodes  = new HashMap<Integer,Node>();
 		//hashTarEdges = new HashMap<Integer,Edge>();
 		cuts = new ArrayList<ArrayList<Edge>>();
+		boundingBox = new Int4(0,0,w-1,h-1); 
+		heads = new ArrayList<direction>();
+		tails = new ArrayList<direction>();
+		
+		isSplit = false;
 		init(w,h);	
+	
 	}
 	public Graph(int w, int h, boolean cut){
 		hashWVariables = new HashMap<Integer,HashMap<Edge,String>>() ;
@@ -117,19 +143,379 @@ public class Graph {
 			
 	}
 	
+	public void splitGraph(int column, int row){
+		double x,y;
+		int stepX, stepY;
+		
+		stepX = (int)height / row;
+		stepY = (int)width / column;
+		
+		x = boundingBox.x - 0.5;
+		y = boundingBox.y - 0.5;
+		
+		for(int i = 0; i <= row -1; i ++ ){
+			splitX.add(x);
+			x += stepX;			
+		}
+		
+		for(int i = 0; i < column -1; i++){
+			splitY.add(y);
+			y += stepY;
+		}
+		
+		
+		x = boundingBox.s + 0.5;
+		y = boundingBox.t + 0.5;
+		
+		splitX.add(x);
+		splitY.add(y);
+		
+		isSplit = true;
+		hashSubGraphs = new HashMap<Int2, Graph>();
+		
+		try {
+			splitGraph();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	
 	//split graph into 1 conciseGraph and several subGraph;
 	
-	public void splitGraph(){
-		int x = splitX.size() + 1;
-		int y = splitY.size() + 1;
+	private void splitGraph() throws FileNotFoundException, UnsupportedEncodingException{
+		int x = splitX.size() -1;
+		int y = splitY.size() -1;
 		conciseGraph = new Graph(x , y);
+		conciseGraph.boundingBox = new Int4(0,0,x-1,y-1);
+		conciseGraph.heads = (ArrayList<direction>) this.heads.clone();
+		conciseGraph.tails = (ArrayList<direction>) this.tails.clone();
+		subGraphs = new ArrayList<Graph>();
 		
-		for(Float )
+		
+		Double x0,y0,x1,y1; //left down, right up
+		
+		for(int i = 0; i <= splitX.size()-2; i++){
+			for(int j = 0; j <= splitY.size()-2; j++ ){
+				Graph subGraph = new Graph();
+				subGraph.boundingBox = new Int4(M,M,-M,-M);
+				ArrayList<Node> subGraphNodes = new ArrayList<Node>();
+				HashMap<Node,Node> gNtosubN = new HashMap<Node,Node>();
+				ArrayList<Int4> wallList = new ArrayList<Int4>();
+				ArrayList<Int4> holeList = new ArrayList<Int4>();
+				
+				x0 = splitX.get(i); 
+				y0 = splitY.get(j);
+				x1 = splitX.get(i+1);
+				y1 = splitY.get(j+1);
+				
+				
+				
+				for(Node n:nodes){
+					
+					
+					if( n.coord.x > x0 && n.coord.y > y0 && n.coord.x <x1 && n.coord.y < y1){
+						Node subNode = new Node(n);
+						gNtosubN.put(n, subNode);
+						subGraphNodes.add(subNode);						
+					}
+				}
+				
+				for(Node n:nodes){
+					
+					if( n.coord.x > x0 && n.coord.y > y0 && n.coord.x <x1 && n.coord.y < y1){
+						if(n == entrance){
+							subGraph.entrance = gNtosubN.get(n);
+						}
+						
+						if(n == exit){
+							subGraph.exit   = gNtosubN.get(n);
+						}
+						
+						if(n.coord.x < subGraph.boundingBox.x)
+							subGraph.boundingBox.x  = n.coord.x;
+						if(n.coord.y < subGraph.boundingBox.y)
+							subGraph.boundingBox.y  = n.coord.y;
+						if(n.coord.x > subGraph.boundingBox.s)
+							subGraph.boundingBox.s  = n.coord.x;
+						if(n.coord.y > subGraph.boundingBox.t)
+							subGraph.boundingBox.t  = n.coord.y;
+							
+						for(Node adjNode:getJointNodes(n)){							
+							if(!( adjNode.coord.x > x0 && adjNode.coord.y > y0 && adjNode.coord.x <x1 && adjNode.coord.y < y1)){
+								
+								if(adjNode == entrance){
+									subGraph.entrance = gNtosubN.get(adjNode);
+									
+								}
+								
+								if(adjNode == exit){
+									subGraph.exit   = gNtosubN.get(adjNode);
+									
+								}
+								
+								if(adjNode.coord.x < subGraph.boundingBox.x)
+									subGraph.boundingBox.x  = adjNode.coord.x;
+								if(adjNode.coord.y < subGraph.boundingBox.y)
+									subGraph.boundingBox.y  = adjNode.coord.y;
+								if(adjNode.coord.x > subGraph.boundingBox.s)
+									subGraph.boundingBox.s  = adjNode.coord.x;
+								if(adjNode.coord.y > subGraph.boundingBox.t)
+									subGraph.boundingBox.t  = adjNode.coord.y;
+								
+								Node brinkNode = new Node(adjNode);
+								subGraphNodes.add(brinkNode);
+								gNtosubN.put(adjNode, brinkNode);
+								Node nSubNode = gNtosubN.get(n); 
+								brinkNode.setAdjNodes(nSubNode);
+								nSubNode.setAdjNodes(brinkNode);
+								Edge e = getEdge(n,adjNode);
+								if(e instanceof Wall){
+									wallList.add(e.coord);
+								}
+								else if(e instanceof Hole){
+									holeList.add(e.coord);
+								}
+							}
+							else{
+								Node adjSubNode = gNtosubN.get(adjNode);
+								Node nSubNode = gNtosubN.get(n);								
+								nSubNode.setAdjNodes(adjSubNode);
+							}
+						}
+					}
+				}
+				
+				if(gNtosubN.containsKey(entrance))			
+						conciseGraph.entrance = conciseGraph.getNode(i, j);
+				
+				if(gNtosubN.containsKey(exit))			
+					conciseGraph.exit = conciseGraph.getNode(i, j);
+					
+					
+				
+				subGraph.getHashNodes(subGraphNodes);
+				subGraph.getHashEdges(subGraphNodes, wallList, holeList);
+				subGraph.center = new Int2(i,j);
+				subGraph.width = subGraph.boundingBox.t - subGraph.boundingBox.y;
+				subGraph.height = subGraph.boundingBox.s - subGraph.boundingBox.x;
+				
+				hashSubGraphs.put(subGraph.center, subGraph);
+				subGraphs.add(subGraph);
+			}			
+		}
+		conciseGraph.setHeadsTails(direction.Source, direction.Terminal);
+		try {
+			concisePaths = conciseGraph.getPaths();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		for(Graph subGraph:subGraphs){
+			subGraph.setHeadsTails(concisePaths);
+			try {
+				subGraph.pathsVertex =  subGraph.getPaths();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		
 		
 	}
 	
-
+	public void getHashNodes(ArrayList<Node> graphNodes){
+		hashNodes= new HashMap<Integer,Node>();
+		for(Node n: graphNodes){
+			hashNodes.put(n.hashValue(),n);
+		}
+		nodes = new ArrayList<Node>(hashNodes.values());
+	}
+	
+	public void getHashEdges(ArrayList<Node> graphNodes, ArrayList<Int4> wallList, ArrayList<Int4> holeList ){
+		hashEdges = new HashMap<Integer,Edge>();
+		for(Node n:graphNodes){
+			for(Node adjNode : n.getAdjNodes()){
+				Edge e = new Edge(adjNode,n);
+				if(!hashEdges.containsKey(e.hashValue())){
+					hashEdges.put(e.hashValue(),e);
+				}
+			}
+		}
+		
+		for(Int4 wall : wallList){
+			setEdgeWall(wall);
+		}
+		
+		for(Int4 hole:holeList){
+			setEdgeHole(hole);
+		}
+		edges = new ArrayList<Edge>(hashEdges.values());
+	}
+	
+	public void setHeadsTails(ArrayList<ArrayList<Int2>> concisePaths){
+		
+		Int2 first,second;
+		for(ArrayList<Int2> pathVertex:concisePaths){
+			//list all the segment in one path
+			ArrayList<Int4> segments = new ArrayList<Int4>();
+			for(int i = 0; i <= pathVertex.size()-1; i++ ){
+				for(int j = i; j <=pathVertex.size()-1;j++){
+					first = pathVertex.get(i);
+					second = pathVertex.get(j);
+					if(!first.equals(second)){
+						Int4 segment;
+						if(first.leftUnder(second))
+							segment = new Int4(first,second);
+						else
+							segment = new Int4(second,first);
+						
+						segments.add(segment);
+						i = j - 1;
+						break;
+					}
+				}
+				
+			}
+			
+			
+			//for each segment see if 
+			for(int i = 0; i<= segments.size()-1; i++){
+				Int4 segment = segments.get(i);
+				Int2 temp1 = new Int2();
+				Int2 temp2 = new Int2();
+				direction head = direction.West;
+				direction tail = direction.West;
+				if(center.pointOnSegment(segment)){
+					if(segment.isHorizontal()){
+						setHeadsTails(direction.East, direction.West);
+						break;
+					}
+					else{
+						setHeadsTails(direction.North,direction.South);
+						break;
+					}
+				}
+				else if(center.pointIsSegVertex(segment)){
+					Int4 nextSeg;
+					
+					if(i == segments.size()-1){
+						if(segment.x == center.x && segment.y == center.y){
+							temp1.x = segment.s;
+							temp1.y = segment.t;
+						}
+						else{
+							temp1.x = segment.x;
+							temp1.y = segment.y;
+						}
+						
+						if(temp1.x < center.x)
+							head = direction.South;
+						if(temp1.x > center.x)
+							head = direction.North;
+						if(temp1.y < center.y)
+							head = direction.West;
+						if(temp1.y > center.y)
+							head = direction.East;
+						
+						if(this.exit!= null)
+							tail = direction.Terminal;
+						else
+							tail = direction.Source;
+						
+						setHeadsTails(head, tail);
+						break;			
+					}
+					else{
+						nextSeg= segments.get(i+1);
+						if(!(center.pointIsSegVertex(nextSeg))){
+							
+							if(segment.x == center.x && segment.y == center.y){
+								temp1.x = segment.s;
+								temp1.y = segment.t;
+							}
+							else{
+								temp1.x = segment.x;
+								temp1.y = segment.y;
+							}
+							
+							if(temp1.x < center.x)
+								head = direction.South;
+							if(temp1.x > center.x)
+								head = direction.North;
+							if(temp1.y < center.y)
+								head = direction.West;
+							if(temp1.y > center.y)
+								head = direction.East;
+							
+							if(this.exit!= null)
+								tail = direction.Terminal;
+							else
+								tail = direction.Source;
+							
+							setHeadsTails(head, tail);
+							break;					
+						}
+						else {
+							
+							
+							
+							if(segment.x == center.x && segment.y == center.y){
+								temp1.x = segment.s;
+								temp1.y = segment.t;
+							}
+							else{
+								temp1.x = segment.x;
+								temp1.y = segment.y;
+							}
+							
+							if(nextSeg.x == center.x && nextSeg.y == center.y){
+								temp2.x = nextSeg.s;
+								temp2.y = nextSeg.t;
+							}
+							else{
+								temp2.x = nextSeg.x;
+								temp2.y = nextSeg.y;
+							}
+							if(temp1.x < center.x)
+								head = direction.South;
+							if(temp1.x > center.x)
+								head = direction.North;
+							if(temp1.y < center.y)
+								head = direction.West;
+							if(temp1.y > center.y)
+								head = direction.East;
+							
+							if(temp2.x < center.x)
+								tail = direction.South;
+							if(temp2.x > center.x)
+								tail = direction.North;
+							if(temp2.y < center.y)
+								tail = direction.West;
+							if(temp2.y > center.y)
+								tail = direction.East;
+							
+							setHeadsTails(head, tail);
+							
+							
+							break;
+						}
+					}
+						
+					
+					
+				}
+				
+			}
+			
+		}
+	}
 	
 	public void setHeadsTails(direction head,direction tail){
 		// if head and tail are already in the queue, do nothing
@@ -178,7 +564,7 @@ public class Graph {
 		}
 		
 		subGraph.edges = subEdges;
-		subGraph.nodes = subNodes.toArray(new Node[subNodes.size()]);
+		subGraph.nodes = subNodes;
 		return subGraph;
 	}
 	
@@ -208,11 +594,12 @@ public class Graph {
 		width = w;
 		height = h;
 		
-		nodes = new Node[width * height];
+		nodes = new ArrayList<Node>();
 		hashEdges = new HashMap<Integer, Edge>(); 
 		
-		for(int i = 0; i< nodes.length;i++){
-			nodes[i] = new Node();
+		for(int i = 0; i<= w * h -1; i++){
+			Node node = new Node();
+			nodes.add(node);
 		}
 		
 		//give number to each Node; Hash nodes	
@@ -221,9 +608,9 @@ public class Graph {
 		hashNodes = new HashMap<Integer, Node>();
 		for(int i = 0; i< height; i++){
 			for(int j =0; j < width ; j ++){
-				nodes[id].setNumber(id);
-				nodes[id].setCoordinate(i, j);
-				hashNodes.put(i*100+j, nodes[id]);
+				nodes.get(id).setNumber(id);
+				nodes.get(id).setCoordinate(i, j);
+				hashNodes.put(i*100+j, nodes.get(id));
 				id ++;
 			}
 		}
@@ -247,8 +634,8 @@ public class Graph {
 		getHashEdges();
 		
 		
-		entrance = nodes[0];
-		exit = nodes[height * width - 1];
+		entrance = nodes.get(0);
+		exit = nodes.get(height * width - 1);
 		//exit = nodes[2];
 	}
 	
@@ -260,11 +647,12 @@ public class Graph {
 		width = w;
 		height = h;
 		
-		nodes = new Node[width * height];
+		//nodes = new Node[width * height];
 		hashEdges = new HashMap<Integer, Edge>(); 
 		
-		for(int i = 0; i< nodes.length;i++){
-			nodes[i] = new Node();
+		for(int i = 0; i< nodes.size();i++){
+			Node node = new Node();
+			nodes.add(node);
 		}
 		
 		//give number to each Node; Hash nodes	
@@ -273,11 +661,11 @@ public class Graph {
 		hashNodes = new HashMap<Integer, Node>();
 		for(int i = 0; i< height; i++){
 			for(int j =0; j < width ; j ++){
-				nodes[id].setNumber(id);
-				nodes[id].setCoordinate(i, j);
-				hashNodes.put(i*100+j, nodes[id]);
+				nodes.get(id).setNumber(id);
+				nodes.get(id).setCoordinate(i, j);
+				hashNodes.put(i*100+j, nodes.get(id));
 				id ++;
-			} 
+			}
 		}
 		
 		
@@ -309,8 +697,8 @@ public class Graph {
 			}
 		}
 		
-		entrance = nodes[0];
-		exit = nodes[height * width - 1];
+		entrance = nodes.get(0);
+		exit = nodes.get(height * width - 1);
 		//exit = nodes[2];
 	}
 	
@@ -325,7 +713,7 @@ public class Graph {
 		edges = new ArrayList<Edge>();
 		int i = 0;
 		for(Node node:nodes){
-			Node[] adjNodes = node.getAdjNodes();
+			ArrayList<Node> adjNodes = node.getAdjNodes();
 			for(Node adjNode: adjNodes){
 				if(node.number < adjNode.number){
 					Edge edge = new Edge(i);i++;
@@ -340,7 +728,7 @@ public class Graph {
 					edges.add(edge);
 					hashEdges.put(hash2Nodes(adjNode,node), edge);
 					
-					hashTarEdges.put(edge.hashValue(), edge);
+					//hashTarEdges.put(edge.hashValue(), edge);
 				}
 			}
 		}
@@ -354,7 +742,7 @@ private void getHashEdgesCut(){
 		edges = new ArrayList<Edge>();
 		int i = 0;
 		for(Node node:nodes){
-			Node[] adjNodes = node.getAdjNodes();
+			ArrayList<Node>adjNodes = node.getAdjNodes();
 			for(Node adjNode: adjNodes){
 				if(node.number < adjNode.number){
 					Edge edge = new Edge(i);i++;
@@ -391,7 +779,638 @@ private void getHashEdgesCut(){
 		return obj;
 	}
 	
+	
+	public ArrayList<Node> getPathNode(Graph g, ArrayList<Int2> pathVertex){
+		ArrayList<Node> pathNode = new ArrayList<Node>();
+		Int2 first;
+		Int2 second;
+		
+		for(int i = 0; i <= pathVertex.size() -2; i++){
+			first = pathVertex.get(i);
+			second = pathVertex.get(i+1);
+			
+			if(first.equals(second)){
+				continue;
+			}
+			
+			if(first.x == second.x){
+				if(first.y < second.y){
+					for(int j = first.y; j<second.y; j++){
+						pathNode.add(g.getNode(first.x, j));
+					}
+				}
+				else if(first.y > second.y){
+					for(int j = first.y; j>second.y; j--){
+						pathNode.add(g.getNode(first.x, j));
+					}
+				}
+			}
+			else if(first.y == second.y){
+				if(first.x < second.x){
+					for(int j = first.x; j<second.x; j++){
+						pathNode.add(g.getNode(j, first.y));
+					}
+				}
+				else if(first.x > second.x){
+					for(int j = first.x; j>second.x; j--){
+						pathNode.add(g.getNode(j, first.y));
+					}
+				}
+			}
+			
+			
+			
+		}
+			
+		
+		return pathNode;
+	}
+	
+	public ArrayList<ArrayList<Int2>> getSplitPaths(){
+		ArrayList<ArrayList<Int2>> ps = new ArrayList<ArrayList<Int2>>();;
+		ArrayList<Int2> p = null;
+		ArrayList<Node> pathNode;
+		Node node;
+		
+		Graph graph;
+		
+		for(ArrayList<Int2> cpathVertex : concisePaths){
+			pathNode = getPathNode(conciseGraph, cpathVertex);
+			ArrayList<ArrayList<Int2>> ps1 = new ArrayList<ArrayList<Int2>>();
+			for(int i = 0; i<= pathNode.size()-1; i++ ){
+				node = pathNode.get(i);
+				graph = hashSubGraphs.get(new Int2(node.coord.x, node.coord.y));				
+				ps1 = joinPathGroups(ps1, graph.pathsVertex);				
+		
+			}
+			ps.addAll(ps1);
+		}
+		
+		
+		
+		return ps;
+	}
+	
+	public ArrayList<ArrayList<Int2>> joinPathGroups(ArrayList<ArrayList<Int2>> firstG, ArrayList<ArrayList<Int2>> secondG ){
+			ArrayList<ArrayList<Int2>> ps =  new ArrayList<ArrayList<Int2>>();
+			ArrayList<ArrayList<Int2>> temp;
+			ArrayList<ArrayList<Int2>> first = (ArrayList<ArrayList<Int2>>)firstG.clone();
+			ArrayList<ArrayList<Int2>> second = (ArrayList<ArrayList<Int2>>)secondG.clone();
+			ArrayList<ArrayList<Int2>> collector = new ArrayList<ArrayList<Int2>>();
+			
+			ArrayList<Integer> secondInclude = new ArrayList<Integer>();
+			
+			assert(!(first.size() == 0 || second.size() == 0));
+			
+			int mark = -1;
+			ArrayList<Int2> p1,p2,p1Np2;
+			
+			// for each p in first, find a match in 2
+			for( int i = 0; i <= first.size()-1; i++){
+				p1 = first.get(i);
+				for(int j = 0; j <= second.size()-1; j++){
+					p2 = second.get(j);
+					if(pathMatch(p1,p2)){
+						if(secondInclude.contains(j)){
+							mark = j;
+							continue;
+						}
+						else{
+							p1Np2 = jointPath(p1,p2);
+							ps.add(p1Np2);							
+							secondInclude.add(j);
+							mark = -2;
+							break;
+						}
+							
+					}
+				}
+				
+				if(mark != -2){
+					p2=second.get(mark);
+					p1Np2 = jointPath(p1,p2);
+					ps.add(p1Np2);
+					mark = -1;
+				}
+			}
+			
+			for(int j = 0; j <= second.size()-1;j++){
+				if(secondInclude.contains(j)){
+					continue;
+				}
+				
+				p2 = second.get(j);
+				for(int i = 0; i <= first.size()-1;i-- ){
+					p1 = first.get(i);
+					if(pathMatch(p1,p2)){
+						p1Np2 = jointPath(p1,p2);
+						ps.add(p1Np2);
+						break;
+					}
+				}
+			}
+				
+				
+			
+			
+			return ps;
+	}
+	
+	
+	// return if two path can join together	
+	
+	public boolean pathMatch(ArrayList<Int2> first, ArrayList<Int2> second){
+		boolean en = false;
+		return en ;
+		
+	}
+	
+	public ArrayList<Int2> jointPath(ArrayList<Int2> firstP, ArrayList<Int2> secondP){
+		ArrayList<Int2> p = null;
+		
+		return p;
+	}
+	
+	public ArrayList<ArrayList<Int2>> getPaths() throws IOException{
+		ArrayList<ArrayList<Int2>> ps= new ArrayList<ArrayList<Int2>>();
+		
+		if(isSplit){
+			ps = (ArrayList<ArrayList<Int2>>) getSplitPaths().clone();
+			return ps;
+		}
+		
+		
+		getHeadTailPath();
+		writeILP();
+		for(int path = 0; path <= maxPaths -1; path++  ){
+			ArrayList<Int2> p = new ArrayList<Int2>(); 
+			for(int joint = 0; joint <= numberOfJoints -1; joint ++){
+				String x = "x" + path + joint;
+				String y = "y" + path + joint;
+				
+				int xValue, yValue;
+				xValue = pathReuslts.get(x);
+				yValue = pathReuslts.get(y);
+				
+				p.add(new Int2(xValue,yValue));						
+			}
+			ps.add(p);
+		}
+		
+		return ps;
+	}
+	
+	public ArrayList<Node> getDirNode(direction dir){
+		ArrayList<Node> dirNode = new ArrayList<Node>();
+		switch(dir){
+		case West:
+			for(Node n:nodes){
+				if(n.coord.y == boundingBox.y){
+					dirNode.add(n);
+				}
+			}
+			break;
+			
+		case East:
+			for(Node n:nodes){
+				if(n.coord.y == boundingBox.t){
+					dirNode.add(n);
+				}
+			}
+			break;
+			
+		case North:
+			for(Node n:nodes){
+				if(n.coord.x == boundingBox.s){
+					dirNode.add(n);
+				}
+			}
+			break;
+			
+		case South:
+			for(Node n:nodes){
+				if(n.coord.x == boundingBox.x){
+					dirNode.add(n);
+				}
+			}
+			break;
+			
+		case Source:
+			dirNode.add(entrance);
+			break;
+		case Terminal:
+			dirNode.add(exit);
+			break;
+		}
+		
+		
+		return dirNode;
+	}
+	
+	public void getHeadTailPath(){
+		variables = new ArrayList<String>();
+		variableTypes = new ArrayList<Integer>();
+		String x; //x position of a joint 
+		String y; //y position of a joint
+	
+		
+		String constraint = "";
+		
+		HashMap<Integer, String> hashX = new HashMap<Integer, String>();
+		HashMap<Integer, String> hashY= new HashMap<Integer, String>();
+		
+		
+		
+		//init variables
+		
+		for(int i=0; i <= maxPaths -1; i++){
+			for(int joint =0; joint<= numberOfJoints -1 ; joint++){
+				x = "x" + i + joint;
+				hashX.put(hash2Int(i,joint), x);
+				variables.add(x);
+				variableTypes.add(0);
+				
+				y = "y" + i + joint;
+				hashY.put(hash2Int(i,joint), y);
+				variables.add(y);
+				variableTypes.add(0);				
 
+				
+			}
+		}
+		
+		for(int path = 0; path <= maxPaths -1; path++){
+			int countHead = 0;
+			int countTail = 0;
+			int countHeadGroup = 0;
+			int countTailGroup = 0;
+			String useOneHead = "";
+			String useOneTail = "";
+			String useHeadGroup = "";
+			String useTailGroup = "";
+			String useOneHeadTotal = "";
+			String useOneTailTotal = "";
+			for(int i  = 0; i <= heads.size()-1; i++){
+				ArrayList<Node> headNodes = getDirNode(heads.get(i));
+				ArrayList<Node> tailNodes = getDirNode(tails.get(i));
+				String headGroup = "headGroup" + "p" + path + "gp" + i;
+				String tailGroup = "tailGroup" + "p" + path + "tp" + i;
+				variables.add(headGroup);variableTypes.add(1);
+				variables.add(tailGroup);variableTypes.add(1);
+				
+				useHeadGroup += " + "+ headGroup;
+				useTailGroup += " + "+ tailGroup;
+				
+				useOneHead = "";
+				useOneTail = "";
+				
+				ILP.add(headGroup + " - " + tailGroup + " = 0 ");
+				
+				
+				String useHead;
+				
+				
+				constraint = "";
+				
+				x = hashX.get(hash2Int(path,0));
+				y = hashY.get(hash2Int(path,0));
+				countTailGroup = 0;
+				countHeadGroup = 0;
+				for(Node head:headNodes){
+					
+					useHead = "useHead" + "p" + path+ "gp" + i + "Head" + head.coord.x + head.coord.y ;
+					variables.add(useHead);variableTypes.add(1);
+					
+						
+						// y0 = 0, x0 =edge.x
+						ILP.add(x + " - " + M +" " + useHead + " <= " + (head.coord.x));
+						ILP.add(x + " + " + M + " " +useHead + " >= " + (head.coord.x));
+						ILP.add(y + " - " + M + " " +useHead + " <= " + (head.coord.y));
+						ILP.add(y + " + " + M + " " +useHead + " >= " + (head.coord.y));
+						
+					
+					countHead++;
+					countHeadGroup++;
+					useOneHead += " + " + useHead;
+					useOneHeadTotal += " + " + useHead;
+				}	
+				constraint = useOneHead + " + " + headGroup + " = " + countHeadGroup;   
+				ILP.add(constraint);
+				constraint = "";
+			
+				x = hashX.get(hash2Int(path,numberOfJoints-1));
+				y = hashY.get(hash2Int(path,numberOfJoints-1));
+				String useTail;
+				
+			
+				constraint = "";
+				for(Node tail:tailNodes){
+					useTail = "useTail" + "p" + path + "gp" + i + "tail" + tail.coord.x + tail.coord.y ;
+					variables.add(useTail);variableTypes.add(1);
+
+					ILP.add(x + " - " + M +" " + useTail + " <= " + (tail.coord.x));
+					ILP.add(x + " + " + M + " " +useTail + " >= " + (tail.coord.x));
+					ILP.add(y + " - " + M + " " +useTail + " <= " + (tail.coord.y));
+					ILP.add(y + " + " + M + " " +useTail + " >= " + (tail.coord.y));
+					
+					countTail++;
+					countTailGroup++;
+					useOneTail  += " + " + useTail;
+					useOneTailTotal += " + " + useTail;
+				}	
+				constraint = useOneTail + " + " + tailGroup + " = " + countTailGroup;   
+				ILP.add(constraint);
+				constraint = "";
+			}
+			
+				
+				
+				// 0=<x(j)-x(j-1) <= M * dr
+				
+			
+			
+			ILP.add(useOneHeadTotal + " = " + (countHead -1));
+			ILP.add(useOneTailTotal + " = " + (countTail -1));
+			
+			ILP.add(useTailGroup + " > 0");
+			ILP.add(useHeadGroup + " > 0");
+		}
+		
+		for(int path = 0; path <= maxPaths -1; path++ ){
+			for( int joint =0; joint <= numberOfJoints-1; joint++ ){
+				x = hashX.get(hash2Int(path,joint));
+				y = hashY.get(hash2Int(path,joint));
+			
+				if(joint > 0){
+					String lastJointX = hashX.get(hash2Int(path,joint-1));
+					String lastJointY = hashY.get(hash2Int(path,joint-1));
+					String xEqualslx, yEqualsly;
+					xEqualslx = "xEqualslx" + path + joint;
+					yEqualsly = "yEqualsly" + path + joint;
+					variables.add(xEqualslx);variableTypes.add(1);
+					variables.add(yEqualsly);variableTypes.add(1);
+					// -M * binary < = x - lx <= M * binary
+					// -M * binary < = y - ly <= M * binary
+					ILP.add(x + " - " + lastJointX + " + "+M + " "+ xEqualslx + " >= 0"  );
+					ILP.add(x + "  - " + lastJointX + " - "+ M + " "+ xEqualslx + " <= 0"  );
+					ILP.add(y + " - " + lastJointY + " + "+M + " "+ yEqualsly + " >= 0"  );
+					ILP.add(y + "  - " + lastJointY + " - "+M + " "+ yEqualsly + " <= 0"  );
+					ILP.add(xEqualslx + " + "  + yEqualsly + " <= 1");					
+					
+				}
+				
+				if(joint != 0 && joint != numberOfJoints-1){
+					// 0 <= x <= height   0 <= y <= widht 
+					ILP.add(x + " >= " + this.boundingBox.x);
+					ILP.add(x + " <= " + this.boundingBox.s);
+					ILP.add(y + " >= " + this.boundingBox.y);
+					ILP.add(y + " <= " + this.boundingBox.t);
+			
+
+				}
+				
+				
+				//neither 2 of bend cross each other
+				if(joint >= 2 && joint <= numberOfJoints - 2){
+					for(int lastJoint = 0; lastJoint <= joint-2; lastJoint++){
+						String ux1x2,ux2x1,uy1y2,uy2y1;
+						
+						ux1x2 = "u" + path +"x" + joint +"x"+ lastJoint; // x1 > x2?
+						ux2x1 = "u" + path +"x" + lastJoint +"x"+ joint;
+						uy1y2 = "u" + path +"y" + joint +"y"+ lastJoint;
+						uy2y1 = "u" + path +"y" + lastJoint +"y"+ joint;
+						variables.add(ux1x2);variableTypes.add(1);
+						variables.add(ux2x1);variableTypes.add(1);
+						variables.add(uy1y2);variableTypes.add(1);
+						variables.add(uy2y1);variableTypes.add(1);
+						
+						String jointLX = hashX.get(hash2Int(path,joint));						
+						String jointLY = hashY.get(hash2Int(path,joint));
+						String jointRX = hashX.get(hash2Int(path,joint+1));						
+						String jointRY = hashY.get(hash2Int(path,joint+1));
+						
+						String lastJointLX = hashX.get(hash2Int(path,lastJoint));
+						String lastJointLY = hashY.get(hash2Int(path,lastJoint));
+						String lastJointRX = hashX.get(hash2Int(path,lastJoint+1));
+						String lastJointRY = hashY.get(hash2Int(path,lastJoint+1));
+					
+						
+						
+						ILP.add(jointLX +" - " + lastJointLX + " - " + M + " " +ux1x2 + " < 0");
+						ILP.add(jointRX +" - " + lastJointLX + " - " + M + " " +ux1x2 + " < 0");
+						ILP.add(jointLX +" - " + lastJointRX + " - " + M + " " +ux1x2 + " < 0");
+						ILP.add(jointRX +" - " + lastJointRX + " - " + M + " " +ux1x2 + " < 0");
+						ILP.add(lastJointLX +" - " + jointLX + " - " + M + " " +ux2x1 + " < 0");
+						ILP.add(lastJointLX +" - " + jointRX + " - " + M + " " +ux2x1 + " < 0");
+						ILP.add(lastJointRX +" - " + jointLX + " - " + M + " " +ux2x1 + " < 0");
+						ILP.add(lastJointRX +" - " + jointRX + " - " + M + " " +ux2x1 + " < 0");
+						
+						ILP.add(jointLY +" - " + lastJointLY + " - " + M + " " +uy1y2 + " < 0");						
+						ILP.add(jointRY +" - " + lastJointLY + " - " + M + " " +uy1y2 + " < 0");
+						ILP.add(jointLY +" - " + lastJointRY + " - " + M + " " +uy1y2 + " < 0");
+						ILP.add(jointRY +" - " + lastJointRY + " - " + M + " " +uy1y2 + " < 0");
+						ILP.add(lastJointLY +" - " + jointLY + " - " + M + " " +uy2y1 + " < 0");
+						ILP.add(lastJointLY +" - " + jointRY + " - " + M + " " +uy2y1 + " < 0");
+						ILP.add(lastJointRY +" - " + jointLY + " - " + M + " " +uy2y1 + " < 0");
+						ILP.add(lastJointRY +" - " + jointRY + " - " + M + " " +uy2y1 + " < 0");
+						
+						ILP.add( ux1x2 + " + "+ ux2x1 + " + " +uy1y2 + " + " + uy2y1 + " <= 3"); 
+						
+					}
+				}//neither 2 of bend cross each other
+				
+			
+				
+			}
+		
+		}
+		
+		for(Edge edge:edges){
+			int edgeX = edge.coord.x;
+			int edgeY = edge.coord.y;
+			int edgeS = edge.coord.s;
+			int edgeT = edge.coord.t;
+			int count = 0;
+			String binaryL,binaryR,binaryU,binaryD,jointX,jointY,nextJointX,nextJointY;
+			if(edge instanceof Hole){
+				
+				//horizontal wall
+				if (edge.coord.x == edge.coord.s){					
+					
+					
+					for(int path = 0; path <= maxPaths -1 ; path++){
+						for(int joint = 0; joint <= numberOfJoints-2; joint++){
+							int nextJoint = joint + 1;						
+							
+							jointX = hashX.get(hash2Int(path,joint));
+							jointY = hashY.get(hash2Int(path,joint));
+							nextJointX = hashX.get(hash2Int(path,nextJoint));
+							nextJointY = hashY.get(hash2Int(path,nextJoint));
+							binaryL = "binaryL" +"p" + path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+							variables.add(binaryL);variableTypes.add(1);
+							binaryR = "binaryR" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+							variables.add(binaryR);variableTypes.add(1);
+							// x0 + M * binaryR >=  s, x1  + M * binaryR >= s							
+							// x0  -M * binaryL <=x, x1  - M * binaryL <= x 
+							
+							ILP.add(jointX +  " - "  + M  +" " + binaryL+ " <= " + edgeX );
+							ILP.add(nextJointX +  " - " + M  +" " + binaryL+ " <= " + edgeX);
+							ILP.add(jointX +  " + "  + M  +" " + binaryR+ " >= " + edgeS);
+							ILP.add(nextJointX  + " + "  + M  +" " + binaryL+ " >= " +  edgeS);
+							
+							ILP.add(binaryL + " + " + binaryR + " <= 1" );
+							
+							
+							
+						}
+						
+					}
+					
+				}
+				//vertical wall
+				else{
+					for(int path = 0; path <= maxPaths -1 ; path++){
+						for(int joint = 0; joint <= numberOfJoints-2; joint++){
+							int nextJoint = joint + 1;						
+							
+							jointX = hashX.get(hash2Int(path,joint));
+							jointY = hashY.get(hash2Int(path,joint));
+							nextJointX = hashX.get(hash2Int(path,nextJoint));
+							nextJointY = hashY.get(hash2Int(path,nextJoint));
+							binaryU = "binaryU" +"p" + path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+							variables.add(binaryU);variableTypes.add(1);
+							binaryD = "binaryD" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+							variables.add(binaryD);variableTypes.add(1);
+							// y0 + M * binaryU >=  y, y1  + M * binaryU >= t							
+							// y0  -M * binaryD <=y, y1  - M * binaryD <= y 
+							
+							ILP.add(jointY +  " - "  + M  + " " +binaryD+ " <= " + edgeY );
+							ILP.add(nextJointY +  " - " + M  +" " + binaryD+ " <= " + edgeY);
+							ILP.add(jointY +  " + "  + M  + " " +binaryU+ " >= " + edgeT);
+							ILP.add(nextJointY  + " + "  + M  +" " + binaryU+ " >= " +  edgeT);
+							
+							ILP.add(binaryU + " + " + binaryD + " <= 1" );
+							
+							
+							
+						}
+						
+					}
+				}
+					
+			}
+			else if (edge.coord.x == edge.coord.s){
+			//if edge is horizontal
+				//edge(i,j,i,j+1)
+				
+				constraint = "";
+				
+			
+				for(int path = 0; path <= maxPaths -1 ; path++){
+					for(int joint = 0; joint <= numberOfJoints-2; joint++){
+						int nextJoint = joint + 1;						
+						
+						jointX = hashX.get(hash2Int(path,joint));
+						jointY = hashY.get(hash2Int(path,joint));
+						nextJointX = hashX.get(hash2Int(path,nextJoint));
+						nextJointY = hashY.get(hash2Int(path,nextJoint));
+						binaryL = "binaryL" +"p" + path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+						variables.add(binaryL);variableTypes.add(1);
+						binaryR = "binaryR" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+						variables.add(binaryR);variableTypes.add(1);
+						// -M * binary<=x0-i <= M*binary
+						// -M * binary <= x1-i <= M*binary
+						// y0 <= j + M * binary, y1 + M * binary >= j+1 
+						ILP.add(jointX +  " + "  + M  + " " +binaryL+ " >= " + edgeX );
+						ILP.add(jointX +  " - " + M  + " " +binaryL+ " <= " + edgeX);
+						ILP.add(nextJointX +  " + "  + M  + " " +binaryL+ " >= " + edgeX);
+						ILP.add(nextJointX  + " - "  + M  + " " +binaryL+ " <= " +  edgeX);
+						
+						ILP.add(jointY +   " - " + M + " " +binaryL + " <= "  + edgeY );
+						ILP.add(nextJointY   + " + " + M + " " +binaryL + " >= " + edgeT);
+						
+						ILP.add(jointX  + " + "  + M  + " " +binaryR+ " >= " + edgeX);
+						ILP.add(jointX  + " - "  + M  + " " +binaryR+ " <= " + edgeX);
+						ILP.add(nextJointX  + " + "  + M  +" " + binaryR+ " >= "  + edgeX);
+						ILP.add(nextJointX  + " - "  + M  +" " + binaryR+ " <= "  + edgeX);
+						
+						ILP.add(nextJointY  + " - " + M + " " +binaryR + " <= " + edgeY );
+						ILP.add(jointY  + " + " + M + " " +binaryR + " >= " +  edgeT );
+						
+						
+						constraint += " + " + binaryL + " + " + binaryR;
+						count++;
+					}
+					
+				}
+				constraint += " <= " + (2*count-1);
+				
+					
+					ILP.add(constraint);
+				
+				
+				constraint = "";
+				count = 0;
+			}
+			//if edge is vertical
+			else if(edge.coord.y == edge.coord.t){
+				//edge(i,j,i+1,j)
+			
+				
+				for(int path = 0; path <= maxPaths -1 ; path++){
+					for(int joint = 0; joint <= numberOfJoints-2; joint++){
+						int nextJoint = joint + 1;
+						
+						
+						jointX = hashX.get(hash2Int(path,joint));
+						jointY = hashY.get(hash2Int(path,joint));
+						nextJointX = hashX.get(hash2Int(path,nextJoint));
+						nextJointY = hashY.get(hash2Int(path,nextJoint));
+						binaryU = "binaryU" +"p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+						variables.add(binaryU);variableTypes.add(1);
+						binaryD = "binaryD" + "p"+path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+						variables.add(binaryD);variableTypes.add(1);
+						// -M * binary<=y0-j <= M*binary
+						// -M * binary <= y1-j <= M*binary
+						// x0 <= i + M * binary, x1 + M * binary >= i+1 
+						ILP.add(jointY  + " + "  + M  + " " +binaryU+ " >= "+ edgeY);
+						ILP.add(jointY   + " - "  + M  +" " + binaryU+ " <=  " + edgeY);
+						ILP.add(nextJointY  + " + "  + M  +" " + binaryU+ " >= " +  edgeY);
+						ILP.add(nextJointY   + " - "  + M  +" " + binaryU+ " <= " + edgeY);
+						
+						ILP.add(jointX  + " - " + M + " " +binaryU + " <= " + edgeX );
+						ILP.add(nextJointX + " + " + M + " " +binaryU + " >= "+ edgeS );
+						
+						ILP.add(jointY + " + "  + M  + " " +binaryD+ " >= "+ edgeY);
+						ILP.add(jointY  + " - "  + M  + " " +binaryD+ " <= " + edgeY);
+						ILP.add(nextJointY  + " + "  + M  +" " + binaryD+ " >= " + edgeY);
+						ILP.add(nextJointY  + " - "  + M  + " " +binaryD+ " <= "+ edgeY );
+						
+						ILP.add(nextJointX   + " - " + M +" " + binaryD + " <= "+ edgeX );
+						ILP.add(jointX  + " + " + M + " " +binaryD + " >= " + edgeS );
+						constraint += " + " + binaryU + " + " + binaryD;
+						count ++;
+					}
+				}
+				
+				constraint += " <= " + (2*(count) - 1);
+
+					
+				ILP.add(constraint);
+
+				constraint = "";
+				count = 0 ;
+				
+			}
+			
+		}
+	
+		
+		
+		//set obj 
+		
+		obj = "x00 + x01";
+	}
 	
 	public void getCuts(){
 		variables = new ArrayList<String>();
@@ -2229,7 +3248,7 @@ private void getHashEdgesCut(){
 			return false;
 	}
 	private Edge getEdge(int a, int b){
-		return getEdge(nodes[a], nodes[b]);
+		return getEdge(nodes.get(a), nodes.get(b));
 	}
 	
 	private Edge getEdge(Node a, Node b){		
@@ -2240,7 +3259,7 @@ private void getHashEdgesCut(){
 	private ArrayList<Node> getCnctNodes(Node node){
 		
 		ArrayList<Node> cnctNodes = new ArrayList<Node>();
-		Node[] adjNodes = node.getAdjNodes();
+		ArrayList<Node> adjNodes = node.getAdjNodes();
 		Edge edge = null;
 		for(Node adjNode:adjNodes){
 				
@@ -2260,7 +3279,7 @@ private void getHashEdgesCut(){
 	//get neighbour nodes
 	private ArrayList<Node> getJointNodes(Node node){
 		ArrayList<Node> jointNodes = new ArrayList<Node>();
-		Node[] adjNodes = node.getAdjNodes();
+		ArrayList<Node> adjNodes = node.getAdjNodes();
 		for(Node adjNode:adjNodes){
 			jointNodes.add(adjNode);
 		}
@@ -2271,7 +3290,7 @@ private void getHashEdgesCut(){
 	//connect means edge between two node is not wall
 	private ArrayList<Node> getConnectedNodes(Node node){
 		ArrayList<Node> connectedNodes = new ArrayList<Node>();
-		Node[] adjNodes = node.getAdjNodes();
+		ArrayList<Node> adjNodes = node.getAdjNodes();
 		for(Node adjNode:adjNodes){
 			
 			if(!(getEdge(adjNode,node) instanceof Wall))
@@ -2389,7 +3408,13 @@ private void getHashEdgesCut(){
 		
 	}
 	
+	public void setEdgeWall(Int4 wall){
+		setEdgeWall(wall.x,wall.y,wall.s,wall.t);
+	}
 	
+	public void setEdgeHole(Int4 hole){
+		setEdgeHole(hole.x,hole.y,hole.s,hole.t);
+	}
 	
 	public void setEdgeWall(int x, int y, int s, int t){
 		Edge wall = new Wall();
@@ -2428,6 +3453,72 @@ private void getHashEdgesCut(){
 		return e;
 	}
 
+	
+	public void writeILP()throws IOException{
+	
+				
+			PrintWriter writer = new PrintWriter("./lp.lp", "UTF-8");
+			pathReuslts = new HashMap<String,Integer>();
+			String OBJ = "";
+			String Constraint = "";
+			String Bound = "";
+			ArrayList<String> binaryArray = new ArrayList<String>();
+			ArrayList<String> generalArray = new ArrayList<String>();
+			
+			for(int i = 0; i <= variableTypes.size()-1; i++){
+				if(variableTypes.get(i) == 1)
+					binaryArray.add(variables.get(i));
+				else
+					generalArray.add(variables.get(i));
+			}
+			
+			String Generals = "";
+			//writer.println("Minimize");
+			writer.println("Maximize");
+			
+			
+			writer.println("Subject to");
+			
+			for(String instruction:ILP){
+				writer.println(instruction);
+			}
+		
+			//write Binarys and 
+		
+			writer.println("Binaries");
+			for(String binary:binaryArray){
+				writer.println(binary);
+			}
+			
+			writer.println("Generals");
+			for(String general:generalArray){
+				writer.println(general);
+			}
+			writer.println("END");
+			
+		
+			//System.out.println("this is good");
+			writer.flush();
+			writer.close();
+			
+			solveFile.solve("./lp.lp");
+			pathReuslts = (HashMap<String, Integer>) solveFile.hashResults.clone();
+			//System.out.println("this is a print");
+			
+//			Process p = Runtime.getRuntime().exec(new String[]{"bash","-c","/home/ga63quk/workspace/goodLuck/Debug/goodLuck","/home/ga63quk/workspace/goodLuck/Debug/test.lp"});
+//			
+////			ProcessBuilder pb = new ProcessBuilder("/home/ga63quk/workspace/goodLuck/Debug/goodLuck.exe"); 
+////					//"/home/ga63quk/workspace/IlpSolverCpp/Release/IlpSolverCpp.exe");
+////					//,"/home/ga63quk/workspace/IlpSolverCpp/Release/lp.lp");
+////			Process p = pb.start();
+//			try {
+//				p.waitFor();
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+			
+	}
 //	public boolean reverseDirContainEdge(Node node, Dir searchDir,HashMap<Integer,Edge> targetEdges){
 //		
 //		switch(searchDir){
