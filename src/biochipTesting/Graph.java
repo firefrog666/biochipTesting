@@ -26,8 +26,8 @@ public class Graph {
 	
 
 	private static final int M = 10000;
-	private static final int maxPaths = 4;
-	private static final int numberOfJoints = 5;	
+	private static final int maxPaths = 2;
+	private static final int numberOfJoints = 10;	
 	public boolean isSplit;
 	
 	 
@@ -146,7 +146,8 @@ public class Graph {
 	public void splitGraph(int column, int row){
 		double x,y;
 		int stepX, stepY;
-		
+		splitX = new ArrayList<Double>();
+		splitY = new ArrayList<Double>();
 		stepX = (int)height / row;
 		stepY = (int)width / column;
 		
@@ -158,7 +159,7 @@ public class Graph {
 			x += stepX;			
 		}
 		
-		for(int i = 0; i < column -1; i++){
+		for(int i = 0; i <= column -1; i++){
 			splitY.add(y);
 			y += stepY;
 		}
@@ -305,6 +306,8 @@ public class Graph {
 				subGraph.height = subGraph.boundingBox.s - subGraph.boundingBox.x;
 				
 				hashSubGraphs.put(subGraph.center, subGraph);
+				//if(subGraph.width >= 10)
+				//	subGraph.splitGraph(5,5);
 				subGraphs.add(subGraph);
 			}			
 		}
@@ -318,12 +321,7 @@ public class Graph {
 		
 		for(Graph subGraph:subGraphs){
 			subGraph.setHeadsTails(concisePaths);
-			try {
-				subGraph.pathsVertex =  subGraph.getPaths();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		
 		}
 		
 		
@@ -833,13 +831,24 @@ private void getHashEdgesCut(){
 		Node node;
 		
 		Graph graph;
+		for(Graph subGraph: subGraphs){			
+			try {
+				subGraph.pathsVertex =  subGraph.getPaths();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
+		}
+		ArrayList<ArrayList<Int2>> ps1;
 		
 		for(ArrayList<Int2> cpathVertex : concisePaths){
 			pathNode = getPathNode(conciseGraph, cpathVertex);
-			ArrayList<ArrayList<Int2>> ps1 = new ArrayList<ArrayList<Int2>>();
-			for(int i = 0; i<= pathNode.size()-1; i++ ){
+			node = pathNode.get(0);
+			graph = hashSubGraphs.get(new Int2(node.coord.x, node.coord.y));
+			ps1  = (ArrayList<ArrayList<Int2>>)graph.pathsVertex.clone();
+			for(int i = 1; i<= pathNode.size()-1; i++ ){
 				node = pathNode.get(i);
-				graph = hashSubGraphs.get(new Int2(node.coord.x, node.coord.y));				
+				graph = hashSubGraphs.get(new Int2(node.coord.x, node.coord.y));
 				ps1 = joinPathGroups(ps1, graph.pathsVertex);				
 		
 			}
@@ -921,12 +930,107 @@ private void getHashEdgesCut(){
 	
 	public boolean pathMatch(ArrayList<Int2> first, ArrayList<Int2> second){
 		boolean en = false;
+		Node firstHead = getNode(first.get(0));
+		Node firstTail = getNode(first.get(first.size()-1));
+		Node secondHead = getNode(second.get(0));
+		Node secondTail = getNode(second.get(first.size()-1));
+		
+		if(getEdge(firstTail,secondHead) != null ||
+				getEdge(firstTail, secondTail) != null ||
+				getEdge(firstHead,secondHead) != null ||
+				getEdge(firstHead,secondTail) != null
+				)
+			en = true;
+		
+		
 		return en ;
 		
 	}
 	
-	public ArrayList<Int2> jointPath(ArrayList<Int2> firstP, ArrayList<Int2> secondP){
+	public <T> void  uniqueElement(ArrayList<T> a){
+		ArrayList<T> temp = new ArrayList<T>();
+		temp.clear();
+		temp.add(a.get(0));
+		for(int i = 0; i <= a.size()-1; i ++){
+			if(!a.get(i).equals(temp.get(temp.size()-1))){
+				temp.add(a.get(i));
+			}
+		}
+		
+		a.clear();
+		for(T t:temp){
+			a.add(t);
+		}
+	}
+	
+	public <T> void reverseArray(ArrayList<T> a){
+		ArrayList<T> temp = new ArrayList<T>();
+		for(int i = a.size()-1; i>=0; i--){
+			temp.add(a.get(i));
+		}
+		
+		a.clear();
+		for(int i = 0; i <= temp.size()-1; i++){
+			a.add(temp.get(i));
+		}
+	}
+	
+	public <T> ArrayList<T> join2Array(ArrayList<T> a, ArrayList<T> b){
+		ArrayList<T> temp = new ArrayList<T>();
+		for(int i = 0; i <= a.size()-1; i ++){
+			temp.add(a.get(i));
+		}
+		
+		for(int i = 0; i <= b.size()-1; i++){
+			temp.add(b.get(i));
+		}
+		
+		
+		return temp;
+		
+	}
+	
+	public ArrayList<Int2> jointPath(ArrayList<Int2> first, ArrayList<Int2> second){
 		ArrayList<Int2> p = null;
+		ArrayList<Int2> firstClone = (ArrayList<Int2>)first.clone();
+		ArrayList<Int2> secondClone = (ArrayList<Int2>)second.clone();
+		
+		uniqueElement(firstClone);
+		uniqueElement(secondClone);
+		
+		
+		
+
+		assert(pathMatch(firstClone,secondClone));
+		Node firstHead = getNode(firstClone.get(0));
+		Node firstTail = getNode(firstClone.get(firstClone.size()-1));
+		Node secondHead = getNode(secondClone.get(0));
+		Node secondTail = getNode(secondClone.get(secondClone.size()-1));
+		Int2 vertex1, vertex2;
+		
+		if(getEdge(firstTail,secondHead)!= null){
+			firstClone.remove(firstClone.size()-1);
+			p = join2Array(firstClone,secondClone);
+		}
+		else if(getEdge(firstTail, secondTail) != null){
+			reverseArray(secondClone);
+			firstClone.remove(firstClone.size()-1);
+			p = join2Array(firstClone,secondClone);			
+			
+		}
+		else if(getEdge(firstHead,secondHead) != null){
+			reverseArray(firstClone);
+			firstClone.remove(firstClone.size()-1);
+			p = join2Array(firstClone,secondClone);	
+			
+		}
+		else if(getEdge(firstHead,secondTail) != null){
+			reverseArray(firstClone);
+			reverseArray(secondClone);
+			firstClone.remove(firstClone.size()-1);
+			p = join2Array(firstClone,secondClone);	
+		}
+		
 		
 		return p;
 	}
@@ -935,6 +1039,7 @@ private void getHashEdgesCut(){
 		ArrayList<ArrayList<Int2>> ps= new ArrayList<ArrayList<Int2>>();
 		
 		if(isSplit){
+			
 			ps = (ArrayList<ArrayList<Int2>>) getSplitPaths().clone();
 			return ps;
 		}
@@ -1012,6 +1117,17 @@ private void getHashEdgesCut(){
 		variableTypes = new ArrayList<Integer>();
 		String x; //x position of a joint 
 		String y; //y position of a joint
+		
+		int numPath = 0;
+		for(int i  = 0; i <= heads.size()-1; i++){
+			ArrayList<Node> headNodes = getDirNode(heads.get(i));
+			ArrayList<Node> tailNodes = getDirNode(heads.get(i));
+			numPath += max(headNodes.size()-1,tailNodes.size()-1);			
+		}
+		
+		numPath = max(2,numPath);
+		
+		
 	
 		
 		String constraint = "";
@@ -1023,7 +1139,7 @@ private void getHashEdgesCut(){
 		
 		//init variables
 		
-		for(int i=0; i <= maxPaths -1; i++){
+		for(int i=0; i <= numPath -1; i++){
 			for(int joint =0; joint<= numberOfJoints -1 ; joint++){
 				x = "x" + i + joint;
 				hashX.put(hash2Int(i,joint), x);
@@ -1039,7 +1155,7 @@ private void getHashEdgesCut(){
 			}
 		}
 		
-		for(int path = 0; path <= maxPaths -1; path++){
+		for(int path = 0; path <= numPath -1; path++){
 			int countHead = 0;
 			int countTail = 0;
 			int countHeadGroup = 0;
@@ -1136,7 +1252,7 @@ private void getHashEdgesCut(){
 			ILP.add(useHeadGroup + " > 0");
 		}
 		
-		for(int path = 0; path <= maxPaths -1; path++ ){
+		for(int path = 0; path <= numPath -1; path++ ){
 			for( int joint =0; joint <= numberOfJoints-1; joint++ ){
 				x = hashX.get(hash2Int(path,joint));
 				y = hashY.get(hash2Int(path,joint));
@@ -1238,7 +1354,7 @@ private void getHashEdgesCut(){
 				if (edge.coord.x == edge.coord.s){					
 					
 					
-					for(int path = 0; path <= maxPaths -1 ; path++){
+					for(int path = 0; path <= numPath -1 ; path++){
 						for(int joint = 0; joint <= numberOfJoints-2; joint++){
 							int nextJoint = joint + 1;						
 							
@@ -1269,7 +1385,7 @@ private void getHashEdgesCut(){
 				}
 				//vertical wall
 				else{
-					for(int path = 0; path <= maxPaths -1 ; path++){
+					for(int path = 0; path <= numPath -1 ; path++){
 						for(int joint = 0; joint <= numberOfJoints-2; joint++){
 							int nextJoint = joint + 1;						
 							
@@ -1306,7 +1422,7 @@ private void getHashEdgesCut(){
 				constraint = "";
 				
 			
-				for(int path = 0; path <= maxPaths -1 ; path++){
+				for(int path = 0; path <= numPath -1 ; path++){
 					for(int joint = 0; joint <= numberOfJoints-2; joint++){
 						int nextJoint = joint + 1;						
 						
@@ -1357,7 +1473,7 @@ private void getHashEdgesCut(){
 				//edge(i,j,i+1,j)
 			
 				
-				for(int path = 0; path <= maxPaths -1 ; path++){
+				for(int path = 0; path <= numPath -1 ; path++){
 					for(int joint = 0; joint <= numberOfJoints-2; joint++){
 						int nextJoint = joint + 1;
 						
@@ -1412,6 +1528,17 @@ private void getHashEdgesCut(){
 		obj = "x00 + x01";
 	}
 	
+	private int max(int i, int j) {
+		// TODO Auto-generated method stub
+		if(i >= j)
+			return i;
+		else
+			return j;
+	}
+
+
+
+
 	public void getCuts(){
 		variables = new ArrayList<String>();
 		variableTypes = new ArrayList<Integer>();
@@ -2465,6 +2592,32 @@ private void getHashEdgesCut(){
 		//set obj 
 		
 		obj = "x00 + x01";
+		try {
+			writeILP();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ArrayList<ArrayList<Int2>>  ps = new ArrayList<ArrayList<Int2>>();
+		for(int path = 0; path <= maxPaths -1; path++  ){
+			ArrayList<Int2> p = new ArrayList<Int2>(); 
+			for(int joint = 0; joint <= numberOfJoints -1; joint ++){
+				String x = "x" + path + joint;
+				String y = "y" + path + joint;
+				
+				int xValue, yValue;
+				xValue = pathReuslts.get(x);
+				yValue = pathReuslts.get(y);
+				
+				p.add(new Int2(xValue,yValue));						
+			}
+			ps.add(p);
+		}
+		
+		System.out.println("done");
+		
+		//return ps;
 	}
 	
 	
@@ -3239,6 +3392,10 @@ private void getHashEdgesCut(){
 	
 	private Node getNode(int a, int b){
 		return hashNodes.get(a*100+b);
+	}
+	
+	private Node getNode(Int2 a){
+		return getNode(a.x,a.y);
 	}
 	
 	private boolean aLeftOrUnderb(Node a, Node b){

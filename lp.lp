@@ -1,1245 +1,2855 @@
 Maximize
 Subject to
-headGroupp0gp0 - tailGroupp0tp0 = 0 
-x00 - 10000 useHeadp0gp0Head12 <= 1
-x00 + 10000 useHeadp0gp0Head12 >= 1
-y00 - 10000 useHeadp0gp0Head12 <= 2
-y00 + 10000 useHeadp0gp0Head12 >= 2
-x00 - 10000 useHeadp0gp0Head13 <= 1
-x00 + 10000 useHeadp0gp0Head13 >= 1
-y00 - 10000 useHeadp0gp0Head13 <= 3
-y00 + 10000 useHeadp0gp0Head13 >= 3
- + useHeadp0gp0Head12 + useHeadp0gp0Head13 + headGroupp0gp0 = 2
-x04 - 10000 useTailp0gp0tail33 <= 3
-x04 + 10000 useTailp0gp0tail33 >= 3
-y04 - 10000 useTailp0gp0tail33 <= 3
-y04 + 10000 useTailp0gp0tail33 >= 3
- + useTailp0gp0tail33 + tailGroupp0tp0 = 1
-headGroupp0gp1 - tailGroupp0tp1 = 0 
-x00 - 10000 useHeadp0gp1Head21 <= 2
-x00 + 10000 useHeadp0gp1Head21 >= 2
-y00 - 10000 useHeadp0gp1Head21 <= 1
-y00 + 10000 useHeadp0gp1Head21 >= 1
-x00 - 10000 useHeadp0gp1Head31 <= 3
-x00 + 10000 useHeadp0gp1Head31 >= 3
-y00 - 10000 useHeadp0gp1Head31 <= 1
-y00 + 10000 useHeadp0gp1Head31 >= 1
- + useHeadp0gp1Head21 + useHeadp0gp1Head31 + headGroupp0gp1 = 2
-x04 - 10000 useTailp0gp1tail33 <= 3
-x04 + 10000 useTailp0gp1tail33 >= 3
-y04 - 10000 useTailp0gp1tail33 <= 3
-y04 + 10000 useTailp0gp1tail33 >= 3
- + useTailp0gp1tail33 + tailGroupp0tp1 = 1
- + useHeadp0gp0Head12 + useHeadp0gp0Head13 + useHeadp0gp1Head21 + useHeadp0gp1Head31 = 3
- + useTailp0gp0tail33 + useTailp0gp1tail33 = 1
- + tailGroupp0tp0 + tailGroupp0tp1 > 0
- + headGroupp0gp0 + headGroupp0gp1 > 0
-headGroupp1gp0 - tailGroupp1tp0 = 0 
-x10 - 10000 useHeadp1gp0Head12 <= 1
-x10 + 10000 useHeadp1gp0Head12 >= 1
-y10 - 10000 useHeadp1gp0Head12 <= 2
-y10 + 10000 useHeadp1gp0Head12 >= 2
-x10 - 10000 useHeadp1gp0Head13 <= 1
-x10 + 10000 useHeadp1gp0Head13 >= 1
-y10 - 10000 useHeadp1gp0Head13 <= 3
-y10 + 10000 useHeadp1gp0Head13 >= 3
- + useHeadp1gp0Head12 + useHeadp1gp0Head13 + headGroupp1gp0 = 2
-x14 - 10000 useTailp1gp0tail33 <= 3
-x14 + 10000 useTailp1gp0tail33 >= 3
-y14 - 10000 useTailp1gp0tail33 <= 3
-y14 + 10000 useTailp1gp0tail33 >= 3
- + useTailp1gp0tail33 + tailGroupp1tp0 = 1
-headGroupp1gp1 - tailGroupp1tp1 = 0 
-x10 - 10000 useHeadp1gp1Head21 <= 2
-x10 + 10000 useHeadp1gp1Head21 >= 2
-y10 - 10000 useHeadp1gp1Head21 <= 1
-y10 + 10000 useHeadp1gp1Head21 >= 1
-x10 - 10000 useHeadp1gp1Head31 <= 3
-x10 + 10000 useHeadp1gp1Head31 >= 3
-y10 - 10000 useHeadp1gp1Head31 <= 1
-y10 + 10000 useHeadp1gp1Head31 >= 1
- + useHeadp1gp1Head21 + useHeadp1gp1Head31 + headGroupp1gp1 = 2
-x14 - 10000 useTailp1gp1tail33 <= 3
-x14 + 10000 useTailp1gp1tail33 >= 3
-y14 - 10000 useTailp1gp1tail33 <= 3
-y14 + 10000 useTailp1gp1tail33 >= 3
- + useTailp1gp1tail33 + tailGroupp1tp1 = 1
- + useHeadp1gp0Head12 + useHeadp1gp0Head13 + useHeadp1gp1Head21 + useHeadp1gp1Head31 = 3
- + useTailp1gp0tail33 + useTailp1gp1tail33 = 1
- + tailGroupp1tp0 + tailGroupp1tp1 > 0
- + headGroupp1gp0 + headGroupp1gp1 > 0
-headGroupp2gp0 - tailGroupp2tp0 = 0 
-x20 - 10000 useHeadp2gp0Head12 <= 1
-x20 + 10000 useHeadp2gp0Head12 >= 1
-y20 - 10000 useHeadp2gp0Head12 <= 2
-y20 + 10000 useHeadp2gp0Head12 >= 2
-x20 - 10000 useHeadp2gp0Head13 <= 1
-x20 + 10000 useHeadp2gp0Head13 >= 1
-y20 - 10000 useHeadp2gp0Head13 <= 3
-y20 + 10000 useHeadp2gp0Head13 >= 3
- + useHeadp2gp0Head12 + useHeadp2gp0Head13 + headGroupp2gp0 = 2
-x24 - 10000 useTailp2gp0tail33 <= 3
-x24 + 10000 useTailp2gp0tail33 >= 3
-y24 - 10000 useTailp2gp0tail33 <= 3
-y24 + 10000 useTailp2gp0tail33 >= 3
- + useTailp2gp0tail33 + tailGroupp2tp0 = 1
-headGroupp2gp1 - tailGroupp2tp1 = 0 
-x20 - 10000 useHeadp2gp1Head21 <= 2
-x20 + 10000 useHeadp2gp1Head21 >= 2
-y20 - 10000 useHeadp2gp1Head21 <= 1
-y20 + 10000 useHeadp2gp1Head21 >= 1
-x20 - 10000 useHeadp2gp1Head31 <= 3
-x20 + 10000 useHeadp2gp1Head31 >= 3
-y20 - 10000 useHeadp2gp1Head31 <= 1
-y20 + 10000 useHeadp2gp1Head31 >= 1
- + useHeadp2gp1Head21 + useHeadp2gp1Head31 + headGroupp2gp1 = 2
-x24 - 10000 useTailp2gp1tail33 <= 3
-x24 + 10000 useTailp2gp1tail33 >= 3
-y24 - 10000 useTailp2gp1tail33 <= 3
-y24 + 10000 useTailp2gp1tail33 >= 3
- + useTailp2gp1tail33 + tailGroupp2tp1 = 1
- + useHeadp2gp0Head12 + useHeadp2gp0Head13 + useHeadp2gp1Head21 + useHeadp2gp1Head31 = 3
- + useTailp2gp0tail33 + useTailp2gp1tail33 = 1
- + tailGroupp2tp0 + tailGroupp2tp1 > 0
- + headGroupp2gp0 + headGroupp2gp1 > 0
-headGroupp3gp0 - tailGroupp3tp0 = 0 
-x30 - 10000 useHeadp3gp0Head12 <= 1
-x30 + 10000 useHeadp3gp0Head12 >= 1
-y30 - 10000 useHeadp3gp0Head12 <= 2
-y30 + 10000 useHeadp3gp0Head12 >= 2
-x30 - 10000 useHeadp3gp0Head13 <= 1
-x30 + 10000 useHeadp3gp0Head13 >= 1
-y30 - 10000 useHeadp3gp0Head13 <= 3
-y30 + 10000 useHeadp3gp0Head13 >= 3
- + useHeadp3gp0Head12 + useHeadp3gp0Head13 + headGroupp3gp0 = 2
-x34 - 10000 useTailp3gp0tail33 <= 3
-x34 + 10000 useTailp3gp0tail33 >= 3
-y34 - 10000 useTailp3gp0tail33 <= 3
-y34 + 10000 useTailp3gp0tail33 >= 3
- + useTailp3gp0tail33 + tailGroupp3tp0 = 1
-headGroupp3gp1 - tailGroupp3tp1 = 0 
-x30 - 10000 useHeadp3gp1Head21 <= 2
-x30 + 10000 useHeadp3gp1Head21 >= 2
-y30 - 10000 useHeadp3gp1Head21 <= 1
-y30 + 10000 useHeadp3gp1Head21 >= 1
-x30 - 10000 useHeadp3gp1Head31 <= 3
-x30 + 10000 useHeadp3gp1Head31 >= 3
-y30 - 10000 useHeadp3gp1Head31 <= 1
-y30 + 10000 useHeadp3gp1Head31 >= 1
- + useHeadp3gp1Head21 + useHeadp3gp1Head31 + headGroupp3gp1 = 2
-x34 - 10000 useTailp3gp1tail33 <= 3
-x34 + 10000 useTailp3gp1tail33 >= 3
-y34 - 10000 useTailp3gp1tail33 <= 3
-y34 + 10000 useTailp3gp1tail33 >= 3
- + useTailp3gp1tail33 + tailGroupp3tp1 = 1
- + useHeadp3gp0Head12 + useHeadp3gp0Head13 + useHeadp3gp1Head21 + useHeadp3gp1Head31 = 3
- + useTailp3gp0tail33 + useTailp3gp1tail33 = 1
- + tailGroupp3tp0 + tailGroupp3tp1 > 0
- + headGroupp3gp0 + headGroupp3gp1 > 0
+x00 = 0
+y00 = 0
 x01 - x00 + 10000 xEqualslx01 >= 0
 x01  - x00 - 10000 xEqualslx01 <= 0
 y01 - y00 + 10000 yEqualsly01 >= 0
 y01  - y00 - 10000 yEqualsly01 <= 0
 xEqualslx01 + yEqualsly01 <= 1
-x01 >= 1
-x01 <= 3
-y01 >= 1
-y01 <= 3
+x01 >= 0
+x01 <= 4
+y01 >= 0
+y01 <= 4
 x02 - x01 + 10000 xEqualslx02 >= 0
 x02  - x01 - 10000 xEqualslx02 <= 0
 y02 - y01 + 10000 yEqualsly02 >= 0
 y02  - y01 - 10000 yEqualsly02 <= 0
 xEqualslx02 + yEqualsly02 <= 1
-x02 >= 1
-x02 <= 3
-y02 >= 1
-y02 <= 3
-x02 - x00 - 10000 u0x2x0 < 0
-x03 - x00 - 10000 u0x2x0 < 0
-x02 - x01 - 10000 u0x2x0 < 0
-x03 - x01 - 10000 u0x2x0 < 0
-x00 - x02 - 10000 u0x0x2 < 0
-x00 - x03 - 10000 u0x0x2 < 0
-x01 - x02 - 10000 u0x0x2 < 0
-x01 - x03 - 10000 u0x0x2 < 0
-y02 - y00 - 10000 u0y2y0 < 0
-y03 - y00 - 10000 u0y2y0 < 0
-y02 - y01 - 10000 u0y2y0 < 0
-y03 - y01 - 10000 u0y2y0 < 0
-y00 - y02 - 10000 u0y0y2 < 0
-y00 - y03 - 10000 u0y0y2 < 0
-y01 - y02 - 10000 u0y0y2 < 0
-y01 - y03 - 10000 u0y0y2 < 0
+x02 >= 0
+x02 <= 4
+y02 >= 0
+y02 <= 4
+x02 - x00 - 10000 u0x2x0 <= -1
+x03 - x00 - 10000 u0x2x0 <= -1
+x02 - x01 - 10000 u0x2x0 <= -1
+x03 - x01 - 10000 u0x2x0 <= -1
+x00 - x02 - 10000 u0x0x2 <= -1
+x00 - x03 - 10000 u0x0x2 <= -1
+x01 - x02 - 10000 u0x0x2 <= -1
+x01 - x03 - 10000 u0x0x2 <= -1
+y02 - y00 - 10000 u0y2y0 <= -1
+y03 - y00 - 10000 u0y2y0 <= -1
+y02 - y01 - 10000 u0y2y0 <= -1
+y03 - y01 - 10000 u0y2y0 <= -1
+y00 - y02 - 10000 u0y0y2 <= -1
+y00 - y03 - 10000 u0y0y2 <= -1
+y01 - y02 - 10000 u0y0y2 <= -1
+y01 - y03 - 10000 u0y0y2 <= -1
 u0x2x0 + u0x0x2 + u0y2y0 + u0y0y2 <= 3
 x03 - x02 + 10000 xEqualslx03 >= 0
 x03  - x02 - 10000 xEqualslx03 <= 0
 y03 - y02 + 10000 yEqualsly03 >= 0
 y03  - y02 - 10000 yEqualsly03 <= 0
 xEqualslx03 + yEqualsly03 <= 1
-x03 >= 1
-x03 <= 3
-y03 >= 1
-y03 <= 3
-x03 - x00 - 10000 u0x3x0 < 0
-x04 - x00 - 10000 u0x3x0 < 0
-x03 - x01 - 10000 u0x3x0 < 0
-x04 - x01 - 10000 u0x3x0 < 0
-x00 - x03 - 10000 u0x0x3 < 0
-x00 - x04 - 10000 u0x0x3 < 0
-x01 - x03 - 10000 u0x0x3 < 0
-x01 - x04 - 10000 u0x0x3 < 0
-y03 - y00 - 10000 u0y3y0 < 0
-y04 - y00 - 10000 u0y3y0 < 0
-y03 - y01 - 10000 u0y3y0 < 0
-y04 - y01 - 10000 u0y3y0 < 0
-y00 - y03 - 10000 u0y0y3 < 0
-y00 - y04 - 10000 u0y0y3 < 0
-y01 - y03 - 10000 u0y0y3 < 0
-y01 - y04 - 10000 u0y0y3 < 0
+x03 >= 0
+x03 <= 4
+y03 >= 0
+y03 <= 4
+x03 - x00 - 10000 u0x3x0 <= -1
+x04 - x00 - 10000 u0x3x0 <= -1
+x03 - x01 - 10000 u0x3x0 <= -1
+x04 - x01 - 10000 u0x3x0 <= -1
+x00 - x03 - 10000 u0x0x3 <= -1
+x00 - x04 - 10000 u0x0x3 <= -1
+x01 - x03 - 10000 u0x0x3 <= -1
+x01 - x04 - 10000 u0x0x3 <= -1
+y03 - y00 - 10000 u0y3y0 <= -1
+y04 - y00 - 10000 u0y3y0 <= -1
+y03 - y01 - 10000 u0y3y0 <= -1
+y04 - y01 - 10000 u0y3y0 <= -1
+y00 - y03 - 10000 u0y0y3 <= -1
+y00 - y04 - 10000 u0y0y3 <= -1
+y01 - y03 - 10000 u0y0y3 <= -1
+y01 - y04 - 10000 u0y0y3 <= -1
 u0x3x0 + u0x0x3 + u0y3y0 + u0y0y3 <= 3
-x03 - x01 - 10000 u0x3x1 < 0
-x04 - x01 - 10000 u0x3x1 < 0
-x03 - x02 - 10000 u0x3x1 < 0
-x04 - x02 - 10000 u0x3x1 < 0
-x01 - x03 - 10000 u0x1x3 < 0
-x01 - x04 - 10000 u0x1x3 < 0
-x02 - x03 - 10000 u0x1x3 < 0
-x02 - x04 - 10000 u0x1x3 < 0
-y03 - y01 - 10000 u0y3y1 < 0
-y04 - y01 - 10000 u0y3y1 < 0
-y03 - y02 - 10000 u0y3y1 < 0
-y04 - y02 - 10000 u0y3y1 < 0
-y01 - y03 - 10000 u0y1y3 < 0
-y01 - y04 - 10000 u0y1y3 < 0
-y02 - y03 - 10000 u0y1y3 < 0
-y02 - y04 - 10000 u0y1y3 < 0
+x03 - x01 - 10000 u0x3x1 <= -1
+x04 - x01 - 10000 u0x3x1 <= -1
+x03 - x02 - 10000 u0x3x1 <= -1
+x04 - x02 - 10000 u0x3x1 <= -1
+x01 - x03 - 10000 u0x1x3 <= -1
+x01 - x04 - 10000 u0x1x3 <= -1
+x02 - x03 - 10000 u0x1x3 <= -1
+x02 - x04 - 10000 u0x1x3 <= -1
+y03 - y01 - 10000 u0y3y1 <= -1
+y04 - y01 - 10000 u0y3y1 <= -1
+y03 - y02 - 10000 u0y3y1 <= -1
+y04 - y02 - 10000 u0y3y1 <= -1
+y01 - y03 - 10000 u0y1y3 <= -1
+y01 - y04 - 10000 u0y1y3 <= -1
+y02 - y03 - 10000 u0y1y3 <= -1
+y02 - y04 - 10000 u0y1y3 <= -1
 u0x3x1 + u0x1x3 + u0y3y1 + u0y1y3 <= 3
 x04 - x03 + 10000 xEqualslx04 >= 0
 x04  - x03 - 10000 xEqualslx04 <= 0
 y04 - y03 + 10000 yEqualsly04 >= 0
 y04  - y03 - 10000 yEqualsly04 <= 0
 xEqualslx04 + yEqualsly04 <= 1
+x04 >= 0
+x04 <= 4
+y04 >= 0
+y04 <= 4
+x04 - x00 - 10000 u0x4x0 <= -1
+x05 - x00 - 10000 u0x4x0 <= -1
+x04 - x01 - 10000 u0x4x0 <= -1
+x05 - x01 - 10000 u0x4x0 <= -1
+x00 - x04 - 10000 u0x0x4 <= -1
+x00 - x05 - 10000 u0x0x4 <= -1
+x01 - x04 - 10000 u0x0x4 <= -1
+x01 - x05 - 10000 u0x0x4 <= -1
+y04 - y00 - 10000 u0y4y0 <= -1
+y05 - y00 - 10000 u0y4y0 <= -1
+y04 - y01 - 10000 u0y4y0 <= -1
+y05 - y01 - 10000 u0y4y0 <= -1
+y00 - y04 - 10000 u0y0y4 <= -1
+y00 - y05 - 10000 u0y0y4 <= -1
+y01 - y04 - 10000 u0y0y4 <= -1
+y01 - y05 - 10000 u0y0y4 <= -1
+u0x4x0 + u0x0x4 + u0y4y0 + u0y0y4 <= 3
+x04 - x01 - 10000 u0x4x1 <= -1
+x05 - x01 - 10000 u0x4x1 <= -1
+x04 - x02 - 10000 u0x4x1 <= -1
+x05 - x02 - 10000 u0x4x1 <= -1
+x01 - x04 - 10000 u0x1x4 <= -1
+x01 - x05 - 10000 u0x1x4 <= -1
+x02 - x04 - 10000 u0x1x4 <= -1
+x02 - x05 - 10000 u0x1x4 <= -1
+y04 - y01 - 10000 u0y4y1 <= -1
+y05 - y01 - 10000 u0y4y1 <= -1
+y04 - y02 - 10000 u0y4y1 <= -1
+y05 - y02 - 10000 u0y4y1 <= -1
+y01 - y04 - 10000 u0y1y4 <= -1
+y01 - y05 - 10000 u0y1y4 <= -1
+y02 - y04 - 10000 u0y1y4 <= -1
+y02 - y05 - 10000 u0y1y4 <= -1
+u0x4x1 + u0x1x4 + u0y4y1 + u0y1y4 <= 3
+x04 - x02 - 10000 u0x4x2 <= -1
+x05 - x02 - 10000 u0x4x2 <= -1
+x04 - x03 - 10000 u0x4x2 <= -1
+x05 - x03 - 10000 u0x4x2 <= -1
+x02 - x04 - 10000 u0x2x4 <= -1
+x02 - x05 - 10000 u0x2x4 <= -1
+x03 - x04 - 10000 u0x2x4 <= -1
+x03 - x05 - 10000 u0x2x4 <= -1
+y04 - y02 - 10000 u0y4y2 <= -1
+y05 - y02 - 10000 u0y4y2 <= -1
+y04 - y03 - 10000 u0y4y2 <= -1
+y05 - y03 - 10000 u0y4y2 <= -1
+y02 - y04 - 10000 u0y2y4 <= -1
+y02 - y05 - 10000 u0y2y4 <= -1
+y03 - y04 - 10000 u0y2y4 <= -1
+y03 - y05 - 10000 u0y2y4 <= -1
+u0x4x2 + u0x2x4 + u0y4y2 + u0y2y4 <= 3
+x05 - x04 + 10000 xEqualslx05 >= 0
+x05  - x04 - 10000 xEqualslx05 <= 0
+y05 - y04 + 10000 yEqualsly05 >= 0
+y05  - y04 - 10000 yEqualsly05 <= 0
+xEqualslx05 + yEqualsly05 <= 1
+x05 >= 0
+x05 <= 4
+y05 >= 0
+y05 <= 4
+x05 - x00 - 10000 u0x5x0 <= -1
+x06 - x00 - 10000 u0x5x0 <= -1
+x05 - x01 - 10000 u0x5x0 <= -1
+x06 - x01 - 10000 u0x5x0 <= -1
+x00 - x05 - 10000 u0x0x5 <= -1
+x00 - x06 - 10000 u0x0x5 <= -1
+x01 - x05 - 10000 u0x0x5 <= -1
+x01 - x06 - 10000 u0x0x5 <= -1
+y05 - y00 - 10000 u0y5y0 <= -1
+y06 - y00 - 10000 u0y5y0 <= -1
+y05 - y01 - 10000 u0y5y0 <= -1
+y06 - y01 - 10000 u0y5y0 <= -1
+y00 - y05 - 10000 u0y0y5 <= -1
+y00 - y06 - 10000 u0y0y5 <= -1
+y01 - y05 - 10000 u0y0y5 <= -1
+y01 - y06 - 10000 u0y0y5 <= -1
+u0x5x0 + u0x0x5 + u0y5y0 + u0y0y5 <= 3
+x05 - x01 - 10000 u0x5x1 <= -1
+x06 - x01 - 10000 u0x5x1 <= -1
+x05 - x02 - 10000 u0x5x1 <= -1
+x06 - x02 - 10000 u0x5x1 <= -1
+x01 - x05 - 10000 u0x1x5 <= -1
+x01 - x06 - 10000 u0x1x5 <= -1
+x02 - x05 - 10000 u0x1x5 <= -1
+x02 - x06 - 10000 u0x1x5 <= -1
+y05 - y01 - 10000 u0y5y1 <= -1
+y06 - y01 - 10000 u0y5y1 <= -1
+y05 - y02 - 10000 u0y5y1 <= -1
+y06 - y02 - 10000 u0y5y1 <= -1
+y01 - y05 - 10000 u0y1y5 <= -1
+y01 - y06 - 10000 u0y1y5 <= -1
+y02 - y05 - 10000 u0y1y5 <= -1
+y02 - y06 - 10000 u0y1y5 <= -1
+u0x5x1 + u0x1x5 + u0y5y1 + u0y1y5 <= 3
+x05 - x02 - 10000 u0x5x2 <= -1
+x06 - x02 - 10000 u0x5x2 <= -1
+x05 - x03 - 10000 u0x5x2 <= -1
+x06 - x03 - 10000 u0x5x2 <= -1
+x02 - x05 - 10000 u0x2x5 <= -1
+x02 - x06 - 10000 u0x2x5 <= -1
+x03 - x05 - 10000 u0x2x5 <= -1
+x03 - x06 - 10000 u0x2x5 <= -1
+y05 - y02 - 10000 u0y5y2 <= -1
+y06 - y02 - 10000 u0y5y2 <= -1
+y05 - y03 - 10000 u0y5y2 <= -1
+y06 - y03 - 10000 u0y5y2 <= -1
+y02 - y05 - 10000 u0y2y5 <= -1
+y02 - y06 - 10000 u0y2y5 <= -1
+y03 - y05 - 10000 u0y2y5 <= -1
+y03 - y06 - 10000 u0y2y5 <= -1
+u0x5x2 + u0x2x5 + u0y5y2 + u0y2y5 <= 3
+x05 - x03 - 10000 u0x5x3 <= -1
+x06 - x03 - 10000 u0x5x3 <= -1
+x05 - x04 - 10000 u0x5x3 <= -1
+x06 - x04 - 10000 u0x5x3 <= -1
+x03 - x05 - 10000 u0x3x5 <= -1
+x03 - x06 - 10000 u0x3x5 <= -1
+x04 - x05 - 10000 u0x3x5 <= -1
+x04 - x06 - 10000 u0x3x5 <= -1
+y05 - y03 - 10000 u0y5y3 <= -1
+y06 - y03 - 10000 u0y5y3 <= -1
+y05 - y04 - 10000 u0y5y3 <= -1
+y06 - y04 - 10000 u0y5y3 <= -1
+y03 - y05 - 10000 u0y3y5 <= -1
+y03 - y06 - 10000 u0y3y5 <= -1
+y04 - y05 - 10000 u0y3y5 <= -1
+y04 - y06 - 10000 u0y3y5 <= -1
+u0x5x3 + u0x3x5 + u0y5y3 + u0y3y5 <= 3
+x06 - x05 + 10000 xEqualslx06 >= 0
+x06  - x05 - 10000 xEqualslx06 <= 0
+y06 - y05 + 10000 yEqualsly06 >= 0
+y06  - y05 - 10000 yEqualsly06 <= 0
+xEqualslx06 + yEqualsly06 <= 1
+x06 >= 0
+x06 <= 4
+y06 >= 0
+y06 <= 4
+x06 - x00 - 10000 u0x6x0 <= -1
+x07 - x00 - 10000 u0x6x0 <= -1
+x06 - x01 - 10000 u0x6x0 <= -1
+x07 - x01 - 10000 u0x6x0 <= -1
+x00 - x06 - 10000 u0x0x6 <= -1
+x00 - x07 - 10000 u0x0x6 <= -1
+x01 - x06 - 10000 u0x0x6 <= -1
+x01 - x07 - 10000 u0x0x6 <= -1
+y06 - y00 - 10000 u0y6y0 <= -1
+y07 - y00 - 10000 u0y6y0 <= -1
+y06 - y01 - 10000 u0y6y0 <= -1
+y07 - y01 - 10000 u0y6y0 <= -1
+y00 - y06 - 10000 u0y0y6 <= -1
+y00 - y07 - 10000 u0y0y6 <= -1
+y01 - y06 - 10000 u0y0y6 <= -1
+y01 - y07 - 10000 u0y0y6 <= -1
+u0x6x0 + u0x0x6 + u0y6y0 + u0y0y6 <= 3
+x06 - x01 - 10000 u0x6x1 <= -1
+x07 - x01 - 10000 u0x6x1 <= -1
+x06 - x02 - 10000 u0x6x1 <= -1
+x07 - x02 - 10000 u0x6x1 <= -1
+x01 - x06 - 10000 u0x1x6 <= -1
+x01 - x07 - 10000 u0x1x6 <= -1
+x02 - x06 - 10000 u0x1x6 <= -1
+x02 - x07 - 10000 u0x1x6 <= -1
+y06 - y01 - 10000 u0y6y1 <= -1
+y07 - y01 - 10000 u0y6y1 <= -1
+y06 - y02 - 10000 u0y6y1 <= -1
+y07 - y02 - 10000 u0y6y1 <= -1
+y01 - y06 - 10000 u0y1y6 <= -1
+y01 - y07 - 10000 u0y1y6 <= -1
+y02 - y06 - 10000 u0y1y6 <= -1
+y02 - y07 - 10000 u0y1y6 <= -1
+u0x6x1 + u0x1x6 + u0y6y1 + u0y1y6 <= 3
+x06 - x02 - 10000 u0x6x2 <= -1
+x07 - x02 - 10000 u0x6x2 <= -1
+x06 - x03 - 10000 u0x6x2 <= -1
+x07 - x03 - 10000 u0x6x2 <= -1
+x02 - x06 - 10000 u0x2x6 <= -1
+x02 - x07 - 10000 u0x2x6 <= -1
+x03 - x06 - 10000 u0x2x6 <= -1
+x03 - x07 - 10000 u0x2x6 <= -1
+y06 - y02 - 10000 u0y6y2 <= -1
+y07 - y02 - 10000 u0y6y2 <= -1
+y06 - y03 - 10000 u0y6y2 <= -1
+y07 - y03 - 10000 u0y6y2 <= -1
+y02 - y06 - 10000 u0y2y6 <= -1
+y02 - y07 - 10000 u0y2y6 <= -1
+y03 - y06 - 10000 u0y2y6 <= -1
+y03 - y07 - 10000 u0y2y6 <= -1
+u0x6x2 + u0x2x6 + u0y6y2 + u0y2y6 <= 3
+x06 - x03 - 10000 u0x6x3 <= -1
+x07 - x03 - 10000 u0x6x3 <= -1
+x06 - x04 - 10000 u0x6x3 <= -1
+x07 - x04 - 10000 u0x6x3 <= -1
+x03 - x06 - 10000 u0x3x6 <= -1
+x03 - x07 - 10000 u0x3x6 <= -1
+x04 - x06 - 10000 u0x3x6 <= -1
+x04 - x07 - 10000 u0x3x6 <= -1
+y06 - y03 - 10000 u0y6y3 <= -1
+y07 - y03 - 10000 u0y6y3 <= -1
+y06 - y04 - 10000 u0y6y3 <= -1
+y07 - y04 - 10000 u0y6y3 <= -1
+y03 - y06 - 10000 u0y3y6 <= -1
+y03 - y07 - 10000 u0y3y6 <= -1
+y04 - y06 - 10000 u0y3y6 <= -1
+y04 - y07 - 10000 u0y3y6 <= -1
+u0x6x3 + u0x3x6 + u0y6y3 + u0y3y6 <= 3
+x06 - x04 - 10000 u0x6x4 <= -1
+x07 - x04 - 10000 u0x6x4 <= -1
+x06 - x05 - 10000 u0x6x4 <= -1
+x07 - x05 - 10000 u0x6x4 <= -1
+x04 - x06 - 10000 u0x4x6 <= -1
+x04 - x07 - 10000 u0x4x6 <= -1
+x05 - x06 - 10000 u0x4x6 <= -1
+x05 - x07 - 10000 u0x4x6 <= -1
+y06 - y04 - 10000 u0y6y4 <= -1
+y07 - y04 - 10000 u0y6y4 <= -1
+y06 - y05 - 10000 u0y6y4 <= -1
+y07 - y05 - 10000 u0y6y4 <= -1
+y04 - y06 - 10000 u0y4y6 <= -1
+y04 - y07 - 10000 u0y4y6 <= -1
+y05 - y06 - 10000 u0y4y6 <= -1
+y05 - y07 - 10000 u0y4y6 <= -1
+u0x6x4 + u0x4x6 + u0y6y4 + u0y4y6 <= 3
+x07 - x06 + 10000 xEqualslx07 >= 0
+x07  - x06 - 10000 xEqualslx07 <= 0
+y07 - y06 + 10000 yEqualsly07 >= 0
+y07  - y06 - 10000 yEqualsly07 <= 0
+xEqualslx07 + yEqualsly07 <= 1
+x07 >= 0
+x07 <= 4
+y07 >= 0
+y07 <= 4
+x07 - x00 - 10000 u0x7x0 <= -1
+x08 - x00 - 10000 u0x7x0 <= -1
+x07 - x01 - 10000 u0x7x0 <= -1
+x08 - x01 - 10000 u0x7x0 <= -1
+x00 - x07 - 10000 u0x0x7 <= -1
+x00 - x08 - 10000 u0x0x7 <= -1
+x01 - x07 - 10000 u0x0x7 <= -1
+x01 - x08 - 10000 u0x0x7 <= -1
+y07 - y00 - 10000 u0y7y0 <= -1
+y08 - y00 - 10000 u0y7y0 <= -1
+y07 - y01 - 10000 u0y7y0 <= -1
+y08 - y01 - 10000 u0y7y0 <= -1
+y00 - y07 - 10000 u0y0y7 <= -1
+y00 - y08 - 10000 u0y0y7 <= -1
+y01 - y07 - 10000 u0y0y7 <= -1
+y01 - y08 - 10000 u0y0y7 <= -1
+u0x7x0 + u0x0x7 + u0y7y0 + u0y0y7 <= 3
+x07 - x01 - 10000 u0x7x1 <= -1
+x08 - x01 - 10000 u0x7x1 <= -1
+x07 - x02 - 10000 u0x7x1 <= -1
+x08 - x02 - 10000 u0x7x1 <= -1
+x01 - x07 - 10000 u0x1x7 <= -1
+x01 - x08 - 10000 u0x1x7 <= -1
+x02 - x07 - 10000 u0x1x7 <= -1
+x02 - x08 - 10000 u0x1x7 <= -1
+y07 - y01 - 10000 u0y7y1 <= -1
+y08 - y01 - 10000 u0y7y1 <= -1
+y07 - y02 - 10000 u0y7y1 <= -1
+y08 - y02 - 10000 u0y7y1 <= -1
+y01 - y07 - 10000 u0y1y7 <= -1
+y01 - y08 - 10000 u0y1y7 <= -1
+y02 - y07 - 10000 u0y1y7 <= -1
+y02 - y08 - 10000 u0y1y7 <= -1
+u0x7x1 + u0x1x7 + u0y7y1 + u0y1y7 <= 3
+x07 - x02 - 10000 u0x7x2 <= -1
+x08 - x02 - 10000 u0x7x2 <= -1
+x07 - x03 - 10000 u0x7x2 <= -1
+x08 - x03 - 10000 u0x7x2 <= -1
+x02 - x07 - 10000 u0x2x7 <= -1
+x02 - x08 - 10000 u0x2x7 <= -1
+x03 - x07 - 10000 u0x2x7 <= -1
+x03 - x08 - 10000 u0x2x7 <= -1
+y07 - y02 - 10000 u0y7y2 <= -1
+y08 - y02 - 10000 u0y7y2 <= -1
+y07 - y03 - 10000 u0y7y2 <= -1
+y08 - y03 - 10000 u0y7y2 <= -1
+y02 - y07 - 10000 u0y2y7 <= -1
+y02 - y08 - 10000 u0y2y7 <= -1
+y03 - y07 - 10000 u0y2y7 <= -1
+y03 - y08 - 10000 u0y2y7 <= -1
+u0x7x2 + u0x2x7 + u0y7y2 + u0y2y7 <= 3
+x07 - x03 - 10000 u0x7x3 <= -1
+x08 - x03 - 10000 u0x7x3 <= -1
+x07 - x04 - 10000 u0x7x3 <= -1
+x08 - x04 - 10000 u0x7x3 <= -1
+x03 - x07 - 10000 u0x3x7 <= -1
+x03 - x08 - 10000 u0x3x7 <= -1
+x04 - x07 - 10000 u0x3x7 <= -1
+x04 - x08 - 10000 u0x3x7 <= -1
+y07 - y03 - 10000 u0y7y3 <= -1
+y08 - y03 - 10000 u0y7y3 <= -1
+y07 - y04 - 10000 u0y7y3 <= -1
+y08 - y04 - 10000 u0y7y3 <= -1
+y03 - y07 - 10000 u0y3y7 <= -1
+y03 - y08 - 10000 u0y3y7 <= -1
+y04 - y07 - 10000 u0y3y7 <= -1
+y04 - y08 - 10000 u0y3y7 <= -1
+u0x7x3 + u0x3x7 + u0y7y3 + u0y3y7 <= 3
+x07 - x04 - 10000 u0x7x4 <= -1
+x08 - x04 - 10000 u0x7x4 <= -1
+x07 - x05 - 10000 u0x7x4 <= -1
+x08 - x05 - 10000 u0x7x4 <= -1
+x04 - x07 - 10000 u0x4x7 <= -1
+x04 - x08 - 10000 u0x4x7 <= -1
+x05 - x07 - 10000 u0x4x7 <= -1
+x05 - x08 - 10000 u0x4x7 <= -1
+y07 - y04 - 10000 u0y7y4 <= -1
+y08 - y04 - 10000 u0y7y4 <= -1
+y07 - y05 - 10000 u0y7y4 <= -1
+y08 - y05 - 10000 u0y7y4 <= -1
+y04 - y07 - 10000 u0y4y7 <= -1
+y04 - y08 - 10000 u0y4y7 <= -1
+y05 - y07 - 10000 u0y4y7 <= -1
+y05 - y08 - 10000 u0y4y7 <= -1
+u0x7x4 + u0x4x7 + u0y7y4 + u0y4y7 <= 3
+x07 - x05 - 10000 u0x7x5 <= -1
+x08 - x05 - 10000 u0x7x5 <= -1
+x07 - x06 - 10000 u0x7x5 <= -1
+x08 - x06 - 10000 u0x7x5 <= -1
+x05 - x07 - 10000 u0x5x7 <= -1
+x05 - x08 - 10000 u0x5x7 <= -1
+x06 - x07 - 10000 u0x5x7 <= -1
+x06 - x08 - 10000 u0x5x7 <= -1
+y07 - y05 - 10000 u0y7y5 <= -1
+y08 - y05 - 10000 u0y7y5 <= -1
+y07 - y06 - 10000 u0y7y5 <= -1
+y08 - y06 - 10000 u0y7y5 <= -1
+y05 - y07 - 10000 u0y5y7 <= -1
+y05 - y08 - 10000 u0y5y7 <= -1
+y06 - y07 - 10000 u0y5y7 <= -1
+y06 - y08 - 10000 u0y5y7 <= -1
+u0x7x5 + u0x5x7 + u0y7y5 + u0y5y7 <= 3
+x08 - x07 + 10000 xEqualslx08 >= 0
+x08  - x07 - 10000 xEqualslx08 <= 0
+y08 - y07 + 10000 yEqualsly08 >= 0
+y08  - y07 - 10000 yEqualsly08 <= 0
+xEqualslx08 + yEqualsly08 <= 1
+x08 >= 0
+x08 <= 4
+y08 >= 0
+y08 <= 4
+x08 - x00 - 10000 u0x8x0 <= -1
+x09 - x00 - 10000 u0x8x0 <= -1
+x08 - x01 - 10000 u0x8x0 <= -1
+x09 - x01 - 10000 u0x8x0 <= -1
+x00 - x08 - 10000 u0x0x8 <= -1
+x00 - x09 - 10000 u0x0x8 <= -1
+x01 - x08 - 10000 u0x0x8 <= -1
+x01 - x09 - 10000 u0x0x8 <= -1
+y08 - y00 - 10000 u0y8y0 <= -1
+y09 - y00 - 10000 u0y8y0 <= -1
+y08 - y01 - 10000 u0y8y0 <= -1
+y09 - y01 - 10000 u0y8y0 <= -1
+y00 - y08 - 10000 u0y0y8 <= -1
+y00 - y09 - 10000 u0y0y8 <= -1
+y01 - y08 - 10000 u0y0y8 <= -1
+y01 - y09 - 10000 u0y0y8 <= -1
+u0x8x0 + u0x0x8 + u0y8y0 + u0y0y8 <= 3
+x08 - x01 - 10000 u0x8x1 <= -1
+x09 - x01 - 10000 u0x8x1 <= -1
+x08 - x02 - 10000 u0x8x1 <= -1
+x09 - x02 - 10000 u0x8x1 <= -1
+x01 - x08 - 10000 u0x1x8 <= -1
+x01 - x09 - 10000 u0x1x8 <= -1
+x02 - x08 - 10000 u0x1x8 <= -1
+x02 - x09 - 10000 u0x1x8 <= -1
+y08 - y01 - 10000 u0y8y1 <= -1
+y09 - y01 - 10000 u0y8y1 <= -1
+y08 - y02 - 10000 u0y8y1 <= -1
+y09 - y02 - 10000 u0y8y1 <= -1
+y01 - y08 - 10000 u0y1y8 <= -1
+y01 - y09 - 10000 u0y1y8 <= -1
+y02 - y08 - 10000 u0y1y8 <= -1
+y02 - y09 - 10000 u0y1y8 <= -1
+u0x8x1 + u0x1x8 + u0y8y1 + u0y1y8 <= 3
+x08 - x02 - 10000 u0x8x2 <= -1
+x09 - x02 - 10000 u0x8x2 <= -1
+x08 - x03 - 10000 u0x8x2 <= -1
+x09 - x03 - 10000 u0x8x2 <= -1
+x02 - x08 - 10000 u0x2x8 <= -1
+x02 - x09 - 10000 u0x2x8 <= -1
+x03 - x08 - 10000 u0x2x8 <= -1
+x03 - x09 - 10000 u0x2x8 <= -1
+y08 - y02 - 10000 u0y8y2 <= -1
+y09 - y02 - 10000 u0y8y2 <= -1
+y08 - y03 - 10000 u0y8y2 <= -1
+y09 - y03 - 10000 u0y8y2 <= -1
+y02 - y08 - 10000 u0y2y8 <= -1
+y02 - y09 - 10000 u0y2y8 <= -1
+y03 - y08 - 10000 u0y2y8 <= -1
+y03 - y09 - 10000 u0y2y8 <= -1
+u0x8x2 + u0x2x8 + u0y8y2 + u0y2y8 <= 3
+x08 - x03 - 10000 u0x8x3 <= -1
+x09 - x03 - 10000 u0x8x3 <= -1
+x08 - x04 - 10000 u0x8x3 <= -1
+x09 - x04 - 10000 u0x8x3 <= -1
+x03 - x08 - 10000 u0x3x8 <= -1
+x03 - x09 - 10000 u0x3x8 <= -1
+x04 - x08 - 10000 u0x3x8 <= -1
+x04 - x09 - 10000 u0x3x8 <= -1
+y08 - y03 - 10000 u0y8y3 <= -1
+y09 - y03 - 10000 u0y8y3 <= -1
+y08 - y04 - 10000 u0y8y3 <= -1
+y09 - y04 - 10000 u0y8y3 <= -1
+y03 - y08 - 10000 u0y3y8 <= -1
+y03 - y09 - 10000 u0y3y8 <= -1
+y04 - y08 - 10000 u0y3y8 <= -1
+y04 - y09 - 10000 u0y3y8 <= -1
+u0x8x3 + u0x3x8 + u0y8y3 + u0y3y8 <= 3
+x08 - x04 - 10000 u0x8x4 <= -1
+x09 - x04 - 10000 u0x8x4 <= -1
+x08 - x05 - 10000 u0x8x4 <= -1
+x09 - x05 - 10000 u0x8x4 <= -1
+x04 - x08 - 10000 u0x4x8 <= -1
+x04 - x09 - 10000 u0x4x8 <= -1
+x05 - x08 - 10000 u0x4x8 <= -1
+x05 - x09 - 10000 u0x4x8 <= -1
+y08 - y04 - 10000 u0y8y4 <= -1
+y09 - y04 - 10000 u0y8y4 <= -1
+y08 - y05 - 10000 u0y8y4 <= -1
+y09 - y05 - 10000 u0y8y4 <= -1
+y04 - y08 - 10000 u0y4y8 <= -1
+y04 - y09 - 10000 u0y4y8 <= -1
+y05 - y08 - 10000 u0y4y8 <= -1
+y05 - y09 - 10000 u0y4y8 <= -1
+u0x8x4 + u0x4x8 + u0y8y4 + u0y4y8 <= 3
+x08 - x05 - 10000 u0x8x5 <= -1
+x09 - x05 - 10000 u0x8x5 <= -1
+x08 - x06 - 10000 u0x8x5 <= -1
+x09 - x06 - 10000 u0x8x5 <= -1
+x05 - x08 - 10000 u0x5x8 <= -1
+x05 - x09 - 10000 u0x5x8 <= -1
+x06 - x08 - 10000 u0x5x8 <= -1
+x06 - x09 - 10000 u0x5x8 <= -1
+y08 - y05 - 10000 u0y8y5 <= -1
+y09 - y05 - 10000 u0y8y5 <= -1
+y08 - y06 - 10000 u0y8y5 <= -1
+y09 - y06 - 10000 u0y8y5 <= -1
+y05 - y08 - 10000 u0y5y8 <= -1
+y05 - y09 - 10000 u0y5y8 <= -1
+y06 - y08 - 10000 u0y5y8 <= -1
+y06 - y09 - 10000 u0y5y8 <= -1
+u0x8x5 + u0x5x8 + u0y8y5 + u0y5y8 <= 3
+x08 - x06 - 10000 u0x8x6 <= -1
+x09 - x06 - 10000 u0x8x6 <= -1
+x08 - x07 - 10000 u0x8x6 <= -1
+x09 - x07 - 10000 u0x8x6 <= -1
+x06 - x08 - 10000 u0x6x8 <= -1
+x06 - x09 - 10000 u0x6x8 <= -1
+x07 - x08 - 10000 u0x6x8 <= -1
+x07 - x09 - 10000 u0x6x8 <= -1
+y08 - y06 - 10000 u0y8y6 <= -1
+y09 - y06 - 10000 u0y8y6 <= -1
+y08 - y07 - 10000 u0y8y6 <= -1
+y09 - y07 - 10000 u0y8y6 <= -1
+y06 - y08 - 10000 u0y6y8 <= -1
+y06 - y09 - 10000 u0y6y8 <= -1
+y07 - y08 - 10000 u0y6y8 <= -1
+y07 - y09 - 10000 u0y6y8 <= -1
+u0x8x6 + u0x6x8 + u0y8y6 + u0y6y8 <= 3
+x09 - x08 + 10000 xEqualslx09 >= 0
+x09  - x08 - 10000 xEqualslx09 <= 0
+y09 - y08 + 10000 yEqualsly09 >= 0
+y09  - y08 - 10000 yEqualsly09 <= 0
+xEqualslx09 + yEqualsly09 <= 1
+x09 = 4
+y09 = 4
+x10 = 0
+y10 = 0
 x11 - x10 + 10000 xEqualslx11 >= 0
 x11  - x10 - 10000 xEqualslx11 <= 0
 y11 - y10 + 10000 yEqualsly11 >= 0
 y11  - y10 - 10000 yEqualsly11 <= 0
 xEqualslx11 + yEqualsly11 <= 1
-x11 >= 1
-x11 <= 3
-y11 >= 1
-y11 <= 3
+x11 >= 0
+x11 <= 4
+y11 >= 0
+y11 <= 4
 x12 - x11 + 10000 xEqualslx12 >= 0
 x12  - x11 - 10000 xEqualslx12 <= 0
 y12 - y11 + 10000 yEqualsly12 >= 0
 y12  - y11 - 10000 yEqualsly12 <= 0
 xEqualslx12 + yEqualsly12 <= 1
-x12 >= 1
-x12 <= 3
-y12 >= 1
-y12 <= 3
-x12 - x10 - 10000 u1x2x0 < 0
-x13 - x10 - 10000 u1x2x0 < 0
-x12 - x11 - 10000 u1x2x0 < 0
-x13 - x11 - 10000 u1x2x0 < 0
-x10 - x12 - 10000 u1x0x2 < 0
-x10 - x13 - 10000 u1x0x2 < 0
-x11 - x12 - 10000 u1x0x2 < 0
-x11 - x13 - 10000 u1x0x2 < 0
-y12 - y10 - 10000 u1y2y0 < 0
-y13 - y10 - 10000 u1y2y0 < 0
-y12 - y11 - 10000 u1y2y0 < 0
-y13 - y11 - 10000 u1y2y0 < 0
-y10 - y12 - 10000 u1y0y2 < 0
-y10 - y13 - 10000 u1y0y2 < 0
-y11 - y12 - 10000 u1y0y2 < 0
-y11 - y13 - 10000 u1y0y2 < 0
+x12 >= 0
+x12 <= 4
+y12 >= 0
+y12 <= 4
+x12 - x10 - 10000 u1x2x0 <= -1
+x13 - x10 - 10000 u1x2x0 <= -1
+x12 - x11 - 10000 u1x2x0 <= -1
+x13 - x11 - 10000 u1x2x0 <= -1
+x10 - x12 - 10000 u1x0x2 <= -1
+x10 - x13 - 10000 u1x0x2 <= -1
+x11 - x12 - 10000 u1x0x2 <= -1
+x11 - x13 - 10000 u1x0x2 <= -1
+y12 - y10 - 10000 u1y2y0 <= -1
+y13 - y10 - 10000 u1y2y0 <= -1
+y12 - y11 - 10000 u1y2y0 <= -1
+y13 - y11 - 10000 u1y2y0 <= -1
+y10 - y12 - 10000 u1y0y2 <= -1
+y10 - y13 - 10000 u1y0y2 <= -1
+y11 - y12 - 10000 u1y0y2 <= -1
+y11 - y13 - 10000 u1y0y2 <= -1
 u1x2x0 + u1x0x2 + u1y2y0 + u1y0y2 <= 3
 x13 - x12 + 10000 xEqualslx13 >= 0
 x13  - x12 - 10000 xEqualslx13 <= 0
 y13 - y12 + 10000 yEqualsly13 >= 0
 y13  - y12 - 10000 yEqualsly13 <= 0
 xEqualslx13 + yEqualsly13 <= 1
-x13 >= 1
-x13 <= 3
-y13 >= 1
-y13 <= 3
-x13 - x10 - 10000 u1x3x0 < 0
-x14 - x10 - 10000 u1x3x0 < 0
-x13 - x11 - 10000 u1x3x0 < 0
-x14 - x11 - 10000 u1x3x0 < 0
-x10 - x13 - 10000 u1x0x3 < 0
-x10 - x14 - 10000 u1x0x3 < 0
-x11 - x13 - 10000 u1x0x3 < 0
-x11 - x14 - 10000 u1x0x3 < 0
-y13 - y10 - 10000 u1y3y0 < 0
-y14 - y10 - 10000 u1y3y0 < 0
-y13 - y11 - 10000 u1y3y0 < 0
-y14 - y11 - 10000 u1y3y0 < 0
-y10 - y13 - 10000 u1y0y3 < 0
-y10 - y14 - 10000 u1y0y3 < 0
-y11 - y13 - 10000 u1y0y3 < 0
-y11 - y14 - 10000 u1y0y3 < 0
+x13 >= 0
+x13 <= 4
+y13 >= 0
+y13 <= 4
+x13 - x10 - 10000 u1x3x0 <= -1
+x14 - x10 - 10000 u1x3x0 <= -1
+x13 - x11 - 10000 u1x3x0 <= -1
+x14 - x11 - 10000 u1x3x0 <= -1
+x10 - x13 - 10000 u1x0x3 <= -1
+x10 - x14 - 10000 u1x0x3 <= -1
+x11 - x13 - 10000 u1x0x3 <= -1
+x11 - x14 - 10000 u1x0x3 <= -1
+y13 - y10 - 10000 u1y3y0 <= -1
+y14 - y10 - 10000 u1y3y0 <= -1
+y13 - y11 - 10000 u1y3y0 <= -1
+y14 - y11 - 10000 u1y3y0 <= -1
+y10 - y13 - 10000 u1y0y3 <= -1
+y10 - y14 - 10000 u1y0y3 <= -1
+y11 - y13 - 10000 u1y0y3 <= -1
+y11 - y14 - 10000 u1y0y3 <= -1
 u1x3x0 + u1x0x3 + u1y3y0 + u1y0y3 <= 3
-x13 - x11 - 10000 u1x3x1 < 0
-x14 - x11 - 10000 u1x3x1 < 0
-x13 - x12 - 10000 u1x3x1 < 0
-x14 - x12 - 10000 u1x3x1 < 0
-x11 - x13 - 10000 u1x1x3 < 0
-x11 - x14 - 10000 u1x1x3 < 0
-x12 - x13 - 10000 u1x1x3 < 0
-x12 - x14 - 10000 u1x1x3 < 0
-y13 - y11 - 10000 u1y3y1 < 0
-y14 - y11 - 10000 u1y3y1 < 0
-y13 - y12 - 10000 u1y3y1 < 0
-y14 - y12 - 10000 u1y3y1 < 0
-y11 - y13 - 10000 u1y1y3 < 0
-y11 - y14 - 10000 u1y1y3 < 0
-y12 - y13 - 10000 u1y1y3 < 0
-y12 - y14 - 10000 u1y1y3 < 0
+x13 - x11 - 10000 u1x3x1 <= -1
+x14 - x11 - 10000 u1x3x1 <= -1
+x13 - x12 - 10000 u1x3x1 <= -1
+x14 - x12 - 10000 u1x3x1 <= -1
+x11 - x13 - 10000 u1x1x3 <= -1
+x11 - x14 - 10000 u1x1x3 <= -1
+x12 - x13 - 10000 u1x1x3 <= -1
+x12 - x14 - 10000 u1x1x3 <= -1
+y13 - y11 - 10000 u1y3y1 <= -1
+y14 - y11 - 10000 u1y3y1 <= -1
+y13 - y12 - 10000 u1y3y1 <= -1
+y14 - y12 - 10000 u1y3y1 <= -1
+y11 - y13 - 10000 u1y1y3 <= -1
+y11 - y14 - 10000 u1y1y3 <= -1
+y12 - y13 - 10000 u1y1y3 <= -1
+y12 - y14 - 10000 u1y1y3 <= -1
 u1x3x1 + u1x1x3 + u1y3y1 + u1y1y3 <= 3
 x14 - x13 + 10000 xEqualslx14 >= 0
 x14  - x13 - 10000 xEqualslx14 <= 0
 y14 - y13 + 10000 yEqualsly14 >= 0
 y14  - y13 - 10000 yEqualsly14 <= 0
 xEqualslx14 + yEqualsly14 <= 1
-x21 - x20 + 10000 xEqualslx21 >= 0
-x21  - x20 - 10000 xEqualslx21 <= 0
-y21 - y20 + 10000 yEqualsly21 >= 0
-y21  - y20 - 10000 yEqualsly21 <= 0
-xEqualslx21 + yEqualsly21 <= 1
-x21 >= 1
-x21 <= 3
-y21 >= 1
-y21 <= 3
-x22 - x21 + 10000 xEqualslx22 >= 0
-x22  - x21 - 10000 xEqualslx22 <= 0
-y22 - y21 + 10000 yEqualsly22 >= 0
-y22  - y21 - 10000 yEqualsly22 <= 0
-xEqualslx22 + yEqualsly22 <= 1
-x22 >= 1
-x22 <= 3
-y22 >= 1
-y22 <= 3
-x22 - x20 - 10000 u2x2x0 < 0
-x23 - x20 - 10000 u2x2x0 < 0
-x22 - x21 - 10000 u2x2x0 < 0
-x23 - x21 - 10000 u2x2x0 < 0
-x20 - x22 - 10000 u2x0x2 < 0
-x20 - x23 - 10000 u2x0x2 < 0
-x21 - x22 - 10000 u2x0x2 < 0
-x21 - x23 - 10000 u2x0x2 < 0
-y22 - y20 - 10000 u2y2y0 < 0
-y23 - y20 - 10000 u2y2y0 < 0
-y22 - y21 - 10000 u2y2y0 < 0
-y23 - y21 - 10000 u2y2y0 < 0
-y20 - y22 - 10000 u2y0y2 < 0
-y20 - y23 - 10000 u2y0y2 < 0
-y21 - y22 - 10000 u2y0y2 < 0
-y21 - y23 - 10000 u2y0y2 < 0
-u2x2x0 + u2x0x2 + u2y2y0 + u2y0y2 <= 3
-x23 - x22 + 10000 xEqualslx23 >= 0
-x23  - x22 - 10000 xEqualslx23 <= 0
-y23 - y22 + 10000 yEqualsly23 >= 0
-y23  - y22 - 10000 yEqualsly23 <= 0
-xEqualslx23 + yEqualsly23 <= 1
-x23 >= 1
-x23 <= 3
-y23 >= 1
-y23 <= 3
-x23 - x20 - 10000 u2x3x0 < 0
-x24 - x20 - 10000 u2x3x0 < 0
-x23 - x21 - 10000 u2x3x0 < 0
-x24 - x21 - 10000 u2x3x0 < 0
-x20 - x23 - 10000 u2x0x3 < 0
-x20 - x24 - 10000 u2x0x3 < 0
-x21 - x23 - 10000 u2x0x3 < 0
-x21 - x24 - 10000 u2x0x3 < 0
-y23 - y20 - 10000 u2y3y0 < 0
-y24 - y20 - 10000 u2y3y0 < 0
-y23 - y21 - 10000 u2y3y0 < 0
-y24 - y21 - 10000 u2y3y0 < 0
-y20 - y23 - 10000 u2y0y3 < 0
-y20 - y24 - 10000 u2y0y3 < 0
-y21 - y23 - 10000 u2y0y3 < 0
-y21 - y24 - 10000 u2y0y3 < 0
-u2x3x0 + u2x0x3 + u2y3y0 + u2y0y3 <= 3
-x23 - x21 - 10000 u2x3x1 < 0
-x24 - x21 - 10000 u2x3x1 < 0
-x23 - x22 - 10000 u2x3x1 < 0
-x24 - x22 - 10000 u2x3x1 < 0
-x21 - x23 - 10000 u2x1x3 < 0
-x21 - x24 - 10000 u2x1x3 < 0
-x22 - x23 - 10000 u2x1x3 < 0
-x22 - x24 - 10000 u2x1x3 < 0
-y23 - y21 - 10000 u2y3y1 < 0
-y24 - y21 - 10000 u2y3y1 < 0
-y23 - y22 - 10000 u2y3y1 < 0
-y24 - y22 - 10000 u2y3y1 < 0
-y21 - y23 - 10000 u2y1y3 < 0
-y21 - y24 - 10000 u2y1y3 < 0
-y22 - y23 - 10000 u2y1y3 < 0
-y22 - y24 - 10000 u2y1y3 < 0
-u2x3x1 + u2x1x3 + u2y3y1 + u2y1y3 <= 3
-x24 - x23 + 10000 xEqualslx24 >= 0
-x24  - x23 - 10000 xEqualslx24 <= 0
-y24 - y23 + 10000 yEqualsly24 >= 0
-y24  - y23 - 10000 yEqualsly24 <= 0
-xEqualslx24 + yEqualsly24 <= 1
-x31 - x30 + 10000 xEqualslx31 >= 0
-x31  - x30 - 10000 xEqualslx31 <= 0
-y31 - y30 + 10000 yEqualsly31 >= 0
-y31  - y30 - 10000 yEqualsly31 <= 0
-xEqualslx31 + yEqualsly31 <= 1
-x31 >= 1
-x31 <= 3
-y31 >= 1
-y31 <= 3
-x32 - x31 + 10000 xEqualslx32 >= 0
-x32  - x31 - 10000 xEqualslx32 <= 0
-y32 - y31 + 10000 yEqualsly32 >= 0
-y32  - y31 - 10000 yEqualsly32 <= 0
-xEqualslx32 + yEqualsly32 <= 1
-x32 >= 1
-x32 <= 3
-y32 >= 1
-y32 <= 3
-x32 - x30 - 10000 u3x2x0 < 0
-x33 - x30 - 10000 u3x2x0 < 0
-x32 - x31 - 10000 u3x2x0 < 0
-x33 - x31 - 10000 u3x2x0 < 0
-x30 - x32 - 10000 u3x0x2 < 0
-x30 - x33 - 10000 u3x0x2 < 0
-x31 - x32 - 10000 u3x0x2 < 0
-x31 - x33 - 10000 u3x0x2 < 0
-y32 - y30 - 10000 u3y2y0 < 0
-y33 - y30 - 10000 u3y2y0 < 0
-y32 - y31 - 10000 u3y2y0 < 0
-y33 - y31 - 10000 u3y2y0 < 0
-y30 - y32 - 10000 u3y0y2 < 0
-y30 - y33 - 10000 u3y0y2 < 0
-y31 - y32 - 10000 u3y0y2 < 0
-y31 - y33 - 10000 u3y0y2 < 0
-u3x2x0 + u3x0x2 + u3y2y0 + u3y0y2 <= 3
-x33 - x32 + 10000 xEqualslx33 >= 0
-x33  - x32 - 10000 xEqualslx33 <= 0
-y33 - y32 + 10000 yEqualsly33 >= 0
-y33  - y32 - 10000 yEqualsly33 <= 0
-xEqualslx33 + yEqualsly33 <= 1
-x33 >= 1
-x33 <= 3
-y33 >= 1
-y33 <= 3
-x33 - x30 - 10000 u3x3x0 < 0
-x34 - x30 - 10000 u3x3x0 < 0
-x33 - x31 - 10000 u3x3x0 < 0
-x34 - x31 - 10000 u3x3x0 < 0
-x30 - x33 - 10000 u3x0x3 < 0
-x30 - x34 - 10000 u3x0x3 < 0
-x31 - x33 - 10000 u3x0x3 < 0
-x31 - x34 - 10000 u3x0x3 < 0
-y33 - y30 - 10000 u3y3y0 < 0
-y34 - y30 - 10000 u3y3y0 < 0
-y33 - y31 - 10000 u3y3y0 < 0
-y34 - y31 - 10000 u3y3y0 < 0
-y30 - y33 - 10000 u3y0y3 < 0
-y30 - y34 - 10000 u3y0y3 < 0
-y31 - y33 - 10000 u3y0y3 < 0
-y31 - y34 - 10000 u3y0y3 < 0
-u3x3x0 + u3x0x3 + u3y3y0 + u3y0y3 <= 3
-x33 - x31 - 10000 u3x3x1 < 0
-x34 - x31 - 10000 u3x3x1 < 0
-x33 - x32 - 10000 u3x3x1 < 0
-x34 - x32 - 10000 u3x3x1 < 0
-x31 - x33 - 10000 u3x1x3 < 0
-x31 - x34 - 10000 u3x1x3 < 0
-x32 - x33 - 10000 u3x1x3 < 0
-x32 - x34 - 10000 u3x1x3 < 0
-y33 - y31 - 10000 u3y3y1 < 0
-y34 - y31 - 10000 u3y3y1 < 0
-y33 - y32 - 10000 u3y3y1 < 0
-y34 - y32 - 10000 u3y3y1 < 0
-y31 - y33 - 10000 u3y1y3 < 0
-y31 - y34 - 10000 u3y1y3 < 0
-y32 - y33 - 10000 u3y1y3 < 0
-y32 - y34 - 10000 u3y1y3 < 0
-u3x3x1 + u3x1x3 + u3y3y1 + u3y1y3 <= 3
-x34 - x33 + 10000 xEqualslx34 >= 0
-x34  - x33 - 10000 xEqualslx34 <= 0
-y34 - y33 + 10000 yEqualsly34 >= 0
-y34  - y33 - 10000 yEqualsly34 <= 0
-xEqualslx34 + yEqualsly34 <= 1
-x00 + 10000 binaryLp0j0nj1x2y1s2t2 >= 2
-x00 - 10000 binaryLp0j0nj1x2y1s2t2 <= 2
-x01 + 10000 binaryLp0j0nj1x2y1s2t2 >= 2
-x01 - 10000 binaryLp0j0nj1x2y1s2t2 <= 2
-y00 - 10000 binaryLp0j0nj1x2y1s2t2 <= 1
-y01 + 10000 binaryLp0j0nj1x2y1s2t2 >= 2
-x00 + 10000 binaryRp0j0nj1x2y1s2t2 >= 2
-x00 - 10000 binaryRp0j0nj1x2y1s2t2 <= 2
-x01 + 10000 binaryRp0j0nj1x2y1s2t2 >= 2
-x01 - 10000 binaryRp0j0nj1x2y1s2t2 <= 2
-y01 - 10000 binaryRp0j0nj1x2y1s2t2 <= 1
-y00 + 10000 binaryRp0j0nj1x2y1s2t2 >= 2
-x01 + 10000 binaryLp0j1nj2x2y1s2t2 >= 2
-x01 - 10000 binaryLp0j1nj2x2y1s2t2 <= 2
-x02 + 10000 binaryLp0j1nj2x2y1s2t2 >= 2
-x02 - 10000 binaryLp0j1nj2x2y1s2t2 <= 2
-y01 - 10000 binaryLp0j1nj2x2y1s2t2 <= 1
-y02 + 10000 binaryLp0j1nj2x2y1s2t2 >= 2
-x01 + 10000 binaryRp0j1nj2x2y1s2t2 >= 2
-x01 - 10000 binaryRp0j1nj2x2y1s2t2 <= 2
-x02 + 10000 binaryRp0j1nj2x2y1s2t2 >= 2
-x02 - 10000 binaryRp0j1nj2x2y1s2t2 <= 2
-y02 - 10000 binaryRp0j1nj2x2y1s2t2 <= 1
-y01 + 10000 binaryRp0j1nj2x2y1s2t2 >= 2
-x02 + 10000 binaryLp0j2nj3x2y1s2t2 >= 2
-x02 - 10000 binaryLp0j2nj3x2y1s2t2 <= 2
-x03 + 10000 binaryLp0j2nj3x2y1s2t2 >= 2
-x03 - 10000 binaryLp0j2nj3x2y1s2t2 <= 2
-y02 - 10000 binaryLp0j2nj3x2y1s2t2 <= 1
-y03 + 10000 binaryLp0j2nj3x2y1s2t2 >= 2
-x02 + 10000 binaryRp0j2nj3x2y1s2t2 >= 2
-x02 - 10000 binaryRp0j2nj3x2y1s2t2 <= 2
-x03 + 10000 binaryRp0j2nj3x2y1s2t2 >= 2
-x03 - 10000 binaryRp0j2nj3x2y1s2t2 <= 2
-y03 - 10000 binaryRp0j2nj3x2y1s2t2 <= 1
-y02 + 10000 binaryRp0j2nj3x2y1s2t2 >= 2
-x03 + 10000 binaryLp0j3nj4x2y1s2t2 >= 2
-x03 - 10000 binaryLp0j3nj4x2y1s2t2 <= 2
-x04 + 10000 binaryLp0j3nj4x2y1s2t2 >= 2
-x04 - 10000 binaryLp0j3nj4x2y1s2t2 <= 2
-y03 - 10000 binaryLp0j3nj4x2y1s2t2 <= 1
-y04 + 10000 binaryLp0j3nj4x2y1s2t2 >= 2
-x03 + 10000 binaryRp0j3nj4x2y1s2t2 >= 2
-x03 - 10000 binaryRp0j3nj4x2y1s2t2 <= 2
-x04 + 10000 binaryRp0j3nj4x2y1s2t2 >= 2
-x04 - 10000 binaryRp0j3nj4x2y1s2t2 <= 2
-y04 - 10000 binaryRp0j3nj4x2y1s2t2 <= 1
-y03 + 10000 binaryRp0j3nj4x2y1s2t2 >= 2
-x10 + 10000 binaryLp1j0nj1x2y1s2t2 >= 2
-x10 - 10000 binaryLp1j0nj1x2y1s2t2 <= 2
-x11 + 10000 binaryLp1j0nj1x2y1s2t2 >= 2
-x11 - 10000 binaryLp1j0nj1x2y1s2t2 <= 2
-y10 - 10000 binaryLp1j0nj1x2y1s2t2 <= 1
-y11 + 10000 binaryLp1j0nj1x2y1s2t2 >= 2
-x10 + 10000 binaryRp1j0nj1x2y1s2t2 >= 2
-x10 - 10000 binaryRp1j0nj1x2y1s2t2 <= 2
-x11 + 10000 binaryRp1j0nj1x2y1s2t2 >= 2
-x11 - 10000 binaryRp1j0nj1x2y1s2t2 <= 2
-y11 - 10000 binaryRp1j0nj1x2y1s2t2 <= 1
-y10 + 10000 binaryRp1j0nj1x2y1s2t2 >= 2
-x11 + 10000 binaryLp1j1nj2x2y1s2t2 >= 2
-x11 - 10000 binaryLp1j1nj2x2y1s2t2 <= 2
-x12 + 10000 binaryLp1j1nj2x2y1s2t2 >= 2
-x12 - 10000 binaryLp1j1nj2x2y1s2t2 <= 2
-y11 - 10000 binaryLp1j1nj2x2y1s2t2 <= 1
-y12 + 10000 binaryLp1j1nj2x2y1s2t2 >= 2
-x11 + 10000 binaryRp1j1nj2x2y1s2t2 >= 2
-x11 - 10000 binaryRp1j1nj2x2y1s2t2 <= 2
-x12 + 10000 binaryRp1j1nj2x2y1s2t2 >= 2
-x12 - 10000 binaryRp1j1nj2x2y1s2t2 <= 2
-y12 - 10000 binaryRp1j1nj2x2y1s2t2 <= 1
-y11 + 10000 binaryRp1j1nj2x2y1s2t2 >= 2
-x12 + 10000 binaryLp1j2nj3x2y1s2t2 >= 2
-x12 - 10000 binaryLp1j2nj3x2y1s2t2 <= 2
-x13 + 10000 binaryLp1j2nj3x2y1s2t2 >= 2
-x13 - 10000 binaryLp1j2nj3x2y1s2t2 <= 2
-y12 - 10000 binaryLp1j2nj3x2y1s2t2 <= 1
-y13 + 10000 binaryLp1j2nj3x2y1s2t2 >= 2
-x12 + 10000 binaryRp1j2nj3x2y1s2t2 >= 2
-x12 - 10000 binaryRp1j2nj3x2y1s2t2 <= 2
-x13 + 10000 binaryRp1j2nj3x2y1s2t2 >= 2
-x13 - 10000 binaryRp1j2nj3x2y1s2t2 <= 2
-y13 - 10000 binaryRp1j2nj3x2y1s2t2 <= 1
-y12 + 10000 binaryRp1j2nj3x2y1s2t2 >= 2
-x13 + 10000 binaryLp1j3nj4x2y1s2t2 >= 2
-x13 - 10000 binaryLp1j3nj4x2y1s2t2 <= 2
-x14 + 10000 binaryLp1j3nj4x2y1s2t2 >= 2
-x14 - 10000 binaryLp1j3nj4x2y1s2t2 <= 2
-y13 - 10000 binaryLp1j3nj4x2y1s2t2 <= 1
-y14 + 10000 binaryLp1j3nj4x2y1s2t2 >= 2
-x13 + 10000 binaryRp1j3nj4x2y1s2t2 >= 2
-x13 - 10000 binaryRp1j3nj4x2y1s2t2 <= 2
-x14 + 10000 binaryRp1j3nj4x2y1s2t2 >= 2
-x14 - 10000 binaryRp1j3nj4x2y1s2t2 <= 2
-y14 - 10000 binaryRp1j3nj4x2y1s2t2 <= 1
-y13 + 10000 binaryRp1j3nj4x2y1s2t2 >= 2
-x20 + 10000 binaryLp2j0nj1x2y1s2t2 >= 2
-x20 - 10000 binaryLp2j0nj1x2y1s2t2 <= 2
-x21 + 10000 binaryLp2j0nj1x2y1s2t2 >= 2
-x21 - 10000 binaryLp2j0nj1x2y1s2t2 <= 2
-y20 - 10000 binaryLp2j0nj1x2y1s2t2 <= 1
-y21 + 10000 binaryLp2j0nj1x2y1s2t2 >= 2
-x20 + 10000 binaryRp2j0nj1x2y1s2t2 >= 2
-x20 - 10000 binaryRp2j0nj1x2y1s2t2 <= 2
-x21 + 10000 binaryRp2j0nj1x2y1s2t2 >= 2
-x21 - 10000 binaryRp2j0nj1x2y1s2t2 <= 2
-y21 - 10000 binaryRp2j0nj1x2y1s2t2 <= 1
-y20 + 10000 binaryRp2j0nj1x2y1s2t2 >= 2
-x21 + 10000 binaryLp2j1nj2x2y1s2t2 >= 2
-x21 - 10000 binaryLp2j1nj2x2y1s2t2 <= 2
-x22 + 10000 binaryLp2j1nj2x2y1s2t2 >= 2
-x22 - 10000 binaryLp2j1nj2x2y1s2t2 <= 2
-y21 - 10000 binaryLp2j1nj2x2y1s2t2 <= 1
-y22 + 10000 binaryLp2j1nj2x2y1s2t2 >= 2
-x21 + 10000 binaryRp2j1nj2x2y1s2t2 >= 2
-x21 - 10000 binaryRp2j1nj2x2y1s2t2 <= 2
-x22 + 10000 binaryRp2j1nj2x2y1s2t2 >= 2
-x22 - 10000 binaryRp2j1nj2x2y1s2t2 <= 2
-y22 - 10000 binaryRp2j1nj2x2y1s2t2 <= 1
-y21 + 10000 binaryRp2j1nj2x2y1s2t2 >= 2
-x22 + 10000 binaryLp2j2nj3x2y1s2t2 >= 2
-x22 - 10000 binaryLp2j2nj3x2y1s2t2 <= 2
-x23 + 10000 binaryLp2j2nj3x2y1s2t2 >= 2
-x23 - 10000 binaryLp2j2nj3x2y1s2t2 <= 2
-y22 - 10000 binaryLp2j2nj3x2y1s2t2 <= 1
-y23 + 10000 binaryLp2j2nj3x2y1s2t2 >= 2
-x22 + 10000 binaryRp2j2nj3x2y1s2t2 >= 2
-x22 - 10000 binaryRp2j2nj3x2y1s2t2 <= 2
-x23 + 10000 binaryRp2j2nj3x2y1s2t2 >= 2
-x23 - 10000 binaryRp2j2nj3x2y1s2t2 <= 2
-y23 - 10000 binaryRp2j2nj3x2y1s2t2 <= 1
-y22 + 10000 binaryRp2j2nj3x2y1s2t2 >= 2
-x23 + 10000 binaryLp2j3nj4x2y1s2t2 >= 2
-x23 - 10000 binaryLp2j3nj4x2y1s2t2 <= 2
-x24 + 10000 binaryLp2j3nj4x2y1s2t2 >= 2
-x24 - 10000 binaryLp2j3nj4x2y1s2t2 <= 2
-y23 - 10000 binaryLp2j3nj4x2y1s2t2 <= 1
-y24 + 10000 binaryLp2j3nj4x2y1s2t2 >= 2
-x23 + 10000 binaryRp2j3nj4x2y1s2t2 >= 2
-x23 - 10000 binaryRp2j3nj4x2y1s2t2 <= 2
-x24 + 10000 binaryRp2j3nj4x2y1s2t2 >= 2
-x24 - 10000 binaryRp2j3nj4x2y1s2t2 <= 2
-y24 - 10000 binaryRp2j3nj4x2y1s2t2 <= 1
-y23 + 10000 binaryRp2j3nj4x2y1s2t2 >= 2
-x30 + 10000 binaryLp3j0nj1x2y1s2t2 >= 2
-x30 - 10000 binaryLp3j0nj1x2y1s2t2 <= 2
-x31 + 10000 binaryLp3j0nj1x2y1s2t2 >= 2
-x31 - 10000 binaryLp3j0nj1x2y1s2t2 <= 2
-y30 - 10000 binaryLp3j0nj1x2y1s2t2 <= 1
-y31 + 10000 binaryLp3j0nj1x2y1s2t2 >= 2
-x30 + 10000 binaryRp3j0nj1x2y1s2t2 >= 2
-x30 - 10000 binaryRp3j0nj1x2y1s2t2 <= 2
-x31 + 10000 binaryRp3j0nj1x2y1s2t2 >= 2
-x31 - 10000 binaryRp3j0nj1x2y1s2t2 <= 2
-y31 - 10000 binaryRp3j0nj1x2y1s2t2 <= 1
-y30 + 10000 binaryRp3j0nj1x2y1s2t2 >= 2
-x31 + 10000 binaryLp3j1nj2x2y1s2t2 >= 2
-x31 - 10000 binaryLp3j1nj2x2y1s2t2 <= 2
-x32 + 10000 binaryLp3j1nj2x2y1s2t2 >= 2
-x32 - 10000 binaryLp3j1nj2x2y1s2t2 <= 2
-y31 - 10000 binaryLp3j1nj2x2y1s2t2 <= 1
-y32 + 10000 binaryLp3j1nj2x2y1s2t2 >= 2
-x31 + 10000 binaryRp3j1nj2x2y1s2t2 >= 2
-x31 - 10000 binaryRp3j1nj2x2y1s2t2 <= 2
-x32 + 10000 binaryRp3j1nj2x2y1s2t2 >= 2
-x32 - 10000 binaryRp3j1nj2x2y1s2t2 <= 2
-y32 - 10000 binaryRp3j1nj2x2y1s2t2 <= 1
-y31 + 10000 binaryRp3j1nj2x2y1s2t2 >= 2
-x32 + 10000 binaryLp3j2nj3x2y1s2t2 >= 2
-x32 - 10000 binaryLp3j2nj3x2y1s2t2 <= 2
-x33 + 10000 binaryLp3j2nj3x2y1s2t2 >= 2
-x33 - 10000 binaryLp3j2nj3x2y1s2t2 <= 2
-y32 - 10000 binaryLp3j2nj3x2y1s2t2 <= 1
-y33 + 10000 binaryLp3j2nj3x2y1s2t2 >= 2
-x32 + 10000 binaryRp3j2nj3x2y1s2t2 >= 2
-x32 - 10000 binaryRp3j2nj3x2y1s2t2 <= 2
-x33 + 10000 binaryRp3j2nj3x2y1s2t2 >= 2
-x33 - 10000 binaryRp3j2nj3x2y1s2t2 <= 2
-y33 - 10000 binaryRp3j2nj3x2y1s2t2 <= 1
-y32 + 10000 binaryRp3j2nj3x2y1s2t2 >= 2
-x33 + 10000 binaryLp3j3nj4x2y1s2t2 >= 2
-x33 - 10000 binaryLp3j3nj4x2y1s2t2 <= 2
-x34 + 10000 binaryLp3j3nj4x2y1s2t2 >= 2
-x34 - 10000 binaryLp3j3nj4x2y1s2t2 <= 2
-y33 - 10000 binaryLp3j3nj4x2y1s2t2 <= 1
-y34 + 10000 binaryLp3j3nj4x2y1s2t2 >= 2
-x33 + 10000 binaryRp3j3nj4x2y1s2t2 >= 2
-x33 - 10000 binaryRp3j3nj4x2y1s2t2 <= 2
-x34 + 10000 binaryRp3j3nj4x2y1s2t2 >= 2
-x34 - 10000 binaryRp3j3nj4x2y1s2t2 <= 2
-y34 - 10000 binaryRp3j3nj4x2y1s2t2 <= 1
-y33 + 10000 binaryRp3j3nj4x2y1s2t2 >= 2
- + binaryLp0j0nj1x2y1s2t2 + binaryRp0j0nj1x2y1s2t2 + binaryLp0j1nj2x2y1s2t2 + binaryRp0j1nj2x2y1s2t2 + binaryLp0j2nj3x2y1s2t2 + binaryRp0j2nj3x2y1s2t2 + binaryLp0j3nj4x2y1s2t2 + binaryRp0j3nj4x2y1s2t2 + binaryLp1j0nj1x2y1s2t2 + binaryRp1j0nj1x2y1s2t2 + binaryLp1j1nj2x2y1s2t2 + binaryRp1j1nj2x2y1s2t2 + binaryLp1j2nj3x2y1s2t2 + binaryRp1j2nj3x2y1s2t2 + binaryLp1j3nj4x2y1s2t2 + binaryRp1j3nj4x2y1s2t2 + binaryLp2j0nj1x2y1s2t2 + binaryRp2j0nj1x2y1s2t2 + binaryLp2j1nj2x2y1s2t2 + binaryRp2j1nj2x2y1s2t2 + binaryLp2j2nj3x2y1s2t2 + binaryRp2j2nj3x2y1s2t2 + binaryLp2j3nj4x2y1s2t2 + binaryRp2j3nj4x2y1s2t2 + binaryLp3j0nj1x2y1s2t2 + binaryRp3j0nj1x2y1s2t2 + binaryLp3j1nj2x2y1s2t2 + binaryRp3j1nj2x2y1s2t2 + binaryLp3j2nj3x2y1s2t2 + binaryRp3j2nj3x2y1s2t2 + binaryLp3j3nj4x2y1s2t2 + binaryRp3j3nj4x2y1s2t2 <= 31
-y00 + 10000 binaryUp0j0nj1x2y3s3t3 >= 3
-y00 - 10000 binaryUp0j0nj1x2y3s3t3 <=  3
-y01 + 10000 binaryUp0j0nj1x2y3s3t3 >= 3
-y01 - 10000 binaryUp0j0nj1x2y3s3t3 <= 3
-x00 - 10000 binaryUp0j0nj1x2y3s3t3 <= 2
-x01 + 10000 binaryUp0j0nj1x2y3s3t3 >= 3
-y00 + 10000 binaryDp0j0nj1x2y3s3t3 >= 3
-y00 - 10000 binaryDp0j0nj1x2y3s3t3 <= 3
-y01 + 10000 binaryDp0j0nj1x2y3s3t3 >= 3
-y01 - 10000 binaryDp0j0nj1x2y3s3t3 <= 3
-x01 - 10000 binaryDp0j0nj1x2y3s3t3 <= 2
-x00 + 10000 binaryDp0j0nj1x2y3s3t3 >= 3
-y01 + 10000 binaryUp0j1nj2x2y3s3t3 >= 3
-y01 - 10000 binaryUp0j1nj2x2y3s3t3 <=  3
-y02 + 10000 binaryUp0j1nj2x2y3s3t3 >= 3
-y02 - 10000 binaryUp0j1nj2x2y3s3t3 <= 3
-x01 - 10000 binaryUp0j1nj2x2y3s3t3 <= 2
-x02 + 10000 binaryUp0j1nj2x2y3s3t3 >= 3
-y01 + 10000 binaryDp0j1nj2x2y3s3t3 >= 3
-y01 - 10000 binaryDp0j1nj2x2y3s3t3 <= 3
-y02 + 10000 binaryDp0j1nj2x2y3s3t3 >= 3
-y02 - 10000 binaryDp0j1nj2x2y3s3t3 <= 3
-x02 - 10000 binaryDp0j1nj2x2y3s3t3 <= 2
-x01 + 10000 binaryDp0j1nj2x2y3s3t3 >= 3
-y02 + 10000 binaryUp0j2nj3x2y3s3t3 >= 3
-y02 - 10000 binaryUp0j2nj3x2y3s3t3 <=  3
-y03 + 10000 binaryUp0j2nj3x2y3s3t3 >= 3
-y03 - 10000 binaryUp0j2nj3x2y3s3t3 <= 3
-x02 - 10000 binaryUp0j2nj3x2y3s3t3 <= 2
-x03 + 10000 binaryUp0j2nj3x2y3s3t3 >= 3
-y02 + 10000 binaryDp0j2nj3x2y3s3t3 >= 3
-y02 - 10000 binaryDp0j2nj3x2y3s3t3 <= 3
-y03 + 10000 binaryDp0j2nj3x2y3s3t3 >= 3
-y03 - 10000 binaryDp0j2nj3x2y3s3t3 <= 3
-x03 - 10000 binaryDp0j2nj3x2y3s3t3 <= 2
-x02 + 10000 binaryDp0j2nj3x2y3s3t3 >= 3
-y03 + 10000 binaryUp0j3nj4x2y3s3t3 >= 3
-y03 - 10000 binaryUp0j3nj4x2y3s3t3 <=  3
-y04 + 10000 binaryUp0j3nj4x2y3s3t3 >= 3
-y04 - 10000 binaryUp0j3nj4x2y3s3t3 <= 3
-x03 - 10000 binaryUp0j3nj4x2y3s3t3 <= 2
-x04 + 10000 binaryUp0j3nj4x2y3s3t3 >= 3
-y03 + 10000 binaryDp0j3nj4x2y3s3t3 >= 3
-y03 - 10000 binaryDp0j3nj4x2y3s3t3 <= 3
-y04 + 10000 binaryDp0j3nj4x2y3s3t3 >= 3
-y04 - 10000 binaryDp0j3nj4x2y3s3t3 <= 3
-x04 - 10000 binaryDp0j3nj4x2y3s3t3 <= 2
-x03 + 10000 binaryDp0j3nj4x2y3s3t3 >= 3
-y10 + 10000 binaryUp1j0nj1x2y3s3t3 >= 3
-y10 - 10000 binaryUp1j0nj1x2y3s3t3 <=  3
-y11 + 10000 binaryUp1j0nj1x2y3s3t3 >= 3
-y11 - 10000 binaryUp1j0nj1x2y3s3t3 <= 3
-x10 - 10000 binaryUp1j0nj1x2y3s3t3 <= 2
-x11 + 10000 binaryUp1j0nj1x2y3s3t3 >= 3
-y10 + 10000 binaryDp1j0nj1x2y3s3t3 >= 3
-y10 - 10000 binaryDp1j0nj1x2y3s3t3 <= 3
-y11 + 10000 binaryDp1j0nj1x2y3s3t3 >= 3
-y11 - 10000 binaryDp1j0nj1x2y3s3t3 <= 3
-x11 - 10000 binaryDp1j0nj1x2y3s3t3 <= 2
-x10 + 10000 binaryDp1j0nj1x2y3s3t3 >= 3
-y11 + 10000 binaryUp1j1nj2x2y3s3t3 >= 3
-y11 - 10000 binaryUp1j1nj2x2y3s3t3 <=  3
-y12 + 10000 binaryUp1j1nj2x2y3s3t3 >= 3
-y12 - 10000 binaryUp1j1nj2x2y3s3t3 <= 3
-x11 - 10000 binaryUp1j1nj2x2y3s3t3 <= 2
-x12 + 10000 binaryUp1j1nj2x2y3s3t3 >= 3
-y11 + 10000 binaryDp1j1nj2x2y3s3t3 >= 3
-y11 - 10000 binaryDp1j1nj2x2y3s3t3 <= 3
-y12 + 10000 binaryDp1j1nj2x2y3s3t3 >= 3
-y12 - 10000 binaryDp1j1nj2x2y3s3t3 <= 3
-x12 - 10000 binaryDp1j1nj2x2y3s3t3 <= 2
-x11 + 10000 binaryDp1j1nj2x2y3s3t3 >= 3
-y12 + 10000 binaryUp1j2nj3x2y3s3t3 >= 3
-y12 - 10000 binaryUp1j2nj3x2y3s3t3 <=  3
-y13 + 10000 binaryUp1j2nj3x2y3s3t3 >= 3
-y13 - 10000 binaryUp1j2nj3x2y3s3t3 <= 3
-x12 - 10000 binaryUp1j2nj3x2y3s3t3 <= 2
-x13 + 10000 binaryUp1j2nj3x2y3s3t3 >= 3
-y12 + 10000 binaryDp1j2nj3x2y3s3t3 >= 3
-y12 - 10000 binaryDp1j2nj3x2y3s3t3 <= 3
-y13 + 10000 binaryDp1j2nj3x2y3s3t3 >= 3
-y13 - 10000 binaryDp1j2nj3x2y3s3t3 <= 3
-x13 - 10000 binaryDp1j2nj3x2y3s3t3 <= 2
-x12 + 10000 binaryDp1j2nj3x2y3s3t3 >= 3
-y13 + 10000 binaryUp1j3nj4x2y3s3t3 >= 3
-y13 - 10000 binaryUp1j3nj4x2y3s3t3 <=  3
-y14 + 10000 binaryUp1j3nj4x2y3s3t3 >= 3
-y14 - 10000 binaryUp1j3nj4x2y3s3t3 <= 3
-x13 - 10000 binaryUp1j3nj4x2y3s3t3 <= 2
-x14 + 10000 binaryUp1j3nj4x2y3s3t3 >= 3
-y13 + 10000 binaryDp1j3nj4x2y3s3t3 >= 3
-y13 - 10000 binaryDp1j3nj4x2y3s3t3 <= 3
-y14 + 10000 binaryDp1j3nj4x2y3s3t3 >= 3
-y14 - 10000 binaryDp1j3nj4x2y3s3t3 <= 3
-x14 - 10000 binaryDp1j3nj4x2y3s3t3 <= 2
-x13 + 10000 binaryDp1j3nj4x2y3s3t3 >= 3
-y20 + 10000 binaryUp2j0nj1x2y3s3t3 >= 3
-y20 - 10000 binaryUp2j0nj1x2y3s3t3 <=  3
-y21 + 10000 binaryUp2j0nj1x2y3s3t3 >= 3
-y21 - 10000 binaryUp2j0nj1x2y3s3t3 <= 3
-x20 - 10000 binaryUp2j0nj1x2y3s3t3 <= 2
-x21 + 10000 binaryUp2j0nj1x2y3s3t3 >= 3
-y20 + 10000 binaryDp2j0nj1x2y3s3t3 >= 3
-y20 - 10000 binaryDp2j0nj1x2y3s3t3 <= 3
-y21 + 10000 binaryDp2j0nj1x2y3s3t3 >= 3
-y21 - 10000 binaryDp2j0nj1x2y3s3t3 <= 3
-x21 - 10000 binaryDp2j0nj1x2y3s3t3 <= 2
-x20 + 10000 binaryDp2j0nj1x2y3s3t3 >= 3
-y21 + 10000 binaryUp2j1nj2x2y3s3t3 >= 3
-y21 - 10000 binaryUp2j1nj2x2y3s3t3 <=  3
-y22 + 10000 binaryUp2j1nj2x2y3s3t3 >= 3
-y22 - 10000 binaryUp2j1nj2x2y3s3t3 <= 3
-x21 - 10000 binaryUp2j1nj2x2y3s3t3 <= 2
-x22 + 10000 binaryUp2j1nj2x2y3s3t3 >= 3
-y21 + 10000 binaryDp2j1nj2x2y3s3t3 >= 3
-y21 - 10000 binaryDp2j1nj2x2y3s3t3 <= 3
-y22 + 10000 binaryDp2j1nj2x2y3s3t3 >= 3
-y22 - 10000 binaryDp2j1nj2x2y3s3t3 <= 3
-x22 - 10000 binaryDp2j1nj2x2y3s3t3 <= 2
-x21 + 10000 binaryDp2j1nj2x2y3s3t3 >= 3
-y22 + 10000 binaryUp2j2nj3x2y3s3t3 >= 3
-y22 - 10000 binaryUp2j2nj3x2y3s3t3 <=  3
-y23 + 10000 binaryUp2j2nj3x2y3s3t3 >= 3
-y23 - 10000 binaryUp2j2nj3x2y3s3t3 <= 3
-x22 - 10000 binaryUp2j2nj3x2y3s3t3 <= 2
-x23 + 10000 binaryUp2j2nj3x2y3s3t3 >= 3
-y22 + 10000 binaryDp2j2nj3x2y3s3t3 >= 3
-y22 - 10000 binaryDp2j2nj3x2y3s3t3 <= 3
-y23 + 10000 binaryDp2j2nj3x2y3s3t3 >= 3
-y23 - 10000 binaryDp2j2nj3x2y3s3t3 <= 3
-x23 - 10000 binaryDp2j2nj3x2y3s3t3 <= 2
-x22 + 10000 binaryDp2j2nj3x2y3s3t3 >= 3
-y23 + 10000 binaryUp2j3nj4x2y3s3t3 >= 3
-y23 - 10000 binaryUp2j3nj4x2y3s3t3 <=  3
-y24 + 10000 binaryUp2j3nj4x2y3s3t3 >= 3
-y24 - 10000 binaryUp2j3nj4x2y3s3t3 <= 3
-x23 - 10000 binaryUp2j3nj4x2y3s3t3 <= 2
-x24 + 10000 binaryUp2j3nj4x2y3s3t3 >= 3
-y23 + 10000 binaryDp2j3nj4x2y3s3t3 >= 3
-y23 - 10000 binaryDp2j3nj4x2y3s3t3 <= 3
-y24 + 10000 binaryDp2j3nj4x2y3s3t3 >= 3
-y24 - 10000 binaryDp2j3nj4x2y3s3t3 <= 3
-x24 - 10000 binaryDp2j3nj4x2y3s3t3 <= 2
-x23 + 10000 binaryDp2j3nj4x2y3s3t3 >= 3
-y30 + 10000 binaryUp3j0nj1x2y3s3t3 >= 3
-y30 - 10000 binaryUp3j0nj1x2y3s3t3 <=  3
-y31 + 10000 binaryUp3j0nj1x2y3s3t3 >= 3
-y31 - 10000 binaryUp3j0nj1x2y3s3t3 <= 3
-x30 - 10000 binaryUp3j0nj1x2y3s3t3 <= 2
-x31 + 10000 binaryUp3j0nj1x2y3s3t3 >= 3
-y30 + 10000 binaryDp3j0nj1x2y3s3t3 >= 3
-y30 - 10000 binaryDp3j0nj1x2y3s3t3 <= 3
-y31 + 10000 binaryDp3j0nj1x2y3s3t3 >= 3
-y31 - 10000 binaryDp3j0nj1x2y3s3t3 <= 3
-x31 - 10000 binaryDp3j0nj1x2y3s3t3 <= 2
-x30 + 10000 binaryDp3j0nj1x2y3s3t3 >= 3
-y31 + 10000 binaryUp3j1nj2x2y3s3t3 >= 3
-y31 - 10000 binaryUp3j1nj2x2y3s3t3 <=  3
-y32 + 10000 binaryUp3j1nj2x2y3s3t3 >= 3
-y32 - 10000 binaryUp3j1nj2x2y3s3t3 <= 3
-x31 - 10000 binaryUp3j1nj2x2y3s3t3 <= 2
-x32 + 10000 binaryUp3j1nj2x2y3s3t3 >= 3
-y31 + 10000 binaryDp3j1nj2x2y3s3t3 >= 3
-y31 - 10000 binaryDp3j1nj2x2y3s3t3 <= 3
-y32 + 10000 binaryDp3j1nj2x2y3s3t3 >= 3
-y32 - 10000 binaryDp3j1nj2x2y3s3t3 <= 3
-x32 - 10000 binaryDp3j1nj2x2y3s3t3 <= 2
-x31 + 10000 binaryDp3j1nj2x2y3s3t3 >= 3
-y32 + 10000 binaryUp3j2nj3x2y3s3t3 >= 3
-y32 - 10000 binaryUp3j2nj3x2y3s3t3 <=  3
-y33 + 10000 binaryUp3j2nj3x2y3s3t3 >= 3
-y33 - 10000 binaryUp3j2nj3x2y3s3t3 <= 3
-x32 - 10000 binaryUp3j2nj3x2y3s3t3 <= 2
-x33 + 10000 binaryUp3j2nj3x2y3s3t3 >= 3
-y32 + 10000 binaryDp3j2nj3x2y3s3t3 >= 3
-y32 - 10000 binaryDp3j2nj3x2y3s3t3 <= 3
-y33 + 10000 binaryDp3j2nj3x2y3s3t3 >= 3
-y33 - 10000 binaryDp3j2nj3x2y3s3t3 <= 3
-x33 - 10000 binaryDp3j2nj3x2y3s3t3 <= 2
-x32 + 10000 binaryDp3j2nj3x2y3s3t3 >= 3
-y33 + 10000 binaryUp3j3nj4x2y3s3t3 >= 3
-y33 - 10000 binaryUp3j3nj4x2y3s3t3 <=  3
-y34 + 10000 binaryUp3j3nj4x2y3s3t3 >= 3
-y34 - 10000 binaryUp3j3nj4x2y3s3t3 <= 3
-x33 - 10000 binaryUp3j3nj4x2y3s3t3 <= 2
-x34 + 10000 binaryUp3j3nj4x2y3s3t3 >= 3
-y33 + 10000 binaryDp3j3nj4x2y3s3t3 >= 3
-y33 - 10000 binaryDp3j3nj4x2y3s3t3 <= 3
-y34 + 10000 binaryDp3j3nj4x2y3s3t3 >= 3
-y34 - 10000 binaryDp3j3nj4x2y3s3t3 <= 3
-x34 - 10000 binaryDp3j3nj4x2y3s3t3 <= 2
-x33 + 10000 binaryDp3j3nj4x2y3s3t3 >= 3
- + binaryUp0j0nj1x2y3s3t3 + binaryDp0j0nj1x2y3s3t3 + binaryUp0j1nj2x2y3s3t3 + binaryDp0j1nj2x2y3s3t3 + binaryUp0j2nj3x2y3s3t3 + binaryDp0j2nj3x2y3s3t3 + binaryUp0j3nj4x2y3s3t3 + binaryDp0j3nj4x2y3s3t3 + binaryUp1j0nj1x2y3s3t3 + binaryDp1j0nj1x2y3s3t3 + binaryUp1j1nj2x2y3s3t3 + binaryDp1j1nj2x2y3s3t3 + binaryUp1j2nj3x2y3s3t3 + binaryDp1j2nj3x2y3s3t3 + binaryUp1j3nj4x2y3s3t3 + binaryDp1j3nj4x2y3s3t3 + binaryUp2j0nj1x2y3s3t3 + binaryDp2j0nj1x2y3s3t3 + binaryUp2j1nj2x2y3s3t3 + binaryDp2j1nj2x2y3s3t3 + binaryUp2j2nj3x2y3s3t3 + binaryDp2j2nj3x2y3s3t3 + binaryUp2j3nj4x2y3s3t3 + binaryDp2j3nj4x2y3s3t3 + binaryUp3j0nj1x2y3s3t3 + binaryDp3j0nj1x2y3s3t3 + binaryUp3j1nj2x2y3s3t3 + binaryDp3j1nj2x2y3s3t3 + binaryUp3j2nj3x2y3s3t3 + binaryDp3j2nj3x2y3s3t3 + binaryUp3j3nj4x2y3s3t3 + binaryDp3j3nj4x2y3s3t3 <= 31
-y00 + 10000 binaryUp0j0nj1x2y2s3t2 >= 2
-y00 - 10000 binaryUp0j0nj1x2y2s3t2 <=  2
-y01 + 10000 binaryUp0j0nj1x2y2s3t2 >= 2
-y01 - 10000 binaryUp0j0nj1x2y2s3t2 <= 2
-x00 - 10000 binaryUp0j0nj1x2y2s3t2 <= 2
-x01 + 10000 binaryUp0j0nj1x2y2s3t2 >= 3
-y00 + 10000 binaryDp0j0nj1x2y2s3t2 >= 2
-y00 - 10000 binaryDp0j0nj1x2y2s3t2 <= 2
-y01 + 10000 binaryDp0j0nj1x2y2s3t2 >= 2
-y01 - 10000 binaryDp0j0nj1x2y2s3t2 <= 2
-x01 - 10000 binaryDp0j0nj1x2y2s3t2 <= 2
-x00 + 10000 binaryDp0j0nj1x2y2s3t2 >= 3
-y01 + 10000 binaryUp0j1nj2x2y2s3t2 >= 2
-y01 - 10000 binaryUp0j1nj2x2y2s3t2 <=  2
-y02 + 10000 binaryUp0j1nj2x2y2s3t2 >= 2
-y02 - 10000 binaryUp0j1nj2x2y2s3t2 <= 2
-x01 - 10000 binaryUp0j1nj2x2y2s3t2 <= 2
-x02 + 10000 binaryUp0j1nj2x2y2s3t2 >= 3
-y01 + 10000 binaryDp0j1nj2x2y2s3t2 >= 2
-y01 - 10000 binaryDp0j1nj2x2y2s3t2 <= 2
-y02 + 10000 binaryDp0j1nj2x2y2s3t2 >= 2
-y02 - 10000 binaryDp0j1nj2x2y2s3t2 <= 2
-x02 - 10000 binaryDp0j1nj2x2y2s3t2 <= 2
-x01 + 10000 binaryDp0j1nj2x2y2s3t2 >= 3
-y02 + 10000 binaryUp0j2nj3x2y2s3t2 >= 2
-y02 - 10000 binaryUp0j2nj3x2y2s3t2 <=  2
-y03 + 10000 binaryUp0j2nj3x2y2s3t2 >= 2
-y03 - 10000 binaryUp0j2nj3x2y2s3t2 <= 2
-x02 - 10000 binaryUp0j2nj3x2y2s3t2 <= 2
-x03 + 10000 binaryUp0j2nj3x2y2s3t2 >= 3
-y02 + 10000 binaryDp0j2nj3x2y2s3t2 >= 2
-y02 - 10000 binaryDp0j2nj3x2y2s3t2 <= 2
-y03 + 10000 binaryDp0j2nj3x2y2s3t2 >= 2
-y03 - 10000 binaryDp0j2nj3x2y2s3t2 <= 2
-x03 - 10000 binaryDp0j2nj3x2y2s3t2 <= 2
-x02 + 10000 binaryDp0j2nj3x2y2s3t2 >= 3
-y03 + 10000 binaryUp0j3nj4x2y2s3t2 >= 2
-y03 - 10000 binaryUp0j3nj4x2y2s3t2 <=  2
-y04 + 10000 binaryUp0j3nj4x2y2s3t2 >= 2
-y04 - 10000 binaryUp0j3nj4x2y2s3t2 <= 2
-x03 - 10000 binaryUp0j3nj4x2y2s3t2 <= 2
-x04 + 10000 binaryUp0j3nj4x2y2s3t2 >= 3
-y03 + 10000 binaryDp0j3nj4x2y2s3t2 >= 2
-y03 - 10000 binaryDp0j3nj4x2y2s3t2 <= 2
-y04 + 10000 binaryDp0j3nj4x2y2s3t2 >= 2
-y04 - 10000 binaryDp0j3nj4x2y2s3t2 <= 2
-x04 - 10000 binaryDp0j3nj4x2y2s3t2 <= 2
-x03 + 10000 binaryDp0j3nj4x2y2s3t2 >= 3
-y10 + 10000 binaryUp1j0nj1x2y2s3t2 >= 2
-y10 - 10000 binaryUp1j0nj1x2y2s3t2 <=  2
-y11 + 10000 binaryUp1j0nj1x2y2s3t2 >= 2
-y11 - 10000 binaryUp1j0nj1x2y2s3t2 <= 2
-x10 - 10000 binaryUp1j0nj1x2y2s3t2 <= 2
-x11 + 10000 binaryUp1j0nj1x2y2s3t2 >= 3
-y10 + 10000 binaryDp1j0nj1x2y2s3t2 >= 2
-y10 - 10000 binaryDp1j0nj1x2y2s3t2 <= 2
-y11 + 10000 binaryDp1j0nj1x2y2s3t2 >= 2
-y11 - 10000 binaryDp1j0nj1x2y2s3t2 <= 2
-x11 - 10000 binaryDp1j0nj1x2y2s3t2 <= 2
-x10 + 10000 binaryDp1j0nj1x2y2s3t2 >= 3
-y11 + 10000 binaryUp1j1nj2x2y2s3t2 >= 2
-y11 - 10000 binaryUp1j1nj2x2y2s3t2 <=  2
-y12 + 10000 binaryUp1j1nj2x2y2s3t2 >= 2
-y12 - 10000 binaryUp1j1nj2x2y2s3t2 <= 2
-x11 - 10000 binaryUp1j1nj2x2y2s3t2 <= 2
-x12 + 10000 binaryUp1j1nj2x2y2s3t2 >= 3
-y11 + 10000 binaryDp1j1nj2x2y2s3t2 >= 2
-y11 - 10000 binaryDp1j1nj2x2y2s3t2 <= 2
-y12 + 10000 binaryDp1j1nj2x2y2s3t2 >= 2
-y12 - 10000 binaryDp1j1nj2x2y2s3t2 <= 2
-x12 - 10000 binaryDp1j1nj2x2y2s3t2 <= 2
-x11 + 10000 binaryDp1j1nj2x2y2s3t2 >= 3
-y12 + 10000 binaryUp1j2nj3x2y2s3t2 >= 2
-y12 - 10000 binaryUp1j2nj3x2y2s3t2 <=  2
-y13 + 10000 binaryUp1j2nj3x2y2s3t2 >= 2
-y13 - 10000 binaryUp1j2nj3x2y2s3t2 <= 2
-x12 - 10000 binaryUp1j2nj3x2y2s3t2 <= 2
-x13 + 10000 binaryUp1j2nj3x2y2s3t2 >= 3
-y12 + 10000 binaryDp1j2nj3x2y2s3t2 >= 2
-y12 - 10000 binaryDp1j2nj3x2y2s3t2 <= 2
-y13 + 10000 binaryDp1j2nj3x2y2s3t2 >= 2
-y13 - 10000 binaryDp1j2nj3x2y2s3t2 <= 2
-x13 - 10000 binaryDp1j2nj3x2y2s3t2 <= 2
-x12 + 10000 binaryDp1j2nj3x2y2s3t2 >= 3
-y13 + 10000 binaryUp1j3nj4x2y2s3t2 >= 2
-y13 - 10000 binaryUp1j3nj4x2y2s3t2 <=  2
-y14 + 10000 binaryUp1j3nj4x2y2s3t2 >= 2
-y14 - 10000 binaryUp1j3nj4x2y2s3t2 <= 2
-x13 - 10000 binaryUp1j3nj4x2y2s3t2 <= 2
-x14 + 10000 binaryUp1j3nj4x2y2s3t2 >= 3
-y13 + 10000 binaryDp1j3nj4x2y2s3t2 >= 2
-y13 - 10000 binaryDp1j3nj4x2y2s3t2 <= 2
-y14 + 10000 binaryDp1j3nj4x2y2s3t2 >= 2
-y14 - 10000 binaryDp1j3nj4x2y2s3t2 <= 2
-x14 - 10000 binaryDp1j3nj4x2y2s3t2 <= 2
-x13 + 10000 binaryDp1j3nj4x2y2s3t2 >= 3
-y20 + 10000 binaryUp2j0nj1x2y2s3t2 >= 2
-y20 - 10000 binaryUp2j0nj1x2y2s3t2 <=  2
-y21 + 10000 binaryUp2j0nj1x2y2s3t2 >= 2
-y21 - 10000 binaryUp2j0nj1x2y2s3t2 <= 2
-x20 - 10000 binaryUp2j0nj1x2y2s3t2 <= 2
-x21 + 10000 binaryUp2j0nj1x2y2s3t2 >= 3
-y20 + 10000 binaryDp2j0nj1x2y2s3t2 >= 2
-y20 - 10000 binaryDp2j0nj1x2y2s3t2 <= 2
-y21 + 10000 binaryDp2j0nj1x2y2s3t2 >= 2
-y21 - 10000 binaryDp2j0nj1x2y2s3t2 <= 2
-x21 - 10000 binaryDp2j0nj1x2y2s3t2 <= 2
-x20 + 10000 binaryDp2j0nj1x2y2s3t2 >= 3
-y21 + 10000 binaryUp2j1nj2x2y2s3t2 >= 2
-y21 - 10000 binaryUp2j1nj2x2y2s3t2 <=  2
-y22 + 10000 binaryUp2j1nj2x2y2s3t2 >= 2
-y22 - 10000 binaryUp2j1nj2x2y2s3t2 <= 2
-x21 - 10000 binaryUp2j1nj2x2y2s3t2 <= 2
-x22 + 10000 binaryUp2j1nj2x2y2s3t2 >= 3
-y21 + 10000 binaryDp2j1nj2x2y2s3t2 >= 2
-y21 - 10000 binaryDp2j1nj2x2y2s3t2 <= 2
-y22 + 10000 binaryDp2j1nj2x2y2s3t2 >= 2
-y22 - 10000 binaryDp2j1nj2x2y2s3t2 <= 2
-x22 - 10000 binaryDp2j1nj2x2y2s3t2 <= 2
-x21 + 10000 binaryDp2j1nj2x2y2s3t2 >= 3
-y22 + 10000 binaryUp2j2nj3x2y2s3t2 >= 2
-y22 - 10000 binaryUp2j2nj3x2y2s3t2 <=  2
-y23 + 10000 binaryUp2j2nj3x2y2s3t2 >= 2
-y23 - 10000 binaryUp2j2nj3x2y2s3t2 <= 2
-x22 - 10000 binaryUp2j2nj3x2y2s3t2 <= 2
-x23 + 10000 binaryUp2j2nj3x2y2s3t2 >= 3
-y22 + 10000 binaryDp2j2nj3x2y2s3t2 >= 2
-y22 - 10000 binaryDp2j2nj3x2y2s3t2 <= 2
-y23 + 10000 binaryDp2j2nj3x2y2s3t2 >= 2
-y23 - 10000 binaryDp2j2nj3x2y2s3t2 <= 2
-x23 - 10000 binaryDp2j2nj3x2y2s3t2 <= 2
-x22 + 10000 binaryDp2j2nj3x2y2s3t2 >= 3
-y23 + 10000 binaryUp2j3nj4x2y2s3t2 >= 2
-y23 - 10000 binaryUp2j3nj4x2y2s3t2 <=  2
-y24 + 10000 binaryUp2j3nj4x2y2s3t2 >= 2
-y24 - 10000 binaryUp2j3nj4x2y2s3t2 <= 2
-x23 - 10000 binaryUp2j3nj4x2y2s3t2 <= 2
-x24 + 10000 binaryUp2j3nj4x2y2s3t2 >= 3
-y23 + 10000 binaryDp2j3nj4x2y2s3t2 >= 2
-y23 - 10000 binaryDp2j3nj4x2y2s3t2 <= 2
-y24 + 10000 binaryDp2j3nj4x2y2s3t2 >= 2
-y24 - 10000 binaryDp2j3nj4x2y2s3t2 <= 2
-x24 - 10000 binaryDp2j3nj4x2y2s3t2 <= 2
-x23 + 10000 binaryDp2j3nj4x2y2s3t2 >= 3
-y30 + 10000 binaryUp3j0nj1x2y2s3t2 >= 2
-y30 - 10000 binaryUp3j0nj1x2y2s3t2 <=  2
-y31 + 10000 binaryUp3j0nj1x2y2s3t2 >= 2
-y31 - 10000 binaryUp3j0nj1x2y2s3t2 <= 2
-x30 - 10000 binaryUp3j0nj1x2y2s3t2 <= 2
-x31 + 10000 binaryUp3j0nj1x2y2s3t2 >= 3
-y30 + 10000 binaryDp3j0nj1x2y2s3t2 >= 2
-y30 - 10000 binaryDp3j0nj1x2y2s3t2 <= 2
-y31 + 10000 binaryDp3j0nj1x2y2s3t2 >= 2
-y31 - 10000 binaryDp3j0nj1x2y2s3t2 <= 2
-x31 - 10000 binaryDp3j0nj1x2y2s3t2 <= 2
-x30 + 10000 binaryDp3j0nj1x2y2s3t2 >= 3
-y31 + 10000 binaryUp3j1nj2x2y2s3t2 >= 2
-y31 - 10000 binaryUp3j1nj2x2y2s3t2 <=  2
-y32 + 10000 binaryUp3j1nj2x2y2s3t2 >= 2
-y32 - 10000 binaryUp3j1nj2x2y2s3t2 <= 2
-x31 - 10000 binaryUp3j1nj2x2y2s3t2 <= 2
-x32 + 10000 binaryUp3j1nj2x2y2s3t2 >= 3
-y31 + 10000 binaryDp3j1nj2x2y2s3t2 >= 2
-y31 - 10000 binaryDp3j1nj2x2y2s3t2 <= 2
-y32 + 10000 binaryDp3j1nj2x2y2s3t2 >= 2
-y32 - 10000 binaryDp3j1nj2x2y2s3t2 <= 2
-x32 - 10000 binaryDp3j1nj2x2y2s3t2 <= 2
-x31 + 10000 binaryDp3j1nj2x2y2s3t2 >= 3
-y32 + 10000 binaryUp3j2nj3x2y2s3t2 >= 2
-y32 - 10000 binaryUp3j2nj3x2y2s3t2 <=  2
-y33 + 10000 binaryUp3j2nj3x2y2s3t2 >= 2
-y33 - 10000 binaryUp3j2nj3x2y2s3t2 <= 2
-x32 - 10000 binaryUp3j2nj3x2y2s3t2 <= 2
-x33 + 10000 binaryUp3j2nj3x2y2s3t2 >= 3
-y32 + 10000 binaryDp3j2nj3x2y2s3t2 >= 2
-y32 - 10000 binaryDp3j2nj3x2y2s3t2 <= 2
-y33 + 10000 binaryDp3j2nj3x2y2s3t2 >= 2
-y33 - 10000 binaryDp3j2nj3x2y2s3t2 <= 2
-x33 - 10000 binaryDp3j2nj3x2y2s3t2 <= 2
-x32 + 10000 binaryDp3j2nj3x2y2s3t2 >= 3
-y33 + 10000 binaryUp3j3nj4x2y2s3t2 >= 2
-y33 - 10000 binaryUp3j3nj4x2y2s3t2 <=  2
-y34 + 10000 binaryUp3j3nj4x2y2s3t2 >= 2
-y34 - 10000 binaryUp3j3nj4x2y2s3t2 <= 2
-x33 - 10000 binaryUp3j3nj4x2y2s3t2 <= 2
-x34 + 10000 binaryUp3j3nj4x2y2s3t2 >= 3
-y33 + 10000 binaryDp3j3nj4x2y2s3t2 >= 2
-y33 - 10000 binaryDp3j3nj4x2y2s3t2 <= 2
-y34 + 10000 binaryDp3j3nj4x2y2s3t2 >= 2
-y34 - 10000 binaryDp3j3nj4x2y2s3t2 <= 2
-x34 - 10000 binaryDp3j3nj4x2y2s3t2 <= 2
-x33 + 10000 binaryDp3j3nj4x2y2s3t2 >= 3
- + binaryUp0j0nj1x2y2s3t2 + binaryDp0j0nj1x2y2s3t2 + binaryUp0j1nj2x2y2s3t2 + binaryDp0j1nj2x2y2s3t2 + binaryUp0j2nj3x2y2s3t2 + binaryDp0j2nj3x2y2s3t2 + binaryUp0j3nj4x2y2s3t2 + binaryDp0j3nj4x2y2s3t2 + binaryUp1j0nj1x2y2s3t2 + binaryDp1j0nj1x2y2s3t2 + binaryUp1j1nj2x2y2s3t2 + binaryDp1j1nj2x2y2s3t2 + binaryUp1j2nj3x2y2s3t2 + binaryDp1j2nj3x2y2s3t2 + binaryUp1j3nj4x2y2s3t2 + binaryDp1j3nj4x2y2s3t2 + binaryUp2j0nj1x2y2s3t2 + binaryDp2j0nj1x2y2s3t2 + binaryUp2j1nj2x2y2s3t2 + binaryDp2j1nj2x2y2s3t2 + binaryUp2j2nj3x2y2s3t2 + binaryDp2j2nj3x2y2s3t2 + binaryUp2j3nj4x2y2s3t2 + binaryDp2j3nj4x2y2s3t2 + binaryUp3j0nj1x2y2s3t2 + binaryDp3j0nj1x2y2s3t2 + binaryUp3j1nj2x2y2s3t2 + binaryDp3j1nj2x2y2s3t2 + binaryUp3j2nj3x2y2s3t2 + binaryDp3j2nj3x2y2s3t2 + binaryUp3j3nj4x2y2s3t2 + binaryDp3j3nj4x2y2s3t2 <= 31
-x00 + 10000 binaryLp0j0nj1x3y1s3t2 >= 3
-x00 - 10000 binaryLp0j0nj1x3y1s3t2 <= 3
-x01 + 10000 binaryLp0j0nj1x3y1s3t2 >= 3
-x01 - 10000 binaryLp0j0nj1x3y1s3t2 <= 3
-y00 - 10000 binaryLp0j0nj1x3y1s3t2 <= 1
-y01 + 10000 binaryLp0j0nj1x3y1s3t2 >= 2
-x00 + 10000 binaryRp0j0nj1x3y1s3t2 >= 3
-x00 - 10000 binaryRp0j0nj1x3y1s3t2 <= 3
-x01 + 10000 binaryRp0j0nj1x3y1s3t2 >= 3
-x01 - 10000 binaryRp0j0nj1x3y1s3t2 <= 3
-y01 - 10000 binaryRp0j0nj1x3y1s3t2 <= 1
-y00 + 10000 binaryRp0j0nj1x3y1s3t2 >= 2
-x01 + 10000 binaryLp0j1nj2x3y1s3t2 >= 3
-x01 - 10000 binaryLp0j1nj2x3y1s3t2 <= 3
-x02 + 10000 binaryLp0j1nj2x3y1s3t2 >= 3
-x02 - 10000 binaryLp0j1nj2x3y1s3t2 <= 3
-y01 - 10000 binaryLp0j1nj2x3y1s3t2 <= 1
-y02 + 10000 binaryLp0j1nj2x3y1s3t2 >= 2
-x01 + 10000 binaryRp0j1nj2x3y1s3t2 >= 3
-x01 - 10000 binaryRp0j1nj2x3y1s3t2 <= 3
-x02 + 10000 binaryRp0j1nj2x3y1s3t2 >= 3
-x02 - 10000 binaryRp0j1nj2x3y1s3t2 <= 3
-y02 - 10000 binaryRp0j1nj2x3y1s3t2 <= 1
-y01 + 10000 binaryRp0j1nj2x3y1s3t2 >= 2
-x02 + 10000 binaryLp0j2nj3x3y1s3t2 >= 3
-x02 - 10000 binaryLp0j2nj3x3y1s3t2 <= 3
-x03 + 10000 binaryLp0j2nj3x3y1s3t2 >= 3
-x03 - 10000 binaryLp0j2nj3x3y1s3t2 <= 3
-y02 - 10000 binaryLp0j2nj3x3y1s3t2 <= 1
-y03 + 10000 binaryLp0j2nj3x3y1s3t2 >= 2
-x02 + 10000 binaryRp0j2nj3x3y1s3t2 >= 3
-x02 - 10000 binaryRp0j2nj3x3y1s3t2 <= 3
-x03 + 10000 binaryRp0j2nj3x3y1s3t2 >= 3
-x03 - 10000 binaryRp0j2nj3x3y1s3t2 <= 3
-y03 - 10000 binaryRp0j2nj3x3y1s3t2 <= 1
-y02 + 10000 binaryRp0j2nj3x3y1s3t2 >= 2
-x03 + 10000 binaryLp0j3nj4x3y1s3t2 >= 3
-x03 - 10000 binaryLp0j3nj4x3y1s3t2 <= 3
-x04 + 10000 binaryLp0j3nj4x3y1s3t2 >= 3
-x04 - 10000 binaryLp0j3nj4x3y1s3t2 <= 3
-y03 - 10000 binaryLp0j3nj4x3y1s3t2 <= 1
-y04 + 10000 binaryLp0j3nj4x3y1s3t2 >= 2
-x03 + 10000 binaryRp0j3nj4x3y1s3t2 >= 3
-x03 - 10000 binaryRp0j3nj4x3y1s3t2 <= 3
-x04 + 10000 binaryRp0j3nj4x3y1s3t2 >= 3
-x04 - 10000 binaryRp0j3nj4x3y1s3t2 <= 3
-y04 - 10000 binaryRp0j3nj4x3y1s3t2 <= 1
-y03 + 10000 binaryRp0j3nj4x3y1s3t2 >= 2
-x10 + 10000 binaryLp1j0nj1x3y1s3t2 >= 3
-x10 - 10000 binaryLp1j0nj1x3y1s3t2 <= 3
-x11 + 10000 binaryLp1j0nj1x3y1s3t2 >= 3
-x11 - 10000 binaryLp1j0nj1x3y1s3t2 <= 3
-y10 - 10000 binaryLp1j0nj1x3y1s3t2 <= 1
-y11 + 10000 binaryLp1j0nj1x3y1s3t2 >= 2
-x10 + 10000 binaryRp1j0nj1x3y1s3t2 >= 3
-x10 - 10000 binaryRp1j0nj1x3y1s3t2 <= 3
-x11 + 10000 binaryRp1j0nj1x3y1s3t2 >= 3
-x11 - 10000 binaryRp1j0nj1x3y1s3t2 <= 3
-y11 - 10000 binaryRp1j0nj1x3y1s3t2 <= 1
-y10 + 10000 binaryRp1j0nj1x3y1s3t2 >= 2
-x11 + 10000 binaryLp1j1nj2x3y1s3t2 >= 3
-x11 - 10000 binaryLp1j1nj2x3y1s3t2 <= 3
-x12 + 10000 binaryLp1j1nj2x3y1s3t2 >= 3
-x12 - 10000 binaryLp1j1nj2x3y1s3t2 <= 3
-y11 - 10000 binaryLp1j1nj2x3y1s3t2 <= 1
-y12 + 10000 binaryLp1j1nj2x3y1s3t2 >= 2
-x11 + 10000 binaryRp1j1nj2x3y1s3t2 >= 3
-x11 - 10000 binaryRp1j1nj2x3y1s3t2 <= 3
-x12 + 10000 binaryRp1j1nj2x3y1s3t2 >= 3
-x12 - 10000 binaryRp1j1nj2x3y1s3t2 <= 3
-y12 - 10000 binaryRp1j1nj2x3y1s3t2 <= 1
-y11 + 10000 binaryRp1j1nj2x3y1s3t2 >= 2
-x12 + 10000 binaryLp1j2nj3x3y1s3t2 >= 3
-x12 - 10000 binaryLp1j2nj3x3y1s3t2 <= 3
-x13 + 10000 binaryLp1j2nj3x3y1s3t2 >= 3
-x13 - 10000 binaryLp1j2nj3x3y1s3t2 <= 3
-y12 - 10000 binaryLp1j2nj3x3y1s3t2 <= 1
-y13 + 10000 binaryLp1j2nj3x3y1s3t2 >= 2
-x12 + 10000 binaryRp1j2nj3x3y1s3t2 >= 3
-x12 - 10000 binaryRp1j2nj3x3y1s3t2 <= 3
-x13 + 10000 binaryRp1j2nj3x3y1s3t2 >= 3
-x13 - 10000 binaryRp1j2nj3x3y1s3t2 <= 3
-y13 - 10000 binaryRp1j2nj3x3y1s3t2 <= 1
-y12 + 10000 binaryRp1j2nj3x3y1s3t2 >= 2
-x13 + 10000 binaryLp1j3nj4x3y1s3t2 >= 3
-x13 - 10000 binaryLp1j3nj4x3y1s3t2 <= 3
-x14 + 10000 binaryLp1j3nj4x3y1s3t2 >= 3
-x14 - 10000 binaryLp1j3nj4x3y1s3t2 <= 3
-y13 - 10000 binaryLp1j3nj4x3y1s3t2 <= 1
-y14 + 10000 binaryLp1j3nj4x3y1s3t2 >= 2
-x13 + 10000 binaryRp1j3nj4x3y1s3t2 >= 3
-x13 - 10000 binaryRp1j3nj4x3y1s3t2 <= 3
-x14 + 10000 binaryRp1j3nj4x3y1s3t2 >= 3
-x14 - 10000 binaryRp1j3nj4x3y1s3t2 <= 3
-y14 - 10000 binaryRp1j3nj4x3y1s3t2 <= 1
-y13 + 10000 binaryRp1j3nj4x3y1s3t2 >= 2
-x20 + 10000 binaryLp2j0nj1x3y1s3t2 >= 3
-x20 - 10000 binaryLp2j0nj1x3y1s3t2 <= 3
-x21 + 10000 binaryLp2j0nj1x3y1s3t2 >= 3
-x21 - 10000 binaryLp2j0nj1x3y1s3t2 <= 3
-y20 - 10000 binaryLp2j0nj1x3y1s3t2 <= 1
-y21 + 10000 binaryLp2j0nj1x3y1s3t2 >= 2
-x20 + 10000 binaryRp2j0nj1x3y1s3t2 >= 3
-x20 - 10000 binaryRp2j0nj1x3y1s3t2 <= 3
-x21 + 10000 binaryRp2j0nj1x3y1s3t2 >= 3
-x21 - 10000 binaryRp2j0nj1x3y1s3t2 <= 3
-y21 - 10000 binaryRp2j0nj1x3y1s3t2 <= 1
-y20 + 10000 binaryRp2j0nj1x3y1s3t2 >= 2
-x21 + 10000 binaryLp2j1nj2x3y1s3t2 >= 3
-x21 - 10000 binaryLp2j1nj2x3y1s3t2 <= 3
-x22 + 10000 binaryLp2j1nj2x3y1s3t2 >= 3
-x22 - 10000 binaryLp2j1nj2x3y1s3t2 <= 3
-y21 - 10000 binaryLp2j1nj2x3y1s3t2 <= 1
-y22 + 10000 binaryLp2j1nj2x3y1s3t2 >= 2
-x21 + 10000 binaryRp2j1nj2x3y1s3t2 >= 3
-x21 - 10000 binaryRp2j1nj2x3y1s3t2 <= 3
-x22 + 10000 binaryRp2j1nj2x3y1s3t2 >= 3
-x22 - 10000 binaryRp2j1nj2x3y1s3t2 <= 3
-y22 - 10000 binaryRp2j1nj2x3y1s3t2 <= 1
-y21 + 10000 binaryRp2j1nj2x3y1s3t2 >= 2
-x22 + 10000 binaryLp2j2nj3x3y1s3t2 >= 3
-x22 - 10000 binaryLp2j2nj3x3y1s3t2 <= 3
-x23 + 10000 binaryLp2j2nj3x3y1s3t2 >= 3
-x23 - 10000 binaryLp2j2nj3x3y1s3t2 <= 3
-y22 - 10000 binaryLp2j2nj3x3y1s3t2 <= 1
-y23 + 10000 binaryLp2j2nj3x3y1s3t2 >= 2
-x22 + 10000 binaryRp2j2nj3x3y1s3t2 >= 3
-x22 - 10000 binaryRp2j2nj3x3y1s3t2 <= 3
-x23 + 10000 binaryRp2j2nj3x3y1s3t2 >= 3
-x23 - 10000 binaryRp2j2nj3x3y1s3t2 <= 3
-y23 - 10000 binaryRp2j2nj3x3y1s3t2 <= 1
-y22 + 10000 binaryRp2j2nj3x3y1s3t2 >= 2
-x23 + 10000 binaryLp2j3nj4x3y1s3t2 >= 3
-x23 - 10000 binaryLp2j3nj4x3y1s3t2 <= 3
-x24 + 10000 binaryLp2j3nj4x3y1s3t2 >= 3
-x24 - 10000 binaryLp2j3nj4x3y1s3t2 <= 3
-y23 - 10000 binaryLp2j3nj4x3y1s3t2 <= 1
-y24 + 10000 binaryLp2j3nj4x3y1s3t2 >= 2
-x23 + 10000 binaryRp2j3nj4x3y1s3t2 >= 3
-x23 - 10000 binaryRp2j3nj4x3y1s3t2 <= 3
-x24 + 10000 binaryRp2j3nj4x3y1s3t2 >= 3
-x24 - 10000 binaryRp2j3nj4x3y1s3t2 <= 3
-y24 - 10000 binaryRp2j3nj4x3y1s3t2 <= 1
-y23 + 10000 binaryRp2j3nj4x3y1s3t2 >= 2
-x30 + 10000 binaryLp3j0nj1x3y1s3t2 >= 3
-x30 - 10000 binaryLp3j0nj1x3y1s3t2 <= 3
-x31 + 10000 binaryLp3j0nj1x3y1s3t2 >= 3
-x31 - 10000 binaryLp3j0nj1x3y1s3t2 <= 3
-y30 - 10000 binaryLp3j0nj1x3y1s3t2 <= 1
-y31 + 10000 binaryLp3j0nj1x3y1s3t2 >= 2
-x30 + 10000 binaryRp3j0nj1x3y1s3t2 >= 3
-x30 - 10000 binaryRp3j0nj1x3y1s3t2 <= 3
-x31 + 10000 binaryRp3j0nj1x3y1s3t2 >= 3
-x31 - 10000 binaryRp3j0nj1x3y1s3t2 <= 3
-y31 - 10000 binaryRp3j0nj1x3y1s3t2 <= 1
-y30 + 10000 binaryRp3j0nj1x3y1s3t2 >= 2
-x31 + 10000 binaryLp3j1nj2x3y1s3t2 >= 3
-x31 - 10000 binaryLp3j1nj2x3y1s3t2 <= 3
-x32 + 10000 binaryLp3j1nj2x3y1s3t2 >= 3
-x32 - 10000 binaryLp3j1nj2x3y1s3t2 <= 3
-y31 - 10000 binaryLp3j1nj2x3y1s3t2 <= 1
-y32 + 10000 binaryLp3j1nj2x3y1s3t2 >= 2
-x31 + 10000 binaryRp3j1nj2x3y1s3t2 >= 3
-x31 - 10000 binaryRp3j1nj2x3y1s3t2 <= 3
-x32 + 10000 binaryRp3j1nj2x3y1s3t2 >= 3
-x32 - 10000 binaryRp3j1nj2x3y1s3t2 <= 3
-y32 - 10000 binaryRp3j1nj2x3y1s3t2 <= 1
-y31 + 10000 binaryRp3j1nj2x3y1s3t2 >= 2
-x32 + 10000 binaryLp3j2nj3x3y1s3t2 >= 3
-x32 - 10000 binaryLp3j2nj3x3y1s3t2 <= 3
-x33 + 10000 binaryLp3j2nj3x3y1s3t2 >= 3
-x33 - 10000 binaryLp3j2nj3x3y1s3t2 <= 3
-y32 - 10000 binaryLp3j2nj3x3y1s3t2 <= 1
-y33 + 10000 binaryLp3j2nj3x3y1s3t2 >= 2
-x32 + 10000 binaryRp3j2nj3x3y1s3t2 >= 3
-x32 - 10000 binaryRp3j2nj3x3y1s3t2 <= 3
-x33 + 10000 binaryRp3j2nj3x3y1s3t2 >= 3
-x33 - 10000 binaryRp3j2nj3x3y1s3t2 <= 3
-y33 - 10000 binaryRp3j2nj3x3y1s3t2 <= 1
-y32 + 10000 binaryRp3j2nj3x3y1s3t2 >= 2
-x33 + 10000 binaryLp3j3nj4x3y1s3t2 >= 3
-x33 - 10000 binaryLp3j3nj4x3y1s3t2 <= 3
-x34 + 10000 binaryLp3j3nj4x3y1s3t2 >= 3
-x34 - 10000 binaryLp3j3nj4x3y1s3t2 <= 3
-y33 - 10000 binaryLp3j3nj4x3y1s3t2 <= 1
-y34 + 10000 binaryLp3j3nj4x3y1s3t2 >= 2
-x33 + 10000 binaryRp3j3nj4x3y1s3t2 >= 3
-x33 - 10000 binaryRp3j3nj4x3y1s3t2 <= 3
-x34 + 10000 binaryRp3j3nj4x3y1s3t2 >= 3
-x34 - 10000 binaryRp3j3nj4x3y1s3t2 <= 3
-y34 - 10000 binaryRp3j3nj4x3y1s3t2 <= 1
-y33 + 10000 binaryRp3j3nj4x3y1s3t2 >= 2
- + binaryLp0j0nj1x3y1s3t2 + binaryRp0j0nj1x3y1s3t2 + binaryLp0j1nj2x3y1s3t2 + binaryRp0j1nj2x3y1s3t2 + binaryLp0j2nj3x3y1s3t2 + binaryRp0j2nj3x3y1s3t2 + binaryLp0j3nj4x3y1s3t2 + binaryRp0j3nj4x3y1s3t2 + binaryLp1j0nj1x3y1s3t2 + binaryRp1j0nj1x3y1s3t2 + binaryLp1j1nj2x3y1s3t2 + binaryRp1j1nj2x3y1s3t2 + binaryLp1j2nj3x3y1s3t2 + binaryRp1j2nj3x3y1s3t2 + binaryLp1j3nj4x3y1s3t2 + binaryRp1j3nj4x3y1s3t2 + binaryLp2j0nj1x3y1s3t2 + binaryRp2j0nj1x3y1s3t2 + binaryLp2j1nj2x3y1s3t2 + binaryRp2j1nj2x3y1s3t2 + binaryLp2j2nj3x3y1s3t2 + binaryRp2j2nj3x3y1s3t2 + binaryLp2j3nj4x3y1s3t2 + binaryRp2j3nj4x3y1s3t2 + binaryLp3j0nj1x3y1s3t2 + binaryRp3j0nj1x3y1s3t2 + binaryLp3j1nj2x3y1s3t2 + binaryRp3j1nj2x3y1s3t2 + binaryLp3j2nj3x3y1s3t2 + binaryRp3j2nj3x3y1s3t2 + binaryLp3j3nj4x3y1s3t2 + binaryRp3j3nj4x3y1s3t2 <= 31
+x14 >= 0
+x14 <= 4
+y14 >= 0
+y14 <= 4
+x14 - x10 - 10000 u1x4x0 <= -1
+x15 - x10 - 10000 u1x4x0 <= -1
+x14 - x11 - 10000 u1x4x0 <= -1
+x15 - x11 - 10000 u1x4x0 <= -1
+x10 - x14 - 10000 u1x0x4 <= -1
+x10 - x15 - 10000 u1x0x4 <= -1
+x11 - x14 - 10000 u1x0x4 <= -1
+x11 - x15 - 10000 u1x0x4 <= -1
+y14 - y10 - 10000 u1y4y0 <= -1
+y15 - y10 - 10000 u1y4y0 <= -1
+y14 - y11 - 10000 u1y4y0 <= -1
+y15 - y11 - 10000 u1y4y0 <= -1
+y10 - y14 - 10000 u1y0y4 <= -1
+y10 - y15 - 10000 u1y0y4 <= -1
+y11 - y14 - 10000 u1y0y4 <= -1
+y11 - y15 - 10000 u1y0y4 <= -1
+u1x4x0 + u1x0x4 + u1y4y0 + u1y0y4 <= 3
+x14 - x11 - 10000 u1x4x1 <= -1
+x15 - x11 - 10000 u1x4x1 <= -1
+x14 - x12 - 10000 u1x4x1 <= -1
+x15 - x12 - 10000 u1x4x1 <= -1
+x11 - x14 - 10000 u1x1x4 <= -1
+x11 - x15 - 10000 u1x1x4 <= -1
+x12 - x14 - 10000 u1x1x4 <= -1
+x12 - x15 - 10000 u1x1x4 <= -1
+y14 - y11 - 10000 u1y4y1 <= -1
+y15 - y11 - 10000 u1y4y1 <= -1
+y14 - y12 - 10000 u1y4y1 <= -1
+y15 - y12 - 10000 u1y4y1 <= -1
+y11 - y14 - 10000 u1y1y4 <= -1
+y11 - y15 - 10000 u1y1y4 <= -1
+y12 - y14 - 10000 u1y1y4 <= -1
+y12 - y15 - 10000 u1y1y4 <= -1
+u1x4x1 + u1x1x4 + u1y4y1 + u1y1y4 <= 3
+x14 - x12 - 10000 u1x4x2 <= -1
+x15 - x12 - 10000 u1x4x2 <= -1
+x14 - x13 - 10000 u1x4x2 <= -1
+x15 - x13 - 10000 u1x4x2 <= -1
+x12 - x14 - 10000 u1x2x4 <= -1
+x12 - x15 - 10000 u1x2x4 <= -1
+x13 - x14 - 10000 u1x2x4 <= -1
+x13 - x15 - 10000 u1x2x4 <= -1
+y14 - y12 - 10000 u1y4y2 <= -1
+y15 - y12 - 10000 u1y4y2 <= -1
+y14 - y13 - 10000 u1y4y2 <= -1
+y15 - y13 - 10000 u1y4y2 <= -1
+y12 - y14 - 10000 u1y2y4 <= -1
+y12 - y15 - 10000 u1y2y4 <= -1
+y13 - y14 - 10000 u1y2y4 <= -1
+y13 - y15 - 10000 u1y2y4 <= -1
+u1x4x2 + u1x2x4 + u1y4y2 + u1y2y4 <= 3
+x15 - x14 + 10000 xEqualslx15 >= 0
+x15  - x14 - 10000 xEqualslx15 <= 0
+y15 - y14 + 10000 yEqualsly15 >= 0
+y15  - y14 - 10000 yEqualsly15 <= 0
+xEqualslx15 + yEqualsly15 <= 1
+x15 >= 0
+x15 <= 4
+y15 >= 0
+y15 <= 4
+x15 - x10 - 10000 u1x5x0 <= -1
+x16 - x10 - 10000 u1x5x0 <= -1
+x15 - x11 - 10000 u1x5x0 <= -1
+x16 - x11 - 10000 u1x5x0 <= -1
+x10 - x15 - 10000 u1x0x5 <= -1
+x10 - x16 - 10000 u1x0x5 <= -1
+x11 - x15 - 10000 u1x0x5 <= -1
+x11 - x16 - 10000 u1x0x5 <= -1
+y15 - y10 - 10000 u1y5y0 <= -1
+y16 - y10 - 10000 u1y5y0 <= -1
+y15 - y11 - 10000 u1y5y0 <= -1
+y16 - y11 - 10000 u1y5y0 <= -1
+y10 - y15 - 10000 u1y0y5 <= -1
+y10 - y16 - 10000 u1y0y5 <= -1
+y11 - y15 - 10000 u1y0y5 <= -1
+y11 - y16 - 10000 u1y0y5 <= -1
+u1x5x0 + u1x0x5 + u1y5y0 + u1y0y5 <= 3
+x15 - x11 - 10000 u1x5x1 <= -1
+x16 - x11 - 10000 u1x5x1 <= -1
+x15 - x12 - 10000 u1x5x1 <= -1
+x16 - x12 - 10000 u1x5x1 <= -1
+x11 - x15 - 10000 u1x1x5 <= -1
+x11 - x16 - 10000 u1x1x5 <= -1
+x12 - x15 - 10000 u1x1x5 <= -1
+x12 - x16 - 10000 u1x1x5 <= -1
+y15 - y11 - 10000 u1y5y1 <= -1
+y16 - y11 - 10000 u1y5y1 <= -1
+y15 - y12 - 10000 u1y5y1 <= -1
+y16 - y12 - 10000 u1y5y1 <= -1
+y11 - y15 - 10000 u1y1y5 <= -1
+y11 - y16 - 10000 u1y1y5 <= -1
+y12 - y15 - 10000 u1y1y5 <= -1
+y12 - y16 - 10000 u1y1y5 <= -1
+u1x5x1 + u1x1x5 + u1y5y1 + u1y1y5 <= 3
+x15 - x12 - 10000 u1x5x2 <= -1
+x16 - x12 - 10000 u1x5x2 <= -1
+x15 - x13 - 10000 u1x5x2 <= -1
+x16 - x13 - 10000 u1x5x2 <= -1
+x12 - x15 - 10000 u1x2x5 <= -1
+x12 - x16 - 10000 u1x2x5 <= -1
+x13 - x15 - 10000 u1x2x5 <= -1
+x13 - x16 - 10000 u1x2x5 <= -1
+y15 - y12 - 10000 u1y5y2 <= -1
+y16 - y12 - 10000 u1y5y2 <= -1
+y15 - y13 - 10000 u1y5y2 <= -1
+y16 - y13 - 10000 u1y5y2 <= -1
+y12 - y15 - 10000 u1y2y5 <= -1
+y12 - y16 - 10000 u1y2y5 <= -1
+y13 - y15 - 10000 u1y2y5 <= -1
+y13 - y16 - 10000 u1y2y5 <= -1
+u1x5x2 + u1x2x5 + u1y5y2 + u1y2y5 <= 3
+x15 - x13 - 10000 u1x5x3 <= -1
+x16 - x13 - 10000 u1x5x3 <= -1
+x15 - x14 - 10000 u1x5x3 <= -1
+x16 - x14 - 10000 u1x5x3 <= -1
+x13 - x15 - 10000 u1x3x5 <= -1
+x13 - x16 - 10000 u1x3x5 <= -1
+x14 - x15 - 10000 u1x3x5 <= -1
+x14 - x16 - 10000 u1x3x5 <= -1
+y15 - y13 - 10000 u1y5y3 <= -1
+y16 - y13 - 10000 u1y5y3 <= -1
+y15 - y14 - 10000 u1y5y3 <= -1
+y16 - y14 - 10000 u1y5y3 <= -1
+y13 - y15 - 10000 u1y3y5 <= -1
+y13 - y16 - 10000 u1y3y5 <= -1
+y14 - y15 - 10000 u1y3y5 <= -1
+y14 - y16 - 10000 u1y3y5 <= -1
+u1x5x3 + u1x3x5 + u1y5y3 + u1y3y5 <= 3
+x16 - x15 + 10000 xEqualslx16 >= 0
+x16  - x15 - 10000 xEqualslx16 <= 0
+y16 - y15 + 10000 yEqualsly16 >= 0
+y16  - y15 - 10000 yEqualsly16 <= 0
+xEqualslx16 + yEqualsly16 <= 1
+x16 >= 0
+x16 <= 4
+y16 >= 0
+y16 <= 4
+x16 - x10 - 10000 u1x6x0 <= -1
+x17 - x10 - 10000 u1x6x0 <= -1
+x16 - x11 - 10000 u1x6x0 <= -1
+x17 - x11 - 10000 u1x6x0 <= -1
+x10 - x16 - 10000 u1x0x6 <= -1
+x10 - x17 - 10000 u1x0x6 <= -1
+x11 - x16 - 10000 u1x0x6 <= -1
+x11 - x17 - 10000 u1x0x6 <= -1
+y16 - y10 - 10000 u1y6y0 <= -1
+y17 - y10 - 10000 u1y6y0 <= -1
+y16 - y11 - 10000 u1y6y0 <= -1
+y17 - y11 - 10000 u1y6y0 <= -1
+y10 - y16 - 10000 u1y0y6 <= -1
+y10 - y17 - 10000 u1y0y6 <= -1
+y11 - y16 - 10000 u1y0y6 <= -1
+y11 - y17 - 10000 u1y0y6 <= -1
+u1x6x0 + u1x0x6 + u1y6y0 + u1y0y6 <= 3
+x16 - x11 - 10000 u1x6x1 <= -1
+x17 - x11 - 10000 u1x6x1 <= -1
+x16 - x12 - 10000 u1x6x1 <= -1
+x17 - x12 - 10000 u1x6x1 <= -1
+x11 - x16 - 10000 u1x1x6 <= -1
+x11 - x17 - 10000 u1x1x6 <= -1
+x12 - x16 - 10000 u1x1x6 <= -1
+x12 - x17 - 10000 u1x1x6 <= -1
+y16 - y11 - 10000 u1y6y1 <= -1
+y17 - y11 - 10000 u1y6y1 <= -1
+y16 - y12 - 10000 u1y6y1 <= -1
+y17 - y12 - 10000 u1y6y1 <= -1
+y11 - y16 - 10000 u1y1y6 <= -1
+y11 - y17 - 10000 u1y1y6 <= -1
+y12 - y16 - 10000 u1y1y6 <= -1
+y12 - y17 - 10000 u1y1y6 <= -1
+u1x6x1 + u1x1x6 + u1y6y1 + u1y1y6 <= 3
+x16 - x12 - 10000 u1x6x2 <= -1
+x17 - x12 - 10000 u1x6x2 <= -1
+x16 - x13 - 10000 u1x6x2 <= -1
+x17 - x13 - 10000 u1x6x2 <= -1
+x12 - x16 - 10000 u1x2x6 <= -1
+x12 - x17 - 10000 u1x2x6 <= -1
+x13 - x16 - 10000 u1x2x6 <= -1
+x13 - x17 - 10000 u1x2x6 <= -1
+y16 - y12 - 10000 u1y6y2 <= -1
+y17 - y12 - 10000 u1y6y2 <= -1
+y16 - y13 - 10000 u1y6y2 <= -1
+y17 - y13 - 10000 u1y6y2 <= -1
+y12 - y16 - 10000 u1y2y6 <= -1
+y12 - y17 - 10000 u1y2y6 <= -1
+y13 - y16 - 10000 u1y2y6 <= -1
+y13 - y17 - 10000 u1y2y6 <= -1
+u1x6x2 + u1x2x6 + u1y6y2 + u1y2y6 <= 3
+x16 - x13 - 10000 u1x6x3 <= -1
+x17 - x13 - 10000 u1x6x3 <= -1
+x16 - x14 - 10000 u1x6x3 <= -1
+x17 - x14 - 10000 u1x6x3 <= -1
+x13 - x16 - 10000 u1x3x6 <= -1
+x13 - x17 - 10000 u1x3x6 <= -1
+x14 - x16 - 10000 u1x3x6 <= -1
+x14 - x17 - 10000 u1x3x6 <= -1
+y16 - y13 - 10000 u1y6y3 <= -1
+y17 - y13 - 10000 u1y6y3 <= -1
+y16 - y14 - 10000 u1y6y3 <= -1
+y17 - y14 - 10000 u1y6y3 <= -1
+y13 - y16 - 10000 u1y3y6 <= -1
+y13 - y17 - 10000 u1y3y6 <= -1
+y14 - y16 - 10000 u1y3y6 <= -1
+y14 - y17 - 10000 u1y3y6 <= -1
+u1x6x3 + u1x3x6 + u1y6y3 + u1y3y6 <= 3
+x16 - x14 - 10000 u1x6x4 <= -1
+x17 - x14 - 10000 u1x6x4 <= -1
+x16 - x15 - 10000 u1x6x4 <= -1
+x17 - x15 - 10000 u1x6x4 <= -1
+x14 - x16 - 10000 u1x4x6 <= -1
+x14 - x17 - 10000 u1x4x6 <= -1
+x15 - x16 - 10000 u1x4x6 <= -1
+x15 - x17 - 10000 u1x4x6 <= -1
+y16 - y14 - 10000 u1y6y4 <= -1
+y17 - y14 - 10000 u1y6y4 <= -1
+y16 - y15 - 10000 u1y6y4 <= -1
+y17 - y15 - 10000 u1y6y4 <= -1
+y14 - y16 - 10000 u1y4y6 <= -1
+y14 - y17 - 10000 u1y4y6 <= -1
+y15 - y16 - 10000 u1y4y6 <= -1
+y15 - y17 - 10000 u1y4y6 <= -1
+u1x6x4 + u1x4x6 + u1y6y4 + u1y4y6 <= 3
+x17 - x16 + 10000 xEqualslx17 >= 0
+x17  - x16 - 10000 xEqualslx17 <= 0
+y17 - y16 + 10000 yEqualsly17 >= 0
+y17  - y16 - 10000 yEqualsly17 <= 0
+xEqualslx17 + yEqualsly17 <= 1
+x17 >= 0
+x17 <= 4
+y17 >= 0
+y17 <= 4
+x17 - x10 - 10000 u1x7x0 <= -1
+x18 - x10 - 10000 u1x7x0 <= -1
+x17 - x11 - 10000 u1x7x0 <= -1
+x18 - x11 - 10000 u1x7x0 <= -1
+x10 - x17 - 10000 u1x0x7 <= -1
+x10 - x18 - 10000 u1x0x7 <= -1
+x11 - x17 - 10000 u1x0x7 <= -1
+x11 - x18 - 10000 u1x0x7 <= -1
+y17 - y10 - 10000 u1y7y0 <= -1
+y18 - y10 - 10000 u1y7y0 <= -1
+y17 - y11 - 10000 u1y7y0 <= -1
+y18 - y11 - 10000 u1y7y0 <= -1
+y10 - y17 - 10000 u1y0y7 <= -1
+y10 - y18 - 10000 u1y0y7 <= -1
+y11 - y17 - 10000 u1y0y7 <= -1
+y11 - y18 - 10000 u1y0y7 <= -1
+u1x7x0 + u1x0x7 + u1y7y0 + u1y0y7 <= 3
+x17 - x11 - 10000 u1x7x1 <= -1
+x18 - x11 - 10000 u1x7x1 <= -1
+x17 - x12 - 10000 u1x7x1 <= -1
+x18 - x12 - 10000 u1x7x1 <= -1
+x11 - x17 - 10000 u1x1x7 <= -1
+x11 - x18 - 10000 u1x1x7 <= -1
+x12 - x17 - 10000 u1x1x7 <= -1
+x12 - x18 - 10000 u1x1x7 <= -1
+y17 - y11 - 10000 u1y7y1 <= -1
+y18 - y11 - 10000 u1y7y1 <= -1
+y17 - y12 - 10000 u1y7y1 <= -1
+y18 - y12 - 10000 u1y7y1 <= -1
+y11 - y17 - 10000 u1y1y7 <= -1
+y11 - y18 - 10000 u1y1y7 <= -1
+y12 - y17 - 10000 u1y1y7 <= -1
+y12 - y18 - 10000 u1y1y7 <= -1
+u1x7x1 + u1x1x7 + u1y7y1 + u1y1y7 <= 3
+x17 - x12 - 10000 u1x7x2 <= -1
+x18 - x12 - 10000 u1x7x2 <= -1
+x17 - x13 - 10000 u1x7x2 <= -1
+x18 - x13 - 10000 u1x7x2 <= -1
+x12 - x17 - 10000 u1x2x7 <= -1
+x12 - x18 - 10000 u1x2x7 <= -1
+x13 - x17 - 10000 u1x2x7 <= -1
+x13 - x18 - 10000 u1x2x7 <= -1
+y17 - y12 - 10000 u1y7y2 <= -1
+y18 - y12 - 10000 u1y7y2 <= -1
+y17 - y13 - 10000 u1y7y2 <= -1
+y18 - y13 - 10000 u1y7y2 <= -1
+y12 - y17 - 10000 u1y2y7 <= -1
+y12 - y18 - 10000 u1y2y7 <= -1
+y13 - y17 - 10000 u1y2y7 <= -1
+y13 - y18 - 10000 u1y2y7 <= -1
+u1x7x2 + u1x2x7 + u1y7y2 + u1y2y7 <= 3
+x17 - x13 - 10000 u1x7x3 <= -1
+x18 - x13 - 10000 u1x7x3 <= -1
+x17 - x14 - 10000 u1x7x3 <= -1
+x18 - x14 - 10000 u1x7x3 <= -1
+x13 - x17 - 10000 u1x3x7 <= -1
+x13 - x18 - 10000 u1x3x7 <= -1
+x14 - x17 - 10000 u1x3x7 <= -1
+x14 - x18 - 10000 u1x3x7 <= -1
+y17 - y13 - 10000 u1y7y3 <= -1
+y18 - y13 - 10000 u1y7y3 <= -1
+y17 - y14 - 10000 u1y7y3 <= -1
+y18 - y14 - 10000 u1y7y3 <= -1
+y13 - y17 - 10000 u1y3y7 <= -1
+y13 - y18 - 10000 u1y3y7 <= -1
+y14 - y17 - 10000 u1y3y7 <= -1
+y14 - y18 - 10000 u1y3y7 <= -1
+u1x7x3 + u1x3x7 + u1y7y3 + u1y3y7 <= 3
+x17 - x14 - 10000 u1x7x4 <= -1
+x18 - x14 - 10000 u1x7x4 <= -1
+x17 - x15 - 10000 u1x7x4 <= -1
+x18 - x15 - 10000 u1x7x4 <= -1
+x14 - x17 - 10000 u1x4x7 <= -1
+x14 - x18 - 10000 u1x4x7 <= -1
+x15 - x17 - 10000 u1x4x7 <= -1
+x15 - x18 - 10000 u1x4x7 <= -1
+y17 - y14 - 10000 u1y7y4 <= -1
+y18 - y14 - 10000 u1y7y4 <= -1
+y17 - y15 - 10000 u1y7y4 <= -1
+y18 - y15 - 10000 u1y7y4 <= -1
+y14 - y17 - 10000 u1y4y7 <= -1
+y14 - y18 - 10000 u1y4y7 <= -1
+y15 - y17 - 10000 u1y4y7 <= -1
+y15 - y18 - 10000 u1y4y7 <= -1
+u1x7x4 + u1x4x7 + u1y7y4 + u1y4y7 <= 3
+x17 - x15 - 10000 u1x7x5 <= -1
+x18 - x15 - 10000 u1x7x5 <= -1
+x17 - x16 - 10000 u1x7x5 <= -1
+x18 - x16 - 10000 u1x7x5 <= -1
+x15 - x17 - 10000 u1x5x7 <= -1
+x15 - x18 - 10000 u1x5x7 <= -1
+x16 - x17 - 10000 u1x5x7 <= -1
+x16 - x18 - 10000 u1x5x7 <= -1
+y17 - y15 - 10000 u1y7y5 <= -1
+y18 - y15 - 10000 u1y7y5 <= -1
+y17 - y16 - 10000 u1y7y5 <= -1
+y18 - y16 - 10000 u1y7y5 <= -1
+y15 - y17 - 10000 u1y5y7 <= -1
+y15 - y18 - 10000 u1y5y7 <= -1
+y16 - y17 - 10000 u1y5y7 <= -1
+y16 - y18 - 10000 u1y5y7 <= -1
+u1x7x5 + u1x5x7 + u1y7y5 + u1y5y7 <= 3
+x18 - x17 + 10000 xEqualslx18 >= 0
+x18  - x17 - 10000 xEqualslx18 <= 0
+y18 - y17 + 10000 yEqualsly18 >= 0
+y18  - y17 - 10000 yEqualsly18 <= 0
+xEqualslx18 + yEqualsly18 <= 1
+x18 >= 0
+x18 <= 4
+y18 >= 0
+y18 <= 4
+x18 - x10 - 10000 u1x8x0 <= -1
+x19 - x10 - 10000 u1x8x0 <= -1
+x18 - x11 - 10000 u1x8x0 <= -1
+x19 - x11 - 10000 u1x8x0 <= -1
+x10 - x18 - 10000 u1x0x8 <= -1
+x10 - x19 - 10000 u1x0x8 <= -1
+x11 - x18 - 10000 u1x0x8 <= -1
+x11 - x19 - 10000 u1x0x8 <= -1
+y18 - y10 - 10000 u1y8y0 <= -1
+y19 - y10 - 10000 u1y8y0 <= -1
+y18 - y11 - 10000 u1y8y0 <= -1
+y19 - y11 - 10000 u1y8y0 <= -1
+y10 - y18 - 10000 u1y0y8 <= -1
+y10 - y19 - 10000 u1y0y8 <= -1
+y11 - y18 - 10000 u1y0y8 <= -1
+y11 - y19 - 10000 u1y0y8 <= -1
+u1x8x0 + u1x0x8 + u1y8y0 + u1y0y8 <= 3
+x18 - x11 - 10000 u1x8x1 <= -1
+x19 - x11 - 10000 u1x8x1 <= -1
+x18 - x12 - 10000 u1x8x1 <= -1
+x19 - x12 - 10000 u1x8x1 <= -1
+x11 - x18 - 10000 u1x1x8 <= -1
+x11 - x19 - 10000 u1x1x8 <= -1
+x12 - x18 - 10000 u1x1x8 <= -1
+x12 - x19 - 10000 u1x1x8 <= -1
+y18 - y11 - 10000 u1y8y1 <= -1
+y19 - y11 - 10000 u1y8y1 <= -1
+y18 - y12 - 10000 u1y8y1 <= -1
+y19 - y12 - 10000 u1y8y1 <= -1
+y11 - y18 - 10000 u1y1y8 <= -1
+y11 - y19 - 10000 u1y1y8 <= -1
+y12 - y18 - 10000 u1y1y8 <= -1
+y12 - y19 - 10000 u1y1y8 <= -1
+u1x8x1 + u1x1x8 + u1y8y1 + u1y1y8 <= 3
+x18 - x12 - 10000 u1x8x2 <= -1
+x19 - x12 - 10000 u1x8x2 <= -1
+x18 - x13 - 10000 u1x8x2 <= -1
+x19 - x13 - 10000 u1x8x2 <= -1
+x12 - x18 - 10000 u1x2x8 <= -1
+x12 - x19 - 10000 u1x2x8 <= -1
+x13 - x18 - 10000 u1x2x8 <= -1
+x13 - x19 - 10000 u1x2x8 <= -1
+y18 - y12 - 10000 u1y8y2 <= -1
+y19 - y12 - 10000 u1y8y2 <= -1
+y18 - y13 - 10000 u1y8y2 <= -1
+y19 - y13 - 10000 u1y8y2 <= -1
+y12 - y18 - 10000 u1y2y8 <= -1
+y12 - y19 - 10000 u1y2y8 <= -1
+y13 - y18 - 10000 u1y2y8 <= -1
+y13 - y19 - 10000 u1y2y8 <= -1
+u1x8x2 + u1x2x8 + u1y8y2 + u1y2y8 <= 3
+x18 - x13 - 10000 u1x8x3 <= -1
+x19 - x13 - 10000 u1x8x3 <= -1
+x18 - x14 - 10000 u1x8x3 <= -1
+x19 - x14 - 10000 u1x8x3 <= -1
+x13 - x18 - 10000 u1x3x8 <= -1
+x13 - x19 - 10000 u1x3x8 <= -1
+x14 - x18 - 10000 u1x3x8 <= -1
+x14 - x19 - 10000 u1x3x8 <= -1
+y18 - y13 - 10000 u1y8y3 <= -1
+y19 - y13 - 10000 u1y8y3 <= -1
+y18 - y14 - 10000 u1y8y3 <= -1
+y19 - y14 - 10000 u1y8y3 <= -1
+y13 - y18 - 10000 u1y3y8 <= -1
+y13 - y19 - 10000 u1y3y8 <= -1
+y14 - y18 - 10000 u1y3y8 <= -1
+y14 - y19 - 10000 u1y3y8 <= -1
+u1x8x3 + u1x3x8 + u1y8y3 + u1y3y8 <= 3
+x18 - x14 - 10000 u1x8x4 <= -1
+x19 - x14 - 10000 u1x8x4 <= -1
+x18 - x15 - 10000 u1x8x4 <= -1
+x19 - x15 - 10000 u1x8x4 <= -1
+x14 - x18 - 10000 u1x4x8 <= -1
+x14 - x19 - 10000 u1x4x8 <= -1
+x15 - x18 - 10000 u1x4x8 <= -1
+x15 - x19 - 10000 u1x4x8 <= -1
+y18 - y14 - 10000 u1y8y4 <= -1
+y19 - y14 - 10000 u1y8y4 <= -1
+y18 - y15 - 10000 u1y8y4 <= -1
+y19 - y15 - 10000 u1y8y4 <= -1
+y14 - y18 - 10000 u1y4y8 <= -1
+y14 - y19 - 10000 u1y4y8 <= -1
+y15 - y18 - 10000 u1y4y8 <= -1
+y15 - y19 - 10000 u1y4y8 <= -1
+u1x8x4 + u1x4x8 + u1y8y4 + u1y4y8 <= 3
+x18 - x15 - 10000 u1x8x5 <= -1
+x19 - x15 - 10000 u1x8x5 <= -1
+x18 - x16 - 10000 u1x8x5 <= -1
+x19 - x16 - 10000 u1x8x5 <= -1
+x15 - x18 - 10000 u1x5x8 <= -1
+x15 - x19 - 10000 u1x5x8 <= -1
+x16 - x18 - 10000 u1x5x8 <= -1
+x16 - x19 - 10000 u1x5x8 <= -1
+y18 - y15 - 10000 u1y8y5 <= -1
+y19 - y15 - 10000 u1y8y5 <= -1
+y18 - y16 - 10000 u1y8y5 <= -1
+y19 - y16 - 10000 u1y8y5 <= -1
+y15 - y18 - 10000 u1y5y8 <= -1
+y15 - y19 - 10000 u1y5y8 <= -1
+y16 - y18 - 10000 u1y5y8 <= -1
+y16 - y19 - 10000 u1y5y8 <= -1
+u1x8x5 + u1x5x8 + u1y8y5 + u1y5y8 <= 3
+x18 - x16 - 10000 u1x8x6 <= -1
+x19 - x16 - 10000 u1x8x6 <= -1
+x18 - x17 - 10000 u1x8x6 <= -1
+x19 - x17 - 10000 u1x8x6 <= -1
+x16 - x18 - 10000 u1x6x8 <= -1
+x16 - x19 - 10000 u1x6x8 <= -1
+x17 - x18 - 10000 u1x6x8 <= -1
+x17 - x19 - 10000 u1x6x8 <= -1
+y18 - y16 - 10000 u1y8y6 <= -1
+y19 - y16 - 10000 u1y8y6 <= -1
+y18 - y17 - 10000 u1y8y6 <= -1
+y19 - y17 - 10000 u1y8y6 <= -1
+y16 - y18 - 10000 u1y6y8 <= -1
+y16 - y19 - 10000 u1y6y8 <= -1
+y17 - y18 - 10000 u1y6y8 <= -1
+y17 - y19 - 10000 u1y6y8 <= -1
+u1x8x6 + u1x6x8 + u1y8y6 + u1y6y8 <= 3
+x19 - x18 + 10000 xEqualslx19 >= 0
+x19  - x18 - 10000 xEqualslx19 <= 0
+y19 - y18 + 10000 yEqualsly19 >= 0
+y19  - y18 - 10000 yEqualsly19 <= 0
+xEqualslx19 + yEqualsly19 <= 1
+x19 = 4
+y19 = 4
+x00 + 10000 binaryLp0j0nj1x0y0s0t1 >= 0
+x00 - 10000 binaryLp0j0nj1x0y0s0t1 <= 0
+x01 + 10000 binaryLp0j0nj1x0y0s0t1 >= 0
+x01 - 10000 binaryLp0j0nj1x0y0s0t1 <= 0
+y00 - 10000 binaryLp0j0nj1x0y0s0t1 <= 0
+y01 + 10000 binaryLp0j0nj1x0y0s0t1 >= 1
+x00 + 10000 binaryRp0j0nj1x0y0s0t1 >= 0
+x00 - 10000 binaryRp0j0nj1x0y0s0t1 <= 0
+x01 + 10000 binaryRp0j0nj1x0y0s0t1 >= 0
+x01 - 10000 binaryRp0j0nj1x0y0s0t1 <= 0
+y01 - 10000 binaryRp0j0nj1x0y0s0t1 <= 0
+y00 + 10000 binaryRp0j0nj1x0y0s0t1 >= 1
+x01 + 10000 binaryLp0j1nj2x0y0s0t1 >= 0
+x01 - 10000 binaryLp0j1nj2x0y0s0t1 <= 0
+x02 + 10000 binaryLp0j1nj2x0y0s0t1 >= 0
+x02 - 10000 binaryLp0j1nj2x0y0s0t1 <= 0
+y01 - 10000 binaryLp0j1nj2x0y0s0t1 <= 0
+y02 + 10000 binaryLp0j1nj2x0y0s0t1 >= 1
+x01 + 10000 binaryRp0j1nj2x0y0s0t1 >= 0
+x01 - 10000 binaryRp0j1nj2x0y0s0t1 <= 0
+x02 + 10000 binaryRp0j1nj2x0y0s0t1 >= 0
+x02 - 10000 binaryRp0j1nj2x0y0s0t1 <= 0
+y02 - 10000 binaryRp0j1nj2x0y0s0t1 <= 0
+y01 + 10000 binaryRp0j1nj2x0y0s0t1 >= 1
+x02 + 10000 binaryLp0j2nj3x0y0s0t1 >= 0
+x02 - 10000 binaryLp0j2nj3x0y0s0t1 <= 0
+x03 + 10000 binaryLp0j2nj3x0y0s0t1 >= 0
+x03 - 10000 binaryLp0j2nj3x0y0s0t1 <= 0
+y02 - 10000 binaryLp0j2nj3x0y0s0t1 <= 0
+y03 + 10000 binaryLp0j2nj3x0y0s0t1 >= 1
+x02 + 10000 binaryRp0j2nj3x0y0s0t1 >= 0
+x02 - 10000 binaryRp0j2nj3x0y0s0t1 <= 0
+x03 + 10000 binaryRp0j2nj3x0y0s0t1 >= 0
+x03 - 10000 binaryRp0j2nj3x0y0s0t1 <= 0
+y03 - 10000 binaryRp0j2nj3x0y0s0t1 <= 0
+y02 + 10000 binaryRp0j2nj3x0y0s0t1 >= 1
+x03 + 10000 binaryLp0j3nj4x0y0s0t1 >= 0
+x03 - 10000 binaryLp0j3nj4x0y0s0t1 <= 0
+x04 + 10000 binaryLp0j3nj4x0y0s0t1 >= 0
+x04 - 10000 binaryLp0j3nj4x0y0s0t1 <= 0
+y03 - 10000 binaryLp0j3nj4x0y0s0t1 <= 0
+y04 + 10000 binaryLp0j3nj4x0y0s0t1 >= 1
+x03 + 10000 binaryRp0j3nj4x0y0s0t1 >= 0
+x03 - 10000 binaryRp0j3nj4x0y0s0t1 <= 0
+x04 + 10000 binaryRp0j3nj4x0y0s0t1 >= 0
+x04 - 10000 binaryRp0j3nj4x0y0s0t1 <= 0
+y04 - 10000 binaryRp0j3nj4x0y0s0t1 <= 0
+y03 + 10000 binaryRp0j3nj4x0y0s0t1 >= 1
+x04 + 10000 binaryLp0j4nj5x0y0s0t1 >= 0
+x04 - 10000 binaryLp0j4nj5x0y0s0t1 <= 0
+x05 + 10000 binaryLp0j4nj5x0y0s0t1 >= 0
+x05 - 10000 binaryLp0j4nj5x0y0s0t1 <= 0
+y04 - 10000 binaryLp0j4nj5x0y0s0t1 <= 0
+y05 + 10000 binaryLp0j4nj5x0y0s0t1 >= 1
+x04 + 10000 binaryRp0j4nj5x0y0s0t1 >= 0
+x04 - 10000 binaryRp0j4nj5x0y0s0t1 <= 0
+x05 + 10000 binaryRp0j4nj5x0y0s0t1 >= 0
+x05 - 10000 binaryRp0j4nj5x0y0s0t1 <= 0
+y05 - 10000 binaryRp0j4nj5x0y0s0t1 <= 0
+y04 + 10000 binaryRp0j4nj5x0y0s0t1 >= 1
+x05 + 10000 binaryLp0j5nj6x0y0s0t1 >= 0
+x05 - 10000 binaryLp0j5nj6x0y0s0t1 <= 0
+x06 + 10000 binaryLp0j5nj6x0y0s0t1 >= 0
+x06 - 10000 binaryLp0j5nj6x0y0s0t1 <= 0
+y05 - 10000 binaryLp0j5nj6x0y0s0t1 <= 0
+y06 + 10000 binaryLp0j5nj6x0y0s0t1 >= 1
+x05 + 10000 binaryRp0j5nj6x0y0s0t1 >= 0
+x05 - 10000 binaryRp0j5nj6x0y0s0t1 <= 0
+x06 + 10000 binaryRp0j5nj6x0y0s0t1 >= 0
+x06 - 10000 binaryRp0j5nj6x0y0s0t1 <= 0
+y06 - 10000 binaryRp0j5nj6x0y0s0t1 <= 0
+y05 + 10000 binaryRp0j5nj6x0y0s0t1 >= 1
+x06 + 10000 binaryLp0j6nj7x0y0s0t1 >= 0
+x06 - 10000 binaryLp0j6nj7x0y0s0t1 <= 0
+x07 + 10000 binaryLp0j6nj7x0y0s0t1 >= 0
+x07 - 10000 binaryLp0j6nj7x0y0s0t1 <= 0
+y06 - 10000 binaryLp0j6nj7x0y0s0t1 <= 0
+y07 + 10000 binaryLp0j6nj7x0y0s0t1 >= 1
+x06 + 10000 binaryRp0j6nj7x0y0s0t1 >= 0
+x06 - 10000 binaryRp0j6nj7x0y0s0t1 <= 0
+x07 + 10000 binaryRp0j6nj7x0y0s0t1 >= 0
+x07 - 10000 binaryRp0j6nj7x0y0s0t1 <= 0
+y07 - 10000 binaryRp0j6nj7x0y0s0t1 <= 0
+y06 + 10000 binaryRp0j6nj7x0y0s0t1 >= 1
+x07 + 10000 binaryLp0j7nj8x0y0s0t1 >= 0
+x07 - 10000 binaryLp0j7nj8x0y0s0t1 <= 0
+x08 + 10000 binaryLp0j7nj8x0y0s0t1 >= 0
+x08 - 10000 binaryLp0j7nj8x0y0s0t1 <= 0
+y07 - 10000 binaryLp0j7nj8x0y0s0t1 <= 0
+y08 + 10000 binaryLp0j7nj8x0y0s0t1 >= 1
+x07 + 10000 binaryRp0j7nj8x0y0s0t1 >= 0
+x07 - 10000 binaryRp0j7nj8x0y0s0t1 <= 0
+x08 + 10000 binaryRp0j7nj8x0y0s0t1 >= 0
+x08 - 10000 binaryRp0j7nj8x0y0s0t1 <= 0
+y08 - 10000 binaryRp0j7nj8x0y0s0t1 <= 0
+y07 + 10000 binaryRp0j7nj8x0y0s0t1 >= 1
+x08 + 10000 binaryLp0j8nj9x0y0s0t1 >= 0
+x08 - 10000 binaryLp0j8nj9x0y0s0t1 <= 0
+x09 + 10000 binaryLp0j8nj9x0y0s0t1 >= 0
+x09 - 10000 binaryLp0j8nj9x0y0s0t1 <= 0
+y08 - 10000 binaryLp0j8nj9x0y0s0t1 <= 0
+y09 + 10000 binaryLp0j8nj9x0y0s0t1 >= 1
+x08 + 10000 binaryRp0j8nj9x0y0s0t1 >= 0
+x08 - 10000 binaryRp0j8nj9x0y0s0t1 <= 0
+x09 + 10000 binaryRp0j8nj9x0y0s0t1 >= 0
+x09 - 10000 binaryRp0j8nj9x0y0s0t1 <= 0
+y09 - 10000 binaryRp0j8nj9x0y0s0t1 <= 0
+y08 + 10000 binaryRp0j8nj9x0y0s0t1 >= 1
+x10 + 10000 binaryLp1j0nj1x0y0s0t1 >= 0
+x10 - 10000 binaryLp1j0nj1x0y0s0t1 <= 0
+x11 + 10000 binaryLp1j0nj1x0y0s0t1 >= 0
+x11 - 10000 binaryLp1j0nj1x0y0s0t1 <= 0
+y10 - 10000 binaryLp1j0nj1x0y0s0t1 <= 0
+y11 + 10000 binaryLp1j0nj1x0y0s0t1 >= 1
+x10 + 10000 binaryRp1j0nj1x0y0s0t1 >= 0
+x10 - 10000 binaryRp1j0nj1x0y0s0t1 <= 0
+x11 + 10000 binaryRp1j0nj1x0y0s0t1 >= 0
+x11 - 10000 binaryRp1j0nj1x0y0s0t1 <= 0
+y11 - 10000 binaryRp1j0nj1x0y0s0t1 <= 0
+y10 + 10000 binaryRp1j0nj1x0y0s0t1 >= 1
+x11 + 10000 binaryLp1j1nj2x0y0s0t1 >= 0
+x11 - 10000 binaryLp1j1nj2x0y0s0t1 <= 0
+x12 + 10000 binaryLp1j1nj2x0y0s0t1 >= 0
+x12 - 10000 binaryLp1j1nj2x0y0s0t1 <= 0
+y11 - 10000 binaryLp1j1nj2x0y0s0t1 <= 0
+y12 + 10000 binaryLp1j1nj2x0y0s0t1 >= 1
+x11 + 10000 binaryRp1j1nj2x0y0s0t1 >= 0
+x11 - 10000 binaryRp1j1nj2x0y0s0t1 <= 0
+x12 + 10000 binaryRp1j1nj2x0y0s0t1 >= 0
+x12 - 10000 binaryRp1j1nj2x0y0s0t1 <= 0
+y12 - 10000 binaryRp1j1nj2x0y0s0t1 <= 0
+y11 + 10000 binaryRp1j1nj2x0y0s0t1 >= 1
+x12 + 10000 binaryLp1j2nj3x0y0s0t1 >= 0
+x12 - 10000 binaryLp1j2nj3x0y0s0t1 <= 0
+x13 + 10000 binaryLp1j2nj3x0y0s0t1 >= 0
+x13 - 10000 binaryLp1j2nj3x0y0s0t1 <= 0
+y12 - 10000 binaryLp1j2nj3x0y0s0t1 <= 0
+y13 + 10000 binaryLp1j2nj3x0y0s0t1 >= 1
+x12 + 10000 binaryRp1j2nj3x0y0s0t1 >= 0
+x12 - 10000 binaryRp1j2nj3x0y0s0t1 <= 0
+x13 + 10000 binaryRp1j2nj3x0y0s0t1 >= 0
+x13 - 10000 binaryRp1j2nj3x0y0s0t1 <= 0
+y13 - 10000 binaryRp1j2nj3x0y0s0t1 <= 0
+y12 + 10000 binaryRp1j2nj3x0y0s0t1 >= 1
+x13 + 10000 binaryLp1j3nj4x0y0s0t1 >= 0
+x13 - 10000 binaryLp1j3nj4x0y0s0t1 <= 0
+x14 + 10000 binaryLp1j3nj4x0y0s0t1 >= 0
+x14 - 10000 binaryLp1j3nj4x0y0s0t1 <= 0
+y13 - 10000 binaryLp1j3nj4x0y0s0t1 <= 0
+y14 + 10000 binaryLp1j3nj4x0y0s0t1 >= 1
+x13 + 10000 binaryRp1j3nj4x0y0s0t1 >= 0
+x13 - 10000 binaryRp1j3nj4x0y0s0t1 <= 0
+x14 + 10000 binaryRp1j3nj4x0y0s0t1 >= 0
+x14 - 10000 binaryRp1j3nj4x0y0s0t1 <= 0
+y14 - 10000 binaryRp1j3nj4x0y0s0t1 <= 0
+y13 + 10000 binaryRp1j3nj4x0y0s0t1 >= 1
+x14 + 10000 binaryLp1j4nj5x0y0s0t1 >= 0
+x14 - 10000 binaryLp1j4nj5x0y0s0t1 <= 0
+x15 + 10000 binaryLp1j4nj5x0y0s0t1 >= 0
+x15 - 10000 binaryLp1j4nj5x0y0s0t1 <= 0
+y14 - 10000 binaryLp1j4nj5x0y0s0t1 <= 0
+y15 + 10000 binaryLp1j4nj5x0y0s0t1 >= 1
+x14 + 10000 binaryRp1j4nj5x0y0s0t1 >= 0
+x14 - 10000 binaryRp1j4nj5x0y0s0t1 <= 0
+x15 + 10000 binaryRp1j4nj5x0y0s0t1 >= 0
+x15 - 10000 binaryRp1j4nj5x0y0s0t1 <= 0
+y15 - 10000 binaryRp1j4nj5x0y0s0t1 <= 0
+y14 + 10000 binaryRp1j4nj5x0y0s0t1 >= 1
+x15 + 10000 binaryLp1j5nj6x0y0s0t1 >= 0
+x15 - 10000 binaryLp1j5nj6x0y0s0t1 <= 0
+x16 + 10000 binaryLp1j5nj6x0y0s0t1 >= 0
+x16 - 10000 binaryLp1j5nj6x0y0s0t1 <= 0
+y15 - 10000 binaryLp1j5nj6x0y0s0t1 <= 0
+y16 + 10000 binaryLp1j5nj6x0y0s0t1 >= 1
+x15 + 10000 binaryRp1j5nj6x0y0s0t1 >= 0
+x15 - 10000 binaryRp1j5nj6x0y0s0t1 <= 0
+x16 + 10000 binaryRp1j5nj6x0y0s0t1 >= 0
+x16 - 10000 binaryRp1j5nj6x0y0s0t1 <= 0
+y16 - 10000 binaryRp1j5nj6x0y0s0t1 <= 0
+y15 + 10000 binaryRp1j5nj6x0y0s0t1 >= 1
+x16 + 10000 binaryLp1j6nj7x0y0s0t1 >= 0
+x16 - 10000 binaryLp1j6nj7x0y0s0t1 <= 0
+x17 + 10000 binaryLp1j6nj7x0y0s0t1 >= 0
+x17 - 10000 binaryLp1j6nj7x0y0s0t1 <= 0
+y16 - 10000 binaryLp1j6nj7x0y0s0t1 <= 0
+y17 + 10000 binaryLp1j6nj7x0y0s0t1 >= 1
+x16 + 10000 binaryRp1j6nj7x0y0s0t1 >= 0
+x16 - 10000 binaryRp1j6nj7x0y0s0t1 <= 0
+x17 + 10000 binaryRp1j6nj7x0y0s0t1 >= 0
+x17 - 10000 binaryRp1j6nj7x0y0s0t1 <= 0
+y17 - 10000 binaryRp1j6nj7x0y0s0t1 <= 0
+y16 + 10000 binaryRp1j6nj7x0y0s0t1 >= 1
+x17 + 10000 binaryLp1j7nj8x0y0s0t1 >= 0
+x17 - 10000 binaryLp1j7nj8x0y0s0t1 <= 0
+x18 + 10000 binaryLp1j7nj8x0y0s0t1 >= 0
+x18 - 10000 binaryLp1j7nj8x0y0s0t1 <= 0
+y17 - 10000 binaryLp1j7nj8x0y0s0t1 <= 0
+y18 + 10000 binaryLp1j7nj8x0y0s0t1 >= 1
+x17 + 10000 binaryRp1j7nj8x0y0s0t1 >= 0
+x17 - 10000 binaryRp1j7nj8x0y0s0t1 <= 0
+x18 + 10000 binaryRp1j7nj8x0y0s0t1 >= 0
+x18 - 10000 binaryRp1j7nj8x0y0s0t1 <= 0
+y18 - 10000 binaryRp1j7nj8x0y0s0t1 <= 0
+y17 + 10000 binaryRp1j7nj8x0y0s0t1 >= 1
+x18 + 10000 binaryLp1j8nj9x0y0s0t1 >= 0
+x18 - 10000 binaryLp1j8nj9x0y0s0t1 <= 0
+x19 + 10000 binaryLp1j8nj9x0y0s0t1 >= 0
+x19 - 10000 binaryLp1j8nj9x0y0s0t1 <= 0
+y18 - 10000 binaryLp1j8nj9x0y0s0t1 <= 0
+y19 + 10000 binaryLp1j8nj9x0y0s0t1 >= 1
+x18 + 10000 binaryRp1j8nj9x0y0s0t1 >= 0
+x18 - 10000 binaryRp1j8nj9x0y0s0t1 <= 0
+x19 + 10000 binaryRp1j8nj9x0y0s0t1 >= 0
+x19 - 10000 binaryRp1j8nj9x0y0s0t1 <= 0
+y19 - 10000 binaryRp1j8nj9x0y0s0t1 <= 0
+y18 + 10000 binaryRp1j8nj9x0y0s0t1 >= 1
+ + binaryLp0j0nj1x0y0s0t1 + binaryRp0j0nj1x0y0s0t1 + binaryLp0j1nj2x0y0s0t1 + binaryRp0j1nj2x0y0s0t1 + binaryLp0j2nj3x0y0s0t1 + binaryRp0j2nj3x0y0s0t1 + binaryLp0j3nj4x0y0s0t1 + binaryRp0j3nj4x0y0s0t1 + binaryLp0j4nj5x0y0s0t1 + binaryRp0j4nj5x0y0s0t1 + binaryLp0j5nj6x0y0s0t1 + binaryRp0j5nj6x0y0s0t1 + binaryLp0j6nj7x0y0s0t1 + binaryRp0j6nj7x0y0s0t1 + binaryLp0j7nj8x0y0s0t1 + binaryRp0j7nj8x0y0s0t1 + binaryLp0j8nj9x0y0s0t1 + binaryRp0j8nj9x0y0s0t1 + binaryLp1j0nj1x0y0s0t1 + binaryRp1j0nj1x0y0s0t1 + binaryLp1j1nj2x0y0s0t1 + binaryRp1j1nj2x0y0s0t1 + binaryLp1j2nj3x0y0s0t1 + binaryRp1j2nj3x0y0s0t1 + binaryLp1j3nj4x0y0s0t1 + binaryRp1j3nj4x0y0s0t1 + binaryLp1j4nj5x0y0s0t1 + binaryRp1j4nj5x0y0s0t1 + binaryLp1j5nj6x0y0s0t1 + binaryRp1j5nj6x0y0s0t1 + binaryLp1j6nj7x0y0s0t1 + binaryRp1j6nj7x0y0s0t1 + binaryLp1j7nj8x0y0s0t1 + binaryRp1j7nj8x0y0s0t1 + binaryLp1j8nj9x0y0s0t1 + binaryRp1j8nj9x0y0s0t1 <= 35
+x00 + 10000 binaryLp0j0nj1x3y3s3t4 >= 3
+x00 - 10000 binaryLp0j0nj1x3y3s3t4 <= 3
+x01 + 10000 binaryLp0j0nj1x3y3s3t4 >= 3
+x01 - 10000 binaryLp0j0nj1x3y3s3t4 <= 3
+y00 - 10000 binaryLp0j0nj1x3y3s3t4 <= 3
+y01 + 10000 binaryLp0j0nj1x3y3s3t4 >= 4
+x00 + 10000 binaryRp0j0nj1x3y3s3t4 >= 3
+x00 - 10000 binaryRp0j0nj1x3y3s3t4 <= 3
+x01 + 10000 binaryRp0j0nj1x3y3s3t4 >= 3
+x01 - 10000 binaryRp0j0nj1x3y3s3t4 <= 3
+y01 - 10000 binaryRp0j0nj1x3y3s3t4 <= 3
+y00 + 10000 binaryRp0j0nj1x3y3s3t4 >= 4
+x01 + 10000 binaryLp0j1nj2x3y3s3t4 >= 3
+x01 - 10000 binaryLp0j1nj2x3y3s3t4 <= 3
+x02 + 10000 binaryLp0j1nj2x3y3s3t4 >= 3
+x02 - 10000 binaryLp0j1nj2x3y3s3t4 <= 3
+y01 - 10000 binaryLp0j1nj2x3y3s3t4 <= 3
+y02 + 10000 binaryLp0j1nj2x3y3s3t4 >= 4
+x01 + 10000 binaryRp0j1nj2x3y3s3t4 >= 3
+x01 - 10000 binaryRp0j1nj2x3y3s3t4 <= 3
+x02 + 10000 binaryRp0j1nj2x3y3s3t4 >= 3
+x02 - 10000 binaryRp0j1nj2x3y3s3t4 <= 3
+y02 - 10000 binaryRp0j1nj2x3y3s3t4 <= 3
+y01 + 10000 binaryRp0j1nj2x3y3s3t4 >= 4
+x02 + 10000 binaryLp0j2nj3x3y3s3t4 >= 3
+x02 - 10000 binaryLp0j2nj3x3y3s3t4 <= 3
+x03 + 10000 binaryLp0j2nj3x3y3s3t4 >= 3
+x03 - 10000 binaryLp0j2nj3x3y3s3t4 <= 3
+y02 - 10000 binaryLp0j2nj3x3y3s3t4 <= 3
+y03 + 10000 binaryLp0j2nj3x3y3s3t4 >= 4
+x02 + 10000 binaryRp0j2nj3x3y3s3t4 >= 3
+x02 - 10000 binaryRp0j2nj3x3y3s3t4 <= 3
+x03 + 10000 binaryRp0j2nj3x3y3s3t4 >= 3
+x03 - 10000 binaryRp0j2nj3x3y3s3t4 <= 3
+y03 - 10000 binaryRp0j2nj3x3y3s3t4 <= 3
+y02 + 10000 binaryRp0j2nj3x3y3s3t4 >= 4
+x03 + 10000 binaryLp0j3nj4x3y3s3t4 >= 3
+x03 - 10000 binaryLp0j3nj4x3y3s3t4 <= 3
+x04 + 10000 binaryLp0j3nj4x3y3s3t4 >= 3
+x04 - 10000 binaryLp0j3nj4x3y3s3t4 <= 3
+y03 - 10000 binaryLp0j3nj4x3y3s3t4 <= 3
+y04 + 10000 binaryLp0j3nj4x3y3s3t4 >= 4
+x03 + 10000 binaryRp0j3nj4x3y3s3t4 >= 3
+x03 - 10000 binaryRp0j3nj4x3y3s3t4 <= 3
+x04 + 10000 binaryRp0j3nj4x3y3s3t4 >= 3
+x04 - 10000 binaryRp0j3nj4x3y3s3t4 <= 3
+y04 - 10000 binaryRp0j3nj4x3y3s3t4 <= 3
+y03 + 10000 binaryRp0j3nj4x3y3s3t4 >= 4
+x04 + 10000 binaryLp0j4nj5x3y3s3t4 >= 3
+x04 - 10000 binaryLp0j4nj5x3y3s3t4 <= 3
+x05 + 10000 binaryLp0j4nj5x3y3s3t4 >= 3
+x05 - 10000 binaryLp0j4nj5x3y3s3t4 <= 3
+y04 - 10000 binaryLp0j4nj5x3y3s3t4 <= 3
+y05 + 10000 binaryLp0j4nj5x3y3s3t4 >= 4
+x04 + 10000 binaryRp0j4nj5x3y3s3t4 >= 3
+x04 - 10000 binaryRp0j4nj5x3y3s3t4 <= 3
+x05 + 10000 binaryRp0j4nj5x3y3s3t4 >= 3
+x05 - 10000 binaryRp0j4nj5x3y3s3t4 <= 3
+y05 - 10000 binaryRp0j4nj5x3y3s3t4 <= 3
+y04 + 10000 binaryRp0j4nj5x3y3s3t4 >= 4
+x05 + 10000 binaryLp0j5nj6x3y3s3t4 >= 3
+x05 - 10000 binaryLp0j5nj6x3y3s3t4 <= 3
+x06 + 10000 binaryLp0j5nj6x3y3s3t4 >= 3
+x06 - 10000 binaryLp0j5nj6x3y3s3t4 <= 3
+y05 - 10000 binaryLp0j5nj6x3y3s3t4 <= 3
+y06 + 10000 binaryLp0j5nj6x3y3s3t4 >= 4
+x05 + 10000 binaryRp0j5nj6x3y3s3t4 >= 3
+x05 - 10000 binaryRp0j5nj6x3y3s3t4 <= 3
+x06 + 10000 binaryRp0j5nj6x3y3s3t4 >= 3
+x06 - 10000 binaryRp0j5nj6x3y3s3t4 <= 3
+y06 - 10000 binaryRp0j5nj6x3y3s3t4 <= 3
+y05 + 10000 binaryRp0j5nj6x3y3s3t4 >= 4
+x06 + 10000 binaryLp0j6nj7x3y3s3t4 >= 3
+x06 - 10000 binaryLp0j6nj7x3y3s3t4 <= 3
+x07 + 10000 binaryLp0j6nj7x3y3s3t4 >= 3
+x07 - 10000 binaryLp0j6nj7x3y3s3t4 <= 3
+y06 - 10000 binaryLp0j6nj7x3y3s3t4 <= 3
+y07 + 10000 binaryLp0j6nj7x3y3s3t4 >= 4
+x06 + 10000 binaryRp0j6nj7x3y3s3t4 >= 3
+x06 - 10000 binaryRp0j6nj7x3y3s3t4 <= 3
+x07 + 10000 binaryRp0j6nj7x3y3s3t4 >= 3
+x07 - 10000 binaryRp0j6nj7x3y3s3t4 <= 3
+y07 - 10000 binaryRp0j6nj7x3y3s3t4 <= 3
+y06 + 10000 binaryRp0j6nj7x3y3s3t4 >= 4
+x07 + 10000 binaryLp0j7nj8x3y3s3t4 >= 3
+x07 - 10000 binaryLp0j7nj8x3y3s3t4 <= 3
+x08 + 10000 binaryLp0j7nj8x3y3s3t4 >= 3
+x08 - 10000 binaryLp0j7nj8x3y3s3t4 <= 3
+y07 - 10000 binaryLp0j7nj8x3y3s3t4 <= 3
+y08 + 10000 binaryLp0j7nj8x3y3s3t4 >= 4
+x07 + 10000 binaryRp0j7nj8x3y3s3t4 >= 3
+x07 - 10000 binaryRp0j7nj8x3y3s3t4 <= 3
+x08 + 10000 binaryRp0j7nj8x3y3s3t4 >= 3
+x08 - 10000 binaryRp0j7nj8x3y3s3t4 <= 3
+y08 - 10000 binaryRp0j7nj8x3y3s3t4 <= 3
+y07 + 10000 binaryRp0j7nj8x3y3s3t4 >= 4
+x08 + 10000 binaryLp0j8nj9x3y3s3t4 >= 3
+x08 - 10000 binaryLp0j8nj9x3y3s3t4 <= 3
+x09 + 10000 binaryLp0j8nj9x3y3s3t4 >= 3
+x09 - 10000 binaryLp0j8nj9x3y3s3t4 <= 3
+y08 - 10000 binaryLp0j8nj9x3y3s3t4 <= 3
+y09 + 10000 binaryLp0j8nj9x3y3s3t4 >= 4
+x08 + 10000 binaryRp0j8nj9x3y3s3t4 >= 3
+x08 - 10000 binaryRp0j8nj9x3y3s3t4 <= 3
+x09 + 10000 binaryRp0j8nj9x3y3s3t4 >= 3
+x09 - 10000 binaryRp0j8nj9x3y3s3t4 <= 3
+y09 - 10000 binaryRp0j8nj9x3y3s3t4 <= 3
+y08 + 10000 binaryRp0j8nj9x3y3s3t4 >= 4
+x10 + 10000 binaryLp1j0nj1x3y3s3t4 >= 3
+x10 - 10000 binaryLp1j0nj1x3y3s3t4 <= 3
+x11 + 10000 binaryLp1j0nj1x3y3s3t4 >= 3
+x11 - 10000 binaryLp1j0nj1x3y3s3t4 <= 3
+y10 - 10000 binaryLp1j0nj1x3y3s3t4 <= 3
+y11 + 10000 binaryLp1j0nj1x3y3s3t4 >= 4
+x10 + 10000 binaryRp1j0nj1x3y3s3t4 >= 3
+x10 - 10000 binaryRp1j0nj1x3y3s3t4 <= 3
+x11 + 10000 binaryRp1j0nj1x3y3s3t4 >= 3
+x11 - 10000 binaryRp1j0nj1x3y3s3t4 <= 3
+y11 - 10000 binaryRp1j0nj1x3y3s3t4 <= 3
+y10 + 10000 binaryRp1j0nj1x3y3s3t4 >= 4
+x11 + 10000 binaryLp1j1nj2x3y3s3t4 >= 3
+x11 - 10000 binaryLp1j1nj2x3y3s3t4 <= 3
+x12 + 10000 binaryLp1j1nj2x3y3s3t4 >= 3
+x12 - 10000 binaryLp1j1nj2x3y3s3t4 <= 3
+y11 - 10000 binaryLp1j1nj2x3y3s3t4 <= 3
+y12 + 10000 binaryLp1j1nj2x3y3s3t4 >= 4
+x11 + 10000 binaryRp1j1nj2x3y3s3t4 >= 3
+x11 - 10000 binaryRp1j1nj2x3y3s3t4 <= 3
+x12 + 10000 binaryRp1j1nj2x3y3s3t4 >= 3
+x12 - 10000 binaryRp1j1nj2x3y3s3t4 <= 3
+y12 - 10000 binaryRp1j1nj2x3y3s3t4 <= 3
+y11 + 10000 binaryRp1j1nj2x3y3s3t4 >= 4
+x12 + 10000 binaryLp1j2nj3x3y3s3t4 >= 3
+x12 - 10000 binaryLp1j2nj3x3y3s3t4 <= 3
+x13 + 10000 binaryLp1j2nj3x3y3s3t4 >= 3
+x13 - 10000 binaryLp1j2nj3x3y3s3t4 <= 3
+y12 - 10000 binaryLp1j2nj3x3y3s3t4 <= 3
+y13 + 10000 binaryLp1j2nj3x3y3s3t4 >= 4
+x12 + 10000 binaryRp1j2nj3x3y3s3t4 >= 3
+x12 - 10000 binaryRp1j2nj3x3y3s3t4 <= 3
+x13 + 10000 binaryRp1j2nj3x3y3s3t4 >= 3
+x13 - 10000 binaryRp1j2nj3x3y3s3t4 <= 3
+y13 - 10000 binaryRp1j2nj3x3y3s3t4 <= 3
+y12 + 10000 binaryRp1j2nj3x3y3s3t4 >= 4
+x13 + 10000 binaryLp1j3nj4x3y3s3t4 >= 3
+x13 - 10000 binaryLp1j3nj4x3y3s3t4 <= 3
+x14 + 10000 binaryLp1j3nj4x3y3s3t4 >= 3
+x14 - 10000 binaryLp1j3nj4x3y3s3t4 <= 3
+y13 - 10000 binaryLp1j3nj4x3y3s3t4 <= 3
+y14 + 10000 binaryLp1j3nj4x3y3s3t4 >= 4
+x13 + 10000 binaryRp1j3nj4x3y3s3t4 >= 3
+x13 - 10000 binaryRp1j3nj4x3y3s3t4 <= 3
+x14 + 10000 binaryRp1j3nj4x3y3s3t4 >= 3
+x14 - 10000 binaryRp1j3nj4x3y3s3t4 <= 3
+y14 - 10000 binaryRp1j3nj4x3y3s3t4 <= 3
+y13 + 10000 binaryRp1j3nj4x3y3s3t4 >= 4
+x14 + 10000 binaryLp1j4nj5x3y3s3t4 >= 3
+x14 - 10000 binaryLp1j4nj5x3y3s3t4 <= 3
+x15 + 10000 binaryLp1j4nj5x3y3s3t4 >= 3
+x15 - 10000 binaryLp1j4nj5x3y3s3t4 <= 3
+y14 - 10000 binaryLp1j4nj5x3y3s3t4 <= 3
+y15 + 10000 binaryLp1j4nj5x3y3s3t4 >= 4
+x14 + 10000 binaryRp1j4nj5x3y3s3t4 >= 3
+x14 - 10000 binaryRp1j4nj5x3y3s3t4 <= 3
+x15 + 10000 binaryRp1j4nj5x3y3s3t4 >= 3
+x15 - 10000 binaryRp1j4nj5x3y3s3t4 <= 3
+y15 - 10000 binaryRp1j4nj5x3y3s3t4 <= 3
+y14 + 10000 binaryRp1j4nj5x3y3s3t4 >= 4
+x15 + 10000 binaryLp1j5nj6x3y3s3t4 >= 3
+x15 - 10000 binaryLp1j5nj6x3y3s3t4 <= 3
+x16 + 10000 binaryLp1j5nj6x3y3s3t4 >= 3
+x16 - 10000 binaryLp1j5nj6x3y3s3t4 <= 3
+y15 - 10000 binaryLp1j5nj6x3y3s3t4 <= 3
+y16 + 10000 binaryLp1j5nj6x3y3s3t4 >= 4
+x15 + 10000 binaryRp1j5nj6x3y3s3t4 >= 3
+x15 - 10000 binaryRp1j5nj6x3y3s3t4 <= 3
+x16 + 10000 binaryRp1j5nj6x3y3s3t4 >= 3
+x16 - 10000 binaryRp1j5nj6x3y3s3t4 <= 3
+y16 - 10000 binaryRp1j5nj6x3y3s3t4 <= 3
+y15 + 10000 binaryRp1j5nj6x3y3s3t4 >= 4
+x16 + 10000 binaryLp1j6nj7x3y3s3t4 >= 3
+x16 - 10000 binaryLp1j6nj7x3y3s3t4 <= 3
+x17 + 10000 binaryLp1j6nj7x3y3s3t4 >= 3
+x17 - 10000 binaryLp1j6nj7x3y3s3t4 <= 3
+y16 - 10000 binaryLp1j6nj7x3y3s3t4 <= 3
+y17 + 10000 binaryLp1j6nj7x3y3s3t4 >= 4
+x16 + 10000 binaryRp1j6nj7x3y3s3t4 >= 3
+x16 - 10000 binaryRp1j6nj7x3y3s3t4 <= 3
+x17 + 10000 binaryRp1j6nj7x3y3s3t4 >= 3
+x17 - 10000 binaryRp1j6nj7x3y3s3t4 <= 3
+y17 - 10000 binaryRp1j6nj7x3y3s3t4 <= 3
+y16 + 10000 binaryRp1j6nj7x3y3s3t4 >= 4
+x17 + 10000 binaryLp1j7nj8x3y3s3t4 >= 3
+x17 - 10000 binaryLp1j7nj8x3y3s3t4 <= 3
+x18 + 10000 binaryLp1j7nj8x3y3s3t4 >= 3
+x18 - 10000 binaryLp1j7nj8x3y3s3t4 <= 3
+y17 - 10000 binaryLp1j7nj8x3y3s3t4 <= 3
+y18 + 10000 binaryLp1j7nj8x3y3s3t4 >= 4
+x17 + 10000 binaryRp1j7nj8x3y3s3t4 >= 3
+x17 - 10000 binaryRp1j7nj8x3y3s3t4 <= 3
+x18 + 10000 binaryRp1j7nj8x3y3s3t4 >= 3
+x18 - 10000 binaryRp1j7nj8x3y3s3t4 <= 3
+y18 - 10000 binaryRp1j7nj8x3y3s3t4 <= 3
+y17 + 10000 binaryRp1j7nj8x3y3s3t4 >= 4
+x18 + 10000 binaryLp1j8nj9x3y3s3t4 >= 3
+x18 - 10000 binaryLp1j8nj9x3y3s3t4 <= 3
+x19 + 10000 binaryLp1j8nj9x3y3s3t4 >= 3
+x19 - 10000 binaryLp1j8nj9x3y3s3t4 <= 3
+y18 - 10000 binaryLp1j8nj9x3y3s3t4 <= 3
+y19 + 10000 binaryLp1j8nj9x3y3s3t4 >= 4
+x18 + 10000 binaryRp1j8nj9x3y3s3t4 >= 3
+x18 - 10000 binaryRp1j8nj9x3y3s3t4 <= 3
+x19 + 10000 binaryRp1j8nj9x3y3s3t4 >= 3
+x19 - 10000 binaryRp1j8nj9x3y3s3t4 <= 3
+y19 - 10000 binaryRp1j8nj9x3y3s3t4 <= 3
+y18 + 10000 binaryRp1j8nj9x3y3s3t4 >= 4
+ + binaryLp0j0nj1x3y3s3t4 + binaryRp0j0nj1x3y3s3t4 + binaryLp0j1nj2x3y3s3t4 + binaryRp0j1nj2x3y3s3t4 + binaryLp0j2nj3x3y3s3t4 + binaryRp0j2nj3x3y3s3t4 + binaryLp0j3nj4x3y3s3t4 + binaryRp0j3nj4x3y3s3t4 + binaryLp0j4nj5x3y3s3t4 + binaryRp0j4nj5x3y3s3t4 + binaryLp0j5nj6x3y3s3t4 + binaryRp0j5nj6x3y3s3t4 + binaryLp0j6nj7x3y3s3t4 + binaryRp0j6nj7x3y3s3t4 + binaryLp0j7nj8x3y3s3t4 + binaryRp0j7nj8x3y3s3t4 + binaryLp0j8nj9x3y3s3t4 + binaryRp0j8nj9x3y3s3t4 + binaryLp1j0nj1x3y3s3t4 + binaryRp1j0nj1x3y3s3t4 + binaryLp1j1nj2x3y3s3t4 + binaryRp1j1nj2x3y3s3t4 + binaryLp1j2nj3x3y3s3t4 + binaryRp1j2nj3x3y3s3t4 + binaryLp1j3nj4x3y3s3t4 + binaryRp1j3nj4x3y3s3t4 + binaryLp1j4nj5x3y3s3t4 + binaryRp1j4nj5x3y3s3t4 + binaryLp1j5nj6x3y3s3t4 + binaryRp1j5nj6x3y3s3t4 + binaryLp1j6nj7x3y3s3t4 + binaryRp1j6nj7x3y3s3t4 + binaryLp1j7nj8x3y3s3t4 + binaryRp1j7nj8x3y3s3t4 + binaryLp1j8nj9x3y3s3t4 + binaryRp1j8nj9x3y3s3t4 <= 35
+y00 + 10000 binaryUp0j0nj1x2y4s3t4 >= 4
+y00 - 10000 binaryUp0j0nj1x2y4s3t4 <=  4
+y01 + 10000 binaryUp0j0nj1x2y4s3t4 >= 4
+y01 - 10000 binaryUp0j0nj1x2y4s3t4 <= 4
+x00 - 10000 binaryUp0j0nj1x2y4s3t4 <= 2
+x01 + 10000 binaryUp0j0nj1x2y4s3t4 >= 3
+y00 + 10000 binaryDp0j0nj1x2y4s3t4 >= 4
+y00 - 10000 binaryDp0j0nj1x2y4s3t4 <= 4
+y01 + 10000 binaryDp0j0nj1x2y4s3t4 >= 4
+y01 - 10000 binaryDp0j0nj1x2y4s3t4 <= 4
+x01 - 10000 binaryDp0j0nj1x2y4s3t4 <= 2
+x00 + 10000 binaryDp0j0nj1x2y4s3t4 >= 3
+y01 + 10000 binaryUp0j1nj2x2y4s3t4 >= 4
+y01 - 10000 binaryUp0j1nj2x2y4s3t4 <=  4
+y02 + 10000 binaryUp0j1nj2x2y4s3t4 >= 4
+y02 - 10000 binaryUp0j1nj2x2y4s3t4 <= 4
+x01 - 10000 binaryUp0j1nj2x2y4s3t4 <= 2
+x02 + 10000 binaryUp0j1nj2x2y4s3t4 >= 3
+y01 + 10000 binaryDp0j1nj2x2y4s3t4 >= 4
+y01 - 10000 binaryDp0j1nj2x2y4s3t4 <= 4
+y02 + 10000 binaryDp0j1nj2x2y4s3t4 >= 4
+y02 - 10000 binaryDp0j1nj2x2y4s3t4 <= 4
+x02 - 10000 binaryDp0j1nj2x2y4s3t4 <= 2
+x01 + 10000 binaryDp0j1nj2x2y4s3t4 >= 3
+y02 + 10000 binaryUp0j2nj3x2y4s3t4 >= 4
+y02 - 10000 binaryUp0j2nj3x2y4s3t4 <=  4
+y03 + 10000 binaryUp0j2nj3x2y4s3t4 >= 4
+y03 - 10000 binaryUp0j2nj3x2y4s3t4 <= 4
+x02 - 10000 binaryUp0j2nj3x2y4s3t4 <= 2
+x03 + 10000 binaryUp0j2nj3x2y4s3t4 >= 3
+y02 + 10000 binaryDp0j2nj3x2y4s3t4 >= 4
+y02 - 10000 binaryDp0j2nj3x2y4s3t4 <= 4
+y03 + 10000 binaryDp0j2nj3x2y4s3t4 >= 4
+y03 - 10000 binaryDp0j2nj3x2y4s3t4 <= 4
+x03 - 10000 binaryDp0j2nj3x2y4s3t4 <= 2
+x02 + 10000 binaryDp0j2nj3x2y4s3t4 >= 3
+y03 + 10000 binaryUp0j3nj4x2y4s3t4 >= 4
+y03 - 10000 binaryUp0j3nj4x2y4s3t4 <=  4
+y04 + 10000 binaryUp0j3nj4x2y4s3t4 >= 4
+y04 - 10000 binaryUp0j3nj4x2y4s3t4 <= 4
+x03 - 10000 binaryUp0j3nj4x2y4s3t4 <= 2
+x04 + 10000 binaryUp0j3nj4x2y4s3t4 >= 3
+y03 + 10000 binaryDp0j3nj4x2y4s3t4 >= 4
+y03 - 10000 binaryDp0j3nj4x2y4s3t4 <= 4
+y04 + 10000 binaryDp0j3nj4x2y4s3t4 >= 4
+y04 - 10000 binaryDp0j3nj4x2y4s3t4 <= 4
+x04 - 10000 binaryDp0j3nj4x2y4s3t4 <= 2
+x03 + 10000 binaryDp0j3nj4x2y4s3t4 >= 3
+y04 + 10000 binaryUp0j4nj5x2y4s3t4 >= 4
+y04 - 10000 binaryUp0j4nj5x2y4s3t4 <=  4
+y05 + 10000 binaryUp0j4nj5x2y4s3t4 >= 4
+y05 - 10000 binaryUp0j4nj5x2y4s3t4 <= 4
+x04 - 10000 binaryUp0j4nj5x2y4s3t4 <= 2
+x05 + 10000 binaryUp0j4nj5x2y4s3t4 >= 3
+y04 + 10000 binaryDp0j4nj5x2y4s3t4 >= 4
+y04 - 10000 binaryDp0j4nj5x2y4s3t4 <= 4
+y05 + 10000 binaryDp0j4nj5x2y4s3t4 >= 4
+y05 - 10000 binaryDp0j4nj5x2y4s3t4 <= 4
+x05 - 10000 binaryDp0j4nj5x2y4s3t4 <= 2
+x04 + 10000 binaryDp0j4nj5x2y4s3t4 >= 3
+y05 + 10000 binaryUp0j5nj6x2y4s3t4 >= 4
+y05 - 10000 binaryUp0j5nj6x2y4s3t4 <=  4
+y06 + 10000 binaryUp0j5nj6x2y4s3t4 >= 4
+y06 - 10000 binaryUp0j5nj6x2y4s3t4 <= 4
+x05 - 10000 binaryUp0j5nj6x2y4s3t4 <= 2
+x06 + 10000 binaryUp0j5nj6x2y4s3t4 >= 3
+y05 + 10000 binaryDp0j5nj6x2y4s3t4 >= 4
+y05 - 10000 binaryDp0j5nj6x2y4s3t4 <= 4
+y06 + 10000 binaryDp0j5nj6x2y4s3t4 >= 4
+y06 - 10000 binaryDp0j5nj6x2y4s3t4 <= 4
+x06 - 10000 binaryDp0j5nj6x2y4s3t4 <= 2
+x05 + 10000 binaryDp0j5nj6x2y4s3t4 >= 3
+y06 + 10000 binaryUp0j6nj7x2y4s3t4 >= 4
+y06 - 10000 binaryUp0j6nj7x2y4s3t4 <=  4
+y07 + 10000 binaryUp0j6nj7x2y4s3t4 >= 4
+y07 - 10000 binaryUp0j6nj7x2y4s3t4 <= 4
+x06 - 10000 binaryUp0j6nj7x2y4s3t4 <= 2
+x07 + 10000 binaryUp0j6nj7x2y4s3t4 >= 3
+y06 + 10000 binaryDp0j6nj7x2y4s3t4 >= 4
+y06 - 10000 binaryDp0j6nj7x2y4s3t4 <= 4
+y07 + 10000 binaryDp0j6nj7x2y4s3t4 >= 4
+y07 - 10000 binaryDp0j6nj7x2y4s3t4 <= 4
+x07 - 10000 binaryDp0j6nj7x2y4s3t4 <= 2
+x06 + 10000 binaryDp0j6nj7x2y4s3t4 >= 3
+y07 + 10000 binaryUp0j7nj8x2y4s3t4 >= 4
+y07 - 10000 binaryUp0j7nj8x2y4s3t4 <=  4
+y08 + 10000 binaryUp0j7nj8x2y4s3t4 >= 4
+y08 - 10000 binaryUp0j7nj8x2y4s3t4 <= 4
+x07 - 10000 binaryUp0j7nj8x2y4s3t4 <= 2
+x08 + 10000 binaryUp0j7nj8x2y4s3t4 >= 3
+y07 + 10000 binaryDp0j7nj8x2y4s3t4 >= 4
+y07 - 10000 binaryDp0j7nj8x2y4s3t4 <= 4
+y08 + 10000 binaryDp0j7nj8x2y4s3t4 >= 4
+y08 - 10000 binaryDp0j7nj8x2y4s3t4 <= 4
+x08 - 10000 binaryDp0j7nj8x2y4s3t4 <= 2
+x07 + 10000 binaryDp0j7nj8x2y4s3t4 >= 3
+y08 + 10000 binaryUp0j8nj9x2y4s3t4 >= 4
+y08 - 10000 binaryUp0j8nj9x2y4s3t4 <=  4
+y09 + 10000 binaryUp0j8nj9x2y4s3t4 >= 4
+y09 - 10000 binaryUp0j8nj9x2y4s3t4 <= 4
+x08 - 10000 binaryUp0j8nj9x2y4s3t4 <= 2
+x09 + 10000 binaryUp0j8nj9x2y4s3t4 >= 3
+y08 + 10000 binaryDp0j8nj9x2y4s3t4 >= 4
+y08 - 10000 binaryDp0j8nj9x2y4s3t4 <= 4
+y09 + 10000 binaryDp0j8nj9x2y4s3t4 >= 4
+y09 - 10000 binaryDp0j8nj9x2y4s3t4 <= 4
+x09 - 10000 binaryDp0j8nj9x2y4s3t4 <= 2
+x08 + 10000 binaryDp0j8nj9x2y4s3t4 >= 3
+y10 + 10000 binaryUp1j0nj1x2y4s3t4 >= 4
+y10 - 10000 binaryUp1j0nj1x2y4s3t4 <=  4
+y11 + 10000 binaryUp1j0nj1x2y4s3t4 >= 4
+y11 - 10000 binaryUp1j0nj1x2y4s3t4 <= 4
+x10 - 10000 binaryUp1j0nj1x2y4s3t4 <= 2
+x11 + 10000 binaryUp1j0nj1x2y4s3t4 >= 3
+y10 + 10000 binaryDp1j0nj1x2y4s3t4 >= 4
+y10 - 10000 binaryDp1j0nj1x2y4s3t4 <= 4
+y11 + 10000 binaryDp1j0nj1x2y4s3t4 >= 4
+y11 - 10000 binaryDp1j0nj1x2y4s3t4 <= 4
+x11 - 10000 binaryDp1j0nj1x2y4s3t4 <= 2
+x10 + 10000 binaryDp1j0nj1x2y4s3t4 >= 3
+y11 + 10000 binaryUp1j1nj2x2y4s3t4 >= 4
+y11 - 10000 binaryUp1j1nj2x2y4s3t4 <=  4
+y12 + 10000 binaryUp1j1nj2x2y4s3t4 >= 4
+y12 - 10000 binaryUp1j1nj2x2y4s3t4 <= 4
+x11 - 10000 binaryUp1j1nj2x2y4s3t4 <= 2
+x12 + 10000 binaryUp1j1nj2x2y4s3t4 >= 3
+y11 + 10000 binaryDp1j1nj2x2y4s3t4 >= 4
+y11 - 10000 binaryDp1j1nj2x2y4s3t4 <= 4
+y12 + 10000 binaryDp1j1nj2x2y4s3t4 >= 4
+y12 - 10000 binaryDp1j1nj2x2y4s3t4 <= 4
+x12 - 10000 binaryDp1j1nj2x2y4s3t4 <= 2
+x11 + 10000 binaryDp1j1nj2x2y4s3t4 >= 3
+y12 + 10000 binaryUp1j2nj3x2y4s3t4 >= 4
+y12 - 10000 binaryUp1j2nj3x2y4s3t4 <=  4
+y13 + 10000 binaryUp1j2nj3x2y4s3t4 >= 4
+y13 - 10000 binaryUp1j2nj3x2y4s3t4 <= 4
+x12 - 10000 binaryUp1j2nj3x2y4s3t4 <= 2
+x13 + 10000 binaryUp1j2nj3x2y4s3t4 >= 3
+y12 + 10000 binaryDp1j2nj3x2y4s3t4 >= 4
+y12 - 10000 binaryDp1j2nj3x2y4s3t4 <= 4
+y13 + 10000 binaryDp1j2nj3x2y4s3t4 >= 4
+y13 - 10000 binaryDp1j2nj3x2y4s3t4 <= 4
+x13 - 10000 binaryDp1j2nj3x2y4s3t4 <= 2
+x12 + 10000 binaryDp1j2nj3x2y4s3t4 >= 3
+y13 + 10000 binaryUp1j3nj4x2y4s3t4 >= 4
+y13 - 10000 binaryUp1j3nj4x2y4s3t4 <=  4
+y14 + 10000 binaryUp1j3nj4x2y4s3t4 >= 4
+y14 - 10000 binaryUp1j3nj4x2y4s3t4 <= 4
+x13 - 10000 binaryUp1j3nj4x2y4s3t4 <= 2
+x14 + 10000 binaryUp1j3nj4x2y4s3t4 >= 3
+y13 + 10000 binaryDp1j3nj4x2y4s3t4 >= 4
+y13 - 10000 binaryDp1j3nj4x2y4s3t4 <= 4
+y14 + 10000 binaryDp1j3nj4x2y4s3t4 >= 4
+y14 - 10000 binaryDp1j3nj4x2y4s3t4 <= 4
+x14 - 10000 binaryDp1j3nj4x2y4s3t4 <= 2
+x13 + 10000 binaryDp1j3nj4x2y4s3t4 >= 3
+y14 + 10000 binaryUp1j4nj5x2y4s3t4 >= 4
+y14 - 10000 binaryUp1j4nj5x2y4s3t4 <=  4
+y15 + 10000 binaryUp1j4nj5x2y4s3t4 >= 4
+y15 - 10000 binaryUp1j4nj5x2y4s3t4 <= 4
+x14 - 10000 binaryUp1j4nj5x2y4s3t4 <= 2
+x15 + 10000 binaryUp1j4nj5x2y4s3t4 >= 3
+y14 + 10000 binaryDp1j4nj5x2y4s3t4 >= 4
+y14 - 10000 binaryDp1j4nj5x2y4s3t4 <= 4
+y15 + 10000 binaryDp1j4nj5x2y4s3t4 >= 4
+y15 - 10000 binaryDp1j4nj5x2y4s3t4 <= 4
+x15 - 10000 binaryDp1j4nj5x2y4s3t4 <= 2
+x14 + 10000 binaryDp1j4nj5x2y4s3t4 >= 3
+y15 + 10000 binaryUp1j5nj6x2y4s3t4 >= 4
+y15 - 10000 binaryUp1j5nj6x2y4s3t4 <=  4
+y16 + 10000 binaryUp1j5nj6x2y4s3t4 >= 4
+y16 - 10000 binaryUp1j5nj6x2y4s3t4 <= 4
+x15 - 10000 binaryUp1j5nj6x2y4s3t4 <= 2
+x16 + 10000 binaryUp1j5nj6x2y4s3t4 >= 3
+y15 + 10000 binaryDp1j5nj6x2y4s3t4 >= 4
+y15 - 10000 binaryDp1j5nj6x2y4s3t4 <= 4
+y16 + 10000 binaryDp1j5nj6x2y4s3t4 >= 4
+y16 - 10000 binaryDp1j5nj6x2y4s3t4 <= 4
+x16 - 10000 binaryDp1j5nj6x2y4s3t4 <= 2
+x15 + 10000 binaryDp1j5nj6x2y4s3t4 >= 3
+y16 + 10000 binaryUp1j6nj7x2y4s3t4 >= 4
+y16 - 10000 binaryUp1j6nj7x2y4s3t4 <=  4
+y17 + 10000 binaryUp1j6nj7x2y4s3t4 >= 4
+y17 - 10000 binaryUp1j6nj7x2y4s3t4 <= 4
+x16 - 10000 binaryUp1j6nj7x2y4s3t4 <= 2
+x17 + 10000 binaryUp1j6nj7x2y4s3t4 >= 3
+y16 + 10000 binaryDp1j6nj7x2y4s3t4 >= 4
+y16 - 10000 binaryDp1j6nj7x2y4s3t4 <= 4
+y17 + 10000 binaryDp1j6nj7x2y4s3t4 >= 4
+y17 - 10000 binaryDp1j6nj7x2y4s3t4 <= 4
+x17 - 10000 binaryDp1j6nj7x2y4s3t4 <= 2
+x16 + 10000 binaryDp1j6nj7x2y4s3t4 >= 3
+y17 + 10000 binaryUp1j7nj8x2y4s3t4 >= 4
+y17 - 10000 binaryUp1j7nj8x2y4s3t4 <=  4
+y18 + 10000 binaryUp1j7nj8x2y4s3t4 >= 4
+y18 - 10000 binaryUp1j7nj8x2y4s3t4 <= 4
+x17 - 10000 binaryUp1j7nj8x2y4s3t4 <= 2
+x18 + 10000 binaryUp1j7nj8x2y4s3t4 >= 3
+y17 + 10000 binaryDp1j7nj8x2y4s3t4 >= 4
+y17 - 10000 binaryDp1j7nj8x2y4s3t4 <= 4
+y18 + 10000 binaryDp1j7nj8x2y4s3t4 >= 4
+y18 - 10000 binaryDp1j7nj8x2y4s3t4 <= 4
+x18 - 10000 binaryDp1j7nj8x2y4s3t4 <= 2
+x17 + 10000 binaryDp1j7nj8x2y4s3t4 >= 3
+y18 + 10000 binaryUp1j8nj9x2y4s3t4 >= 4
+y18 - 10000 binaryUp1j8nj9x2y4s3t4 <=  4
+y19 + 10000 binaryUp1j8nj9x2y4s3t4 >= 4
+y19 - 10000 binaryUp1j8nj9x2y4s3t4 <= 4
+x18 - 10000 binaryUp1j8nj9x2y4s3t4 <= 2
+x19 + 10000 binaryUp1j8nj9x2y4s3t4 >= 3
+y18 + 10000 binaryDp1j8nj9x2y4s3t4 >= 4
+y18 - 10000 binaryDp1j8nj9x2y4s3t4 <= 4
+y19 + 10000 binaryDp1j8nj9x2y4s3t4 >= 4
+y19 - 10000 binaryDp1j8nj9x2y4s3t4 <= 4
+x19 - 10000 binaryDp1j8nj9x2y4s3t4 <= 2
+x18 + 10000 binaryDp1j8nj9x2y4s3t4 >= 3
+ + binaryUp0j0nj1x2y4s3t4 + binaryDp0j0nj1x2y4s3t4 + binaryUp0j1nj2x2y4s3t4 + binaryDp0j1nj2x2y4s3t4 + binaryUp0j2nj3x2y4s3t4 + binaryDp0j2nj3x2y4s3t4 + binaryUp0j3nj4x2y4s3t4 + binaryDp0j3nj4x2y4s3t4 + binaryUp0j4nj5x2y4s3t4 + binaryDp0j4nj5x2y4s3t4 + binaryUp0j5nj6x2y4s3t4 + binaryDp0j5nj6x2y4s3t4 + binaryUp0j6nj7x2y4s3t4 + binaryDp0j6nj7x2y4s3t4 + binaryUp0j7nj8x2y4s3t4 + binaryDp0j7nj8x2y4s3t4 + binaryUp0j8nj9x2y4s3t4 + binaryDp0j8nj9x2y4s3t4 + binaryUp1j0nj1x2y4s3t4 + binaryDp1j0nj1x2y4s3t4 + binaryUp1j1nj2x2y4s3t4 + binaryDp1j1nj2x2y4s3t4 + binaryUp1j2nj3x2y4s3t4 + binaryDp1j2nj3x2y4s3t4 + binaryUp1j3nj4x2y4s3t4 + binaryDp1j3nj4x2y4s3t4 + binaryUp1j4nj5x2y4s3t4 + binaryDp1j4nj5x2y4s3t4 + binaryUp1j5nj6x2y4s3t4 + binaryDp1j5nj6x2y4s3t4 + binaryUp1j6nj7x2y4s3t4 + binaryDp1j6nj7x2y4s3t4 + binaryUp1j7nj8x2y4s3t4 + binaryDp1j7nj8x2y4s3t4 + binaryUp1j8nj9x2y4s3t4 + binaryDp1j8nj9x2y4s3t4 <= 35
+x00 + 10000 binaryLp0j0nj1x4y0s4t1 >= 4
+x00 - 10000 binaryLp0j0nj1x4y0s4t1 <= 4
+x01 + 10000 binaryLp0j0nj1x4y0s4t1 >= 4
+x01 - 10000 binaryLp0j0nj1x4y0s4t1 <= 4
+y00 - 10000 binaryLp0j0nj1x4y0s4t1 <= 0
+y01 + 10000 binaryLp0j0nj1x4y0s4t1 >= 1
+x00 + 10000 binaryRp0j0nj1x4y0s4t1 >= 4
+x00 - 10000 binaryRp0j0nj1x4y0s4t1 <= 4
+x01 + 10000 binaryRp0j0nj1x4y0s4t1 >= 4
+x01 - 10000 binaryRp0j0nj1x4y0s4t1 <= 4
+y01 - 10000 binaryRp0j0nj1x4y0s4t1 <= 0
+y00 + 10000 binaryRp0j0nj1x4y0s4t1 >= 1
+x01 + 10000 binaryLp0j1nj2x4y0s4t1 >= 4
+x01 - 10000 binaryLp0j1nj2x4y0s4t1 <= 4
+x02 + 10000 binaryLp0j1nj2x4y0s4t1 >= 4
+x02 - 10000 binaryLp0j1nj2x4y0s4t1 <= 4
+y01 - 10000 binaryLp0j1nj2x4y0s4t1 <= 0
+y02 + 10000 binaryLp0j1nj2x4y0s4t1 >= 1
+x01 + 10000 binaryRp0j1nj2x4y0s4t1 >= 4
+x01 - 10000 binaryRp0j1nj2x4y0s4t1 <= 4
+x02 + 10000 binaryRp0j1nj2x4y0s4t1 >= 4
+x02 - 10000 binaryRp0j1nj2x4y0s4t1 <= 4
+y02 - 10000 binaryRp0j1nj2x4y0s4t1 <= 0
+y01 + 10000 binaryRp0j1nj2x4y0s4t1 >= 1
+x02 + 10000 binaryLp0j2nj3x4y0s4t1 >= 4
+x02 - 10000 binaryLp0j2nj3x4y0s4t1 <= 4
+x03 + 10000 binaryLp0j2nj3x4y0s4t1 >= 4
+x03 - 10000 binaryLp0j2nj3x4y0s4t1 <= 4
+y02 - 10000 binaryLp0j2nj3x4y0s4t1 <= 0
+y03 + 10000 binaryLp0j2nj3x4y0s4t1 >= 1
+x02 + 10000 binaryRp0j2nj3x4y0s4t1 >= 4
+x02 - 10000 binaryRp0j2nj3x4y0s4t1 <= 4
+x03 + 10000 binaryRp0j2nj3x4y0s4t1 >= 4
+x03 - 10000 binaryRp0j2nj3x4y0s4t1 <= 4
+y03 - 10000 binaryRp0j2nj3x4y0s4t1 <= 0
+y02 + 10000 binaryRp0j2nj3x4y0s4t1 >= 1
+x03 + 10000 binaryLp0j3nj4x4y0s4t1 >= 4
+x03 - 10000 binaryLp0j3nj4x4y0s4t1 <= 4
+x04 + 10000 binaryLp0j3nj4x4y0s4t1 >= 4
+x04 - 10000 binaryLp0j3nj4x4y0s4t1 <= 4
+y03 - 10000 binaryLp0j3nj4x4y0s4t1 <= 0
+y04 + 10000 binaryLp0j3nj4x4y0s4t1 >= 1
+x03 + 10000 binaryRp0j3nj4x4y0s4t1 >= 4
+x03 - 10000 binaryRp0j3nj4x4y0s4t1 <= 4
+x04 + 10000 binaryRp0j3nj4x4y0s4t1 >= 4
+x04 - 10000 binaryRp0j3nj4x4y0s4t1 <= 4
+y04 - 10000 binaryRp0j3nj4x4y0s4t1 <= 0
+y03 + 10000 binaryRp0j3nj4x4y0s4t1 >= 1
+x04 + 10000 binaryLp0j4nj5x4y0s4t1 >= 4
+x04 - 10000 binaryLp0j4nj5x4y0s4t1 <= 4
+x05 + 10000 binaryLp0j4nj5x4y0s4t1 >= 4
+x05 - 10000 binaryLp0j4nj5x4y0s4t1 <= 4
+y04 - 10000 binaryLp0j4nj5x4y0s4t1 <= 0
+y05 + 10000 binaryLp0j4nj5x4y0s4t1 >= 1
+x04 + 10000 binaryRp0j4nj5x4y0s4t1 >= 4
+x04 - 10000 binaryRp0j4nj5x4y0s4t1 <= 4
+x05 + 10000 binaryRp0j4nj5x4y0s4t1 >= 4
+x05 - 10000 binaryRp0j4nj5x4y0s4t1 <= 4
+y05 - 10000 binaryRp0j4nj5x4y0s4t1 <= 0
+y04 + 10000 binaryRp0j4nj5x4y0s4t1 >= 1
+x05 + 10000 binaryLp0j5nj6x4y0s4t1 >= 4
+x05 - 10000 binaryLp0j5nj6x4y0s4t1 <= 4
+x06 + 10000 binaryLp0j5nj6x4y0s4t1 >= 4
+x06 - 10000 binaryLp0j5nj6x4y0s4t1 <= 4
+y05 - 10000 binaryLp0j5nj6x4y0s4t1 <= 0
+y06 + 10000 binaryLp0j5nj6x4y0s4t1 >= 1
+x05 + 10000 binaryRp0j5nj6x4y0s4t1 >= 4
+x05 - 10000 binaryRp0j5nj6x4y0s4t1 <= 4
+x06 + 10000 binaryRp0j5nj6x4y0s4t1 >= 4
+x06 - 10000 binaryRp0j5nj6x4y0s4t1 <= 4
+y06 - 10000 binaryRp0j5nj6x4y0s4t1 <= 0
+y05 + 10000 binaryRp0j5nj6x4y0s4t1 >= 1
+x06 + 10000 binaryLp0j6nj7x4y0s4t1 >= 4
+x06 - 10000 binaryLp0j6nj7x4y0s4t1 <= 4
+x07 + 10000 binaryLp0j6nj7x4y0s4t1 >= 4
+x07 - 10000 binaryLp0j6nj7x4y0s4t1 <= 4
+y06 - 10000 binaryLp0j6nj7x4y0s4t1 <= 0
+y07 + 10000 binaryLp0j6nj7x4y0s4t1 >= 1
+x06 + 10000 binaryRp0j6nj7x4y0s4t1 >= 4
+x06 - 10000 binaryRp0j6nj7x4y0s4t1 <= 4
+x07 + 10000 binaryRp0j6nj7x4y0s4t1 >= 4
+x07 - 10000 binaryRp0j6nj7x4y0s4t1 <= 4
+y07 - 10000 binaryRp0j6nj7x4y0s4t1 <= 0
+y06 + 10000 binaryRp0j6nj7x4y0s4t1 >= 1
+x07 + 10000 binaryLp0j7nj8x4y0s4t1 >= 4
+x07 - 10000 binaryLp0j7nj8x4y0s4t1 <= 4
+x08 + 10000 binaryLp0j7nj8x4y0s4t1 >= 4
+x08 - 10000 binaryLp0j7nj8x4y0s4t1 <= 4
+y07 - 10000 binaryLp0j7nj8x4y0s4t1 <= 0
+y08 + 10000 binaryLp0j7nj8x4y0s4t1 >= 1
+x07 + 10000 binaryRp0j7nj8x4y0s4t1 >= 4
+x07 - 10000 binaryRp0j7nj8x4y0s4t1 <= 4
+x08 + 10000 binaryRp0j7nj8x4y0s4t1 >= 4
+x08 - 10000 binaryRp0j7nj8x4y0s4t1 <= 4
+y08 - 10000 binaryRp0j7nj8x4y0s4t1 <= 0
+y07 + 10000 binaryRp0j7nj8x4y0s4t1 >= 1
+x08 + 10000 binaryLp0j8nj9x4y0s4t1 >= 4
+x08 - 10000 binaryLp0j8nj9x4y0s4t1 <= 4
+x09 + 10000 binaryLp0j8nj9x4y0s4t1 >= 4
+x09 - 10000 binaryLp0j8nj9x4y0s4t1 <= 4
+y08 - 10000 binaryLp0j8nj9x4y0s4t1 <= 0
+y09 + 10000 binaryLp0j8nj9x4y0s4t1 >= 1
+x08 + 10000 binaryRp0j8nj9x4y0s4t1 >= 4
+x08 - 10000 binaryRp0j8nj9x4y0s4t1 <= 4
+x09 + 10000 binaryRp0j8nj9x4y0s4t1 >= 4
+x09 - 10000 binaryRp0j8nj9x4y0s4t1 <= 4
+y09 - 10000 binaryRp0j8nj9x4y0s4t1 <= 0
+y08 + 10000 binaryRp0j8nj9x4y0s4t1 >= 1
+x10 + 10000 binaryLp1j0nj1x4y0s4t1 >= 4
+x10 - 10000 binaryLp1j0nj1x4y0s4t1 <= 4
+x11 + 10000 binaryLp1j0nj1x4y0s4t1 >= 4
+x11 - 10000 binaryLp1j0nj1x4y0s4t1 <= 4
+y10 - 10000 binaryLp1j0nj1x4y0s4t1 <= 0
+y11 + 10000 binaryLp1j0nj1x4y0s4t1 >= 1
+x10 + 10000 binaryRp1j0nj1x4y0s4t1 >= 4
+x10 - 10000 binaryRp1j0nj1x4y0s4t1 <= 4
+x11 + 10000 binaryRp1j0nj1x4y0s4t1 >= 4
+x11 - 10000 binaryRp1j0nj1x4y0s4t1 <= 4
+y11 - 10000 binaryRp1j0nj1x4y0s4t1 <= 0
+y10 + 10000 binaryRp1j0nj1x4y0s4t1 >= 1
+x11 + 10000 binaryLp1j1nj2x4y0s4t1 >= 4
+x11 - 10000 binaryLp1j1nj2x4y0s4t1 <= 4
+x12 + 10000 binaryLp1j1nj2x4y0s4t1 >= 4
+x12 - 10000 binaryLp1j1nj2x4y0s4t1 <= 4
+y11 - 10000 binaryLp1j1nj2x4y0s4t1 <= 0
+y12 + 10000 binaryLp1j1nj2x4y0s4t1 >= 1
+x11 + 10000 binaryRp1j1nj2x4y0s4t1 >= 4
+x11 - 10000 binaryRp1j1nj2x4y0s4t1 <= 4
+x12 + 10000 binaryRp1j1nj2x4y0s4t1 >= 4
+x12 - 10000 binaryRp1j1nj2x4y0s4t1 <= 4
+y12 - 10000 binaryRp1j1nj2x4y0s4t1 <= 0
+y11 + 10000 binaryRp1j1nj2x4y0s4t1 >= 1
+x12 + 10000 binaryLp1j2nj3x4y0s4t1 >= 4
+x12 - 10000 binaryLp1j2nj3x4y0s4t1 <= 4
+x13 + 10000 binaryLp1j2nj3x4y0s4t1 >= 4
+x13 - 10000 binaryLp1j2nj3x4y0s4t1 <= 4
+y12 - 10000 binaryLp1j2nj3x4y0s4t1 <= 0
+y13 + 10000 binaryLp1j2nj3x4y0s4t1 >= 1
+x12 + 10000 binaryRp1j2nj3x4y0s4t1 >= 4
+x12 - 10000 binaryRp1j2nj3x4y0s4t1 <= 4
+x13 + 10000 binaryRp1j2nj3x4y0s4t1 >= 4
+x13 - 10000 binaryRp1j2nj3x4y0s4t1 <= 4
+y13 - 10000 binaryRp1j2nj3x4y0s4t1 <= 0
+y12 + 10000 binaryRp1j2nj3x4y0s4t1 >= 1
+x13 + 10000 binaryLp1j3nj4x4y0s4t1 >= 4
+x13 - 10000 binaryLp1j3nj4x4y0s4t1 <= 4
+x14 + 10000 binaryLp1j3nj4x4y0s4t1 >= 4
+x14 - 10000 binaryLp1j3nj4x4y0s4t1 <= 4
+y13 - 10000 binaryLp1j3nj4x4y0s4t1 <= 0
+y14 + 10000 binaryLp1j3nj4x4y0s4t1 >= 1
+x13 + 10000 binaryRp1j3nj4x4y0s4t1 >= 4
+x13 - 10000 binaryRp1j3nj4x4y0s4t1 <= 4
+x14 + 10000 binaryRp1j3nj4x4y0s4t1 >= 4
+x14 - 10000 binaryRp1j3nj4x4y0s4t1 <= 4
+y14 - 10000 binaryRp1j3nj4x4y0s4t1 <= 0
+y13 + 10000 binaryRp1j3nj4x4y0s4t1 >= 1
+x14 + 10000 binaryLp1j4nj5x4y0s4t1 >= 4
+x14 - 10000 binaryLp1j4nj5x4y0s4t1 <= 4
+x15 + 10000 binaryLp1j4nj5x4y0s4t1 >= 4
+x15 - 10000 binaryLp1j4nj5x4y0s4t1 <= 4
+y14 - 10000 binaryLp1j4nj5x4y0s4t1 <= 0
+y15 + 10000 binaryLp1j4nj5x4y0s4t1 >= 1
+x14 + 10000 binaryRp1j4nj5x4y0s4t1 >= 4
+x14 - 10000 binaryRp1j4nj5x4y0s4t1 <= 4
+x15 + 10000 binaryRp1j4nj5x4y0s4t1 >= 4
+x15 - 10000 binaryRp1j4nj5x4y0s4t1 <= 4
+y15 - 10000 binaryRp1j4nj5x4y0s4t1 <= 0
+y14 + 10000 binaryRp1j4nj5x4y0s4t1 >= 1
+x15 + 10000 binaryLp1j5nj6x4y0s4t1 >= 4
+x15 - 10000 binaryLp1j5nj6x4y0s4t1 <= 4
+x16 + 10000 binaryLp1j5nj6x4y0s4t1 >= 4
+x16 - 10000 binaryLp1j5nj6x4y0s4t1 <= 4
+y15 - 10000 binaryLp1j5nj6x4y0s4t1 <= 0
+y16 + 10000 binaryLp1j5nj6x4y0s4t1 >= 1
+x15 + 10000 binaryRp1j5nj6x4y0s4t1 >= 4
+x15 - 10000 binaryRp1j5nj6x4y0s4t1 <= 4
+x16 + 10000 binaryRp1j5nj6x4y0s4t1 >= 4
+x16 - 10000 binaryRp1j5nj6x4y0s4t1 <= 4
+y16 - 10000 binaryRp1j5nj6x4y0s4t1 <= 0
+y15 + 10000 binaryRp1j5nj6x4y0s4t1 >= 1
+x16 + 10000 binaryLp1j6nj7x4y0s4t1 >= 4
+x16 - 10000 binaryLp1j6nj7x4y0s4t1 <= 4
+x17 + 10000 binaryLp1j6nj7x4y0s4t1 >= 4
+x17 - 10000 binaryLp1j6nj7x4y0s4t1 <= 4
+y16 - 10000 binaryLp1j6nj7x4y0s4t1 <= 0
+y17 + 10000 binaryLp1j6nj7x4y0s4t1 >= 1
+x16 + 10000 binaryRp1j6nj7x4y0s4t1 >= 4
+x16 - 10000 binaryRp1j6nj7x4y0s4t1 <= 4
+x17 + 10000 binaryRp1j6nj7x4y0s4t1 >= 4
+x17 - 10000 binaryRp1j6nj7x4y0s4t1 <= 4
+y17 - 10000 binaryRp1j6nj7x4y0s4t1 <= 0
+y16 + 10000 binaryRp1j6nj7x4y0s4t1 >= 1
+x17 + 10000 binaryLp1j7nj8x4y0s4t1 >= 4
+x17 - 10000 binaryLp1j7nj8x4y0s4t1 <= 4
+x18 + 10000 binaryLp1j7nj8x4y0s4t1 >= 4
+x18 - 10000 binaryLp1j7nj8x4y0s4t1 <= 4
+y17 - 10000 binaryLp1j7nj8x4y0s4t1 <= 0
+y18 + 10000 binaryLp1j7nj8x4y0s4t1 >= 1
+x17 + 10000 binaryRp1j7nj8x4y0s4t1 >= 4
+x17 - 10000 binaryRp1j7nj8x4y0s4t1 <= 4
+x18 + 10000 binaryRp1j7nj8x4y0s4t1 >= 4
+x18 - 10000 binaryRp1j7nj8x4y0s4t1 <= 4
+y18 - 10000 binaryRp1j7nj8x4y0s4t1 <= 0
+y17 + 10000 binaryRp1j7nj8x4y0s4t1 >= 1
+x18 + 10000 binaryLp1j8nj9x4y0s4t1 >= 4
+x18 - 10000 binaryLp1j8nj9x4y0s4t1 <= 4
+x19 + 10000 binaryLp1j8nj9x4y0s4t1 >= 4
+x19 - 10000 binaryLp1j8nj9x4y0s4t1 <= 4
+y18 - 10000 binaryLp1j8nj9x4y0s4t1 <= 0
+y19 + 10000 binaryLp1j8nj9x4y0s4t1 >= 1
+x18 + 10000 binaryRp1j8nj9x4y0s4t1 >= 4
+x18 - 10000 binaryRp1j8nj9x4y0s4t1 <= 4
+x19 + 10000 binaryRp1j8nj9x4y0s4t1 >= 4
+x19 - 10000 binaryRp1j8nj9x4y0s4t1 <= 4
+y19 - 10000 binaryRp1j8nj9x4y0s4t1 <= 0
+y18 + 10000 binaryRp1j8nj9x4y0s4t1 >= 1
+ + binaryLp0j0nj1x4y0s4t1 + binaryRp0j0nj1x4y0s4t1 + binaryLp0j1nj2x4y0s4t1 + binaryRp0j1nj2x4y0s4t1 + binaryLp0j2nj3x4y0s4t1 + binaryRp0j2nj3x4y0s4t1 + binaryLp0j3nj4x4y0s4t1 + binaryRp0j3nj4x4y0s4t1 + binaryLp0j4nj5x4y0s4t1 + binaryRp0j4nj5x4y0s4t1 + binaryLp0j5nj6x4y0s4t1 + binaryRp0j5nj6x4y0s4t1 + binaryLp0j6nj7x4y0s4t1 + binaryRp0j6nj7x4y0s4t1 + binaryLp0j7nj8x4y0s4t1 + binaryRp0j7nj8x4y0s4t1 + binaryLp0j8nj9x4y0s4t1 + binaryRp0j8nj9x4y0s4t1 + binaryLp1j0nj1x4y0s4t1 + binaryRp1j0nj1x4y0s4t1 + binaryLp1j1nj2x4y0s4t1 + binaryRp1j1nj2x4y0s4t1 + binaryLp1j2nj3x4y0s4t1 + binaryRp1j2nj3x4y0s4t1 + binaryLp1j3nj4x4y0s4t1 + binaryRp1j3nj4x4y0s4t1 + binaryLp1j4nj5x4y0s4t1 + binaryRp1j4nj5x4y0s4t1 + binaryLp1j5nj6x4y0s4t1 + binaryRp1j5nj6x4y0s4t1 + binaryLp1j6nj7x4y0s4t1 + binaryRp1j6nj7x4y0s4t1 + binaryLp1j7nj8x4y0s4t1 + binaryRp1j7nj8x4y0s4t1 + binaryLp1j8nj9x4y0s4t1 + binaryRp1j8nj9x4y0s4t1 <= 35
+y00 + 10000 binaryUp0j0nj1x1y0s2t0 >= 0
+y00 - 10000 binaryUp0j0nj1x1y0s2t0 <=  0
+y01 + 10000 binaryUp0j0nj1x1y0s2t0 >= 0
+y01 - 10000 binaryUp0j0nj1x1y0s2t0 <= 0
+x00 - 10000 binaryUp0j0nj1x1y0s2t0 <= 1
+x01 + 10000 binaryUp0j0nj1x1y0s2t0 >= 2
+y00 + 10000 binaryDp0j0nj1x1y0s2t0 >= 0
+y00 - 10000 binaryDp0j0nj1x1y0s2t0 <= 0
+y01 + 10000 binaryDp0j0nj1x1y0s2t0 >= 0
+y01 - 10000 binaryDp0j0nj1x1y0s2t0 <= 0
+x01 - 10000 binaryDp0j0nj1x1y0s2t0 <= 1
+x00 + 10000 binaryDp0j0nj1x1y0s2t0 >= 2
+y01 + 10000 binaryUp0j1nj2x1y0s2t0 >= 0
+y01 - 10000 binaryUp0j1nj2x1y0s2t0 <=  0
+y02 + 10000 binaryUp0j1nj2x1y0s2t0 >= 0
+y02 - 10000 binaryUp0j1nj2x1y0s2t0 <= 0
+x01 - 10000 binaryUp0j1nj2x1y0s2t0 <= 1
+x02 + 10000 binaryUp0j1nj2x1y0s2t0 >= 2
+y01 + 10000 binaryDp0j1nj2x1y0s2t0 >= 0
+y01 - 10000 binaryDp0j1nj2x1y0s2t0 <= 0
+y02 + 10000 binaryDp0j1nj2x1y0s2t0 >= 0
+y02 - 10000 binaryDp0j1nj2x1y0s2t0 <= 0
+x02 - 10000 binaryDp0j1nj2x1y0s2t0 <= 1
+x01 + 10000 binaryDp0j1nj2x1y0s2t0 >= 2
+y02 + 10000 binaryUp0j2nj3x1y0s2t0 >= 0
+y02 - 10000 binaryUp0j2nj3x1y0s2t0 <=  0
+y03 + 10000 binaryUp0j2nj3x1y0s2t0 >= 0
+y03 - 10000 binaryUp0j2nj3x1y0s2t0 <= 0
+x02 - 10000 binaryUp0j2nj3x1y0s2t0 <= 1
+x03 + 10000 binaryUp0j2nj3x1y0s2t0 >= 2
+y02 + 10000 binaryDp0j2nj3x1y0s2t0 >= 0
+y02 - 10000 binaryDp0j2nj3x1y0s2t0 <= 0
+y03 + 10000 binaryDp0j2nj3x1y0s2t0 >= 0
+y03 - 10000 binaryDp0j2nj3x1y0s2t0 <= 0
+x03 - 10000 binaryDp0j2nj3x1y0s2t0 <= 1
+x02 + 10000 binaryDp0j2nj3x1y0s2t0 >= 2
+y03 + 10000 binaryUp0j3nj4x1y0s2t0 >= 0
+y03 - 10000 binaryUp0j3nj4x1y0s2t0 <=  0
+y04 + 10000 binaryUp0j3nj4x1y0s2t0 >= 0
+y04 - 10000 binaryUp0j3nj4x1y0s2t0 <= 0
+x03 - 10000 binaryUp0j3nj4x1y0s2t0 <= 1
+x04 + 10000 binaryUp0j3nj4x1y0s2t0 >= 2
+y03 + 10000 binaryDp0j3nj4x1y0s2t0 >= 0
+y03 - 10000 binaryDp0j3nj4x1y0s2t0 <= 0
+y04 + 10000 binaryDp0j3nj4x1y0s2t0 >= 0
+y04 - 10000 binaryDp0j3nj4x1y0s2t0 <= 0
+x04 - 10000 binaryDp0j3nj4x1y0s2t0 <= 1
+x03 + 10000 binaryDp0j3nj4x1y0s2t0 >= 2
+y04 + 10000 binaryUp0j4nj5x1y0s2t0 >= 0
+y04 - 10000 binaryUp0j4nj5x1y0s2t0 <=  0
+y05 + 10000 binaryUp0j4nj5x1y0s2t0 >= 0
+y05 - 10000 binaryUp0j4nj5x1y0s2t0 <= 0
+x04 - 10000 binaryUp0j4nj5x1y0s2t0 <= 1
+x05 + 10000 binaryUp0j4nj5x1y0s2t0 >= 2
+y04 + 10000 binaryDp0j4nj5x1y0s2t0 >= 0
+y04 - 10000 binaryDp0j4nj5x1y0s2t0 <= 0
+y05 + 10000 binaryDp0j4nj5x1y0s2t0 >= 0
+y05 - 10000 binaryDp0j4nj5x1y0s2t0 <= 0
+x05 - 10000 binaryDp0j4nj5x1y0s2t0 <= 1
+x04 + 10000 binaryDp0j4nj5x1y0s2t0 >= 2
+y05 + 10000 binaryUp0j5nj6x1y0s2t0 >= 0
+y05 - 10000 binaryUp0j5nj6x1y0s2t0 <=  0
+y06 + 10000 binaryUp0j5nj6x1y0s2t0 >= 0
+y06 - 10000 binaryUp0j5nj6x1y0s2t0 <= 0
+x05 - 10000 binaryUp0j5nj6x1y0s2t0 <= 1
+x06 + 10000 binaryUp0j5nj6x1y0s2t0 >= 2
+y05 + 10000 binaryDp0j5nj6x1y0s2t0 >= 0
+y05 - 10000 binaryDp0j5nj6x1y0s2t0 <= 0
+y06 + 10000 binaryDp0j5nj6x1y0s2t0 >= 0
+y06 - 10000 binaryDp0j5nj6x1y0s2t0 <= 0
+x06 - 10000 binaryDp0j5nj6x1y0s2t0 <= 1
+x05 + 10000 binaryDp0j5nj6x1y0s2t0 >= 2
+y06 + 10000 binaryUp0j6nj7x1y0s2t0 >= 0
+y06 - 10000 binaryUp0j6nj7x1y0s2t0 <=  0
+y07 + 10000 binaryUp0j6nj7x1y0s2t0 >= 0
+y07 - 10000 binaryUp0j6nj7x1y0s2t0 <= 0
+x06 - 10000 binaryUp0j6nj7x1y0s2t0 <= 1
+x07 + 10000 binaryUp0j6nj7x1y0s2t0 >= 2
+y06 + 10000 binaryDp0j6nj7x1y0s2t0 >= 0
+y06 - 10000 binaryDp0j6nj7x1y0s2t0 <= 0
+y07 + 10000 binaryDp0j6nj7x1y0s2t0 >= 0
+y07 - 10000 binaryDp0j6nj7x1y0s2t0 <= 0
+x07 - 10000 binaryDp0j6nj7x1y0s2t0 <= 1
+x06 + 10000 binaryDp0j6nj7x1y0s2t0 >= 2
+y07 + 10000 binaryUp0j7nj8x1y0s2t0 >= 0
+y07 - 10000 binaryUp0j7nj8x1y0s2t0 <=  0
+y08 + 10000 binaryUp0j7nj8x1y0s2t0 >= 0
+y08 - 10000 binaryUp0j7nj8x1y0s2t0 <= 0
+x07 - 10000 binaryUp0j7nj8x1y0s2t0 <= 1
+x08 + 10000 binaryUp0j7nj8x1y0s2t0 >= 2
+y07 + 10000 binaryDp0j7nj8x1y0s2t0 >= 0
+y07 - 10000 binaryDp0j7nj8x1y0s2t0 <= 0
+y08 + 10000 binaryDp0j7nj8x1y0s2t0 >= 0
+y08 - 10000 binaryDp0j7nj8x1y0s2t0 <= 0
+x08 - 10000 binaryDp0j7nj8x1y0s2t0 <= 1
+x07 + 10000 binaryDp0j7nj8x1y0s2t0 >= 2
+y08 + 10000 binaryUp0j8nj9x1y0s2t0 >= 0
+y08 - 10000 binaryUp0j8nj9x1y0s2t0 <=  0
+y09 + 10000 binaryUp0j8nj9x1y0s2t0 >= 0
+y09 - 10000 binaryUp0j8nj9x1y0s2t0 <= 0
+x08 - 10000 binaryUp0j8nj9x1y0s2t0 <= 1
+x09 + 10000 binaryUp0j8nj9x1y0s2t0 >= 2
+y08 + 10000 binaryDp0j8nj9x1y0s2t0 >= 0
+y08 - 10000 binaryDp0j8nj9x1y0s2t0 <= 0
+y09 + 10000 binaryDp0j8nj9x1y0s2t0 >= 0
+y09 - 10000 binaryDp0j8nj9x1y0s2t0 <= 0
+x09 - 10000 binaryDp0j8nj9x1y0s2t0 <= 1
+x08 + 10000 binaryDp0j8nj9x1y0s2t0 >= 2
+y10 + 10000 binaryUp1j0nj1x1y0s2t0 >= 0
+y10 - 10000 binaryUp1j0nj1x1y0s2t0 <=  0
+y11 + 10000 binaryUp1j0nj1x1y0s2t0 >= 0
+y11 - 10000 binaryUp1j0nj1x1y0s2t0 <= 0
+x10 - 10000 binaryUp1j0nj1x1y0s2t0 <= 1
+x11 + 10000 binaryUp1j0nj1x1y0s2t0 >= 2
+y10 + 10000 binaryDp1j0nj1x1y0s2t0 >= 0
+y10 - 10000 binaryDp1j0nj1x1y0s2t0 <= 0
+y11 + 10000 binaryDp1j0nj1x1y0s2t0 >= 0
+y11 - 10000 binaryDp1j0nj1x1y0s2t0 <= 0
+x11 - 10000 binaryDp1j0nj1x1y0s2t0 <= 1
+x10 + 10000 binaryDp1j0nj1x1y0s2t0 >= 2
+y11 + 10000 binaryUp1j1nj2x1y0s2t0 >= 0
+y11 - 10000 binaryUp1j1nj2x1y0s2t0 <=  0
+y12 + 10000 binaryUp1j1nj2x1y0s2t0 >= 0
+y12 - 10000 binaryUp1j1nj2x1y0s2t0 <= 0
+x11 - 10000 binaryUp1j1nj2x1y0s2t0 <= 1
+x12 + 10000 binaryUp1j1nj2x1y0s2t0 >= 2
+y11 + 10000 binaryDp1j1nj2x1y0s2t0 >= 0
+y11 - 10000 binaryDp1j1nj2x1y0s2t0 <= 0
+y12 + 10000 binaryDp1j1nj2x1y0s2t0 >= 0
+y12 - 10000 binaryDp1j1nj2x1y0s2t0 <= 0
+x12 - 10000 binaryDp1j1nj2x1y0s2t0 <= 1
+x11 + 10000 binaryDp1j1nj2x1y0s2t0 >= 2
+y12 + 10000 binaryUp1j2nj3x1y0s2t0 >= 0
+y12 - 10000 binaryUp1j2nj3x1y0s2t0 <=  0
+y13 + 10000 binaryUp1j2nj3x1y0s2t0 >= 0
+y13 - 10000 binaryUp1j2nj3x1y0s2t0 <= 0
+x12 - 10000 binaryUp1j2nj3x1y0s2t0 <= 1
+x13 + 10000 binaryUp1j2nj3x1y0s2t0 >= 2
+y12 + 10000 binaryDp1j2nj3x1y0s2t0 >= 0
+y12 - 10000 binaryDp1j2nj3x1y0s2t0 <= 0
+y13 + 10000 binaryDp1j2nj3x1y0s2t0 >= 0
+y13 - 10000 binaryDp1j2nj3x1y0s2t0 <= 0
+x13 - 10000 binaryDp1j2nj3x1y0s2t0 <= 1
+x12 + 10000 binaryDp1j2nj3x1y0s2t0 >= 2
+y13 + 10000 binaryUp1j3nj4x1y0s2t0 >= 0
+y13 - 10000 binaryUp1j3nj4x1y0s2t0 <=  0
+y14 + 10000 binaryUp1j3nj4x1y0s2t0 >= 0
+y14 - 10000 binaryUp1j3nj4x1y0s2t0 <= 0
+x13 - 10000 binaryUp1j3nj4x1y0s2t0 <= 1
+x14 + 10000 binaryUp1j3nj4x1y0s2t0 >= 2
+y13 + 10000 binaryDp1j3nj4x1y0s2t0 >= 0
+y13 - 10000 binaryDp1j3nj4x1y0s2t0 <= 0
+y14 + 10000 binaryDp1j3nj4x1y0s2t0 >= 0
+y14 - 10000 binaryDp1j3nj4x1y0s2t0 <= 0
+x14 - 10000 binaryDp1j3nj4x1y0s2t0 <= 1
+x13 + 10000 binaryDp1j3nj4x1y0s2t0 >= 2
+y14 + 10000 binaryUp1j4nj5x1y0s2t0 >= 0
+y14 - 10000 binaryUp1j4nj5x1y0s2t0 <=  0
+y15 + 10000 binaryUp1j4nj5x1y0s2t0 >= 0
+y15 - 10000 binaryUp1j4nj5x1y0s2t0 <= 0
+x14 - 10000 binaryUp1j4nj5x1y0s2t0 <= 1
+x15 + 10000 binaryUp1j4nj5x1y0s2t0 >= 2
+y14 + 10000 binaryDp1j4nj5x1y0s2t0 >= 0
+y14 - 10000 binaryDp1j4nj5x1y0s2t0 <= 0
+y15 + 10000 binaryDp1j4nj5x1y0s2t0 >= 0
+y15 - 10000 binaryDp1j4nj5x1y0s2t0 <= 0
+x15 - 10000 binaryDp1j4nj5x1y0s2t0 <= 1
+x14 + 10000 binaryDp1j4nj5x1y0s2t0 >= 2
+y15 + 10000 binaryUp1j5nj6x1y0s2t0 >= 0
+y15 - 10000 binaryUp1j5nj6x1y0s2t0 <=  0
+y16 + 10000 binaryUp1j5nj6x1y0s2t0 >= 0
+y16 - 10000 binaryUp1j5nj6x1y0s2t0 <= 0
+x15 - 10000 binaryUp1j5nj6x1y0s2t0 <= 1
+x16 + 10000 binaryUp1j5nj6x1y0s2t0 >= 2
+y15 + 10000 binaryDp1j5nj6x1y0s2t0 >= 0
+y15 - 10000 binaryDp1j5nj6x1y0s2t0 <= 0
+y16 + 10000 binaryDp1j5nj6x1y0s2t0 >= 0
+y16 - 10000 binaryDp1j5nj6x1y0s2t0 <= 0
+x16 - 10000 binaryDp1j5nj6x1y0s2t0 <= 1
+x15 + 10000 binaryDp1j5nj6x1y0s2t0 >= 2
+y16 + 10000 binaryUp1j6nj7x1y0s2t0 >= 0
+y16 - 10000 binaryUp1j6nj7x1y0s2t0 <=  0
+y17 + 10000 binaryUp1j6nj7x1y0s2t0 >= 0
+y17 - 10000 binaryUp1j6nj7x1y0s2t0 <= 0
+x16 - 10000 binaryUp1j6nj7x1y0s2t0 <= 1
+x17 + 10000 binaryUp1j6nj7x1y0s2t0 >= 2
+y16 + 10000 binaryDp1j6nj7x1y0s2t0 >= 0
+y16 - 10000 binaryDp1j6nj7x1y0s2t0 <= 0
+y17 + 10000 binaryDp1j6nj7x1y0s2t0 >= 0
+y17 - 10000 binaryDp1j6nj7x1y0s2t0 <= 0
+x17 - 10000 binaryDp1j6nj7x1y0s2t0 <= 1
+x16 + 10000 binaryDp1j6nj7x1y0s2t0 >= 2
+y17 + 10000 binaryUp1j7nj8x1y0s2t0 >= 0
+y17 - 10000 binaryUp1j7nj8x1y0s2t0 <=  0
+y18 + 10000 binaryUp1j7nj8x1y0s2t0 >= 0
+y18 - 10000 binaryUp1j7nj8x1y0s2t0 <= 0
+x17 - 10000 binaryUp1j7nj8x1y0s2t0 <= 1
+x18 + 10000 binaryUp1j7nj8x1y0s2t0 >= 2
+y17 + 10000 binaryDp1j7nj8x1y0s2t0 >= 0
+y17 - 10000 binaryDp1j7nj8x1y0s2t0 <= 0
+y18 + 10000 binaryDp1j7nj8x1y0s2t0 >= 0
+y18 - 10000 binaryDp1j7nj8x1y0s2t0 <= 0
+x18 - 10000 binaryDp1j7nj8x1y0s2t0 <= 1
+x17 + 10000 binaryDp1j7nj8x1y0s2t0 >= 2
+y18 + 10000 binaryUp1j8nj9x1y0s2t0 >= 0
+y18 - 10000 binaryUp1j8nj9x1y0s2t0 <=  0
+y19 + 10000 binaryUp1j8nj9x1y0s2t0 >= 0
+y19 - 10000 binaryUp1j8nj9x1y0s2t0 <= 0
+x18 - 10000 binaryUp1j8nj9x1y0s2t0 <= 1
+x19 + 10000 binaryUp1j8nj9x1y0s2t0 >= 2
+y18 + 10000 binaryDp1j8nj9x1y0s2t0 >= 0
+y18 - 10000 binaryDp1j8nj9x1y0s2t0 <= 0
+y19 + 10000 binaryDp1j8nj9x1y0s2t0 >= 0
+y19 - 10000 binaryDp1j8nj9x1y0s2t0 <= 0
+x19 - 10000 binaryDp1j8nj9x1y0s2t0 <= 1
+x18 + 10000 binaryDp1j8nj9x1y0s2t0 >= 2
+ + binaryUp0j0nj1x1y0s2t0 + binaryDp0j0nj1x1y0s2t0 + binaryUp0j1nj2x1y0s2t0 + binaryDp0j1nj2x1y0s2t0 + binaryUp0j2nj3x1y0s2t0 + binaryDp0j2nj3x1y0s2t0 + binaryUp0j3nj4x1y0s2t0 + binaryDp0j3nj4x1y0s2t0 + binaryUp0j4nj5x1y0s2t0 + binaryDp0j4nj5x1y0s2t0 + binaryUp0j5nj6x1y0s2t0 + binaryDp0j5nj6x1y0s2t0 + binaryUp0j6nj7x1y0s2t0 + binaryDp0j6nj7x1y0s2t0 + binaryUp0j7nj8x1y0s2t0 + binaryDp0j7nj8x1y0s2t0 + binaryUp0j8nj9x1y0s2t0 + binaryDp0j8nj9x1y0s2t0 + binaryUp1j0nj1x1y0s2t0 + binaryDp1j0nj1x1y0s2t0 + binaryUp1j1nj2x1y0s2t0 + binaryDp1j1nj2x1y0s2t0 + binaryUp1j2nj3x1y0s2t0 + binaryDp1j2nj3x1y0s2t0 + binaryUp1j3nj4x1y0s2t0 + binaryDp1j3nj4x1y0s2t0 + binaryUp1j4nj5x1y0s2t0 + binaryDp1j4nj5x1y0s2t0 + binaryUp1j5nj6x1y0s2t0 + binaryDp1j5nj6x1y0s2t0 + binaryUp1j6nj7x1y0s2t0 + binaryDp1j6nj7x1y0s2t0 + binaryUp1j7nj8x1y0s2t0 + binaryDp1j7nj8x1y0s2t0 + binaryUp1j8nj9x1y0s2t0 + binaryDp1j8nj9x1y0s2t0 <= 35
+x00 + 10000 binaryLp0j0nj1x1y1s1t2 >= 1
+x00 - 10000 binaryLp0j0nj1x1y1s1t2 <= 1
+x01 + 10000 binaryLp0j0nj1x1y1s1t2 >= 1
+x01 - 10000 binaryLp0j0nj1x1y1s1t2 <= 1
+y00 - 10000 binaryLp0j0nj1x1y1s1t2 <= 1
+y01 + 10000 binaryLp0j0nj1x1y1s1t2 >= 2
+x00 + 10000 binaryRp0j0nj1x1y1s1t2 >= 1
+x00 - 10000 binaryRp0j0nj1x1y1s1t2 <= 1
+x01 + 10000 binaryRp0j0nj1x1y1s1t2 >= 1
+x01 - 10000 binaryRp0j0nj1x1y1s1t2 <= 1
+y01 - 10000 binaryRp0j0nj1x1y1s1t2 <= 1
+y00 + 10000 binaryRp0j0nj1x1y1s1t2 >= 2
+x01 + 10000 binaryLp0j1nj2x1y1s1t2 >= 1
+x01 - 10000 binaryLp0j1nj2x1y1s1t2 <= 1
+x02 + 10000 binaryLp0j1nj2x1y1s1t2 >= 1
+x02 - 10000 binaryLp0j1nj2x1y1s1t2 <= 1
+y01 - 10000 binaryLp0j1nj2x1y1s1t2 <= 1
+y02 + 10000 binaryLp0j1nj2x1y1s1t2 >= 2
+x01 + 10000 binaryRp0j1nj2x1y1s1t2 >= 1
+x01 - 10000 binaryRp0j1nj2x1y1s1t2 <= 1
+x02 + 10000 binaryRp0j1nj2x1y1s1t2 >= 1
+x02 - 10000 binaryRp0j1nj2x1y1s1t2 <= 1
+y02 - 10000 binaryRp0j1nj2x1y1s1t2 <= 1
+y01 + 10000 binaryRp0j1nj2x1y1s1t2 >= 2
+x02 + 10000 binaryLp0j2nj3x1y1s1t2 >= 1
+x02 - 10000 binaryLp0j2nj3x1y1s1t2 <= 1
+x03 + 10000 binaryLp0j2nj3x1y1s1t2 >= 1
+x03 - 10000 binaryLp0j2nj3x1y1s1t2 <= 1
+y02 - 10000 binaryLp0j2nj3x1y1s1t2 <= 1
+y03 + 10000 binaryLp0j2nj3x1y1s1t2 >= 2
+x02 + 10000 binaryRp0j2nj3x1y1s1t2 >= 1
+x02 - 10000 binaryRp0j2nj3x1y1s1t2 <= 1
+x03 + 10000 binaryRp0j2nj3x1y1s1t2 >= 1
+x03 - 10000 binaryRp0j2nj3x1y1s1t2 <= 1
+y03 - 10000 binaryRp0j2nj3x1y1s1t2 <= 1
+y02 + 10000 binaryRp0j2nj3x1y1s1t2 >= 2
+x03 + 10000 binaryLp0j3nj4x1y1s1t2 >= 1
+x03 - 10000 binaryLp0j3nj4x1y1s1t2 <= 1
+x04 + 10000 binaryLp0j3nj4x1y1s1t2 >= 1
+x04 - 10000 binaryLp0j3nj4x1y1s1t2 <= 1
+y03 - 10000 binaryLp0j3nj4x1y1s1t2 <= 1
+y04 + 10000 binaryLp0j3nj4x1y1s1t2 >= 2
+x03 + 10000 binaryRp0j3nj4x1y1s1t2 >= 1
+x03 - 10000 binaryRp0j3nj4x1y1s1t2 <= 1
+x04 + 10000 binaryRp0j3nj4x1y1s1t2 >= 1
+x04 - 10000 binaryRp0j3nj4x1y1s1t2 <= 1
+y04 - 10000 binaryRp0j3nj4x1y1s1t2 <= 1
+y03 + 10000 binaryRp0j3nj4x1y1s1t2 >= 2
+x04 + 10000 binaryLp0j4nj5x1y1s1t2 >= 1
+x04 - 10000 binaryLp0j4nj5x1y1s1t2 <= 1
+x05 + 10000 binaryLp0j4nj5x1y1s1t2 >= 1
+x05 - 10000 binaryLp0j4nj5x1y1s1t2 <= 1
+y04 - 10000 binaryLp0j4nj5x1y1s1t2 <= 1
+y05 + 10000 binaryLp0j4nj5x1y1s1t2 >= 2
+x04 + 10000 binaryRp0j4nj5x1y1s1t2 >= 1
+x04 - 10000 binaryRp0j4nj5x1y1s1t2 <= 1
+x05 + 10000 binaryRp0j4nj5x1y1s1t2 >= 1
+x05 - 10000 binaryRp0j4nj5x1y1s1t2 <= 1
+y05 - 10000 binaryRp0j4nj5x1y1s1t2 <= 1
+y04 + 10000 binaryRp0j4nj5x1y1s1t2 >= 2
+x05 + 10000 binaryLp0j5nj6x1y1s1t2 >= 1
+x05 - 10000 binaryLp0j5nj6x1y1s1t2 <= 1
+x06 + 10000 binaryLp0j5nj6x1y1s1t2 >= 1
+x06 - 10000 binaryLp0j5nj6x1y1s1t2 <= 1
+y05 - 10000 binaryLp0j5nj6x1y1s1t2 <= 1
+y06 + 10000 binaryLp0j5nj6x1y1s1t2 >= 2
+x05 + 10000 binaryRp0j5nj6x1y1s1t2 >= 1
+x05 - 10000 binaryRp0j5nj6x1y1s1t2 <= 1
+x06 + 10000 binaryRp0j5nj6x1y1s1t2 >= 1
+x06 - 10000 binaryRp0j5nj6x1y1s1t2 <= 1
+y06 - 10000 binaryRp0j5nj6x1y1s1t2 <= 1
+y05 + 10000 binaryRp0j5nj6x1y1s1t2 >= 2
+x06 + 10000 binaryLp0j6nj7x1y1s1t2 >= 1
+x06 - 10000 binaryLp0j6nj7x1y1s1t2 <= 1
+x07 + 10000 binaryLp0j6nj7x1y1s1t2 >= 1
+x07 - 10000 binaryLp0j6nj7x1y1s1t2 <= 1
+y06 - 10000 binaryLp0j6nj7x1y1s1t2 <= 1
+y07 + 10000 binaryLp0j6nj7x1y1s1t2 >= 2
+x06 + 10000 binaryRp0j6nj7x1y1s1t2 >= 1
+x06 - 10000 binaryRp0j6nj7x1y1s1t2 <= 1
+x07 + 10000 binaryRp0j6nj7x1y1s1t2 >= 1
+x07 - 10000 binaryRp0j6nj7x1y1s1t2 <= 1
+y07 - 10000 binaryRp0j6nj7x1y1s1t2 <= 1
+y06 + 10000 binaryRp0j6nj7x1y1s1t2 >= 2
+x07 + 10000 binaryLp0j7nj8x1y1s1t2 >= 1
+x07 - 10000 binaryLp0j7nj8x1y1s1t2 <= 1
+x08 + 10000 binaryLp0j7nj8x1y1s1t2 >= 1
+x08 - 10000 binaryLp0j7nj8x1y1s1t2 <= 1
+y07 - 10000 binaryLp0j7nj8x1y1s1t2 <= 1
+y08 + 10000 binaryLp0j7nj8x1y1s1t2 >= 2
+x07 + 10000 binaryRp0j7nj8x1y1s1t2 >= 1
+x07 - 10000 binaryRp0j7nj8x1y1s1t2 <= 1
+x08 + 10000 binaryRp0j7nj8x1y1s1t2 >= 1
+x08 - 10000 binaryRp0j7nj8x1y1s1t2 <= 1
+y08 - 10000 binaryRp0j7nj8x1y1s1t2 <= 1
+y07 + 10000 binaryRp0j7nj8x1y1s1t2 >= 2
+x08 + 10000 binaryLp0j8nj9x1y1s1t2 >= 1
+x08 - 10000 binaryLp0j8nj9x1y1s1t2 <= 1
+x09 + 10000 binaryLp0j8nj9x1y1s1t2 >= 1
+x09 - 10000 binaryLp0j8nj9x1y1s1t2 <= 1
+y08 - 10000 binaryLp0j8nj9x1y1s1t2 <= 1
+y09 + 10000 binaryLp0j8nj9x1y1s1t2 >= 2
+x08 + 10000 binaryRp0j8nj9x1y1s1t2 >= 1
+x08 - 10000 binaryRp0j8nj9x1y1s1t2 <= 1
+x09 + 10000 binaryRp0j8nj9x1y1s1t2 >= 1
+x09 - 10000 binaryRp0j8nj9x1y1s1t2 <= 1
+y09 - 10000 binaryRp0j8nj9x1y1s1t2 <= 1
+y08 + 10000 binaryRp0j8nj9x1y1s1t2 >= 2
+x10 + 10000 binaryLp1j0nj1x1y1s1t2 >= 1
+x10 - 10000 binaryLp1j0nj1x1y1s1t2 <= 1
+x11 + 10000 binaryLp1j0nj1x1y1s1t2 >= 1
+x11 - 10000 binaryLp1j0nj1x1y1s1t2 <= 1
+y10 - 10000 binaryLp1j0nj1x1y1s1t2 <= 1
+y11 + 10000 binaryLp1j0nj1x1y1s1t2 >= 2
+x10 + 10000 binaryRp1j0nj1x1y1s1t2 >= 1
+x10 - 10000 binaryRp1j0nj1x1y1s1t2 <= 1
+x11 + 10000 binaryRp1j0nj1x1y1s1t2 >= 1
+x11 - 10000 binaryRp1j0nj1x1y1s1t2 <= 1
+y11 - 10000 binaryRp1j0nj1x1y1s1t2 <= 1
+y10 + 10000 binaryRp1j0nj1x1y1s1t2 >= 2
+x11 + 10000 binaryLp1j1nj2x1y1s1t2 >= 1
+x11 - 10000 binaryLp1j1nj2x1y1s1t2 <= 1
+x12 + 10000 binaryLp1j1nj2x1y1s1t2 >= 1
+x12 - 10000 binaryLp1j1nj2x1y1s1t2 <= 1
+y11 - 10000 binaryLp1j1nj2x1y1s1t2 <= 1
+y12 + 10000 binaryLp1j1nj2x1y1s1t2 >= 2
+x11 + 10000 binaryRp1j1nj2x1y1s1t2 >= 1
+x11 - 10000 binaryRp1j1nj2x1y1s1t2 <= 1
+x12 + 10000 binaryRp1j1nj2x1y1s1t2 >= 1
+x12 - 10000 binaryRp1j1nj2x1y1s1t2 <= 1
+y12 - 10000 binaryRp1j1nj2x1y1s1t2 <= 1
+y11 + 10000 binaryRp1j1nj2x1y1s1t2 >= 2
+x12 + 10000 binaryLp1j2nj3x1y1s1t2 >= 1
+x12 - 10000 binaryLp1j2nj3x1y1s1t2 <= 1
+x13 + 10000 binaryLp1j2nj3x1y1s1t2 >= 1
+x13 - 10000 binaryLp1j2nj3x1y1s1t2 <= 1
+y12 - 10000 binaryLp1j2nj3x1y1s1t2 <= 1
+y13 + 10000 binaryLp1j2nj3x1y1s1t2 >= 2
+x12 + 10000 binaryRp1j2nj3x1y1s1t2 >= 1
+x12 - 10000 binaryRp1j2nj3x1y1s1t2 <= 1
+x13 + 10000 binaryRp1j2nj3x1y1s1t2 >= 1
+x13 - 10000 binaryRp1j2nj3x1y1s1t2 <= 1
+y13 - 10000 binaryRp1j2nj3x1y1s1t2 <= 1
+y12 + 10000 binaryRp1j2nj3x1y1s1t2 >= 2
+x13 + 10000 binaryLp1j3nj4x1y1s1t2 >= 1
+x13 - 10000 binaryLp1j3nj4x1y1s1t2 <= 1
+x14 + 10000 binaryLp1j3nj4x1y1s1t2 >= 1
+x14 - 10000 binaryLp1j3nj4x1y1s1t2 <= 1
+y13 - 10000 binaryLp1j3nj4x1y1s1t2 <= 1
+y14 + 10000 binaryLp1j3nj4x1y1s1t2 >= 2
+x13 + 10000 binaryRp1j3nj4x1y1s1t2 >= 1
+x13 - 10000 binaryRp1j3nj4x1y1s1t2 <= 1
+x14 + 10000 binaryRp1j3nj4x1y1s1t2 >= 1
+x14 - 10000 binaryRp1j3nj4x1y1s1t2 <= 1
+y14 - 10000 binaryRp1j3nj4x1y1s1t2 <= 1
+y13 + 10000 binaryRp1j3nj4x1y1s1t2 >= 2
+x14 + 10000 binaryLp1j4nj5x1y1s1t2 >= 1
+x14 - 10000 binaryLp1j4nj5x1y1s1t2 <= 1
+x15 + 10000 binaryLp1j4nj5x1y1s1t2 >= 1
+x15 - 10000 binaryLp1j4nj5x1y1s1t2 <= 1
+y14 - 10000 binaryLp1j4nj5x1y1s1t2 <= 1
+y15 + 10000 binaryLp1j4nj5x1y1s1t2 >= 2
+x14 + 10000 binaryRp1j4nj5x1y1s1t2 >= 1
+x14 - 10000 binaryRp1j4nj5x1y1s1t2 <= 1
+x15 + 10000 binaryRp1j4nj5x1y1s1t2 >= 1
+x15 - 10000 binaryRp1j4nj5x1y1s1t2 <= 1
+y15 - 10000 binaryRp1j4nj5x1y1s1t2 <= 1
+y14 + 10000 binaryRp1j4nj5x1y1s1t2 >= 2
+x15 + 10000 binaryLp1j5nj6x1y1s1t2 >= 1
+x15 - 10000 binaryLp1j5nj6x1y1s1t2 <= 1
+x16 + 10000 binaryLp1j5nj6x1y1s1t2 >= 1
+x16 - 10000 binaryLp1j5nj6x1y1s1t2 <= 1
+y15 - 10000 binaryLp1j5nj6x1y1s1t2 <= 1
+y16 + 10000 binaryLp1j5nj6x1y1s1t2 >= 2
+x15 + 10000 binaryRp1j5nj6x1y1s1t2 >= 1
+x15 - 10000 binaryRp1j5nj6x1y1s1t2 <= 1
+x16 + 10000 binaryRp1j5nj6x1y1s1t2 >= 1
+x16 - 10000 binaryRp1j5nj6x1y1s1t2 <= 1
+y16 - 10000 binaryRp1j5nj6x1y1s1t2 <= 1
+y15 + 10000 binaryRp1j5nj6x1y1s1t2 >= 2
+x16 + 10000 binaryLp1j6nj7x1y1s1t2 >= 1
+x16 - 10000 binaryLp1j6nj7x1y1s1t2 <= 1
+x17 + 10000 binaryLp1j6nj7x1y1s1t2 >= 1
+x17 - 10000 binaryLp1j6nj7x1y1s1t2 <= 1
+y16 - 10000 binaryLp1j6nj7x1y1s1t2 <= 1
+y17 + 10000 binaryLp1j6nj7x1y1s1t2 >= 2
+x16 + 10000 binaryRp1j6nj7x1y1s1t2 >= 1
+x16 - 10000 binaryRp1j6nj7x1y1s1t2 <= 1
+x17 + 10000 binaryRp1j6nj7x1y1s1t2 >= 1
+x17 - 10000 binaryRp1j6nj7x1y1s1t2 <= 1
+y17 - 10000 binaryRp1j6nj7x1y1s1t2 <= 1
+y16 + 10000 binaryRp1j6nj7x1y1s1t2 >= 2
+x17 + 10000 binaryLp1j7nj8x1y1s1t2 >= 1
+x17 - 10000 binaryLp1j7nj8x1y1s1t2 <= 1
+x18 + 10000 binaryLp1j7nj8x1y1s1t2 >= 1
+x18 - 10000 binaryLp1j7nj8x1y1s1t2 <= 1
+y17 - 10000 binaryLp1j7nj8x1y1s1t2 <= 1
+y18 + 10000 binaryLp1j7nj8x1y1s1t2 >= 2
+x17 + 10000 binaryRp1j7nj8x1y1s1t2 >= 1
+x17 - 10000 binaryRp1j7nj8x1y1s1t2 <= 1
+x18 + 10000 binaryRp1j7nj8x1y1s1t2 >= 1
+x18 - 10000 binaryRp1j7nj8x1y1s1t2 <= 1
+y18 - 10000 binaryRp1j7nj8x1y1s1t2 <= 1
+y17 + 10000 binaryRp1j7nj8x1y1s1t2 >= 2
+x18 + 10000 binaryLp1j8nj9x1y1s1t2 >= 1
+x18 - 10000 binaryLp1j8nj9x1y1s1t2 <= 1
+x19 + 10000 binaryLp1j8nj9x1y1s1t2 >= 1
+x19 - 10000 binaryLp1j8nj9x1y1s1t2 <= 1
+y18 - 10000 binaryLp1j8nj9x1y1s1t2 <= 1
+y19 + 10000 binaryLp1j8nj9x1y1s1t2 >= 2
+x18 + 10000 binaryRp1j8nj9x1y1s1t2 >= 1
+x18 - 10000 binaryRp1j8nj9x1y1s1t2 <= 1
+x19 + 10000 binaryRp1j8nj9x1y1s1t2 >= 1
+x19 - 10000 binaryRp1j8nj9x1y1s1t2 <= 1
+y19 - 10000 binaryRp1j8nj9x1y1s1t2 <= 1
+y18 + 10000 binaryRp1j8nj9x1y1s1t2 >= 2
+ + binaryLp0j0nj1x1y1s1t2 + binaryRp0j0nj1x1y1s1t2 + binaryLp0j1nj2x1y1s1t2 + binaryRp0j1nj2x1y1s1t2 + binaryLp0j2nj3x1y1s1t2 + binaryRp0j2nj3x1y1s1t2 + binaryLp0j3nj4x1y1s1t2 + binaryRp0j3nj4x1y1s1t2 + binaryLp0j4nj5x1y1s1t2 + binaryRp0j4nj5x1y1s1t2 + binaryLp0j5nj6x1y1s1t2 + binaryRp0j5nj6x1y1s1t2 + binaryLp0j6nj7x1y1s1t2 + binaryRp0j6nj7x1y1s1t2 + binaryLp0j7nj8x1y1s1t2 + binaryRp0j7nj8x1y1s1t2 + binaryLp0j8nj9x1y1s1t2 + binaryRp0j8nj9x1y1s1t2 + binaryLp1j0nj1x1y1s1t2 + binaryRp1j0nj1x1y1s1t2 + binaryLp1j1nj2x1y1s1t2 + binaryRp1j1nj2x1y1s1t2 + binaryLp1j2nj3x1y1s1t2 + binaryRp1j2nj3x1y1s1t2 + binaryLp1j3nj4x1y1s1t2 + binaryRp1j3nj4x1y1s1t2 + binaryLp1j4nj5x1y1s1t2 + binaryRp1j4nj5x1y1s1t2 + binaryLp1j5nj6x1y1s1t2 + binaryRp1j5nj6x1y1s1t2 + binaryLp1j6nj7x1y1s1t2 + binaryRp1j6nj7x1y1s1t2 + binaryLp1j7nj8x1y1s1t2 + binaryRp1j7nj8x1y1s1t2 + binaryLp1j8nj9x1y1s1t2 + binaryRp1j8nj9x1y1s1t2 <= 35
+y00 + 10000 binaryUp0j0nj1x2y0s3t0 >= 0
+y00 - 10000 binaryUp0j0nj1x2y0s3t0 <=  0
+y01 + 10000 binaryUp0j0nj1x2y0s3t0 >= 0
+y01 - 10000 binaryUp0j0nj1x2y0s3t0 <= 0
+x00 - 10000 binaryUp0j0nj1x2y0s3t0 <= 2
+x01 + 10000 binaryUp0j0nj1x2y0s3t0 >= 3
+y00 + 10000 binaryDp0j0nj1x2y0s3t0 >= 0
+y00 - 10000 binaryDp0j0nj1x2y0s3t0 <= 0
+y01 + 10000 binaryDp0j0nj1x2y0s3t0 >= 0
+y01 - 10000 binaryDp0j0nj1x2y0s3t0 <= 0
+x01 - 10000 binaryDp0j0nj1x2y0s3t0 <= 2
+x00 + 10000 binaryDp0j0nj1x2y0s3t0 >= 3
+y01 + 10000 binaryUp0j1nj2x2y0s3t0 >= 0
+y01 - 10000 binaryUp0j1nj2x2y0s3t0 <=  0
+y02 + 10000 binaryUp0j1nj2x2y0s3t0 >= 0
+y02 - 10000 binaryUp0j1nj2x2y0s3t0 <= 0
+x01 - 10000 binaryUp0j1nj2x2y0s3t0 <= 2
+x02 + 10000 binaryUp0j1nj2x2y0s3t0 >= 3
+y01 + 10000 binaryDp0j1nj2x2y0s3t0 >= 0
+y01 - 10000 binaryDp0j1nj2x2y0s3t0 <= 0
+y02 + 10000 binaryDp0j1nj2x2y0s3t0 >= 0
+y02 - 10000 binaryDp0j1nj2x2y0s3t0 <= 0
+x02 - 10000 binaryDp0j1nj2x2y0s3t0 <= 2
+x01 + 10000 binaryDp0j1nj2x2y0s3t0 >= 3
+y02 + 10000 binaryUp0j2nj3x2y0s3t0 >= 0
+y02 - 10000 binaryUp0j2nj3x2y0s3t0 <=  0
+y03 + 10000 binaryUp0j2nj3x2y0s3t0 >= 0
+y03 - 10000 binaryUp0j2nj3x2y0s3t0 <= 0
+x02 - 10000 binaryUp0j2nj3x2y0s3t0 <= 2
+x03 + 10000 binaryUp0j2nj3x2y0s3t0 >= 3
+y02 + 10000 binaryDp0j2nj3x2y0s3t0 >= 0
+y02 - 10000 binaryDp0j2nj3x2y0s3t0 <= 0
+y03 + 10000 binaryDp0j2nj3x2y0s3t0 >= 0
+y03 - 10000 binaryDp0j2nj3x2y0s3t0 <= 0
+x03 - 10000 binaryDp0j2nj3x2y0s3t0 <= 2
+x02 + 10000 binaryDp0j2nj3x2y0s3t0 >= 3
+y03 + 10000 binaryUp0j3nj4x2y0s3t0 >= 0
+y03 - 10000 binaryUp0j3nj4x2y0s3t0 <=  0
+y04 + 10000 binaryUp0j3nj4x2y0s3t0 >= 0
+y04 - 10000 binaryUp0j3nj4x2y0s3t0 <= 0
+x03 - 10000 binaryUp0j3nj4x2y0s3t0 <= 2
+x04 + 10000 binaryUp0j3nj4x2y0s3t0 >= 3
+y03 + 10000 binaryDp0j3nj4x2y0s3t0 >= 0
+y03 - 10000 binaryDp0j3nj4x2y0s3t0 <= 0
+y04 + 10000 binaryDp0j3nj4x2y0s3t0 >= 0
+y04 - 10000 binaryDp0j3nj4x2y0s3t0 <= 0
+x04 - 10000 binaryDp0j3nj4x2y0s3t0 <= 2
+x03 + 10000 binaryDp0j3nj4x2y0s3t0 >= 3
+y04 + 10000 binaryUp0j4nj5x2y0s3t0 >= 0
+y04 - 10000 binaryUp0j4nj5x2y0s3t0 <=  0
+y05 + 10000 binaryUp0j4nj5x2y0s3t0 >= 0
+y05 - 10000 binaryUp0j4nj5x2y0s3t0 <= 0
+x04 - 10000 binaryUp0j4nj5x2y0s3t0 <= 2
+x05 + 10000 binaryUp0j4nj5x2y0s3t0 >= 3
+y04 + 10000 binaryDp0j4nj5x2y0s3t0 >= 0
+y04 - 10000 binaryDp0j4nj5x2y0s3t0 <= 0
+y05 + 10000 binaryDp0j4nj5x2y0s3t0 >= 0
+y05 - 10000 binaryDp0j4nj5x2y0s3t0 <= 0
+x05 - 10000 binaryDp0j4nj5x2y0s3t0 <= 2
+x04 + 10000 binaryDp0j4nj5x2y0s3t0 >= 3
+y05 + 10000 binaryUp0j5nj6x2y0s3t0 >= 0
+y05 - 10000 binaryUp0j5nj6x2y0s3t0 <=  0
+y06 + 10000 binaryUp0j5nj6x2y0s3t0 >= 0
+y06 - 10000 binaryUp0j5nj6x2y0s3t0 <= 0
+x05 - 10000 binaryUp0j5nj6x2y0s3t0 <= 2
+x06 + 10000 binaryUp0j5nj6x2y0s3t0 >= 3
+y05 + 10000 binaryDp0j5nj6x2y0s3t0 >= 0
+y05 - 10000 binaryDp0j5nj6x2y0s3t0 <= 0
+y06 + 10000 binaryDp0j5nj6x2y0s3t0 >= 0
+y06 - 10000 binaryDp0j5nj6x2y0s3t0 <= 0
+x06 - 10000 binaryDp0j5nj6x2y0s3t0 <= 2
+x05 + 10000 binaryDp0j5nj6x2y0s3t0 >= 3
+y06 + 10000 binaryUp0j6nj7x2y0s3t0 >= 0
+y06 - 10000 binaryUp0j6nj7x2y0s3t0 <=  0
+y07 + 10000 binaryUp0j6nj7x2y0s3t0 >= 0
+y07 - 10000 binaryUp0j6nj7x2y0s3t0 <= 0
+x06 - 10000 binaryUp0j6nj7x2y0s3t0 <= 2
+x07 + 10000 binaryUp0j6nj7x2y0s3t0 >= 3
+y06 + 10000 binaryDp0j6nj7x2y0s3t0 >= 0
+y06 - 10000 binaryDp0j6nj7x2y0s3t0 <= 0
+y07 + 10000 binaryDp0j6nj7x2y0s3t0 >= 0
+y07 - 10000 binaryDp0j6nj7x2y0s3t0 <= 0
+x07 - 10000 binaryDp0j6nj7x2y0s3t0 <= 2
+x06 + 10000 binaryDp0j6nj7x2y0s3t0 >= 3
+y07 + 10000 binaryUp0j7nj8x2y0s3t0 >= 0
+y07 - 10000 binaryUp0j7nj8x2y0s3t0 <=  0
+y08 + 10000 binaryUp0j7nj8x2y0s3t0 >= 0
+y08 - 10000 binaryUp0j7nj8x2y0s3t0 <= 0
+x07 - 10000 binaryUp0j7nj8x2y0s3t0 <= 2
+x08 + 10000 binaryUp0j7nj8x2y0s3t0 >= 3
+y07 + 10000 binaryDp0j7nj8x2y0s3t0 >= 0
+y07 - 10000 binaryDp0j7nj8x2y0s3t0 <= 0
+y08 + 10000 binaryDp0j7nj8x2y0s3t0 >= 0
+y08 - 10000 binaryDp0j7nj8x2y0s3t0 <= 0
+x08 - 10000 binaryDp0j7nj8x2y0s3t0 <= 2
+x07 + 10000 binaryDp0j7nj8x2y0s3t0 >= 3
+y08 + 10000 binaryUp0j8nj9x2y0s3t0 >= 0
+y08 - 10000 binaryUp0j8nj9x2y0s3t0 <=  0
+y09 + 10000 binaryUp0j8nj9x2y0s3t0 >= 0
+y09 - 10000 binaryUp0j8nj9x2y0s3t0 <= 0
+x08 - 10000 binaryUp0j8nj9x2y0s3t0 <= 2
+x09 + 10000 binaryUp0j8nj9x2y0s3t0 >= 3
+y08 + 10000 binaryDp0j8nj9x2y0s3t0 >= 0
+y08 - 10000 binaryDp0j8nj9x2y0s3t0 <= 0
+y09 + 10000 binaryDp0j8nj9x2y0s3t0 >= 0
+y09 - 10000 binaryDp0j8nj9x2y0s3t0 <= 0
+x09 - 10000 binaryDp0j8nj9x2y0s3t0 <= 2
+x08 + 10000 binaryDp0j8nj9x2y0s3t0 >= 3
+y10 + 10000 binaryUp1j0nj1x2y0s3t0 >= 0
+y10 - 10000 binaryUp1j0nj1x2y0s3t0 <=  0
+y11 + 10000 binaryUp1j0nj1x2y0s3t0 >= 0
+y11 - 10000 binaryUp1j0nj1x2y0s3t0 <= 0
+x10 - 10000 binaryUp1j0nj1x2y0s3t0 <= 2
+x11 + 10000 binaryUp1j0nj1x2y0s3t0 >= 3
+y10 + 10000 binaryDp1j0nj1x2y0s3t0 >= 0
+y10 - 10000 binaryDp1j0nj1x2y0s3t0 <= 0
+y11 + 10000 binaryDp1j0nj1x2y0s3t0 >= 0
+y11 - 10000 binaryDp1j0nj1x2y0s3t0 <= 0
+x11 - 10000 binaryDp1j0nj1x2y0s3t0 <= 2
+x10 + 10000 binaryDp1j0nj1x2y0s3t0 >= 3
+y11 + 10000 binaryUp1j1nj2x2y0s3t0 >= 0
+y11 - 10000 binaryUp1j1nj2x2y0s3t0 <=  0
+y12 + 10000 binaryUp1j1nj2x2y0s3t0 >= 0
+y12 - 10000 binaryUp1j1nj2x2y0s3t0 <= 0
+x11 - 10000 binaryUp1j1nj2x2y0s3t0 <= 2
+x12 + 10000 binaryUp1j1nj2x2y0s3t0 >= 3
+y11 + 10000 binaryDp1j1nj2x2y0s3t0 >= 0
+y11 - 10000 binaryDp1j1nj2x2y0s3t0 <= 0
+y12 + 10000 binaryDp1j1nj2x2y0s3t0 >= 0
+y12 - 10000 binaryDp1j1nj2x2y0s3t0 <= 0
+x12 - 10000 binaryDp1j1nj2x2y0s3t0 <= 2
+x11 + 10000 binaryDp1j1nj2x2y0s3t0 >= 3
+y12 + 10000 binaryUp1j2nj3x2y0s3t0 >= 0
+y12 - 10000 binaryUp1j2nj3x2y0s3t0 <=  0
+y13 + 10000 binaryUp1j2nj3x2y0s3t0 >= 0
+y13 - 10000 binaryUp1j2nj3x2y0s3t0 <= 0
+x12 - 10000 binaryUp1j2nj3x2y0s3t0 <= 2
+x13 + 10000 binaryUp1j2nj3x2y0s3t0 >= 3
+y12 + 10000 binaryDp1j2nj3x2y0s3t0 >= 0
+y12 - 10000 binaryDp1j2nj3x2y0s3t0 <= 0
+y13 + 10000 binaryDp1j2nj3x2y0s3t0 >= 0
+y13 - 10000 binaryDp1j2nj3x2y0s3t0 <= 0
+x13 - 10000 binaryDp1j2nj3x2y0s3t0 <= 2
+x12 + 10000 binaryDp1j2nj3x2y0s3t0 >= 3
+y13 + 10000 binaryUp1j3nj4x2y0s3t0 >= 0
+y13 - 10000 binaryUp1j3nj4x2y0s3t0 <=  0
+y14 + 10000 binaryUp1j3nj4x2y0s3t0 >= 0
+y14 - 10000 binaryUp1j3nj4x2y0s3t0 <= 0
+x13 - 10000 binaryUp1j3nj4x2y0s3t0 <= 2
+x14 + 10000 binaryUp1j3nj4x2y0s3t0 >= 3
+y13 + 10000 binaryDp1j3nj4x2y0s3t0 >= 0
+y13 - 10000 binaryDp1j3nj4x2y0s3t0 <= 0
+y14 + 10000 binaryDp1j3nj4x2y0s3t0 >= 0
+y14 - 10000 binaryDp1j3nj4x2y0s3t0 <= 0
+x14 - 10000 binaryDp1j3nj4x2y0s3t0 <= 2
+x13 + 10000 binaryDp1j3nj4x2y0s3t0 >= 3
+y14 + 10000 binaryUp1j4nj5x2y0s3t0 >= 0
+y14 - 10000 binaryUp1j4nj5x2y0s3t0 <=  0
+y15 + 10000 binaryUp1j4nj5x2y0s3t0 >= 0
+y15 - 10000 binaryUp1j4nj5x2y0s3t0 <= 0
+x14 - 10000 binaryUp1j4nj5x2y0s3t0 <= 2
+x15 + 10000 binaryUp1j4nj5x2y0s3t0 >= 3
+y14 + 10000 binaryDp1j4nj5x2y0s3t0 >= 0
+y14 - 10000 binaryDp1j4nj5x2y0s3t0 <= 0
+y15 + 10000 binaryDp1j4nj5x2y0s3t0 >= 0
+y15 - 10000 binaryDp1j4nj5x2y0s3t0 <= 0
+x15 - 10000 binaryDp1j4nj5x2y0s3t0 <= 2
+x14 + 10000 binaryDp1j4nj5x2y0s3t0 >= 3
+y15 + 10000 binaryUp1j5nj6x2y0s3t0 >= 0
+y15 - 10000 binaryUp1j5nj6x2y0s3t0 <=  0
+y16 + 10000 binaryUp1j5nj6x2y0s3t0 >= 0
+y16 - 10000 binaryUp1j5nj6x2y0s3t0 <= 0
+x15 - 10000 binaryUp1j5nj6x2y0s3t0 <= 2
+x16 + 10000 binaryUp1j5nj6x2y0s3t0 >= 3
+y15 + 10000 binaryDp1j5nj6x2y0s3t0 >= 0
+y15 - 10000 binaryDp1j5nj6x2y0s3t0 <= 0
+y16 + 10000 binaryDp1j5nj6x2y0s3t0 >= 0
+y16 - 10000 binaryDp1j5nj6x2y0s3t0 <= 0
+x16 - 10000 binaryDp1j5nj6x2y0s3t0 <= 2
+x15 + 10000 binaryDp1j5nj6x2y0s3t0 >= 3
+y16 + 10000 binaryUp1j6nj7x2y0s3t0 >= 0
+y16 - 10000 binaryUp1j6nj7x2y0s3t0 <=  0
+y17 + 10000 binaryUp1j6nj7x2y0s3t0 >= 0
+y17 - 10000 binaryUp1j6nj7x2y0s3t0 <= 0
+x16 - 10000 binaryUp1j6nj7x2y0s3t0 <= 2
+x17 + 10000 binaryUp1j6nj7x2y0s3t0 >= 3
+y16 + 10000 binaryDp1j6nj7x2y0s3t0 >= 0
+y16 - 10000 binaryDp1j6nj7x2y0s3t0 <= 0
+y17 + 10000 binaryDp1j6nj7x2y0s3t0 >= 0
+y17 - 10000 binaryDp1j6nj7x2y0s3t0 <= 0
+x17 - 10000 binaryDp1j6nj7x2y0s3t0 <= 2
+x16 + 10000 binaryDp1j6nj7x2y0s3t0 >= 3
+y17 + 10000 binaryUp1j7nj8x2y0s3t0 >= 0
+y17 - 10000 binaryUp1j7nj8x2y0s3t0 <=  0
+y18 + 10000 binaryUp1j7nj8x2y0s3t0 >= 0
+y18 - 10000 binaryUp1j7nj8x2y0s3t0 <= 0
+x17 - 10000 binaryUp1j7nj8x2y0s3t0 <= 2
+x18 + 10000 binaryUp1j7nj8x2y0s3t0 >= 3
+y17 + 10000 binaryDp1j7nj8x2y0s3t0 >= 0
+y17 - 10000 binaryDp1j7nj8x2y0s3t0 <= 0
+y18 + 10000 binaryDp1j7nj8x2y0s3t0 >= 0
+y18 - 10000 binaryDp1j7nj8x2y0s3t0 <= 0
+x18 - 10000 binaryDp1j7nj8x2y0s3t0 <= 2
+x17 + 10000 binaryDp1j7nj8x2y0s3t0 >= 3
+y18 + 10000 binaryUp1j8nj9x2y0s3t0 >= 0
+y18 - 10000 binaryUp1j8nj9x2y0s3t0 <=  0
+y19 + 10000 binaryUp1j8nj9x2y0s3t0 >= 0
+y19 - 10000 binaryUp1j8nj9x2y0s3t0 <= 0
+x18 - 10000 binaryUp1j8nj9x2y0s3t0 <= 2
+x19 + 10000 binaryUp1j8nj9x2y0s3t0 >= 3
+y18 + 10000 binaryDp1j8nj9x2y0s3t0 >= 0
+y18 - 10000 binaryDp1j8nj9x2y0s3t0 <= 0
+y19 + 10000 binaryDp1j8nj9x2y0s3t0 >= 0
+y19 - 10000 binaryDp1j8nj9x2y0s3t0 <= 0
+x19 - 10000 binaryDp1j8nj9x2y0s3t0 <= 2
+x18 + 10000 binaryDp1j8nj9x2y0s3t0 >= 3
+ + binaryUp0j0nj1x2y0s3t0 + binaryDp0j0nj1x2y0s3t0 + binaryUp0j1nj2x2y0s3t0 + binaryDp0j1nj2x2y0s3t0 + binaryUp0j2nj3x2y0s3t0 + binaryDp0j2nj3x2y0s3t0 + binaryUp0j3nj4x2y0s3t0 + binaryDp0j3nj4x2y0s3t0 + binaryUp0j4nj5x2y0s3t0 + binaryDp0j4nj5x2y0s3t0 + binaryUp0j5nj6x2y0s3t0 + binaryDp0j5nj6x2y0s3t0 + binaryUp0j6nj7x2y0s3t0 + binaryDp0j6nj7x2y0s3t0 + binaryUp0j7nj8x2y0s3t0 + binaryDp0j7nj8x2y0s3t0 + binaryUp0j8nj9x2y0s3t0 + binaryDp0j8nj9x2y0s3t0 + binaryUp1j0nj1x2y0s3t0 + binaryDp1j0nj1x2y0s3t0 + binaryUp1j1nj2x2y0s3t0 + binaryDp1j1nj2x2y0s3t0 + binaryUp1j2nj3x2y0s3t0 + binaryDp1j2nj3x2y0s3t0 + binaryUp1j3nj4x2y0s3t0 + binaryDp1j3nj4x2y0s3t0 + binaryUp1j4nj5x2y0s3t0 + binaryDp1j4nj5x2y0s3t0 + binaryUp1j5nj6x2y0s3t0 + binaryDp1j5nj6x2y0s3t0 + binaryUp1j6nj7x2y0s3t0 + binaryDp1j6nj7x2y0s3t0 + binaryUp1j7nj8x2y0s3t0 + binaryDp1j7nj8x2y0s3t0 + binaryUp1j8nj9x2y0s3t0 + binaryDp1j8nj9x2y0s3t0 <= 35
+x00 + 10000 binaryLp0j0nj1x0y3s0t4 >= 0
+x00 - 10000 binaryLp0j0nj1x0y3s0t4 <= 0
+x01 + 10000 binaryLp0j0nj1x0y3s0t4 >= 0
+x01 - 10000 binaryLp0j0nj1x0y3s0t4 <= 0
+y00 - 10000 binaryLp0j0nj1x0y3s0t4 <= 3
+y01 + 10000 binaryLp0j0nj1x0y3s0t4 >= 4
+x00 + 10000 binaryRp0j0nj1x0y3s0t4 >= 0
+x00 - 10000 binaryRp0j0nj1x0y3s0t4 <= 0
+x01 + 10000 binaryRp0j0nj1x0y3s0t4 >= 0
+x01 - 10000 binaryRp0j0nj1x0y3s0t4 <= 0
+y01 - 10000 binaryRp0j0nj1x0y3s0t4 <= 3
+y00 + 10000 binaryRp0j0nj1x0y3s0t4 >= 4
+x01 + 10000 binaryLp0j1nj2x0y3s0t4 >= 0
+x01 - 10000 binaryLp0j1nj2x0y3s0t4 <= 0
+x02 + 10000 binaryLp0j1nj2x0y3s0t4 >= 0
+x02 - 10000 binaryLp0j1nj2x0y3s0t4 <= 0
+y01 - 10000 binaryLp0j1nj2x0y3s0t4 <= 3
+y02 + 10000 binaryLp0j1nj2x0y3s0t4 >= 4
+x01 + 10000 binaryRp0j1nj2x0y3s0t4 >= 0
+x01 - 10000 binaryRp0j1nj2x0y3s0t4 <= 0
+x02 + 10000 binaryRp0j1nj2x0y3s0t4 >= 0
+x02 - 10000 binaryRp0j1nj2x0y3s0t4 <= 0
+y02 - 10000 binaryRp0j1nj2x0y3s0t4 <= 3
+y01 + 10000 binaryRp0j1nj2x0y3s0t4 >= 4
+x02 + 10000 binaryLp0j2nj3x0y3s0t4 >= 0
+x02 - 10000 binaryLp0j2nj3x0y3s0t4 <= 0
+x03 + 10000 binaryLp0j2nj3x0y3s0t4 >= 0
+x03 - 10000 binaryLp0j2nj3x0y3s0t4 <= 0
+y02 - 10000 binaryLp0j2nj3x0y3s0t4 <= 3
+y03 + 10000 binaryLp0j2nj3x0y3s0t4 >= 4
+x02 + 10000 binaryRp0j2nj3x0y3s0t4 >= 0
+x02 - 10000 binaryRp0j2nj3x0y3s0t4 <= 0
+x03 + 10000 binaryRp0j2nj3x0y3s0t4 >= 0
+x03 - 10000 binaryRp0j2nj3x0y3s0t4 <= 0
+y03 - 10000 binaryRp0j2nj3x0y3s0t4 <= 3
+y02 + 10000 binaryRp0j2nj3x0y3s0t4 >= 4
+x03 + 10000 binaryLp0j3nj4x0y3s0t4 >= 0
+x03 - 10000 binaryLp0j3nj4x0y3s0t4 <= 0
+x04 + 10000 binaryLp0j3nj4x0y3s0t4 >= 0
+x04 - 10000 binaryLp0j3nj4x0y3s0t4 <= 0
+y03 - 10000 binaryLp0j3nj4x0y3s0t4 <= 3
+y04 + 10000 binaryLp0j3nj4x0y3s0t4 >= 4
+x03 + 10000 binaryRp0j3nj4x0y3s0t4 >= 0
+x03 - 10000 binaryRp0j3nj4x0y3s0t4 <= 0
+x04 + 10000 binaryRp0j3nj4x0y3s0t4 >= 0
+x04 - 10000 binaryRp0j3nj4x0y3s0t4 <= 0
+y04 - 10000 binaryRp0j3nj4x0y3s0t4 <= 3
+y03 + 10000 binaryRp0j3nj4x0y3s0t4 >= 4
+x04 + 10000 binaryLp0j4nj5x0y3s0t4 >= 0
+x04 - 10000 binaryLp0j4nj5x0y3s0t4 <= 0
+x05 + 10000 binaryLp0j4nj5x0y3s0t4 >= 0
+x05 - 10000 binaryLp0j4nj5x0y3s0t4 <= 0
+y04 - 10000 binaryLp0j4nj5x0y3s0t4 <= 3
+y05 + 10000 binaryLp0j4nj5x0y3s0t4 >= 4
+x04 + 10000 binaryRp0j4nj5x0y3s0t4 >= 0
+x04 - 10000 binaryRp0j4nj5x0y3s0t4 <= 0
+x05 + 10000 binaryRp0j4nj5x0y3s0t4 >= 0
+x05 - 10000 binaryRp0j4nj5x0y3s0t4 <= 0
+y05 - 10000 binaryRp0j4nj5x0y3s0t4 <= 3
+y04 + 10000 binaryRp0j4nj5x0y3s0t4 >= 4
+x05 + 10000 binaryLp0j5nj6x0y3s0t4 >= 0
+x05 - 10000 binaryLp0j5nj6x0y3s0t4 <= 0
+x06 + 10000 binaryLp0j5nj6x0y3s0t4 >= 0
+x06 - 10000 binaryLp0j5nj6x0y3s0t4 <= 0
+y05 - 10000 binaryLp0j5nj6x0y3s0t4 <= 3
+y06 + 10000 binaryLp0j5nj6x0y3s0t4 >= 4
+x05 + 10000 binaryRp0j5nj6x0y3s0t4 >= 0
+x05 - 10000 binaryRp0j5nj6x0y3s0t4 <= 0
+x06 + 10000 binaryRp0j5nj6x0y3s0t4 >= 0
+x06 - 10000 binaryRp0j5nj6x0y3s0t4 <= 0
+y06 - 10000 binaryRp0j5nj6x0y3s0t4 <= 3
+y05 + 10000 binaryRp0j5nj6x0y3s0t4 >= 4
+x06 + 10000 binaryLp0j6nj7x0y3s0t4 >= 0
+x06 - 10000 binaryLp0j6nj7x0y3s0t4 <= 0
+x07 + 10000 binaryLp0j6nj7x0y3s0t4 >= 0
+x07 - 10000 binaryLp0j6nj7x0y3s0t4 <= 0
+y06 - 10000 binaryLp0j6nj7x0y3s0t4 <= 3
+y07 + 10000 binaryLp0j6nj7x0y3s0t4 >= 4
+x06 + 10000 binaryRp0j6nj7x0y3s0t4 >= 0
+x06 - 10000 binaryRp0j6nj7x0y3s0t4 <= 0
+x07 + 10000 binaryRp0j6nj7x0y3s0t4 >= 0
+x07 - 10000 binaryRp0j6nj7x0y3s0t4 <= 0
+y07 - 10000 binaryRp0j6nj7x0y3s0t4 <= 3
+y06 + 10000 binaryRp0j6nj7x0y3s0t4 >= 4
+x07 + 10000 binaryLp0j7nj8x0y3s0t4 >= 0
+x07 - 10000 binaryLp0j7nj8x0y3s0t4 <= 0
+x08 + 10000 binaryLp0j7nj8x0y3s0t4 >= 0
+x08 - 10000 binaryLp0j7nj8x0y3s0t4 <= 0
+y07 - 10000 binaryLp0j7nj8x0y3s0t4 <= 3
+y08 + 10000 binaryLp0j7nj8x0y3s0t4 >= 4
+x07 + 10000 binaryRp0j7nj8x0y3s0t4 >= 0
+x07 - 10000 binaryRp0j7nj8x0y3s0t4 <= 0
+x08 + 10000 binaryRp0j7nj8x0y3s0t4 >= 0
+x08 - 10000 binaryRp0j7nj8x0y3s0t4 <= 0
+y08 - 10000 binaryRp0j7nj8x0y3s0t4 <= 3
+y07 + 10000 binaryRp0j7nj8x0y3s0t4 >= 4
+x08 + 10000 binaryLp0j8nj9x0y3s0t4 >= 0
+x08 - 10000 binaryLp0j8nj9x0y3s0t4 <= 0
+x09 + 10000 binaryLp0j8nj9x0y3s0t4 >= 0
+x09 - 10000 binaryLp0j8nj9x0y3s0t4 <= 0
+y08 - 10000 binaryLp0j8nj9x0y3s0t4 <= 3
+y09 + 10000 binaryLp0j8nj9x0y3s0t4 >= 4
+x08 + 10000 binaryRp0j8nj9x0y3s0t4 >= 0
+x08 - 10000 binaryRp0j8nj9x0y3s0t4 <= 0
+x09 + 10000 binaryRp0j8nj9x0y3s0t4 >= 0
+x09 - 10000 binaryRp0j8nj9x0y3s0t4 <= 0
+y09 - 10000 binaryRp0j8nj9x0y3s0t4 <= 3
+y08 + 10000 binaryRp0j8nj9x0y3s0t4 >= 4
+x10 + 10000 binaryLp1j0nj1x0y3s0t4 >= 0
+x10 - 10000 binaryLp1j0nj1x0y3s0t4 <= 0
+x11 + 10000 binaryLp1j0nj1x0y3s0t4 >= 0
+x11 - 10000 binaryLp1j0nj1x0y3s0t4 <= 0
+y10 - 10000 binaryLp1j0nj1x0y3s0t4 <= 3
+y11 + 10000 binaryLp1j0nj1x0y3s0t4 >= 4
+x10 + 10000 binaryRp1j0nj1x0y3s0t4 >= 0
+x10 - 10000 binaryRp1j0nj1x0y3s0t4 <= 0
+x11 + 10000 binaryRp1j0nj1x0y3s0t4 >= 0
+x11 - 10000 binaryRp1j0nj1x0y3s0t4 <= 0
+y11 - 10000 binaryRp1j0nj1x0y3s0t4 <= 3
+y10 + 10000 binaryRp1j0nj1x0y3s0t4 >= 4
+x11 + 10000 binaryLp1j1nj2x0y3s0t4 >= 0
+x11 - 10000 binaryLp1j1nj2x0y3s0t4 <= 0
+x12 + 10000 binaryLp1j1nj2x0y3s0t4 >= 0
+x12 - 10000 binaryLp1j1nj2x0y3s0t4 <= 0
+y11 - 10000 binaryLp1j1nj2x0y3s0t4 <= 3
+y12 + 10000 binaryLp1j1nj2x0y3s0t4 >= 4
+x11 + 10000 binaryRp1j1nj2x0y3s0t4 >= 0
+x11 - 10000 binaryRp1j1nj2x0y3s0t4 <= 0
+x12 + 10000 binaryRp1j1nj2x0y3s0t4 >= 0
+x12 - 10000 binaryRp1j1nj2x0y3s0t4 <= 0
+y12 - 10000 binaryRp1j1nj2x0y3s0t4 <= 3
+y11 + 10000 binaryRp1j1nj2x0y3s0t4 >= 4
+x12 + 10000 binaryLp1j2nj3x0y3s0t4 >= 0
+x12 - 10000 binaryLp1j2nj3x0y3s0t4 <= 0
+x13 + 10000 binaryLp1j2nj3x0y3s0t4 >= 0
+x13 - 10000 binaryLp1j2nj3x0y3s0t4 <= 0
+y12 - 10000 binaryLp1j2nj3x0y3s0t4 <= 3
+y13 + 10000 binaryLp1j2nj3x0y3s0t4 >= 4
+x12 + 10000 binaryRp1j2nj3x0y3s0t4 >= 0
+x12 - 10000 binaryRp1j2nj3x0y3s0t4 <= 0
+x13 + 10000 binaryRp1j2nj3x0y3s0t4 >= 0
+x13 - 10000 binaryRp1j2nj3x0y3s0t4 <= 0
+y13 - 10000 binaryRp1j2nj3x0y3s0t4 <= 3
+y12 + 10000 binaryRp1j2nj3x0y3s0t4 >= 4
+x13 + 10000 binaryLp1j3nj4x0y3s0t4 >= 0
+x13 - 10000 binaryLp1j3nj4x0y3s0t4 <= 0
+x14 + 10000 binaryLp1j3nj4x0y3s0t4 >= 0
+x14 - 10000 binaryLp1j3nj4x0y3s0t4 <= 0
+y13 - 10000 binaryLp1j3nj4x0y3s0t4 <= 3
+y14 + 10000 binaryLp1j3nj4x0y3s0t4 >= 4
+x13 + 10000 binaryRp1j3nj4x0y3s0t4 >= 0
+x13 - 10000 binaryRp1j3nj4x0y3s0t4 <= 0
+x14 + 10000 binaryRp1j3nj4x0y3s0t4 >= 0
+x14 - 10000 binaryRp1j3nj4x0y3s0t4 <= 0
+y14 - 10000 binaryRp1j3nj4x0y3s0t4 <= 3
+y13 + 10000 binaryRp1j3nj4x0y3s0t4 >= 4
+x14 + 10000 binaryLp1j4nj5x0y3s0t4 >= 0
+x14 - 10000 binaryLp1j4nj5x0y3s0t4 <= 0
+x15 + 10000 binaryLp1j4nj5x0y3s0t4 >= 0
+x15 - 10000 binaryLp1j4nj5x0y3s0t4 <= 0
+y14 - 10000 binaryLp1j4nj5x0y3s0t4 <= 3
+y15 + 10000 binaryLp1j4nj5x0y3s0t4 >= 4
+x14 + 10000 binaryRp1j4nj5x0y3s0t4 >= 0
+x14 - 10000 binaryRp1j4nj5x0y3s0t4 <= 0
+x15 + 10000 binaryRp1j4nj5x0y3s0t4 >= 0
+x15 - 10000 binaryRp1j4nj5x0y3s0t4 <= 0
+y15 - 10000 binaryRp1j4nj5x0y3s0t4 <= 3
+y14 + 10000 binaryRp1j4nj5x0y3s0t4 >= 4
+x15 + 10000 binaryLp1j5nj6x0y3s0t4 >= 0
+x15 - 10000 binaryLp1j5nj6x0y3s0t4 <= 0
+x16 + 10000 binaryLp1j5nj6x0y3s0t4 >= 0
+x16 - 10000 binaryLp1j5nj6x0y3s0t4 <= 0
+y15 - 10000 binaryLp1j5nj6x0y3s0t4 <= 3
+y16 + 10000 binaryLp1j5nj6x0y3s0t4 >= 4
+x15 + 10000 binaryRp1j5nj6x0y3s0t4 >= 0
+x15 - 10000 binaryRp1j5nj6x0y3s0t4 <= 0
+x16 + 10000 binaryRp1j5nj6x0y3s0t4 >= 0
+x16 - 10000 binaryRp1j5nj6x0y3s0t4 <= 0
+y16 - 10000 binaryRp1j5nj6x0y3s0t4 <= 3
+y15 + 10000 binaryRp1j5nj6x0y3s0t4 >= 4
+x16 + 10000 binaryLp1j6nj7x0y3s0t4 >= 0
+x16 - 10000 binaryLp1j6nj7x0y3s0t4 <= 0
+x17 + 10000 binaryLp1j6nj7x0y3s0t4 >= 0
+x17 - 10000 binaryLp1j6nj7x0y3s0t4 <= 0
+y16 - 10000 binaryLp1j6nj7x0y3s0t4 <= 3
+y17 + 10000 binaryLp1j6nj7x0y3s0t4 >= 4
+x16 + 10000 binaryRp1j6nj7x0y3s0t4 >= 0
+x16 - 10000 binaryRp1j6nj7x0y3s0t4 <= 0
+x17 + 10000 binaryRp1j6nj7x0y3s0t4 >= 0
+x17 - 10000 binaryRp1j6nj7x0y3s0t4 <= 0
+y17 - 10000 binaryRp1j6nj7x0y3s0t4 <= 3
+y16 + 10000 binaryRp1j6nj7x0y3s0t4 >= 4
+x17 + 10000 binaryLp1j7nj8x0y3s0t4 >= 0
+x17 - 10000 binaryLp1j7nj8x0y3s0t4 <= 0
+x18 + 10000 binaryLp1j7nj8x0y3s0t4 >= 0
+x18 - 10000 binaryLp1j7nj8x0y3s0t4 <= 0
+y17 - 10000 binaryLp1j7nj8x0y3s0t4 <= 3
+y18 + 10000 binaryLp1j7nj8x0y3s0t4 >= 4
+x17 + 10000 binaryRp1j7nj8x0y3s0t4 >= 0
+x17 - 10000 binaryRp1j7nj8x0y3s0t4 <= 0
+x18 + 10000 binaryRp1j7nj8x0y3s0t4 >= 0
+x18 - 10000 binaryRp1j7nj8x0y3s0t4 <= 0
+y18 - 10000 binaryRp1j7nj8x0y3s0t4 <= 3
+y17 + 10000 binaryRp1j7nj8x0y3s0t4 >= 4
+x18 + 10000 binaryLp1j8nj9x0y3s0t4 >= 0
+x18 - 10000 binaryLp1j8nj9x0y3s0t4 <= 0
+x19 + 10000 binaryLp1j8nj9x0y3s0t4 >= 0
+x19 - 10000 binaryLp1j8nj9x0y3s0t4 <= 0
+y18 - 10000 binaryLp1j8nj9x0y3s0t4 <= 3
+y19 + 10000 binaryLp1j8nj9x0y3s0t4 >= 4
+x18 + 10000 binaryRp1j8nj9x0y3s0t4 >= 0
+x18 - 10000 binaryRp1j8nj9x0y3s0t4 <= 0
+x19 + 10000 binaryRp1j8nj9x0y3s0t4 >= 0
+x19 - 10000 binaryRp1j8nj9x0y3s0t4 <= 0
+y19 - 10000 binaryRp1j8nj9x0y3s0t4 <= 3
+y18 + 10000 binaryRp1j8nj9x0y3s0t4 >= 4
+ + binaryLp0j0nj1x0y3s0t4 + binaryRp0j0nj1x0y3s0t4 + binaryLp0j1nj2x0y3s0t4 + binaryRp0j1nj2x0y3s0t4 + binaryLp0j2nj3x0y3s0t4 + binaryRp0j2nj3x0y3s0t4 + binaryLp0j3nj4x0y3s0t4 + binaryRp0j3nj4x0y3s0t4 + binaryLp0j4nj5x0y3s0t4 + binaryRp0j4nj5x0y3s0t4 + binaryLp0j5nj6x0y3s0t4 + binaryRp0j5nj6x0y3s0t4 + binaryLp0j6nj7x0y3s0t4 + binaryRp0j6nj7x0y3s0t4 + binaryLp0j7nj8x0y3s0t4 + binaryRp0j7nj8x0y3s0t4 + binaryLp0j8nj9x0y3s0t4 + binaryRp0j8nj9x0y3s0t4 + binaryLp1j0nj1x0y3s0t4 + binaryRp1j0nj1x0y3s0t4 + binaryLp1j1nj2x0y3s0t4 + binaryRp1j1nj2x0y3s0t4 + binaryLp1j2nj3x0y3s0t4 + binaryRp1j2nj3x0y3s0t4 + binaryLp1j3nj4x0y3s0t4 + binaryRp1j3nj4x0y3s0t4 + binaryLp1j4nj5x0y3s0t4 + binaryRp1j4nj5x0y3s0t4 + binaryLp1j5nj6x0y3s0t4 + binaryRp1j5nj6x0y3s0t4 + binaryLp1j6nj7x0y3s0t4 + binaryRp1j6nj7x0y3s0t4 + binaryLp1j7nj8x0y3s0t4 + binaryRp1j7nj8x0y3s0t4 + binaryLp1j8nj9x0y3s0t4 + binaryRp1j8nj9x0y3s0t4 <= 35
 x00 + 10000 binaryLp0j0nj1x2y2s2t3 >= 2
 x00 - 10000 binaryLp0j0nj1x2y2s2t3 <= 2
 x01 + 10000 binaryLp0j0nj1x2y2s2t3 >= 2
@@ -1288,6 +2898,66 @@ x04 + 10000 binaryRp0j3nj4x2y2s2t3 >= 2
 x04 - 10000 binaryRp0j3nj4x2y2s2t3 <= 2
 y04 - 10000 binaryRp0j3nj4x2y2s2t3 <= 2
 y03 + 10000 binaryRp0j3nj4x2y2s2t3 >= 3
+x04 + 10000 binaryLp0j4nj5x2y2s2t3 >= 2
+x04 - 10000 binaryLp0j4nj5x2y2s2t3 <= 2
+x05 + 10000 binaryLp0j4nj5x2y2s2t3 >= 2
+x05 - 10000 binaryLp0j4nj5x2y2s2t3 <= 2
+y04 - 10000 binaryLp0j4nj5x2y2s2t3 <= 2
+y05 + 10000 binaryLp0j4nj5x2y2s2t3 >= 3
+x04 + 10000 binaryRp0j4nj5x2y2s2t3 >= 2
+x04 - 10000 binaryRp0j4nj5x2y2s2t3 <= 2
+x05 + 10000 binaryRp0j4nj5x2y2s2t3 >= 2
+x05 - 10000 binaryRp0j4nj5x2y2s2t3 <= 2
+y05 - 10000 binaryRp0j4nj5x2y2s2t3 <= 2
+y04 + 10000 binaryRp0j4nj5x2y2s2t3 >= 3
+x05 + 10000 binaryLp0j5nj6x2y2s2t3 >= 2
+x05 - 10000 binaryLp0j5nj6x2y2s2t3 <= 2
+x06 + 10000 binaryLp0j5nj6x2y2s2t3 >= 2
+x06 - 10000 binaryLp0j5nj6x2y2s2t3 <= 2
+y05 - 10000 binaryLp0j5nj6x2y2s2t3 <= 2
+y06 + 10000 binaryLp0j5nj6x2y2s2t3 >= 3
+x05 + 10000 binaryRp0j5nj6x2y2s2t3 >= 2
+x05 - 10000 binaryRp0j5nj6x2y2s2t3 <= 2
+x06 + 10000 binaryRp0j5nj6x2y2s2t3 >= 2
+x06 - 10000 binaryRp0j5nj6x2y2s2t3 <= 2
+y06 - 10000 binaryRp0j5nj6x2y2s2t3 <= 2
+y05 + 10000 binaryRp0j5nj6x2y2s2t3 >= 3
+x06 + 10000 binaryLp0j6nj7x2y2s2t3 >= 2
+x06 - 10000 binaryLp0j6nj7x2y2s2t3 <= 2
+x07 + 10000 binaryLp0j6nj7x2y2s2t3 >= 2
+x07 - 10000 binaryLp0j6nj7x2y2s2t3 <= 2
+y06 - 10000 binaryLp0j6nj7x2y2s2t3 <= 2
+y07 + 10000 binaryLp0j6nj7x2y2s2t3 >= 3
+x06 + 10000 binaryRp0j6nj7x2y2s2t3 >= 2
+x06 - 10000 binaryRp0j6nj7x2y2s2t3 <= 2
+x07 + 10000 binaryRp0j6nj7x2y2s2t3 >= 2
+x07 - 10000 binaryRp0j6nj7x2y2s2t3 <= 2
+y07 - 10000 binaryRp0j6nj7x2y2s2t3 <= 2
+y06 + 10000 binaryRp0j6nj7x2y2s2t3 >= 3
+x07 + 10000 binaryLp0j7nj8x2y2s2t3 >= 2
+x07 - 10000 binaryLp0j7nj8x2y2s2t3 <= 2
+x08 + 10000 binaryLp0j7nj8x2y2s2t3 >= 2
+x08 - 10000 binaryLp0j7nj8x2y2s2t3 <= 2
+y07 - 10000 binaryLp0j7nj8x2y2s2t3 <= 2
+y08 + 10000 binaryLp0j7nj8x2y2s2t3 >= 3
+x07 + 10000 binaryRp0j7nj8x2y2s2t3 >= 2
+x07 - 10000 binaryRp0j7nj8x2y2s2t3 <= 2
+x08 + 10000 binaryRp0j7nj8x2y2s2t3 >= 2
+x08 - 10000 binaryRp0j7nj8x2y2s2t3 <= 2
+y08 - 10000 binaryRp0j7nj8x2y2s2t3 <= 2
+y07 + 10000 binaryRp0j7nj8x2y2s2t3 >= 3
+x08 + 10000 binaryLp0j8nj9x2y2s2t3 >= 2
+x08 - 10000 binaryLp0j8nj9x2y2s2t3 <= 2
+x09 + 10000 binaryLp0j8nj9x2y2s2t3 >= 2
+x09 - 10000 binaryLp0j8nj9x2y2s2t3 <= 2
+y08 - 10000 binaryLp0j8nj9x2y2s2t3 <= 2
+y09 + 10000 binaryLp0j8nj9x2y2s2t3 >= 3
+x08 + 10000 binaryRp0j8nj9x2y2s2t3 >= 2
+x08 - 10000 binaryRp0j8nj9x2y2s2t3 <= 2
+x09 + 10000 binaryRp0j8nj9x2y2s2t3 >= 2
+x09 - 10000 binaryRp0j8nj9x2y2s2t3 <= 2
+y09 - 10000 binaryRp0j8nj9x2y2s2t3 <= 2
+y08 + 10000 binaryRp0j8nj9x2y2s2t3 >= 3
 x10 + 10000 binaryLp1j0nj1x2y2s2t3 >= 2
 x10 - 10000 binaryLp1j0nj1x2y2s2t3 <= 2
 x11 + 10000 binaryLp1j0nj1x2y2s2t3 >= 2
@@ -1336,103 +3006,67 @@ x14 + 10000 binaryRp1j3nj4x2y2s2t3 >= 2
 x14 - 10000 binaryRp1j3nj4x2y2s2t3 <= 2
 y14 - 10000 binaryRp1j3nj4x2y2s2t3 <= 2
 y13 + 10000 binaryRp1j3nj4x2y2s2t3 >= 3
-x20 + 10000 binaryLp2j0nj1x2y2s2t3 >= 2
-x20 - 10000 binaryLp2j0nj1x2y2s2t3 <= 2
-x21 + 10000 binaryLp2j0nj1x2y2s2t3 >= 2
-x21 - 10000 binaryLp2j0nj1x2y2s2t3 <= 2
-y20 - 10000 binaryLp2j0nj1x2y2s2t3 <= 2
-y21 + 10000 binaryLp2j0nj1x2y2s2t3 >= 3
-x20 + 10000 binaryRp2j0nj1x2y2s2t3 >= 2
-x20 - 10000 binaryRp2j0nj1x2y2s2t3 <= 2
-x21 + 10000 binaryRp2j0nj1x2y2s2t3 >= 2
-x21 - 10000 binaryRp2j0nj1x2y2s2t3 <= 2
-y21 - 10000 binaryRp2j0nj1x2y2s2t3 <= 2
-y20 + 10000 binaryRp2j0nj1x2y2s2t3 >= 3
-x21 + 10000 binaryLp2j1nj2x2y2s2t3 >= 2
-x21 - 10000 binaryLp2j1nj2x2y2s2t3 <= 2
-x22 + 10000 binaryLp2j1nj2x2y2s2t3 >= 2
-x22 - 10000 binaryLp2j1nj2x2y2s2t3 <= 2
-y21 - 10000 binaryLp2j1nj2x2y2s2t3 <= 2
-y22 + 10000 binaryLp2j1nj2x2y2s2t3 >= 3
-x21 + 10000 binaryRp2j1nj2x2y2s2t3 >= 2
-x21 - 10000 binaryRp2j1nj2x2y2s2t3 <= 2
-x22 + 10000 binaryRp2j1nj2x2y2s2t3 >= 2
-x22 - 10000 binaryRp2j1nj2x2y2s2t3 <= 2
-y22 - 10000 binaryRp2j1nj2x2y2s2t3 <= 2
-y21 + 10000 binaryRp2j1nj2x2y2s2t3 >= 3
-x22 + 10000 binaryLp2j2nj3x2y2s2t3 >= 2
-x22 - 10000 binaryLp2j2nj3x2y2s2t3 <= 2
-x23 + 10000 binaryLp2j2nj3x2y2s2t3 >= 2
-x23 - 10000 binaryLp2j2nj3x2y2s2t3 <= 2
-y22 - 10000 binaryLp2j2nj3x2y2s2t3 <= 2
-y23 + 10000 binaryLp2j2nj3x2y2s2t3 >= 3
-x22 + 10000 binaryRp2j2nj3x2y2s2t3 >= 2
-x22 - 10000 binaryRp2j2nj3x2y2s2t3 <= 2
-x23 + 10000 binaryRp2j2nj3x2y2s2t3 >= 2
-x23 - 10000 binaryRp2j2nj3x2y2s2t3 <= 2
-y23 - 10000 binaryRp2j2nj3x2y2s2t3 <= 2
-y22 + 10000 binaryRp2j2nj3x2y2s2t3 >= 3
-x23 + 10000 binaryLp2j3nj4x2y2s2t3 >= 2
-x23 - 10000 binaryLp2j3nj4x2y2s2t3 <= 2
-x24 + 10000 binaryLp2j3nj4x2y2s2t3 >= 2
-x24 - 10000 binaryLp2j3nj4x2y2s2t3 <= 2
-y23 - 10000 binaryLp2j3nj4x2y2s2t3 <= 2
-y24 + 10000 binaryLp2j3nj4x2y2s2t3 >= 3
-x23 + 10000 binaryRp2j3nj4x2y2s2t3 >= 2
-x23 - 10000 binaryRp2j3nj4x2y2s2t3 <= 2
-x24 + 10000 binaryRp2j3nj4x2y2s2t3 >= 2
-x24 - 10000 binaryRp2j3nj4x2y2s2t3 <= 2
-y24 - 10000 binaryRp2j3nj4x2y2s2t3 <= 2
-y23 + 10000 binaryRp2j3nj4x2y2s2t3 >= 3
-x30 + 10000 binaryLp3j0nj1x2y2s2t3 >= 2
-x30 - 10000 binaryLp3j0nj1x2y2s2t3 <= 2
-x31 + 10000 binaryLp3j0nj1x2y2s2t3 >= 2
-x31 - 10000 binaryLp3j0nj1x2y2s2t3 <= 2
-y30 - 10000 binaryLp3j0nj1x2y2s2t3 <= 2
-y31 + 10000 binaryLp3j0nj1x2y2s2t3 >= 3
-x30 + 10000 binaryRp3j0nj1x2y2s2t3 >= 2
-x30 - 10000 binaryRp3j0nj1x2y2s2t3 <= 2
-x31 + 10000 binaryRp3j0nj1x2y2s2t3 >= 2
-x31 - 10000 binaryRp3j0nj1x2y2s2t3 <= 2
-y31 - 10000 binaryRp3j0nj1x2y2s2t3 <= 2
-y30 + 10000 binaryRp3j0nj1x2y2s2t3 >= 3
-x31 + 10000 binaryLp3j1nj2x2y2s2t3 >= 2
-x31 - 10000 binaryLp3j1nj2x2y2s2t3 <= 2
-x32 + 10000 binaryLp3j1nj2x2y2s2t3 >= 2
-x32 - 10000 binaryLp3j1nj2x2y2s2t3 <= 2
-y31 - 10000 binaryLp3j1nj2x2y2s2t3 <= 2
-y32 + 10000 binaryLp3j1nj2x2y2s2t3 >= 3
-x31 + 10000 binaryRp3j1nj2x2y2s2t3 >= 2
-x31 - 10000 binaryRp3j1nj2x2y2s2t3 <= 2
-x32 + 10000 binaryRp3j1nj2x2y2s2t3 >= 2
-x32 - 10000 binaryRp3j1nj2x2y2s2t3 <= 2
-y32 - 10000 binaryRp3j1nj2x2y2s2t3 <= 2
-y31 + 10000 binaryRp3j1nj2x2y2s2t3 >= 3
-x32 + 10000 binaryLp3j2nj3x2y2s2t3 >= 2
-x32 - 10000 binaryLp3j2nj3x2y2s2t3 <= 2
-x33 + 10000 binaryLp3j2nj3x2y2s2t3 >= 2
-x33 - 10000 binaryLp3j2nj3x2y2s2t3 <= 2
-y32 - 10000 binaryLp3j2nj3x2y2s2t3 <= 2
-y33 + 10000 binaryLp3j2nj3x2y2s2t3 >= 3
-x32 + 10000 binaryRp3j2nj3x2y2s2t3 >= 2
-x32 - 10000 binaryRp3j2nj3x2y2s2t3 <= 2
-x33 + 10000 binaryRp3j2nj3x2y2s2t3 >= 2
-x33 - 10000 binaryRp3j2nj3x2y2s2t3 <= 2
-y33 - 10000 binaryRp3j2nj3x2y2s2t3 <= 2
-y32 + 10000 binaryRp3j2nj3x2y2s2t3 >= 3
-x33 + 10000 binaryLp3j3nj4x2y2s2t3 >= 2
-x33 - 10000 binaryLp3j3nj4x2y2s2t3 <= 2
-x34 + 10000 binaryLp3j3nj4x2y2s2t3 >= 2
-x34 - 10000 binaryLp3j3nj4x2y2s2t3 <= 2
-y33 - 10000 binaryLp3j3nj4x2y2s2t3 <= 2
-y34 + 10000 binaryLp3j3nj4x2y2s2t3 >= 3
-x33 + 10000 binaryRp3j3nj4x2y2s2t3 >= 2
-x33 - 10000 binaryRp3j3nj4x2y2s2t3 <= 2
-x34 + 10000 binaryRp3j3nj4x2y2s2t3 >= 2
-x34 - 10000 binaryRp3j3nj4x2y2s2t3 <= 2
-y34 - 10000 binaryRp3j3nj4x2y2s2t3 <= 2
-y33 + 10000 binaryRp3j3nj4x2y2s2t3 >= 3
- + binaryLp0j0nj1x2y2s2t3 + binaryRp0j0nj1x2y2s2t3 + binaryLp0j1nj2x2y2s2t3 + binaryRp0j1nj2x2y2s2t3 + binaryLp0j2nj3x2y2s2t3 + binaryRp0j2nj3x2y2s2t3 + binaryLp0j3nj4x2y2s2t3 + binaryRp0j3nj4x2y2s2t3 + binaryLp1j0nj1x2y2s2t3 + binaryRp1j0nj1x2y2s2t3 + binaryLp1j1nj2x2y2s2t3 + binaryRp1j1nj2x2y2s2t3 + binaryLp1j2nj3x2y2s2t3 + binaryRp1j2nj3x2y2s2t3 + binaryLp1j3nj4x2y2s2t3 + binaryRp1j3nj4x2y2s2t3 + binaryLp2j0nj1x2y2s2t3 + binaryRp2j0nj1x2y2s2t3 + binaryLp2j1nj2x2y2s2t3 + binaryRp2j1nj2x2y2s2t3 + binaryLp2j2nj3x2y2s2t3 + binaryRp2j2nj3x2y2s2t3 + binaryLp2j3nj4x2y2s2t3 + binaryRp2j3nj4x2y2s2t3 + binaryLp3j0nj1x2y2s2t3 + binaryRp3j0nj1x2y2s2t3 + binaryLp3j1nj2x2y2s2t3 + binaryRp3j1nj2x2y2s2t3 + binaryLp3j2nj3x2y2s2t3 + binaryRp3j2nj3x2y2s2t3 + binaryLp3j3nj4x2y2s2t3 + binaryRp3j3nj4x2y2s2t3 <= 31
+x14 + 10000 binaryLp1j4nj5x2y2s2t3 >= 2
+x14 - 10000 binaryLp1j4nj5x2y2s2t3 <= 2
+x15 + 10000 binaryLp1j4nj5x2y2s2t3 >= 2
+x15 - 10000 binaryLp1j4nj5x2y2s2t3 <= 2
+y14 - 10000 binaryLp1j4nj5x2y2s2t3 <= 2
+y15 + 10000 binaryLp1j4nj5x2y2s2t3 >= 3
+x14 + 10000 binaryRp1j4nj5x2y2s2t3 >= 2
+x14 - 10000 binaryRp1j4nj5x2y2s2t3 <= 2
+x15 + 10000 binaryRp1j4nj5x2y2s2t3 >= 2
+x15 - 10000 binaryRp1j4nj5x2y2s2t3 <= 2
+y15 - 10000 binaryRp1j4nj5x2y2s2t3 <= 2
+y14 + 10000 binaryRp1j4nj5x2y2s2t3 >= 3
+x15 + 10000 binaryLp1j5nj6x2y2s2t3 >= 2
+x15 - 10000 binaryLp1j5nj6x2y2s2t3 <= 2
+x16 + 10000 binaryLp1j5nj6x2y2s2t3 >= 2
+x16 - 10000 binaryLp1j5nj6x2y2s2t3 <= 2
+y15 - 10000 binaryLp1j5nj6x2y2s2t3 <= 2
+y16 + 10000 binaryLp1j5nj6x2y2s2t3 >= 3
+x15 + 10000 binaryRp1j5nj6x2y2s2t3 >= 2
+x15 - 10000 binaryRp1j5nj6x2y2s2t3 <= 2
+x16 + 10000 binaryRp1j5nj6x2y2s2t3 >= 2
+x16 - 10000 binaryRp1j5nj6x2y2s2t3 <= 2
+y16 - 10000 binaryRp1j5nj6x2y2s2t3 <= 2
+y15 + 10000 binaryRp1j5nj6x2y2s2t3 >= 3
+x16 + 10000 binaryLp1j6nj7x2y2s2t3 >= 2
+x16 - 10000 binaryLp1j6nj7x2y2s2t3 <= 2
+x17 + 10000 binaryLp1j6nj7x2y2s2t3 >= 2
+x17 - 10000 binaryLp1j6nj7x2y2s2t3 <= 2
+y16 - 10000 binaryLp1j6nj7x2y2s2t3 <= 2
+y17 + 10000 binaryLp1j6nj7x2y2s2t3 >= 3
+x16 + 10000 binaryRp1j6nj7x2y2s2t3 >= 2
+x16 - 10000 binaryRp1j6nj7x2y2s2t3 <= 2
+x17 + 10000 binaryRp1j6nj7x2y2s2t3 >= 2
+x17 - 10000 binaryRp1j6nj7x2y2s2t3 <= 2
+y17 - 10000 binaryRp1j6nj7x2y2s2t3 <= 2
+y16 + 10000 binaryRp1j6nj7x2y2s2t3 >= 3
+x17 + 10000 binaryLp1j7nj8x2y2s2t3 >= 2
+x17 - 10000 binaryLp1j7nj8x2y2s2t3 <= 2
+x18 + 10000 binaryLp1j7nj8x2y2s2t3 >= 2
+x18 - 10000 binaryLp1j7nj8x2y2s2t3 <= 2
+y17 - 10000 binaryLp1j7nj8x2y2s2t3 <= 2
+y18 + 10000 binaryLp1j7nj8x2y2s2t3 >= 3
+x17 + 10000 binaryRp1j7nj8x2y2s2t3 >= 2
+x17 - 10000 binaryRp1j7nj8x2y2s2t3 <= 2
+x18 + 10000 binaryRp1j7nj8x2y2s2t3 >= 2
+x18 - 10000 binaryRp1j7nj8x2y2s2t3 <= 2
+y18 - 10000 binaryRp1j7nj8x2y2s2t3 <= 2
+y17 + 10000 binaryRp1j7nj8x2y2s2t3 >= 3
+x18 + 10000 binaryLp1j8nj9x2y2s2t3 >= 2
+x18 - 10000 binaryLp1j8nj9x2y2s2t3 <= 2
+x19 + 10000 binaryLp1j8nj9x2y2s2t3 >= 2
+x19 - 10000 binaryLp1j8nj9x2y2s2t3 <= 2
+y18 - 10000 binaryLp1j8nj9x2y2s2t3 <= 2
+y19 + 10000 binaryLp1j8nj9x2y2s2t3 >= 3
+x18 + 10000 binaryRp1j8nj9x2y2s2t3 >= 2
+x18 - 10000 binaryRp1j8nj9x2y2s2t3 <= 2
+x19 + 10000 binaryRp1j8nj9x2y2s2t3 >= 2
+x19 - 10000 binaryRp1j8nj9x2y2s2t3 <= 2
+y19 - 10000 binaryRp1j8nj9x2y2s2t3 <= 2
+y18 + 10000 binaryRp1j8nj9x2y2s2t3 >= 3
+ + binaryLp0j0nj1x2y2s2t3 + binaryRp0j0nj1x2y2s2t3 + binaryLp0j1nj2x2y2s2t3 + binaryRp0j1nj2x2y2s2t3 + binaryLp0j2nj3x2y2s2t3 + binaryRp0j2nj3x2y2s2t3 + binaryLp0j3nj4x2y2s2t3 + binaryRp0j3nj4x2y2s2t3 + binaryLp0j4nj5x2y2s2t3 + binaryRp0j4nj5x2y2s2t3 + binaryLp0j5nj6x2y2s2t3 + binaryRp0j5nj6x2y2s2t3 + binaryLp0j6nj7x2y2s2t3 + binaryRp0j6nj7x2y2s2t3 + binaryLp0j7nj8x2y2s2t3 + binaryRp0j7nj8x2y2s2t3 + binaryLp0j8nj9x2y2s2t3 + binaryRp0j8nj9x2y2s2t3 + binaryLp1j0nj1x2y2s2t3 + binaryRp1j0nj1x2y2s2t3 + binaryLp1j1nj2x2y2s2t3 + binaryRp1j1nj2x2y2s2t3 + binaryLp1j2nj3x2y2s2t3 + binaryRp1j2nj3x2y2s2t3 + binaryLp1j3nj4x2y2s2t3 + binaryRp1j3nj4x2y2s2t3 + binaryLp1j4nj5x2y2s2t3 + binaryRp1j4nj5x2y2s2t3 + binaryLp1j5nj6x2y2s2t3 + binaryRp1j5nj6x2y2s2t3 + binaryLp1j6nj7x2y2s2t3 + binaryRp1j6nj7x2y2s2t3 + binaryLp1j7nj8x2y2s2t3 + binaryRp1j7nj8x2y2s2t3 + binaryLp1j8nj9x2y2s2t3 + binaryRp1j8nj9x2y2s2t3 <= 35
 x00 + 10000 binaryLp0j0nj1x3y2s3t3 >= 3
 x00 - 10000 binaryLp0j0nj1x3y2s3t3 <= 3
 x01 + 10000 binaryLp0j0nj1x3y2s3t3 >= 3
@@ -1481,6 +3115,66 @@ x04 + 10000 binaryRp0j3nj4x3y2s3t3 >= 3
 x04 - 10000 binaryRp0j3nj4x3y2s3t3 <= 3
 y04 - 10000 binaryRp0j3nj4x3y2s3t3 <= 2
 y03 + 10000 binaryRp0j3nj4x3y2s3t3 >= 3
+x04 + 10000 binaryLp0j4nj5x3y2s3t3 >= 3
+x04 - 10000 binaryLp0j4nj5x3y2s3t3 <= 3
+x05 + 10000 binaryLp0j4nj5x3y2s3t3 >= 3
+x05 - 10000 binaryLp0j4nj5x3y2s3t3 <= 3
+y04 - 10000 binaryLp0j4nj5x3y2s3t3 <= 2
+y05 + 10000 binaryLp0j4nj5x3y2s3t3 >= 3
+x04 + 10000 binaryRp0j4nj5x3y2s3t3 >= 3
+x04 - 10000 binaryRp0j4nj5x3y2s3t3 <= 3
+x05 + 10000 binaryRp0j4nj5x3y2s3t3 >= 3
+x05 - 10000 binaryRp0j4nj5x3y2s3t3 <= 3
+y05 - 10000 binaryRp0j4nj5x3y2s3t3 <= 2
+y04 + 10000 binaryRp0j4nj5x3y2s3t3 >= 3
+x05 + 10000 binaryLp0j5nj6x3y2s3t3 >= 3
+x05 - 10000 binaryLp0j5nj6x3y2s3t3 <= 3
+x06 + 10000 binaryLp0j5nj6x3y2s3t3 >= 3
+x06 - 10000 binaryLp0j5nj6x3y2s3t3 <= 3
+y05 - 10000 binaryLp0j5nj6x3y2s3t3 <= 2
+y06 + 10000 binaryLp0j5nj6x3y2s3t3 >= 3
+x05 + 10000 binaryRp0j5nj6x3y2s3t3 >= 3
+x05 - 10000 binaryRp0j5nj6x3y2s3t3 <= 3
+x06 + 10000 binaryRp0j5nj6x3y2s3t3 >= 3
+x06 - 10000 binaryRp0j5nj6x3y2s3t3 <= 3
+y06 - 10000 binaryRp0j5nj6x3y2s3t3 <= 2
+y05 + 10000 binaryRp0j5nj6x3y2s3t3 >= 3
+x06 + 10000 binaryLp0j6nj7x3y2s3t3 >= 3
+x06 - 10000 binaryLp0j6nj7x3y2s3t3 <= 3
+x07 + 10000 binaryLp0j6nj7x3y2s3t3 >= 3
+x07 - 10000 binaryLp0j6nj7x3y2s3t3 <= 3
+y06 - 10000 binaryLp0j6nj7x3y2s3t3 <= 2
+y07 + 10000 binaryLp0j6nj7x3y2s3t3 >= 3
+x06 + 10000 binaryRp0j6nj7x3y2s3t3 >= 3
+x06 - 10000 binaryRp0j6nj7x3y2s3t3 <= 3
+x07 + 10000 binaryRp0j6nj7x3y2s3t3 >= 3
+x07 - 10000 binaryRp0j6nj7x3y2s3t3 <= 3
+y07 - 10000 binaryRp0j6nj7x3y2s3t3 <= 2
+y06 + 10000 binaryRp0j6nj7x3y2s3t3 >= 3
+x07 + 10000 binaryLp0j7nj8x3y2s3t3 >= 3
+x07 - 10000 binaryLp0j7nj8x3y2s3t3 <= 3
+x08 + 10000 binaryLp0j7nj8x3y2s3t3 >= 3
+x08 - 10000 binaryLp0j7nj8x3y2s3t3 <= 3
+y07 - 10000 binaryLp0j7nj8x3y2s3t3 <= 2
+y08 + 10000 binaryLp0j7nj8x3y2s3t3 >= 3
+x07 + 10000 binaryRp0j7nj8x3y2s3t3 >= 3
+x07 - 10000 binaryRp0j7nj8x3y2s3t3 <= 3
+x08 + 10000 binaryRp0j7nj8x3y2s3t3 >= 3
+x08 - 10000 binaryRp0j7nj8x3y2s3t3 <= 3
+y08 - 10000 binaryRp0j7nj8x3y2s3t3 <= 2
+y07 + 10000 binaryRp0j7nj8x3y2s3t3 >= 3
+x08 + 10000 binaryLp0j8nj9x3y2s3t3 >= 3
+x08 - 10000 binaryLp0j8nj9x3y2s3t3 <= 3
+x09 + 10000 binaryLp0j8nj9x3y2s3t3 >= 3
+x09 - 10000 binaryLp0j8nj9x3y2s3t3 <= 3
+y08 - 10000 binaryLp0j8nj9x3y2s3t3 <= 2
+y09 + 10000 binaryLp0j8nj9x3y2s3t3 >= 3
+x08 + 10000 binaryRp0j8nj9x3y2s3t3 >= 3
+x08 - 10000 binaryRp0j8nj9x3y2s3t3 <= 3
+x09 + 10000 binaryRp0j8nj9x3y2s3t3 >= 3
+x09 - 10000 binaryRp0j8nj9x3y2s3t3 <= 3
+y09 - 10000 binaryRp0j8nj9x3y2s3t3 <= 2
+y08 + 10000 binaryRp0j8nj9x3y2s3t3 >= 3
 x10 + 10000 binaryLp1j0nj1x3y2s3t3 >= 3
 x10 - 10000 binaryLp1j0nj1x3y2s3t3 <= 3
 x11 + 10000 binaryLp1j0nj1x3y2s3t3 >= 3
@@ -1529,296 +3223,3539 @@ x14 + 10000 binaryRp1j3nj4x3y2s3t3 >= 3
 x14 - 10000 binaryRp1j3nj4x3y2s3t3 <= 3
 y14 - 10000 binaryRp1j3nj4x3y2s3t3 <= 2
 y13 + 10000 binaryRp1j3nj4x3y2s3t3 >= 3
-x20 + 10000 binaryLp2j0nj1x3y2s3t3 >= 3
-x20 - 10000 binaryLp2j0nj1x3y2s3t3 <= 3
-x21 + 10000 binaryLp2j0nj1x3y2s3t3 >= 3
-x21 - 10000 binaryLp2j0nj1x3y2s3t3 <= 3
-y20 - 10000 binaryLp2j0nj1x3y2s3t3 <= 2
-y21 + 10000 binaryLp2j0nj1x3y2s3t3 >= 3
-x20 + 10000 binaryRp2j0nj1x3y2s3t3 >= 3
-x20 - 10000 binaryRp2j0nj1x3y2s3t3 <= 3
-x21 + 10000 binaryRp2j0nj1x3y2s3t3 >= 3
-x21 - 10000 binaryRp2j0nj1x3y2s3t3 <= 3
-y21 - 10000 binaryRp2j0nj1x3y2s3t3 <= 2
-y20 + 10000 binaryRp2j0nj1x3y2s3t3 >= 3
-x21 + 10000 binaryLp2j1nj2x3y2s3t3 >= 3
-x21 - 10000 binaryLp2j1nj2x3y2s3t3 <= 3
-x22 + 10000 binaryLp2j1nj2x3y2s3t3 >= 3
-x22 - 10000 binaryLp2j1nj2x3y2s3t3 <= 3
-y21 - 10000 binaryLp2j1nj2x3y2s3t3 <= 2
-y22 + 10000 binaryLp2j1nj2x3y2s3t3 >= 3
-x21 + 10000 binaryRp2j1nj2x3y2s3t3 >= 3
-x21 - 10000 binaryRp2j1nj2x3y2s3t3 <= 3
-x22 + 10000 binaryRp2j1nj2x3y2s3t3 >= 3
-x22 - 10000 binaryRp2j1nj2x3y2s3t3 <= 3
-y22 - 10000 binaryRp2j1nj2x3y2s3t3 <= 2
-y21 + 10000 binaryRp2j1nj2x3y2s3t3 >= 3
-x22 + 10000 binaryLp2j2nj3x3y2s3t3 >= 3
-x22 - 10000 binaryLp2j2nj3x3y2s3t3 <= 3
-x23 + 10000 binaryLp2j2nj3x3y2s3t3 >= 3
-x23 - 10000 binaryLp2j2nj3x3y2s3t3 <= 3
-y22 - 10000 binaryLp2j2nj3x3y2s3t3 <= 2
-y23 + 10000 binaryLp2j2nj3x3y2s3t3 >= 3
-x22 + 10000 binaryRp2j2nj3x3y2s3t3 >= 3
-x22 - 10000 binaryRp2j2nj3x3y2s3t3 <= 3
-x23 + 10000 binaryRp2j2nj3x3y2s3t3 >= 3
-x23 - 10000 binaryRp2j2nj3x3y2s3t3 <= 3
-y23 - 10000 binaryRp2j2nj3x3y2s3t3 <= 2
-y22 + 10000 binaryRp2j2nj3x3y2s3t3 >= 3
-x23 + 10000 binaryLp2j3nj4x3y2s3t3 >= 3
-x23 - 10000 binaryLp2j3nj4x3y2s3t3 <= 3
-x24 + 10000 binaryLp2j3nj4x3y2s3t3 >= 3
-x24 - 10000 binaryLp2j3nj4x3y2s3t3 <= 3
-y23 - 10000 binaryLp2j3nj4x3y2s3t3 <= 2
-y24 + 10000 binaryLp2j3nj4x3y2s3t3 >= 3
-x23 + 10000 binaryRp2j3nj4x3y2s3t3 >= 3
-x23 - 10000 binaryRp2j3nj4x3y2s3t3 <= 3
-x24 + 10000 binaryRp2j3nj4x3y2s3t3 >= 3
-x24 - 10000 binaryRp2j3nj4x3y2s3t3 <= 3
-y24 - 10000 binaryRp2j3nj4x3y2s3t3 <= 2
-y23 + 10000 binaryRp2j3nj4x3y2s3t3 >= 3
-x30 + 10000 binaryLp3j0nj1x3y2s3t3 >= 3
-x30 - 10000 binaryLp3j0nj1x3y2s3t3 <= 3
-x31 + 10000 binaryLp3j0nj1x3y2s3t3 >= 3
-x31 - 10000 binaryLp3j0nj1x3y2s3t3 <= 3
-y30 - 10000 binaryLp3j0nj1x3y2s3t3 <= 2
-y31 + 10000 binaryLp3j0nj1x3y2s3t3 >= 3
-x30 + 10000 binaryRp3j0nj1x3y2s3t3 >= 3
-x30 - 10000 binaryRp3j0nj1x3y2s3t3 <= 3
-x31 + 10000 binaryRp3j0nj1x3y2s3t3 >= 3
-x31 - 10000 binaryRp3j0nj1x3y2s3t3 <= 3
-y31 - 10000 binaryRp3j0nj1x3y2s3t3 <= 2
-y30 + 10000 binaryRp3j0nj1x3y2s3t3 >= 3
-x31 + 10000 binaryLp3j1nj2x3y2s3t3 >= 3
-x31 - 10000 binaryLp3j1nj2x3y2s3t3 <= 3
-x32 + 10000 binaryLp3j1nj2x3y2s3t3 >= 3
-x32 - 10000 binaryLp3j1nj2x3y2s3t3 <= 3
-y31 - 10000 binaryLp3j1nj2x3y2s3t3 <= 2
-y32 + 10000 binaryLp3j1nj2x3y2s3t3 >= 3
-x31 + 10000 binaryRp3j1nj2x3y2s3t3 >= 3
-x31 - 10000 binaryRp3j1nj2x3y2s3t3 <= 3
-x32 + 10000 binaryRp3j1nj2x3y2s3t3 >= 3
-x32 - 10000 binaryRp3j1nj2x3y2s3t3 <= 3
-y32 - 10000 binaryRp3j1nj2x3y2s3t3 <= 2
-y31 + 10000 binaryRp3j1nj2x3y2s3t3 >= 3
-x32 + 10000 binaryLp3j2nj3x3y2s3t3 >= 3
-x32 - 10000 binaryLp3j2nj3x3y2s3t3 <= 3
-x33 + 10000 binaryLp3j2nj3x3y2s3t3 >= 3
-x33 - 10000 binaryLp3j2nj3x3y2s3t3 <= 3
-y32 - 10000 binaryLp3j2nj3x3y2s3t3 <= 2
-y33 + 10000 binaryLp3j2nj3x3y2s3t3 >= 3
-x32 + 10000 binaryRp3j2nj3x3y2s3t3 >= 3
-x32 - 10000 binaryRp3j2nj3x3y2s3t3 <= 3
-x33 + 10000 binaryRp3j2nj3x3y2s3t3 >= 3
-x33 - 10000 binaryRp3j2nj3x3y2s3t3 <= 3
-y33 - 10000 binaryRp3j2nj3x3y2s3t3 <= 2
-y32 + 10000 binaryRp3j2nj3x3y2s3t3 >= 3
-x33 + 10000 binaryLp3j3nj4x3y2s3t3 >= 3
-x33 - 10000 binaryLp3j3nj4x3y2s3t3 <= 3
-x34 + 10000 binaryLp3j3nj4x3y2s3t3 >= 3
-x34 - 10000 binaryLp3j3nj4x3y2s3t3 <= 3
-y33 - 10000 binaryLp3j3nj4x3y2s3t3 <= 2
-y34 + 10000 binaryLp3j3nj4x3y2s3t3 >= 3
-x33 + 10000 binaryRp3j3nj4x3y2s3t3 >= 3
-x33 - 10000 binaryRp3j3nj4x3y2s3t3 <= 3
-x34 + 10000 binaryRp3j3nj4x3y2s3t3 >= 3
-x34 - 10000 binaryRp3j3nj4x3y2s3t3 <= 3
-y34 - 10000 binaryRp3j3nj4x3y2s3t3 <= 2
-y33 + 10000 binaryRp3j3nj4x3y2s3t3 >= 3
- + binaryLp0j0nj1x3y2s3t3 + binaryRp0j0nj1x3y2s3t3 + binaryLp0j1nj2x3y2s3t3 + binaryRp0j1nj2x3y2s3t3 + binaryLp0j2nj3x3y2s3t3 + binaryRp0j2nj3x3y2s3t3 + binaryLp0j3nj4x3y2s3t3 + binaryRp0j3nj4x3y2s3t3 + binaryLp1j0nj1x3y2s3t3 + binaryRp1j0nj1x3y2s3t3 + binaryLp1j1nj2x3y2s3t3 + binaryRp1j1nj2x3y2s3t3 + binaryLp1j2nj3x3y2s3t3 + binaryRp1j2nj3x3y2s3t3 + binaryLp1j3nj4x3y2s3t3 + binaryRp1j3nj4x3y2s3t3 + binaryLp2j0nj1x3y2s3t3 + binaryRp2j0nj1x3y2s3t3 + binaryLp2j1nj2x3y2s3t3 + binaryRp2j1nj2x3y2s3t3 + binaryLp2j2nj3x3y2s3t3 + binaryRp2j2nj3x3y2s3t3 + binaryLp2j3nj4x3y2s3t3 + binaryRp2j3nj4x3y2s3t3 + binaryLp3j0nj1x3y2s3t3 + binaryRp3j0nj1x3y2s3t3 + binaryLp3j1nj2x3y2s3t3 + binaryRp3j1nj2x3y2s3t3 + binaryLp3j2nj3x3y2s3t3 + binaryRp3j2nj3x3y2s3t3 + binaryLp3j3nj4x3y2s3t3 + binaryRp3j3nj4x3y2s3t3 <= 31
-y00 + 10000 binaryUp0j0nj1x1y3s2t3 >= 3
-y00 - 10000 binaryUp0j0nj1x1y3s2t3 <=  3
-y01 + 10000 binaryUp0j0nj1x1y3s2t3 >= 3
-y01 - 10000 binaryUp0j0nj1x1y3s2t3 <= 3
-x00 - 10000 binaryUp0j0nj1x1y3s2t3 <= 1
-x01 + 10000 binaryUp0j0nj1x1y3s2t3 >= 2
-y00 + 10000 binaryDp0j0nj1x1y3s2t3 >= 3
-y00 - 10000 binaryDp0j0nj1x1y3s2t3 <= 3
-y01 + 10000 binaryDp0j0nj1x1y3s2t3 >= 3
-y01 - 10000 binaryDp0j0nj1x1y3s2t3 <= 3
-x01 - 10000 binaryDp0j0nj1x1y3s2t3 <= 1
-x00 + 10000 binaryDp0j0nj1x1y3s2t3 >= 2
-y01 + 10000 binaryUp0j1nj2x1y3s2t3 >= 3
-y01 - 10000 binaryUp0j1nj2x1y3s2t3 <=  3
-y02 + 10000 binaryUp0j1nj2x1y3s2t3 >= 3
-y02 - 10000 binaryUp0j1nj2x1y3s2t3 <= 3
-x01 - 10000 binaryUp0j1nj2x1y3s2t3 <= 1
-x02 + 10000 binaryUp0j1nj2x1y3s2t3 >= 2
-y01 + 10000 binaryDp0j1nj2x1y3s2t3 >= 3
-y01 - 10000 binaryDp0j1nj2x1y3s2t3 <= 3
-y02 + 10000 binaryDp0j1nj2x1y3s2t3 >= 3
-y02 - 10000 binaryDp0j1nj2x1y3s2t3 <= 3
-x02 - 10000 binaryDp0j1nj2x1y3s2t3 <= 1
-x01 + 10000 binaryDp0j1nj2x1y3s2t3 >= 2
-y02 + 10000 binaryUp0j2nj3x1y3s2t3 >= 3
-y02 - 10000 binaryUp0j2nj3x1y3s2t3 <=  3
-y03 + 10000 binaryUp0j2nj3x1y3s2t3 >= 3
-y03 - 10000 binaryUp0j2nj3x1y3s2t3 <= 3
-x02 - 10000 binaryUp0j2nj3x1y3s2t3 <= 1
-x03 + 10000 binaryUp0j2nj3x1y3s2t3 >= 2
-y02 + 10000 binaryDp0j2nj3x1y3s2t3 >= 3
-y02 - 10000 binaryDp0j2nj3x1y3s2t3 <= 3
-y03 + 10000 binaryDp0j2nj3x1y3s2t3 >= 3
-y03 - 10000 binaryDp0j2nj3x1y3s2t3 <= 3
-x03 - 10000 binaryDp0j2nj3x1y3s2t3 <= 1
-x02 + 10000 binaryDp0j2nj3x1y3s2t3 >= 2
-y03 + 10000 binaryUp0j3nj4x1y3s2t3 >= 3
-y03 - 10000 binaryUp0j3nj4x1y3s2t3 <=  3
-y04 + 10000 binaryUp0j3nj4x1y3s2t3 >= 3
-y04 - 10000 binaryUp0j3nj4x1y3s2t3 <= 3
-x03 - 10000 binaryUp0j3nj4x1y3s2t3 <= 1
-x04 + 10000 binaryUp0j3nj4x1y3s2t3 >= 2
-y03 + 10000 binaryDp0j3nj4x1y3s2t3 >= 3
-y03 - 10000 binaryDp0j3nj4x1y3s2t3 <= 3
-y04 + 10000 binaryDp0j3nj4x1y3s2t3 >= 3
-y04 - 10000 binaryDp0j3nj4x1y3s2t3 <= 3
-x04 - 10000 binaryDp0j3nj4x1y3s2t3 <= 1
-x03 + 10000 binaryDp0j3nj4x1y3s2t3 >= 2
-y10 + 10000 binaryUp1j0nj1x1y3s2t3 >= 3
-y10 - 10000 binaryUp1j0nj1x1y3s2t3 <=  3
-y11 + 10000 binaryUp1j0nj1x1y3s2t3 >= 3
-y11 - 10000 binaryUp1j0nj1x1y3s2t3 <= 3
-x10 - 10000 binaryUp1j0nj1x1y3s2t3 <= 1
-x11 + 10000 binaryUp1j0nj1x1y3s2t3 >= 2
-y10 + 10000 binaryDp1j0nj1x1y3s2t3 >= 3
-y10 - 10000 binaryDp1j0nj1x1y3s2t3 <= 3
-y11 + 10000 binaryDp1j0nj1x1y3s2t3 >= 3
-y11 - 10000 binaryDp1j0nj1x1y3s2t3 <= 3
-x11 - 10000 binaryDp1j0nj1x1y3s2t3 <= 1
-x10 + 10000 binaryDp1j0nj1x1y3s2t3 >= 2
-y11 + 10000 binaryUp1j1nj2x1y3s2t3 >= 3
-y11 - 10000 binaryUp1j1nj2x1y3s2t3 <=  3
-y12 + 10000 binaryUp1j1nj2x1y3s2t3 >= 3
-y12 - 10000 binaryUp1j1nj2x1y3s2t3 <= 3
-x11 - 10000 binaryUp1j1nj2x1y3s2t3 <= 1
-x12 + 10000 binaryUp1j1nj2x1y3s2t3 >= 2
-y11 + 10000 binaryDp1j1nj2x1y3s2t3 >= 3
-y11 - 10000 binaryDp1j1nj2x1y3s2t3 <= 3
-y12 + 10000 binaryDp1j1nj2x1y3s2t3 >= 3
-y12 - 10000 binaryDp1j1nj2x1y3s2t3 <= 3
-x12 - 10000 binaryDp1j1nj2x1y3s2t3 <= 1
-x11 + 10000 binaryDp1j1nj2x1y3s2t3 >= 2
-y12 + 10000 binaryUp1j2nj3x1y3s2t3 >= 3
-y12 - 10000 binaryUp1j2nj3x1y3s2t3 <=  3
-y13 + 10000 binaryUp1j2nj3x1y3s2t3 >= 3
-y13 - 10000 binaryUp1j2nj3x1y3s2t3 <= 3
-x12 - 10000 binaryUp1j2nj3x1y3s2t3 <= 1
-x13 + 10000 binaryUp1j2nj3x1y3s2t3 >= 2
-y12 + 10000 binaryDp1j2nj3x1y3s2t3 >= 3
-y12 - 10000 binaryDp1j2nj3x1y3s2t3 <= 3
-y13 + 10000 binaryDp1j2nj3x1y3s2t3 >= 3
-y13 - 10000 binaryDp1j2nj3x1y3s2t3 <= 3
-x13 - 10000 binaryDp1j2nj3x1y3s2t3 <= 1
-x12 + 10000 binaryDp1j2nj3x1y3s2t3 >= 2
-y13 + 10000 binaryUp1j3nj4x1y3s2t3 >= 3
-y13 - 10000 binaryUp1j3nj4x1y3s2t3 <=  3
-y14 + 10000 binaryUp1j3nj4x1y3s2t3 >= 3
-y14 - 10000 binaryUp1j3nj4x1y3s2t3 <= 3
-x13 - 10000 binaryUp1j3nj4x1y3s2t3 <= 1
-x14 + 10000 binaryUp1j3nj4x1y3s2t3 >= 2
-y13 + 10000 binaryDp1j3nj4x1y3s2t3 >= 3
-y13 - 10000 binaryDp1j3nj4x1y3s2t3 <= 3
-y14 + 10000 binaryDp1j3nj4x1y3s2t3 >= 3
-y14 - 10000 binaryDp1j3nj4x1y3s2t3 <= 3
-x14 - 10000 binaryDp1j3nj4x1y3s2t3 <= 1
-x13 + 10000 binaryDp1j3nj4x1y3s2t3 >= 2
-y20 + 10000 binaryUp2j0nj1x1y3s2t3 >= 3
-y20 - 10000 binaryUp2j0nj1x1y3s2t3 <=  3
-y21 + 10000 binaryUp2j0nj1x1y3s2t3 >= 3
-y21 - 10000 binaryUp2j0nj1x1y3s2t3 <= 3
-x20 - 10000 binaryUp2j0nj1x1y3s2t3 <= 1
-x21 + 10000 binaryUp2j0nj1x1y3s2t3 >= 2
-y20 + 10000 binaryDp2j0nj1x1y3s2t3 >= 3
-y20 - 10000 binaryDp2j0nj1x1y3s2t3 <= 3
-y21 + 10000 binaryDp2j0nj1x1y3s2t3 >= 3
-y21 - 10000 binaryDp2j0nj1x1y3s2t3 <= 3
-x21 - 10000 binaryDp2j0nj1x1y3s2t3 <= 1
-x20 + 10000 binaryDp2j0nj1x1y3s2t3 >= 2
-y21 + 10000 binaryUp2j1nj2x1y3s2t3 >= 3
-y21 - 10000 binaryUp2j1nj2x1y3s2t3 <=  3
-y22 + 10000 binaryUp2j1nj2x1y3s2t3 >= 3
-y22 - 10000 binaryUp2j1nj2x1y3s2t3 <= 3
-x21 - 10000 binaryUp2j1nj2x1y3s2t3 <= 1
-x22 + 10000 binaryUp2j1nj2x1y3s2t3 >= 2
-y21 + 10000 binaryDp2j1nj2x1y3s2t3 >= 3
-y21 - 10000 binaryDp2j1nj2x1y3s2t3 <= 3
-y22 + 10000 binaryDp2j1nj2x1y3s2t3 >= 3
-y22 - 10000 binaryDp2j1nj2x1y3s2t3 <= 3
-x22 - 10000 binaryDp2j1nj2x1y3s2t3 <= 1
-x21 + 10000 binaryDp2j1nj2x1y3s2t3 >= 2
-y22 + 10000 binaryUp2j2nj3x1y3s2t3 >= 3
-y22 - 10000 binaryUp2j2nj3x1y3s2t3 <=  3
-y23 + 10000 binaryUp2j2nj3x1y3s2t3 >= 3
-y23 - 10000 binaryUp2j2nj3x1y3s2t3 <= 3
-x22 - 10000 binaryUp2j2nj3x1y3s2t3 <= 1
-x23 + 10000 binaryUp2j2nj3x1y3s2t3 >= 2
-y22 + 10000 binaryDp2j2nj3x1y3s2t3 >= 3
-y22 - 10000 binaryDp2j2nj3x1y3s2t3 <= 3
-y23 + 10000 binaryDp2j2nj3x1y3s2t3 >= 3
-y23 - 10000 binaryDp2j2nj3x1y3s2t3 <= 3
-x23 - 10000 binaryDp2j2nj3x1y3s2t3 <= 1
-x22 + 10000 binaryDp2j2nj3x1y3s2t3 >= 2
-y23 + 10000 binaryUp2j3nj4x1y3s2t3 >= 3
-y23 - 10000 binaryUp2j3nj4x1y3s2t3 <=  3
-y24 + 10000 binaryUp2j3nj4x1y3s2t3 >= 3
-y24 - 10000 binaryUp2j3nj4x1y3s2t3 <= 3
-x23 - 10000 binaryUp2j3nj4x1y3s2t3 <= 1
-x24 + 10000 binaryUp2j3nj4x1y3s2t3 >= 2
-y23 + 10000 binaryDp2j3nj4x1y3s2t3 >= 3
-y23 - 10000 binaryDp2j3nj4x1y3s2t3 <= 3
-y24 + 10000 binaryDp2j3nj4x1y3s2t3 >= 3
-y24 - 10000 binaryDp2j3nj4x1y3s2t3 <= 3
-x24 - 10000 binaryDp2j3nj4x1y3s2t3 <= 1
-x23 + 10000 binaryDp2j3nj4x1y3s2t3 >= 2
-y30 + 10000 binaryUp3j0nj1x1y3s2t3 >= 3
-y30 - 10000 binaryUp3j0nj1x1y3s2t3 <=  3
-y31 + 10000 binaryUp3j0nj1x1y3s2t3 >= 3
-y31 - 10000 binaryUp3j0nj1x1y3s2t3 <= 3
-x30 - 10000 binaryUp3j0nj1x1y3s2t3 <= 1
-x31 + 10000 binaryUp3j0nj1x1y3s2t3 >= 2
-y30 + 10000 binaryDp3j0nj1x1y3s2t3 >= 3
-y30 - 10000 binaryDp3j0nj1x1y3s2t3 <= 3
-y31 + 10000 binaryDp3j0nj1x1y3s2t3 >= 3
-y31 - 10000 binaryDp3j0nj1x1y3s2t3 <= 3
-x31 - 10000 binaryDp3j0nj1x1y3s2t3 <= 1
-x30 + 10000 binaryDp3j0nj1x1y3s2t3 >= 2
-y31 + 10000 binaryUp3j1nj2x1y3s2t3 >= 3
-y31 - 10000 binaryUp3j1nj2x1y3s2t3 <=  3
-y32 + 10000 binaryUp3j1nj2x1y3s2t3 >= 3
-y32 - 10000 binaryUp3j1nj2x1y3s2t3 <= 3
-x31 - 10000 binaryUp3j1nj2x1y3s2t3 <= 1
-x32 + 10000 binaryUp3j1nj2x1y3s2t3 >= 2
-y31 + 10000 binaryDp3j1nj2x1y3s2t3 >= 3
-y31 - 10000 binaryDp3j1nj2x1y3s2t3 <= 3
-y32 + 10000 binaryDp3j1nj2x1y3s2t3 >= 3
-y32 - 10000 binaryDp3j1nj2x1y3s2t3 <= 3
-x32 - 10000 binaryDp3j1nj2x1y3s2t3 <= 1
-x31 + 10000 binaryDp3j1nj2x1y3s2t3 >= 2
-y32 + 10000 binaryUp3j2nj3x1y3s2t3 >= 3
-y32 - 10000 binaryUp3j2nj3x1y3s2t3 <=  3
-y33 + 10000 binaryUp3j2nj3x1y3s2t3 >= 3
-y33 - 10000 binaryUp3j2nj3x1y3s2t3 <= 3
-x32 - 10000 binaryUp3j2nj3x1y3s2t3 <= 1
-x33 + 10000 binaryUp3j2nj3x1y3s2t3 >= 2
-y32 + 10000 binaryDp3j2nj3x1y3s2t3 >= 3
-y32 - 10000 binaryDp3j2nj3x1y3s2t3 <= 3
-y33 + 10000 binaryDp3j2nj3x1y3s2t3 >= 3
-y33 - 10000 binaryDp3j2nj3x1y3s2t3 <= 3
-x33 - 10000 binaryDp3j2nj3x1y3s2t3 <= 1
-x32 + 10000 binaryDp3j2nj3x1y3s2t3 >= 2
-y33 + 10000 binaryUp3j3nj4x1y3s2t3 >= 3
-y33 - 10000 binaryUp3j3nj4x1y3s2t3 <=  3
-y34 + 10000 binaryUp3j3nj4x1y3s2t3 >= 3
-y34 - 10000 binaryUp3j3nj4x1y3s2t3 <= 3
-x33 - 10000 binaryUp3j3nj4x1y3s2t3 <= 1
-x34 + 10000 binaryUp3j3nj4x1y3s2t3 >= 2
-y33 + 10000 binaryDp3j3nj4x1y3s2t3 >= 3
-y33 - 10000 binaryDp3j3nj4x1y3s2t3 <= 3
-y34 + 10000 binaryDp3j3nj4x1y3s2t3 >= 3
-y34 - 10000 binaryDp3j3nj4x1y3s2t3 <= 3
-x34 - 10000 binaryDp3j3nj4x1y3s2t3 <= 1
-x33 + 10000 binaryDp3j3nj4x1y3s2t3 >= 2
- + binaryUp0j0nj1x1y3s2t3 + binaryDp0j0nj1x1y3s2t3 + binaryUp0j1nj2x1y3s2t3 + binaryDp0j1nj2x1y3s2t3 + binaryUp0j2nj3x1y3s2t3 + binaryDp0j2nj3x1y3s2t3 + binaryUp0j3nj4x1y3s2t3 + binaryDp0j3nj4x1y3s2t3 + binaryUp1j0nj1x1y3s2t3 + binaryDp1j0nj1x1y3s2t3 + binaryUp1j1nj2x1y3s2t3 + binaryDp1j1nj2x1y3s2t3 + binaryUp1j2nj3x1y3s2t3 + binaryDp1j2nj3x1y3s2t3 + binaryUp1j3nj4x1y3s2t3 + binaryDp1j3nj4x1y3s2t3 + binaryUp2j0nj1x1y3s2t3 + binaryDp2j0nj1x1y3s2t3 + binaryUp2j1nj2x1y3s2t3 + binaryDp2j1nj2x1y3s2t3 + binaryUp2j2nj3x1y3s2t3 + binaryDp2j2nj3x1y3s2t3 + binaryUp2j3nj4x1y3s2t3 + binaryDp2j3nj4x1y3s2t3 + binaryUp3j0nj1x1y3s2t3 + binaryDp3j0nj1x1y3s2t3 + binaryUp3j1nj2x1y3s2t3 + binaryDp3j1nj2x1y3s2t3 + binaryUp3j2nj3x1y3s2t3 + binaryDp3j2nj3x1y3s2t3 + binaryUp3j3nj4x1y3s2t3 + binaryDp3j3nj4x1y3s2t3 <= 31
+x14 + 10000 binaryLp1j4nj5x3y2s3t3 >= 3
+x14 - 10000 binaryLp1j4nj5x3y2s3t3 <= 3
+x15 + 10000 binaryLp1j4nj5x3y2s3t3 >= 3
+x15 - 10000 binaryLp1j4nj5x3y2s3t3 <= 3
+y14 - 10000 binaryLp1j4nj5x3y2s3t3 <= 2
+y15 + 10000 binaryLp1j4nj5x3y2s3t3 >= 3
+x14 + 10000 binaryRp1j4nj5x3y2s3t3 >= 3
+x14 - 10000 binaryRp1j4nj5x3y2s3t3 <= 3
+x15 + 10000 binaryRp1j4nj5x3y2s3t3 >= 3
+x15 - 10000 binaryRp1j4nj5x3y2s3t3 <= 3
+y15 - 10000 binaryRp1j4nj5x3y2s3t3 <= 2
+y14 + 10000 binaryRp1j4nj5x3y2s3t3 >= 3
+x15 + 10000 binaryLp1j5nj6x3y2s3t3 >= 3
+x15 - 10000 binaryLp1j5nj6x3y2s3t3 <= 3
+x16 + 10000 binaryLp1j5nj6x3y2s3t3 >= 3
+x16 - 10000 binaryLp1j5nj6x3y2s3t3 <= 3
+y15 - 10000 binaryLp1j5nj6x3y2s3t3 <= 2
+y16 + 10000 binaryLp1j5nj6x3y2s3t3 >= 3
+x15 + 10000 binaryRp1j5nj6x3y2s3t3 >= 3
+x15 - 10000 binaryRp1j5nj6x3y2s3t3 <= 3
+x16 + 10000 binaryRp1j5nj6x3y2s3t3 >= 3
+x16 - 10000 binaryRp1j5nj6x3y2s3t3 <= 3
+y16 - 10000 binaryRp1j5nj6x3y2s3t3 <= 2
+y15 + 10000 binaryRp1j5nj6x3y2s3t3 >= 3
+x16 + 10000 binaryLp1j6nj7x3y2s3t3 >= 3
+x16 - 10000 binaryLp1j6nj7x3y2s3t3 <= 3
+x17 + 10000 binaryLp1j6nj7x3y2s3t3 >= 3
+x17 - 10000 binaryLp1j6nj7x3y2s3t3 <= 3
+y16 - 10000 binaryLp1j6nj7x3y2s3t3 <= 2
+y17 + 10000 binaryLp1j6nj7x3y2s3t3 >= 3
+x16 + 10000 binaryRp1j6nj7x3y2s3t3 >= 3
+x16 - 10000 binaryRp1j6nj7x3y2s3t3 <= 3
+x17 + 10000 binaryRp1j6nj7x3y2s3t3 >= 3
+x17 - 10000 binaryRp1j6nj7x3y2s3t3 <= 3
+y17 - 10000 binaryRp1j6nj7x3y2s3t3 <= 2
+y16 + 10000 binaryRp1j6nj7x3y2s3t3 >= 3
+x17 + 10000 binaryLp1j7nj8x3y2s3t3 >= 3
+x17 - 10000 binaryLp1j7nj8x3y2s3t3 <= 3
+x18 + 10000 binaryLp1j7nj8x3y2s3t3 >= 3
+x18 - 10000 binaryLp1j7nj8x3y2s3t3 <= 3
+y17 - 10000 binaryLp1j7nj8x3y2s3t3 <= 2
+y18 + 10000 binaryLp1j7nj8x3y2s3t3 >= 3
+x17 + 10000 binaryRp1j7nj8x3y2s3t3 >= 3
+x17 - 10000 binaryRp1j7nj8x3y2s3t3 <= 3
+x18 + 10000 binaryRp1j7nj8x3y2s3t3 >= 3
+x18 - 10000 binaryRp1j7nj8x3y2s3t3 <= 3
+y18 - 10000 binaryRp1j7nj8x3y2s3t3 <= 2
+y17 + 10000 binaryRp1j7nj8x3y2s3t3 >= 3
+x18 + 10000 binaryLp1j8nj9x3y2s3t3 >= 3
+x18 - 10000 binaryLp1j8nj9x3y2s3t3 <= 3
+x19 + 10000 binaryLp1j8nj9x3y2s3t3 >= 3
+x19 - 10000 binaryLp1j8nj9x3y2s3t3 <= 3
+y18 - 10000 binaryLp1j8nj9x3y2s3t3 <= 2
+y19 + 10000 binaryLp1j8nj9x3y2s3t3 >= 3
+x18 + 10000 binaryRp1j8nj9x3y2s3t3 >= 3
+x18 - 10000 binaryRp1j8nj9x3y2s3t3 <= 3
+x19 + 10000 binaryRp1j8nj9x3y2s3t3 >= 3
+x19 - 10000 binaryRp1j8nj9x3y2s3t3 <= 3
+y19 - 10000 binaryRp1j8nj9x3y2s3t3 <= 2
+y18 + 10000 binaryRp1j8nj9x3y2s3t3 >= 3
+ + binaryLp0j0nj1x3y2s3t3 + binaryRp0j0nj1x3y2s3t3 + binaryLp0j1nj2x3y2s3t3 + binaryRp0j1nj2x3y2s3t3 + binaryLp0j2nj3x3y2s3t3 + binaryRp0j2nj3x3y2s3t3 + binaryLp0j3nj4x3y2s3t3 + binaryRp0j3nj4x3y2s3t3 + binaryLp0j4nj5x3y2s3t3 + binaryRp0j4nj5x3y2s3t3 + binaryLp0j5nj6x3y2s3t3 + binaryRp0j5nj6x3y2s3t3 + binaryLp0j6nj7x3y2s3t3 + binaryRp0j6nj7x3y2s3t3 + binaryLp0j7nj8x3y2s3t3 + binaryRp0j7nj8x3y2s3t3 + binaryLp0j8nj9x3y2s3t3 + binaryRp0j8nj9x3y2s3t3 + binaryLp1j0nj1x3y2s3t3 + binaryRp1j0nj1x3y2s3t3 + binaryLp1j1nj2x3y2s3t3 + binaryRp1j1nj2x3y2s3t3 + binaryLp1j2nj3x3y2s3t3 + binaryRp1j2nj3x3y2s3t3 + binaryLp1j3nj4x3y2s3t3 + binaryRp1j3nj4x3y2s3t3 + binaryLp1j4nj5x3y2s3t3 + binaryRp1j4nj5x3y2s3t3 + binaryLp1j5nj6x3y2s3t3 + binaryRp1j5nj6x3y2s3t3 + binaryLp1j6nj7x3y2s3t3 + binaryRp1j6nj7x3y2s3t3 + binaryLp1j7nj8x3y2s3t3 + binaryRp1j7nj8x3y2s3t3 + binaryLp1j8nj9x3y2s3t3 + binaryRp1j8nj9x3y2s3t3 <= 35
+y00 + 10000 binaryUp0j0nj1x0y1s1t1 >= 1
+y00 - 10000 binaryUp0j0nj1x0y1s1t1 <=  1
+y01 + 10000 binaryUp0j0nj1x0y1s1t1 >= 1
+y01 - 10000 binaryUp0j0nj1x0y1s1t1 <= 1
+x00 - 10000 binaryUp0j0nj1x0y1s1t1 <= 0
+x01 + 10000 binaryUp0j0nj1x0y1s1t1 >= 1
+y00 + 10000 binaryDp0j0nj1x0y1s1t1 >= 1
+y00 - 10000 binaryDp0j0nj1x0y1s1t1 <= 1
+y01 + 10000 binaryDp0j0nj1x0y1s1t1 >= 1
+y01 - 10000 binaryDp0j0nj1x0y1s1t1 <= 1
+x01 - 10000 binaryDp0j0nj1x0y1s1t1 <= 0
+x00 + 10000 binaryDp0j0nj1x0y1s1t1 >= 1
+y01 + 10000 binaryUp0j1nj2x0y1s1t1 >= 1
+y01 - 10000 binaryUp0j1nj2x0y1s1t1 <=  1
+y02 + 10000 binaryUp0j1nj2x0y1s1t1 >= 1
+y02 - 10000 binaryUp0j1nj2x0y1s1t1 <= 1
+x01 - 10000 binaryUp0j1nj2x0y1s1t1 <= 0
+x02 + 10000 binaryUp0j1nj2x0y1s1t1 >= 1
+y01 + 10000 binaryDp0j1nj2x0y1s1t1 >= 1
+y01 - 10000 binaryDp0j1nj2x0y1s1t1 <= 1
+y02 + 10000 binaryDp0j1nj2x0y1s1t1 >= 1
+y02 - 10000 binaryDp0j1nj2x0y1s1t1 <= 1
+x02 - 10000 binaryDp0j1nj2x0y1s1t1 <= 0
+x01 + 10000 binaryDp0j1nj2x0y1s1t1 >= 1
+y02 + 10000 binaryUp0j2nj3x0y1s1t1 >= 1
+y02 - 10000 binaryUp0j2nj3x0y1s1t1 <=  1
+y03 + 10000 binaryUp0j2nj3x0y1s1t1 >= 1
+y03 - 10000 binaryUp0j2nj3x0y1s1t1 <= 1
+x02 - 10000 binaryUp0j2nj3x0y1s1t1 <= 0
+x03 + 10000 binaryUp0j2nj3x0y1s1t1 >= 1
+y02 + 10000 binaryDp0j2nj3x0y1s1t1 >= 1
+y02 - 10000 binaryDp0j2nj3x0y1s1t1 <= 1
+y03 + 10000 binaryDp0j2nj3x0y1s1t1 >= 1
+y03 - 10000 binaryDp0j2nj3x0y1s1t1 <= 1
+x03 - 10000 binaryDp0j2nj3x0y1s1t1 <= 0
+x02 + 10000 binaryDp0j2nj3x0y1s1t1 >= 1
+y03 + 10000 binaryUp0j3nj4x0y1s1t1 >= 1
+y03 - 10000 binaryUp0j3nj4x0y1s1t1 <=  1
+y04 + 10000 binaryUp0j3nj4x0y1s1t1 >= 1
+y04 - 10000 binaryUp0j3nj4x0y1s1t1 <= 1
+x03 - 10000 binaryUp0j3nj4x0y1s1t1 <= 0
+x04 + 10000 binaryUp0j3nj4x0y1s1t1 >= 1
+y03 + 10000 binaryDp0j3nj4x0y1s1t1 >= 1
+y03 - 10000 binaryDp0j3nj4x0y1s1t1 <= 1
+y04 + 10000 binaryDp0j3nj4x0y1s1t1 >= 1
+y04 - 10000 binaryDp0j3nj4x0y1s1t1 <= 1
+x04 - 10000 binaryDp0j3nj4x0y1s1t1 <= 0
+x03 + 10000 binaryDp0j3nj4x0y1s1t1 >= 1
+y04 + 10000 binaryUp0j4nj5x0y1s1t1 >= 1
+y04 - 10000 binaryUp0j4nj5x0y1s1t1 <=  1
+y05 + 10000 binaryUp0j4nj5x0y1s1t1 >= 1
+y05 - 10000 binaryUp0j4nj5x0y1s1t1 <= 1
+x04 - 10000 binaryUp0j4nj5x0y1s1t1 <= 0
+x05 + 10000 binaryUp0j4nj5x0y1s1t1 >= 1
+y04 + 10000 binaryDp0j4nj5x0y1s1t1 >= 1
+y04 - 10000 binaryDp0j4nj5x0y1s1t1 <= 1
+y05 + 10000 binaryDp0j4nj5x0y1s1t1 >= 1
+y05 - 10000 binaryDp0j4nj5x0y1s1t1 <= 1
+x05 - 10000 binaryDp0j4nj5x0y1s1t1 <= 0
+x04 + 10000 binaryDp0j4nj5x0y1s1t1 >= 1
+y05 + 10000 binaryUp0j5nj6x0y1s1t1 >= 1
+y05 - 10000 binaryUp0j5nj6x0y1s1t1 <=  1
+y06 + 10000 binaryUp0j5nj6x0y1s1t1 >= 1
+y06 - 10000 binaryUp0j5nj6x0y1s1t1 <= 1
+x05 - 10000 binaryUp0j5nj6x0y1s1t1 <= 0
+x06 + 10000 binaryUp0j5nj6x0y1s1t1 >= 1
+y05 + 10000 binaryDp0j5nj6x0y1s1t1 >= 1
+y05 - 10000 binaryDp0j5nj6x0y1s1t1 <= 1
+y06 + 10000 binaryDp0j5nj6x0y1s1t1 >= 1
+y06 - 10000 binaryDp0j5nj6x0y1s1t1 <= 1
+x06 - 10000 binaryDp0j5nj6x0y1s1t1 <= 0
+x05 + 10000 binaryDp0j5nj6x0y1s1t1 >= 1
+y06 + 10000 binaryUp0j6nj7x0y1s1t1 >= 1
+y06 - 10000 binaryUp0j6nj7x0y1s1t1 <=  1
+y07 + 10000 binaryUp0j6nj7x0y1s1t1 >= 1
+y07 - 10000 binaryUp0j6nj7x0y1s1t1 <= 1
+x06 - 10000 binaryUp0j6nj7x0y1s1t1 <= 0
+x07 + 10000 binaryUp0j6nj7x0y1s1t1 >= 1
+y06 + 10000 binaryDp0j6nj7x0y1s1t1 >= 1
+y06 - 10000 binaryDp0j6nj7x0y1s1t1 <= 1
+y07 + 10000 binaryDp0j6nj7x0y1s1t1 >= 1
+y07 - 10000 binaryDp0j6nj7x0y1s1t1 <= 1
+x07 - 10000 binaryDp0j6nj7x0y1s1t1 <= 0
+x06 + 10000 binaryDp0j6nj7x0y1s1t1 >= 1
+y07 + 10000 binaryUp0j7nj8x0y1s1t1 >= 1
+y07 - 10000 binaryUp0j7nj8x0y1s1t1 <=  1
+y08 + 10000 binaryUp0j7nj8x0y1s1t1 >= 1
+y08 - 10000 binaryUp0j7nj8x0y1s1t1 <= 1
+x07 - 10000 binaryUp0j7nj8x0y1s1t1 <= 0
+x08 + 10000 binaryUp0j7nj8x0y1s1t1 >= 1
+y07 + 10000 binaryDp0j7nj8x0y1s1t1 >= 1
+y07 - 10000 binaryDp0j7nj8x0y1s1t1 <= 1
+y08 + 10000 binaryDp0j7nj8x0y1s1t1 >= 1
+y08 - 10000 binaryDp0j7nj8x0y1s1t1 <= 1
+x08 - 10000 binaryDp0j7nj8x0y1s1t1 <= 0
+x07 + 10000 binaryDp0j7nj8x0y1s1t1 >= 1
+y08 + 10000 binaryUp0j8nj9x0y1s1t1 >= 1
+y08 - 10000 binaryUp0j8nj9x0y1s1t1 <=  1
+y09 + 10000 binaryUp0j8nj9x0y1s1t1 >= 1
+y09 - 10000 binaryUp0j8nj9x0y1s1t1 <= 1
+x08 - 10000 binaryUp0j8nj9x0y1s1t1 <= 0
+x09 + 10000 binaryUp0j8nj9x0y1s1t1 >= 1
+y08 + 10000 binaryDp0j8nj9x0y1s1t1 >= 1
+y08 - 10000 binaryDp0j8nj9x0y1s1t1 <= 1
+y09 + 10000 binaryDp0j8nj9x0y1s1t1 >= 1
+y09 - 10000 binaryDp0j8nj9x0y1s1t1 <= 1
+x09 - 10000 binaryDp0j8nj9x0y1s1t1 <= 0
+x08 + 10000 binaryDp0j8nj9x0y1s1t1 >= 1
+y10 + 10000 binaryUp1j0nj1x0y1s1t1 >= 1
+y10 - 10000 binaryUp1j0nj1x0y1s1t1 <=  1
+y11 + 10000 binaryUp1j0nj1x0y1s1t1 >= 1
+y11 - 10000 binaryUp1j0nj1x0y1s1t1 <= 1
+x10 - 10000 binaryUp1j0nj1x0y1s1t1 <= 0
+x11 + 10000 binaryUp1j0nj1x0y1s1t1 >= 1
+y10 + 10000 binaryDp1j0nj1x0y1s1t1 >= 1
+y10 - 10000 binaryDp1j0nj1x0y1s1t1 <= 1
+y11 + 10000 binaryDp1j0nj1x0y1s1t1 >= 1
+y11 - 10000 binaryDp1j0nj1x0y1s1t1 <= 1
+x11 - 10000 binaryDp1j0nj1x0y1s1t1 <= 0
+x10 + 10000 binaryDp1j0nj1x0y1s1t1 >= 1
+y11 + 10000 binaryUp1j1nj2x0y1s1t1 >= 1
+y11 - 10000 binaryUp1j1nj2x0y1s1t1 <=  1
+y12 + 10000 binaryUp1j1nj2x0y1s1t1 >= 1
+y12 - 10000 binaryUp1j1nj2x0y1s1t1 <= 1
+x11 - 10000 binaryUp1j1nj2x0y1s1t1 <= 0
+x12 + 10000 binaryUp1j1nj2x0y1s1t1 >= 1
+y11 + 10000 binaryDp1j1nj2x0y1s1t1 >= 1
+y11 - 10000 binaryDp1j1nj2x0y1s1t1 <= 1
+y12 + 10000 binaryDp1j1nj2x0y1s1t1 >= 1
+y12 - 10000 binaryDp1j1nj2x0y1s1t1 <= 1
+x12 - 10000 binaryDp1j1nj2x0y1s1t1 <= 0
+x11 + 10000 binaryDp1j1nj2x0y1s1t1 >= 1
+y12 + 10000 binaryUp1j2nj3x0y1s1t1 >= 1
+y12 - 10000 binaryUp1j2nj3x0y1s1t1 <=  1
+y13 + 10000 binaryUp1j2nj3x0y1s1t1 >= 1
+y13 - 10000 binaryUp1j2nj3x0y1s1t1 <= 1
+x12 - 10000 binaryUp1j2nj3x0y1s1t1 <= 0
+x13 + 10000 binaryUp1j2nj3x0y1s1t1 >= 1
+y12 + 10000 binaryDp1j2nj3x0y1s1t1 >= 1
+y12 - 10000 binaryDp1j2nj3x0y1s1t1 <= 1
+y13 + 10000 binaryDp1j2nj3x0y1s1t1 >= 1
+y13 - 10000 binaryDp1j2nj3x0y1s1t1 <= 1
+x13 - 10000 binaryDp1j2nj3x0y1s1t1 <= 0
+x12 + 10000 binaryDp1j2nj3x0y1s1t1 >= 1
+y13 + 10000 binaryUp1j3nj4x0y1s1t1 >= 1
+y13 - 10000 binaryUp1j3nj4x0y1s1t1 <=  1
+y14 + 10000 binaryUp1j3nj4x0y1s1t1 >= 1
+y14 - 10000 binaryUp1j3nj4x0y1s1t1 <= 1
+x13 - 10000 binaryUp1j3nj4x0y1s1t1 <= 0
+x14 + 10000 binaryUp1j3nj4x0y1s1t1 >= 1
+y13 + 10000 binaryDp1j3nj4x0y1s1t1 >= 1
+y13 - 10000 binaryDp1j3nj4x0y1s1t1 <= 1
+y14 + 10000 binaryDp1j3nj4x0y1s1t1 >= 1
+y14 - 10000 binaryDp1j3nj4x0y1s1t1 <= 1
+x14 - 10000 binaryDp1j3nj4x0y1s1t1 <= 0
+x13 + 10000 binaryDp1j3nj4x0y1s1t1 >= 1
+y14 + 10000 binaryUp1j4nj5x0y1s1t1 >= 1
+y14 - 10000 binaryUp1j4nj5x0y1s1t1 <=  1
+y15 + 10000 binaryUp1j4nj5x0y1s1t1 >= 1
+y15 - 10000 binaryUp1j4nj5x0y1s1t1 <= 1
+x14 - 10000 binaryUp1j4nj5x0y1s1t1 <= 0
+x15 + 10000 binaryUp1j4nj5x0y1s1t1 >= 1
+y14 + 10000 binaryDp1j4nj5x0y1s1t1 >= 1
+y14 - 10000 binaryDp1j4nj5x0y1s1t1 <= 1
+y15 + 10000 binaryDp1j4nj5x0y1s1t1 >= 1
+y15 - 10000 binaryDp1j4nj5x0y1s1t1 <= 1
+x15 - 10000 binaryDp1j4nj5x0y1s1t1 <= 0
+x14 + 10000 binaryDp1j4nj5x0y1s1t1 >= 1
+y15 + 10000 binaryUp1j5nj6x0y1s1t1 >= 1
+y15 - 10000 binaryUp1j5nj6x0y1s1t1 <=  1
+y16 + 10000 binaryUp1j5nj6x0y1s1t1 >= 1
+y16 - 10000 binaryUp1j5nj6x0y1s1t1 <= 1
+x15 - 10000 binaryUp1j5nj6x0y1s1t1 <= 0
+x16 + 10000 binaryUp1j5nj6x0y1s1t1 >= 1
+y15 + 10000 binaryDp1j5nj6x0y1s1t1 >= 1
+y15 - 10000 binaryDp1j5nj6x0y1s1t1 <= 1
+y16 + 10000 binaryDp1j5nj6x0y1s1t1 >= 1
+y16 - 10000 binaryDp1j5nj6x0y1s1t1 <= 1
+x16 - 10000 binaryDp1j5nj6x0y1s1t1 <= 0
+x15 + 10000 binaryDp1j5nj6x0y1s1t1 >= 1
+y16 + 10000 binaryUp1j6nj7x0y1s1t1 >= 1
+y16 - 10000 binaryUp1j6nj7x0y1s1t1 <=  1
+y17 + 10000 binaryUp1j6nj7x0y1s1t1 >= 1
+y17 - 10000 binaryUp1j6nj7x0y1s1t1 <= 1
+x16 - 10000 binaryUp1j6nj7x0y1s1t1 <= 0
+x17 + 10000 binaryUp1j6nj7x0y1s1t1 >= 1
+y16 + 10000 binaryDp1j6nj7x0y1s1t1 >= 1
+y16 - 10000 binaryDp1j6nj7x0y1s1t1 <= 1
+y17 + 10000 binaryDp1j6nj7x0y1s1t1 >= 1
+y17 - 10000 binaryDp1j6nj7x0y1s1t1 <= 1
+x17 - 10000 binaryDp1j6nj7x0y1s1t1 <= 0
+x16 + 10000 binaryDp1j6nj7x0y1s1t1 >= 1
+y17 + 10000 binaryUp1j7nj8x0y1s1t1 >= 1
+y17 - 10000 binaryUp1j7nj8x0y1s1t1 <=  1
+y18 + 10000 binaryUp1j7nj8x0y1s1t1 >= 1
+y18 - 10000 binaryUp1j7nj8x0y1s1t1 <= 1
+x17 - 10000 binaryUp1j7nj8x0y1s1t1 <= 0
+x18 + 10000 binaryUp1j7nj8x0y1s1t1 >= 1
+y17 + 10000 binaryDp1j7nj8x0y1s1t1 >= 1
+y17 - 10000 binaryDp1j7nj8x0y1s1t1 <= 1
+y18 + 10000 binaryDp1j7nj8x0y1s1t1 >= 1
+y18 - 10000 binaryDp1j7nj8x0y1s1t1 <= 1
+x18 - 10000 binaryDp1j7nj8x0y1s1t1 <= 0
+x17 + 10000 binaryDp1j7nj8x0y1s1t1 >= 1
+y18 + 10000 binaryUp1j8nj9x0y1s1t1 >= 1
+y18 - 10000 binaryUp1j8nj9x0y1s1t1 <=  1
+y19 + 10000 binaryUp1j8nj9x0y1s1t1 >= 1
+y19 - 10000 binaryUp1j8nj9x0y1s1t1 <= 1
+x18 - 10000 binaryUp1j8nj9x0y1s1t1 <= 0
+x19 + 10000 binaryUp1j8nj9x0y1s1t1 >= 1
+y18 + 10000 binaryDp1j8nj9x0y1s1t1 >= 1
+y18 - 10000 binaryDp1j8nj9x0y1s1t1 <= 1
+y19 + 10000 binaryDp1j8nj9x0y1s1t1 >= 1
+y19 - 10000 binaryDp1j8nj9x0y1s1t1 <= 1
+x19 - 10000 binaryDp1j8nj9x0y1s1t1 <= 0
+x18 + 10000 binaryDp1j8nj9x0y1s1t1 >= 1
+ + binaryUp0j0nj1x0y1s1t1 + binaryDp0j0nj1x0y1s1t1 + binaryUp0j1nj2x0y1s1t1 + binaryDp0j1nj2x0y1s1t1 + binaryUp0j2nj3x0y1s1t1 + binaryDp0j2nj3x0y1s1t1 + binaryUp0j3nj4x0y1s1t1 + binaryDp0j3nj4x0y1s1t1 + binaryUp0j4nj5x0y1s1t1 + binaryDp0j4nj5x0y1s1t1 + binaryUp0j5nj6x0y1s1t1 + binaryDp0j5nj6x0y1s1t1 + binaryUp0j6nj7x0y1s1t1 + binaryDp0j6nj7x0y1s1t1 + binaryUp0j7nj8x0y1s1t1 + binaryDp0j7nj8x0y1s1t1 + binaryUp0j8nj9x0y1s1t1 + binaryDp0j8nj9x0y1s1t1 + binaryUp1j0nj1x0y1s1t1 + binaryDp1j0nj1x0y1s1t1 + binaryUp1j1nj2x0y1s1t1 + binaryDp1j1nj2x0y1s1t1 + binaryUp1j2nj3x0y1s1t1 + binaryDp1j2nj3x0y1s1t1 + binaryUp1j3nj4x0y1s1t1 + binaryDp1j3nj4x0y1s1t1 + binaryUp1j4nj5x0y1s1t1 + binaryDp1j4nj5x0y1s1t1 + binaryUp1j5nj6x0y1s1t1 + binaryDp1j5nj6x0y1s1t1 + binaryUp1j6nj7x0y1s1t1 + binaryDp1j6nj7x0y1s1t1 + binaryUp1j7nj8x0y1s1t1 + binaryDp1j7nj8x0y1s1t1 + binaryUp1j8nj9x0y1s1t1 + binaryDp1j8nj9x0y1s1t1 <= 35
+y00 + 10000 binaryUp0j0nj1x0y4s1t4 >= 4
+y00 - 10000 binaryUp0j0nj1x0y4s1t4 <=  4
+y01 + 10000 binaryUp0j0nj1x0y4s1t4 >= 4
+y01 - 10000 binaryUp0j0nj1x0y4s1t4 <= 4
+x00 - 10000 binaryUp0j0nj1x0y4s1t4 <= 0
+x01 + 10000 binaryUp0j0nj1x0y4s1t4 >= 1
+y00 + 10000 binaryDp0j0nj1x0y4s1t4 >= 4
+y00 - 10000 binaryDp0j0nj1x0y4s1t4 <= 4
+y01 + 10000 binaryDp0j0nj1x0y4s1t4 >= 4
+y01 - 10000 binaryDp0j0nj1x0y4s1t4 <= 4
+x01 - 10000 binaryDp0j0nj1x0y4s1t4 <= 0
+x00 + 10000 binaryDp0j0nj1x0y4s1t4 >= 1
+y01 + 10000 binaryUp0j1nj2x0y4s1t4 >= 4
+y01 - 10000 binaryUp0j1nj2x0y4s1t4 <=  4
+y02 + 10000 binaryUp0j1nj2x0y4s1t4 >= 4
+y02 - 10000 binaryUp0j1nj2x0y4s1t4 <= 4
+x01 - 10000 binaryUp0j1nj2x0y4s1t4 <= 0
+x02 + 10000 binaryUp0j1nj2x0y4s1t4 >= 1
+y01 + 10000 binaryDp0j1nj2x0y4s1t4 >= 4
+y01 - 10000 binaryDp0j1nj2x0y4s1t4 <= 4
+y02 + 10000 binaryDp0j1nj2x0y4s1t4 >= 4
+y02 - 10000 binaryDp0j1nj2x0y4s1t4 <= 4
+x02 - 10000 binaryDp0j1nj2x0y4s1t4 <= 0
+x01 + 10000 binaryDp0j1nj2x0y4s1t4 >= 1
+y02 + 10000 binaryUp0j2nj3x0y4s1t4 >= 4
+y02 - 10000 binaryUp0j2nj3x0y4s1t4 <=  4
+y03 + 10000 binaryUp0j2nj3x0y4s1t4 >= 4
+y03 - 10000 binaryUp0j2nj3x0y4s1t4 <= 4
+x02 - 10000 binaryUp0j2nj3x0y4s1t4 <= 0
+x03 + 10000 binaryUp0j2nj3x0y4s1t4 >= 1
+y02 + 10000 binaryDp0j2nj3x0y4s1t4 >= 4
+y02 - 10000 binaryDp0j2nj3x0y4s1t4 <= 4
+y03 + 10000 binaryDp0j2nj3x0y4s1t4 >= 4
+y03 - 10000 binaryDp0j2nj3x0y4s1t4 <= 4
+x03 - 10000 binaryDp0j2nj3x0y4s1t4 <= 0
+x02 + 10000 binaryDp0j2nj3x0y4s1t4 >= 1
+y03 + 10000 binaryUp0j3nj4x0y4s1t4 >= 4
+y03 - 10000 binaryUp0j3nj4x0y4s1t4 <=  4
+y04 + 10000 binaryUp0j3nj4x0y4s1t4 >= 4
+y04 - 10000 binaryUp0j3nj4x0y4s1t4 <= 4
+x03 - 10000 binaryUp0j3nj4x0y4s1t4 <= 0
+x04 + 10000 binaryUp0j3nj4x0y4s1t4 >= 1
+y03 + 10000 binaryDp0j3nj4x0y4s1t4 >= 4
+y03 - 10000 binaryDp0j3nj4x0y4s1t4 <= 4
+y04 + 10000 binaryDp0j3nj4x0y4s1t4 >= 4
+y04 - 10000 binaryDp0j3nj4x0y4s1t4 <= 4
+x04 - 10000 binaryDp0j3nj4x0y4s1t4 <= 0
+x03 + 10000 binaryDp0j3nj4x0y4s1t4 >= 1
+y04 + 10000 binaryUp0j4nj5x0y4s1t4 >= 4
+y04 - 10000 binaryUp0j4nj5x0y4s1t4 <=  4
+y05 + 10000 binaryUp0j4nj5x0y4s1t4 >= 4
+y05 - 10000 binaryUp0j4nj5x0y4s1t4 <= 4
+x04 - 10000 binaryUp0j4nj5x0y4s1t4 <= 0
+x05 + 10000 binaryUp0j4nj5x0y4s1t4 >= 1
+y04 + 10000 binaryDp0j4nj5x0y4s1t4 >= 4
+y04 - 10000 binaryDp0j4nj5x0y4s1t4 <= 4
+y05 + 10000 binaryDp0j4nj5x0y4s1t4 >= 4
+y05 - 10000 binaryDp0j4nj5x0y4s1t4 <= 4
+x05 - 10000 binaryDp0j4nj5x0y4s1t4 <= 0
+x04 + 10000 binaryDp0j4nj5x0y4s1t4 >= 1
+y05 + 10000 binaryUp0j5nj6x0y4s1t4 >= 4
+y05 - 10000 binaryUp0j5nj6x0y4s1t4 <=  4
+y06 + 10000 binaryUp0j5nj6x0y4s1t4 >= 4
+y06 - 10000 binaryUp0j5nj6x0y4s1t4 <= 4
+x05 - 10000 binaryUp0j5nj6x0y4s1t4 <= 0
+x06 + 10000 binaryUp0j5nj6x0y4s1t4 >= 1
+y05 + 10000 binaryDp0j5nj6x0y4s1t4 >= 4
+y05 - 10000 binaryDp0j5nj6x0y4s1t4 <= 4
+y06 + 10000 binaryDp0j5nj6x0y4s1t4 >= 4
+y06 - 10000 binaryDp0j5nj6x0y4s1t4 <= 4
+x06 - 10000 binaryDp0j5nj6x0y4s1t4 <= 0
+x05 + 10000 binaryDp0j5nj6x0y4s1t4 >= 1
+y06 + 10000 binaryUp0j6nj7x0y4s1t4 >= 4
+y06 - 10000 binaryUp0j6nj7x0y4s1t4 <=  4
+y07 + 10000 binaryUp0j6nj7x0y4s1t4 >= 4
+y07 - 10000 binaryUp0j6nj7x0y4s1t4 <= 4
+x06 - 10000 binaryUp0j6nj7x0y4s1t4 <= 0
+x07 + 10000 binaryUp0j6nj7x0y4s1t4 >= 1
+y06 + 10000 binaryDp0j6nj7x0y4s1t4 >= 4
+y06 - 10000 binaryDp0j6nj7x0y4s1t4 <= 4
+y07 + 10000 binaryDp0j6nj7x0y4s1t4 >= 4
+y07 - 10000 binaryDp0j6nj7x0y4s1t4 <= 4
+x07 - 10000 binaryDp0j6nj7x0y4s1t4 <= 0
+x06 + 10000 binaryDp0j6nj7x0y4s1t4 >= 1
+y07 + 10000 binaryUp0j7nj8x0y4s1t4 >= 4
+y07 - 10000 binaryUp0j7nj8x0y4s1t4 <=  4
+y08 + 10000 binaryUp0j7nj8x0y4s1t4 >= 4
+y08 - 10000 binaryUp0j7nj8x0y4s1t4 <= 4
+x07 - 10000 binaryUp0j7nj8x0y4s1t4 <= 0
+x08 + 10000 binaryUp0j7nj8x0y4s1t4 >= 1
+y07 + 10000 binaryDp0j7nj8x0y4s1t4 >= 4
+y07 - 10000 binaryDp0j7nj8x0y4s1t4 <= 4
+y08 + 10000 binaryDp0j7nj8x0y4s1t4 >= 4
+y08 - 10000 binaryDp0j7nj8x0y4s1t4 <= 4
+x08 - 10000 binaryDp0j7nj8x0y4s1t4 <= 0
+x07 + 10000 binaryDp0j7nj8x0y4s1t4 >= 1
+y08 + 10000 binaryUp0j8nj9x0y4s1t4 >= 4
+y08 - 10000 binaryUp0j8nj9x0y4s1t4 <=  4
+y09 + 10000 binaryUp0j8nj9x0y4s1t4 >= 4
+y09 - 10000 binaryUp0j8nj9x0y4s1t4 <= 4
+x08 - 10000 binaryUp0j8nj9x0y4s1t4 <= 0
+x09 + 10000 binaryUp0j8nj9x0y4s1t4 >= 1
+y08 + 10000 binaryDp0j8nj9x0y4s1t4 >= 4
+y08 - 10000 binaryDp0j8nj9x0y4s1t4 <= 4
+y09 + 10000 binaryDp0j8nj9x0y4s1t4 >= 4
+y09 - 10000 binaryDp0j8nj9x0y4s1t4 <= 4
+x09 - 10000 binaryDp0j8nj9x0y4s1t4 <= 0
+x08 + 10000 binaryDp0j8nj9x0y4s1t4 >= 1
+y10 + 10000 binaryUp1j0nj1x0y4s1t4 >= 4
+y10 - 10000 binaryUp1j0nj1x0y4s1t4 <=  4
+y11 + 10000 binaryUp1j0nj1x0y4s1t4 >= 4
+y11 - 10000 binaryUp1j0nj1x0y4s1t4 <= 4
+x10 - 10000 binaryUp1j0nj1x0y4s1t4 <= 0
+x11 + 10000 binaryUp1j0nj1x0y4s1t4 >= 1
+y10 + 10000 binaryDp1j0nj1x0y4s1t4 >= 4
+y10 - 10000 binaryDp1j0nj1x0y4s1t4 <= 4
+y11 + 10000 binaryDp1j0nj1x0y4s1t4 >= 4
+y11 - 10000 binaryDp1j0nj1x0y4s1t4 <= 4
+x11 - 10000 binaryDp1j0nj1x0y4s1t4 <= 0
+x10 + 10000 binaryDp1j0nj1x0y4s1t4 >= 1
+y11 + 10000 binaryUp1j1nj2x0y4s1t4 >= 4
+y11 - 10000 binaryUp1j1nj2x0y4s1t4 <=  4
+y12 + 10000 binaryUp1j1nj2x0y4s1t4 >= 4
+y12 - 10000 binaryUp1j1nj2x0y4s1t4 <= 4
+x11 - 10000 binaryUp1j1nj2x0y4s1t4 <= 0
+x12 + 10000 binaryUp1j1nj2x0y4s1t4 >= 1
+y11 + 10000 binaryDp1j1nj2x0y4s1t4 >= 4
+y11 - 10000 binaryDp1j1nj2x0y4s1t4 <= 4
+y12 + 10000 binaryDp1j1nj2x0y4s1t4 >= 4
+y12 - 10000 binaryDp1j1nj2x0y4s1t4 <= 4
+x12 - 10000 binaryDp1j1nj2x0y4s1t4 <= 0
+x11 + 10000 binaryDp1j1nj2x0y4s1t4 >= 1
+y12 + 10000 binaryUp1j2nj3x0y4s1t4 >= 4
+y12 - 10000 binaryUp1j2nj3x0y4s1t4 <=  4
+y13 + 10000 binaryUp1j2nj3x0y4s1t4 >= 4
+y13 - 10000 binaryUp1j2nj3x0y4s1t4 <= 4
+x12 - 10000 binaryUp1j2nj3x0y4s1t4 <= 0
+x13 + 10000 binaryUp1j2nj3x0y4s1t4 >= 1
+y12 + 10000 binaryDp1j2nj3x0y4s1t4 >= 4
+y12 - 10000 binaryDp1j2nj3x0y4s1t4 <= 4
+y13 + 10000 binaryDp1j2nj3x0y4s1t4 >= 4
+y13 - 10000 binaryDp1j2nj3x0y4s1t4 <= 4
+x13 - 10000 binaryDp1j2nj3x0y4s1t4 <= 0
+x12 + 10000 binaryDp1j2nj3x0y4s1t4 >= 1
+y13 + 10000 binaryUp1j3nj4x0y4s1t4 >= 4
+y13 - 10000 binaryUp1j3nj4x0y4s1t4 <=  4
+y14 + 10000 binaryUp1j3nj4x0y4s1t4 >= 4
+y14 - 10000 binaryUp1j3nj4x0y4s1t4 <= 4
+x13 - 10000 binaryUp1j3nj4x0y4s1t4 <= 0
+x14 + 10000 binaryUp1j3nj4x0y4s1t4 >= 1
+y13 + 10000 binaryDp1j3nj4x0y4s1t4 >= 4
+y13 - 10000 binaryDp1j3nj4x0y4s1t4 <= 4
+y14 + 10000 binaryDp1j3nj4x0y4s1t4 >= 4
+y14 - 10000 binaryDp1j3nj4x0y4s1t4 <= 4
+x14 - 10000 binaryDp1j3nj4x0y4s1t4 <= 0
+x13 + 10000 binaryDp1j3nj4x0y4s1t4 >= 1
+y14 + 10000 binaryUp1j4nj5x0y4s1t4 >= 4
+y14 - 10000 binaryUp1j4nj5x0y4s1t4 <=  4
+y15 + 10000 binaryUp1j4nj5x0y4s1t4 >= 4
+y15 - 10000 binaryUp1j4nj5x0y4s1t4 <= 4
+x14 - 10000 binaryUp1j4nj5x0y4s1t4 <= 0
+x15 + 10000 binaryUp1j4nj5x0y4s1t4 >= 1
+y14 + 10000 binaryDp1j4nj5x0y4s1t4 >= 4
+y14 - 10000 binaryDp1j4nj5x0y4s1t4 <= 4
+y15 + 10000 binaryDp1j4nj5x0y4s1t4 >= 4
+y15 - 10000 binaryDp1j4nj5x0y4s1t4 <= 4
+x15 - 10000 binaryDp1j4nj5x0y4s1t4 <= 0
+x14 + 10000 binaryDp1j4nj5x0y4s1t4 >= 1
+y15 + 10000 binaryUp1j5nj6x0y4s1t4 >= 4
+y15 - 10000 binaryUp1j5nj6x0y4s1t4 <=  4
+y16 + 10000 binaryUp1j5nj6x0y4s1t4 >= 4
+y16 - 10000 binaryUp1j5nj6x0y4s1t4 <= 4
+x15 - 10000 binaryUp1j5nj6x0y4s1t4 <= 0
+x16 + 10000 binaryUp1j5nj6x0y4s1t4 >= 1
+y15 + 10000 binaryDp1j5nj6x0y4s1t4 >= 4
+y15 - 10000 binaryDp1j5nj6x0y4s1t4 <= 4
+y16 + 10000 binaryDp1j5nj6x0y4s1t4 >= 4
+y16 - 10000 binaryDp1j5nj6x0y4s1t4 <= 4
+x16 - 10000 binaryDp1j5nj6x0y4s1t4 <= 0
+x15 + 10000 binaryDp1j5nj6x0y4s1t4 >= 1
+y16 + 10000 binaryUp1j6nj7x0y4s1t4 >= 4
+y16 - 10000 binaryUp1j6nj7x0y4s1t4 <=  4
+y17 + 10000 binaryUp1j6nj7x0y4s1t4 >= 4
+y17 - 10000 binaryUp1j6nj7x0y4s1t4 <= 4
+x16 - 10000 binaryUp1j6nj7x0y4s1t4 <= 0
+x17 + 10000 binaryUp1j6nj7x0y4s1t4 >= 1
+y16 + 10000 binaryDp1j6nj7x0y4s1t4 >= 4
+y16 - 10000 binaryDp1j6nj7x0y4s1t4 <= 4
+y17 + 10000 binaryDp1j6nj7x0y4s1t4 >= 4
+y17 - 10000 binaryDp1j6nj7x0y4s1t4 <= 4
+x17 - 10000 binaryDp1j6nj7x0y4s1t4 <= 0
+x16 + 10000 binaryDp1j6nj7x0y4s1t4 >= 1
+y17 + 10000 binaryUp1j7nj8x0y4s1t4 >= 4
+y17 - 10000 binaryUp1j7nj8x0y4s1t4 <=  4
+y18 + 10000 binaryUp1j7nj8x0y4s1t4 >= 4
+y18 - 10000 binaryUp1j7nj8x0y4s1t4 <= 4
+x17 - 10000 binaryUp1j7nj8x0y4s1t4 <= 0
+x18 + 10000 binaryUp1j7nj8x0y4s1t4 >= 1
+y17 + 10000 binaryDp1j7nj8x0y4s1t4 >= 4
+y17 - 10000 binaryDp1j7nj8x0y4s1t4 <= 4
+y18 + 10000 binaryDp1j7nj8x0y4s1t4 >= 4
+y18 - 10000 binaryDp1j7nj8x0y4s1t4 <= 4
+x18 - 10000 binaryDp1j7nj8x0y4s1t4 <= 0
+x17 + 10000 binaryDp1j7nj8x0y4s1t4 >= 1
+y18 + 10000 binaryUp1j8nj9x0y4s1t4 >= 4
+y18 - 10000 binaryUp1j8nj9x0y4s1t4 <=  4
+y19 + 10000 binaryUp1j8nj9x0y4s1t4 >= 4
+y19 - 10000 binaryUp1j8nj9x0y4s1t4 <= 4
+x18 - 10000 binaryUp1j8nj9x0y4s1t4 <= 0
+x19 + 10000 binaryUp1j8nj9x0y4s1t4 >= 1
+y18 + 10000 binaryDp1j8nj9x0y4s1t4 >= 4
+y18 - 10000 binaryDp1j8nj9x0y4s1t4 <= 4
+y19 + 10000 binaryDp1j8nj9x0y4s1t4 >= 4
+y19 - 10000 binaryDp1j8nj9x0y4s1t4 <= 4
+x19 - 10000 binaryDp1j8nj9x0y4s1t4 <= 0
+x18 + 10000 binaryDp1j8nj9x0y4s1t4 >= 1
+ + binaryUp0j0nj1x0y4s1t4 + binaryDp0j0nj1x0y4s1t4 + binaryUp0j1nj2x0y4s1t4 + binaryDp0j1nj2x0y4s1t4 + binaryUp0j2nj3x0y4s1t4 + binaryDp0j2nj3x0y4s1t4 + binaryUp0j3nj4x0y4s1t4 + binaryDp0j3nj4x0y4s1t4 + binaryUp0j4nj5x0y4s1t4 + binaryDp0j4nj5x0y4s1t4 + binaryUp0j5nj6x0y4s1t4 + binaryDp0j5nj6x0y4s1t4 + binaryUp0j6nj7x0y4s1t4 + binaryDp0j6nj7x0y4s1t4 + binaryUp0j7nj8x0y4s1t4 + binaryDp0j7nj8x0y4s1t4 + binaryUp0j8nj9x0y4s1t4 + binaryDp0j8nj9x0y4s1t4 + binaryUp1j0nj1x0y4s1t4 + binaryDp1j0nj1x0y4s1t4 + binaryUp1j1nj2x0y4s1t4 + binaryDp1j1nj2x0y4s1t4 + binaryUp1j2nj3x0y4s1t4 + binaryDp1j2nj3x0y4s1t4 + binaryUp1j3nj4x0y4s1t4 + binaryDp1j3nj4x0y4s1t4 + binaryUp1j4nj5x0y4s1t4 + binaryDp1j4nj5x0y4s1t4 + binaryUp1j5nj6x0y4s1t4 + binaryDp1j5nj6x0y4s1t4 + binaryUp1j6nj7x0y4s1t4 + binaryDp1j6nj7x0y4s1t4 + binaryUp1j7nj8x0y4s1t4 + binaryDp1j7nj8x0y4s1t4 + binaryUp1j8nj9x0y4s1t4 + binaryDp1j8nj9x0y4s1t4 <= 35
+y00 + 10000 binaryUp0j0nj1x1y1s2t1 >= 1
+y00 - 10000 binaryUp0j0nj1x1y1s2t1 <=  1
+y01 + 10000 binaryUp0j0nj1x1y1s2t1 >= 1
+y01 - 10000 binaryUp0j0nj1x1y1s2t1 <= 1
+x00 - 10000 binaryUp0j0nj1x1y1s2t1 <= 1
+x01 + 10000 binaryUp0j0nj1x1y1s2t1 >= 2
+y00 + 10000 binaryDp0j0nj1x1y1s2t1 >= 1
+y00 - 10000 binaryDp0j0nj1x1y1s2t1 <= 1
+y01 + 10000 binaryDp0j0nj1x1y1s2t1 >= 1
+y01 - 10000 binaryDp0j0nj1x1y1s2t1 <= 1
+x01 - 10000 binaryDp0j0nj1x1y1s2t1 <= 1
+x00 + 10000 binaryDp0j0nj1x1y1s2t1 >= 2
+y01 + 10000 binaryUp0j1nj2x1y1s2t1 >= 1
+y01 - 10000 binaryUp0j1nj2x1y1s2t1 <=  1
+y02 + 10000 binaryUp0j1nj2x1y1s2t1 >= 1
+y02 - 10000 binaryUp0j1nj2x1y1s2t1 <= 1
+x01 - 10000 binaryUp0j1nj2x1y1s2t1 <= 1
+x02 + 10000 binaryUp0j1nj2x1y1s2t1 >= 2
+y01 + 10000 binaryDp0j1nj2x1y1s2t1 >= 1
+y01 - 10000 binaryDp0j1nj2x1y1s2t1 <= 1
+y02 + 10000 binaryDp0j1nj2x1y1s2t1 >= 1
+y02 - 10000 binaryDp0j1nj2x1y1s2t1 <= 1
+x02 - 10000 binaryDp0j1nj2x1y1s2t1 <= 1
+x01 + 10000 binaryDp0j1nj2x1y1s2t1 >= 2
+y02 + 10000 binaryUp0j2nj3x1y1s2t1 >= 1
+y02 - 10000 binaryUp0j2nj3x1y1s2t1 <=  1
+y03 + 10000 binaryUp0j2nj3x1y1s2t1 >= 1
+y03 - 10000 binaryUp0j2nj3x1y1s2t1 <= 1
+x02 - 10000 binaryUp0j2nj3x1y1s2t1 <= 1
+x03 + 10000 binaryUp0j2nj3x1y1s2t1 >= 2
+y02 + 10000 binaryDp0j2nj3x1y1s2t1 >= 1
+y02 - 10000 binaryDp0j2nj3x1y1s2t1 <= 1
+y03 + 10000 binaryDp0j2nj3x1y1s2t1 >= 1
+y03 - 10000 binaryDp0j2nj3x1y1s2t1 <= 1
+x03 - 10000 binaryDp0j2nj3x1y1s2t1 <= 1
+x02 + 10000 binaryDp0j2nj3x1y1s2t1 >= 2
+y03 + 10000 binaryUp0j3nj4x1y1s2t1 >= 1
+y03 - 10000 binaryUp0j3nj4x1y1s2t1 <=  1
+y04 + 10000 binaryUp0j3nj4x1y1s2t1 >= 1
+y04 - 10000 binaryUp0j3nj4x1y1s2t1 <= 1
+x03 - 10000 binaryUp0j3nj4x1y1s2t1 <= 1
+x04 + 10000 binaryUp0j3nj4x1y1s2t1 >= 2
+y03 + 10000 binaryDp0j3nj4x1y1s2t1 >= 1
+y03 - 10000 binaryDp0j3nj4x1y1s2t1 <= 1
+y04 + 10000 binaryDp0j3nj4x1y1s2t1 >= 1
+y04 - 10000 binaryDp0j3nj4x1y1s2t1 <= 1
+x04 - 10000 binaryDp0j3nj4x1y1s2t1 <= 1
+x03 + 10000 binaryDp0j3nj4x1y1s2t1 >= 2
+y04 + 10000 binaryUp0j4nj5x1y1s2t1 >= 1
+y04 - 10000 binaryUp0j4nj5x1y1s2t1 <=  1
+y05 + 10000 binaryUp0j4nj5x1y1s2t1 >= 1
+y05 - 10000 binaryUp0j4nj5x1y1s2t1 <= 1
+x04 - 10000 binaryUp0j4nj5x1y1s2t1 <= 1
+x05 + 10000 binaryUp0j4nj5x1y1s2t1 >= 2
+y04 + 10000 binaryDp0j4nj5x1y1s2t1 >= 1
+y04 - 10000 binaryDp0j4nj5x1y1s2t1 <= 1
+y05 + 10000 binaryDp0j4nj5x1y1s2t1 >= 1
+y05 - 10000 binaryDp0j4nj5x1y1s2t1 <= 1
+x05 - 10000 binaryDp0j4nj5x1y1s2t1 <= 1
+x04 + 10000 binaryDp0j4nj5x1y1s2t1 >= 2
+y05 + 10000 binaryUp0j5nj6x1y1s2t1 >= 1
+y05 - 10000 binaryUp0j5nj6x1y1s2t1 <=  1
+y06 + 10000 binaryUp0j5nj6x1y1s2t1 >= 1
+y06 - 10000 binaryUp0j5nj6x1y1s2t1 <= 1
+x05 - 10000 binaryUp0j5nj6x1y1s2t1 <= 1
+x06 + 10000 binaryUp0j5nj6x1y1s2t1 >= 2
+y05 + 10000 binaryDp0j5nj6x1y1s2t1 >= 1
+y05 - 10000 binaryDp0j5nj6x1y1s2t1 <= 1
+y06 + 10000 binaryDp0j5nj6x1y1s2t1 >= 1
+y06 - 10000 binaryDp0j5nj6x1y1s2t1 <= 1
+x06 - 10000 binaryDp0j5nj6x1y1s2t1 <= 1
+x05 + 10000 binaryDp0j5nj6x1y1s2t1 >= 2
+y06 + 10000 binaryUp0j6nj7x1y1s2t1 >= 1
+y06 - 10000 binaryUp0j6nj7x1y1s2t1 <=  1
+y07 + 10000 binaryUp0j6nj7x1y1s2t1 >= 1
+y07 - 10000 binaryUp0j6nj7x1y1s2t1 <= 1
+x06 - 10000 binaryUp0j6nj7x1y1s2t1 <= 1
+x07 + 10000 binaryUp0j6nj7x1y1s2t1 >= 2
+y06 + 10000 binaryDp0j6nj7x1y1s2t1 >= 1
+y06 - 10000 binaryDp0j6nj7x1y1s2t1 <= 1
+y07 + 10000 binaryDp0j6nj7x1y1s2t1 >= 1
+y07 - 10000 binaryDp0j6nj7x1y1s2t1 <= 1
+x07 - 10000 binaryDp0j6nj7x1y1s2t1 <= 1
+x06 + 10000 binaryDp0j6nj7x1y1s2t1 >= 2
+y07 + 10000 binaryUp0j7nj8x1y1s2t1 >= 1
+y07 - 10000 binaryUp0j7nj8x1y1s2t1 <=  1
+y08 + 10000 binaryUp0j7nj8x1y1s2t1 >= 1
+y08 - 10000 binaryUp0j7nj8x1y1s2t1 <= 1
+x07 - 10000 binaryUp0j7nj8x1y1s2t1 <= 1
+x08 + 10000 binaryUp0j7nj8x1y1s2t1 >= 2
+y07 + 10000 binaryDp0j7nj8x1y1s2t1 >= 1
+y07 - 10000 binaryDp0j7nj8x1y1s2t1 <= 1
+y08 + 10000 binaryDp0j7nj8x1y1s2t1 >= 1
+y08 - 10000 binaryDp0j7nj8x1y1s2t1 <= 1
+x08 - 10000 binaryDp0j7nj8x1y1s2t1 <= 1
+x07 + 10000 binaryDp0j7nj8x1y1s2t1 >= 2
+y08 + 10000 binaryUp0j8nj9x1y1s2t1 >= 1
+y08 - 10000 binaryUp0j8nj9x1y1s2t1 <=  1
+y09 + 10000 binaryUp0j8nj9x1y1s2t1 >= 1
+y09 - 10000 binaryUp0j8nj9x1y1s2t1 <= 1
+x08 - 10000 binaryUp0j8nj9x1y1s2t1 <= 1
+x09 + 10000 binaryUp0j8nj9x1y1s2t1 >= 2
+y08 + 10000 binaryDp0j8nj9x1y1s2t1 >= 1
+y08 - 10000 binaryDp0j8nj9x1y1s2t1 <= 1
+y09 + 10000 binaryDp0j8nj9x1y1s2t1 >= 1
+y09 - 10000 binaryDp0j8nj9x1y1s2t1 <= 1
+x09 - 10000 binaryDp0j8nj9x1y1s2t1 <= 1
+x08 + 10000 binaryDp0j8nj9x1y1s2t1 >= 2
+y10 + 10000 binaryUp1j0nj1x1y1s2t1 >= 1
+y10 - 10000 binaryUp1j0nj1x1y1s2t1 <=  1
+y11 + 10000 binaryUp1j0nj1x1y1s2t1 >= 1
+y11 - 10000 binaryUp1j0nj1x1y1s2t1 <= 1
+x10 - 10000 binaryUp1j0nj1x1y1s2t1 <= 1
+x11 + 10000 binaryUp1j0nj1x1y1s2t1 >= 2
+y10 + 10000 binaryDp1j0nj1x1y1s2t1 >= 1
+y10 - 10000 binaryDp1j0nj1x1y1s2t1 <= 1
+y11 + 10000 binaryDp1j0nj1x1y1s2t1 >= 1
+y11 - 10000 binaryDp1j0nj1x1y1s2t1 <= 1
+x11 - 10000 binaryDp1j0nj1x1y1s2t1 <= 1
+x10 + 10000 binaryDp1j0nj1x1y1s2t1 >= 2
+y11 + 10000 binaryUp1j1nj2x1y1s2t1 >= 1
+y11 - 10000 binaryUp1j1nj2x1y1s2t1 <=  1
+y12 + 10000 binaryUp1j1nj2x1y1s2t1 >= 1
+y12 - 10000 binaryUp1j1nj2x1y1s2t1 <= 1
+x11 - 10000 binaryUp1j1nj2x1y1s2t1 <= 1
+x12 + 10000 binaryUp1j1nj2x1y1s2t1 >= 2
+y11 + 10000 binaryDp1j1nj2x1y1s2t1 >= 1
+y11 - 10000 binaryDp1j1nj2x1y1s2t1 <= 1
+y12 + 10000 binaryDp1j1nj2x1y1s2t1 >= 1
+y12 - 10000 binaryDp1j1nj2x1y1s2t1 <= 1
+x12 - 10000 binaryDp1j1nj2x1y1s2t1 <= 1
+x11 + 10000 binaryDp1j1nj2x1y1s2t1 >= 2
+y12 + 10000 binaryUp1j2nj3x1y1s2t1 >= 1
+y12 - 10000 binaryUp1j2nj3x1y1s2t1 <=  1
+y13 + 10000 binaryUp1j2nj3x1y1s2t1 >= 1
+y13 - 10000 binaryUp1j2nj3x1y1s2t1 <= 1
+x12 - 10000 binaryUp1j2nj3x1y1s2t1 <= 1
+x13 + 10000 binaryUp1j2nj3x1y1s2t1 >= 2
+y12 + 10000 binaryDp1j2nj3x1y1s2t1 >= 1
+y12 - 10000 binaryDp1j2nj3x1y1s2t1 <= 1
+y13 + 10000 binaryDp1j2nj3x1y1s2t1 >= 1
+y13 - 10000 binaryDp1j2nj3x1y1s2t1 <= 1
+x13 - 10000 binaryDp1j2nj3x1y1s2t1 <= 1
+x12 + 10000 binaryDp1j2nj3x1y1s2t1 >= 2
+y13 + 10000 binaryUp1j3nj4x1y1s2t1 >= 1
+y13 - 10000 binaryUp1j3nj4x1y1s2t1 <=  1
+y14 + 10000 binaryUp1j3nj4x1y1s2t1 >= 1
+y14 - 10000 binaryUp1j3nj4x1y1s2t1 <= 1
+x13 - 10000 binaryUp1j3nj4x1y1s2t1 <= 1
+x14 + 10000 binaryUp1j3nj4x1y1s2t1 >= 2
+y13 + 10000 binaryDp1j3nj4x1y1s2t1 >= 1
+y13 - 10000 binaryDp1j3nj4x1y1s2t1 <= 1
+y14 + 10000 binaryDp1j3nj4x1y1s2t1 >= 1
+y14 - 10000 binaryDp1j3nj4x1y1s2t1 <= 1
+x14 - 10000 binaryDp1j3nj4x1y1s2t1 <= 1
+x13 + 10000 binaryDp1j3nj4x1y1s2t1 >= 2
+y14 + 10000 binaryUp1j4nj5x1y1s2t1 >= 1
+y14 - 10000 binaryUp1j4nj5x1y1s2t1 <=  1
+y15 + 10000 binaryUp1j4nj5x1y1s2t1 >= 1
+y15 - 10000 binaryUp1j4nj5x1y1s2t1 <= 1
+x14 - 10000 binaryUp1j4nj5x1y1s2t1 <= 1
+x15 + 10000 binaryUp1j4nj5x1y1s2t1 >= 2
+y14 + 10000 binaryDp1j4nj5x1y1s2t1 >= 1
+y14 - 10000 binaryDp1j4nj5x1y1s2t1 <= 1
+y15 + 10000 binaryDp1j4nj5x1y1s2t1 >= 1
+y15 - 10000 binaryDp1j4nj5x1y1s2t1 <= 1
+x15 - 10000 binaryDp1j4nj5x1y1s2t1 <= 1
+x14 + 10000 binaryDp1j4nj5x1y1s2t1 >= 2
+y15 + 10000 binaryUp1j5nj6x1y1s2t1 >= 1
+y15 - 10000 binaryUp1j5nj6x1y1s2t1 <=  1
+y16 + 10000 binaryUp1j5nj6x1y1s2t1 >= 1
+y16 - 10000 binaryUp1j5nj6x1y1s2t1 <= 1
+x15 - 10000 binaryUp1j5nj6x1y1s2t1 <= 1
+x16 + 10000 binaryUp1j5nj6x1y1s2t1 >= 2
+y15 + 10000 binaryDp1j5nj6x1y1s2t1 >= 1
+y15 - 10000 binaryDp1j5nj6x1y1s2t1 <= 1
+y16 + 10000 binaryDp1j5nj6x1y1s2t1 >= 1
+y16 - 10000 binaryDp1j5nj6x1y1s2t1 <= 1
+x16 - 10000 binaryDp1j5nj6x1y1s2t1 <= 1
+x15 + 10000 binaryDp1j5nj6x1y1s2t1 >= 2
+y16 + 10000 binaryUp1j6nj7x1y1s2t1 >= 1
+y16 - 10000 binaryUp1j6nj7x1y1s2t1 <=  1
+y17 + 10000 binaryUp1j6nj7x1y1s2t1 >= 1
+y17 - 10000 binaryUp1j6nj7x1y1s2t1 <= 1
+x16 - 10000 binaryUp1j6nj7x1y1s2t1 <= 1
+x17 + 10000 binaryUp1j6nj7x1y1s2t1 >= 2
+y16 + 10000 binaryDp1j6nj7x1y1s2t1 >= 1
+y16 - 10000 binaryDp1j6nj7x1y1s2t1 <= 1
+y17 + 10000 binaryDp1j6nj7x1y1s2t1 >= 1
+y17 - 10000 binaryDp1j6nj7x1y1s2t1 <= 1
+x17 - 10000 binaryDp1j6nj7x1y1s2t1 <= 1
+x16 + 10000 binaryDp1j6nj7x1y1s2t1 >= 2
+y17 + 10000 binaryUp1j7nj8x1y1s2t1 >= 1
+y17 - 10000 binaryUp1j7nj8x1y1s2t1 <=  1
+y18 + 10000 binaryUp1j7nj8x1y1s2t1 >= 1
+y18 - 10000 binaryUp1j7nj8x1y1s2t1 <= 1
+x17 - 10000 binaryUp1j7nj8x1y1s2t1 <= 1
+x18 + 10000 binaryUp1j7nj8x1y1s2t1 >= 2
+y17 + 10000 binaryDp1j7nj8x1y1s2t1 >= 1
+y17 - 10000 binaryDp1j7nj8x1y1s2t1 <= 1
+y18 + 10000 binaryDp1j7nj8x1y1s2t1 >= 1
+y18 - 10000 binaryDp1j7nj8x1y1s2t1 <= 1
+x18 - 10000 binaryDp1j7nj8x1y1s2t1 <= 1
+x17 + 10000 binaryDp1j7nj8x1y1s2t1 >= 2
+y18 + 10000 binaryUp1j8nj9x1y1s2t1 >= 1
+y18 - 10000 binaryUp1j8nj9x1y1s2t1 <=  1
+y19 + 10000 binaryUp1j8nj9x1y1s2t1 >= 1
+y19 - 10000 binaryUp1j8nj9x1y1s2t1 <= 1
+x18 - 10000 binaryUp1j8nj9x1y1s2t1 <= 1
+x19 + 10000 binaryUp1j8nj9x1y1s2t1 >= 2
+y18 + 10000 binaryDp1j8nj9x1y1s2t1 >= 1
+y18 - 10000 binaryDp1j8nj9x1y1s2t1 <= 1
+y19 + 10000 binaryDp1j8nj9x1y1s2t1 >= 1
+y19 - 10000 binaryDp1j8nj9x1y1s2t1 <= 1
+x19 - 10000 binaryDp1j8nj9x1y1s2t1 <= 1
+x18 + 10000 binaryDp1j8nj9x1y1s2t1 >= 2
+ + binaryUp0j0nj1x1y1s2t1 + binaryDp0j0nj1x1y1s2t1 + binaryUp0j1nj2x1y1s2t1 + binaryDp0j1nj2x1y1s2t1 + binaryUp0j2nj3x1y1s2t1 + binaryDp0j2nj3x1y1s2t1 + binaryUp0j3nj4x1y1s2t1 + binaryDp0j3nj4x1y1s2t1 + binaryUp0j4nj5x1y1s2t1 + binaryDp0j4nj5x1y1s2t1 + binaryUp0j5nj6x1y1s2t1 + binaryDp0j5nj6x1y1s2t1 + binaryUp0j6nj7x1y1s2t1 + binaryDp0j6nj7x1y1s2t1 + binaryUp0j7nj8x1y1s2t1 + binaryDp0j7nj8x1y1s2t1 + binaryUp0j8nj9x1y1s2t1 + binaryDp0j8nj9x1y1s2t1 + binaryUp1j0nj1x1y1s2t1 + binaryDp1j0nj1x1y1s2t1 + binaryUp1j1nj2x1y1s2t1 + binaryDp1j1nj2x1y1s2t1 + binaryUp1j2nj3x1y1s2t1 + binaryDp1j2nj3x1y1s2t1 + binaryUp1j3nj4x1y1s2t1 + binaryDp1j3nj4x1y1s2t1 + binaryUp1j4nj5x1y1s2t1 + binaryDp1j4nj5x1y1s2t1 + binaryUp1j5nj6x1y1s2t1 + binaryDp1j5nj6x1y1s2t1 + binaryUp1j6nj7x1y1s2t1 + binaryDp1j6nj7x1y1s2t1 + binaryUp1j7nj8x1y1s2t1 + binaryDp1j7nj8x1y1s2t1 + binaryUp1j8nj9x1y1s2t1 + binaryDp1j8nj9x1y1s2t1 <= 35
+x00 + 10000 binaryLp0j0nj1x0y2s0t3 >= 0
+x00 - 10000 binaryLp0j0nj1x0y2s0t3 <= 0
+x01 + 10000 binaryLp0j0nj1x0y2s0t3 >= 0
+x01 - 10000 binaryLp0j0nj1x0y2s0t3 <= 0
+y00 - 10000 binaryLp0j0nj1x0y2s0t3 <= 2
+y01 + 10000 binaryLp0j0nj1x0y2s0t3 >= 3
+x00 + 10000 binaryRp0j0nj1x0y2s0t3 >= 0
+x00 - 10000 binaryRp0j0nj1x0y2s0t3 <= 0
+x01 + 10000 binaryRp0j0nj1x0y2s0t3 >= 0
+x01 - 10000 binaryRp0j0nj1x0y2s0t3 <= 0
+y01 - 10000 binaryRp0j0nj1x0y2s0t3 <= 2
+y00 + 10000 binaryRp0j0nj1x0y2s0t3 >= 3
+x01 + 10000 binaryLp0j1nj2x0y2s0t3 >= 0
+x01 - 10000 binaryLp0j1nj2x0y2s0t3 <= 0
+x02 + 10000 binaryLp0j1nj2x0y2s0t3 >= 0
+x02 - 10000 binaryLp0j1nj2x0y2s0t3 <= 0
+y01 - 10000 binaryLp0j1nj2x0y2s0t3 <= 2
+y02 + 10000 binaryLp0j1nj2x0y2s0t3 >= 3
+x01 + 10000 binaryRp0j1nj2x0y2s0t3 >= 0
+x01 - 10000 binaryRp0j1nj2x0y2s0t3 <= 0
+x02 + 10000 binaryRp0j1nj2x0y2s0t3 >= 0
+x02 - 10000 binaryRp0j1nj2x0y2s0t3 <= 0
+y02 - 10000 binaryRp0j1nj2x0y2s0t3 <= 2
+y01 + 10000 binaryRp0j1nj2x0y2s0t3 >= 3
+x02 + 10000 binaryLp0j2nj3x0y2s0t3 >= 0
+x02 - 10000 binaryLp0j2nj3x0y2s0t3 <= 0
+x03 + 10000 binaryLp0j2nj3x0y2s0t3 >= 0
+x03 - 10000 binaryLp0j2nj3x0y2s0t3 <= 0
+y02 - 10000 binaryLp0j2nj3x0y2s0t3 <= 2
+y03 + 10000 binaryLp0j2nj3x0y2s0t3 >= 3
+x02 + 10000 binaryRp0j2nj3x0y2s0t3 >= 0
+x02 - 10000 binaryRp0j2nj3x0y2s0t3 <= 0
+x03 + 10000 binaryRp0j2nj3x0y2s0t3 >= 0
+x03 - 10000 binaryRp0j2nj3x0y2s0t3 <= 0
+y03 - 10000 binaryRp0j2nj3x0y2s0t3 <= 2
+y02 + 10000 binaryRp0j2nj3x0y2s0t3 >= 3
+x03 + 10000 binaryLp0j3nj4x0y2s0t3 >= 0
+x03 - 10000 binaryLp0j3nj4x0y2s0t3 <= 0
+x04 + 10000 binaryLp0j3nj4x0y2s0t3 >= 0
+x04 - 10000 binaryLp0j3nj4x0y2s0t3 <= 0
+y03 - 10000 binaryLp0j3nj4x0y2s0t3 <= 2
+y04 + 10000 binaryLp0j3nj4x0y2s0t3 >= 3
+x03 + 10000 binaryRp0j3nj4x0y2s0t3 >= 0
+x03 - 10000 binaryRp0j3nj4x0y2s0t3 <= 0
+x04 + 10000 binaryRp0j3nj4x0y2s0t3 >= 0
+x04 - 10000 binaryRp0j3nj4x0y2s0t3 <= 0
+y04 - 10000 binaryRp0j3nj4x0y2s0t3 <= 2
+y03 + 10000 binaryRp0j3nj4x0y2s0t3 >= 3
+x04 + 10000 binaryLp0j4nj5x0y2s0t3 >= 0
+x04 - 10000 binaryLp0j4nj5x0y2s0t3 <= 0
+x05 + 10000 binaryLp0j4nj5x0y2s0t3 >= 0
+x05 - 10000 binaryLp0j4nj5x0y2s0t3 <= 0
+y04 - 10000 binaryLp0j4nj5x0y2s0t3 <= 2
+y05 + 10000 binaryLp0j4nj5x0y2s0t3 >= 3
+x04 + 10000 binaryRp0j4nj5x0y2s0t3 >= 0
+x04 - 10000 binaryRp0j4nj5x0y2s0t3 <= 0
+x05 + 10000 binaryRp0j4nj5x0y2s0t3 >= 0
+x05 - 10000 binaryRp0j4nj5x0y2s0t3 <= 0
+y05 - 10000 binaryRp0j4nj5x0y2s0t3 <= 2
+y04 + 10000 binaryRp0j4nj5x0y2s0t3 >= 3
+x05 + 10000 binaryLp0j5nj6x0y2s0t3 >= 0
+x05 - 10000 binaryLp0j5nj6x0y2s0t3 <= 0
+x06 + 10000 binaryLp0j5nj6x0y2s0t3 >= 0
+x06 - 10000 binaryLp0j5nj6x0y2s0t3 <= 0
+y05 - 10000 binaryLp0j5nj6x0y2s0t3 <= 2
+y06 + 10000 binaryLp0j5nj6x0y2s0t3 >= 3
+x05 + 10000 binaryRp0j5nj6x0y2s0t3 >= 0
+x05 - 10000 binaryRp0j5nj6x0y2s0t3 <= 0
+x06 + 10000 binaryRp0j5nj6x0y2s0t3 >= 0
+x06 - 10000 binaryRp0j5nj6x0y2s0t3 <= 0
+y06 - 10000 binaryRp0j5nj6x0y2s0t3 <= 2
+y05 + 10000 binaryRp0j5nj6x0y2s0t3 >= 3
+x06 + 10000 binaryLp0j6nj7x0y2s0t3 >= 0
+x06 - 10000 binaryLp0j6nj7x0y2s0t3 <= 0
+x07 + 10000 binaryLp0j6nj7x0y2s0t3 >= 0
+x07 - 10000 binaryLp0j6nj7x0y2s0t3 <= 0
+y06 - 10000 binaryLp0j6nj7x0y2s0t3 <= 2
+y07 + 10000 binaryLp0j6nj7x0y2s0t3 >= 3
+x06 + 10000 binaryRp0j6nj7x0y2s0t3 >= 0
+x06 - 10000 binaryRp0j6nj7x0y2s0t3 <= 0
+x07 + 10000 binaryRp0j6nj7x0y2s0t3 >= 0
+x07 - 10000 binaryRp0j6nj7x0y2s0t3 <= 0
+y07 - 10000 binaryRp0j6nj7x0y2s0t3 <= 2
+y06 + 10000 binaryRp0j6nj7x0y2s0t3 >= 3
+x07 + 10000 binaryLp0j7nj8x0y2s0t3 >= 0
+x07 - 10000 binaryLp0j7nj8x0y2s0t3 <= 0
+x08 + 10000 binaryLp0j7nj8x0y2s0t3 >= 0
+x08 - 10000 binaryLp0j7nj8x0y2s0t3 <= 0
+y07 - 10000 binaryLp0j7nj8x0y2s0t3 <= 2
+y08 + 10000 binaryLp0j7nj8x0y2s0t3 >= 3
+x07 + 10000 binaryRp0j7nj8x0y2s0t3 >= 0
+x07 - 10000 binaryRp0j7nj8x0y2s0t3 <= 0
+x08 + 10000 binaryRp0j7nj8x0y2s0t3 >= 0
+x08 - 10000 binaryRp0j7nj8x0y2s0t3 <= 0
+y08 - 10000 binaryRp0j7nj8x0y2s0t3 <= 2
+y07 + 10000 binaryRp0j7nj8x0y2s0t3 >= 3
+x08 + 10000 binaryLp0j8nj9x0y2s0t3 >= 0
+x08 - 10000 binaryLp0j8nj9x0y2s0t3 <= 0
+x09 + 10000 binaryLp0j8nj9x0y2s0t3 >= 0
+x09 - 10000 binaryLp0j8nj9x0y2s0t3 <= 0
+y08 - 10000 binaryLp0j8nj9x0y2s0t3 <= 2
+y09 + 10000 binaryLp0j8nj9x0y2s0t3 >= 3
+x08 + 10000 binaryRp0j8nj9x0y2s0t3 >= 0
+x08 - 10000 binaryRp0j8nj9x0y2s0t3 <= 0
+x09 + 10000 binaryRp0j8nj9x0y2s0t3 >= 0
+x09 - 10000 binaryRp0j8nj9x0y2s0t3 <= 0
+y09 - 10000 binaryRp0j8nj9x0y2s0t3 <= 2
+y08 + 10000 binaryRp0j8nj9x0y2s0t3 >= 3
+x10 + 10000 binaryLp1j0nj1x0y2s0t3 >= 0
+x10 - 10000 binaryLp1j0nj1x0y2s0t3 <= 0
+x11 + 10000 binaryLp1j0nj1x0y2s0t3 >= 0
+x11 - 10000 binaryLp1j0nj1x0y2s0t3 <= 0
+y10 - 10000 binaryLp1j0nj1x0y2s0t3 <= 2
+y11 + 10000 binaryLp1j0nj1x0y2s0t3 >= 3
+x10 + 10000 binaryRp1j0nj1x0y2s0t3 >= 0
+x10 - 10000 binaryRp1j0nj1x0y2s0t3 <= 0
+x11 + 10000 binaryRp1j0nj1x0y2s0t3 >= 0
+x11 - 10000 binaryRp1j0nj1x0y2s0t3 <= 0
+y11 - 10000 binaryRp1j0nj1x0y2s0t3 <= 2
+y10 + 10000 binaryRp1j0nj1x0y2s0t3 >= 3
+x11 + 10000 binaryLp1j1nj2x0y2s0t3 >= 0
+x11 - 10000 binaryLp1j1nj2x0y2s0t3 <= 0
+x12 + 10000 binaryLp1j1nj2x0y2s0t3 >= 0
+x12 - 10000 binaryLp1j1nj2x0y2s0t3 <= 0
+y11 - 10000 binaryLp1j1nj2x0y2s0t3 <= 2
+y12 + 10000 binaryLp1j1nj2x0y2s0t3 >= 3
+x11 + 10000 binaryRp1j1nj2x0y2s0t3 >= 0
+x11 - 10000 binaryRp1j1nj2x0y2s0t3 <= 0
+x12 + 10000 binaryRp1j1nj2x0y2s0t3 >= 0
+x12 - 10000 binaryRp1j1nj2x0y2s0t3 <= 0
+y12 - 10000 binaryRp1j1nj2x0y2s0t3 <= 2
+y11 + 10000 binaryRp1j1nj2x0y2s0t3 >= 3
+x12 + 10000 binaryLp1j2nj3x0y2s0t3 >= 0
+x12 - 10000 binaryLp1j2nj3x0y2s0t3 <= 0
+x13 + 10000 binaryLp1j2nj3x0y2s0t3 >= 0
+x13 - 10000 binaryLp1j2nj3x0y2s0t3 <= 0
+y12 - 10000 binaryLp1j2nj3x0y2s0t3 <= 2
+y13 + 10000 binaryLp1j2nj3x0y2s0t3 >= 3
+x12 + 10000 binaryRp1j2nj3x0y2s0t3 >= 0
+x12 - 10000 binaryRp1j2nj3x0y2s0t3 <= 0
+x13 + 10000 binaryRp1j2nj3x0y2s0t3 >= 0
+x13 - 10000 binaryRp1j2nj3x0y2s0t3 <= 0
+y13 - 10000 binaryRp1j2nj3x0y2s0t3 <= 2
+y12 + 10000 binaryRp1j2nj3x0y2s0t3 >= 3
+x13 + 10000 binaryLp1j3nj4x0y2s0t3 >= 0
+x13 - 10000 binaryLp1j3nj4x0y2s0t3 <= 0
+x14 + 10000 binaryLp1j3nj4x0y2s0t3 >= 0
+x14 - 10000 binaryLp1j3nj4x0y2s0t3 <= 0
+y13 - 10000 binaryLp1j3nj4x0y2s0t3 <= 2
+y14 + 10000 binaryLp1j3nj4x0y2s0t3 >= 3
+x13 + 10000 binaryRp1j3nj4x0y2s0t3 >= 0
+x13 - 10000 binaryRp1j3nj4x0y2s0t3 <= 0
+x14 + 10000 binaryRp1j3nj4x0y2s0t3 >= 0
+x14 - 10000 binaryRp1j3nj4x0y2s0t3 <= 0
+y14 - 10000 binaryRp1j3nj4x0y2s0t3 <= 2
+y13 + 10000 binaryRp1j3nj4x0y2s0t3 >= 3
+x14 + 10000 binaryLp1j4nj5x0y2s0t3 >= 0
+x14 - 10000 binaryLp1j4nj5x0y2s0t3 <= 0
+x15 + 10000 binaryLp1j4nj5x0y2s0t3 >= 0
+x15 - 10000 binaryLp1j4nj5x0y2s0t3 <= 0
+y14 - 10000 binaryLp1j4nj5x0y2s0t3 <= 2
+y15 + 10000 binaryLp1j4nj5x0y2s0t3 >= 3
+x14 + 10000 binaryRp1j4nj5x0y2s0t3 >= 0
+x14 - 10000 binaryRp1j4nj5x0y2s0t3 <= 0
+x15 + 10000 binaryRp1j4nj5x0y2s0t3 >= 0
+x15 - 10000 binaryRp1j4nj5x0y2s0t3 <= 0
+y15 - 10000 binaryRp1j4nj5x0y2s0t3 <= 2
+y14 + 10000 binaryRp1j4nj5x0y2s0t3 >= 3
+x15 + 10000 binaryLp1j5nj6x0y2s0t3 >= 0
+x15 - 10000 binaryLp1j5nj6x0y2s0t3 <= 0
+x16 + 10000 binaryLp1j5nj6x0y2s0t3 >= 0
+x16 - 10000 binaryLp1j5nj6x0y2s0t3 <= 0
+y15 - 10000 binaryLp1j5nj6x0y2s0t3 <= 2
+y16 + 10000 binaryLp1j5nj6x0y2s0t3 >= 3
+x15 + 10000 binaryRp1j5nj6x0y2s0t3 >= 0
+x15 - 10000 binaryRp1j5nj6x0y2s0t3 <= 0
+x16 + 10000 binaryRp1j5nj6x0y2s0t3 >= 0
+x16 - 10000 binaryRp1j5nj6x0y2s0t3 <= 0
+y16 - 10000 binaryRp1j5nj6x0y2s0t3 <= 2
+y15 + 10000 binaryRp1j5nj6x0y2s0t3 >= 3
+x16 + 10000 binaryLp1j6nj7x0y2s0t3 >= 0
+x16 - 10000 binaryLp1j6nj7x0y2s0t3 <= 0
+x17 + 10000 binaryLp1j6nj7x0y2s0t3 >= 0
+x17 - 10000 binaryLp1j6nj7x0y2s0t3 <= 0
+y16 - 10000 binaryLp1j6nj7x0y2s0t3 <= 2
+y17 + 10000 binaryLp1j6nj7x0y2s0t3 >= 3
+x16 + 10000 binaryRp1j6nj7x0y2s0t3 >= 0
+x16 - 10000 binaryRp1j6nj7x0y2s0t3 <= 0
+x17 + 10000 binaryRp1j6nj7x0y2s0t3 >= 0
+x17 - 10000 binaryRp1j6nj7x0y2s0t3 <= 0
+y17 - 10000 binaryRp1j6nj7x0y2s0t3 <= 2
+y16 + 10000 binaryRp1j6nj7x0y2s0t3 >= 3
+x17 + 10000 binaryLp1j7nj8x0y2s0t3 >= 0
+x17 - 10000 binaryLp1j7nj8x0y2s0t3 <= 0
+x18 + 10000 binaryLp1j7nj8x0y2s0t3 >= 0
+x18 - 10000 binaryLp1j7nj8x0y2s0t3 <= 0
+y17 - 10000 binaryLp1j7nj8x0y2s0t3 <= 2
+y18 + 10000 binaryLp1j7nj8x0y2s0t3 >= 3
+x17 + 10000 binaryRp1j7nj8x0y2s0t3 >= 0
+x17 - 10000 binaryRp1j7nj8x0y2s0t3 <= 0
+x18 + 10000 binaryRp1j7nj8x0y2s0t3 >= 0
+x18 - 10000 binaryRp1j7nj8x0y2s0t3 <= 0
+y18 - 10000 binaryRp1j7nj8x0y2s0t3 <= 2
+y17 + 10000 binaryRp1j7nj8x0y2s0t3 >= 3
+x18 + 10000 binaryLp1j8nj9x0y2s0t3 >= 0
+x18 - 10000 binaryLp1j8nj9x0y2s0t3 <= 0
+x19 + 10000 binaryLp1j8nj9x0y2s0t3 >= 0
+x19 - 10000 binaryLp1j8nj9x0y2s0t3 <= 0
+y18 - 10000 binaryLp1j8nj9x0y2s0t3 <= 2
+y19 + 10000 binaryLp1j8nj9x0y2s0t3 >= 3
+x18 + 10000 binaryRp1j8nj9x0y2s0t3 >= 0
+x18 - 10000 binaryRp1j8nj9x0y2s0t3 <= 0
+x19 + 10000 binaryRp1j8nj9x0y2s0t3 >= 0
+x19 - 10000 binaryRp1j8nj9x0y2s0t3 <= 0
+y19 - 10000 binaryRp1j8nj9x0y2s0t3 <= 2
+y18 + 10000 binaryRp1j8nj9x0y2s0t3 >= 3
+ + binaryLp0j0nj1x0y2s0t3 + binaryRp0j0nj1x0y2s0t3 + binaryLp0j1nj2x0y2s0t3 + binaryRp0j1nj2x0y2s0t3 + binaryLp0j2nj3x0y2s0t3 + binaryRp0j2nj3x0y2s0t3 + binaryLp0j3nj4x0y2s0t3 + binaryRp0j3nj4x0y2s0t3 + binaryLp0j4nj5x0y2s0t3 + binaryRp0j4nj5x0y2s0t3 + binaryLp0j5nj6x0y2s0t3 + binaryRp0j5nj6x0y2s0t3 + binaryLp0j6nj7x0y2s0t3 + binaryRp0j6nj7x0y2s0t3 + binaryLp0j7nj8x0y2s0t3 + binaryRp0j7nj8x0y2s0t3 + binaryLp0j8nj9x0y2s0t3 + binaryRp0j8nj9x0y2s0t3 + binaryLp1j0nj1x0y2s0t3 + binaryRp1j0nj1x0y2s0t3 + binaryLp1j1nj2x0y2s0t3 + binaryRp1j1nj2x0y2s0t3 + binaryLp1j2nj3x0y2s0t3 + binaryRp1j2nj3x0y2s0t3 + binaryLp1j3nj4x0y2s0t3 + binaryRp1j3nj4x0y2s0t3 + binaryLp1j4nj5x0y2s0t3 + binaryRp1j4nj5x0y2s0t3 + binaryLp1j5nj6x0y2s0t3 + binaryRp1j5nj6x0y2s0t3 + binaryLp1j6nj7x0y2s0t3 + binaryRp1j6nj7x0y2s0t3 + binaryLp1j7nj8x0y2s0t3 + binaryRp1j7nj8x0y2s0t3 + binaryLp1j8nj9x0y2s0t3 + binaryRp1j8nj9x0y2s0t3 <= 35
+y00 + 10000 binaryUp0j0nj1x2y1s3t1 >= 1
+y00 - 10000 binaryUp0j0nj1x2y1s3t1 <=  1
+y01 + 10000 binaryUp0j0nj1x2y1s3t1 >= 1
+y01 - 10000 binaryUp0j0nj1x2y1s3t1 <= 1
+x00 - 10000 binaryUp0j0nj1x2y1s3t1 <= 2
+x01 + 10000 binaryUp0j0nj1x2y1s3t1 >= 3
+y00 + 10000 binaryDp0j0nj1x2y1s3t1 >= 1
+y00 - 10000 binaryDp0j0nj1x2y1s3t1 <= 1
+y01 + 10000 binaryDp0j0nj1x2y1s3t1 >= 1
+y01 - 10000 binaryDp0j0nj1x2y1s3t1 <= 1
+x01 - 10000 binaryDp0j0nj1x2y1s3t1 <= 2
+x00 + 10000 binaryDp0j0nj1x2y1s3t1 >= 3
+y01 + 10000 binaryUp0j1nj2x2y1s3t1 >= 1
+y01 - 10000 binaryUp0j1nj2x2y1s3t1 <=  1
+y02 + 10000 binaryUp0j1nj2x2y1s3t1 >= 1
+y02 - 10000 binaryUp0j1nj2x2y1s3t1 <= 1
+x01 - 10000 binaryUp0j1nj2x2y1s3t1 <= 2
+x02 + 10000 binaryUp0j1nj2x2y1s3t1 >= 3
+y01 + 10000 binaryDp0j1nj2x2y1s3t1 >= 1
+y01 - 10000 binaryDp0j1nj2x2y1s3t1 <= 1
+y02 + 10000 binaryDp0j1nj2x2y1s3t1 >= 1
+y02 - 10000 binaryDp0j1nj2x2y1s3t1 <= 1
+x02 - 10000 binaryDp0j1nj2x2y1s3t1 <= 2
+x01 + 10000 binaryDp0j1nj2x2y1s3t1 >= 3
+y02 + 10000 binaryUp0j2nj3x2y1s3t1 >= 1
+y02 - 10000 binaryUp0j2nj3x2y1s3t1 <=  1
+y03 + 10000 binaryUp0j2nj3x2y1s3t1 >= 1
+y03 - 10000 binaryUp0j2nj3x2y1s3t1 <= 1
+x02 - 10000 binaryUp0j2nj3x2y1s3t1 <= 2
+x03 + 10000 binaryUp0j2nj3x2y1s3t1 >= 3
+y02 + 10000 binaryDp0j2nj3x2y1s3t1 >= 1
+y02 - 10000 binaryDp0j2nj3x2y1s3t1 <= 1
+y03 + 10000 binaryDp0j2nj3x2y1s3t1 >= 1
+y03 - 10000 binaryDp0j2nj3x2y1s3t1 <= 1
+x03 - 10000 binaryDp0j2nj3x2y1s3t1 <= 2
+x02 + 10000 binaryDp0j2nj3x2y1s3t1 >= 3
+y03 + 10000 binaryUp0j3nj4x2y1s3t1 >= 1
+y03 - 10000 binaryUp0j3nj4x2y1s3t1 <=  1
+y04 + 10000 binaryUp0j3nj4x2y1s3t1 >= 1
+y04 - 10000 binaryUp0j3nj4x2y1s3t1 <= 1
+x03 - 10000 binaryUp0j3nj4x2y1s3t1 <= 2
+x04 + 10000 binaryUp0j3nj4x2y1s3t1 >= 3
+y03 + 10000 binaryDp0j3nj4x2y1s3t1 >= 1
+y03 - 10000 binaryDp0j3nj4x2y1s3t1 <= 1
+y04 + 10000 binaryDp0j3nj4x2y1s3t1 >= 1
+y04 - 10000 binaryDp0j3nj4x2y1s3t1 <= 1
+x04 - 10000 binaryDp0j3nj4x2y1s3t1 <= 2
+x03 + 10000 binaryDp0j3nj4x2y1s3t1 >= 3
+y04 + 10000 binaryUp0j4nj5x2y1s3t1 >= 1
+y04 - 10000 binaryUp0j4nj5x2y1s3t1 <=  1
+y05 + 10000 binaryUp0j4nj5x2y1s3t1 >= 1
+y05 - 10000 binaryUp0j4nj5x2y1s3t1 <= 1
+x04 - 10000 binaryUp0j4nj5x2y1s3t1 <= 2
+x05 + 10000 binaryUp0j4nj5x2y1s3t1 >= 3
+y04 + 10000 binaryDp0j4nj5x2y1s3t1 >= 1
+y04 - 10000 binaryDp0j4nj5x2y1s3t1 <= 1
+y05 + 10000 binaryDp0j4nj5x2y1s3t1 >= 1
+y05 - 10000 binaryDp0j4nj5x2y1s3t1 <= 1
+x05 - 10000 binaryDp0j4nj5x2y1s3t1 <= 2
+x04 + 10000 binaryDp0j4nj5x2y1s3t1 >= 3
+y05 + 10000 binaryUp0j5nj6x2y1s3t1 >= 1
+y05 - 10000 binaryUp0j5nj6x2y1s3t1 <=  1
+y06 + 10000 binaryUp0j5nj6x2y1s3t1 >= 1
+y06 - 10000 binaryUp0j5nj6x2y1s3t1 <= 1
+x05 - 10000 binaryUp0j5nj6x2y1s3t1 <= 2
+x06 + 10000 binaryUp0j5nj6x2y1s3t1 >= 3
+y05 + 10000 binaryDp0j5nj6x2y1s3t1 >= 1
+y05 - 10000 binaryDp0j5nj6x2y1s3t1 <= 1
+y06 + 10000 binaryDp0j5nj6x2y1s3t1 >= 1
+y06 - 10000 binaryDp0j5nj6x2y1s3t1 <= 1
+x06 - 10000 binaryDp0j5nj6x2y1s3t1 <= 2
+x05 + 10000 binaryDp0j5nj6x2y1s3t1 >= 3
+y06 + 10000 binaryUp0j6nj7x2y1s3t1 >= 1
+y06 - 10000 binaryUp0j6nj7x2y1s3t1 <=  1
+y07 + 10000 binaryUp0j6nj7x2y1s3t1 >= 1
+y07 - 10000 binaryUp0j6nj7x2y1s3t1 <= 1
+x06 - 10000 binaryUp0j6nj7x2y1s3t1 <= 2
+x07 + 10000 binaryUp0j6nj7x2y1s3t1 >= 3
+y06 + 10000 binaryDp0j6nj7x2y1s3t1 >= 1
+y06 - 10000 binaryDp0j6nj7x2y1s3t1 <= 1
+y07 + 10000 binaryDp0j6nj7x2y1s3t1 >= 1
+y07 - 10000 binaryDp0j6nj7x2y1s3t1 <= 1
+x07 - 10000 binaryDp0j6nj7x2y1s3t1 <= 2
+x06 + 10000 binaryDp0j6nj7x2y1s3t1 >= 3
+y07 + 10000 binaryUp0j7nj8x2y1s3t1 >= 1
+y07 - 10000 binaryUp0j7nj8x2y1s3t1 <=  1
+y08 + 10000 binaryUp0j7nj8x2y1s3t1 >= 1
+y08 - 10000 binaryUp0j7nj8x2y1s3t1 <= 1
+x07 - 10000 binaryUp0j7nj8x2y1s3t1 <= 2
+x08 + 10000 binaryUp0j7nj8x2y1s3t1 >= 3
+y07 + 10000 binaryDp0j7nj8x2y1s3t1 >= 1
+y07 - 10000 binaryDp0j7nj8x2y1s3t1 <= 1
+y08 + 10000 binaryDp0j7nj8x2y1s3t1 >= 1
+y08 - 10000 binaryDp0j7nj8x2y1s3t1 <= 1
+x08 - 10000 binaryDp0j7nj8x2y1s3t1 <= 2
+x07 + 10000 binaryDp0j7nj8x2y1s3t1 >= 3
+y08 + 10000 binaryUp0j8nj9x2y1s3t1 >= 1
+y08 - 10000 binaryUp0j8nj9x2y1s3t1 <=  1
+y09 + 10000 binaryUp0j8nj9x2y1s3t1 >= 1
+y09 - 10000 binaryUp0j8nj9x2y1s3t1 <= 1
+x08 - 10000 binaryUp0j8nj9x2y1s3t1 <= 2
+x09 + 10000 binaryUp0j8nj9x2y1s3t1 >= 3
+y08 + 10000 binaryDp0j8nj9x2y1s3t1 >= 1
+y08 - 10000 binaryDp0j8nj9x2y1s3t1 <= 1
+y09 + 10000 binaryDp0j8nj9x2y1s3t1 >= 1
+y09 - 10000 binaryDp0j8nj9x2y1s3t1 <= 1
+x09 - 10000 binaryDp0j8nj9x2y1s3t1 <= 2
+x08 + 10000 binaryDp0j8nj9x2y1s3t1 >= 3
+y10 + 10000 binaryUp1j0nj1x2y1s3t1 >= 1
+y10 - 10000 binaryUp1j0nj1x2y1s3t1 <=  1
+y11 + 10000 binaryUp1j0nj1x2y1s3t1 >= 1
+y11 - 10000 binaryUp1j0nj1x2y1s3t1 <= 1
+x10 - 10000 binaryUp1j0nj1x2y1s3t1 <= 2
+x11 + 10000 binaryUp1j0nj1x2y1s3t1 >= 3
+y10 + 10000 binaryDp1j0nj1x2y1s3t1 >= 1
+y10 - 10000 binaryDp1j0nj1x2y1s3t1 <= 1
+y11 + 10000 binaryDp1j0nj1x2y1s3t1 >= 1
+y11 - 10000 binaryDp1j0nj1x2y1s3t1 <= 1
+x11 - 10000 binaryDp1j0nj1x2y1s3t1 <= 2
+x10 + 10000 binaryDp1j0nj1x2y1s3t1 >= 3
+y11 + 10000 binaryUp1j1nj2x2y1s3t1 >= 1
+y11 - 10000 binaryUp1j1nj2x2y1s3t1 <=  1
+y12 + 10000 binaryUp1j1nj2x2y1s3t1 >= 1
+y12 - 10000 binaryUp1j1nj2x2y1s3t1 <= 1
+x11 - 10000 binaryUp1j1nj2x2y1s3t1 <= 2
+x12 + 10000 binaryUp1j1nj2x2y1s3t1 >= 3
+y11 + 10000 binaryDp1j1nj2x2y1s3t1 >= 1
+y11 - 10000 binaryDp1j1nj2x2y1s3t1 <= 1
+y12 + 10000 binaryDp1j1nj2x2y1s3t1 >= 1
+y12 - 10000 binaryDp1j1nj2x2y1s3t1 <= 1
+x12 - 10000 binaryDp1j1nj2x2y1s3t1 <= 2
+x11 + 10000 binaryDp1j1nj2x2y1s3t1 >= 3
+y12 + 10000 binaryUp1j2nj3x2y1s3t1 >= 1
+y12 - 10000 binaryUp1j2nj3x2y1s3t1 <=  1
+y13 + 10000 binaryUp1j2nj3x2y1s3t1 >= 1
+y13 - 10000 binaryUp1j2nj3x2y1s3t1 <= 1
+x12 - 10000 binaryUp1j2nj3x2y1s3t1 <= 2
+x13 + 10000 binaryUp1j2nj3x2y1s3t1 >= 3
+y12 + 10000 binaryDp1j2nj3x2y1s3t1 >= 1
+y12 - 10000 binaryDp1j2nj3x2y1s3t1 <= 1
+y13 + 10000 binaryDp1j2nj3x2y1s3t1 >= 1
+y13 - 10000 binaryDp1j2nj3x2y1s3t1 <= 1
+x13 - 10000 binaryDp1j2nj3x2y1s3t1 <= 2
+x12 + 10000 binaryDp1j2nj3x2y1s3t1 >= 3
+y13 + 10000 binaryUp1j3nj4x2y1s3t1 >= 1
+y13 - 10000 binaryUp1j3nj4x2y1s3t1 <=  1
+y14 + 10000 binaryUp1j3nj4x2y1s3t1 >= 1
+y14 - 10000 binaryUp1j3nj4x2y1s3t1 <= 1
+x13 - 10000 binaryUp1j3nj4x2y1s3t1 <= 2
+x14 + 10000 binaryUp1j3nj4x2y1s3t1 >= 3
+y13 + 10000 binaryDp1j3nj4x2y1s3t1 >= 1
+y13 - 10000 binaryDp1j3nj4x2y1s3t1 <= 1
+y14 + 10000 binaryDp1j3nj4x2y1s3t1 >= 1
+y14 - 10000 binaryDp1j3nj4x2y1s3t1 <= 1
+x14 - 10000 binaryDp1j3nj4x2y1s3t1 <= 2
+x13 + 10000 binaryDp1j3nj4x2y1s3t1 >= 3
+y14 + 10000 binaryUp1j4nj5x2y1s3t1 >= 1
+y14 - 10000 binaryUp1j4nj5x2y1s3t1 <=  1
+y15 + 10000 binaryUp1j4nj5x2y1s3t1 >= 1
+y15 - 10000 binaryUp1j4nj5x2y1s3t1 <= 1
+x14 - 10000 binaryUp1j4nj5x2y1s3t1 <= 2
+x15 + 10000 binaryUp1j4nj5x2y1s3t1 >= 3
+y14 + 10000 binaryDp1j4nj5x2y1s3t1 >= 1
+y14 - 10000 binaryDp1j4nj5x2y1s3t1 <= 1
+y15 + 10000 binaryDp1j4nj5x2y1s3t1 >= 1
+y15 - 10000 binaryDp1j4nj5x2y1s3t1 <= 1
+x15 - 10000 binaryDp1j4nj5x2y1s3t1 <= 2
+x14 + 10000 binaryDp1j4nj5x2y1s3t1 >= 3
+y15 + 10000 binaryUp1j5nj6x2y1s3t1 >= 1
+y15 - 10000 binaryUp1j5nj6x2y1s3t1 <=  1
+y16 + 10000 binaryUp1j5nj6x2y1s3t1 >= 1
+y16 - 10000 binaryUp1j5nj6x2y1s3t1 <= 1
+x15 - 10000 binaryUp1j5nj6x2y1s3t1 <= 2
+x16 + 10000 binaryUp1j5nj6x2y1s3t1 >= 3
+y15 + 10000 binaryDp1j5nj6x2y1s3t1 >= 1
+y15 - 10000 binaryDp1j5nj6x2y1s3t1 <= 1
+y16 + 10000 binaryDp1j5nj6x2y1s3t1 >= 1
+y16 - 10000 binaryDp1j5nj6x2y1s3t1 <= 1
+x16 - 10000 binaryDp1j5nj6x2y1s3t1 <= 2
+x15 + 10000 binaryDp1j5nj6x2y1s3t1 >= 3
+y16 + 10000 binaryUp1j6nj7x2y1s3t1 >= 1
+y16 - 10000 binaryUp1j6nj7x2y1s3t1 <=  1
+y17 + 10000 binaryUp1j6nj7x2y1s3t1 >= 1
+y17 - 10000 binaryUp1j6nj7x2y1s3t1 <= 1
+x16 - 10000 binaryUp1j6nj7x2y1s3t1 <= 2
+x17 + 10000 binaryUp1j6nj7x2y1s3t1 >= 3
+y16 + 10000 binaryDp1j6nj7x2y1s3t1 >= 1
+y16 - 10000 binaryDp1j6nj7x2y1s3t1 <= 1
+y17 + 10000 binaryDp1j6nj7x2y1s3t1 >= 1
+y17 - 10000 binaryDp1j6nj7x2y1s3t1 <= 1
+x17 - 10000 binaryDp1j6nj7x2y1s3t1 <= 2
+x16 + 10000 binaryDp1j6nj7x2y1s3t1 >= 3
+y17 + 10000 binaryUp1j7nj8x2y1s3t1 >= 1
+y17 - 10000 binaryUp1j7nj8x2y1s3t1 <=  1
+y18 + 10000 binaryUp1j7nj8x2y1s3t1 >= 1
+y18 - 10000 binaryUp1j7nj8x2y1s3t1 <= 1
+x17 - 10000 binaryUp1j7nj8x2y1s3t1 <= 2
+x18 + 10000 binaryUp1j7nj8x2y1s3t1 >= 3
+y17 + 10000 binaryDp1j7nj8x2y1s3t1 >= 1
+y17 - 10000 binaryDp1j7nj8x2y1s3t1 <= 1
+y18 + 10000 binaryDp1j7nj8x2y1s3t1 >= 1
+y18 - 10000 binaryDp1j7nj8x2y1s3t1 <= 1
+x18 - 10000 binaryDp1j7nj8x2y1s3t1 <= 2
+x17 + 10000 binaryDp1j7nj8x2y1s3t1 >= 3
+y18 + 10000 binaryUp1j8nj9x2y1s3t1 >= 1
+y18 - 10000 binaryUp1j8nj9x2y1s3t1 <=  1
+y19 + 10000 binaryUp1j8nj9x2y1s3t1 >= 1
+y19 - 10000 binaryUp1j8nj9x2y1s3t1 <= 1
+x18 - 10000 binaryUp1j8nj9x2y1s3t1 <= 2
+x19 + 10000 binaryUp1j8nj9x2y1s3t1 >= 3
+y18 + 10000 binaryDp1j8nj9x2y1s3t1 >= 1
+y18 - 10000 binaryDp1j8nj9x2y1s3t1 <= 1
+y19 + 10000 binaryDp1j8nj9x2y1s3t1 >= 1
+y19 - 10000 binaryDp1j8nj9x2y1s3t1 <= 1
+x19 - 10000 binaryDp1j8nj9x2y1s3t1 <= 2
+x18 + 10000 binaryDp1j8nj9x2y1s3t1 >= 3
+ + binaryUp0j0nj1x2y1s3t1 + binaryDp0j0nj1x2y1s3t1 + binaryUp0j1nj2x2y1s3t1 + binaryDp0j1nj2x2y1s3t1 + binaryUp0j2nj3x2y1s3t1 + binaryDp0j2nj3x2y1s3t1 + binaryUp0j3nj4x2y1s3t1 + binaryDp0j3nj4x2y1s3t1 + binaryUp0j4nj5x2y1s3t1 + binaryDp0j4nj5x2y1s3t1 + binaryUp0j5nj6x2y1s3t1 + binaryDp0j5nj6x2y1s3t1 + binaryUp0j6nj7x2y1s3t1 + binaryDp0j6nj7x2y1s3t1 + binaryUp0j7nj8x2y1s3t1 + binaryDp0j7nj8x2y1s3t1 + binaryUp0j8nj9x2y1s3t1 + binaryDp0j8nj9x2y1s3t1 + binaryUp1j0nj1x2y1s3t1 + binaryDp1j0nj1x2y1s3t1 + binaryUp1j1nj2x2y1s3t1 + binaryDp1j1nj2x2y1s3t1 + binaryUp1j2nj3x2y1s3t1 + binaryDp1j2nj3x2y1s3t1 + binaryUp1j3nj4x2y1s3t1 + binaryDp1j3nj4x2y1s3t1 + binaryUp1j4nj5x2y1s3t1 + binaryDp1j4nj5x2y1s3t1 + binaryUp1j5nj6x2y1s3t1 + binaryDp1j5nj6x2y1s3t1 + binaryUp1j6nj7x2y1s3t1 + binaryDp1j6nj7x2y1s3t1 + binaryUp1j7nj8x2y1s3t1 + binaryDp1j7nj8x2y1s3t1 + binaryUp1j8nj9x2y1s3t1 + binaryDp1j8nj9x2y1s3t1 <= 35
+y00 + 10000 binaryUp0j0nj1x3y4s4t4 >= 4
+y00 - 10000 binaryUp0j0nj1x3y4s4t4 <=  4
+y01 + 10000 binaryUp0j0nj1x3y4s4t4 >= 4
+y01 - 10000 binaryUp0j0nj1x3y4s4t4 <= 4
+x00 - 10000 binaryUp0j0nj1x3y4s4t4 <= 3
+x01 + 10000 binaryUp0j0nj1x3y4s4t4 >= 4
+y00 + 10000 binaryDp0j0nj1x3y4s4t4 >= 4
+y00 - 10000 binaryDp0j0nj1x3y4s4t4 <= 4
+y01 + 10000 binaryDp0j0nj1x3y4s4t4 >= 4
+y01 - 10000 binaryDp0j0nj1x3y4s4t4 <= 4
+x01 - 10000 binaryDp0j0nj1x3y4s4t4 <= 3
+x00 + 10000 binaryDp0j0nj1x3y4s4t4 >= 4
+y01 + 10000 binaryUp0j1nj2x3y4s4t4 >= 4
+y01 - 10000 binaryUp0j1nj2x3y4s4t4 <=  4
+y02 + 10000 binaryUp0j1nj2x3y4s4t4 >= 4
+y02 - 10000 binaryUp0j1nj2x3y4s4t4 <= 4
+x01 - 10000 binaryUp0j1nj2x3y4s4t4 <= 3
+x02 + 10000 binaryUp0j1nj2x3y4s4t4 >= 4
+y01 + 10000 binaryDp0j1nj2x3y4s4t4 >= 4
+y01 - 10000 binaryDp0j1nj2x3y4s4t4 <= 4
+y02 + 10000 binaryDp0j1nj2x3y4s4t4 >= 4
+y02 - 10000 binaryDp0j1nj2x3y4s4t4 <= 4
+x02 - 10000 binaryDp0j1nj2x3y4s4t4 <= 3
+x01 + 10000 binaryDp0j1nj2x3y4s4t4 >= 4
+y02 + 10000 binaryUp0j2nj3x3y4s4t4 >= 4
+y02 - 10000 binaryUp0j2nj3x3y4s4t4 <=  4
+y03 + 10000 binaryUp0j2nj3x3y4s4t4 >= 4
+y03 - 10000 binaryUp0j2nj3x3y4s4t4 <= 4
+x02 - 10000 binaryUp0j2nj3x3y4s4t4 <= 3
+x03 + 10000 binaryUp0j2nj3x3y4s4t4 >= 4
+y02 + 10000 binaryDp0j2nj3x3y4s4t4 >= 4
+y02 - 10000 binaryDp0j2nj3x3y4s4t4 <= 4
+y03 + 10000 binaryDp0j2nj3x3y4s4t4 >= 4
+y03 - 10000 binaryDp0j2nj3x3y4s4t4 <= 4
+x03 - 10000 binaryDp0j2nj3x3y4s4t4 <= 3
+x02 + 10000 binaryDp0j2nj3x3y4s4t4 >= 4
+y03 + 10000 binaryUp0j3nj4x3y4s4t4 >= 4
+y03 - 10000 binaryUp0j3nj4x3y4s4t4 <=  4
+y04 + 10000 binaryUp0j3nj4x3y4s4t4 >= 4
+y04 - 10000 binaryUp0j3nj4x3y4s4t4 <= 4
+x03 - 10000 binaryUp0j3nj4x3y4s4t4 <= 3
+x04 + 10000 binaryUp0j3nj4x3y4s4t4 >= 4
+y03 + 10000 binaryDp0j3nj4x3y4s4t4 >= 4
+y03 - 10000 binaryDp0j3nj4x3y4s4t4 <= 4
+y04 + 10000 binaryDp0j3nj4x3y4s4t4 >= 4
+y04 - 10000 binaryDp0j3nj4x3y4s4t4 <= 4
+x04 - 10000 binaryDp0j3nj4x3y4s4t4 <= 3
+x03 + 10000 binaryDp0j3nj4x3y4s4t4 >= 4
+y04 + 10000 binaryUp0j4nj5x3y4s4t4 >= 4
+y04 - 10000 binaryUp0j4nj5x3y4s4t4 <=  4
+y05 + 10000 binaryUp0j4nj5x3y4s4t4 >= 4
+y05 - 10000 binaryUp0j4nj5x3y4s4t4 <= 4
+x04 - 10000 binaryUp0j4nj5x3y4s4t4 <= 3
+x05 + 10000 binaryUp0j4nj5x3y4s4t4 >= 4
+y04 + 10000 binaryDp0j4nj5x3y4s4t4 >= 4
+y04 - 10000 binaryDp0j4nj5x3y4s4t4 <= 4
+y05 + 10000 binaryDp0j4nj5x3y4s4t4 >= 4
+y05 - 10000 binaryDp0j4nj5x3y4s4t4 <= 4
+x05 - 10000 binaryDp0j4nj5x3y4s4t4 <= 3
+x04 + 10000 binaryDp0j4nj5x3y4s4t4 >= 4
+y05 + 10000 binaryUp0j5nj6x3y4s4t4 >= 4
+y05 - 10000 binaryUp0j5nj6x3y4s4t4 <=  4
+y06 + 10000 binaryUp0j5nj6x3y4s4t4 >= 4
+y06 - 10000 binaryUp0j5nj6x3y4s4t4 <= 4
+x05 - 10000 binaryUp0j5nj6x3y4s4t4 <= 3
+x06 + 10000 binaryUp0j5nj6x3y4s4t4 >= 4
+y05 + 10000 binaryDp0j5nj6x3y4s4t4 >= 4
+y05 - 10000 binaryDp0j5nj6x3y4s4t4 <= 4
+y06 + 10000 binaryDp0j5nj6x3y4s4t4 >= 4
+y06 - 10000 binaryDp0j5nj6x3y4s4t4 <= 4
+x06 - 10000 binaryDp0j5nj6x3y4s4t4 <= 3
+x05 + 10000 binaryDp0j5nj6x3y4s4t4 >= 4
+y06 + 10000 binaryUp0j6nj7x3y4s4t4 >= 4
+y06 - 10000 binaryUp0j6nj7x3y4s4t4 <=  4
+y07 + 10000 binaryUp0j6nj7x3y4s4t4 >= 4
+y07 - 10000 binaryUp0j6nj7x3y4s4t4 <= 4
+x06 - 10000 binaryUp0j6nj7x3y4s4t4 <= 3
+x07 + 10000 binaryUp0j6nj7x3y4s4t4 >= 4
+y06 + 10000 binaryDp0j6nj7x3y4s4t4 >= 4
+y06 - 10000 binaryDp0j6nj7x3y4s4t4 <= 4
+y07 + 10000 binaryDp0j6nj7x3y4s4t4 >= 4
+y07 - 10000 binaryDp0j6nj7x3y4s4t4 <= 4
+x07 - 10000 binaryDp0j6nj7x3y4s4t4 <= 3
+x06 + 10000 binaryDp0j6nj7x3y4s4t4 >= 4
+y07 + 10000 binaryUp0j7nj8x3y4s4t4 >= 4
+y07 - 10000 binaryUp0j7nj8x3y4s4t4 <=  4
+y08 + 10000 binaryUp0j7nj8x3y4s4t4 >= 4
+y08 - 10000 binaryUp0j7nj8x3y4s4t4 <= 4
+x07 - 10000 binaryUp0j7nj8x3y4s4t4 <= 3
+x08 + 10000 binaryUp0j7nj8x3y4s4t4 >= 4
+y07 + 10000 binaryDp0j7nj8x3y4s4t4 >= 4
+y07 - 10000 binaryDp0j7nj8x3y4s4t4 <= 4
+y08 + 10000 binaryDp0j7nj8x3y4s4t4 >= 4
+y08 - 10000 binaryDp0j7nj8x3y4s4t4 <= 4
+x08 - 10000 binaryDp0j7nj8x3y4s4t4 <= 3
+x07 + 10000 binaryDp0j7nj8x3y4s4t4 >= 4
+y08 + 10000 binaryUp0j8nj9x3y4s4t4 >= 4
+y08 - 10000 binaryUp0j8nj9x3y4s4t4 <=  4
+y09 + 10000 binaryUp0j8nj9x3y4s4t4 >= 4
+y09 - 10000 binaryUp0j8nj9x3y4s4t4 <= 4
+x08 - 10000 binaryUp0j8nj9x3y4s4t4 <= 3
+x09 + 10000 binaryUp0j8nj9x3y4s4t4 >= 4
+y08 + 10000 binaryDp0j8nj9x3y4s4t4 >= 4
+y08 - 10000 binaryDp0j8nj9x3y4s4t4 <= 4
+y09 + 10000 binaryDp0j8nj9x3y4s4t4 >= 4
+y09 - 10000 binaryDp0j8nj9x3y4s4t4 <= 4
+x09 - 10000 binaryDp0j8nj9x3y4s4t4 <= 3
+x08 + 10000 binaryDp0j8nj9x3y4s4t4 >= 4
+y10 + 10000 binaryUp1j0nj1x3y4s4t4 >= 4
+y10 - 10000 binaryUp1j0nj1x3y4s4t4 <=  4
+y11 + 10000 binaryUp1j0nj1x3y4s4t4 >= 4
+y11 - 10000 binaryUp1j0nj1x3y4s4t4 <= 4
+x10 - 10000 binaryUp1j0nj1x3y4s4t4 <= 3
+x11 + 10000 binaryUp1j0nj1x3y4s4t4 >= 4
+y10 + 10000 binaryDp1j0nj1x3y4s4t4 >= 4
+y10 - 10000 binaryDp1j0nj1x3y4s4t4 <= 4
+y11 + 10000 binaryDp1j0nj1x3y4s4t4 >= 4
+y11 - 10000 binaryDp1j0nj1x3y4s4t4 <= 4
+x11 - 10000 binaryDp1j0nj1x3y4s4t4 <= 3
+x10 + 10000 binaryDp1j0nj1x3y4s4t4 >= 4
+y11 + 10000 binaryUp1j1nj2x3y4s4t4 >= 4
+y11 - 10000 binaryUp1j1nj2x3y4s4t4 <=  4
+y12 + 10000 binaryUp1j1nj2x3y4s4t4 >= 4
+y12 - 10000 binaryUp1j1nj2x3y4s4t4 <= 4
+x11 - 10000 binaryUp1j1nj2x3y4s4t4 <= 3
+x12 + 10000 binaryUp1j1nj2x3y4s4t4 >= 4
+y11 + 10000 binaryDp1j1nj2x3y4s4t4 >= 4
+y11 - 10000 binaryDp1j1nj2x3y4s4t4 <= 4
+y12 + 10000 binaryDp1j1nj2x3y4s4t4 >= 4
+y12 - 10000 binaryDp1j1nj2x3y4s4t4 <= 4
+x12 - 10000 binaryDp1j1nj2x3y4s4t4 <= 3
+x11 + 10000 binaryDp1j1nj2x3y4s4t4 >= 4
+y12 + 10000 binaryUp1j2nj3x3y4s4t4 >= 4
+y12 - 10000 binaryUp1j2nj3x3y4s4t4 <=  4
+y13 + 10000 binaryUp1j2nj3x3y4s4t4 >= 4
+y13 - 10000 binaryUp1j2nj3x3y4s4t4 <= 4
+x12 - 10000 binaryUp1j2nj3x3y4s4t4 <= 3
+x13 + 10000 binaryUp1j2nj3x3y4s4t4 >= 4
+y12 + 10000 binaryDp1j2nj3x3y4s4t4 >= 4
+y12 - 10000 binaryDp1j2nj3x3y4s4t4 <= 4
+y13 + 10000 binaryDp1j2nj3x3y4s4t4 >= 4
+y13 - 10000 binaryDp1j2nj3x3y4s4t4 <= 4
+x13 - 10000 binaryDp1j2nj3x3y4s4t4 <= 3
+x12 + 10000 binaryDp1j2nj3x3y4s4t4 >= 4
+y13 + 10000 binaryUp1j3nj4x3y4s4t4 >= 4
+y13 - 10000 binaryUp1j3nj4x3y4s4t4 <=  4
+y14 + 10000 binaryUp1j3nj4x3y4s4t4 >= 4
+y14 - 10000 binaryUp1j3nj4x3y4s4t4 <= 4
+x13 - 10000 binaryUp1j3nj4x3y4s4t4 <= 3
+x14 + 10000 binaryUp1j3nj4x3y4s4t4 >= 4
+y13 + 10000 binaryDp1j3nj4x3y4s4t4 >= 4
+y13 - 10000 binaryDp1j3nj4x3y4s4t4 <= 4
+y14 + 10000 binaryDp1j3nj4x3y4s4t4 >= 4
+y14 - 10000 binaryDp1j3nj4x3y4s4t4 <= 4
+x14 - 10000 binaryDp1j3nj4x3y4s4t4 <= 3
+x13 + 10000 binaryDp1j3nj4x3y4s4t4 >= 4
+y14 + 10000 binaryUp1j4nj5x3y4s4t4 >= 4
+y14 - 10000 binaryUp1j4nj5x3y4s4t4 <=  4
+y15 + 10000 binaryUp1j4nj5x3y4s4t4 >= 4
+y15 - 10000 binaryUp1j4nj5x3y4s4t4 <= 4
+x14 - 10000 binaryUp1j4nj5x3y4s4t4 <= 3
+x15 + 10000 binaryUp1j4nj5x3y4s4t4 >= 4
+y14 + 10000 binaryDp1j4nj5x3y4s4t4 >= 4
+y14 - 10000 binaryDp1j4nj5x3y4s4t4 <= 4
+y15 + 10000 binaryDp1j4nj5x3y4s4t4 >= 4
+y15 - 10000 binaryDp1j4nj5x3y4s4t4 <= 4
+x15 - 10000 binaryDp1j4nj5x3y4s4t4 <= 3
+x14 + 10000 binaryDp1j4nj5x3y4s4t4 >= 4
+y15 + 10000 binaryUp1j5nj6x3y4s4t4 >= 4
+y15 - 10000 binaryUp1j5nj6x3y4s4t4 <=  4
+y16 + 10000 binaryUp1j5nj6x3y4s4t4 >= 4
+y16 - 10000 binaryUp1j5nj6x3y4s4t4 <= 4
+x15 - 10000 binaryUp1j5nj6x3y4s4t4 <= 3
+x16 + 10000 binaryUp1j5nj6x3y4s4t4 >= 4
+y15 + 10000 binaryDp1j5nj6x3y4s4t4 >= 4
+y15 - 10000 binaryDp1j5nj6x3y4s4t4 <= 4
+y16 + 10000 binaryDp1j5nj6x3y4s4t4 >= 4
+y16 - 10000 binaryDp1j5nj6x3y4s4t4 <= 4
+x16 - 10000 binaryDp1j5nj6x3y4s4t4 <= 3
+x15 + 10000 binaryDp1j5nj6x3y4s4t4 >= 4
+y16 + 10000 binaryUp1j6nj7x3y4s4t4 >= 4
+y16 - 10000 binaryUp1j6nj7x3y4s4t4 <=  4
+y17 + 10000 binaryUp1j6nj7x3y4s4t4 >= 4
+y17 - 10000 binaryUp1j6nj7x3y4s4t4 <= 4
+x16 - 10000 binaryUp1j6nj7x3y4s4t4 <= 3
+x17 + 10000 binaryUp1j6nj7x3y4s4t4 >= 4
+y16 + 10000 binaryDp1j6nj7x3y4s4t4 >= 4
+y16 - 10000 binaryDp1j6nj7x3y4s4t4 <= 4
+y17 + 10000 binaryDp1j6nj7x3y4s4t4 >= 4
+y17 - 10000 binaryDp1j6nj7x3y4s4t4 <= 4
+x17 - 10000 binaryDp1j6nj7x3y4s4t4 <= 3
+x16 + 10000 binaryDp1j6nj7x3y4s4t4 >= 4
+y17 + 10000 binaryUp1j7nj8x3y4s4t4 >= 4
+y17 - 10000 binaryUp1j7nj8x3y4s4t4 <=  4
+y18 + 10000 binaryUp1j7nj8x3y4s4t4 >= 4
+y18 - 10000 binaryUp1j7nj8x3y4s4t4 <= 4
+x17 - 10000 binaryUp1j7nj8x3y4s4t4 <= 3
+x18 + 10000 binaryUp1j7nj8x3y4s4t4 >= 4
+y17 + 10000 binaryDp1j7nj8x3y4s4t4 >= 4
+y17 - 10000 binaryDp1j7nj8x3y4s4t4 <= 4
+y18 + 10000 binaryDp1j7nj8x3y4s4t4 >= 4
+y18 - 10000 binaryDp1j7nj8x3y4s4t4 <= 4
+x18 - 10000 binaryDp1j7nj8x3y4s4t4 <= 3
+x17 + 10000 binaryDp1j7nj8x3y4s4t4 >= 4
+y18 + 10000 binaryUp1j8nj9x3y4s4t4 >= 4
+y18 - 10000 binaryUp1j8nj9x3y4s4t4 <=  4
+y19 + 10000 binaryUp1j8nj9x3y4s4t4 >= 4
+y19 - 10000 binaryUp1j8nj9x3y4s4t4 <= 4
+x18 - 10000 binaryUp1j8nj9x3y4s4t4 <= 3
+x19 + 10000 binaryUp1j8nj9x3y4s4t4 >= 4
+y18 + 10000 binaryDp1j8nj9x3y4s4t4 >= 4
+y18 - 10000 binaryDp1j8nj9x3y4s4t4 <= 4
+y19 + 10000 binaryDp1j8nj9x3y4s4t4 >= 4
+y19 - 10000 binaryDp1j8nj9x3y4s4t4 <= 4
+x19 - 10000 binaryDp1j8nj9x3y4s4t4 <= 3
+x18 + 10000 binaryDp1j8nj9x3y4s4t4 >= 4
+ + binaryUp0j0nj1x3y4s4t4 + binaryDp0j0nj1x3y4s4t4 + binaryUp0j1nj2x3y4s4t4 + binaryDp0j1nj2x3y4s4t4 + binaryUp0j2nj3x3y4s4t4 + binaryDp0j2nj3x3y4s4t4 + binaryUp0j3nj4x3y4s4t4 + binaryDp0j3nj4x3y4s4t4 + binaryUp0j4nj5x3y4s4t4 + binaryDp0j4nj5x3y4s4t4 + binaryUp0j5nj6x3y4s4t4 + binaryDp0j5nj6x3y4s4t4 + binaryUp0j6nj7x3y4s4t4 + binaryDp0j6nj7x3y4s4t4 + binaryUp0j7nj8x3y4s4t4 + binaryDp0j7nj8x3y4s4t4 + binaryUp0j8nj9x3y4s4t4 + binaryDp0j8nj9x3y4s4t4 + binaryUp1j0nj1x3y4s4t4 + binaryDp1j0nj1x3y4s4t4 + binaryUp1j1nj2x3y4s4t4 + binaryDp1j1nj2x3y4s4t4 + binaryUp1j2nj3x3y4s4t4 + binaryDp1j2nj3x3y4s4t4 + binaryUp1j3nj4x3y4s4t4 + binaryDp1j3nj4x3y4s4t4 + binaryUp1j4nj5x3y4s4t4 + binaryDp1j4nj5x3y4s4t4 + binaryUp1j5nj6x3y4s4t4 + binaryDp1j5nj6x3y4s4t4 + binaryUp1j6nj7x3y4s4t4 + binaryDp1j6nj7x3y4s4t4 + binaryUp1j7nj8x3y4s4t4 + binaryDp1j7nj8x3y4s4t4 + binaryUp1j8nj9x3y4s4t4 + binaryDp1j8nj9x3y4s4t4 <= 35
+x00 + 10000 binaryLp0j0nj1x2y3s2t4 >= 2
+x00 - 10000 binaryLp0j0nj1x2y3s2t4 <= 2
+x01 + 10000 binaryLp0j0nj1x2y3s2t4 >= 2
+x01 - 10000 binaryLp0j0nj1x2y3s2t4 <= 2
+y00 - 10000 binaryLp0j0nj1x2y3s2t4 <= 3
+y01 + 10000 binaryLp0j0nj1x2y3s2t4 >= 4
+x00 + 10000 binaryRp0j0nj1x2y3s2t4 >= 2
+x00 - 10000 binaryRp0j0nj1x2y3s2t4 <= 2
+x01 + 10000 binaryRp0j0nj1x2y3s2t4 >= 2
+x01 - 10000 binaryRp0j0nj1x2y3s2t4 <= 2
+y01 - 10000 binaryRp0j0nj1x2y3s2t4 <= 3
+y00 + 10000 binaryRp0j0nj1x2y3s2t4 >= 4
+x01 + 10000 binaryLp0j1nj2x2y3s2t4 >= 2
+x01 - 10000 binaryLp0j1nj2x2y3s2t4 <= 2
+x02 + 10000 binaryLp0j1nj2x2y3s2t4 >= 2
+x02 - 10000 binaryLp0j1nj2x2y3s2t4 <= 2
+y01 - 10000 binaryLp0j1nj2x2y3s2t4 <= 3
+y02 + 10000 binaryLp0j1nj2x2y3s2t4 >= 4
+x01 + 10000 binaryRp0j1nj2x2y3s2t4 >= 2
+x01 - 10000 binaryRp0j1nj2x2y3s2t4 <= 2
+x02 + 10000 binaryRp0j1nj2x2y3s2t4 >= 2
+x02 - 10000 binaryRp0j1nj2x2y3s2t4 <= 2
+y02 - 10000 binaryRp0j1nj2x2y3s2t4 <= 3
+y01 + 10000 binaryRp0j1nj2x2y3s2t4 >= 4
+x02 + 10000 binaryLp0j2nj3x2y3s2t4 >= 2
+x02 - 10000 binaryLp0j2nj3x2y3s2t4 <= 2
+x03 + 10000 binaryLp0j2nj3x2y3s2t4 >= 2
+x03 - 10000 binaryLp0j2nj3x2y3s2t4 <= 2
+y02 - 10000 binaryLp0j2nj3x2y3s2t4 <= 3
+y03 + 10000 binaryLp0j2nj3x2y3s2t4 >= 4
+x02 + 10000 binaryRp0j2nj3x2y3s2t4 >= 2
+x02 - 10000 binaryRp0j2nj3x2y3s2t4 <= 2
+x03 + 10000 binaryRp0j2nj3x2y3s2t4 >= 2
+x03 - 10000 binaryRp0j2nj3x2y3s2t4 <= 2
+y03 - 10000 binaryRp0j2nj3x2y3s2t4 <= 3
+y02 + 10000 binaryRp0j2nj3x2y3s2t4 >= 4
+x03 + 10000 binaryLp0j3nj4x2y3s2t4 >= 2
+x03 - 10000 binaryLp0j3nj4x2y3s2t4 <= 2
+x04 + 10000 binaryLp0j3nj4x2y3s2t4 >= 2
+x04 - 10000 binaryLp0j3nj4x2y3s2t4 <= 2
+y03 - 10000 binaryLp0j3nj4x2y3s2t4 <= 3
+y04 + 10000 binaryLp0j3nj4x2y3s2t4 >= 4
+x03 + 10000 binaryRp0j3nj4x2y3s2t4 >= 2
+x03 - 10000 binaryRp0j3nj4x2y3s2t4 <= 2
+x04 + 10000 binaryRp0j3nj4x2y3s2t4 >= 2
+x04 - 10000 binaryRp0j3nj4x2y3s2t4 <= 2
+y04 - 10000 binaryRp0j3nj4x2y3s2t4 <= 3
+y03 + 10000 binaryRp0j3nj4x2y3s2t4 >= 4
+x04 + 10000 binaryLp0j4nj5x2y3s2t4 >= 2
+x04 - 10000 binaryLp0j4nj5x2y3s2t4 <= 2
+x05 + 10000 binaryLp0j4nj5x2y3s2t4 >= 2
+x05 - 10000 binaryLp0j4nj5x2y3s2t4 <= 2
+y04 - 10000 binaryLp0j4nj5x2y3s2t4 <= 3
+y05 + 10000 binaryLp0j4nj5x2y3s2t4 >= 4
+x04 + 10000 binaryRp0j4nj5x2y3s2t4 >= 2
+x04 - 10000 binaryRp0j4nj5x2y3s2t4 <= 2
+x05 + 10000 binaryRp0j4nj5x2y3s2t4 >= 2
+x05 - 10000 binaryRp0j4nj5x2y3s2t4 <= 2
+y05 - 10000 binaryRp0j4nj5x2y3s2t4 <= 3
+y04 + 10000 binaryRp0j4nj5x2y3s2t4 >= 4
+x05 + 10000 binaryLp0j5nj6x2y3s2t4 >= 2
+x05 - 10000 binaryLp0j5nj6x2y3s2t4 <= 2
+x06 + 10000 binaryLp0j5nj6x2y3s2t4 >= 2
+x06 - 10000 binaryLp0j5nj6x2y3s2t4 <= 2
+y05 - 10000 binaryLp0j5nj6x2y3s2t4 <= 3
+y06 + 10000 binaryLp0j5nj6x2y3s2t4 >= 4
+x05 + 10000 binaryRp0j5nj6x2y3s2t4 >= 2
+x05 - 10000 binaryRp0j5nj6x2y3s2t4 <= 2
+x06 + 10000 binaryRp0j5nj6x2y3s2t4 >= 2
+x06 - 10000 binaryRp0j5nj6x2y3s2t4 <= 2
+y06 - 10000 binaryRp0j5nj6x2y3s2t4 <= 3
+y05 + 10000 binaryRp0j5nj6x2y3s2t4 >= 4
+x06 + 10000 binaryLp0j6nj7x2y3s2t4 >= 2
+x06 - 10000 binaryLp0j6nj7x2y3s2t4 <= 2
+x07 + 10000 binaryLp0j6nj7x2y3s2t4 >= 2
+x07 - 10000 binaryLp0j6nj7x2y3s2t4 <= 2
+y06 - 10000 binaryLp0j6nj7x2y3s2t4 <= 3
+y07 + 10000 binaryLp0j6nj7x2y3s2t4 >= 4
+x06 + 10000 binaryRp0j6nj7x2y3s2t4 >= 2
+x06 - 10000 binaryRp0j6nj7x2y3s2t4 <= 2
+x07 + 10000 binaryRp0j6nj7x2y3s2t4 >= 2
+x07 - 10000 binaryRp0j6nj7x2y3s2t4 <= 2
+y07 - 10000 binaryRp0j6nj7x2y3s2t4 <= 3
+y06 + 10000 binaryRp0j6nj7x2y3s2t4 >= 4
+x07 + 10000 binaryLp0j7nj8x2y3s2t4 >= 2
+x07 - 10000 binaryLp0j7nj8x2y3s2t4 <= 2
+x08 + 10000 binaryLp0j7nj8x2y3s2t4 >= 2
+x08 - 10000 binaryLp0j7nj8x2y3s2t4 <= 2
+y07 - 10000 binaryLp0j7nj8x2y3s2t4 <= 3
+y08 + 10000 binaryLp0j7nj8x2y3s2t4 >= 4
+x07 + 10000 binaryRp0j7nj8x2y3s2t4 >= 2
+x07 - 10000 binaryRp0j7nj8x2y3s2t4 <= 2
+x08 + 10000 binaryRp0j7nj8x2y3s2t4 >= 2
+x08 - 10000 binaryRp0j7nj8x2y3s2t4 <= 2
+y08 - 10000 binaryRp0j7nj8x2y3s2t4 <= 3
+y07 + 10000 binaryRp0j7nj8x2y3s2t4 >= 4
+x08 + 10000 binaryLp0j8nj9x2y3s2t4 >= 2
+x08 - 10000 binaryLp0j8nj9x2y3s2t4 <= 2
+x09 + 10000 binaryLp0j8nj9x2y3s2t4 >= 2
+x09 - 10000 binaryLp0j8nj9x2y3s2t4 <= 2
+y08 - 10000 binaryLp0j8nj9x2y3s2t4 <= 3
+y09 + 10000 binaryLp0j8nj9x2y3s2t4 >= 4
+x08 + 10000 binaryRp0j8nj9x2y3s2t4 >= 2
+x08 - 10000 binaryRp0j8nj9x2y3s2t4 <= 2
+x09 + 10000 binaryRp0j8nj9x2y3s2t4 >= 2
+x09 - 10000 binaryRp0j8nj9x2y3s2t4 <= 2
+y09 - 10000 binaryRp0j8nj9x2y3s2t4 <= 3
+y08 + 10000 binaryRp0j8nj9x2y3s2t4 >= 4
+x10 + 10000 binaryLp1j0nj1x2y3s2t4 >= 2
+x10 - 10000 binaryLp1j0nj1x2y3s2t4 <= 2
+x11 + 10000 binaryLp1j0nj1x2y3s2t4 >= 2
+x11 - 10000 binaryLp1j0nj1x2y3s2t4 <= 2
+y10 - 10000 binaryLp1j0nj1x2y3s2t4 <= 3
+y11 + 10000 binaryLp1j0nj1x2y3s2t4 >= 4
+x10 + 10000 binaryRp1j0nj1x2y3s2t4 >= 2
+x10 - 10000 binaryRp1j0nj1x2y3s2t4 <= 2
+x11 + 10000 binaryRp1j0nj1x2y3s2t4 >= 2
+x11 - 10000 binaryRp1j0nj1x2y3s2t4 <= 2
+y11 - 10000 binaryRp1j0nj1x2y3s2t4 <= 3
+y10 + 10000 binaryRp1j0nj1x2y3s2t4 >= 4
+x11 + 10000 binaryLp1j1nj2x2y3s2t4 >= 2
+x11 - 10000 binaryLp1j1nj2x2y3s2t4 <= 2
+x12 + 10000 binaryLp1j1nj2x2y3s2t4 >= 2
+x12 - 10000 binaryLp1j1nj2x2y3s2t4 <= 2
+y11 - 10000 binaryLp1j1nj2x2y3s2t4 <= 3
+y12 + 10000 binaryLp1j1nj2x2y3s2t4 >= 4
+x11 + 10000 binaryRp1j1nj2x2y3s2t4 >= 2
+x11 - 10000 binaryRp1j1nj2x2y3s2t4 <= 2
+x12 + 10000 binaryRp1j1nj2x2y3s2t4 >= 2
+x12 - 10000 binaryRp1j1nj2x2y3s2t4 <= 2
+y12 - 10000 binaryRp1j1nj2x2y3s2t4 <= 3
+y11 + 10000 binaryRp1j1nj2x2y3s2t4 >= 4
+x12 + 10000 binaryLp1j2nj3x2y3s2t4 >= 2
+x12 - 10000 binaryLp1j2nj3x2y3s2t4 <= 2
+x13 + 10000 binaryLp1j2nj3x2y3s2t4 >= 2
+x13 - 10000 binaryLp1j2nj3x2y3s2t4 <= 2
+y12 - 10000 binaryLp1j2nj3x2y3s2t4 <= 3
+y13 + 10000 binaryLp1j2nj3x2y3s2t4 >= 4
+x12 + 10000 binaryRp1j2nj3x2y3s2t4 >= 2
+x12 - 10000 binaryRp1j2nj3x2y3s2t4 <= 2
+x13 + 10000 binaryRp1j2nj3x2y3s2t4 >= 2
+x13 - 10000 binaryRp1j2nj3x2y3s2t4 <= 2
+y13 - 10000 binaryRp1j2nj3x2y3s2t4 <= 3
+y12 + 10000 binaryRp1j2nj3x2y3s2t4 >= 4
+x13 + 10000 binaryLp1j3nj4x2y3s2t4 >= 2
+x13 - 10000 binaryLp1j3nj4x2y3s2t4 <= 2
+x14 + 10000 binaryLp1j3nj4x2y3s2t4 >= 2
+x14 - 10000 binaryLp1j3nj4x2y3s2t4 <= 2
+y13 - 10000 binaryLp1j3nj4x2y3s2t4 <= 3
+y14 + 10000 binaryLp1j3nj4x2y3s2t4 >= 4
+x13 + 10000 binaryRp1j3nj4x2y3s2t4 >= 2
+x13 - 10000 binaryRp1j3nj4x2y3s2t4 <= 2
+x14 + 10000 binaryRp1j3nj4x2y3s2t4 >= 2
+x14 - 10000 binaryRp1j3nj4x2y3s2t4 <= 2
+y14 - 10000 binaryRp1j3nj4x2y3s2t4 <= 3
+y13 + 10000 binaryRp1j3nj4x2y3s2t4 >= 4
+x14 + 10000 binaryLp1j4nj5x2y3s2t4 >= 2
+x14 - 10000 binaryLp1j4nj5x2y3s2t4 <= 2
+x15 + 10000 binaryLp1j4nj5x2y3s2t4 >= 2
+x15 - 10000 binaryLp1j4nj5x2y3s2t4 <= 2
+y14 - 10000 binaryLp1j4nj5x2y3s2t4 <= 3
+y15 + 10000 binaryLp1j4nj5x2y3s2t4 >= 4
+x14 + 10000 binaryRp1j4nj5x2y3s2t4 >= 2
+x14 - 10000 binaryRp1j4nj5x2y3s2t4 <= 2
+x15 + 10000 binaryRp1j4nj5x2y3s2t4 >= 2
+x15 - 10000 binaryRp1j4nj5x2y3s2t4 <= 2
+y15 - 10000 binaryRp1j4nj5x2y3s2t4 <= 3
+y14 + 10000 binaryRp1j4nj5x2y3s2t4 >= 4
+x15 + 10000 binaryLp1j5nj6x2y3s2t4 >= 2
+x15 - 10000 binaryLp1j5nj6x2y3s2t4 <= 2
+x16 + 10000 binaryLp1j5nj6x2y3s2t4 >= 2
+x16 - 10000 binaryLp1j5nj6x2y3s2t4 <= 2
+y15 - 10000 binaryLp1j5nj6x2y3s2t4 <= 3
+y16 + 10000 binaryLp1j5nj6x2y3s2t4 >= 4
+x15 + 10000 binaryRp1j5nj6x2y3s2t4 >= 2
+x15 - 10000 binaryRp1j5nj6x2y3s2t4 <= 2
+x16 + 10000 binaryRp1j5nj6x2y3s2t4 >= 2
+x16 - 10000 binaryRp1j5nj6x2y3s2t4 <= 2
+y16 - 10000 binaryRp1j5nj6x2y3s2t4 <= 3
+y15 + 10000 binaryRp1j5nj6x2y3s2t4 >= 4
+x16 + 10000 binaryLp1j6nj7x2y3s2t4 >= 2
+x16 - 10000 binaryLp1j6nj7x2y3s2t4 <= 2
+x17 + 10000 binaryLp1j6nj7x2y3s2t4 >= 2
+x17 - 10000 binaryLp1j6nj7x2y3s2t4 <= 2
+y16 - 10000 binaryLp1j6nj7x2y3s2t4 <= 3
+y17 + 10000 binaryLp1j6nj7x2y3s2t4 >= 4
+x16 + 10000 binaryRp1j6nj7x2y3s2t4 >= 2
+x16 - 10000 binaryRp1j6nj7x2y3s2t4 <= 2
+x17 + 10000 binaryRp1j6nj7x2y3s2t4 >= 2
+x17 - 10000 binaryRp1j6nj7x2y3s2t4 <= 2
+y17 - 10000 binaryRp1j6nj7x2y3s2t4 <= 3
+y16 + 10000 binaryRp1j6nj7x2y3s2t4 >= 4
+x17 + 10000 binaryLp1j7nj8x2y3s2t4 >= 2
+x17 - 10000 binaryLp1j7nj8x2y3s2t4 <= 2
+x18 + 10000 binaryLp1j7nj8x2y3s2t4 >= 2
+x18 - 10000 binaryLp1j7nj8x2y3s2t4 <= 2
+y17 - 10000 binaryLp1j7nj8x2y3s2t4 <= 3
+y18 + 10000 binaryLp1j7nj8x2y3s2t4 >= 4
+x17 + 10000 binaryRp1j7nj8x2y3s2t4 >= 2
+x17 - 10000 binaryRp1j7nj8x2y3s2t4 <= 2
+x18 + 10000 binaryRp1j7nj8x2y3s2t4 >= 2
+x18 - 10000 binaryRp1j7nj8x2y3s2t4 <= 2
+y18 - 10000 binaryRp1j7nj8x2y3s2t4 <= 3
+y17 + 10000 binaryRp1j7nj8x2y3s2t4 >= 4
+x18 + 10000 binaryLp1j8nj9x2y3s2t4 >= 2
+x18 - 10000 binaryLp1j8nj9x2y3s2t4 <= 2
+x19 + 10000 binaryLp1j8nj9x2y3s2t4 >= 2
+x19 - 10000 binaryLp1j8nj9x2y3s2t4 <= 2
+y18 - 10000 binaryLp1j8nj9x2y3s2t4 <= 3
+y19 + 10000 binaryLp1j8nj9x2y3s2t4 >= 4
+x18 + 10000 binaryRp1j8nj9x2y3s2t4 >= 2
+x18 - 10000 binaryRp1j8nj9x2y3s2t4 <= 2
+x19 + 10000 binaryRp1j8nj9x2y3s2t4 >= 2
+x19 - 10000 binaryRp1j8nj9x2y3s2t4 <= 2
+y19 - 10000 binaryRp1j8nj9x2y3s2t4 <= 3
+y18 + 10000 binaryRp1j8nj9x2y3s2t4 >= 4
+ + binaryLp0j0nj1x2y3s2t4 + binaryRp0j0nj1x2y3s2t4 + binaryLp0j1nj2x2y3s2t4 + binaryRp0j1nj2x2y3s2t4 + binaryLp0j2nj3x2y3s2t4 + binaryRp0j2nj3x2y3s2t4 + binaryLp0j3nj4x2y3s2t4 + binaryRp0j3nj4x2y3s2t4 + binaryLp0j4nj5x2y3s2t4 + binaryRp0j4nj5x2y3s2t4 + binaryLp0j5nj6x2y3s2t4 + binaryRp0j5nj6x2y3s2t4 + binaryLp0j6nj7x2y3s2t4 + binaryRp0j6nj7x2y3s2t4 + binaryLp0j7nj8x2y3s2t4 + binaryRp0j7nj8x2y3s2t4 + binaryLp0j8nj9x2y3s2t4 + binaryRp0j8nj9x2y3s2t4 + binaryLp1j0nj1x2y3s2t4 + binaryRp1j0nj1x2y3s2t4 + binaryLp1j1nj2x2y3s2t4 + binaryRp1j1nj2x2y3s2t4 + binaryLp1j2nj3x2y3s2t4 + binaryRp1j2nj3x2y3s2t4 + binaryLp1j3nj4x2y3s2t4 + binaryRp1j3nj4x2y3s2t4 + binaryLp1j4nj5x2y3s2t4 + binaryRp1j4nj5x2y3s2t4 + binaryLp1j5nj6x2y3s2t4 + binaryRp1j5nj6x2y3s2t4 + binaryLp1j6nj7x2y3s2t4 + binaryRp1j6nj7x2y3s2t4 + binaryLp1j7nj8x2y3s2t4 + binaryRp1j7nj8x2y3s2t4 + binaryLp1j8nj9x2y3s2t4 + binaryRp1j8nj9x2y3s2t4 <= 35
+x00 + 10000 binaryLp0j0nj1x1y2s1t3 >= 1
+x00 - 10000 binaryLp0j0nj1x1y2s1t3 <= 1
+x01 + 10000 binaryLp0j0nj1x1y2s1t3 >= 1
+x01 - 10000 binaryLp0j0nj1x1y2s1t3 <= 1
+y00 - 10000 binaryLp0j0nj1x1y2s1t3 <= 2
+y01 + 10000 binaryLp0j0nj1x1y2s1t3 >= 3
+x00 + 10000 binaryRp0j0nj1x1y2s1t3 >= 1
+x00 - 10000 binaryRp0j0nj1x1y2s1t3 <= 1
+x01 + 10000 binaryRp0j0nj1x1y2s1t3 >= 1
+x01 - 10000 binaryRp0j0nj1x1y2s1t3 <= 1
+y01 - 10000 binaryRp0j0nj1x1y2s1t3 <= 2
+y00 + 10000 binaryRp0j0nj1x1y2s1t3 >= 3
+x01 + 10000 binaryLp0j1nj2x1y2s1t3 >= 1
+x01 - 10000 binaryLp0j1nj2x1y2s1t3 <= 1
+x02 + 10000 binaryLp0j1nj2x1y2s1t3 >= 1
+x02 - 10000 binaryLp0j1nj2x1y2s1t3 <= 1
+y01 - 10000 binaryLp0j1nj2x1y2s1t3 <= 2
+y02 + 10000 binaryLp0j1nj2x1y2s1t3 >= 3
+x01 + 10000 binaryRp0j1nj2x1y2s1t3 >= 1
+x01 - 10000 binaryRp0j1nj2x1y2s1t3 <= 1
+x02 + 10000 binaryRp0j1nj2x1y2s1t3 >= 1
+x02 - 10000 binaryRp0j1nj2x1y2s1t3 <= 1
+y02 - 10000 binaryRp0j1nj2x1y2s1t3 <= 2
+y01 + 10000 binaryRp0j1nj2x1y2s1t3 >= 3
+x02 + 10000 binaryLp0j2nj3x1y2s1t3 >= 1
+x02 - 10000 binaryLp0j2nj3x1y2s1t3 <= 1
+x03 + 10000 binaryLp0j2nj3x1y2s1t3 >= 1
+x03 - 10000 binaryLp0j2nj3x1y2s1t3 <= 1
+y02 - 10000 binaryLp0j2nj3x1y2s1t3 <= 2
+y03 + 10000 binaryLp0j2nj3x1y2s1t3 >= 3
+x02 + 10000 binaryRp0j2nj3x1y2s1t3 >= 1
+x02 - 10000 binaryRp0j2nj3x1y2s1t3 <= 1
+x03 + 10000 binaryRp0j2nj3x1y2s1t3 >= 1
+x03 - 10000 binaryRp0j2nj3x1y2s1t3 <= 1
+y03 - 10000 binaryRp0j2nj3x1y2s1t3 <= 2
+y02 + 10000 binaryRp0j2nj3x1y2s1t3 >= 3
+x03 + 10000 binaryLp0j3nj4x1y2s1t3 >= 1
+x03 - 10000 binaryLp0j3nj4x1y2s1t3 <= 1
+x04 + 10000 binaryLp0j3nj4x1y2s1t3 >= 1
+x04 - 10000 binaryLp0j3nj4x1y2s1t3 <= 1
+y03 - 10000 binaryLp0j3nj4x1y2s1t3 <= 2
+y04 + 10000 binaryLp0j3nj4x1y2s1t3 >= 3
+x03 + 10000 binaryRp0j3nj4x1y2s1t3 >= 1
+x03 - 10000 binaryRp0j3nj4x1y2s1t3 <= 1
+x04 + 10000 binaryRp0j3nj4x1y2s1t3 >= 1
+x04 - 10000 binaryRp0j3nj4x1y2s1t3 <= 1
+y04 - 10000 binaryRp0j3nj4x1y2s1t3 <= 2
+y03 + 10000 binaryRp0j3nj4x1y2s1t3 >= 3
+x04 + 10000 binaryLp0j4nj5x1y2s1t3 >= 1
+x04 - 10000 binaryLp0j4nj5x1y2s1t3 <= 1
+x05 + 10000 binaryLp0j4nj5x1y2s1t3 >= 1
+x05 - 10000 binaryLp0j4nj5x1y2s1t3 <= 1
+y04 - 10000 binaryLp0j4nj5x1y2s1t3 <= 2
+y05 + 10000 binaryLp0j4nj5x1y2s1t3 >= 3
+x04 + 10000 binaryRp0j4nj5x1y2s1t3 >= 1
+x04 - 10000 binaryRp0j4nj5x1y2s1t3 <= 1
+x05 + 10000 binaryRp0j4nj5x1y2s1t3 >= 1
+x05 - 10000 binaryRp0j4nj5x1y2s1t3 <= 1
+y05 - 10000 binaryRp0j4nj5x1y2s1t3 <= 2
+y04 + 10000 binaryRp0j4nj5x1y2s1t3 >= 3
+x05 + 10000 binaryLp0j5nj6x1y2s1t3 >= 1
+x05 - 10000 binaryLp0j5nj6x1y2s1t3 <= 1
+x06 + 10000 binaryLp0j5nj6x1y2s1t3 >= 1
+x06 - 10000 binaryLp0j5nj6x1y2s1t3 <= 1
+y05 - 10000 binaryLp0j5nj6x1y2s1t3 <= 2
+y06 + 10000 binaryLp0j5nj6x1y2s1t3 >= 3
+x05 + 10000 binaryRp0j5nj6x1y2s1t3 >= 1
+x05 - 10000 binaryRp0j5nj6x1y2s1t3 <= 1
+x06 + 10000 binaryRp0j5nj6x1y2s1t3 >= 1
+x06 - 10000 binaryRp0j5nj6x1y2s1t3 <= 1
+y06 - 10000 binaryRp0j5nj6x1y2s1t3 <= 2
+y05 + 10000 binaryRp0j5nj6x1y2s1t3 >= 3
+x06 + 10000 binaryLp0j6nj7x1y2s1t3 >= 1
+x06 - 10000 binaryLp0j6nj7x1y2s1t3 <= 1
+x07 + 10000 binaryLp0j6nj7x1y2s1t3 >= 1
+x07 - 10000 binaryLp0j6nj7x1y2s1t3 <= 1
+y06 - 10000 binaryLp0j6nj7x1y2s1t3 <= 2
+y07 + 10000 binaryLp0j6nj7x1y2s1t3 >= 3
+x06 + 10000 binaryRp0j6nj7x1y2s1t3 >= 1
+x06 - 10000 binaryRp0j6nj7x1y2s1t3 <= 1
+x07 + 10000 binaryRp0j6nj7x1y2s1t3 >= 1
+x07 - 10000 binaryRp0j6nj7x1y2s1t3 <= 1
+y07 - 10000 binaryRp0j6nj7x1y2s1t3 <= 2
+y06 + 10000 binaryRp0j6nj7x1y2s1t3 >= 3
+x07 + 10000 binaryLp0j7nj8x1y2s1t3 >= 1
+x07 - 10000 binaryLp0j7nj8x1y2s1t3 <= 1
+x08 + 10000 binaryLp0j7nj8x1y2s1t3 >= 1
+x08 - 10000 binaryLp0j7nj8x1y2s1t3 <= 1
+y07 - 10000 binaryLp0j7nj8x1y2s1t3 <= 2
+y08 + 10000 binaryLp0j7nj8x1y2s1t3 >= 3
+x07 + 10000 binaryRp0j7nj8x1y2s1t3 >= 1
+x07 - 10000 binaryRp0j7nj8x1y2s1t3 <= 1
+x08 + 10000 binaryRp0j7nj8x1y2s1t3 >= 1
+x08 - 10000 binaryRp0j7nj8x1y2s1t3 <= 1
+y08 - 10000 binaryRp0j7nj8x1y2s1t3 <= 2
+y07 + 10000 binaryRp0j7nj8x1y2s1t3 >= 3
+x08 + 10000 binaryLp0j8nj9x1y2s1t3 >= 1
+x08 - 10000 binaryLp0j8nj9x1y2s1t3 <= 1
+x09 + 10000 binaryLp0j8nj9x1y2s1t3 >= 1
+x09 - 10000 binaryLp0j8nj9x1y2s1t3 <= 1
+y08 - 10000 binaryLp0j8nj9x1y2s1t3 <= 2
+y09 + 10000 binaryLp0j8nj9x1y2s1t3 >= 3
+x08 + 10000 binaryRp0j8nj9x1y2s1t3 >= 1
+x08 - 10000 binaryRp0j8nj9x1y2s1t3 <= 1
+x09 + 10000 binaryRp0j8nj9x1y2s1t3 >= 1
+x09 - 10000 binaryRp0j8nj9x1y2s1t3 <= 1
+y09 - 10000 binaryRp0j8nj9x1y2s1t3 <= 2
+y08 + 10000 binaryRp0j8nj9x1y2s1t3 >= 3
+x10 + 10000 binaryLp1j0nj1x1y2s1t3 >= 1
+x10 - 10000 binaryLp1j0nj1x1y2s1t3 <= 1
+x11 + 10000 binaryLp1j0nj1x1y2s1t3 >= 1
+x11 - 10000 binaryLp1j0nj1x1y2s1t3 <= 1
+y10 - 10000 binaryLp1j0nj1x1y2s1t3 <= 2
+y11 + 10000 binaryLp1j0nj1x1y2s1t3 >= 3
+x10 + 10000 binaryRp1j0nj1x1y2s1t3 >= 1
+x10 - 10000 binaryRp1j0nj1x1y2s1t3 <= 1
+x11 + 10000 binaryRp1j0nj1x1y2s1t3 >= 1
+x11 - 10000 binaryRp1j0nj1x1y2s1t3 <= 1
+y11 - 10000 binaryRp1j0nj1x1y2s1t3 <= 2
+y10 + 10000 binaryRp1j0nj1x1y2s1t3 >= 3
+x11 + 10000 binaryLp1j1nj2x1y2s1t3 >= 1
+x11 - 10000 binaryLp1j1nj2x1y2s1t3 <= 1
+x12 + 10000 binaryLp1j1nj2x1y2s1t3 >= 1
+x12 - 10000 binaryLp1j1nj2x1y2s1t3 <= 1
+y11 - 10000 binaryLp1j1nj2x1y2s1t3 <= 2
+y12 + 10000 binaryLp1j1nj2x1y2s1t3 >= 3
+x11 + 10000 binaryRp1j1nj2x1y2s1t3 >= 1
+x11 - 10000 binaryRp1j1nj2x1y2s1t3 <= 1
+x12 + 10000 binaryRp1j1nj2x1y2s1t3 >= 1
+x12 - 10000 binaryRp1j1nj2x1y2s1t3 <= 1
+y12 - 10000 binaryRp1j1nj2x1y2s1t3 <= 2
+y11 + 10000 binaryRp1j1nj2x1y2s1t3 >= 3
+x12 + 10000 binaryLp1j2nj3x1y2s1t3 >= 1
+x12 - 10000 binaryLp1j2nj3x1y2s1t3 <= 1
+x13 + 10000 binaryLp1j2nj3x1y2s1t3 >= 1
+x13 - 10000 binaryLp1j2nj3x1y2s1t3 <= 1
+y12 - 10000 binaryLp1j2nj3x1y2s1t3 <= 2
+y13 + 10000 binaryLp1j2nj3x1y2s1t3 >= 3
+x12 + 10000 binaryRp1j2nj3x1y2s1t3 >= 1
+x12 - 10000 binaryRp1j2nj3x1y2s1t3 <= 1
+x13 + 10000 binaryRp1j2nj3x1y2s1t3 >= 1
+x13 - 10000 binaryRp1j2nj3x1y2s1t3 <= 1
+y13 - 10000 binaryRp1j2nj3x1y2s1t3 <= 2
+y12 + 10000 binaryRp1j2nj3x1y2s1t3 >= 3
+x13 + 10000 binaryLp1j3nj4x1y2s1t3 >= 1
+x13 - 10000 binaryLp1j3nj4x1y2s1t3 <= 1
+x14 + 10000 binaryLp1j3nj4x1y2s1t3 >= 1
+x14 - 10000 binaryLp1j3nj4x1y2s1t3 <= 1
+y13 - 10000 binaryLp1j3nj4x1y2s1t3 <= 2
+y14 + 10000 binaryLp1j3nj4x1y2s1t3 >= 3
+x13 + 10000 binaryRp1j3nj4x1y2s1t3 >= 1
+x13 - 10000 binaryRp1j3nj4x1y2s1t3 <= 1
+x14 + 10000 binaryRp1j3nj4x1y2s1t3 >= 1
+x14 - 10000 binaryRp1j3nj4x1y2s1t3 <= 1
+y14 - 10000 binaryRp1j3nj4x1y2s1t3 <= 2
+y13 + 10000 binaryRp1j3nj4x1y2s1t3 >= 3
+x14 + 10000 binaryLp1j4nj5x1y2s1t3 >= 1
+x14 - 10000 binaryLp1j4nj5x1y2s1t3 <= 1
+x15 + 10000 binaryLp1j4nj5x1y2s1t3 >= 1
+x15 - 10000 binaryLp1j4nj5x1y2s1t3 <= 1
+y14 - 10000 binaryLp1j4nj5x1y2s1t3 <= 2
+y15 + 10000 binaryLp1j4nj5x1y2s1t3 >= 3
+x14 + 10000 binaryRp1j4nj5x1y2s1t3 >= 1
+x14 - 10000 binaryRp1j4nj5x1y2s1t3 <= 1
+x15 + 10000 binaryRp1j4nj5x1y2s1t3 >= 1
+x15 - 10000 binaryRp1j4nj5x1y2s1t3 <= 1
+y15 - 10000 binaryRp1j4nj5x1y2s1t3 <= 2
+y14 + 10000 binaryRp1j4nj5x1y2s1t3 >= 3
+x15 + 10000 binaryLp1j5nj6x1y2s1t3 >= 1
+x15 - 10000 binaryLp1j5nj6x1y2s1t3 <= 1
+x16 + 10000 binaryLp1j5nj6x1y2s1t3 >= 1
+x16 - 10000 binaryLp1j5nj6x1y2s1t3 <= 1
+y15 - 10000 binaryLp1j5nj6x1y2s1t3 <= 2
+y16 + 10000 binaryLp1j5nj6x1y2s1t3 >= 3
+x15 + 10000 binaryRp1j5nj6x1y2s1t3 >= 1
+x15 - 10000 binaryRp1j5nj6x1y2s1t3 <= 1
+x16 + 10000 binaryRp1j5nj6x1y2s1t3 >= 1
+x16 - 10000 binaryRp1j5nj6x1y2s1t3 <= 1
+y16 - 10000 binaryRp1j5nj6x1y2s1t3 <= 2
+y15 + 10000 binaryRp1j5nj6x1y2s1t3 >= 3
+x16 + 10000 binaryLp1j6nj7x1y2s1t3 >= 1
+x16 - 10000 binaryLp1j6nj7x1y2s1t3 <= 1
+x17 + 10000 binaryLp1j6nj7x1y2s1t3 >= 1
+x17 - 10000 binaryLp1j6nj7x1y2s1t3 <= 1
+y16 - 10000 binaryLp1j6nj7x1y2s1t3 <= 2
+y17 + 10000 binaryLp1j6nj7x1y2s1t3 >= 3
+x16 + 10000 binaryRp1j6nj7x1y2s1t3 >= 1
+x16 - 10000 binaryRp1j6nj7x1y2s1t3 <= 1
+x17 + 10000 binaryRp1j6nj7x1y2s1t3 >= 1
+x17 - 10000 binaryRp1j6nj7x1y2s1t3 <= 1
+y17 - 10000 binaryRp1j6nj7x1y2s1t3 <= 2
+y16 + 10000 binaryRp1j6nj7x1y2s1t3 >= 3
+x17 + 10000 binaryLp1j7nj8x1y2s1t3 >= 1
+x17 - 10000 binaryLp1j7nj8x1y2s1t3 <= 1
+x18 + 10000 binaryLp1j7nj8x1y2s1t3 >= 1
+x18 - 10000 binaryLp1j7nj8x1y2s1t3 <= 1
+y17 - 10000 binaryLp1j7nj8x1y2s1t3 <= 2
+y18 + 10000 binaryLp1j7nj8x1y2s1t3 >= 3
+x17 + 10000 binaryRp1j7nj8x1y2s1t3 >= 1
+x17 - 10000 binaryRp1j7nj8x1y2s1t3 <= 1
+x18 + 10000 binaryRp1j7nj8x1y2s1t3 >= 1
+x18 - 10000 binaryRp1j7nj8x1y2s1t3 <= 1
+y18 - 10000 binaryRp1j7nj8x1y2s1t3 <= 2
+y17 + 10000 binaryRp1j7nj8x1y2s1t3 >= 3
+x18 + 10000 binaryLp1j8nj9x1y2s1t3 >= 1
+x18 - 10000 binaryLp1j8nj9x1y2s1t3 <= 1
+x19 + 10000 binaryLp1j8nj9x1y2s1t3 >= 1
+x19 - 10000 binaryLp1j8nj9x1y2s1t3 <= 1
+y18 - 10000 binaryLp1j8nj9x1y2s1t3 <= 2
+y19 + 10000 binaryLp1j8nj9x1y2s1t3 >= 3
+x18 + 10000 binaryRp1j8nj9x1y2s1t3 >= 1
+x18 - 10000 binaryRp1j8nj9x1y2s1t3 <= 1
+x19 + 10000 binaryRp1j8nj9x1y2s1t3 >= 1
+x19 - 10000 binaryRp1j8nj9x1y2s1t3 <= 1
+y19 - 10000 binaryRp1j8nj9x1y2s1t3 <= 2
+y18 + 10000 binaryRp1j8nj9x1y2s1t3 >= 3
+ + binaryLp0j0nj1x1y2s1t3 + binaryRp0j0nj1x1y2s1t3 + binaryLp0j1nj2x1y2s1t3 + binaryRp0j1nj2x1y2s1t3 + binaryLp0j2nj3x1y2s1t3 + binaryRp0j2nj3x1y2s1t3 + binaryLp0j3nj4x1y2s1t3 + binaryRp0j3nj4x1y2s1t3 + binaryLp0j4nj5x1y2s1t3 + binaryRp0j4nj5x1y2s1t3 + binaryLp0j5nj6x1y2s1t3 + binaryRp0j5nj6x1y2s1t3 + binaryLp0j6nj7x1y2s1t3 + binaryRp0j6nj7x1y2s1t3 + binaryLp0j7nj8x1y2s1t3 + binaryRp0j7nj8x1y2s1t3 + binaryLp0j8nj9x1y2s1t3 + binaryRp0j8nj9x1y2s1t3 + binaryLp1j0nj1x1y2s1t3 + binaryRp1j0nj1x1y2s1t3 + binaryLp1j1nj2x1y2s1t3 + binaryRp1j1nj2x1y2s1t3 + binaryLp1j2nj3x1y2s1t3 + binaryRp1j2nj3x1y2s1t3 + binaryLp1j3nj4x1y2s1t3 + binaryRp1j3nj4x1y2s1t3 + binaryLp1j4nj5x1y2s1t3 + binaryRp1j4nj5x1y2s1t3 + binaryLp1j5nj6x1y2s1t3 + binaryRp1j5nj6x1y2s1t3 + binaryLp1j6nj7x1y2s1t3 + binaryRp1j6nj7x1y2s1t3 + binaryLp1j7nj8x1y2s1t3 + binaryRp1j7nj8x1y2s1t3 + binaryLp1j8nj9x1y2s1t3 + binaryRp1j8nj9x1y2s1t3 <= 35
+y00 + 10000 binaryUp0j0nj1x0y3s1t3 >= 3
+y00 - 10000 binaryUp0j0nj1x0y3s1t3 <=  3
+y01 + 10000 binaryUp0j0nj1x0y3s1t3 >= 3
+y01 - 10000 binaryUp0j0nj1x0y3s1t3 <= 3
+x00 - 10000 binaryUp0j0nj1x0y3s1t3 <= 0
+x01 + 10000 binaryUp0j0nj1x0y3s1t3 >= 1
+y00 + 10000 binaryDp0j0nj1x0y3s1t3 >= 3
+y00 - 10000 binaryDp0j0nj1x0y3s1t3 <= 3
+y01 + 10000 binaryDp0j0nj1x0y3s1t3 >= 3
+y01 - 10000 binaryDp0j0nj1x0y3s1t3 <= 3
+x01 - 10000 binaryDp0j0nj1x0y3s1t3 <= 0
+x00 + 10000 binaryDp0j0nj1x0y3s1t3 >= 1
+y01 + 10000 binaryUp0j1nj2x0y3s1t3 >= 3
+y01 - 10000 binaryUp0j1nj2x0y3s1t3 <=  3
+y02 + 10000 binaryUp0j1nj2x0y3s1t3 >= 3
+y02 - 10000 binaryUp0j1nj2x0y3s1t3 <= 3
+x01 - 10000 binaryUp0j1nj2x0y3s1t3 <= 0
+x02 + 10000 binaryUp0j1nj2x0y3s1t3 >= 1
+y01 + 10000 binaryDp0j1nj2x0y3s1t3 >= 3
+y01 - 10000 binaryDp0j1nj2x0y3s1t3 <= 3
+y02 + 10000 binaryDp0j1nj2x0y3s1t3 >= 3
+y02 - 10000 binaryDp0j1nj2x0y3s1t3 <= 3
+x02 - 10000 binaryDp0j1nj2x0y3s1t3 <= 0
+x01 + 10000 binaryDp0j1nj2x0y3s1t3 >= 1
+y02 + 10000 binaryUp0j2nj3x0y3s1t3 >= 3
+y02 - 10000 binaryUp0j2nj3x0y3s1t3 <=  3
+y03 + 10000 binaryUp0j2nj3x0y3s1t3 >= 3
+y03 - 10000 binaryUp0j2nj3x0y3s1t3 <= 3
+x02 - 10000 binaryUp0j2nj3x0y3s1t3 <= 0
+x03 + 10000 binaryUp0j2nj3x0y3s1t3 >= 1
+y02 + 10000 binaryDp0j2nj3x0y3s1t3 >= 3
+y02 - 10000 binaryDp0j2nj3x0y3s1t3 <= 3
+y03 + 10000 binaryDp0j2nj3x0y3s1t3 >= 3
+y03 - 10000 binaryDp0j2nj3x0y3s1t3 <= 3
+x03 - 10000 binaryDp0j2nj3x0y3s1t3 <= 0
+x02 + 10000 binaryDp0j2nj3x0y3s1t3 >= 1
+y03 + 10000 binaryUp0j3nj4x0y3s1t3 >= 3
+y03 - 10000 binaryUp0j3nj4x0y3s1t3 <=  3
+y04 + 10000 binaryUp0j3nj4x0y3s1t3 >= 3
+y04 - 10000 binaryUp0j3nj4x0y3s1t3 <= 3
+x03 - 10000 binaryUp0j3nj4x0y3s1t3 <= 0
+x04 + 10000 binaryUp0j3nj4x0y3s1t3 >= 1
+y03 + 10000 binaryDp0j3nj4x0y3s1t3 >= 3
+y03 - 10000 binaryDp0j3nj4x0y3s1t3 <= 3
+y04 + 10000 binaryDp0j3nj4x0y3s1t3 >= 3
+y04 - 10000 binaryDp0j3nj4x0y3s1t3 <= 3
+x04 - 10000 binaryDp0j3nj4x0y3s1t3 <= 0
+x03 + 10000 binaryDp0j3nj4x0y3s1t3 >= 1
+y04 + 10000 binaryUp0j4nj5x0y3s1t3 >= 3
+y04 - 10000 binaryUp0j4nj5x0y3s1t3 <=  3
+y05 + 10000 binaryUp0j4nj5x0y3s1t3 >= 3
+y05 - 10000 binaryUp0j4nj5x0y3s1t3 <= 3
+x04 - 10000 binaryUp0j4nj5x0y3s1t3 <= 0
+x05 + 10000 binaryUp0j4nj5x0y3s1t3 >= 1
+y04 + 10000 binaryDp0j4nj5x0y3s1t3 >= 3
+y04 - 10000 binaryDp0j4nj5x0y3s1t3 <= 3
+y05 + 10000 binaryDp0j4nj5x0y3s1t3 >= 3
+y05 - 10000 binaryDp0j4nj5x0y3s1t3 <= 3
+x05 - 10000 binaryDp0j4nj5x0y3s1t3 <= 0
+x04 + 10000 binaryDp0j4nj5x0y3s1t3 >= 1
+y05 + 10000 binaryUp0j5nj6x0y3s1t3 >= 3
+y05 - 10000 binaryUp0j5nj6x0y3s1t3 <=  3
+y06 + 10000 binaryUp0j5nj6x0y3s1t3 >= 3
+y06 - 10000 binaryUp0j5nj6x0y3s1t3 <= 3
+x05 - 10000 binaryUp0j5nj6x0y3s1t3 <= 0
+x06 + 10000 binaryUp0j5nj6x0y3s1t3 >= 1
+y05 + 10000 binaryDp0j5nj6x0y3s1t3 >= 3
+y05 - 10000 binaryDp0j5nj6x0y3s1t3 <= 3
+y06 + 10000 binaryDp0j5nj6x0y3s1t3 >= 3
+y06 - 10000 binaryDp0j5nj6x0y3s1t3 <= 3
+x06 - 10000 binaryDp0j5nj6x0y3s1t3 <= 0
+x05 + 10000 binaryDp0j5nj6x0y3s1t3 >= 1
+y06 + 10000 binaryUp0j6nj7x0y3s1t3 >= 3
+y06 - 10000 binaryUp0j6nj7x0y3s1t3 <=  3
+y07 + 10000 binaryUp0j6nj7x0y3s1t3 >= 3
+y07 - 10000 binaryUp0j6nj7x0y3s1t3 <= 3
+x06 - 10000 binaryUp0j6nj7x0y3s1t3 <= 0
+x07 + 10000 binaryUp0j6nj7x0y3s1t3 >= 1
+y06 + 10000 binaryDp0j6nj7x0y3s1t3 >= 3
+y06 - 10000 binaryDp0j6nj7x0y3s1t3 <= 3
+y07 + 10000 binaryDp0j6nj7x0y3s1t3 >= 3
+y07 - 10000 binaryDp0j6nj7x0y3s1t3 <= 3
+x07 - 10000 binaryDp0j6nj7x0y3s1t3 <= 0
+x06 + 10000 binaryDp0j6nj7x0y3s1t3 >= 1
+y07 + 10000 binaryUp0j7nj8x0y3s1t3 >= 3
+y07 - 10000 binaryUp0j7nj8x0y3s1t3 <=  3
+y08 + 10000 binaryUp0j7nj8x0y3s1t3 >= 3
+y08 - 10000 binaryUp0j7nj8x0y3s1t3 <= 3
+x07 - 10000 binaryUp0j7nj8x0y3s1t3 <= 0
+x08 + 10000 binaryUp0j7nj8x0y3s1t3 >= 1
+y07 + 10000 binaryDp0j7nj8x0y3s1t3 >= 3
+y07 - 10000 binaryDp0j7nj8x0y3s1t3 <= 3
+y08 + 10000 binaryDp0j7nj8x0y3s1t3 >= 3
+y08 - 10000 binaryDp0j7nj8x0y3s1t3 <= 3
+x08 - 10000 binaryDp0j7nj8x0y3s1t3 <= 0
+x07 + 10000 binaryDp0j7nj8x0y3s1t3 >= 1
+y08 + 10000 binaryUp0j8nj9x0y3s1t3 >= 3
+y08 - 10000 binaryUp0j8nj9x0y3s1t3 <=  3
+y09 + 10000 binaryUp0j8nj9x0y3s1t3 >= 3
+y09 - 10000 binaryUp0j8nj9x0y3s1t3 <= 3
+x08 - 10000 binaryUp0j8nj9x0y3s1t3 <= 0
+x09 + 10000 binaryUp0j8nj9x0y3s1t3 >= 1
+y08 + 10000 binaryDp0j8nj9x0y3s1t3 >= 3
+y08 - 10000 binaryDp0j8nj9x0y3s1t3 <= 3
+y09 + 10000 binaryDp0j8nj9x0y3s1t3 >= 3
+y09 - 10000 binaryDp0j8nj9x0y3s1t3 <= 3
+x09 - 10000 binaryDp0j8nj9x0y3s1t3 <= 0
+x08 + 10000 binaryDp0j8nj9x0y3s1t3 >= 1
+y10 + 10000 binaryUp1j0nj1x0y3s1t3 >= 3
+y10 - 10000 binaryUp1j0nj1x0y3s1t3 <=  3
+y11 + 10000 binaryUp1j0nj1x0y3s1t3 >= 3
+y11 - 10000 binaryUp1j0nj1x0y3s1t3 <= 3
+x10 - 10000 binaryUp1j0nj1x0y3s1t3 <= 0
+x11 + 10000 binaryUp1j0nj1x0y3s1t3 >= 1
+y10 + 10000 binaryDp1j0nj1x0y3s1t3 >= 3
+y10 - 10000 binaryDp1j0nj1x0y3s1t3 <= 3
+y11 + 10000 binaryDp1j0nj1x0y3s1t3 >= 3
+y11 - 10000 binaryDp1j0nj1x0y3s1t3 <= 3
+x11 - 10000 binaryDp1j0nj1x0y3s1t3 <= 0
+x10 + 10000 binaryDp1j0nj1x0y3s1t3 >= 1
+y11 + 10000 binaryUp1j1nj2x0y3s1t3 >= 3
+y11 - 10000 binaryUp1j1nj2x0y3s1t3 <=  3
+y12 + 10000 binaryUp1j1nj2x0y3s1t3 >= 3
+y12 - 10000 binaryUp1j1nj2x0y3s1t3 <= 3
+x11 - 10000 binaryUp1j1nj2x0y3s1t3 <= 0
+x12 + 10000 binaryUp1j1nj2x0y3s1t3 >= 1
+y11 + 10000 binaryDp1j1nj2x0y3s1t3 >= 3
+y11 - 10000 binaryDp1j1nj2x0y3s1t3 <= 3
+y12 + 10000 binaryDp1j1nj2x0y3s1t3 >= 3
+y12 - 10000 binaryDp1j1nj2x0y3s1t3 <= 3
+x12 - 10000 binaryDp1j1nj2x0y3s1t3 <= 0
+x11 + 10000 binaryDp1j1nj2x0y3s1t3 >= 1
+y12 + 10000 binaryUp1j2nj3x0y3s1t3 >= 3
+y12 - 10000 binaryUp1j2nj3x0y3s1t3 <=  3
+y13 + 10000 binaryUp1j2nj3x0y3s1t3 >= 3
+y13 - 10000 binaryUp1j2nj3x0y3s1t3 <= 3
+x12 - 10000 binaryUp1j2nj3x0y3s1t3 <= 0
+x13 + 10000 binaryUp1j2nj3x0y3s1t3 >= 1
+y12 + 10000 binaryDp1j2nj3x0y3s1t3 >= 3
+y12 - 10000 binaryDp1j2nj3x0y3s1t3 <= 3
+y13 + 10000 binaryDp1j2nj3x0y3s1t3 >= 3
+y13 - 10000 binaryDp1j2nj3x0y3s1t3 <= 3
+x13 - 10000 binaryDp1j2nj3x0y3s1t3 <= 0
+x12 + 10000 binaryDp1j2nj3x0y3s1t3 >= 1
+y13 + 10000 binaryUp1j3nj4x0y3s1t3 >= 3
+y13 - 10000 binaryUp1j3nj4x0y3s1t3 <=  3
+y14 + 10000 binaryUp1j3nj4x0y3s1t3 >= 3
+y14 - 10000 binaryUp1j3nj4x0y3s1t3 <= 3
+x13 - 10000 binaryUp1j3nj4x0y3s1t3 <= 0
+x14 + 10000 binaryUp1j3nj4x0y3s1t3 >= 1
+y13 + 10000 binaryDp1j3nj4x0y3s1t3 >= 3
+y13 - 10000 binaryDp1j3nj4x0y3s1t3 <= 3
+y14 + 10000 binaryDp1j3nj4x0y3s1t3 >= 3
+y14 - 10000 binaryDp1j3nj4x0y3s1t3 <= 3
+x14 - 10000 binaryDp1j3nj4x0y3s1t3 <= 0
+x13 + 10000 binaryDp1j3nj4x0y3s1t3 >= 1
+y14 + 10000 binaryUp1j4nj5x0y3s1t3 >= 3
+y14 - 10000 binaryUp1j4nj5x0y3s1t3 <=  3
+y15 + 10000 binaryUp1j4nj5x0y3s1t3 >= 3
+y15 - 10000 binaryUp1j4nj5x0y3s1t3 <= 3
+x14 - 10000 binaryUp1j4nj5x0y3s1t3 <= 0
+x15 + 10000 binaryUp1j4nj5x0y3s1t3 >= 1
+y14 + 10000 binaryDp1j4nj5x0y3s1t3 >= 3
+y14 - 10000 binaryDp1j4nj5x0y3s1t3 <= 3
+y15 + 10000 binaryDp1j4nj5x0y3s1t3 >= 3
+y15 - 10000 binaryDp1j4nj5x0y3s1t3 <= 3
+x15 - 10000 binaryDp1j4nj5x0y3s1t3 <= 0
+x14 + 10000 binaryDp1j4nj5x0y3s1t3 >= 1
+y15 + 10000 binaryUp1j5nj6x0y3s1t3 >= 3
+y15 - 10000 binaryUp1j5nj6x0y3s1t3 <=  3
+y16 + 10000 binaryUp1j5nj6x0y3s1t3 >= 3
+y16 - 10000 binaryUp1j5nj6x0y3s1t3 <= 3
+x15 - 10000 binaryUp1j5nj6x0y3s1t3 <= 0
+x16 + 10000 binaryUp1j5nj6x0y3s1t3 >= 1
+y15 + 10000 binaryDp1j5nj6x0y3s1t3 >= 3
+y15 - 10000 binaryDp1j5nj6x0y3s1t3 <= 3
+y16 + 10000 binaryDp1j5nj6x0y3s1t3 >= 3
+y16 - 10000 binaryDp1j5nj6x0y3s1t3 <= 3
+x16 - 10000 binaryDp1j5nj6x0y3s1t3 <= 0
+x15 + 10000 binaryDp1j5nj6x0y3s1t3 >= 1
+y16 + 10000 binaryUp1j6nj7x0y3s1t3 >= 3
+y16 - 10000 binaryUp1j6nj7x0y3s1t3 <=  3
+y17 + 10000 binaryUp1j6nj7x0y3s1t3 >= 3
+y17 - 10000 binaryUp1j6nj7x0y3s1t3 <= 3
+x16 - 10000 binaryUp1j6nj7x0y3s1t3 <= 0
+x17 + 10000 binaryUp1j6nj7x0y3s1t3 >= 1
+y16 + 10000 binaryDp1j6nj7x0y3s1t3 >= 3
+y16 - 10000 binaryDp1j6nj7x0y3s1t3 <= 3
+y17 + 10000 binaryDp1j6nj7x0y3s1t3 >= 3
+y17 - 10000 binaryDp1j6nj7x0y3s1t3 <= 3
+x17 - 10000 binaryDp1j6nj7x0y3s1t3 <= 0
+x16 + 10000 binaryDp1j6nj7x0y3s1t3 >= 1
+y17 + 10000 binaryUp1j7nj8x0y3s1t3 >= 3
+y17 - 10000 binaryUp1j7nj8x0y3s1t3 <=  3
+y18 + 10000 binaryUp1j7nj8x0y3s1t3 >= 3
+y18 - 10000 binaryUp1j7nj8x0y3s1t3 <= 3
+x17 - 10000 binaryUp1j7nj8x0y3s1t3 <= 0
+x18 + 10000 binaryUp1j7nj8x0y3s1t3 >= 1
+y17 + 10000 binaryDp1j7nj8x0y3s1t3 >= 3
+y17 - 10000 binaryDp1j7nj8x0y3s1t3 <= 3
+y18 + 10000 binaryDp1j7nj8x0y3s1t3 >= 3
+y18 - 10000 binaryDp1j7nj8x0y3s1t3 <= 3
+x18 - 10000 binaryDp1j7nj8x0y3s1t3 <= 0
+x17 + 10000 binaryDp1j7nj8x0y3s1t3 >= 1
+y18 + 10000 binaryUp1j8nj9x0y3s1t3 >= 3
+y18 - 10000 binaryUp1j8nj9x0y3s1t3 <=  3
+y19 + 10000 binaryUp1j8nj9x0y3s1t3 >= 3
+y19 - 10000 binaryUp1j8nj9x0y3s1t3 <= 3
+x18 - 10000 binaryUp1j8nj9x0y3s1t3 <= 0
+x19 + 10000 binaryUp1j8nj9x0y3s1t3 >= 1
+y18 + 10000 binaryDp1j8nj9x0y3s1t3 >= 3
+y18 - 10000 binaryDp1j8nj9x0y3s1t3 <= 3
+y19 + 10000 binaryDp1j8nj9x0y3s1t3 >= 3
+y19 - 10000 binaryDp1j8nj9x0y3s1t3 <= 3
+x19 - 10000 binaryDp1j8nj9x0y3s1t3 <= 0
+x18 + 10000 binaryDp1j8nj9x0y3s1t3 >= 1
+ + binaryUp0j0nj1x0y3s1t3 + binaryDp0j0nj1x0y3s1t3 + binaryUp0j1nj2x0y3s1t3 + binaryDp0j1nj2x0y3s1t3 + binaryUp0j2nj3x0y3s1t3 + binaryDp0j2nj3x0y3s1t3 + binaryUp0j3nj4x0y3s1t3 + binaryDp0j3nj4x0y3s1t3 + binaryUp0j4nj5x0y3s1t3 + binaryDp0j4nj5x0y3s1t3 + binaryUp0j5nj6x0y3s1t3 + binaryDp0j5nj6x0y3s1t3 + binaryUp0j6nj7x0y3s1t3 + binaryDp0j6nj7x0y3s1t3 + binaryUp0j7nj8x0y3s1t3 + binaryDp0j7nj8x0y3s1t3 + binaryUp0j8nj9x0y3s1t3 + binaryDp0j8nj9x0y3s1t3 + binaryUp1j0nj1x0y3s1t3 + binaryDp1j0nj1x0y3s1t3 + binaryUp1j1nj2x0y3s1t3 + binaryDp1j1nj2x0y3s1t3 + binaryUp1j2nj3x0y3s1t3 + binaryDp1j2nj3x0y3s1t3 + binaryUp1j3nj4x0y3s1t3 + binaryDp1j3nj4x0y3s1t3 + binaryUp1j4nj5x0y3s1t3 + binaryDp1j4nj5x0y3s1t3 + binaryUp1j5nj6x0y3s1t3 + binaryDp1j5nj6x0y3s1t3 + binaryUp1j6nj7x0y3s1t3 + binaryDp1j6nj7x0y3s1t3 + binaryUp1j7nj8x0y3s1t3 + binaryDp1j7nj8x0y3s1t3 + binaryUp1j8nj9x0y3s1t3 + binaryDp1j8nj9x0y3s1t3 <= 35
+y00 + 10000 binaryUp0j0nj1x0y0s1t0 >= 0
+y00 - 10000 binaryUp0j0nj1x0y0s1t0 <=  0
+y01 + 10000 binaryUp0j0nj1x0y0s1t0 >= 0
+y01 - 10000 binaryUp0j0nj1x0y0s1t0 <= 0
+x00 - 10000 binaryUp0j0nj1x0y0s1t0 <= 0
+x01 + 10000 binaryUp0j0nj1x0y0s1t0 >= 1
+y00 + 10000 binaryDp0j0nj1x0y0s1t0 >= 0
+y00 - 10000 binaryDp0j0nj1x0y0s1t0 <= 0
+y01 + 10000 binaryDp0j0nj1x0y0s1t0 >= 0
+y01 - 10000 binaryDp0j0nj1x0y0s1t0 <= 0
+x01 - 10000 binaryDp0j0nj1x0y0s1t0 <= 0
+x00 + 10000 binaryDp0j0nj1x0y0s1t0 >= 1
+y01 + 10000 binaryUp0j1nj2x0y0s1t0 >= 0
+y01 - 10000 binaryUp0j1nj2x0y0s1t0 <=  0
+y02 + 10000 binaryUp0j1nj2x0y0s1t0 >= 0
+y02 - 10000 binaryUp0j1nj2x0y0s1t0 <= 0
+x01 - 10000 binaryUp0j1nj2x0y0s1t0 <= 0
+x02 + 10000 binaryUp0j1nj2x0y0s1t0 >= 1
+y01 + 10000 binaryDp0j1nj2x0y0s1t0 >= 0
+y01 - 10000 binaryDp0j1nj2x0y0s1t0 <= 0
+y02 + 10000 binaryDp0j1nj2x0y0s1t0 >= 0
+y02 - 10000 binaryDp0j1nj2x0y0s1t0 <= 0
+x02 - 10000 binaryDp0j1nj2x0y0s1t0 <= 0
+x01 + 10000 binaryDp0j1nj2x0y0s1t0 >= 1
+y02 + 10000 binaryUp0j2nj3x0y0s1t0 >= 0
+y02 - 10000 binaryUp0j2nj3x0y0s1t0 <=  0
+y03 + 10000 binaryUp0j2nj3x0y0s1t0 >= 0
+y03 - 10000 binaryUp0j2nj3x0y0s1t0 <= 0
+x02 - 10000 binaryUp0j2nj3x0y0s1t0 <= 0
+x03 + 10000 binaryUp0j2nj3x0y0s1t0 >= 1
+y02 + 10000 binaryDp0j2nj3x0y0s1t0 >= 0
+y02 - 10000 binaryDp0j2nj3x0y0s1t0 <= 0
+y03 + 10000 binaryDp0j2nj3x0y0s1t0 >= 0
+y03 - 10000 binaryDp0j2nj3x0y0s1t0 <= 0
+x03 - 10000 binaryDp0j2nj3x0y0s1t0 <= 0
+x02 + 10000 binaryDp0j2nj3x0y0s1t0 >= 1
+y03 + 10000 binaryUp0j3nj4x0y0s1t0 >= 0
+y03 - 10000 binaryUp0j3nj4x0y0s1t0 <=  0
+y04 + 10000 binaryUp0j3nj4x0y0s1t0 >= 0
+y04 - 10000 binaryUp0j3nj4x0y0s1t0 <= 0
+x03 - 10000 binaryUp0j3nj4x0y0s1t0 <= 0
+x04 + 10000 binaryUp0j3nj4x0y0s1t0 >= 1
+y03 + 10000 binaryDp0j3nj4x0y0s1t0 >= 0
+y03 - 10000 binaryDp0j3nj4x0y0s1t0 <= 0
+y04 + 10000 binaryDp0j3nj4x0y0s1t0 >= 0
+y04 - 10000 binaryDp0j3nj4x0y0s1t0 <= 0
+x04 - 10000 binaryDp0j3nj4x0y0s1t0 <= 0
+x03 + 10000 binaryDp0j3nj4x0y0s1t0 >= 1
+y04 + 10000 binaryUp0j4nj5x0y0s1t0 >= 0
+y04 - 10000 binaryUp0j4nj5x0y0s1t0 <=  0
+y05 + 10000 binaryUp0j4nj5x0y0s1t0 >= 0
+y05 - 10000 binaryUp0j4nj5x0y0s1t0 <= 0
+x04 - 10000 binaryUp0j4nj5x0y0s1t0 <= 0
+x05 + 10000 binaryUp0j4nj5x0y0s1t0 >= 1
+y04 + 10000 binaryDp0j4nj5x0y0s1t0 >= 0
+y04 - 10000 binaryDp0j4nj5x0y0s1t0 <= 0
+y05 + 10000 binaryDp0j4nj5x0y0s1t0 >= 0
+y05 - 10000 binaryDp0j4nj5x0y0s1t0 <= 0
+x05 - 10000 binaryDp0j4nj5x0y0s1t0 <= 0
+x04 + 10000 binaryDp0j4nj5x0y0s1t0 >= 1
+y05 + 10000 binaryUp0j5nj6x0y0s1t0 >= 0
+y05 - 10000 binaryUp0j5nj6x0y0s1t0 <=  0
+y06 + 10000 binaryUp0j5nj6x0y0s1t0 >= 0
+y06 - 10000 binaryUp0j5nj6x0y0s1t0 <= 0
+x05 - 10000 binaryUp0j5nj6x0y0s1t0 <= 0
+x06 + 10000 binaryUp0j5nj6x0y0s1t0 >= 1
+y05 + 10000 binaryDp0j5nj6x0y0s1t0 >= 0
+y05 - 10000 binaryDp0j5nj6x0y0s1t0 <= 0
+y06 + 10000 binaryDp0j5nj6x0y0s1t0 >= 0
+y06 - 10000 binaryDp0j5nj6x0y0s1t0 <= 0
+x06 - 10000 binaryDp0j5nj6x0y0s1t0 <= 0
+x05 + 10000 binaryDp0j5nj6x0y0s1t0 >= 1
+y06 + 10000 binaryUp0j6nj7x0y0s1t0 >= 0
+y06 - 10000 binaryUp0j6nj7x0y0s1t0 <=  0
+y07 + 10000 binaryUp0j6nj7x0y0s1t0 >= 0
+y07 - 10000 binaryUp0j6nj7x0y0s1t0 <= 0
+x06 - 10000 binaryUp0j6nj7x0y0s1t0 <= 0
+x07 + 10000 binaryUp0j6nj7x0y0s1t0 >= 1
+y06 + 10000 binaryDp0j6nj7x0y0s1t0 >= 0
+y06 - 10000 binaryDp0j6nj7x0y0s1t0 <= 0
+y07 + 10000 binaryDp0j6nj7x0y0s1t0 >= 0
+y07 - 10000 binaryDp0j6nj7x0y0s1t0 <= 0
+x07 - 10000 binaryDp0j6nj7x0y0s1t0 <= 0
+x06 + 10000 binaryDp0j6nj7x0y0s1t0 >= 1
+y07 + 10000 binaryUp0j7nj8x0y0s1t0 >= 0
+y07 - 10000 binaryUp0j7nj8x0y0s1t0 <=  0
+y08 + 10000 binaryUp0j7nj8x0y0s1t0 >= 0
+y08 - 10000 binaryUp0j7nj8x0y0s1t0 <= 0
+x07 - 10000 binaryUp0j7nj8x0y0s1t0 <= 0
+x08 + 10000 binaryUp0j7nj8x0y0s1t0 >= 1
+y07 + 10000 binaryDp0j7nj8x0y0s1t0 >= 0
+y07 - 10000 binaryDp0j7nj8x0y0s1t0 <= 0
+y08 + 10000 binaryDp0j7nj8x0y0s1t0 >= 0
+y08 - 10000 binaryDp0j7nj8x0y0s1t0 <= 0
+x08 - 10000 binaryDp0j7nj8x0y0s1t0 <= 0
+x07 + 10000 binaryDp0j7nj8x0y0s1t0 >= 1
+y08 + 10000 binaryUp0j8nj9x0y0s1t0 >= 0
+y08 - 10000 binaryUp0j8nj9x0y0s1t0 <=  0
+y09 + 10000 binaryUp0j8nj9x0y0s1t0 >= 0
+y09 - 10000 binaryUp0j8nj9x0y0s1t0 <= 0
+x08 - 10000 binaryUp0j8nj9x0y0s1t0 <= 0
+x09 + 10000 binaryUp0j8nj9x0y0s1t0 >= 1
+y08 + 10000 binaryDp0j8nj9x0y0s1t0 >= 0
+y08 - 10000 binaryDp0j8nj9x0y0s1t0 <= 0
+y09 + 10000 binaryDp0j8nj9x0y0s1t0 >= 0
+y09 - 10000 binaryDp0j8nj9x0y0s1t0 <= 0
+x09 - 10000 binaryDp0j8nj9x0y0s1t0 <= 0
+x08 + 10000 binaryDp0j8nj9x0y0s1t0 >= 1
+y10 + 10000 binaryUp1j0nj1x0y0s1t0 >= 0
+y10 - 10000 binaryUp1j0nj1x0y0s1t0 <=  0
+y11 + 10000 binaryUp1j0nj1x0y0s1t0 >= 0
+y11 - 10000 binaryUp1j0nj1x0y0s1t0 <= 0
+x10 - 10000 binaryUp1j0nj1x0y0s1t0 <= 0
+x11 + 10000 binaryUp1j0nj1x0y0s1t0 >= 1
+y10 + 10000 binaryDp1j0nj1x0y0s1t0 >= 0
+y10 - 10000 binaryDp1j0nj1x0y0s1t0 <= 0
+y11 + 10000 binaryDp1j0nj1x0y0s1t0 >= 0
+y11 - 10000 binaryDp1j0nj1x0y0s1t0 <= 0
+x11 - 10000 binaryDp1j0nj1x0y0s1t0 <= 0
+x10 + 10000 binaryDp1j0nj1x0y0s1t0 >= 1
+y11 + 10000 binaryUp1j1nj2x0y0s1t0 >= 0
+y11 - 10000 binaryUp1j1nj2x0y0s1t0 <=  0
+y12 + 10000 binaryUp1j1nj2x0y0s1t0 >= 0
+y12 - 10000 binaryUp1j1nj2x0y0s1t0 <= 0
+x11 - 10000 binaryUp1j1nj2x0y0s1t0 <= 0
+x12 + 10000 binaryUp1j1nj2x0y0s1t0 >= 1
+y11 + 10000 binaryDp1j1nj2x0y0s1t0 >= 0
+y11 - 10000 binaryDp1j1nj2x0y0s1t0 <= 0
+y12 + 10000 binaryDp1j1nj2x0y0s1t0 >= 0
+y12 - 10000 binaryDp1j1nj2x0y0s1t0 <= 0
+x12 - 10000 binaryDp1j1nj2x0y0s1t0 <= 0
+x11 + 10000 binaryDp1j1nj2x0y0s1t0 >= 1
+y12 + 10000 binaryUp1j2nj3x0y0s1t0 >= 0
+y12 - 10000 binaryUp1j2nj3x0y0s1t0 <=  0
+y13 + 10000 binaryUp1j2nj3x0y0s1t0 >= 0
+y13 - 10000 binaryUp1j2nj3x0y0s1t0 <= 0
+x12 - 10000 binaryUp1j2nj3x0y0s1t0 <= 0
+x13 + 10000 binaryUp1j2nj3x0y0s1t0 >= 1
+y12 + 10000 binaryDp1j2nj3x0y0s1t0 >= 0
+y12 - 10000 binaryDp1j2nj3x0y0s1t0 <= 0
+y13 + 10000 binaryDp1j2nj3x0y0s1t0 >= 0
+y13 - 10000 binaryDp1j2nj3x0y0s1t0 <= 0
+x13 - 10000 binaryDp1j2nj3x0y0s1t0 <= 0
+x12 + 10000 binaryDp1j2nj3x0y0s1t0 >= 1
+y13 + 10000 binaryUp1j3nj4x0y0s1t0 >= 0
+y13 - 10000 binaryUp1j3nj4x0y0s1t0 <=  0
+y14 + 10000 binaryUp1j3nj4x0y0s1t0 >= 0
+y14 - 10000 binaryUp1j3nj4x0y0s1t0 <= 0
+x13 - 10000 binaryUp1j3nj4x0y0s1t0 <= 0
+x14 + 10000 binaryUp1j3nj4x0y0s1t0 >= 1
+y13 + 10000 binaryDp1j3nj4x0y0s1t0 >= 0
+y13 - 10000 binaryDp1j3nj4x0y0s1t0 <= 0
+y14 + 10000 binaryDp1j3nj4x0y0s1t0 >= 0
+y14 - 10000 binaryDp1j3nj4x0y0s1t0 <= 0
+x14 - 10000 binaryDp1j3nj4x0y0s1t0 <= 0
+x13 + 10000 binaryDp1j3nj4x0y0s1t0 >= 1
+y14 + 10000 binaryUp1j4nj5x0y0s1t0 >= 0
+y14 - 10000 binaryUp1j4nj5x0y0s1t0 <=  0
+y15 + 10000 binaryUp1j4nj5x0y0s1t0 >= 0
+y15 - 10000 binaryUp1j4nj5x0y0s1t0 <= 0
+x14 - 10000 binaryUp1j4nj5x0y0s1t0 <= 0
+x15 + 10000 binaryUp1j4nj5x0y0s1t0 >= 1
+y14 + 10000 binaryDp1j4nj5x0y0s1t0 >= 0
+y14 - 10000 binaryDp1j4nj5x0y0s1t0 <= 0
+y15 + 10000 binaryDp1j4nj5x0y0s1t0 >= 0
+y15 - 10000 binaryDp1j4nj5x0y0s1t0 <= 0
+x15 - 10000 binaryDp1j4nj5x0y0s1t0 <= 0
+x14 + 10000 binaryDp1j4nj5x0y0s1t0 >= 1
+y15 + 10000 binaryUp1j5nj6x0y0s1t0 >= 0
+y15 - 10000 binaryUp1j5nj6x0y0s1t0 <=  0
+y16 + 10000 binaryUp1j5nj6x0y0s1t0 >= 0
+y16 - 10000 binaryUp1j5nj6x0y0s1t0 <= 0
+x15 - 10000 binaryUp1j5nj6x0y0s1t0 <= 0
+x16 + 10000 binaryUp1j5nj6x0y0s1t0 >= 1
+y15 + 10000 binaryDp1j5nj6x0y0s1t0 >= 0
+y15 - 10000 binaryDp1j5nj6x0y0s1t0 <= 0
+y16 + 10000 binaryDp1j5nj6x0y0s1t0 >= 0
+y16 - 10000 binaryDp1j5nj6x0y0s1t0 <= 0
+x16 - 10000 binaryDp1j5nj6x0y0s1t0 <= 0
+x15 + 10000 binaryDp1j5nj6x0y0s1t0 >= 1
+y16 + 10000 binaryUp1j6nj7x0y0s1t0 >= 0
+y16 - 10000 binaryUp1j6nj7x0y0s1t0 <=  0
+y17 + 10000 binaryUp1j6nj7x0y0s1t0 >= 0
+y17 - 10000 binaryUp1j6nj7x0y0s1t0 <= 0
+x16 - 10000 binaryUp1j6nj7x0y0s1t0 <= 0
+x17 + 10000 binaryUp1j6nj7x0y0s1t0 >= 1
+y16 + 10000 binaryDp1j6nj7x0y0s1t0 >= 0
+y16 - 10000 binaryDp1j6nj7x0y0s1t0 <= 0
+y17 + 10000 binaryDp1j6nj7x0y0s1t0 >= 0
+y17 - 10000 binaryDp1j6nj7x0y0s1t0 <= 0
+x17 - 10000 binaryDp1j6nj7x0y0s1t0 <= 0
+x16 + 10000 binaryDp1j6nj7x0y0s1t0 >= 1
+y17 + 10000 binaryUp1j7nj8x0y0s1t0 >= 0
+y17 - 10000 binaryUp1j7nj8x0y0s1t0 <=  0
+y18 + 10000 binaryUp1j7nj8x0y0s1t0 >= 0
+y18 - 10000 binaryUp1j7nj8x0y0s1t0 <= 0
+x17 - 10000 binaryUp1j7nj8x0y0s1t0 <= 0
+x18 + 10000 binaryUp1j7nj8x0y0s1t0 >= 1
+y17 + 10000 binaryDp1j7nj8x0y0s1t0 >= 0
+y17 - 10000 binaryDp1j7nj8x0y0s1t0 <= 0
+y18 + 10000 binaryDp1j7nj8x0y0s1t0 >= 0
+y18 - 10000 binaryDp1j7nj8x0y0s1t0 <= 0
+x18 - 10000 binaryDp1j7nj8x0y0s1t0 <= 0
+x17 + 10000 binaryDp1j7nj8x0y0s1t0 >= 1
+y18 + 10000 binaryUp1j8nj9x0y0s1t0 >= 0
+y18 - 10000 binaryUp1j8nj9x0y0s1t0 <=  0
+y19 + 10000 binaryUp1j8nj9x0y0s1t0 >= 0
+y19 - 10000 binaryUp1j8nj9x0y0s1t0 <= 0
+x18 - 10000 binaryUp1j8nj9x0y0s1t0 <= 0
+x19 + 10000 binaryUp1j8nj9x0y0s1t0 >= 1
+y18 + 10000 binaryDp1j8nj9x0y0s1t0 >= 0
+y18 - 10000 binaryDp1j8nj9x0y0s1t0 <= 0
+y19 + 10000 binaryDp1j8nj9x0y0s1t0 >= 0
+y19 - 10000 binaryDp1j8nj9x0y0s1t0 <= 0
+x19 - 10000 binaryDp1j8nj9x0y0s1t0 <= 0
+x18 + 10000 binaryDp1j8nj9x0y0s1t0 >= 1
+ + binaryUp0j0nj1x0y0s1t0 + binaryDp0j0nj1x0y0s1t0 + binaryUp0j1nj2x0y0s1t0 + binaryDp0j1nj2x0y0s1t0 + binaryUp0j2nj3x0y0s1t0 + binaryDp0j2nj3x0y0s1t0 + binaryUp0j3nj4x0y0s1t0 + binaryDp0j3nj4x0y0s1t0 + binaryUp0j4nj5x0y0s1t0 + binaryDp0j4nj5x0y0s1t0 + binaryUp0j5nj6x0y0s1t0 + binaryDp0j5nj6x0y0s1t0 + binaryUp0j6nj7x0y0s1t0 + binaryDp0j6nj7x0y0s1t0 + binaryUp0j7nj8x0y0s1t0 + binaryDp0j7nj8x0y0s1t0 + binaryUp0j8nj9x0y0s1t0 + binaryDp0j8nj9x0y0s1t0 + binaryUp1j0nj1x0y0s1t0 + binaryDp1j0nj1x0y0s1t0 + binaryUp1j1nj2x0y0s1t0 + binaryDp1j1nj2x0y0s1t0 + binaryUp1j2nj3x0y0s1t0 + binaryDp1j2nj3x0y0s1t0 + binaryUp1j3nj4x0y0s1t0 + binaryDp1j3nj4x0y0s1t0 + binaryUp1j4nj5x0y0s1t0 + binaryDp1j4nj5x0y0s1t0 + binaryUp1j5nj6x0y0s1t0 + binaryDp1j5nj6x0y0s1t0 + binaryUp1j6nj7x0y0s1t0 + binaryDp1j6nj7x0y0s1t0 + binaryUp1j7nj8x0y0s1t0 + binaryDp1j7nj8x0y0s1t0 + binaryUp1j8nj9x0y0s1t0 + binaryDp1j8nj9x0y0s1t0 <= 35
+x00 + 10000 binaryLp0j0nj1x2y0s2t1 >= 2
+x00 - 10000 binaryLp0j0nj1x2y0s2t1 <= 2
+x01 + 10000 binaryLp0j0nj1x2y0s2t1 >= 2
+x01 - 10000 binaryLp0j0nj1x2y0s2t1 <= 2
+y00 - 10000 binaryLp0j0nj1x2y0s2t1 <= 0
+y01 + 10000 binaryLp0j0nj1x2y0s2t1 >= 1
+x00 + 10000 binaryRp0j0nj1x2y0s2t1 >= 2
+x00 - 10000 binaryRp0j0nj1x2y0s2t1 <= 2
+x01 + 10000 binaryRp0j0nj1x2y0s2t1 >= 2
+x01 - 10000 binaryRp0j0nj1x2y0s2t1 <= 2
+y01 - 10000 binaryRp0j0nj1x2y0s2t1 <= 0
+y00 + 10000 binaryRp0j0nj1x2y0s2t1 >= 1
+x01 + 10000 binaryLp0j1nj2x2y0s2t1 >= 2
+x01 - 10000 binaryLp0j1nj2x2y0s2t1 <= 2
+x02 + 10000 binaryLp0j1nj2x2y0s2t1 >= 2
+x02 - 10000 binaryLp0j1nj2x2y0s2t1 <= 2
+y01 - 10000 binaryLp0j1nj2x2y0s2t1 <= 0
+y02 + 10000 binaryLp0j1nj2x2y0s2t1 >= 1
+x01 + 10000 binaryRp0j1nj2x2y0s2t1 >= 2
+x01 - 10000 binaryRp0j1nj2x2y0s2t1 <= 2
+x02 + 10000 binaryRp0j1nj2x2y0s2t1 >= 2
+x02 - 10000 binaryRp0j1nj2x2y0s2t1 <= 2
+y02 - 10000 binaryRp0j1nj2x2y0s2t1 <= 0
+y01 + 10000 binaryRp0j1nj2x2y0s2t1 >= 1
+x02 + 10000 binaryLp0j2nj3x2y0s2t1 >= 2
+x02 - 10000 binaryLp0j2nj3x2y0s2t1 <= 2
+x03 + 10000 binaryLp0j2nj3x2y0s2t1 >= 2
+x03 - 10000 binaryLp0j2nj3x2y0s2t1 <= 2
+y02 - 10000 binaryLp0j2nj3x2y0s2t1 <= 0
+y03 + 10000 binaryLp0j2nj3x2y0s2t1 >= 1
+x02 + 10000 binaryRp0j2nj3x2y0s2t1 >= 2
+x02 - 10000 binaryRp0j2nj3x2y0s2t1 <= 2
+x03 + 10000 binaryRp0j2nj3x2y0s2t1 >= 2
+x03 - 10000 binaryRp0j2nj3x2y0s2t1 <= 2
+y03 - 10000 binaryRp0j2nj3x2y0s2t1 <= 0
+y02 + 10000 binaryRp0j2nj3x2y0s2t1 >= 1
+x03 + 10000 binaryLp0j3nj4x2y0s2t1 >= 2
+x03 - 10000 binaryLp0j3nj4x2y0s2t1 <= 2
+x04 + 10000 binaryLp0j3nj4x2y0s2t1 >= 2
+x04 - 10000 binaryLp0j3nj4x2y0s2t1 <= 2
+y03 - 10000 binaryLp0j3nj4x2y0s2t1 <= 0
+y04 + 10000 binaryLp0j3nj4x2y0s2t1 >= 1
+x03 + 10000 binaryRp0j3nj4x2y0s2t1 >= 2
+x03 - 10000 binaryRp0j3nj4x2y0s2t1 <= 2
+x04 + 10000 binaryRp0j3nj4x2y0s2t1 >= 2
+x04 - 10000 binaryRp0j3nj4x2y0s2t1 <= 2
+y04 - 10000 binaryRp0j3nj4x2y0s2t1 <= 0
+y03 + 10000 binaryRp0j3nj4x2y0s2t1 >= 1
+x04 + 10000 binaryLp0j4nj5x2y0s2t1 >= 2
+x04 - 10000 binaryLp0j4nj5x2y0s2t1 <= 2
+x05 + 10000 binaryLp0j4nj5x2y0s2t1 >= 2
+x05 - 10000 binaryLp0j4nj5x2y0s2t1 <= 2
+y04 - 10000 binaryLp0j4nj5x2y0s2t1 <= 0
+y05 + 10000 binaryLp0j4nj5x2y0s2t1 >= 1
+x04 + 10000 binaryRp0j4nj5x2y0s2t1 >= 2
+x04 - 10000 binaryRp0j4nj5x2y0s2t1 <= 2
+x05 + 10000 binaryRp0j4nj5x2y0s2t1 >= 2
+x05 - 10000 binaryRp0j4nj5x2y0s2t1 <= 2
+y05 - 10000 binaryRp0j4nj5x2y0s2t1 <= 0
+y04 + 10000 binaryRp0j4nj5x2y0s2t1 >= 1
+x05 + 10000 binaryLp0j5nj6x2y0s2t1 >= 2
+x05 - 10000 binaryLp0j5nj6x2y0s2t1 <= 2
+x06 + 10000 binaryLp0j5nj6x2y0s2t1 >= 2
+x06 - 10000 binaryLp0j5nj6x2y0s2t1 <= 2
+y05 - 10000 binaryLp0j5nj6x2y0s2t1 <= 0
+y06 + 10000 binaryLp0j5nj6x2y0s2t1 >= 1
+x05 + 10000 binaryRp0j5nj6x2y0s2t1 >= 2
+x05 - 10000 binaryRp0j5nj6x2y0s2t1 <= 2
+x06 + 10000 binaryRp0j5nj6x2y0s2t1 >= 2
+x06 - 10000 binaryRp0j5nj6x2y0s2t1 <= 2
+y06 - 10000 binaryRp0j5nj6x2y0s2t1 <= 0
+y05 + 10000 binaryRp0j5nj6x2y0s2t1 >= 1
+x06 + 10000 binaryLp0j6nj7x2y0s2t1 >= 2
+x06 - 10000 binaryLp0j6nj7x2y0s2t1 <= 2
+x07 + 10000 binaryLp0j6nj7x2y0s2t1 >= 2
+x07 - 10000 binaryLp0j6nj7x2y0s2t1 <= 2
+y06 - 10000 binaryLp0j6nj7x2y0s2t1 <= 0
+y07 + 10000 binaryLp0j6nj7x2y0s2t1 >= 1
+x06 + 10000 binaryRp0j6nj7x2y0s2t1 >= 2
+x06 - 10000 binaryRp0j6nj7x2y0s2t1 <= 2
+x07 + 10000 binaryRp0j6nj7x2y0s2t1 >= 2
+x07 - 10000 binaryRp0j6nj7x2y0s2t1 <= 2
+y07 - 10000 binaryRp0j6nj7x2y0s2t1 <= 0
+y06 + 10000 binaryRp0j6nj7x2y0s2t1 >= 1
+x07 + 10000 binaryLp0j7nj8x2y0s2t1 >= 2
+x07 - 10000 binaryLp0j7nj8x2y0s2t1 <= 2
+x08 + 10000 binaryLp0j7nj8x2y0s2t1 >= 2
+x08 - 10000 binaryLp0j7nj8x2y0s2t1 <= 2
+y07 - 10000 binaryLp0j7nj8x2y0s2t1 <= 0
+y08 + 10000 binaryLp0j7nj8x2y0s2t1 >= 1
+x07 + 10000 binaryRp0j7nj8x2y0s2t1 >= 2
+x07 - 10000 binaryRp0j7nj8x2y0s2t1 <= 2
+x08 + 10000 binaryRp0j7nj8x2y0s2t1 >= 2
+x08 - 10000 binaryRp0j7nj8x2y0s2t1 <= 2
+y08 - 10000 binaryRp0j7nj8x2y0s2t1 <= 0
+y07 + 10000 binaryRp0j7nj8x2y0s2t1 >= 1
+x08 + 10000 binaryLp0j8nj9x2y0s2t1 >= 2
+x08 - 10000 binaryLp0j8nj9x2y0s2t1 <= 2
+x09 + 10000 binaryLp0j8nj9x2y0s2t1 >= 2
+x09 - 10000 binaryLp0j8nj9x2y0s2t1 <= 2
+y08 - 10000 binaryLp0j8nj9x2y0s2t1 <= 0
+y09 + 10000 binaryLp0j8nj9x2y0s2t1 >= 1
+x08 + 10000 binaryRp0j8nj9x2y0s2t1 >= 2
+x08 - 10000 binaryRp0j8nj9x2y0s2t1 <= 2
+x09 + 10000 binaryRp0j8nj9x2y0s2t1 >= 2
+x09 - 10000 binaryRp0j8nj9x2y0s2t1 <= 2
+y09 - 10000 binaryRp0j8nj9x2y0s2t1 <= 0
+y08 + 10000 binaryRp0j8nj9x2y0s2t1 >= 1
+x10 + 10000 binaryLp1j0nj1x2y0s2t1 >= 2
+x10 - 10000 binaryLp1j0nj1x2y0s2t1 <= 2
+x11 + 10000 binaryLp1j0nj1x2y0s2t1 >= 2
+x11 - 10000 binaryLp1j0nj1x2y0s2t1 <= 2
+y10 - 10000 binaryLp1j0nj1x2y0s2t1 <= 0
+y11 + 10000 binaryLp1j0nj1x2y0s2t1 >= 1
+x10 + 10000 binaryRp1j0nj1x2y0s2t1 >= 2
+x10 - 10000 binaryRp1j0nj1x2y0s2t1 <= 2
+x11 + 10000 binaryRp1j0nj1x2y0s2t1 >= 2
+x11 - 10000 binaryRp1j0nj1x2y0s2t1 <= 2
+y11 - 10000 binaryRp1j0nj1x2y0s2t1 <= 0
+y10 + 10000 binaryRp1j0nj1x2y0s2t1 >= 1
+x11 + 10000 binaryLp1j1nj2x2y0s2t1 >= 2
+x11 - 10000 binaryLp1j1nj2x2y0s2t1 <= 2
+x12 + 10000 binaryLp1j1nj2x2y0s2t1 >= 2
+x12 - 10000 binaryLp1j1nj2x2y0s2t1 <= 2
+y11 - 10000 binaryLp1j1nj2x2y0s2t1 <= 0
+y12 + 10000 binaryLp1j1nj2x2y0s2t1 >= 1
+x11 + 10000 binaryRp1j1nj2x2y0s2t1 >= 2
+x11 - 10000 binaryRp1j1nj2x2y0s2t1 <= 2
+x12 + 10000 binaryRp1j1nj2x2y0s2t1 >= 2
+x12 - 10000 binaryRp1j1nj2x2y0s2t1 <= 2
+y12 - 10000 binaryRp1j1nj2x2y0s2t1 <= 0
+y11 + 10000 binaryRp1j1nj2x2y0s2t1 >= 1
+x12 + 10000 binaryLp1j2nj3x2y0s2t1 >= 2
+x12 - 10000 binaryLp1j2nj3x2y0s2t1 <= 2
+x13 + 10000 binaryLp1j2nj3x2y0s2t1 >= 2
+x13 - 10000 binaryLp1j2nj3x2y0s2t1 <= 2
+y12 - 10000 binaryLp1j2nj3x2y0s2t1 <= 0
+y13 + 10000 binaryLp1j2nj3x2y0s2t1 >= 1
+x12 + 10000 binaryRp1j2nj3x2y0s2t1 >= 2
+x12 - 10000 binaryRp1j2nj3x2y0s2t1 <= 2
+x13 + 10000 binaryRp1j2nj3x2y0s2t1 >= 2
+x13 - 10000 binaryRp1j2nj3x2y0s2t1 <= 2
+y13 - 10000 binaryRp1j2nj3x2y0s2t1 <= 0
+y12 + 10000 binaryRp1j2nj3x2y0s2t1 >= 1
+x13 + 10000 binaryLp1j3nj4x2y0s2t1 >= 2
+x13 - 10000 binaryLp1j3nj4x2y0s2t1 <= 2
+x14 + 10000 binaryLp1j3nj4x2y0s2t1 >= 2
+x14 - 10000 binaryLp1j3nj4x2y0s2t1 <= 2
+y13 - 10000 binaryLp1j3nj4x2y0s2t1 <= 0
+y14 + 10000 binaryLp1j3nj4x2y0s2t1 >= 1
+x13 + 10000 binaryRp1j3nj4x2y0s2t1 >= 2
+x13 - 10000 binaryRp1j3nj4x2y0s2t1 <= 2
+x14 + 10000 binaryRp1j3nj4x2y0s2t1 >= 2
+x14 - 10000 binaryRp1j3nj4x2y0s2t1 <= 2
+y14 - 10000 binaryRp1j3nj4x2y0s2t1 <= 0
+y13 + 10000 binaryRp1j3nj4x2y0s2t1 >= 1
+x14 + 10000 binaryLp1j4nj5x2y0s2t1 >= 2
+x14 - 10000 binaryLp1j4nj5x2y0s2t1 <= 2
+x15 + 10000 binaryLp1j4nj5x2y0s2t1 >= 2
+x15 - 10000 binaryLp1j4nj5x2y0s2t1 <= 2
+y14 - 10000 binaryLp1j4nj5x2y0s2t1 <= 0
+y15 + 10000 binaryLp1j4nj5x2y0s2t1 >= 1
+x14 + 10000 binaryRp1j4nj5x2y0s2t1 >= 2
+x14 - 10000 binaryRp1j4nj5x2y0s2t1 <= 2
+x15 + 10000 binaryRp1j4nj5x2y0s2t1 >= 2
+x15 - 10000 binaryRp1j4nj5x2y0s2t1 <= 2
+y15 - 10000 binaryRp1j4nj5x2y0s2t1 <= 0
+y14 + 10000 binaryRp1j4nj5x2y0s2t1 >= 1
+x15 + 10000 binaryLp1j5nj6x2y0s2t1 >= 2
+x15 - 10000 binaryLp1j5nj6x2y0s2t1 <= 2
+x16 + 10000 binaryLp1j5nj6x2y0s2t1 >= 2
+x16 - 10000 binaryLp1j5nj6x2y0s2t1 <= 2
+y15 - 10000 binaryLp1j5nj6x2y0s2t1 <= 0
+y16 + 10000 binaryLp1j5nj6x2y0s2t1 >= 1
+x15 + 10000 binaryRp1j5nj6x2y0s2t1 >= 2
+x15 - 10000 binaryRp1j5nj6x2y0s2t1 <= 2
+x16 + 10000 binaryRp1j5nj6x2y0s2t1 >= 2
+x16 - 10000 binaryRp1j5nj6x2y0s2t1 <= 2
+y16 - 10000 binaryRp1j5nj6x2y0s2t1 <= 0
+y15 + 10000 binaryRp1j5nj6x2y0s2t1 >= 1
+x16 + 10000 binaryLp1j6nj7x2y0s2t1 >= 2
+x16 - 10000 binaryLp1j6nj7x2y0s2t1 <= 2
+x17 + 10000 binaryLp1j6nj7x2y0s2t1 >= 2
+x17 - 10000 binaryLp1j6nj7x2y0s2t1 <= 2
+y16 - 10000 binaryLp1j6nj7x2y0s2t1 <= 0
+y17 + 10000 binaryLp1j6nj7x2y0s2t1 >= 1
+x16 + 10000 binaryRp1j6nj7x2y0s2t1 >= 2
+x16 - 10000 binaryRp1j6nj7x2y0s2t1 <= 2
+x17 + 10000 binaryRp1j6nj7x2y0s2t1 >= 2
+x17 - 10000 binaryRp1j6nj7x2y0s2t1 <= 2
+y17 - 10000 binaryRp1j6nj7x2y0s2t1 <= 0
+y16 + 10000 binaryRp1j6nj7x2y0s2t1 >= 1
+x17 + 10000 binaryLp1j7nj8x2y0s2t1 >= 2
+x17 - 10000 binaryLp1j7nj8x2y0s2t1 <= 2
+x18 + 10000 binaryLp1j7nj8x2y0s2t1 >= 2
+x18 - 10000 binaryLp1j7nj8x2y0s2t1 <= 2
+y17 - 10000 binaryLp1j7nj8x2y0s2t1 <= 0
+y18 + 10000 binaryLp1j7nj8x2y0s2t1 >= 1
+x17 + 10000 binaryRp1j7nj8x2y0s2t1 >= 2
+x17 - 10000 binaryRp1j7nj8x2y0s2t1 <= 2
+x18 + 10000 binaryRp1j7nj8x2y0s2t1 >= 2
+x18 - 10000 binaryRp1j7nj8x2y0s2t1 <= 2
+y18 - 10000 binaryRp1j7nj8x2y0s2t1 <= 0
+y17 + 10000 binaryRp1j7nj8x2y0s2t1 >= 1
+x18 + 10000 binaryLp1j8nj9x2y0s2t1 >= 2
+x18 - 10000 binaryLp1j8nj9x2y0s2t1 <= 2
+x19 + 10000 binaryLp1j8nj9x2y0s2t1 >= 2
+x19 - 10000 binaryLp1j8nj9x2y0s2t1 <= 2
+y18 - 10000 binaryLp1j8nj9x2y0s2t1 <= 0
+y19 + 10000 binaryLp1j8nj9x2y0s2t1 >= 1
+x18 + 10000 binaryRp1j8nj9x2y0s2t1 >= 2
+x18 - 10000 binaryRp1j8nj9x2y0s2t1 <= 2
+x19 + 10000 binaryRp1j8nj9x2y0s2t1 >= 2
+x19 - 10000 binaryRp1j8nj9x2y0s2t1 <= 2
+y19 - 10000 binaryRp1j8nj9x2y0s2t1 <= 0
+y18 + 10000 binaryRp1j8nj9x2y0s2t1 >= 1
+ + binaryLp0j0nj1x2y0s2t1 + binaryRp0j0nj1x2y0s2t1 + binaryLp0j1nj2x2y0s2t1 + binaryRp0j1nj2x2y0s2t1 + binaryLp0j2nj3x2y0s2t1 + binaryRp0j2nj3x2y0s2t1 + binaryLp0j3nj4x2y0s2t1 + binaryRp0j3nj4x2y0s2t1 + binaryLp0j4nj5x2y0s2t1 + binaryRp0j4nj5x2y0s2t1 + binaryLp0j5nj6x2y0s2t1 + binaryRp0j5nj6x2y0s2t1 + binaryLp0j6nj7x2y0s2t1 + binaryRp0j6nj7x2y0s2t1 + binaryLp0j7nj8x2y0s2t1 + binaryRp0j7nj8x2y0s2t1 + binaryLp0j8nj9x2y0s2t1 + binaryRp0j8nj9x2y0s2t1 + binaryLp1j0nj1x2y0s2t1 + binaryRp1j0nj1x2y0s2t1 + binaryLp1j1nj2x2y0s2t1 + binaryRp1j1nj2x2y0s2t1 + binaryLp1j2nj3x2y0s2t1 + binaryRp1j2nj3x2y0s2t1 + binaryLp1j3nj4x2y0s2t1 + binaryRp1j3nj4x2y0s2t1 + binaryLp1j4nj5x2y0s2t1 + binaryRp1j4nj5x2y0s2t1 + binaryLp1j5nj6x2y0s2t1 + binaryRp1j5nj6x2y0s2t1 + binaryLp1j6nj7x2y0s2t1 + binaryRp1j6nj7x2y0s2t1 + binaryLp1j7nj8x2y0s2t1 + binaryRp1j7nj8x2y0s2t1 + binaryLp1j8nj9x2y0s2t1 + binaryRp1j8nj9x2y0s2t1 <= 35
+y00 + 10000 binaryUp0j0nj1x2y2s3t2 >= 2
+y00 - 10000 binaryUp0j0nj1x2y2s3t2 <=  2
+y01 + 10000 binaryUp0j0nj1x2y2s3t2 >= 2
+y01 - 10000 binaryUp0j0nj1x2y2s3t2 <= 2
+x00 - 10000 binaryUp0j0nj1x2y2s3t2 <= 2
+x01 + 10000 binaryUp0j0nj1x2y2s3t2 >= 3
+y00 + 10000 binaryDp0j0nj1x2y2s3t2 >= 2
+y00 - 10000 binaryDp0j0nj1x2y2s3t2 <= 2
+y01 + 10000 binaryDp0j0nj1x2y2s3t2 >= 2
+y01 - 10000 binaryDp0j0nj1x2y2s3t2 <= 2
+x01 - 10000 binaryDp0j0nj1x2y2s3t2 <= 2
+x00 + 10000 binaryDp0j0nj1x2y2s3t2 >= 3
+y01 + 10000 binaryUp0j1nj2x2y2s3t2 >= 2
+y01 - 10000 binaryUp0j1nj2x2y2s3t2 <=  2
+y02 + 10000 binaryUp0j1nj2x2y2s3t2 >= 2
+y02 - 10000 binaryUp0j1nj2x2y2s3t2 <= 2
+x01 - 10000 binaryUp0j1nj2x2y2s3t2 <= 2
+x02 + 10000 binaryUp0j1nj2x2y2s3t2 >= 3
+y01 + 10000 binaryDp0j1nj2x2y2s3t2 >= 2
+y01 - 10000 binaryDp0j1nj2x2y2s3t2 <= 2
+y02 + 10000 binaryDp0j1nj2x2y2s3t2 >= 2
+y02 - 10000 binaryDp0j1nj2x2y2s3t2 <= 2
+x02 - 10000 binaryDp0j1nj2x2y2s3t2 <= 2
+x01 + 10000 binaryDp0j1nj2x2y2s3t2 >= 3
+y02 + 10000 binaryUp0j2nj3x2y2s3t2 >= 2
+y02 - 10000 binaryUp0j2nj3x2y2s3t2 <=  2
+y03 + 10000 binaryUp0j2nj3x2y2s3t2 >= 2
+y03 - 10000 binaryUp0j2nj3x2y2s3t2 <= 2
+x02 - 10000 binaryUp0j2nj3x2y2s3t2 <= 2
+x03 + 10000 binaryUp0j2nj3x2y2s3t2 >= 3
+y02 + 10000 binaryDp0j2nj3x2y2s3t2 >= 2
+y02 - 10000 binaryDp0j2nj3x2y2s3t2 <= 2
+y03 + 10000 binaryDp0j2nj3x2y2s3t2 >= 2
+y03 - 10000 binaryDp0j2nj3x2y2s3t2 <= 2
+x03 - 10000 binaryDp0j2nj3x2y2s3t2 <= 2
+x02 + 10000 binaryDp0j2nj3x2y2s3t2 >= 3
+y03 + 10000 binaryUp0j3nj4x2y2s3t2 >= 2
+y03 - 10000 binaryUp0j3nj4x2y2s3t2 <=  2
+y04 + 10000 binaryUp0j3nj4x2y2s3t2 >= 2
+y04 - 10000 binaryUp0j3nj4x2y2s3t2 <= 2
+x03 - 10000 binaryUp0j3nj4x2y2s3t2 <= 2
+x04 + 10000 binaryUp0j3nj4x2y2s3t2 >= 3
+y03 + 10000 binaryDp0j3nj4x2y2s3t2 >= 2
+y03 - 10000 binaryDp0j3nj4x2y2s3t2 <= 2
+y04 + 10000 binaryDp0j3nj4x2y2s3t2 >= 2
+y04 - 10000 binaryDp0j3nj4x2y2s3t2 <= 2
+x04 - 10000 binaryDp0j3nj4x2y2s3t2 <= 2
+x03 + 10000 binaryDp0j3nj4x2y2s3t2 >= 3
+y04 + 10000 binaryUp0j4nj5x2y2s3t2 >= 2
+y04 - 10000 binaryUp0j4nj5x2y2s3t2 <=  2
+y05 + 10000 binaryUp0j4nj5x2y2s3t2 >= 2
+y05 - 10000 binaryUp0j4nj5x2y2s3t2 <= 2
+x04 - 10000 binaryUp0j4nj5x2y2s3t2 <= 2
+x05 + 10000 binaryUp0j4nj5x2y2s3t2 >= 3
+y04 + 10000 binaryDp0j4nj5x2y2s3t2 >= 2
+y04 - 10000 binaryDp0j4nj5x2y2s3t2 <= 2
+y05 + 10000 binaryDp0j4nj5x2y2s3t2 >= 2
+y05 - 10000 binaryDp0j4nj5x2y2s3t2 <= 2
+x05 - 10000 binaryDp0j4nj5x2y2s3t2 <= 2
+x04 + 10000 binaryDp0j4nj5x2y2s3t2 >= 3
+y05 + 10000 binaryUp0j5nj6x2y2s3t2 >= 2
+y05 - 10000 binaryUp0j5nj6x2y2s3t2 <=  2
+y06 + 10000 binaryUp0j5nj6x2y2s3t2 >= 2
+y06 - 10000 binaryUp0j5nj6x2y2s3t2 <= 2
+x05 - 10000 binaryUp0j5nj6x2y2s3t2 <= 2
+x06 + 10000 binaryUp0j5nj6x2y2s3t2 >= 3
+y05 + 10000 binaryDp0j5nj6x2y2s3t2 >= 2
+y05 - 10000 binaryDp0j5nj6x2y2s3t2 <= 2
+y06 + 10000 binaryDp0j5nj6x2y2s3t2 >= 2
+y06 - 10000 binaryDp0j5nj6x2y2s3t2 <= 2
+x06 - 10000 binaryDp0j5nj6x2y2s3t2 <= 2
+x05 + 10000 binaryDp0j5nj6x2y2s3t2 >= 3
+y06 + 10000 binaryUp0j6nj7x2y2s3t2 >= 2
+y06 - 10000 binaryUp0j6nj7x2y2s3t2 <=  2
+y07 + 10000 binaryUp0j6nj7x2y2s3t2 >= 2
+y07 - 10000 binaryUp0j6nj7x2y2s3t2 <= 2
+x06 - 10000 binaryUp0j6nj7x2y2s3t2 <= 2
+x07 + 10000 binaryUp0j6nj7x2y2s3t2 >= 3
+y06 + 10000 binaryDp0j6nj7x2y2s3t2 >= 2
+y06 - 10000 binaryDp0j6nj7x2y2s3t2 <= 2
+y07 + 10000 binaryDp0j6nj7x2y2s3t2 >= 2
+y07 - 10000 binaryDp0j6nj7x2y2s3t2 <= 2
+x07 - 10000 binaryDp0j6nj7x2y2s3t2 <= 2
+x06 + 10000 binaryDp0j6nj7x2y2s3t2 >= 3
+y07 + 10000 binaryUp0j7nj8x2y2s3t2 >= 2
+y07 - 10000 binaryUp0j7nj8x2y2s3t2 <=  2
+y08 + 10000 binaryUp0j7nj8x2y2s3t2 >= 2
+y08 - 10000 binaryUp0j7nj8x2y2s3t2 <= 2
+x07 - 10000 binaryUp0j7nj8x2y2s3t2 <= 2
+x08 + 10000 binaryUp0j7nj8x2y2s3t2 >= 3
+y07 + 10000 binaryDp0j7nj8x2y2s3t2 >= 2
+y07 - 10000 binaryDp0j7nj8x2y2s3t2 <= 2
+y08 + 10000 binaryDp0j7nj8x2y2s3t2 >= 2
+y08 - 10000 binaryDp0j7nj8x2y2s3t2 <= 2
+x08 - 10000 binaryDp0j7nj8x2y2s3t2 <= 2
+x07 + 10000 binaryDp0j7nj8x2y2s3t2 >= 3
+y08 + 10000 binaryUp0j8nj9x2y2s3t2 >= 2
+y08 - 10000 binaryUp0j8nj9x2y2s3t2 <=  2
+y09 + 10000 binaryUp0j8nj9x2y2s3t2 >= 2
+y09 - 10000 binaryUp0j8nj9x2y2s3t2 <= 2
+x08 - 10000 binaryUp0j8nj9x2y2s3t2 <= 2
+x09 + 10000 binaryUp0j8nj9x2y2s3t2 >= 3
+y08 + 10000 binaryDp0j8nj9x2y2s3t2 >= 2
+y08 - 10000 binaryDp0j8nj9x2y2s3t2 <= 2
+y09 + 10000 binaryDp0j8nj9x2y2s3t2 >= 2
+y09 - 10000 binaryDp0j8nj9x2y2s3t2 <= 2
+x09 - 10000 binaryDp0j8nj9x2y2s3t2 <= 2
+x08 + 10000 binaryDp0j8nj9x2y2s3t2 >= 3
+y10 + 10000 binaryUp1j0nj1x2y2s3t2 >= 2
+y10 - 10000 binaryUp1j0nj1x2y2s3t2 <=  2
+y11 + 10000 binaryUp1j0nj1x2y2s3t2 >= 2
+y11 - 10000 binaryUp1j0nj1x2y2s3t2 <= 2
+x10 - 10000 binaryUp1j0nj1x2y2s3t2 <= 2
+x11 + 10000 binaryUp1j0nj1x2y2s3t2 >= 3
+y10 + 10000 binaryDp1j0nj1x2y2s3t2 >= 2
+y10 - 10000 binaryDp1j0nj1x2y2s3t2 <= 2
+y11 + 10000 binaryDp1j0nj1x2y2s3t2 >= 2
+y11 - 10000 binaryDp1j0nj1x2y2s3t2 <= 2
+x11 - 10000 binaryDp1j0nj1x2y2s3t2 <= 2
+x10 + 10000 binaryDp1j0nj1x2y2s3t2 >= 3
+y11 + 10000 binaryUp1j1nj2x2y2s3t2 >= 2
+y11 - 10000 binaryUp1j1nj2x2y2s3t2 <=  2
+y12 + 10000 binaryUp1j1nj2x2y2s3t2 >= 2
+y12 - 10000 binaryUp1j1nj2x2y2s3t2 <= 2
+x11 - 10000 binaryUp1j1nj2x2y2s3t2 <= 2
+x12 + 10000 binaryUp1j1nj2x2y2s3t2 >= 3
+y11 + 10000 binaryDp1j1nj2x2y2s3t2 >= 2
+y11 - 10000 binaryDp1j1nj2x2y2s3t2 <= 2
+y12 + 10000 binaryDp1j1nj2x2y2s3t2 >= 2
+y12 - 10000 binaryDp1j1nj2x2y2s3t2 <= 2
+x12 - 10000 binaryDp1j1nj2x2y2s3t2 <= 2
+x11 + 10000 binaryDp1j1nj2x2y2s3t2 >= 3
+y12 + 10000 binaryUp1j2nj3x2y2s3t2 >= 2
+y12 - 10000 binaryUp1j2nj3x2y2s3t2 <=  2
+y13 + 10000 binaryUp1j2nj3x2y2s3t2 >= 2
+y13 - 10000 binaryUp1j2nj3x2y2s3t2 <= 2
+x12 - 10000 binaryUp1j2nj3x2y2s3t2 <= 2
+x13 + 10000 binaryUp1j2nj3x2y2s3t2 >= 3
+y12 + 10000 binaryDp1j2nj3x2y2s3t2 >= 2
+y12 - 10000 binaryDp1j2nj3x2y2s3t2 <= 2
+y13 + 10000 binaryDp1j2nj3x2y2s3t2 >= 2
+y13 - 10000 binaryDp1j2nj3x2y2s3t2 <= 2
+x13 - 10000 binaryDp1j2nj3x2y2s3t2 <= 2
+x12 + 10000 binaryDp1j2nj3x2y2s3t2 >= 3
+y13 + 10000 binaryUp1j3nj4x2y2s3t2 >= 2
+y13 - 10000 binaryUp1j3nj4x2y2s3t2 <=  2
+y14 + 10000 binaryUp1j3nj4x2y2s3t2 >= 2
+y14 - 10000 binaryUp1j3nj4x2y2s3t2 <= 2
+x13 - 10000 binaryUp1j3nj4x2y2s3t2 <= 2
+x14 + 10000 binaryUp1j3nj4x2y2s3t2 >= 3
+y13 + 10000 binaryDp1j3nj4x2y2s3t2 >= 2
+y13 - 10000 binaryDp1j3nj4x2y2s3t2 <= 2
+y14 + 10000 binaryDp1j3nj4x2y2s3t2 >= 2
+y14 - 10000 binaryDp1j3nj4x2y2s3t2 <= 2
+x14 - 10000 binaryDp1j3nj4x2y2s3t2 <= 2
+x13 + 10000 binaryDp1j3nj4x2y2s3t2 >= 3
+y14 + 10000 binaryUp1j4nj5x2y2s3t2 >= 2
+y14 - 10000 binaryUp1j4nj5x2y2s3t2 <=  2
+y15 + 10000 binaryUp1j4nj5x2y2s3t2 >= 2
+y15 - 10000 binaryUp1j4nj5x2y2s3t2 <= 2
+x14 - 10000 binaryUp1j4nj5x2y2s3t2 <= 2
+x15 + 10000 binaryUp1j4nj5x2y2s3t2 >= 3
+y14 + 10000 binaryDp1j4nj5x2y2s3t2 >= 2
+y14 - 10000 binaryDp1j4nj5x2y2s3t2 <= 2
+y15 + 10000 binaryDp1j4nj5x2y2s3t2 >= 2
+y15 - 10000 binaryDp1j4nj5x2y2s3t2 <= 2
+x15 - 10000 binaryDp1j4nj5x2y2s3t2 <= 2
+x14 + 10000 binaryDp1j4nj5x2y2s3t2 >= 3
+y15 + 10000 binaryUp1j5nj6x2y2s3t2 >= 2
+y15 - 10000 binaryUp1j5nj6x2y2s3t2 <=  2
+y16 + 10000 binaryUp1j5nj6x2y2s3t2 >= 2
+y16 - 10000 binaryUp1j5nj6x2y2s3t2 <= 2
+x15 - 10000 binaryUp1j5nj6x2y2s3t2 <= 2
+x16 + 10000 binaryUp1j5nj6x2y2s3t2 >= 3
+y15 + 10000 binaryDp1j5nj6x2y2s3t2 >= 2
+y15 - 10000 binaryDp1j5nj6x2y2s3t2 <= 2
+y16 + 10000 binaryDp1j5nj6x2y2s3t2 >= 2
+y16 - 10000 binaryDp1j5nj6x2y2s3t2 <= 2
+x16 - 10000 binaryDp1j5nj6x2y2s3t2 <= 2
+x15 + 10000 binaryDp1j5nj6x2y2s3t2 >= 3
+y16 + 10000 binaryUp1j6nj7x2y2s3t2 >= 2
+y16 - 10000 binaryUp1j6nj7x2y2s3t2 <=  2
+y17 + 10000 binaryUp1j6nj7x2y2s3t2 >= 2
+y17 - 10000 binaryUp1j6nj7x2y2s3t2 <= 2
+x16 - 10000 binaryUp1j6nj7x2y2s3t2 <= 2
+x17 + 10000 binaryUp1j6nj7x2y2s3t2 >= 3
+y16 + 10000 binaryDp1j6nj7x2y2s3t2 >= 2
+y16 - 10000 binaryDp1j6nj7x2y2s3t2 <= 2
+y17 + 10000 binaryDp1j6nj7x2y2s3t2 >= 2
+y17 - 10000 binaryDp1j6nj7x2y2s3t2 <= 2
+x17 - 10000 binaryDp1j6nj7x2y2s3t2 <= 2
+x16 + 10000 binaryDp1j6nj7x2y2s3t2 >= 3
+y17 + 10000 binaryUp1j7nj8x2y2s3t2 >= 2
+y17 - 10000 binaryUp1j7nj8x2y2s3t2 <=  2
+y18 + 10000 binaryUp1j7nj8x2y2s3t2 >= 2
+y18 - 10000 binaryUp1j7nj8x2y2s3t2 <= 2
+x17 - 10000 binaryUp1j7nj8x2y2s3t2 <= 2
+x18 + 10000 binaryUp1j7nj8x2y2s3t2 >= 3
+y17 + 10000 binaryDp1j7nj8x2y2s3t2 >= 2
+y17 - 10000 binaryDp1j7nj8x2y2s3t2 <= 2
+y18 + 10000 binaryDp1j7nj8x2y2s3t2 >= 2
+y18 - 10000 binaryDp1j7nj8x2y2s3t2 <= 2
+x18 - 10000 binaryDp1j7nj8x2y2s3t2 <= 2
+x17 + 10000 binaryDp1j7nj8x2y2s3t2 >= 3
+y18 + 10000 binaryUp1j8nj9x2y2s3t2 >= 2
+y18 - 10000 binaryUp1j8nj9x2y2s3t2 <=  2
+y19 + 10000 binaryUp1j8nj9x2y2s3t2 >= 2
+y19 - 10000 binaryUp1j8nj9x2y2s3t2 <= 2
+x18 - 10000 binaryUp1j8nj9x2y2s3t2 <= 2
+x19 + 10000 binaryUp1j8nj9x2y2s3t2 >= 3
+y18 + 10000 binaryDp1j8nj9x2y2s3t2 >= 2
+y18 - 10000 binaryDp1j8nj9x2y2s3t2 <= 2
+y19 + 10000 binaryDp1j8nj9x2y2s3t2 >= 2
+y19 - 10000 binaryDp1j8nj9x2y2s3t2 <= 2
+x19 - 10000 binaryDp1j8nj9x2y2s3t2 <= 2
+x18 + 10000 binaryDp1j8nj9x2y2s3t2 >= 3
+ + binaryUp0j0nj1x2y2s3t2 + binaryDp0j0nj1x2y2s3t2 + binaryUp0j1nj2x2y2s3t2 + binaryDp0j1nj2x2y2s3t2 + binaryUp0j2nj3x2y2s3t2 + binaryDp0j2nj3x2y2s3t2 + binaryUp0j3nj4x2y2s3t2 + binaryDp0j3nj4x2y2s3t2 + binaryUp0j4nj5x2y2s3t2 + binaryDp0j4nj5x2y2s3t2 + binaryUp0j5nj6x2y2s3t2 + binaryDp0j5nj6x2y2s3t2 + binaryUp0j6nj7x2y2s3t2 + binaryDp0j6nj7x2y2s3t2 + binaryUp0j7nj8x2y2s3t2 + binaryDp0j7nj8x2y2s3t2 + binaryUp0j8nj9x2y2s3t2 + binaryDp0j8nj9x2y2s3t2 + binaryUp1j0nj1x2y2s3t2 + binaryDp1j0nj1x2y2s3t2 + binaryUp1j1nj2x2y2s3t2 + binaryDp1j1nj2x2y2s3t2 + binaryUp1j2nj3x2y2s3t2 + binaryDp1j2nj3x2y2s3t2 + binaryUp1j3nj4x2y2s3t2 + binaryDp1j3nj4x2y2s3t2 + binaryUp1j4nj5x2y2s3t2 + binaryDp1j4nj5x2y2s3t2 + binaryUp1j5nj6x2y2s3t2 + binaryDp1j5nj6x2y2s3t2 + binaryUp1j6nj7x2y2s3t2 + binaryDp1j6nj7x2y2s3t2 + binaryUp1j7nj8x2y2s3t2 + binaryDp1j7nj8x2y2s3t2 + binaryUp1j8nj9x2y2s3t2 + binaryDp1j8nj9x2y2s3t2 <= 35
+x00 + 10000 binaryLp0j0nj1x4y2s4t3 >= 4
+x00 - 10000 binaryLp0j0nj1x4y2s4t3 <= 4
+x01 + 10000 binaryLp0j0nj1x4y2s4t3 >= 4
+x01 - 10000 binaryLp0j0nj1x4y2s4t3 <= 4
+y00 - 10000 binaryLp0j0nj1x4y2s4t3 <= 2
+y01 + 10000 binaryLp0j0nj1x4y2s4t3 >= 3
+x00 + 10000 binaryRp0j0nj1x4y2s4t3 >= 4
+x00 - 10000 binaryRp0j0nj1x4y2s4t3 <= 4
+x01 + 10000 binaryRp0j0nj1x4y2s4t3 >= 4
+x01 - 10000 binaryRp0j0nj1x4y2s4t3 <= 4
+y01 - 10000 binaryRp0j0nj1x4y2s4t3 <= 2
+y00 + 10000 binaryRp0j0nj1x4y2s4t3 >= 3
+x01 + 10000 binaryLp0j1nj2x4y2s4t3 >= 4
+x01 - 10000 binaryLp0j1nj2x4y2s4t3 <= 4
+x02 + 10000 binaryLp0j1nj2x4y2s4t3 >= 4
+x02 - 10000 binaryLp0j1nj2x4y2s4t3 <= 4
+y01 - 10000 binaryLp0j1nj2x4y2s4t3 <= 2
+y02 + 10000 binaryLp0j1nj2x4y2s4t3 >= 3
+x01 + 10000 binaryRp0j1nj2x4y2s4t3 >= 4
+x01 - 10000 binaryRp0j1nj2x4y2s4t3 <= 4
+x02 + 10000 binaryRp0j1nj2x4y2s4t3 >= 4
+x02 - 10000 binaryRp0j1nj2x4y2s4t3 <= 4
+y02 - 10000 binaryRp0j1nj2x4y2s4t3 <= 2
+y01 + 10000 binaryRp0j1nj2x4y2s4t3 >= 3
+x02 + 10000 binaryLp0j2nj3x4y2s4t3 >= 4
+x02 - 10000 binaryLp0j2nj3x4y2s4t3 <= 4
+x03 + 10000 binaryLp0j2nj3x4y2s4t3 >= 4
+x03 - 10000 binaryLp0j2nj3x4y2s4t3 <= 4
+y02 - 10000 binaryLp0j2nj3x4y2s4t3 <= 2
+y03 + 10000 binaryLp0j2nj3x4y2s4t3 >= 3
+x02 + 10000 binaryRp0j2nj3x4y2s4t3 >= 4
+x02 - 10000 binaryRp0j2nj3x4y2s4t3 <= 4
+x03 + 10000 binaryRp0j2nj3x4y2s4t3 >= 4
+x03 - 10000 binaryRp0j2nj3x4y2s4t3 <= 4
+y03 - 10000 binaryRp0j2nj3x4y2s4t3 <= 2
+y02 + 10000 binaryRp0j2nj3x4y2s4t3 >= 3
+x03 + 10000 binaryLp0j3nj4x4y2s4t3 >= 4
+x03 - 10000 binaryLp0j3nj4x4y2s4t3 <= 4
+x04 + 10000 binaryLp0j3nj4x4y2s4t3 >= 4
+x04 - 10000 binaryLp0j3nj4x4y2s4t3 <= 4
+y03 - 10000 binaryLp0j3nj4x4y2s4t3 <= 2
+y04 + 10000 binaryLp0j3nj4x4y2s4t3 >= 3
+x03 + 10000 binaryRp0j3nj4x4y2s4t3 >= 4
+x03 - 10000 binaryRp0j3nj4x4y2s4t3 <= 4
+x04 + 10000 binaryRp0j3nj4x4y2s4t3 >= 4
+x04 - 10000 binaryRp0j3nj4x4y2s4t3 <= 4
+y04 - 10000 binaryRp0j3nj4x4y2s4t3 <= 2
+y03 + 10000 binaryRp0j3nj4x4y2s4t3 >= 3
+x04 + 10000 binaryLp0j4nj5x4y2s4t3 >= 4
+x04 - 10000 binaryLp0j4nj5x4y2s4t3 <= 4
+x05 + 10000 binaryLp0j4nj5x4y2s4t3 >= 4
+x05 - 10000 binaryLp0j4nj5x4y2s4t3 <= 4
+y04 - 10000 binaryLp0j4nj5x4y2s4t3 <= 2
+y05 + 10000 binaryLp0j4nj5x4y2s4t3 >= 3
+x04 + 10000 binaryRp0j4nj5x4y2s4t3 >= 4
+x04 - 10000 binaryRp0j4nj5x4y2s4t3 <= 4
+x05 + 10000 binaryRp0j4nj5x4y2s4t3 >= 4
+x05 - 10000 binaryRp0j4nj5x4y2s4t3 <= 4
+y05 - 10000 binaryRp0j4nj5x4y2s4t3 <= 2
+y04 + 10000 binaryRp0j4nj5x4y2s4t3 >= 3
+x05 + 10000 binaryLp0j5nj6x4y2s4t3 >= 4
+x05 - 10000 binaryLp0j5nj6x4y2s4t3 <= 4
+x06 + 10000 binaryLp0j5nj6x4y2s4t3 >= 4
+x06 - 10000 binaryLp0j5nj6x4y2s4t3 <= 4
+y05 - 10000 binaryLp0j5nj6x4y2s4t3 <= 2
+y06 + 10000 binaryLp0j5nj6x4y2s4t3 >= 3
+x05 + 10000 binaryRp0j5nj6x4y2s4t3 >= 4
+x05 - 10000 binaryRp0j5nj6x4y2s4t3 <= 4
+x06 + 10000 binaryRp0j5nj6x4y2s4t3 >= 4
+x06 - 10000 binaryRp0j5nj6x4y2s4t3 <= 4
+y06 - 10000 binaryRp0j5nj6x4y2s4t3 <= 2
+y05 + 10000 binaryRp0j5nj6x4y2s4t3 >= 3
+x06 + 10000 binaryLp0j6nj7x4y2s4t3 >= 4
+x06 - 10000 binaryLp0j6nj7x4y2s4t3 <= 4
+x07 + 10000 binaryLp0j6nj7x4y2s4t3 >= 4
+x07 - 10000 binaryLp0j6nj7x4y2s4t3 <= 4
+y06 - 10000 binaryLp0j6nj7x4y2s4t3 <= 2
+y07 + 10000 binaryLp0j6nj7x4y2s4t3 >= 3
+x06 + 10000 binaryRp0j6nj7x4y2s4t3 >= 4
+x06 - 10000 binaryRp0j6nj7x4y2s4t3 <= 4
+x07 + 10000 binaryRp0j6nj7x4y2s4t3 >= 4
+x07 - 10000 binaryRp0j6nj7x4y2s4t3 <= 4
+y07 - 10000 binaryRp0j6nj7x4y2s4t3 <= 2
+y06 + 10000 binaryRp0j6nj7x4y2s4t3 >= 3
+x07 + 10000 binaryLp0j7nj8x4y2s4t3 >= 4
+x07 - 10000 binaryLp0j7nj8x4y2s4t3 <= 4
+x08 + 10000 binaryLp0j7nj8x4y2s4t3 >= 4
+x08 - 10000 binaryLp0j7nj8x4y2s4t3 <= 4
+y07 - 10000 binaryLp0j7nj8x4y2s4t3 <= 2
+y08 + 10000 binaryLp0j7nj8x4y2s4t3 >= 3
+x07 + 10000 binaryRp0j7nj8x4y2s4t3 >= 4
+x07 - 10000 binaryRp0j7nj8x4y2s4t3 <= 4
+x08 + 10000 binaryRp0j7nj8x4y2s4t3 >= 4
+x08 - 10000 binaryRp0j7nj8x4y2s4t3 <= 4
+y08 - 10000 binaryRp0j7nj8x4y2s4t3 <= 2
+y07 + 10000 binaryRp0j7nj8x4y2s4t3 >= 3
+x08 + 10000 binaryLp0j8nj9x4y2s4t3 >= 4
+x08 - 10000 binaryLp0j8nj9x4y2s4t3 <= 4
+x09 + 10000 binaryLp0j8nj9x4y2s4t3 >= 4
+x09 - 10000 binaryLp0j8nj9x4y2s4t3 <= 4
+y08 - 10000 binaryLp0j8nj9x4y2s4t3 <= 2
+y09 + 10000 binaryLp0j8nj9x4y2s4t3 >= 3
+x08 + 10000 binaryRp0j8nj9x4y2s4t3 >= 4
+x08 - 10000 binaryRp0j8nj9x4y2s4t3 <= 4
+x09 + 10000 binaryRp0j8nj9x4y2s4t3 >= 4
+x09 - 10000 binaryRp0j8nj9x4y2s4t3 <= 4
+y09 - 10000 binaryRp0j8nj9x4y2s4t3 <= 2
+y08 + 10000 binaryRp0j8nj9x4y2s4t3 >= 3
+x10 + 10000 binaryLp1j0nj1x4y2s4t3 >= 4
+x10 - 10000 binaryLp1j0nj1x4y2s4t3 <= 4
+x11 + 10000 binaryLp1j0nj1x4y2s4t3 >= 4
+x11 - 10000 binaryLp1j0nj1x4y2s4t3 <= 4
+y10 - 10000 binaryLp1j0nj1x4y2s4t3 <= 2
+y11 + 10000 binaryLp1j0nj1x4y2s4t3 >= 3
+x10 + 10000 binaryRp1j0nj1x4y2s4t3 >= 4
+x10 - 10000 binaryRp1j0nj1x4y2s4t3 <= 4
+x11 + 10000 binaryRp1j0nj1x4y2s4t3 >= 4
+x11 - 10000 binaryRp1j0nj1x4y2s4t3 <= 4
+y11 - 10000 binaryRp1j0nj1x4y2s4t3 <= 2
+y10 + 10000 binaryRp1j0nj1x4y2s4t3 >= 3
+x11 + 10000 binaryLp1j1nj2x4y2s4t3 >= 4
+x11 - 10000 binaryLp1j1nj2x4y2s4t3 <= 4
+x12 + 10000 binaryLp1j1nj2x4y2s4t3 >= 4
+x12 - 10000 binaryLp1j1nj2x4y2s4t3 <= 4
+y11 - 10000 binaryLp1j1nj2x4y2s4t3 <= 2
+y12 + 10000 binaryLp1j1nj2x4y2s4t3 >= 3
+x11 + 10000 binaryRp1j1nj2x4y2s4t3 >= 4
+x11 - 10000 binaryRp1j1nj2x4y2s4t3 <= 4
+x12 + 10000 binaryRp1j1nj2x4y2s4t3 >= 4
+x12 - 10000 binaryRp1j1nj2x4y2s4t3 <= 4
+y12 - 10000 binaryRp1j1nj2x4y2s4t3 <= 2
+y11 + 10000 binaryRp1j1nj2x4y2s4t3 >= 3
+x12 + 10000 binaryLp1j2nj3x4y2s4t3 >= 4
+x12 - 10000 binaryLp1j2nj3x4y2s4t3 <= 4
+x13 + 10000 binaryLp1j2nj3x4y2s4t3 >= 4
+x13 - 10000 binaryLp1j2nj3x4y2s4t3 <= 4
+y12 - 10000 binaryLp1j2nj3x4y2s4t3 <= 2
+y13 + 10000 binaryLp1j2nj3x4y2s4t3 >= 3
+x12 + 10000 binaryRp1j2nj3x4y2s4t3 >= 4
+x12 - 10000 binaryRp1j2nj3x4y2s4t3 <= 4
+x13 + 10000 binaryRp1j2nj3x4y2s4t3 >= 4
+x13 - 10000 binaryRp1j2nj3x4y2s4t3 <= 4
+y13 - 10000 binaryRp1j2nj3x4y2s4t3 <= 2
+y12 + 10000 binaryRp1j2nj3x4y2s4t3 >= 3
+x13 + 10000 binaryLp1j3nj4x4y2s4t3 >= 4
+x13 - 10000 binaryLp1j3nj4x4y2s4t3 <= 4
+x14 + 10000 binaryLp1j3nj4x4y2s4t3 >= 4
+x14 - 10000 binaryLp1j3nj4x4y2s4t3 <= 4
+y13 - 10000 binaryLp1j3nj4x4y2s4t3 <= 2
+y14 + 10000 binaryLp1j3nj4x4y2s4t3 >= 3
+x13 + 10000 binaryRp1j3nj4x4y2s4t3 >= 4
+x13 - 10000 binaryRp1j3nj4x4y2s4t3 <= 4
+x14 + 10000 binaryRp1j3nj4x4y2s4t3 >= 4
+x14 - 10000 binaryRp1j3nj4x4y2s4t3 <= 4
+y14 - 10000 binaryRp1j3nj4x4y2s4t3 <= 2
+y13 + 10000 binaryRp1j3nj4x4y2s4t3 >= 3
+x14 + 10000 binaryLp1j4nj5x4y2s4t3 >= 4
+x14 - 10000 binaryLp1j4nj5x4y2s4t3 <= 4
+x15 + 10000 binaryLp1j4nj5x4y2s4t3 >= 4
+x15 - 10000 binaryLp1j4nj5x4y2s4t3 <= 4
+y14 - 10000 binaryLp1j4nj5x4y2s4t3 <= 2
+y15 + 10000 binaryLp1j4nj5x4y2s4t3 >= 3
+x14 + 10000 binaryRp1j4nj5x4y2s4t3 >= 4
+x14 - 10000 binaryRp1j4nj5x4y2s4t3 <= 4
+x15 + 10000 binaryRp1j4nj5x4y2s4t3 >= 4
+x15 - 10000 binaryRp1j4nj5x4y2s4t3 <= 4
+y15 - 10000 binaryRp1j4nj5x4y2s4t3 <= 2
+y14 + 10000 binaryRp1j4nj5x4y2s4t3 >= 3
+x15 + 10000 binaryLp1j5nj6x4y2s4t3 >= 4
+x15 - 10000 binaryLp1j5nj6x4y2s4t3 <= 4
+x16 + 10000 binaryLp1j5nj6x4y2s4t3 >= 4
+x16 - 10000 binaryLp1j5nj6x4y2s4t3 <= 4
+y15 - 10000 binaryLp1j5nj6x4y2s4t3 <= 2
+y16 + 10000 binaryLp1j5nj6x4y2s4t3 >= 3
+x15 + 10000 binaryRp1j5nj6x4y2s4t3 >= 4
+x15 - 10000 binaryRp1j5nj6x4y2s4t3 <= 4
+x16 + 10000 binaryRp1j5nj6x4y2s4t3 >= 4
+x16 - 10000 binaryRp1j5nj6x4y2s4t3 <= 4
+y16 - 10000 binaryRp1j5nj6x4y2s4t3 <= 2
+y15 + 10000 binaryRp1j5nj6x4y2s4t3 >= 3
+x16 + 10000 binaryLp1j6nj7x4y2s4t3 >= 4
+x16 - 10000 binaryLp1j6nj7x4y2s4t3 <= 4
+x17 + 10000 binaryLp1j6nj7x4y2s4t3 >= 4
+x17 - 10000 binaryLp1j6nj7x4y2s4t3 <= 4
+y16 - 10000 binaryLp1j6nj7x4y2s4t3 <= 2
+y17 + 10000 binaryLp1j6nj7x4y2s4t3 >= 3
+x16 + 10000 binaryRp1j6nj7x4y2s4t3 >= 4
+x16 - 10000 binaryRp1j6nj7x4y2s4t3 <= 4
+x17 + 10000 binaryRp1j6nj7x4y2s4t3 >= 4
+x17 - 10000 binaryRp1j6nj7x4y2s4t3 <= 4
+y17 - 10000 binaryRp1j6nj7x4y2s4t3 <= 2
+y16 + 10000 binaryRp1j6nj7x4y2s4t3 >= 3
+x17 + 10000 binaryLp1j7nj8x4y2s4t3 >= 4
+x17 - 10000 binaryLp1j7nj8x4y2s4t3 <= 4
+x18 + 10000 binaryLp1j7nj8x4y2s4t3 >= 4
+x18 - 10000 binaryLp1j7nj8x4y2s4t3 <= 4
+y17 - 10000 binaryLp1j7nj8x4y2s4t3 <= 2
+y18 + 10000 binaryLp1j7nj8x4y2s4t3 >= 3
+x17 + 10000 binaryRp1j7nj8x4y2s4t3 >= 4
+x17 - 10000 binaryRp1j7nj8x4y2s4t3 <= 4
+x18 + 10000 binaryRp1j7nj8x4y2s4t3 >= 4
+x18 - 10000 binaryRp1j7nj8x4y2s4t3 <= 4
+y18 - 10000 binaryRp1j7nj8x4y2s4t3 <= 2
+y17 + 10000 binaryRp1j7nj8x4y2s4t3 >= 3
+x18 + 10000 binaryLp1j8nj9x4y2s4t3 >= 4
+x18 - 10000 binaryLp1j8nj9x4y2s4t3 <= 4
+x19 + 10000 binaryLp1j8nj9x4y2s4t3 >= 4
+x19 - 10000 binaryLp1j8nj9x4y2s4t3 <= 4
+y18 - 10000 binaryLp1j8nj9x4y2s4t3 <= 2
+y19 + 10000 binaryLp1j8nj9x4y2s4t3 >= 3
+x18 + 10000 binaryRp1j8nj9x4y2s4t3 >= 4
+x18 - 10000 binaryRp1j8nj9x4y2s4t3 <= 4
+x19 + 10000 binaryRp1j8nj9x4y2s4t3 >= 4
+x19 - 10000 binaryRp1j8nj9x4y2s4t3 <= 4
+y19 - 10000 binaryRp1j8nj9x4y2s4t3 <= 2
+y18 + 10000 binaryRp1j8nj9x4y2s4t3 >= 3
+ + binaryLp0j0nj1x4y2s4t3 + binaryRp0j0nj1x4y2s4t3 + binaryLp0j1nj2x4y2s4t3 + binaryRp0j1nj2x4y2s4t3 + binaryLp0j2nj3x4y2s4t3 + binaryRp0j2nj3x4y2s4t3 + binaryLp0j3nj4x4y2s4t3 + binaryRp0j3nj4x4y2s4t3 + binaryLp0j4nj5x4y2s4t3 + binaryRp0j4nj5x4y2s4t3 + binaryLp0j5nj6x4y2s4t3 + binaryRp0j5nj6x4y2s4t3 + binaryLp0j6nj7x4y2s4t3 + binaryRp0j6nj7x4y2s4t3 + binaryLp0j7nj8x4y2s4t3 + binaryRp0j7nj8x4y2s4t3 + binaryLp0j8nj9x4y2s4t3 + binaryRp0j8nj9x4y2s4t3 + binaryLp1j0nj1x4y2s4t3 + binaryRp1j0nj1x4y2s4t3 + binaryLp1j1nj2x4y2s4t3 + binaryRp1j1nj2x4y2s4t3 + binaryLp1j2nj3x4y2s4t3 + binaryRp1j2nj3x4y2s4t3 + binaryLp1j3nj4x4y2s4t3 + binaryRp1j3nj4x4y2s4t3 + binaryLp1j4nj5x4y2s4t3 + binaryRp1j4nj5x4y2s4t3 + binaryLp1j5nj6x4y2s4t3 + binaryRp1j5nj6x4y2s4t3 + binaryLp1j6nj7x4y2s4t3 + binaryRp1j6nj7x4y2s4t3 + binaryLp1j7nj8x4y2s4t3 + binaryRp1j7nj8x4y2s4t3 + binaryLp1j8nj9x4y2s4t3 + binaryRp1j8nj9x4y2s4t3 <= 35
+x00 + 10000 binaryLp0j0nj1x4y3s4t4 >= 4
+x00 - 10000 binaryLp0j0nj1x4y3s4t4 <= 4
+x01 + 10000 binaryLp0j0nj1x4y3s4t4 >= 4
+x01 - 10000 binaryLp0j0nj1x4y3s4t4 <= 4
+y00 - 10000 binaryLp0j0nj1x4y3s4t4 <= 3
+y01 + 10000 binaryLp0j0nj1x4y3s4t4 >= 4
+x00 + 10000 binaryRp0j0nj1x4y3s4t4 >= 4
+x00 - 10000 binaryRp0j0nj1x4y3s4t4 <= 4
+x01 + 10000 binaryRp0j0nj1x4y3s4t4 >= 4
+x01 - 10000 binaryRp0j0nj1x4y3s4t4 <= 4
+y01 - 10000 binaryRp0j0nj1x4y3s4t4 <= 3
+y00 + 10000 binaryRp0j0nj1x4y3s4t4 >= 4
+x01 + 10000 binaryLp0j1nj2x4y3s4t4 >= 4
+x01 - 10000 binaryLp0j1nj2x4y3s4t4 <= 4
+x02 + 10000 binaryLp0j1nj2x4y3s4t4 >= 4
+x02 - 10000 binaryLp0j1nj2x4y3s4t4 <= 4
+y01 - 10000 binaryLp0j1nj2x4y3s4t4 <= 3
+y02 + 10000 binaryLp0j1nj2x4y3s4t4 >= 4
+x01 + 10000 binaryRp0j1nj2x4y3s4t4 >= 4
+x01 - 10000 binaryRp0j1nj2x4y3s4t4 <= 4
+x02 + 10000 binaryRp0j1nj2x4y3s4t4 >= 4
+x02 - 10000 binaryRp0j1nj2x4y3s4t4 <= 4
+y02 - 10000 binaryRp0j1nj2x4y3s4t4 <= 3
+y01 + 10000 binaryRp0j1nj2x4y3s4t4 >= 4
+x02 + 10000 binaryLp0j2nj3x4y3s4t4 >= 4
+x02 - 10000 binaryLp0j2nj3x4y3s4t4 <= 4
+x03 + 10000 binaryLp0j2nj3x4y3s4t4 >= 4
+x03 - 10000 binaryLp0j2nj3x4y3s4t4 <= 4
+y02 - 10000 binaryLp0j2nj3x4y3s4t4 <= 3
+y03 + 10000 binaryLp0j2nj3x4y3s4t4 >= 4
+x02 + 10000 binaryRp0j2nj3x4y3s4t4 >= 4
+x02 - 10000 binaryRp0j2nj3x4y3s4t4 <= 4
+x03 + 10000 binaryRp0j2nj3x4y3s4t4 >= 4
+x03 - 10000 binaryRp0j2nj3x4y3s4t4 <= 4
+y03 - 10000 binaryRp0j2nj3x4y3s4t4 <= 3
+y02 + 10000 binaryRp0j2nj3x4y3s4t4 >= 4
+x03 + 10000 binaryLp0j3nj4x4y3s4t4 >= 4
+x03 - 10000 binaryLp0j3nj4x4y3s4t4 <= 4
+x04 + 10000 binaryLp0j3nj4x4y3s4t4 >= 4
+x04 - 10000 binaryLp0j3nj4x4y3s4t4 <= 4
+y03 - 10000 binaryLp0j3nj4x4y3s4t4 <= 3
+y04 + 10000 binaryLp0j3nj4x4y3s4t4 >= 4
+x03 + 10000 binaryRp0j3nj4x4y3s4t4 >= 4
+x03 - 10000 binaryRp0j3nj4x4y3s4t4 <= 4
+x04 + 10000 binaryRp0j3nj4x4y3s4t4 >= 4
+x04 - 10000 binaryRp0j3nj4x4y3s4t4 <= 4
+y04 - 10000 binaryRp0j3nj4x4y3s4t4 <= 3
+y03 + 10000 binaryRp0j3nj4x4y3s4t4 >= 4
+x04 + 10000 binaryLp0j4nj5x4y3s4t4 >= 4
+x04 - 10000 binaryLp0j4nj5x4y3s4t4 <= 4
+x05 + 10000 binaryLp0j4nj5x4y3s4t4 >= 4
+x05 - 10000 binaryLp0j4nj5x4y3s4t4 <= 4
+y04 - 10000 binaryLp0j4nj5x4y3s4t4 <= 3
+y05 + 10000 binaryLp0j4nj5x4y3s4t4 >= 4
+x04 + 10000 binaryRp0j4nj5x4y3s4t4 >= 4
+x04 - 10000 binaryRp0j4nj5x4y3s4t4 <= 4
+x05 + 10000 binaryRp0j4nj5x4y3s4t4 >= 4
+x05 - 10000 binaryRp0j4nj5x4y3s4t4 <= 4
+y05 - 10000 binaryRp0j4nj5x4y3s4t4 <= 3
+y04 + 10000 binaryRp0j4nj5x4y3s4t4 >= 4
+x05 + 10000 binaryLp0j5nj6x4y3s4t4 >= 4
+x05 - 10000 binaryLp0j5nj6x4y3s4t4 <= 4
+x06 + 10000 binaryLp0j5nj6x4y3s4t4 >= 4
+x06 - 10000 binaryLp0j5nj6x4y3s4t4 <= 4
+y05 - 10000 binaryLp0j5nj6x4y3s4t4 <= 3
+y06 + 10000 binaryLp0j5nj6x4y3s4t4 >= 4
+x05 + 10000 binaryRp0j5nj6x4y3s4t4 >= 4
+x05 - 10000 binaryRp0j5nj6x4y3s4t4 <= 4
+x06 + 10000 binaryRp0j5nj6x4y3s4t4 >= 4
+x06 - 10000 binaryRp0j5nj6x4y3s4t4 <= 4
+y06 - 10000 binaryRp0j5nj6x4y3s4t4 <= 3
+y05 + 10000 binaryRp0j5nj6x4y3s4t4 >= 4
+x06 + 10000 binaryLp0j6nj7x4y3s4t4 >= 4
+x06 - 10000 binaryLp0j6nj7x4y3s4t4 <= 4
+x07 + 10000 binaryLp0j6nj7x4y3s4t4 >= 4
+x07 - 10000 binaryLp0j6nj7x4y3s4t4 <= 4
+y06 - 10000 binaryLp0j6nj7x4y3s4t4 <= 3
+y07 + 10000 binaryLp0j6nj7x4y3s4t4 >= 4
+x06 + 10000 binaryRp0j6nj7x4y3s4t4 >= 4
+x06 - 10000 binaryRp0j6nj7x4y3s4t4 <= 4
+x07 + 10000 binaryRp0j6nj7x4y3s4t4 >= 4
+x07 - 10000 binaryRp0j6nj7x4y3s4t4 <= 4
+y07 - 10000 binaryRp0j6nj7x4y3s4t4 <= 3
+y06 + 10000 binaryRp0j6nj7x4y3s4t4 >= 4
+x07 + 10000 binaryLp0j7nj8x4y3s4t4 >= 4
+x07 - 10000 binaryLp0j7nj8x4y3s4t4 <= 4
+x08 + 10000 binaryLp0j7nj8x4y3s4t4 >= 4
+x08 - 10000 binaryLp0j7nj8x4y3s4t4 <= 4
+y07 - 10000 binaryLp0j7nj8x4y3s4t4 <= 3
+y08 + 10000 binaryLp0j7nj8x4y3s4t4 >= 4
+x07 + 10000 binaryRp0j7nj8x4y3s4t4 >= 4
+x07 - 10000 binaryRp0j7nj8x4y3s4t4 <= 4
+x08 + 10000 binaryRp0j7nj8x4y3s4t4 >= 4
+x08 - 10000 binaryRp0j7nj8x4y3s4t4 <= 4
+y08 - 10000 binaryRp0j7nj8x4y3s4t4 <= 3
+y07 + 10000 binaryRp0j7nj8x4y3s4t4 >= 4
+x08 + 10000 binaryLp0j8nj9x4y3s4t4 >= 4
+x08 - 10000 binaryLp0j8nj9x4y3s4t4 <= 4
+x09 + 10000 binaryLp0j8nj9x4y3s4t4 >= 4
+x09 - 10000 binaryLp0j8nj9x4y3s4t4 <= 4
+y08 - 10000 binaryLp0j8nj9x4y3s4t4 <= 3
+y09 + 10000 binaryLp0j8nj9x4y3s4t4 >= 4
+x08 + 10000 binaryRp0j8nj9x4y3s4t4 >= 4
+x08 - 10000 binaryRp0j8nj9x4y3s4t4 <= 4
+x09 + 10000 binaryRp0j8nj9x4y3s4t4 >= 4
+x09 - 10000 binaryRp0j8nj9x4y3s4t4 <= 4
+y09 - 10000 binaryRp0j8nj9x4y3s4t4 <= 3
+y08 + 10000 binaryRp0j8nj9x4y3s4t4 >= 4
+x10 + 10000 binaryLp1j0nj1x4y3s4t4 >= 4
+x10 - 10000 binaryLp1j0nj1x4y3s4t4 <= 4
+x11 + 10000 binaryLp1j0nj1x4y3s4t4 >= 4
+x11 - 10000 binaryLp1j0nj1x4y3s4t4 <= 4
+y10 - 10000 binaryLp1j0nj1x4y3s4t4 <= 3
+y11 + 10000 binaryLp1j0nj1x4y3s4t4 >= 4
+x10 + 10000 binaryRp1j0nj1x4y3s4t4 >= 4
+x10 - 10000 binaryRp1j0nj1x4y3s4t4 <= 4
+x11 + 10000 binaryRp1j0nj1x4y3s4t4 >= 4
+x11 - 10000 binaryRp1j0nj1x4y3s4t4 <= 4
+y11 - 10000 binaryRp1j0nj1x4y3s4t4 <= 3
+y10 + 10000 binaryRp1j0nj1x4y3s4t4 >= 4
+x11 + 10000 binaryLp1j1nj2x4y3s4t4 >= 4
+x11 - 10000 binaryLp1j1nj2x4y3s4t4 <= 4
+x12 + 10000 binaryLp1j1nj2x4y3s4t4 >= 4
+x12 - 10000 binaryLp1j1nj2x4y3s4t4 <= 4
+y11 - 10000 binaryLp1j1nj2x4y3s4t4 <= 3
+y12 + 10000 binaryLp1j1nj2x4y3s4t4 >= 4
+x11 + 10000 binaryRp1j1nj2x4y3s4t4 >= 4
+x11 - 10000 binaryRp1j1nj2x4y3s4t4 <= 4
+x12 + 10000 binaryRp1j1nj2x4y3s4t4 >= 4
+x12 - 10000 binaryRp1j1nj2x4y3s4t4 <= 4
+y12 - 10000 binaryRp1j1nj2x4y3s4t4 <= 3
+y11 + 10000 binaryRp1j1nj2x4y3s4t4 >= 4
+x12 + 10000 binaryLp1j2nj3x4y3s4t4 >= 4
+x12 - 10000 binaryLp1j2nj3x4y3s4t4 <= 4
+x13 + 10000 binaryLp1j2nj3x4y3s4t4 >= 4
+x13 - 10000 binaryLp1j2nj3x4y3s4t4 <= 4
+y12 - 10000 binaryLp1j2nj3x4y3s4t4 <= 3
+y13 + 10000 binaryLp1j2nj3x4y3s4t4 >= 4
+x12 + 10000 binaryRp1j2nj3x4y3s4t4 >= 4
+x12 - 10000 binaryRp1j2nj3x4y3s4t4 <= 4
+x13 + 10000 binaryRp1j2nj3x4y3s4t4 >= 4
+x13 - 10000 binaryRp1j2nj3x4y3s4t4 <= 4
+y13 - 10000 binaryRp1j2nj3x4y3s4t4 <= 3
+y12 + 10000 binaryRp1j2nj3x4y3s4t4 >= 4
+x13 + 10000 binaryLp1j3nj4x4y3s4t4 >= 4
+x13 - 10000 binaryLp1j3nj4x4y3s4t4 <= 4
+x14 + 10000 binaryLp1j3nj4x4y3s4t4 >= 4
+x14 - 10000 binaryLp1j3nj4x4y3s4t4 <= 4
+y13 - 10000 binaryLp1j3nj4x4y3s4t4 <= 3
+y14 + 10000 binaryLp1j3nj4x4y3s4t4 >= 4
+x13 + 10000 binaryRp1j3nj4x4y3s4t4 >= 4
+x13 - 10000 binaryRp1j3nj4x4y3s4t4 <= 4
+x14 + 10000 binaryRp1j3nj4x4y3s4t4 >= 4
+x14 - 10000 binaryRp1j3nj4x4y3s4t4 <= 4
+y14 - 10000 binaryRp1j3nj4x4y3s4t4 <= 3
+y13 + 10000 binaryRp1j3nj4x4y3s4t4 >= 4
+x14 + 10000 binaryLp1j4nj5x4y3s4t4 >= 4
+x14 - 10000 binaryLp1j4nj5x4y3s4t4 <= 4
+x15 + 10000 binaryLp1j4nj5x4y3s4t4 >= 4
+x15 - 10000 binaryLp1j4nj5x4y3s4t4 <= 4
+y14 - 10000 binaryLp1j4nj5x4y3s4t4 <= 3
+y15 + 10000 binaryLp1j4nj5x4y3s4t4 >= 4
+x14 + 10000 binaryRp1j4nj5x4y3s4t4 >= 4
+x14 - 10000 binaryRp1j4nj5x4y3s4t4 <= 4
+x15 + 10000 binaryRp1j4nj5x4y3s4t4 >= 4
+x15 - 10000 binaryRp1j4nj5x4y3s4t4 <= 4
+y15 - 10000 binaryRp1j4nj5x4y3s4t4 <= 3
+y14 + 10000 binaryRp1j4nj5x4y3s4t4 >= 4
+x15 + 10000 binaryLp1j5nj6x4y3s4t4 >= 4
+x15 - 10000 binaryLp1j5nj6x4y3s4t4 <= 4
+x16 + 10000 binaryLp1j5nj6x4y3s4t4 >= 4
+x16 - 10000 binaryLp1j5nj6x4y3s4t4 <= 4
+y15 - 10000 binaryLp1j5nj6x4y3s4t4 <= 3
+y16 + 10000 binaryLp1j5nj6x4y3s4t4 >= 4
+x15 + 10000 binaryRp1j5nj6x4y3s4t4 >= 4
+x15 - 10000 binaryRp1j5nj6x4y3s4t4 <= 4
+x16 + 10000 binaryRp1j5nj6x4y3s4t4 >= 4
+x16 - 10000 binaryRp1j5nj6x4y3s4t4 <= 4
+y16 - 10000 binaryRp1j5nj6x4y3s4t4 <= 3
+y15 + 10000 binaryRp1j5nj6x4y3s4t4 >= 4
+x16 + 10000 binaryLp1j6nj7x4y3s4t4 >= 4
+x16 - 10000 binaryLp1j6nj7x4y3s4t4 <= 4
+x17 + 10000 binaryLp1j6nj7x4y3s4t4 >= 4
+x17 - 10000 binaryLp1j6nj7x4y3s4t4 <= 4
+y16 - 10000 binaryLp1j6nj7x4y3s4t4 <= 3
+y17 + 10000 binaryLp1j6nj7x4y3s4t4 >= 4
+x16 + 10000 binaryRp1j6nj7x4y3s4t4 >= 4
+x16 - 10000 binaryRp1j6nj7x4y3s4t4 <= 4
+x17 + 10000 binaryRp1j6nj7x4y3s4t4 >= 4
+x17 - 10000 binaryRp1j6nj7x4y3s4t4 <= 4
+y17 - 10000 binaryRp1j6nj7x4y3s4t4 <= 3
+y16 + 10000 binaryRp1j6nj7x4y3s4t4 >= 4
+x17 + 10000 binaryLp1j7nj8x4y3s4t4 >= 4
+x17 - 10000 binaryLp1j7nj8x4y3s4t4 <= 4
+x18 + 10000 binaryLp1j7nj8x4y3s4t4 >= 4
+x18 - 10000 binaryLp1j7nj8x4y3s4t4 <= 4
+y17 - 10000 binaryLp1j7nj8x4y3s4t4 <= 3
+y18 + 10000 binaryLp1j7nj8x4y3s4t4 >= 4
+x17 + 10000 binaryRp1j7nj8x4y3s4t4 >= 4
+x17 - 10000 binaryRp1j7nj8x4y3s4t4 <= 4
+x18 + 10000 binaryRp1j7nj8x4y3s4t4 >= 4
+x18 - 10000 binaryRp1j7nj8x4y3s4t4 <= 4
+y18 - 10000 binaryRp1j7nj8x4y3s4t4 <= 3
+y17 + 10000 binaryRp1j7nj8x4y3s4t4 >= 4
+x18 + 10000 binaryLp1j8nj9x4y3s4t4 >= 4
+x18 - 10000 binaryLp1j8nj9x4y3s4t4 <= 4
+x19 + 10000 binaryLp1j8nj9x4y3s4t4 >= 4
+x19 - 10000 binaryLp1j8nj9x4y3s4t4 <= 4
+y18 - 10000 binaryLp1j8nj9x4y3s4t4 <= 3
+y19 + 10000 binaryLp1j8nj9x4y3s4t4 >= 4
+x18 + 10000 binaryRp1j8nj9x4y3s4t4 >= 4
+x18 - 10000 binaryRp1j8nj9x4y3s4t4 <= 4
+x19 + 10000 binaryRp1j8nj9x4y3s4t4 >= 4
+x19 - 10000 binaryRp1j8nj9x4y3s4t4 <= 4
+y19 - 10000 binaryRp1j8nj9x4y3s4t4 <= 3
+y18 + 10000 binaryRp1j8nj9x4y3s4t4 >= 4
+ + binaryLp0j0nj1x4y3s4t4 + binaryRp0j0nj1x4y3s4t4 + binaryLp0j1nj2x4y3s4t4 + binaryRp0j1nj2x4y3s4t4 + binaryLp0j2nj3x4y3s4t4 + binaryRp0j2nj3x4y3s4t4 + binaryLp0j3nj4x4y3s4t4 + binaryRp0j3nj4x4y3s4t4 + binaryLp0j4nj5x4y3s4t4 + binaryRp0j4nj5x4y3s4t4 + binaryLp0j5nj6x4y3s4t4 + binaryRp0j5nj6x4y3s4t4 + binaryLp0j6nj7x4y3s4t4 + binaryRp0j6nj7x4y3s4t4 + binaryLp0j7nj8x4y3s4t4 + binaryRp0j7nj8x4y3s4t4 + binaryLp0j8nj9x4y3s4t4 + binaryRp0j8nj9x4y3s4t4 + binaryLp1j0nj1x4y3s4t4 + binaryRp1j0nj1x4y3s4t4 + binaryLp1j1nj2x4y3s4t4 + binaryRp1j1nj2x4y3s4t4 + binaryLp1j2nj3x4y3s4t4 + binaryRp1j2nj3x4y3s4t4 + binaryLp1j3nj4x4y3s4t4 + binaryRp1j3nj4x4y3s4t4 + binaryLp1j4nj5x4y3s4t4 + binaryRp1j4nj5x4y3s4t4 + binaryLp1j5nj6x4y3s4t4 + binaryRp1j5nj6x4y3s4t4 + binaryLp1j6nj7x4y3s4t4 + binaryRp1j6nj7x4y3s4t4 + binaryLp1j7nj8x4y3s4t4 + binaryRp1j7nj8x4y3s4t4 + binaryLp1j8nj9x4y3s4t4 + binaryRp1j8nj9x4y3s4t4 <= 35
+y00 + 10000 binaryUp0j0nj1x3y3s4t3 >= 3
+y00 - 10000 binaryUp0j0nj1x3y3s4t3 <=  3
+y01 + 10000 binaryUp0j0nj1x3y3s4t3 >= 3
+y01 - 10000 binaryUp0j0nj1x3y3s4t3 <= 3
+x00 - 10000 binaryUp0j0nj1x3y3s4t3 <= 3
+x01 + 10000 binaryUp0j0nj1x3y3s4t3 >= 4
+y00 + 10000 binaryDp0j0nj1x3y3s4t3 >= 3
+y00 - 10000 binaryDp0j0nj1x3y3s4t3 <= 3
+y01 + 10000 binaryDp0j0nj1x3y3s4t3 >= 3
+y01 - 10000 binaryDp0j0nj1x3y3s4t3 <= 3
+x01 - 10000 binaryDp0j0nj1x3y3s4t3 <= 3
+x00 + 10000 binaryDp0j0nj1x3y3s4t3 >= 4
+y01 + 10000 binaryUp0j1nj2x3y3s4t3 >= 3
+y01 - 10000 binaryUp0j1nj2x3y3s4t3 <=  3
+y02 + 10000 binaryUp0j1nj2x3y3s4t3 >= 3
+y02 - 10000 binaryUp0j1nj2x3y3s4t3 <= 3
+x01 - 10000 binaryUp0j1nj2x3y3s4t3 <= 3
+x02 + 10000 binaryUp0j1nj2x3y3s4t3 >= 4
+y01 + 10000 binaryDp0j1nj2x3y3s4t3 >= 3
+y01 - 10000 binaryDp0j1nj2x3y3s4t3 <= 3
+y02 + 10000 binaryDp0j1nj2x3y3s4t3 >= 3
+y02 - 10000 binaryDp0j1nj2x3y3s4t3 <= 3
+x02 - 10000 binaryDp0j1nj2x3y3s4t3 <= 3
+x01 + 10000 binaryDp0j1nj2x3y3s4t3 >= 4
+y02 + 10000 binaryUp0j2nj3x3y3s4t3 >= 3
+y02 - 10000 binaryUp0j2nj3x3y3s4t3 <=  3
+y03 + 10000 binaryUp0j2nj3x3y3s4t3 >= 3
+y03 - 10000 binaryUp0j2nj3x3y3s4t3 <= 3
+x02 - 10000 binaryUp0j2nj3x3y3s4t3 <= 3
+x03 + 10000 binaryUp0j2nj3x3y3s4t3 >= 4
+y02 + 10000 binaryDp0j2nj3x3y3s4t3 >= 3
+y02 - 10000 binaryDp0j2nj3x3y3s4t3 <= 3
+y03 + 10000 binaryDp0j2nj3x3y3s4t3 >= 3
+y03 - 10000 binaryDp0j2nj3x3y3s4t3 <= 3
+x03 - 10000 binaryDp0j2nj3x3y3s4t3 <= 3
+x02 + 10000 binaryDp0j2nj3x3y3s4t3 >= 4
+y03 + 10000 binaryUp0j3nj4x3y3s4t3 >= 3
+y03 - 10000 binaryUp0j3nj4x3y3s4t3 <=  3
+y04 + 10000 binaryUp0j3nj4x3y3s4t3 >= 3
+y04 - 10000 binaryUp0j3nj4x3y3s4t3 <= 3
+x03 - 10000 binaryUp0j3nj4x3y3s4t3 <= 3
+x04 + 10000 binaryUp0j3nj4x3y3s4t3 >= 4
+y03 + 10000 binaryDp0j3nj4x3y3s4t3 >= 3
+y03 - 10000 binaryDp0j3nj4x3y3s4t3 <= 3
+y04 + 10000 binaryDp0j3nj4x3y3s4t3 >= 3
+y04 - 10000 binaryDp0j3nj4x3y3s4t3 <= 3
+x04 - 10000 binaryDp0j3nj4x3y3s4t3 <= 3
+x03 + 10000 binaryDp0j3nj4x3y3s4t3 >= 4
+y04 + 10000 binaryUp0j4nj5x3y3s4t3 >= 3
+y04 - 10000 binaryUp0j4nj5x3y3s4t3 <=  3
+y05 + 10000 binaryUp0j4nj5x3y3s4t3 >= 3
+y05 - 10000 binaryUp0j4nj5x3y3s4t3 <= 3
+x04 - 10000 binaryUp0j4nj5x3y3s4t3 <= 3
+x05 + 10000 binaryUp0j4nj5x3y3s4t3 >= 4
+y04 + 10000 binaryDp0j4nj5x3y3s4t3 >= 3
+y04 - 10000 binaryDp0j4nj5x3y3s4t3 <= 3
+y05 + 10000 binaryDp0j4nj5x3y3s4t3 >= 3
+y05 - 10000 binaryDp0j4nj5x3y3s4t3 <= 3
+x05 - 10000 binaryDp0j4nj5x3y3s4t3 <= 3
+x04 + 10000 binaryDp0j4nj5x3y3s4t3 >= 4
+y05 + 10000 binaryUp0j5nj6x3y3s4t3 >= 3
+y05 - 10000 binaryUp0j5nj6x3y3s4t3 <=  3
+y06 + 10000 binaryUp0j5nj6x3y3s4t3 >= 3
+y06 - 10000 binaryUp0j5nj6x3y3s4t3 <= 3
+x05 - 10000 binaryUp0j5nj6x3y3s4t3 <= 3
+x06 + 10000 binaryUp0j5nj6x3y3s4t3 >= 4
+y05 + 10000 binaryDp0j5nj6x3y3s4t3 >= 3
+y05 - 10000 binaryDp0j5nj6x3y3s4t3 <= 3
+y06 + 10000 binaryDp0j5nj6x3y3s4t3 >= 3
+y06 - 10000 binaryDp0j5nj6x3y3s4t3 <= 3
+x06 - 10000 binaryDp0j5nj6x3y3s4t3 <= 3
+x05 + 10000 binaryDp0j5nj6x3y3s4t3 >= 4
+y06 + 10000 binaryUp0j6nj7x3y3s4t3 >= 3
+y06 - 10000 binaryUp0j6nj7x3y3s4t3 <=  3
+y07 + 10000 binaryUp0j6nj7x3y3s4t3 >= 3
+y07 - 10000 binaryUp0j6nj7x3y3s4t3 <= 3
+x06 - 10000 binaryUp0j6nj7x3y3s4t3 <= 3
+x07 + 10000 binaryUp0j6nj7x3y3s4t3 >= 4
+y06 + 10000 binaryDp0j6nj7x3y3s4t3 >= 3
+y06 - 10000 binaryDp0j6nj7x3y3s4t3 <= 3
+y07 + 10000 binaryDp0j6nj7x3y3s4t3 >= 3
+y07 - 10000 binaryDp0j6nj7x3y3s4t3 <= 3
+x07 - 10000 binaryDp0j6nj7x3y3s4t3 <= 3
+x06 + 10000 binaryDp0j6nj7x3y3s4t3 >= 4
+y07 + 10000 binaryUp0j7nj8x3y3s4t3 >= 3
+y07 - 10000 binaryUp0j7nj8x3y3s4t3 <=  3
+y08 + 10000 binaryUp0j7nj8x3y3s4t3 >= 3
+y08 - 10000 binaryUp0j7nj8x3y3s4t3 <= 3
+x07 - 10000 binaryUp0j7nj8x3y3s4t3 <= 3
+x08 + 10000 binaryUp0j7nj8x3y3s4t3 >= 4
+y07 + 10000 binaryDp0j7nj8x3y3s4t3 >= 3
+y07 - 10000 binaryDp0j7nj8x3y3s4t3 <= 3
+y08 + 10000 binaryDp0j7nj8x3y3s4t3 >= 3
+y08 - 10000 binaryDp0j7nj8x3y3s4t3 <= 3
+x08 - 10000 binaryDp0j7nj8x3y3s4t3 <= 3
+x07 + 10000 binaryDp0j7nj8x3y3s4t3 >= 4
+y08 + 10000 binaryUp0j8nj9x3y3s4t3 >= 3
+y08 - 10000 binaryUp0j8nj9x3y3s4t3 <=  3
+y09 + 10000 binaryUp0j8nj9x3y3s4t3 >= 3
+y09 - 10000 binaryUp0j8nj9x3y3s4t3 <= 3
+x08 - 10000 binaryUp0j8nj9x3y3s4t3 <= 3
+x09 + 10000 binaryUp0j8nj9x3y3s4t3 >= 4
+y08 + 10000 binaryDp0j8nj9x3y3s4t3 >= 3
+y08 - 10000 binaryDp0j8nj9x3y3s4t3 <= 3
+y09 + 10000 binaryDp0j8nj9x3y3s4t3 >= 3
+y09 - 10000 binaryDp0j8nj9x3y3s4t3 <= 3
+x09 - 10000 binaryDp0j8nj9x3y3s4t3 <= 3
+x08 + 10000 binaryDp0j8nj9x3y3s4t3 >= 4
+y10 + 10000 binaryUp1j0nj1x3y3s4t3 >= 3
+y10 - 10000 binaryUp1j0nj1x3y3s4t3 <=  3
+y11 + 10000 binaryUp1j0nj1x3y3s4t3 >= 3
+y11 - 10000 binaryUp1j0nj1x3y3s4t3 <= 3
+x10 - 10000 binaryUp1j0nj1x3y3s4t3 <= 3
+x11 + 10000 binaryUp1j0nj1x3y3s4t3 >= 4
+y10 + 10000 binaryDp1j0nj1x3y3s4t3 >= 3
+y10 - 10000 binaryDp1j0nj1x3y3s4t3 <= 3
+y11 + 10000 binaryDp1j0nj1x3y3s4t3 >= 3
+y11 - 10000 binaryDp1j0nj1x3y3s4t3 <= 3
+x11 - 10000 binaryDp1j0nj1x3y3s4t3 <= 3
+x10 + 10000 binaryDp1j0nj1x3y3s4t3 >= 4
+y11 + 10000 binaryUp1j1nj2x3y3s4t3 >= 3
+y11 - 10000 binaryUp1j1nj2x3y3s4t3 <=  3
+y12 + 10000 binaryUp1j1nj2x3y3s4t3 >= 3
+y12 - 10000 binaryUp1j1nj2x3y3s4t3 <= 3
+x11 - 10000 binaryUp1j1nj2x3y3s4t3 <= 3
+x12 + 10000 binaryUp1j1nj2x3y3s4t3 >= 4
+y11 + 10000 binaryDp1j1nj2x3y3s4t3 >= 3
+y11 - 10000 binaryDp1j1nj2x3y3s4t3 <= 3
+y12 + 10000 binaryDp1j1nj2x3y3s4t3 >= 3
+y12 - 10000 binaryDp1j1nj2x3y3s4t3 <= 3
+x12 - 10000 binaryDp1j1nj2x3y3s4t3 <= 3
+x11 + 10000 binaryDp1j1nj2x3y3s4t3 >= 4
+y12 + 10000 binaryUp1j2nj3x3y3s4t3 >= 3
+y12 - 10000 binaryUp1j2nj3x3y3s4t3 <=  3
+y13 + 10000 binaryUp1j2nj3x3y3s4t3 >= 3
+y13 - 10000 binaryUp1j2nj3x3y3s4t3 <= 3
+x12 - 10000 binaryUp1j2nj3x3y3s4t3 <= 3
+x13 + 10000 binaryUp1j2nj3x3y3s4t3 >= 4
+y12 + 10000 binaryDp1j2nj3x3y3s4t3 >= 3
+y12 - 10000 binaryDp1j2nj3x3y3s4t3 <= 3
+y13 + 10000 binaryDp1j2nj3x3y3s4t3 >= 3
+y13 - 10000 binaryDp1j2nj3x3y3s4t3 <= 3
+x13 - 10000 binaryDp1j2nj3x3y3s4t3 <= 3
+x12 + 10000 binaryDp1j2nj3x3y3s4t3 >= 4
+y13 + 10000 binaryUp1j3nj4x3y3s4t3 >= 3
+y13 - 10000 binaryUp1j3nj4x3y3s4t3 <=  3
+y14 + 10000 binaryUp1j3nj4x3y3s4t3 >= 3
+y14 - 10000 binaryUp1j3nj4x3y3s4t3 <= 3
+x13 - 10000 binaryUp1j3nj4x3y3s4t3 <= 3
+x14 + 10000 binaryUp1j3nj4x3y3s4t3 >= 4
+y13 + 10000 binaryDp1j3nj4x3y3s4t3 >= 3
+y13 - 10000 binaryDp1j3nj4x3y3s4t3 <= 3
+y14 + 10000 binaryDp1j3nj4x3y3s4t3 >= 3
+y14 - 10000 binaryDp1j3nj4x3y3s4t3 <= 3
+x14 - 10000 binaryDp1j3nj4x3y3s4t3 <= 3
+x13 + 10000 binaryDp1j3nj4x3y3s4t3 >= 4
+y14 + 10000 binaryUp1j4nj5x3y3s4t3 >= 3
+y14 - 10000 binaryUp1j4nj5x3y3s4t3 <=  3
+y15 + 10000 binaryUp1j4nj5x3y3s4t3 >= 3
+y15 - 10000 binaryUp1j4nj5x3y3s4t3 <= 3
+x14 - 10000 binaryUp1j4nj5x3y3s4t3 <= 3
+x15 + 10000 binaryUp1j4nj5x3y3s4t3 >= 4
+y14 + 10000 binaryDp1j4nj5x3y3s4t3 >= 3
+y14 - 10000 binaryDp1j4nj5x3y3s4t3 <= 3
+y15 + 10000 binaryDp1j4nj5x3y3s4t3 >= 3
+y15 - 10000 binaryDp1j4nj5x3y3s4t3 <= 3
+x15 - 10000 binaryDp1j4nj5x3y3s4t3 <= 3
+x14 + 10000 binaryDp1j4nj5x3y3s4t3 >= 4
+y15 + 10000 binaryUp1j5nj6x3y3s4t3 >= 3
+y15 - 10000 binaryUp1j5nj6x3y3s4t3 <=  3
+y16 + 10000 binaryUp1j5nj6x3y3s4t3 >= 3
+y16 - 10000 binaryUp1j5nj6x3y3s4t3 <= 3
+x15 - 10000 binaryUp1j5nj6x3y3s4t3 <= 3
+x16 + 10000 binaryUp1j5nj6x3y3s4t3 >= 4
+y15 + 10000 binaryDp1j5nj6x3y3s4t3 >= 3
+y15 - 10000 binaryDp1j5nj6x3y3s4t3 <= 3
+y16 + 10000 binaryDp1j5nj6x3y3s4t3 >= 3
+y16 - 10000 binaryDp1j5nj6x3y3s4t3 <= 3
+x16 - 10000 binaryDp1j5nj6x3y3s4t3 <= 3
+x15 + 10000 binaryDp1j5nj6x3y3s4t3 >= 4
+y16 + 10000 binaryUp1j6nj7x3y3s4t3 >= 3
+y16 - 10000 binaryUp1j6nj7x3y3s4t3 <=  3
+y17 + 10000 binaryUp1j6nj7x3y3s4t3 >= 3
+y17 - 10000 binaryUp1j6nj7x3y3s4t3 <= 3
+x16 - 10000 binaryUp1j6nj7x3y3s4t3 <= 3
+x17 + 10000 binaryUp1j6nj7x3y3s4t3 >= 4
+y16 + 10000 binaryDp1j6nj7x3y3s4t3 >= 3
+y16 - 10000 binaryDp1j6nj7x3y3s4t3 <= 3
+y17 + 10000 binaryDp1j6nj7x3y3s4t3 >= 3
+y17 - 10000 binaryDp1j6nj7x3y3s4t3 <= 3
+x17 - 10000 binaryDp1j6nj7x3y3s4t3 <= 3
+x16 + 10000 binaryDp1j6nj7x3y3s4t3 >= 4
+y17 + 10000 binaryUp1j7nj8x3y3s4t3 >= 3
+y17 - 10000 binaryUp1j7nj8x3y3s4t3 <=  3
+y18 + 10000 binaryUp1j7nj8x3y3s4t3 >= 3
+y18 - 10000 binaryUp1j7nj8x3y3s4t3 <= 3
+x17 - 10000 binaryUp1j7nj8x3y3s4t3 <= 3
+x18 + 10000 binaryUp1j7nj8x3y3s4t3 >= 4
+y17 + 10000 binaryDp1j7nj8x3y3s4t3 >= 3
+y17 - 10000 binaryDp1j7nj8x3y3s4t3 <= 3
+y18 + 10000 binaryDp1j7nj8x3y3s4t3 >= 3
+y18 - 10000 binaryDp1j7nj8x3y3s4t3 <= 3
+x18 - 10000 binaryDp1j7nj8x3y3s4t3 <= 3
+x17 + 10000 binaryDp1j7nj8x3y3s4t3 >= 4
+y18 + 10000 binaryUp1j8nj9x3y3s4t3 >= 3
+y18 - 10000 binaryUp1j8nj9x3y3s4t3 <=  3
+y19 + 10000 binaryUp1j8nj9x3y3s4t3 >= 3
+y19 - 10000 binaryUp1j8nj9x3y3s4t3 <= 3
+x18 - 10000 binaryUp1j8nj9x3y3s4t3 <= 3
+x19 + 10000 binaryUp1j8nj9x3y3s4t3 >= 4
+y18 + 10000 binaryDp1j8nj9x3y3s4t3 >= 3
+y18 - 10000 binaryDp1j8nj9x3y3s4t3 <= 3
+y19 + 10000 binaryDp1j8nj9x3y3s4t3 >= 3
+y19 - 10000 binaryDp1j8nj9x3y3s4t3 <= 3
+x19 - 10000 binaryDp1j8nj9x3y3s4t3 <= 3
+x18 + 10000 binaryDp1j8nj9x3y3s4t3 >= 4
+ + binaryUp0j0nj1x3y3s4t3 + binaryDp0j0nj1x3y3s4t3 + binaryUp0j1nj2x3y3s4t3 + binaryDp0j1nj2x3y3s4t3 + binaryUp0j2nj3x3y3s4t3 + binaryDp0j2nj3x3y3s4t3 + binaryUp0j3nj4x3y3s4t3 + binaryDp0j3nj4x3y3s4t3 + binaryUp0j4nj5x3y3s4t3 + binaryDp0j4nj5x3y3s4t3 + binaryUp0j5nj6x3y3s4t3 + binaryDp0j5nj6x3y3s4t3 + binaryUp0j6nj7x3y3s4t3 + binaryDp0j6nj7x3y3s4t3 + binaryUp0j7nj8x3y3s4t3 + binaryDp0j7nj8x3y3s4t3 + binaryUp0j8nj9x3y3s4t3 + binaryDp0j8nj9x3y3s4t3 + binaryUp1j0nj1x3y3s4t3 + binaryDp1j0nj1x3y3s4t3 + binaryUp1j1nj2x3y3s4t3 + binaryDp1j1nj2x3y3s4t3 + binaryUp1j2nj3x3y3s4t3 + binaryDp1j2nj3x3y3s4t3 + binaryUp1j3nj4x3y3s4t3 + binaryDp1j3nj4x3y3s4t3 + binaryUp1j4nj5x3y3s4t3 + binaryDp1j4nj5x3y3s4t3 + binaryUp1j5nj6x3y3s4t3 + binaryDp1j5nj6x3y3s4t3 + binaryUp1j6nj7x3y3s4t3 + binaryDp1j6nj7x3y3s4t3 + binaryUp1j7nj8x3y3s4t3 + binaryDp1j7nj8x3y3s4t3 + binaryUp1j8nj9x3y3s4t3 + binaryDp1j8nj9x3y3s4t3 <= 35
+x00 + 10000 binaryLp0j0nj1x3y0s3t1 >= 3
+x00 - 10000 binaryLp0j0nj1x3y0s3t1 <= 3
+x01 + 10000 binaryLp0j0nj1x3y0s3t1 >= 3
+x01 - 10000 binaryLp0j0nj1x3y0s3t1 <= 3
+y00 - 10000 binaryLp0j0nj1x3y0s3t1 <= 0
+y01 + 10000 binaryLp0j0nj1x3y0s3t1 >= 1
+x00 + 10000 binaryRp0j0nj1x3y0s3t1 >= 3
+x00 - 10000 binaryRp0j0nj1x3y0s3t1 <= 3
+x01 + 10000 binaryRp0j0nj1x3y0s3t1 >= 3
+x01 - 10000 binaryRp0j0nj1x3y0s3t1 <= 3
+y01 - 10000 binaryRp0j0nj1x3y0s3t1 <= 0
+y00 + 10000 binaryRp0j0nj1x3y0s3t1 >= 1
+x01 + 10000 binaryLp0j1nj2x3y0s3t1 >= 3
+x01 - 10000 binaryLp0j1nj2x3y0s3t1 <= 3
+x02 + 10000 binaryLp0j1nj2x3y0s3t1 >= 3
+x02 - 10000 binaryLp0j1nj2x3y0s3t1 <= 3
+y01 - 10000 binaryLp0j1nj2x3y0s3t1 <= 0
+y02 + 10000 binaryLp0j1nj2x3y0s3t1 >= 1
+x01 + 10000 binaryRp0j1nj2x3y0s3t1 >= 3
+x01 - 10000 binaryRp0j1nj2x3y0s3t1 <= 3
+x02 + 10000 binaryRp0j1nj2x3y0s3t1 >= 3
+x02 - 10000 binaryRp0j1nj2x3y0s3t1 <= 3
+y02 - 10000 binaryRp0j1nj2x3y0s3t1 <= 0
+y01 + 10000 binaryRp0j1nj2x3y0s3t1 >= 1
+x02 + 10000 binaryLp0j2nj3x3y0s3t1 >= 3
+x02 - 10000 binaryLp0j2nj3x3y0s3t1 <= 3
+x03 + 10000 binaryLp0j2nj3x3y0s3t1 >= 3
+x03 - 10000 binaryLp0j2nj3x3y0s3t1 <= 3
+y02 - 10000 binaryLp0j2nj3x3y0s3t1 <= 0
+y03 + 10000 binaryLp0j2nj3x3y0s3t1 >= 1
+x02 + 10000 binaryRp0j2nj3x3y0s3t1 >= 3
+x02 - 10000 binaryRp0j2nj3x3y0s3t1 <= 3
+x03 + 10000 binaryRp0j2nj3x3y0s3t1 >= 3
+x03 - 10000 binaryRp0j2nj3x3y0s3t1 <= 3
+y03 - 10000 binaryRp0j2nj3x3y0s3t1 <= 0
+y02 + 10000 binaryRp0j2nj3x3y0s3t1 >= 1
+x03 + 10000 binaryLp0j3nj4x3y0s3t1 >= 3
+x03 - 10000 binaryLp0j3nj4x3y0s3t1 <= 3
+x04 + 10000 binaryLp0j3nj4x3y0s3t1 >= 3
+x04 - 10000 binaryLp0j3nj4x3y0s3t1 <= 3
+y03 - 10000 binaryLp0j3nj4x3y0s3t1 <= 0
+y04 + 10000 binaryLp0j3nj4x3y0s3t1 >= 1
+x03 + 10000 binaryRp0j3nj4x3y0s3t1 >= 3
+x03 - 10000 binaryRp0j3nj4x3y0s3t1 <= 3
+x04 + 10000 binaryRp0j3nj4x3y0s3t1 >= 3
+x04 - 10000 binaryRp0j3nj4x3y0s3t1 <= 3
+y04 - 10000 binaryRp0j3nj4x3y0s3t1 <= 0
+y03 + 10000 binaryRp0j3nj4x3y0s3t1 >= 1
+x04 + 10000 binaryLp0j4nj5x3y0s3t1 >= 3
+x04 - 10000 binaryLp0j4nj5x3y0s3t1 <= 3
+x05 + 10000 binaryLp0j4nj5x3y0s3t1 >= 3
+x05 - 10000 binaryLp0j4nj5x3y0s3t1 <= 3
+y04 - 10000 binaryLp0j4nj5x3y0s3t1 <= 0
+y05 + 10000 binaryLp0j4nj5x3y0s3t1 >= 1
+x04 + 10000 binaryRp0j4nj5x3y0s3t1 >= 3
+x04 - 10000 binaryRp0j4nj5x3y0s3t1 <= 3
+x05 + 10000 binaryRp0j4nj5x3y0s3t1 >= 3
+x05 - 10000 binaryRp0j4nj5x3y0s3t1 <= 3
+y05 - 10000 binaryRp0j4nj5x3y0s3t1 <= 0
+y04 + 10000 binaryRp0j4nj5x3y0s3t1 >= 1
+x05 + 10000 binaryLp0j5nj6x3y0s3t1 >= 3
+x05 - 10000 binaryLp0j5nj6x3y0s3t1 <= 3
+x06 + 10000 binaryLp0j5nj6x3y0s3t1 >= 3
+x06 - 10000 binaryLp0j5nj6x3y0s3t1 <= 3
+y05 - 10000 binaryLp0j5nj6x3y0s3t1 <= 0
+y06 + 10000 binaryLp0j5nj6x3y0s3t1 >= 1
+x05 + 10000 binaryRp0j5nj6x3y0s3t1 >= 3
+x05 - 10000 binaryRp0j5nj6x3y0s3t1 <= 3
+x06 + 10000 binaryRp0j5nj6x3y0s3t1 >= 3
+x06 - 10000 binaryRp0j5nj6x3y0s3t1 <= 3
+y06 - 10000 binaryRp0j5nj6x3y0s3t1 <= 0
+y05 + 10000 binaryRp0j5nj6x3y0s3t1 >= 1
+x06 + 10000 binaryLp0j6nj7x3y0s3t1 >= 3
+x06 - 10000 binaryLp0j6nj7x3y0s3t1 <= 3
+x07 + 10000 binaryLp0j6nj7x3y0s3t1 >= 3
+x07 - 10000 binaryLp0j6nj7x3y0s3t1 <= 3
+y06 - 10000 binaryLp0j6nj7x3y0s3t1 <= 0
+y07 + 10000 binaryLp0j6nj7x3y0s3t1 >= 1
+x06 + 10000 binaryRp0j6nj7x3y0s3t1 >= 3
+x06 - 10000 binaryRp0j6nj7x3y0s3t1 <= 3
+x07 + 10000 binaryRp0j6nj7x3y0s3t1 >= 3
+x07 - 10000 binaryRp0j6nj7x3y0s3t1 <= 3
+y07 - 10000 binaryRp0j6nj7x3y0s3t1 <= 0
+y06 + 10000 binaryRp0j6nj7x3y0s3t1 >= 1
+x07 + 10000 binaryLp0j7nj8x3y0s3t1 >= 3
+x07 - 10000 binaryLp0j7nj8x3y0s3t1 <= 3
+x08 + 10000 binaryLp0j7nj8x3y0s3t1 >= 3
+x08 - 10000 binaryLp0j7nj8x3y0s3t1 <= 3
+y07 - 10000 binaryLp0j7nj8x3y0s3t1 <= 0
+y08 + 10000 binaryLp0j7nj8x3y0s3t1 >= 1
+x07 + 10000 binaryRp0j7nj8x3y0s3t1 >= 3
+x07 - 10000 binaryRp0j7nj8x3y0s3t1 <= 3
+x08 + 10000 binaryRp0j7nj8x3y0s3t1 >= 3
+x08 - 10000 binaryRp0j7nj8x3y0s3t1 <= 3
+y08 - 10000 binaryRp0j7nj8x3y0s3t1 <= 0
+y07 + 10000 binaryRp0j7nj8x3y0s3t1 >= 1
+x08 + 10000 binaryLp0j8nj9x3y0s3t1 >= 3
+x08 - 10000 binaryLp0j8nj9x3y0s3t1 <= 3
+x09 + 10000 binaryLp0j8nj9x3y0s3t1 >= 3
+x09 - 10000 binaryLp0j8nj9x3y0s3t1 <= 3
+y08 - 10000 binaryLp0j8nj9x3y0s3t1 <= 0
+y09 + 10000 binaryLp0j8nj9x3y0s3t1 >= 1
+x08 + 10000 binaryRp0j8nj9x3y0s3t1 >= 3
+x08 - 10000 binaryRp0j8nj9x3y0s3t1 <= 3
+x09 + 10000 binaryRp0j8nj9x3y0s3t1 >= 3
+x09 - 10000 binaryRp0j8nj9x3y0s3t1 <= 3
+y09 - 10000 binaryRp0j8nj9x3y0s3t1 <= 0
+y08 + 10000 binaryRp0j8nj9x3y0s3t1 >= 1
+x10 + 10000 binaryLp1j0nj1x3y0s3t1 >= 3
+x10 - 10000 binaryLp1j0nj1x3y0s3t1 <= 3
+x11 + 10000 binaryLp1j0nj1x3y0s3t1 >= 3
+x11 - 10000 binaryLp1j0nj1x3y0s3t1 <= 3
+y10 - 10000 binaryLp1j0nj1x3y0s3t1 <= 0
+y11 + 10000 binaryLp1j0nj1x3y0s3t1 >= 1
+x10 + 10000 binaryRp1j0nj1x3y0s3t1 >= 3
+x10 - 10000 binaryRp1j0nj1x3y0s3t1 <= 3
+x11 + 10000 binaryRp1j0nj1x3y0s3t1 >= 3
+x11 - 10000 binaryRp1j0nj1x3y0s3t1 <= 3
+y11 - 10000 binaryRp1j0nj1x3y0s3t1 <= 0
+y10 + 10000 binaryRp1j0nj1x3y0s3t1 >= 1
+x11 + 10000 binaryLp1j1nj2x3y0s3t1 >= 3
+x11 - 10000 binaryLp1j1nj2x3y0s3t1 <= 3
+x12 + 10000 binaryLp1j1nj2x3y0s3t1 >= 3
+x12 - 10000 binaryLp1j1nj2x3y0s3t1 <= 3
+y11 - 10000 binaryLp1j1nj2x3y0s3t1 <= 0
+y12 + 10000 binaryLp1j1nj2x3y0s3t1 >= 1
+x11 + 10000 binaryRp1j1nj2x3y0s3t1 >= 3
+x11 - 10000 binaryRp1j1nj2x3y0s3t1 <= 3
+x12 + 10000 binaryRp1j1nj2x3y0s3t1 >= 3
+x12 - 10000 binaryRp1j1nj2x3y0s3t1 <= 3
+y12 - 10000 binaryRp1j1nj2x3y0s3t1 <= 0
+y11 + 10000 binaryRp1j1nj2x3y0s3t1 >= 1
+x12 + 10000 binaryLp1j2nj3x3y0s3t1 >= 3
+x12 - 10000 binaryLp1j2nj3x3y0s3t1 <= 3
+x13 + 10000 binaryLp1j2nj3x3y0s3t1 >= 3
+x13 - 10000 binaryLp1j2nj3x3y0s3t1 <= 3
+y12 - 10000 binaryLp1j2nj3x3y0s3t1 <= 0
+y13 + 10000 binaryLp1j2nj3x3y0s3t1 >= 1
+x12 + 10000 binaryRp1j2nj3x3y0s3t1 >= 3
+x12 - 10000 binaryRp1j2nj3x3y0s3t1 <= 3
+x13 + 10000 binaryRp1j2nj3x3y0s3t1 >= 3
+x13 - 10000 binaryRp1j2nj3x3y0s3t1 <= 3
+y13 - 10000 binaryRp1j2nj3x3y0s3t1 <= 0
+y12 + 10000 binaryRp1j2nj3x3y0s3t1 >= 1
+x13 + 10000 binaryLp1j3nj4x3y0s3t1 >= 3
+x13 - 10000 binaryLp1j3nj4x3y0s3t1 <= 3
+x14 + 10000 binaryLp1j3nj4x3y0s3t1 >= 3
+x14 - 10000 binaryLp1j3nj4x3y0s3t1 <= 3
+y13 - 10000 binaryLp1j3nj4x3y0s3t1 <= 0
+y14 + 10000 binaryLp1j3nj4x3y0s3t1 >= 1
+x13 + 10000 binaryRp1j3nj4x3y0s3t1 >= 3
+x13 - 10000 binaryRp1j3nj4x3y0s3t1 <= 3
+x14 + 10000 binaryRp1j3nj4x3y0s3t1 >= 3
+x14 - 10000 binaryRp1j3nj4x3y0s3t1 <= 3
+y14 - 10000 binaryRp1j3nj4x3y0s3t1 <= 0
+y13 + 10000 binaryRp1j3nj4x3y0s3t1 >= 1
+x14 + 10000 binaryLp1j4nj5x3y0s3t1 >= 3
+x14 - 10000 binaryLp1j4nj5x3y0s3t1 <= 3
+x15 + 10000 binaryLp1j4nj5x3y0s3t1 >= 3
+x15 - 10000 binaryLp1j4nj5x3y0s3t1 <= 3
+y14 - 10000 binaryLp1j4nj5x3y0s3t1 <= 0
+y15 + 10000 binaryLp1j4nj5x3y0s3t1 >= 1
+x14 + 10000 binaryRp1j4nj5x3y0s3t1 >= 3
+x14 - 10000 binaryRp1j4nj5x3y0s3t1 <= 3
+x15 + 10000 binaryRp1j4nj5x3y0s3t1 >= 3
+x15 - 10000 binaryRp1j4nj5x3y0s3t1 <= 3
+y15 - 10000 binaryRp1j4nj5x3y0s3t1 <= 0
+y14 + 10000 binaryRp1j4nj5x3y0s3t1 >= 1
+x15 + 10000 binaryLp1j5nj6x3y0s3t1 >= 3
+x15 - 10000 binaryLp1j5nj6x3y0s3t1 <= 3
+x16 + 10000 binaryLp1j5nj6x3y0s3t1 >= 3
+x16 - 10000 binaryLp1j5nj6x3y0s3t1 <= 3
+y15 - 10000 binaryLp1j5nj6x3y0s3t1 <= 0
+y16 + 10000 binaryLp1j5nj6x3y0s3t1 >= 1
+x15 + 10000 binaryRp1j5nj6x3y0s3t1 >= 3
+x15 - 10000 binaryRp1j5nj6x3y0s3t1 <= 3
+x16 + 10000 binaryRp1j5nj6x3y0s3t1 >= 3
+x16 - 10000 binaryRp1j5nj6x3y0s3t1 <= 3
+y16 - 10000 binaryRp1j5nj6x3y0s3t1 <= 0
+y15 + 10000 binaryRp1j5nj6x3y0s3t1 >= 1
+x16 + 10000 binaryLp1j6nj7x3y0s3t1 >= 3
+x16 - 10000 binaryLp1j6nj7x3y0s3t1 <= 3
+x17 + 10000 binaryLp1j6nj7x3y0s3t1 >= 3
+x17 - 10000 binaryLp1j6nj7x3y0s3t1 <= 3
+y16 - 10000 binaryLp1j6nj7x3y0s3t1 <= 0
+y17 + 10000 binaryLp1j6nj7x3y0s3t1 >= 1
+x16 + 10000 binaryRp1j6nj7x3y0s3t1 >= 3
+x16 - 10000 binaryRp1j6nj7x3y0s3t1 <= 3
+x17 + 10000 binaryRp1j6nj7x3y0s3t1 >= 3
+x17 - 10000 binaryRp1j6nj7x3y0s3t1 <= 3
+y17 - 10000 binaryRp1j6nj7x3y0s3t1 <= 0
+y16 + 10000 binaryRp1j6nj7x3y0s3t1 >= 1
+x17 + 10000 binaryLp1j7nj8x3y0s3t1 >= 3
+x17 - 10000 binaryLp1j7nj8x3y0s3t1 <= 3
+x18 + 10000 binaryLp1j7nj8x3y0s3t1 >= 3
+x18 - 10000 binaryLp1j7nj8x3y0s3t1 <= 3
+y17 - 10000 binaryLp1j7nj8x3y0s3t1 <= 0
+y18 + 10000 binaryLp1j7nj8x3y0s3t1 >= 1
+x17 + 10000 binaryRp1j7nj8x3y0s3t1 >= 3
+x17 - 10000 binaryRp1j7nj8x3y0s3t1 <= 3
+x18 + 10000 binaryRp1j7nj8x3y0s3t1 >= 3
+x18 - 10000 binaryRp1j7nj8x3y0s3t1 <= 3
+y18 - 10000 binaryRp1j7nj8x3y0s3t1 <= 0
+y17 + 10000 binaryRp1j7nj8x3y0s3t1 >= 1
+x18 + 10000 binaryLp1j8nj9x3y0s3t1 >= 3
+x18 - 10000 binaryLp1j8nj9x3y0s3t1 <= 3
+x19 + 10000 binaryLp1j8nj9x3y0s3t1 >= 3
+x19 - 10000 binaryLp1j8nj9x3y0s3t1 <= 3
+y18 - 10000 binaryLp1j8nj9x3y0s3t1 <= 0
+y19 + 10000 binaryLp1j8nj9x3y0s3t1 >= 1
+x18 + 10000 binaryRp1j8nj9x3y0s3t1 >= 3
+x18 - 10000 binaryRp1j8nj9x3y0s3t1 <= 3
+x19 + 10000 binaryRp1j8nj9x3y0s3t1 >= 3
+x19 - 10000 binaryRp1j8nj9x3y0s3t1 <= 3
+y19 - 10000 binaryRp1j8nj9x3y0s3t1 <= 0
+y18 + 10000 binaryRp1j8nj9x3y0s3t1 >= 1
+ + binaryLp0j0nj1x3y0s3t1 + binaryRp0j0nj1x3y0s3t1 + binaryLp0j1nj2x3y0s3t1 + binaryRp0j1nj2x3y0s3t1 + binaryLp0j2nj3x3y0s3t1 + binaryRp0j2nj3x3y0s3t1 + binaryLp0j3nj4x3y0s3t1 + binaryRp0j3nj4x3y0s3t1 + binaryLp0j4nj5x3y0s3t1 + binaryRp0j4nj5x3y0s3t1 + binaryLp0j5nj6x3y0s3t1 + binaryRp0j5nj6x3y0s3t1 + binaryLp0j6nj7x3y0s3t1 + binaryRp0j6nj7x3y0s3t1 + binaryLp0j7nj8x3y0s3t1 + binaryRp0j7nj8x3y0s3t1 + binaryLp0j8nj9x3y0s3t1 + binaryRp0j8nj9x3y0s3t1 + binaryLp1j0nj1x3y0s3t1 + binaryRp1j0nj1x3y0s3t1 + binaryLp1j1nj2x3y0s3t1 + binaryRp1j1nj2x3y0s3t1 + binaryLp1j2nj3x3y0s3t1 + binaryRp1j2nj3x3y0s3t1 + binaryLp1j3nj4x3y0s3t1 + binaryRp1j3nj4x3y0s3t1 + binaryLp1j4nj5x3y0s3t1 + binaryRp1j4nj5x3y0s3t1 + binaryLp1j5nj6x3y0s3t1 + binaryRp1j5nj6x3y0s3t1 + binaryLp1j6nj7x3y0s3t1 + binaryRp1j6nj7x3y0s3t1 + binaryLp1j7nj8x3y0s3t1 + binaryRp1j7nj8x3y0s3t1 + binaryLp1j8nj9x3y0s3t1 + binaryRp1j8nj9x3y0s3t1 <= 35
 y00 + 10000 binaryUp0j0nj1x1y2s2t2 >= 2
 y00 - 10000 binaryUp0j0nj1x1y2s2t2 <=  2
 y01 + 10000 binaryUp0j0nj1x1y2s2t2 >= 2
@@ -1867,6 +6804,66 @@ y04 + 10000 binaryDp0j3nj4x1y2s2t2 >= 2
 y04 - 10000 binaryDp0j3nj4x1y2s2t2 <= 2
 x04 - 10000 binaryDp0j3nj4x1y2s2t2 <= 1
 x03 + 10000 binaryDp0j3nj4x1y2s2t2 >= 2
+y04 + 10000 binaryUp0j4nj5x1y2s2t2 >= 2
+y04 - 10000 binaryUp0j4nj5x1y2s2t2 <=  2
+y05 + 10000 binaryUp0j4nj5x1y2s2t2 >= 2
+y05 - 10000 binaryUp0j4nj5x1y2s2t2 <= 2
+x04 - 10000 binaryUp0j4nj5x1y2s2t2 <= 1
+x05 + 10000 binaryUp0j4nj5x1y2s2t2 >= 2
+y04 + 10000 binaryDp0j4nj5x1y2s2t2 >= 2
+y04 - 10000 binaryDp0j4nj5x1y2s2t2 <= 2
+y05 + 10000 binaryDp0j4nj5x1y2s2t2 >= 2
+y05 - 10000 binaryDp0j4nj5x1y2s2t2 <= 2
+x05 - 10000 binaryDp0j4nj5x1y2s2t2 <= 1
+x04 + 10000 binaryDp0j4nj5x1y2s2t2 >= 2
+y05 + 10000 binaryUp0j5nj6x1y2s2t2 >= 2
+y05 - 10000 binaryUp0j5nj6x1y2s2t2 <=  2
+y06 + 10000 binaryUp0j5nj6x1y2s2t2 >= 2
+y06 - 10000 binaryUp0j5nj6x1y2s2t2 <= 2
+x05 - 10000 binaryUp0j5nj6x1y2s2t2 <= 1
+x06 + 10000 binaryUp0j5nj6x1y2s2t2 >= 2
+y05 + 10000 binaryDp0j5nj6x1y2s2t2 >= 2
+y05 - 10000 binaryDp0j5nj6x1y2s2t2 <= 2
+y06 + 10000 binaryDp0j5nj6x1y2s2t2 >= 2
+y06 - 10000 binaryDp0j5nj6x1y2s2t2 <= 2
+x06 - 10000 binaryDp0j5nj6x1y2s2t2 <= 1
+x05 + 10000 binaryDp0j5nj6x1y2s2t2 >= 2
+y06 + 10000 binaryUp0j6nj7x1y2s2t2 >= 2
+y06 - 10000 binaryUp0j6nj7x1y2s2t2 <=  2
+y07 + 10000 binaryUp0j6nj7x1y2s2t2 >= 2
+y07 - 10000 binaryUp0j6nj7x1y2s2t2 <= 2
+x06 - 10000 binaryUp0j6nj7x1y2s2t2 <= 1
+x07 + 10000 binaryUp0j6nj7x1y2s2t2 >= 2
+y06 + 10000 binaryDp0j6nj7x1y2s2t2 >= 2
+y06 - 10000 binaryDp0j6nj7x1y2s2t2 <= 2
+y07 + 10000 binaryDp0j6nj7x1y2s2t2 >= 2
+y07 - 10000 binaryDp0j6nj7x1y2s2t2 <= 2
+x07 - 10000 binaryDp0j6nj7x1y2s2t2 <= 1
+x06 + 10000 binaryDp0j6nj7x1y2s2t2 >= 2
+y07 + 10000 binaryUp0j7nj8x1y2s2t2 >= 2
+y07 - 10000 binaryUp0j7nj8x1y2s2t2 <=  2
+y08 + 10000 binaryUp0j7nj8x1y2s2t2 >= 2
+y08 - 10000 binaryUp0j7nj8x1y2s2t2 <= 2
+x07 - 10000 binaryUp0j7nj8x1y2s2t2 <= 1
+x08 + 10000 binaryUp0j7nj8x1y2s2t2 >= 2
+y07 + 10000 binaryDp0j7nj8x1y2s2t2 >= 2
+y07 - 10000 binaryDp0j7nj8x1y2s2t2 <= 2
+y08 + 10000 binaryDp0j7nj8x1y2s2t2 >= 2
+y08 - 10000 binaryDp0j7nj8x1y2s2t2 <= 2
+x08 - 10000 binaryDp0j7nj8x1y2s2t2 <= 1
+x07 + 10000 binaryDp0j7nj8x1y2s2t2 >= 2
+y08 + 10000 binaryUp0j8nj9x1y2s2t2 >= 2
+y08 - 10000 binaryUp0j8nj9x1y2s2t2 <=  2
+y09 + 10000 binaryUp0j8nj9x1y2s2t2 >= 2
+y09 - 10000 binaryUp0j8nj9x1y2s2t2 <= 2
+x08 - 10000 binaryUp0j8nj9x1y2s2t2 <= 1
+x09 + 10000 binaryUp0j8nj9x1y2s2t2 >= 2
+y08 + 10000 binaryDp0j8nj9x1y2s2t2 >= 2
+y08 - 10000 binaryDp0j8nj9x1y2s2t2 <= 2
+y09 + 10000 binaryDp0j8nj9x1y2s2t2 >= 2
+y09 - 10000 binaryDp0j8nj9x1y2s2t2 <= 2
+x09 - 10000 binaryDp0j8nj9x1y2s2t2 <= 1
+x08 + 10000 binaryDp0j8nj9x1y2s2t2 >= 2
 y10 + 10000 binaryUp1j0nj1x1y2s2t2 >= 2
 y10 - 10000 binaryUp1j0nj1x1y2s2t2 <=  2
 y11 + 10000 binaryUp1j0nj1x1y2s2t2 >= 2
@@ -1915,144 +6912,2889 @@ y14 + 10000 binaryDp1j3nj4x1y2s2t2 >= 2
 y14 - 10000 binaryDp1j3nj4x1y2s2t2 <= 2
 x14 - 10000 binaryDp1j3nj4x1y2s2t2 <= 1
 x13 + 10000 binaryDp1j3nj4x1y2s2t2 >= 2
-y20 + 10000 binaryUp2j0nj1x1y2s2t2 >= 2
-y20 - 10000 binaryUp2j0nj1x1y2s2t2 <=  2
-y21 + 10000 binaryUp2j0nj1x1y2s2t2 >= 2
-y21 - 10000 binaryUp2j0nj1x1y2s2t2 <= 2
-x20 - 10000 binaryUp2j0nj1x1y2s2t2 <= 1
-x21 + 10000 binaryUp2j0nj1x1y2s2t2 >= 2
-y20 + 10000 binaryDp2j0nj1x1y2s2t2 >= 2
-y20 - 10000 binaryDp2j0nj1x1y2s2t2 <= 2
-y21 + 10000 binaryDp2j0nj1x1y2s2t2 >= 2
-y21 - 10000 binaryDp2j0nj1x1y2s2t2 <= 2
-x21 - 10000 binaryDp2j0nj1x1y2s2t2 <= 1
-x20 + 10000 binaryDp2j0nj1x1y2s2t2 >= 2
-y21 + 10000 binaryUp2j1nj2x1y2s2t2 >= 2
-y21 - 10000 binaryUp2j1nj2x1y2s2t2 <=  2
-y22 + 10000 binaryUp2j1nj2x1y2s2t2 >= 2
-y22 - 10000 binaryUp2j1nj2x1y2s2t2 <= 2
-x21 - 10000 binaryUp2j1nj2x1y2s2t2 <= 1
-x22 + 10000 binaryUp2j1nj2x1y2s2t2 >= 2
-y21 + 10000 binaryDp2j1nj2x1y2s2t2 >= 2
-y21 - 10000 binaryDp2j1nj2x1y2s2t2 <= 2
-y22 + 10000 binaryDp2j1nj2x1y2s2t2 >= 2
-y22 - 10000 binaryDp2j1nj2x1y2s2t2 <= 2
-x22 - 10000 binaryDp2j1nj2x1y2s2t2 <= 1
-x21 + 10000 binaryDp2j1nj2x1y2s2t2 >= 2
-y22 + 10000 binaryUp2j2nj3x1y2s2t2 >= 2
-y22 - 10000 binaryUp2j2nj3x1y2s2t2 <=  2
-y23 + 10000 binaryUp2j2nj3x1y2s2t2 >= 2
-y23 - 10000 binaryUp2j2nj3x1y2s2t2 <= 2
-x22 - 10000 binaryUp2j2nj3x1y2s2t2 <= 1
-x23 + 10000 binaryUp2j2nj3x1y2s2t2 >= 2
-y22 + 10000 binaryDp2j2nj3x1y2s2t2 >= 2
-y22 - 10000 binaryDp2j2nj3x1y2s2t2 <= 2
-y23 + 10000 binaryDp2j2nj3x1y2s2t2 >= 2
-y23 - 10000 binaryDp2j2nj3x1y2s2t2 <= 2
-x23 - 10000 binaryDp2j2nj3x1y2s2t2 <= 1
-x22 + 10000 binaryDp2j2nj3x1y2s2t2 >= 2
-y23 + 10000 binaryUp2j3nj4x1y2s2t2 >= 2
-y23 - 10000 binaryUp2j3nj4x1y2s2t2 <=  2
-y24 + 10000 binaryUp2j3nj4x1y2s2t2 >= 2
-y24 - 10000 binaryUp2j3nj4x1y2s2t2 <= 2
-x23 - 10000 binaryUp2j3nj4x1y2s2t2 <= 1
-x24 + 10000 binaryUp2j3nj4x1y2s2t2 >= 2
-y23 + 10000 binaryDp2j3nj4x1y2s2t2 >= 2
-y23 - 10000 binaryDp2j3nj4x1y2s2t2 <= 2
-y24 + 10000 binaryDp2j3nj4x1y2s2t2 >= 2
-y24 - 10000 binaryDp2j3nj4x1y2s2t2 <= 2
-x24 - 10000 binaryDp2j3nj4x1y2s2t2 <= 1
-x23 + 10000 binaryDp2j3nj4x1y2s2t2 >= 2
-y30 + 10000 binaryUp3j0nj1x1y2s2t2 >= 2
-y30 - 10000 binaryUp3j0nj1x1y2s2t2 <=  2
-y31 + 10000 binaryUp3j0nj1x1y2s2t2 >= 2
-y31 - 10000 binaryUp3j0nj1x1y2s2t2 <= 2
-x30 - 10000 binaryUp3j0nj1x1y2s2t2 <= 1
-x31 + 10000 binaryUp3j0nj1x1y2s2t2 >= 2
-y30 + 10000 binaryDp3j0nj1x1y2s2t2 >= 2
-y30 - 10000 binaryDp3j0nj1x1y2s2t2 <= 2
-y31 + 10000 binaryDp3j0nj1x1y2s2t2 >= 2
-y31 - 10000 binaryDp3j0nj1x1y2s2t2 <= 2
-x31 - 10000 binaryDp3j0nj1x1y2s2t2 <= 1
-x30 + 10000 binaryDp3j0nj1x1y2s2t2 >= 2
-y31 + 10000 binaryUp3j1nj2x1y2s2t2 >= 2
-y31 - 10000 binaryUp3j1nj2x1y2s2t2 <=  2
-y32 + 10000 binaryUp3j1nj2x1y2s2t2 >= 2
-y32 - 10000 binaryUp3j1nj2x1y2s2t2 <= 2
-x31 - 10000 binaryUp3j1nj2x1y2s2t2 <= 1
-x32 + 10000 binaryUp3j1nj2x1y2s2t2 >= 2
-y31 + 10000 binaryDp3j1nj2x1y2s2t2 >= 2
-y31 - 10000 binaryDp3j1nj2x1y2s2t2 <= 2
-y32 + 10000 binaryDp3j1nj2x1y2s2t2 >= 2
-y32 - 10000 binaryDp3j1nj2x1y2s2t2 <= 2
-x32 - 10000 binaryDp3j1nj2x1y2s2t2 <= 1
-x31 + 10000 binaryDp3j1nj2x1y2s2t2 >= 2
-y32 + 10000 binaryUp3j2nj3x1y2s2t2 >= 2
-y32 - 10000 binaryUp3j2nj3x1y2s2t2 <=  2
-y33 + 10000 binaryUp3j2nj3x1y2s2t2 >= 2
-y33 - 10000 binaryUp3j2nj3x1y2s2t2 <= 2
-x32 - 10000 binaryUp3j2nj3x1y2s2t2 <= 1
-x33 + 10000 binaryUp3j2nj3x1y2s2t2 >= 2
-y32 + 10000 binaryDp3j2nj3x1y2s2t2 >= 2
-y32 - 10000 binaryDp3j2nj3x1y2s2t2 <= 2
-y33 + 10000 binaryDp3j2nj3x1y2s2t2 >= 2
-y33 - 10000 binaryDp3j2nj3x1y2s2t2 <= 2
-x33 - 10000 binaryDp3j2nj3x1y2s2t2 <= 1
-x32 + 10000 binaryDp3j2nj3x1y2s2t2 >= 2
-y33 + 10000 binaryUp3j3nj4x1y2s2t2 >= 2
-y33 - 10000 binaryUp3j3nj4x1y2s2t2 <=  2
-y34 + 10000 binaryUp3j3nj4x1y2s2t2 >= 2
-y34 - 10000 binaryUp3j3nj4x1y2s2t2 <= 2
-x33 - 10000 binaryUp3j3nj4x1y2s2t2 <= 1
-x34 + 10000 binaryUp3j3nj4x1y2s2t2 >= 2
-y33 + 10000 binaryDp3j3nj4x1y2s2t2 >= 2
-y33 - 10000 binaryDp3j3nj4x1y2s2t2 <= 2
-y34 + 10000 binaryDp3j3nj4x1y2s2t2 >= 2
-y34 - 10000 binaryDp3j3nj4x1y2s2t2 <= 2
-x34 - 10000 binaryDp3j3nj4x1y2s2t2 <= 1
-x33 + 10000 binaryDp3j3nj4x1y2s2t2 >= 2
- + binaryUp0j0nj1x1y2s2t2 + binaryDp0j0nj1x1y2s2t2 + binaryUp0j1nj2x1y2s2t2 + binaryDp0j1nj2x1y2s2t2 + binaryUp0j2nj3x1y2s2t2 + binaryDp0j2nj3x1y2s2t2 + binaryUp0j3nj4x1y2s2t2 + binaryDp0j3nj4x1y2s2t2 + binaryUp1j0nj1x1y2s2t2 + binaryDp1j0nj1x1y2s2t2 + binaryUp1j1nj2x1y2s2t2 + binaryDp1j1nj2x1y2s2t2 + binaryUp1j2nj3x1y2s2t2 + binaryDp1j2nj3x1y2s2t2 + binaryUp1j3nj4x1y2s2t2 + binaryDp1j3nj4x1y2s2t2 + binaryUp2j0nj1x1y2s2t2 + binaryDp2j0nj1x1y2s2t2 + binaryUp2j1nj2x1y2s2t2 + binaryDp2j1nj2x1y2s2t2 + binaryUp2j2nj3x1y2s2t2 + binaryDp2j2nj3x1y2s2t2 + binaryUp2j3nj4x1y2s2t2 + binaryDp2j3nj4x1y2s2t2 + binaryUp3j0nj1x1y2s2t2 + binaryDp3j0nj1x1y2s2t2 + binaryUp3j1nj2x1y2s2t2 + binaryDp3j1nj2x1y2s2t2 + binaryUp3j2nj3x1y2s2t2 + binaryDp3j2nj3x1y2s2t2 + binaryUp3j3nj4x1y2s2t2 + binaryDp3j3nj4x1y2s2t2 <= 31
+y14 + 10000 binaryUp1j4nj5x1y2s2t2 >= 2
+y14 - 10000 binaryUp1j4nj5x1y2s2t2 <=  2
+y15 + 10000 binaryUp1j4nj5x1y2s2t2 >= 2
+y15 - 10000 binaryUp1j4nj5x1y2s2t2 <= 2
+x14 - 10000 binaryUp1j4nj5x1y2s2t2 <= 1
+x15 + 10000 binaryUp1j4nj5x1y2s2t2 >= 2
+y14 + 10000 binaryDp1j4nj5x1y2s2t2 >= 2
+y14 - 10000 binaryDp1j4nj5x1y2s2t2 <= 2
+y15 + 10000 binaryDp1j4nj5x1y2s2t2 >= 2
+y15 - 10000 binaryDp1j4nj5x1y2s2t2 <= 2
+x15 - 10000 binaryDp1j4nj5x1y2s2t2 <= 1
+x14 + 10000 binaryDp1j4nj5x1y2s2t2 >= 2
+y15 + 10000 binaryUp1j5nj6x1y2s2t2 >= 2
+y15 - 10000 binaryUp1j5nj6x1y2s2t2 <=  2
+y16 + 10000 binaryUp1j5nj6x1y2s2t2 >= 2
+y16 - 10000 binaryUp1j5nj6x1y2s2t2 <= 2
+x15 - 10000 binaryUp1j5nj6x1y2s2t2 <= 1
+x16 + 10000 binaryUp1j5nj6x1y2s2t2 >= 2
+y15 + 10000 binaryDp1j5nj6x1y2s2t2 >= 2
+y15 - 10000 binaryDp1j5nj6x1y2s2t2 <= 2
+y16 + 10000 binaryDp1j5nj6x1y2s2t2 >= 2
+y16 - 10000 binaryDp1j5nj6x1y2s2t2 <= 2
+x16 - 10000 binaryDp1j5nj6x1y2s2t2 <= 1
+x15 + 10000 binaryDp1j5nj6x1y2s2t2 >= 2
+y16 + 10000 binaryUp1j6nj7x1y2s2t2 >= 2
+y16 - 10000 binaryUp1j6nj7x1y2s2t2 <=  2
+y17 + 10000 binaryUp1j6nj7x1y2s2t2 >= 2
+y17 - 10000 binaryUp1j6nj7x1y2s2t2 <= 2
+x16 - 10000 binaryUp1j6nj7x1y2s2t2 <= 1
+x17 + 10000 binaryUp1j6nj7x1y2s2t2 >= 2
+y16 + 10000 binaryDp1j6nj7x1y2s2t2 >= 2
+y16 - 10000 binaryDp1j6nj7x1y2s2t2 <= 2
+y17 + 10000 binaryDp1j6nj7x1y2s2t2 >= 2
+y17 - 10000 binaryDp1j6nj7x1y2s2t2 <= 2
+x17 - 10000 binaryDp1j6nj7x1y2s2t2 <= 1
+x16 + 10000 binaryDp1j6nj7x1y2s2t2 >= 2
+y17 + 10000 binaryUp1j7nj8x1y2s2t2 >= 2
+y17 - 10000 binaryUp1j7nj8x1y2s2t2 <=  2
+y18 + 10000 binaryUp1j7nj8x1y2s2t2 >= 2
+y18 - 10000 binaryUp1j7nj8x1y2s2t2 <= 2
+x17 - 10000 binaryUp1j7nj8x1y2s2t2 <= 1
+x18 + 10000 binaryUp1j7nj8x1y2s2t2 >= 2
+y17 + 10000 binaryDp1j7nj8x1y2s2t2 >= 2
+y17 - 10000 binaryDp1j7nj8x1y2s2t2 <= 2
+y18 + 10000 binaryDp1j7nj8x1y2s2t2 >= 2
+y18 - 10000 binaryDp1j7nj8x1y2s2t2 <= 2
+x18 - 10000 binaryDp1j7nj8x1y2s2t2 <= 1
+x17 + 10000 binaryDp1j7nj8x1y2s2t2 >= 2
+y18 + 10000 binaryUp1j8nj9x1y2s2t2 >= 2
+y18 - 10000 binaryUp1j8nj9x1y2s2t2 <=  2
+y19 + 10000 binaryUp1j8nj9x1y2s2t2 >= 2
+y19 - 10000 binaryUp1j8nj9x1y2s2t2 <= 2
+x18 - 10000 binaryUp1j8nj9x1y2s2t2 <= 1
+x19 + 10000 binaryUp1j8nj9x1y2s2t2 >= 2
+y18 + 10000 binaryDp1j8nj9x1y2s2t2 >= 2
+y18 - 10000 binaryDp1j8nj9x1y2s2t2 <= 2
+y19 + 10000 binaryDp1j8nj9x1y2s2t2 >= 2
+y19 - 10000 binaryDp1j8nj9x1y2s2t2 <= 2
+x19 - 10000 binaryDp1j8nj9x1y2s2t2 <= 1
+x18 + 10000 binaryDp1j8nj9x1y2s2t2 >= 2
+ + binaryUp0j0nj1x1y2s2t2 + binaryDp0j0nj1x1y2s2t2 + binaryUp0j1nj2x1y2s2t2 + binaryDp0j1nj2x1y2s2t2 + binaryUp0j2nj3x1y2s2t2 + binaryDp0j2nj3x1y2s2t2 + binaryUp0j3nj4x1y2s2t2 + binaryDp0j3nj4x1y2s2t2 + binaryUp0j4nj5x1y2s2t2 + binaryDp0j4nj5x1y2s2t2 + binaryUp0j5nj6x1y2s2t2 + binaryDp0j5nj6x1y2s2t2 + binaryUp0j6nj7x1y2s2t2 + binaryDp0j6nj7x1y2s2t2 + binaryUp0j7nj8x1y2s2t2 + binaryDp0j7nj8x1y2s2t2 + binaryUp0j8nj9x1y2s2t2 + binaryDp0j8nj9x1y2s2t2 + binaryUp1j0nj1x1y2s2t2 + binaryDp1j0nj1x1y2s2t2 + binaryUp1j1nj2x1y2s2t2 + binaryDp1j1nj2x1y2s2t2 + binaryUp1j2nj3x1y2s2t2 + binaryDp1j2nj3x1y2s2t2 + binaryUp1j3nj4x1y2s2t2 + binaryDp1j3nj4x1y2s2t2 + binaryUp1j4nj5x1y2s2t2 + binaryDp1j4nj5x1y2s2t2 + binaryUp1j5nj6x1y2s2t2 + binaryDp1j5nj6x1y2s2t2 + binaryUp1j6nj7x1y2s2t2 + binaryDp1j6nj7x1y2s2t2 + binaryUp1j7nj8x1y2s2t2 + binaryDp1j7nj8x1y2s2t2 + binaryUp1j8nj9x1y2s2t2 + binaryDp1j8nj9x1y2s2t2 <= 35
+x00 + 10000 binaryLp0j0nj1x0y1s0t2 >= 0
+x00 - 10000 binaryLp0j0nj1x0y1s0t2 <= 0
+x01 + 10000 binaryLp0j0nj1x0y1s0t2 >= 0
+x01 - 10000 binaryLp0j0nj1x0y1s0t2 <= 0
+y00 - 10000 binaryLp0j0nj1x0y1s0t2 <= 1
+y01 + 10000 binaryLp0j0nj1x0y1s0t2 >= 2
+x00 + 10000 binaryRp0j0nj1x0y1s0t2 >= 0
+x00 - 10000 binaryRp0j0nj1x0y1s0t2 <= 0
+x01 + 10000 binaryRp0j0nj1x0y1s0t2 >= 0
+x01 - 10000 binaryRp0j0nj1x0y1s0t2 <= 0
+y01 - 10000 binaryRp0j0nj1x0y1s0t2 <= 1
+y00 + 10000 binaryRp0j0nj1x0y1s0t2 >= 2
+x01 + 10000 binaryLp0j1nj2x0y1s0t2 >= 0
+x01 - 10000 binaryLp0j1nj2x0y1s0t2 <= 0
+x02 + 10000 binaryLp0j1nj2x0y1s0t2 >= 0
+x02 - 10000 binaryLp0j1nj2x0y1s0t2 <= 0
+y01 - 10000 binaryLp0j1nj2x0y1s0t2 <= 1
+y02 + 10000 binaryLp0j1nj2x0y1s0t2 >= 2
+x01 + 10000 binaryRp0j1nj2x0y1s0t2 >= 0
+x01 - 10000 binaryRp0j1nj2x0y1s0t2 <= 0
+x02 + 10000 binaryRp0j1nj2x0y1s0t2 >= 0
+x02 - 10000 binaryRp0j1nj2x0y1s0t2 <= 0
+y02 - 10000 binaryRp0j1nj2x0y1s0t2 <= 1
+y01 + 10000 binaryRp0j1nj2x0y1s0t2 >= 2
+x02 + 10000 binaryLp0j2nj3x0y1s0t2 >= 0
+x02 - 10000 binaryLp0j2nj3x0y1s0t2 <= 0
+x03 + 10000 binaryLp0j2nj3x0y1s0t2 >= 0
+x03 - 10000 binaryLp0j2nj3x0y1s0t2 <= 0
+y02 - 10000 binaryLp0j2nj3x0y1s0t2 <= 1
+y03 + 10000 binaryLp0j2nj3x0y1s0t2 >= 2
+x02 + 10000 binaryRp0j2nj3x0y1s0t2 >= 0
+x02 - 10000 binaryRp0j2nj3x0y1s0t2 <= 0
+x03 + 10000 binaryRp0j2nj3x0y1s0t2 >= 0
+x03 - 10000 binaryRp0j2nj3x0y1s0t2 <= 0
+y03 - 10000 binaryRp0j2nj3x0y1s0t2 <= 1
+y02 + 10000 binaryRp0j2nj3x0y1s0t2 >= 2
+x03 + 10000 binaryLp0j3nj4x0y1s0t2 >= 0
+x03 - 10000 binaryLp0j3nj4x0y1s0t2 <= 0
+x04 + 10000 binaryLp0j3nj4x0y1s0t2 >= 0
+x04 - 10000 binaryLp0j3nj4x0y1s0t2 <= 0
+y03 - 10000 binaryLp0j3nj4x0y1s0t2 <= 1
+y04 + 10000 binaryLp0j3nj4x0y1s0t2 >= 2
+x03 + 10000 binaryRp0j3nj4x0y1s0t2 >= 0
+x03 - 10000 binaryRp0j3nj4x0y1s0t2 <= 0
+x04 + 10000 binaryRp0j3nj4x0y1s0t2 >= 0
+x04 - 10000 binaryRp0j3nj4x0y1s0t2 <= 0
+y04 - 10000 binaryRp0j3nj4x0y1s0t2 <= 1
+y03 + 10000 binaryRp0j3nj4x0y1s0t2 >= 2
+x04 + 10000 binaryLp0j4nj5x0y1s0t2 >= 0
+x04 - 10000 binaryLp0j4nj5x0y1s0t2 <= 0
+x05 + 10000 binaryLp0j4nj5x0y1s0t2 >= 0
+x05 - 10000 binaryLp0j4nj5x0y1s0t2 <= 0
+y04 - 10000 binaryLp0j4nj5x0y1s0t2 <= 1
+y05 + 10000 binaryLp0j4nj5x0y1s0t2 >= 2
+x04 + 10000 binaryRp0j4nj5x0y1s0t2 >= 0
+x04 - 10000 binaryRp0j4nj5x0y1s0t2 <= 0
+x05 + 10000 binaryRp0j4nj5x0y1s0t2 >= 0
+x05 - 10000 binaryRp0j4nj5x0y1s0t2 <= 0
+y05 - 10000 binaryRp0j4nj5x0y1s0t2 <= 1
+y04 + 10000 binaryRp0j4nj5x0y1s0t2 >= 2
+x05 + 10000 binaryLp0j5nj6x0y1s0t2 >= 0
+x05 - 10000 binaryLp0j5nj6x0y1s0t2 <= 0
+x06 + 10000 binaryLp0j5nj6x0y1s0t2 >= 0
+x06 - 10000 binaryLp0j5nj6x0y1s0t2 <= 0
+y05 - 10000 binaryLp0j5nj6x0y1s0t2 <= 1
+y06 + 10000 binaryLp0j5nj6x0y1s0t2 >= 2
+x05 + 10000 binaryRp0j5nj6x0y1s0t2 >= 0
+x05 - 10000 binaryRp0j5nj6x0y1s0t2 <= 0
+x06 + 10000 binaryRp0j5nj6x0y1s0t2 >= 0
+x06 - 10000 binaryRp0j5nj6x0y1s0t2 <= 0
+y06 - 10000 binaryRp0j5nj6x0y1s0t2 <= 1
+y05 + 10000 binaryRp0j5nj6x0y1s0t2 >= 2
+x06 + 10000 binaryLp0j6nj7x0y1s0t2 >= 0
+x06 - 10000 binaryLp0j6nj7x0y1s0t2 <= 0
+x07 + 10000 binaryLp0j6nj7x0y1s0t2 >= 0
+x07 - 10000 binaryLp0j6nj7x0y1s0t2 <= 0
+y06 - 10000 binaryLp0j6nj7x0y1s0t2 <= 1
+y07 + 10000 binaryLp0j6nj7x0y1s0t2 >= 2
+x06 + 10000 binaryRp0j6nj7x0y1s0t2 >= 0
+x06 - 10000 binaryRp0j6nj7x0y1s0t2 <= 0
+x07 + 10000 binaryRp0j6nj7x0y1s0t2 >= 0
+x07 - 10000 binaryRp0j6nj7x0y1s0t2 <= 0
+y07 - 10000 binaryRp0j6nj7x0y1s0t2 <= 1
+y06 + 10000 binaryRp0j6nj7x0y1s0t2 >= 2
+x07 + 10000 binaryLp0j7nj8x0y1s0t2 >= 0
+x07 - 10000 binaryLp0j7nj8x0y1s0t2 <= 0
+x08 + 10000 binaryLp0j7nj8x0y1s0t2 >= 0
+x08 - 10000 binaryLp0j7nj8x0y1s0t2 <= 0
+y07 - 10000 binaryLp0j7nj8x0y1s0t2 <= 1
+y08 + 10000 binaryLp0j7nj8x0y1s0t2 >= 2
+x07 + 10000 binaryRp0j7nj8x0y1s0t2 >= 0
+x07 - 10000 binaryRp0j7nj8x0y1s0t2 <= 0
+x08 + 10000 binaryRp0j7nj8x0y1s0t2 >= 0
+x08 - 10000 binaryRp0j7nj8x0y1s0t2 <= 0
+y08 - 10000 binaryRp0j7nj8x0y1s0t2 <= 1
+y07 + 10000 binaryRp0j7nj8x0y1s0t2 >= 2
+x08 + 10000 binaryLp0j8nj9x0y1s0t2 >= 0
+x08 - 10000 binaryLp0j8nj9x0y1s0t2 <= 0
+x09 + 10000 binaryLp0j8nj9x0y1s0t2 >= 0
+x09 - 10000 binaryLp0j8nj9x0y1s0t2 <= 0
+y08 - 10000 binaryLp0j8nj9x0y1s0t2 <= 1
+y09 + 10000 binaryLp0j8nj9x0y1s0t2 >= 2
+x08 + 10000 binaryRp0j8nj9x0y1s0t2 >= 0
+x08 - 10000 binaryRp0j8nj9x0y1s0t2 <= 0
+x09 + 10000 binaryRp0j8nj9x0y1s0t2 >= 0
+x09 - 10000 binaryRp0j8nj9x0y1s0t2 <= 0
+y09 - 10000 binaryRp0j8nj9x0y1s0t2 <= 1
+y08 + 10000 binaryRp0j8nj9x0y1s0t2 >= 2
+x10 + 10000 binaryLp1j0nj1x0y1s0t2 >= 0
+x10 - 10000 binaryLp1j0nj1x0y1s0t2 <= 0
+x11 + 10000 binaryLp1j0nj1x0y1s0t2 >= 0
+x11 - 10000 binaryLp1j0nj1x0y1s0t2 <= 0
+y10 - 10000 binaryLp1j0nj1x0y1s0t2 <= 1
+y11 + 10000 binaryLp1j0nj1x0y1s0t2 >= 2
+x10 + 10000 binaryRp1j0nj1x0y1s0t2 >= 0
+x10 - 10000 binaryRp1j0nj1x0y1s0t2 <= 0
+x11 + 10000 binaryRp1j0nj1x0y1s0t2 >= 0
+x11 - 10000 binaryRp1j0nj1x0y1s0t2 <= 0
+y11 - 10000 binaryRp1j0nj1x0y1s0t2 <= 1
+y10 + 10000 binaryRp1j0nj1x0y1s0t2 >= 2
+x11 + 10000 binaryLp1j1nj2x0y1s0t2 >= 0
+x11 - 10000 binaryLp1j1nj2x0y1s0t2 <= 0
+x12 + 10000 binaryLp1j1nj2x0y1s0t2 >= 0
+x12 - 10000 binaryLp1j1nj2x0y1s0t2 <= 0
+y11 - 10000 binaryLp1j1nj2x0y1s0t2 <= 1
+y12 + 10000 binaryLp1j1nj2x0y1s0t2 >= 2
+x11 + 10000 binaryRp1j1nj2x0y1s0t2 >= 0
+x11 - 10000 binaryRp1j1nj2x0y1s0t2 <= 0
+x12 + 10000 binaryRp1j1nj2x0y1s0t2 >= 0
+x12 - 10000 binaryRp1j1nj2x0y1s0t2 <= 0
+y12 - 10000 binaryRp1j1nj2x0y1s0t2 <= 1
+y11 + 10000 binaryRp1j1nj2x0y1s0t2 >= 2
+x12 + 10000 binaryLp1j2nj3x0y1s0t2 >= 0
+x12 - 10000 binaryLp1j2nj3x0y1s0t2 <= 0
+x13 + 10000 binaryLp1j2nj3x0y1s0t2 >= 0
+x13 - 10000 binaryLp1j2nj3x0y1s0t2 <= 0
+y12 - 10000 binaryLp1j2nj3x0y1s0t2 <= 1
+y13 + 10000 binaryLp1j2nj3x0y1s0t2 >= 2
+x12 + 10000 binaryRp1j2nj3x0y1s0t2 >= 0
+x12 - 10000 binaryRp1j2nj3x0y1s0t2 <= 0
+x13 + 10000 binaryRp1j2nj3x0y1s0t2 >= 0
+x13 - 10000 binaryRp1j2nj3x0y1s0t2 <= 0
+y13 - 10000 binaryRp1j2nj3x0y1s0t2 <= 1
+y12 + 10000 binaryRp1j2nj3x0y1s0t2 >= 2
+x13 + 10000 binaryLp1j3nj4x0y1s0t2 >= 0
+x13 - 10000 binaryLp1j3nj4x0y1s0t2 <= 0
+x14 + 10000 binaryLp1j3nj4x0y1s0t2 >= 0
+x14 - 10000 binaryLp1j3nj4x0y1s0t2 <= 0
+y13 - 10000 binaryLp1j3nj4x0y1s0t2 <= 1
+y14 + 10000 binaryLp1j3nj4x0y1s0t2 >= 2
+x13 + 10000 binaryRp1j3nj4x0y1s0t2 >= 0
+x13 - 10000 binaryRp1j3nj4x0y1s0t2 <= 0
+x14 + 10000 binaryRp1j3nj4x0y1s0t2 >= 0
+x14 - 10000 binaryRp1j3nj4x0y1s0t2 <= 0
+y14 - 10000 binaryRp1j3nj4x0y1s0t2 <= 1
+y13 + 10000 binaryRp1j3nj4x0y1s0t2 >= 2
+x14 + 10000 binaryLp1j4nj5x0y1s0t2 >= 0
+x14 - 10000 binaryLp1j4nj5x0y1s0t2 <= 0
+x15 + 10000 binaryLp1j4nj5x0y1s0t2 >= 0
+x15 - 10000 binaryLp1j4nj5x0y1s0t2 <= 0
+y14 - 10000 binaryLp1j4nj5x0y1s0t2 <= 1
+y15 + 10000 binaryLp1j4nj5x0y1s0t2 >= 2
+x14 + 10000 binaryRp1j4nj5x0y1s0t2 >= 0
+x14 - 10000 binaryRp1j4nj5x0y1s0t2 <= 0
+x15 + 10000 binaryRp1j4nj5x0y1s0t2 >= 0
+x15 - 10000 binaryRp1j4nj5x0y1s0t2 <= 0
+y15 - 10000 binaryRp1j4nj5x0y1s0t2 <= 1
+y14 + 10000 binaryRp1j4nj5x0y1s0t2 >= 2
+x15 + 10000 binaryLp1j5nj6x0y1s0t2 >= 0
+x15 - 10000 binaryLp1j5nj6x0y1s0t2 <= 0
+x16 + 10000 binaryLp1j5nj6x0y1s0t2 >= 0
+x16 - 10000 binaryLp1j5nj6x0y1s0t2 <= 0
+y15 - 10000 binaryLp1j5nj6x0y1s0t2 <= 1
+y16 + 10000 binaryLp1j5nj6x0y1s0t2 >= 2
+x15 + 10000 binaryRp1j5nj6x0y1s0t2 >= 0
+x15 - 10000 binaryRp1j5nj6x0y1s0t2 <= 0
+x16 + 10000 binaryRp1j5nj6x0y1s0t2 >= 0
+x16 - 10000 binaryRp1j5nj6x0y1s0t2 <= 0
+y16 - 10000 binaryRp1j5nj6x0y1s0t2 <= 1
+y15 + 10000 binaryRp1j5nj6x0y1s0t2 >= 2
+x16 + 10000 binaryLp1j6nj7x0y1s0t2 >= 0
+x16 - 10000 binaryLp1j6nj7x0y1s0t2 <= 0
+x17 + 10000 binaryLp1j6nj7x0y1s0t2 >= 0
+x17 - 10000 binaryLp1j6nj7x0y1s0t2 <= 0
+y16 - 10000 binaryLp1j6nj7x0y1s0t2 <= 1
+y17 + 10000 binaryLp1j6nj7x0y1s0t2 >= 2
+x16 + 10000 binaryRp1j6nj7x0y1s0t2 >= 0
+x16 - 10000 binaryRp1j6nj7x0y1s0t2 <= 0
+x17 + 10000 binaryRp1j6nj7x0y1s0t2 >= 0
+x17 - 10000 binaryRp1j6nj7x0y1s0t2 <= 0
+y17 - 10000 binaryRp1j6nj7x0y1s0t2 <= 1
+y16 + 10000 binaryRp1j6nj7x0y1s0t2 >= 2
+x17 + 10000 binaryLp1j7nj8x0y1s0t2 >= 0
+x17 - 10000 binaryLp1j7nj8x0y1s0t2 <= 0
+x18 + 10000 binaryLp1j7nj8x0y1s0t2 >= 0
+x18 - 10000 binaryLp1j7nj8x0y1s0t2 <= 0
+y17 - 10000 binaryLp1j7nj8x0y1s0t2 <= 1
+y18 + 10000 binaryLp1j7nj8x0y1s0t2 >= 2
+x17 + 10000 binaryRp1j7nj8x0y1s0t2 >= 0
+x17 - 10000 binaryRp1j7nj8x0y1s0t2 <= 0
+x18 + 10000 binaryRp1j7nj8x0y1s0t2 >= 0
+x18 - 10000 binaryRp1j7nj8x0y1s0t2 <= 0
+y18 - 10000 binaryRp1j7nj8x0y1s0t2 <= 1
+y17 + 10000 binaryRp1j7nj8x0y1s0t2 >= 2
+x18 + 10000 binaryLp1j8nj9x0y1s0t2 >= 0
+x18 - 10000 binaryLp1j8nj9x0y1s0t2 <= 0
+x19 + 10000 binaryLp1j8nj9x0y1s0t2 >= 0
+x19 - 10000 binaryLp1j8nj9x0y1s0t2 <= 0
+y18 - 10000 binaryLp1j8nj9x0y1s0t2 <= 1
+y19 + 10000 binaryLp1j8nj9x0y1s0t2 >= 2
+x18 + 10000 binaryRp1j8nj9x0y1s0t2 >= 0
+x18 - 10000 binaryRp1j8nj9x0y1s0t2 <= 0
+x19 + 10000 binaryRp1j8nj9x0y1s0t2 >= 0
+x19 - 10000 binaryRp1j8nj9x0y1s0t2 <= 0
+y19 - 10000 binaryRp1j8nj9x0y1s0t2 <= 1
+y18 + 10000 binaryRp1j8nj9x0y1s0t2 >= 2
+ + binaryLp0j0nj1x0y1s0t2 + binaryRp0j0nj1x0y1s0t2 + binaryLp0j1nj2x0y1s0t2 + binaryRp0j1nj2x0y1s0t2 + binaryLp0j2nj3x0y1s0t2 + binaryRp0j2nj3x0y1s0t2 + binaryLp0j3nj4x0y1s0t2 + binaryRp0j3nj4x0y1s0t2 + binaryLp0j4nj5x0y1s0t2 + binaryRp0j4nj5x0y1s0t2 + binaryLp0j5nj6x0y1s0t2 + binaryRp0j5nj6x0y1s0t2 + binaryLp0j6nj7x0y1s0t2 + binaryRp0j6nj7x0y1s0t2 + binaryLp0j7nj8x0y1s0t2 + binaryRp0j7nj8x0y1s0t2 + binaryLp0j8nj9x0y1s0t2 + binaryRp0j8nj9x0y1s0t2 + binaryLp1j0nj1x0y1s0t2 + binaryRp1j0nj1x0y1s0t2 + binaryLp1j1nj2x0y1s0t2 + binaryRp1j1nj2x0y1s0t2 + binaryLp1j2nj3x0y1s0t2 + binaryRp1j2nj3x0y1s0t2 + binaryLp1j3nj4x0y1s0t2 + binaryRp1j3nj4x0y1s0t2 + binaryLp1j4nj5x0y1s0t2 + binaryRp1j4nj5x0y1s0t2 + binaryLp1j5nj6x0y1s0t2 + binaryRp1j5nj6x0y1s0t2 + binaryLp1j6nj7x0y1s0t2 + binaryRp1j6nj7x0y1s0t2 + binaryLp1j7nj8x0y1s0t2 + binaryRp1j7nj8x0y1s0t2 + binaryLp1j8nj9x0y1s0t2 + binaryRp1j8nj9x0y1s0t2 <= 35
+x00 + 10000 binaryLp0j0nj1x1y0s1t1 >= 1
+x00 - 10000 binaryLp0j0nj1x1y0s1t1 <= 1
+x01 + 10000 binaryLp0j0nj1x1y0s1t1 >= 1
+x01 - 10000 binaryLp0j0nj1x1y0s1t1 <= 1
+y00 - 10000 binaryLp0j0nj1x1y0s1t1 <= 0
+y01 + 10000 binaryLp0j0nj1x1y0s1t1 >= 1
+x00 + 10000 binaryRp0j0nj1x1y0s1t1 >= 1
+x00 - 10000 binaryRp0j0nj1x1y0s1t1 <= 1
+x01 + 10000 binaryRp0j0nj1x1y0s1t1 >= 1
+x01 - 10000 binaryRp0j0nj1x1y0s1t1 <= 1
+y01 - 10000 binaryRp0j0nj1x1y0s1t1 <= 0
+y00 + 10000 binaryRp0j0nj1x1y0s1t1 >= 1
+x01 + 10000 binaryLp0j1nj2x1y0s1t1 >= 1
+x01 - 10000 binaryLp0j1nj2x1y0s1t1 <= 1
+x02 + 10000 binaryLp0j1nj2x1y0s1t1 >= 1
+x02 - 10000 binaryLp0j1nj2x1y0s1t1 <= 1
+y01 - 10000 binaryLp0j1nj2x1y0s1t1 <= 0
+y02 + 10000 binaryLp0j1nj2x1y0s1t1 >= 1
+x01 + 10000 binaryRp0j1nj2x1y0s1t1 >= 1
+x01 - 10000 binaryRp0j1nj2x1y0s1t1 <= 1
+x02 + 10000 binaryRp0j1nj2x1y0s1t1 >= 1
+x02 - 10000 binaryRp0j1nj2x1y0s1t1 <= 1
+y02 - 10000 binaryRp0j1nj2x1y0s1t1 <= 0
+y01 + 10000 binaryRp0j1nj2x1y0s1t1 >= 1
+x02 + 10000 binaryLp0j2nj3x1y0s1t1 >= 1
+x02 - 10000 binaryLp0j2nj3x1y0s1t1 <= 1
+x03 + 10000 binaryLp0j2nj3x1y0s1t1 >= 1
+x03 - 10000 binaryLp0j2nj3x1y0s1t1 <= 1
+y02 - 10000 binaryLp0j2nj3x1y0s1t1 <= 0
+y03 + 10000 binaryLp0j2nj3x1y0s1t1 >= 1
+x02 + 10000 binaryRp0j2nj3x1y0s1t1 >= 1
+x02 - 10000 binaryRp0j2nj3x1y0s1t1 <= 1
+x03 + 10000 binaryRp0j2nj3x1y0s1t1 >= 1
+x03 - 10000 binaryRp0j2nj3x1y0s1t1 <= 1
+y03 - 10000 binaryRp0j2nj3x1y0s1t1 <= 0
+y02 + 10000 binaryRp0j2nj3x1y0s1t1 >= 1
+x03 + 10000 binaryLp0j3nj4x1y0s1t1 >= 1
+x03 - 10000 binaryLp0j3nj4x1y0s1t1 <= 1
+x04 + 10000 binaryLp0j3nj4x1y0s1t1 >= 1
+x04 - 10000 binaryLp0j3nj4x1y0s1t1 <= 1
+y03 - 10000 binaryLp0j3nj4x1y0s1t1 <= 0
+y04 + 10000 binaryLp0j3nj4x1y0s1t1 >= 1
+x03 + 10000 binaryRp0j3nj4x1y0s1t1 >= 1
+x03 - 10000 binaryRp0j3nj4x1y0s1t1 <= 1
+x04 + 10000 binaryRp0j3nj4x1y0s1t1 >= 1
+x04 - 10000 binaryRp0j3nj4x1y0s1t1 <= 1
+y04 - 10000 binaryRp0j3nj4x1y0s1t1 <= 0
+y03 + 10000 binaryRp0j3nj4x1y0s1t1 >= 1
+x04 + 10000 binaryLp0j4nj5x1y0s1t1 >= 1
+x04 - 10000 binaryLp0j4nj5x1y0s1t1 <= 1
+x05 + 10000 binaryLp0j4nj5x1y0s1t1 >= 1
+x05 - 10000 binaryLp0j4nj5x1y0s1t1 <= 1
+y04 - 10000 binaryLp0j4nj5x1y0s1t1 <= 0
+y05 + 10000 binaryLp0j4nj5x1y0s1t1 >= 1
+x04 + 10000 binaryRp0j4nj5x1y0s1t1 >= 1
+x04 - 10000 binaryRp0j4nj5x1y0s1t1 <= 1
+x05 + 10000 binaryRp0j4nj5x1y0s1t1 >= 1
+x05 - 10000 binaryRp0j4nj5x1y0s1t1 <= 1
+y05 - 10000 binaryRp0j4nj5x1y0s1t1 <= 0
+y04 + 10000 binaryRp0j4nj5x1y0s1t1 >= 1
+x05 + 10000 binaryLp0j5nj6x1y0s1t1 >= 1
+x05 - 10000 binaryLp0j5nj6x1y0s1t1 <= 1
+x06 + 10000 binaryLp0j5nj6x1y0s1t1 >= 1
+x06 - 10000 binaryLp0j5nj6x1y0s1t1 <= 1
+y05 - 10000 binaryLp0j5nj6x1y0s1t1 <= 0
+y06 + 10000 binaryLp0j5nj6x1y0s1t1 >= 1
+x05 + 10000 binaryRp0j5nj6x1y0s1t1 >= 1
+x05 - 10000 binaryRp0j5nj6x1y0s1t1 <= 1
+x06 + 10000 binaryRp0j5nj6x1y0s1t1 >= 1
+x06 - 10000 binaryRp0j5nj6x1y0s1t1 <= 1
+y06 - 10000 binaryRp0j5nj6x1y0s1t1 <= 0
+y05 + 10000 binaryRp0j5nj6x1y0s1t1 >= 1
+x06 + 10000 binaryLp0j6nj7x1y0s1t1 >= 1
+x06 - 10000 binaryLp0j6nj7x1y0s1t1 <= 1
+x07 + 10000 binaryLp0j6nj7x1y0s1t1 >= 1
+x07 - 10000 binaryLp0j6nj7x1y0s1t1 <= 1
+y06 - 10000 binaryLp0j6nj7x1y0s1t1 <= 0
+y07 + 10000 binaryLp0j6nj7x1y0s1t1 >= 1
+x06 + 10000 binaryRp0j6nj7x1y0s1t1 >= 1
+x06 - 10000 binaryRp0j6nj7x1y0s1t1 <= 1
+x07 + 10000 binaryRp0j6nj7x1y0s1t1 >= 1
+x07 - 10000 binaryRp0j6nj7x1y0s1t1 <= 1
+y07 - 10000 binaryRp0j6nj7x1y0s1t1 <= 0
+y06 + 10000 binaryRp0j6nj7x1y0s1t1 >= 1
+x07 + 10000 binaryLp0j7nj8x1y0s1t1 >= 1
+x07 - 10000 binaryLp0j7nj8x1y0s1t1 <= 1
+x08 + 10000 binaryLp0j7nj8x1y0s1t1 >= 1
+x08 - 10000 binaryLp0j7nj8x1y0s1t1 <= 1
+y07 - 10000 binaryLp0j7nj8x1y0s1t1 <= 0
+y08 + 10000 binaryLp0j7nj8x1y0s1t1 >= 1
+x07 + 10000 binaryRp0j7nj8x1y0s1t1 >= 1
+x07 - 10000 binaryRp0j7nj8x1y0s1t1 <= 1
+x08 + 10000 binaryRp0j7nj8x1y0s1t1 >= 1
+x08 - 10000 binaryRp0j7nj8x1y0s1t1 <= 1
+y08 - 10000 binaryRp0j7nj8x1y0s1t1 <= 0
+y07 + 10000 binaryRp0j7nj8x1y0s1t1 >= 1
+x08 + 10000 binaryLp0j8nj9x1y0s1t1 >= 1
+x08 - 10000 binaryLp0j8nj9x1y0s1t1 <= 1
+x09 + 10000 binaryLp0j8nj9x1y0s1t1 >= 1
+x09 - 10000 binaryLp0j8nj9x1y0s1t1 <= 1
+y08 - 10000 binaryLp0j8nj9x1y0s1t1 <= 0
+y09 + 10000 binaryLp0j8nj9x1y0s1t1 >= 1
+x08 + 10000 binaryRp0j8nj9x1y0s1t1 >= 1
+x08 - 10000 binaryRp0j8nj9x1y0s1t1 <= 1
+x09 + 10000 binaryRp0j8nj9x1y0s1t1 >= 1
+x09 - 10000 binaryRp0j8nj9x1y0s1t1 <= 1
+y09 - 10000 binaryRp0j8nj9x1y0s1t1 <= 0
+y08 + 10000 binaryRp0j8nj9x1y0s1t1 >= 1
+x10 + 10000 binaryLp1j0nj1x1y0s1t1 >= 1
+x10 - 10000 binaryLp1j0nj1x1y0s1t1 <= 1
+x11 + 10000 binaryLp1j0nj1x1y0s1t1 >= 1
+x11 - 10000 binaryLp1j0nj1x1y0s1t1 <= 1
+y10 - 10000 binaryLp1j0nj1x1y0s1t1 <= 0
+y11 + 10000 binaryLp1j0nj1x1y0s1t1 >= 1
+x10 + 10000 binaryRp1j0nj1x1y0s1t1 >= 1
+x10 - 10000 binaryRp1j0nj1x1y0s1t1 <= 1
+x11 + 10000 binaryRp1j0nj1x1y0s1t1 >= 1
+x11 - 10000 binaryRp1j0nj1x1y0s1t1 <= 1
+y11 - 10000 binaryRp1j0nj1x1y0s1t1 <= 0
+y10 + 10000 binaryRp1j0nj1x1y0s1t1 >= 1
+x11 + 10000 binaryLp1j1nj2x1y0s1t1 >= 1
+x11 - 10000 binaryLp1j1nj2x1y0s1t1 <= 1
+x12 + 10000 binaryLp1j1nj2x1y0s1t1 >= 1
+x12 - 10000 binaryLp1j1nj2x1y0s1t1 <= 1
+y11 - 10000 binaryLp1j1nj2x1y0s1t1 <= 0
+y12 + 10000 binaryLp1j1nj2x1y0s1t1 >= 1
+x11 + 10000 binaryRp1j1nj2x1y0s1t1 >= 1
+x11 - 10000 binaryRp1j1nj2x1y0s1t1 <= 1
+x12 + 10000 binaryRp1j1nj2x1y0s1t1 >= 1
+x12 - 10000 binaryRp1j1nj2x1y0s1t1 <= 1
+y12 - 10000 binaryRp1j1nj2x1y0s1t1 <= 0
+y11 + 10000 binaryRp1j1nj2x1y0s1t1 >= 1
+x12 + 10000 binaryLp1j2nj3x1y0s1t1 >= 1
+x12 - 10000 binaryLp1j2nj3x1y0s1t1 <= 1
+x13 + 10000 binaryLp1j2nj3x1y0s1t1 >= 1
+x13 - 10000 binaryLp1j2nj3x1y0s1t1 <= 1
+y12 - 10000 binaryLp1j2nj3x1y0s1t1 <= 0
+y13 + 10000 binaryLp1j2nj3x1y0s1t1 >= 1
+x12 + 10000 binaryRp1j2nj3x1y0s1t1 >= 1
+x12 - 10000 binaryRp1j2nj3x1y0s1t1 <= 1
+x13 + 10000 binaryRp1j2nj3x1y0s1t1 >= 1
+x13 - 10000 binaryRp1j2nj3x1y0s1t1 <= 1
+y13 - 10000 binaryRp1j2nj3x1y0s1t1 <= 0
+y12 + 10000 binaryRp1j2nj3x1y0s1t1 >= 1
+x13 + 10000 binaryLp1j3nj4x1y0s1t1 >= 1
+x13 - 10000 binaryLp1j3nj4x1y0s1t1 <= 1
+x14 + 10000 binaryLp1j3nj4x1y0s1t1 >= 1
+x14 - 10000 binaryLp1j3nj4x1y0s1t1 <= 1
+y13 - 10000 binaryLp1j3nj4x1y0s1t1 <= 0
+y14 + 10000 binaryLp1j3nj4x1y0s1t1 >= 1
+x13 + 10000 binaryRp1j3nj4x1y0s1t1 >= 1
+x13 - 10000 binaryRp1j3nj4x1y0s1t1 <= 1
+x14 + 10000 binaryRp1j3nj4x1y0s1t1 >= 1
+x14 - 10000 binaryRp1j3nj4x1y0s1t1 <= 1
+y14 - 10000 binaryRp1j3nj4x1y0s1t1 <= 0
+y13 + 10000 binaryRp1j3nj4x1y0s1t1 >= 1
+x14 + 10000 binaryLp1j4nj5x1y0s1t1 >= 1
+x14 - 10000 binaryLp1j4nj5x1y0s1t1 <= 1
+x15 + 10000 binaryLp1j4nj5x1y0s1t1 >= 1
+x15 - 10000 binaryLp1j4nj5x1y0s1t1 <= 1
+y14 - 10000 binaryLp1j4nj5x1y0s1t1 <= 0
+y15 + 10000 binaryLp1j4nj5x1y0s1t1 >= 1
+x14 + 10000 binaryRp1j4nj5x1y0s1t1 >= 1
+x14 - 10000 binaryRp1j4nj5x1y0s1t1 <= 1
+x15 + 10000 binaryRp1j4nj5x1y0s1t1 >= 1
+x15 - 10000 binaryRp1j4nj5x1y0s1t1 <= 1
+y15 - 10000 binaryRp1j4nj5x1y0s1t1 <= 0
+y14 + 10000 binaryRp1j4nj5x1y0s1t1 >= 1
+x15 + 10000 binaryLp1j5nj6x1y0s1t1 >= 1
+x15 - 10000 binaryLp1j5nj6x1y0s1t1 <= 1
+x16 + 10000 binaryLp1j5nj6x1y0s1t1 >= 1
+x16 - 10000 binaryLp1j5nj6x1y0s1t1 <= 1
+y15 - 10000 binaryLp1j5nj6x1y0s1t1 <= 0
+y16 + 10000 binaryLp1j5nj6x1y0s1t1 >= 1
+x15 + 10000 binaryRp1j5nj6x1y0s1t1 >= 1
+x15 - 10000 binaryRp1j5nj6x1y0s1t1 <= 1
+x16 + 10000 binaryRp1j5nj6x1y0s1t1 >= 1
+x16 - 10000 binaryRp1j5nj6x1y0s1t1 <= 1
+y16 - 10000 binaryRp1j5nj6x1y0s1t1 <= 0
+y15 + 10000 binaryRp1j5nj6x1y0s1t1 >= 1
+x16 + 10000 binaryLp1j6nj7x1y0s1t1 >= 1
+x16 - 10000 binaryLp1j6nj7x1y0s1t1 <= 1
+x17 + 10000 binaryLp1j6nj7x1y0s1t1 >= 1
+x17 - 10000 binaryLp1j6nj7x1y0s1t1 <= 1
+y16 - 10000 binaryLp1j6nj7x1y0s1t1 <= 0
+y17 + 10000 binaryLp1j6nj7x1y0s1t1 >= 1
+x16 + 10000 binaryRp1j6nj7x1y0s1t1 >= 1
+x16 - 10000 binaryRp1j6nj7x1y0s1t1 <= 1
+x17 + 10000 binaryRp1j6nj7x1y0s1t1 >= 1
+x17 - 10000 binaryRp1j6nj7x1y0s1t1 <= 1
+y17 - 10000 binaryRp1j6nj7x1y0s1t1 <= 0
+y16 + 10000 binaryRp1j6nj7x1y0s1t1 >= 1
+x17 + 10000 binaryLp1j7nj8x1y0s1t1 >= 1
+x17 - 10000 binaryLp1j7nj8x1y0s1t1 <= 1
+x18 + 10000 binaryLp1j7nj8x1y0s1t1 >= 1
+x18 - 10000 binaryLp1j7nj8x1y0s1t1 <= 1
+y17 - 10000 binaryLp1j7nj8x1y0s1t1 <= 0
+y18 + 10000 binaryLp1j7nj8x1y0s1t1 >= 1
+x17 + 10000 binaryRp1j7nj8x1y0s1t1 >= 1
+x17 - 10000 binaryRp1j7nj8x1y0s1t1 <= 1
+x18 + 10000 binaryRp1j7nj8x1y0s1t1 >= 1
+x18 - 10000 binaryRp1j7nj8x1y0s1t1 <= 1
+y18 - 10000 binaryRp1j7nj8x1y0s1t1 <= 0
+y17 + 10000 binaryRp1j7nj8x1y0s1t1 >= 1
+x18 + 10000 binaryLp1j8nj9x1y0s1t1 >= 1
+x18 - 10000 binaryLp1j8nj9x1y0s1t1 <= 1
+x19 + 10000 binaryLp1j8nj9x1y0s1t1 >= 1
+x19 - 10000 binaryLp1j8nj9x1y0s1t1 <= 1
+y18 - 10000 binaryLp1j8nj9x1y0s1t1 <= 0
+y19 + 10000 binaryLp1j8nj9x1y0s1t1 >= 1
+x18 + 10000 binaryRp1j8nj9x1y0s1t1 >= 1
+x18 - 10000 binaryRp1j8nj9x1y0s1t1 <= 1
+x19 + 10000 binaryRp1j8nj9x1y0s1t1 >= 1
+x19 - 10000 binaryRp1j8nj9x1y0s1t1 <= 1
+y19 - 10000 binaryRp1j8nj9x1y0s1t1 <= 0
+y18 + 10000 binaryRp1j8nj9x1y0s1t1 >= 1
+ + binaryLp0j0nj1x1y0s1t1 + binaryRp0j0nj1x1y0s1t1 + binaryLp0j1nj2x1y0s1t1 + binaryRp0j1nj2x1y0s1t1 + binaryLp0j2nj3x1y0s1t1 + binaryRp0j2nj3x1y0s1t1 + binaryLp0j3nj4x1y0s1t1 + binaryRp0j3nj4x1y0s1t1 + binaryLp0j4nj5x1y0s1t1 + binaryRp0j4nj5x1y0s1t1 + binaryLp0j5nj6x1y0s1t1 + binaryRp0j5nj6x1y0s1t1 + binaryLp0j6nj7x1y0s1t1 + binaryRp0j6nj7x1y0s1t1 + binaryLp0j7nj8x1y0s1t1 + binaryRp0j7nj8x1y0s1t1 + binaryLp0j8nj9x1y0s1t1 + binaryRp0j8nj9x1y0s1t1 + binaryLp1j0nj1x1y0s1t1 + binaryRp1j0nj1x1y0s1t1 + binaryLp1j1nj2x1y0s1t1 + binaryRp1j1nj2x1y0s1t1 + binaryLp1j2nj3x1y0s1t1 + binaryRp1j2nj3x1y0s1t1 + binaryLp1j3nj4x1y0s1t1 + binaryRp1j3nj4x1y0s1t1 + binaryLp1j4nj5x1y0s1t1 + binaryRp1j4nj5x1y0s1t1 + binaryLp1j5nj6x1y0s1t1 + binaryRp1j5nj6x1y0s1t1 + binaryLp1j6nj7x1y0s1t1 + binaryRp1j6nj7x1y0s1t1 + binaryLp1j7nj8x1y0s1t1 + binaryRp1j7nj8x1y0s1t1 + binaryLp1j8nj9x1y0s1t1 + binaryRp1j8nj9x1y0s1t1 <= 35
+x00 + 10000 binaryLp0j0nj1x4y1s4t2 >= 4
+x00 - 10000 binaryLp0j0nj1x4y1s4t2 <= 4
+x01 + 10000 binaryLp0j0nj1x4y1s4t2 >= 4
+x01 - 10000 binaryLp0j0nj1x4y1s4t2 <= 4
+y00 - 10000 binaryLp0j0nj1x4y1s4t2 <= 1
+y01 + 10000 binaryLp0j0nj1x4y1s4t2 >= 2
+x00 + 10000 binaryRp0j0nj1x4y1s4t2 >= 4
+x00 - 10000 binaryRp0j0nj1x4y1s4t2 <= 4
+x01 + 10000 binaryRp0j0nj1x4y1s4t2 >= 4
+x01 - 10000 binaryRp0j0nj1x4y1s4t2 <= 4
+y01 - 10000 binaryRp0j0nj1x4y1s4t2 <= 1
+y00 + 10000 binaryRp0j0nj1x4y1s4t2 >= 2
+x01 + 10000 binaryLp0j1nj2x4y1s4t2 >= 4
+x01 - 10000 binaryLp0j1nj2x4y1s4t2 <= 4
+x02 + 10000 binaryLp0j1nj2x4y1s4t2 >= 4
+x02 - 10000 binaryLp0j1nj2x4y1s4t2 <= 4
+y01 - 10000 binaryLp0j1nj2x4y1s4t2 <= 1
+y02 + 10000 binaryLp0j1nj2x4y1s4t2 >= 2
+x01 + 10000 binaryRp0j1nj2x4y1s4t2 >= 4
+x01 - 10000 binaryRp0j1nj2x4y1s4t2 <= 4
+x02 + 10000 binaryRp0j1nj2x4y1s4t2 >= 4
+x02 - 10000 binaryRp0j1nj2x4y1s4t2 <= 4
+y02 - 10000 binaryRp0j1nj2x4y1s4t2 <= 1
+y01 + 10000 binaryRp0j1nj2x4y1s4t2 >= 2
+x02 + 10000 binaryLp0j2nj3x4y1s4t2 >= 4
+x02 - 10000 binaryLp0j2nj3x4y1s4t2 <= 4
+x03 + 10000 binaryLp0j2nj3x4y1s4t2 >= 4
+x03 - 10000 binaryLp0j2nj3x4y1s4t2 <= 4
+y02 - 10000 binaryLp0j2nj3x4y1s4t2 <= 1
+y03 + 10000 binaryLp0j2nj3x4y1s4t2 >= 2
+x02 + 10000 binaryRp0j2nj3x4y1s4t2 >= 4
+x02 - 10000 binaryRp0j2nj3x4y1s4t2 <= 4
+x03 + 10000 binaryRp0j2nj3x4y1s4t2 >= 4
+x03 - 10000 binaryRp0j2nj3x4y1s4t2 <= 4
+y03 - 10000 binaryRp0j2nj3x4y1s4t2 <= 1
+y02 + 10000 binaryRp0j2nj3x4y1s4t2 >= 2
+x03 + 10000 binaryLp0j3nj4x4y1s4t2 >= 4
+x03 - 10000 binaryLp0j3nj4x4y1s4t2 <= 4
+x04 + 10000 binaryLp0j3nj4x4y1s4t2 >= 4
+x04 - 10000 binaryLp0j3nj4x4y1s4t2 <= 4
+y03 - 10000 binaryLp0j3nj4x4y1s4t2 <= 1
+y04 + 10000 binaryLp0j3nj4x4y1s4t2 >= 2
+x03 + 10000 binaryRp0j3nj4x4y1s4t2 >= 4
+x03 - 10000 binaryRp0j3nj4x4y1s4t2 <= 4
+x04 + 10000 binaryRp0j3nj4x4y1s4t2 >= 4
+x04 - 10000 binaryRp0j3nj4x4y1s4t2 <= 4
+y04 - 10000 binaryRp0j3nj4x4y1s4t2 <= 1
+y03 + 10000 binaryRp0j3nj4x4y1s4t2 >= 2
+x04 + 10000 binaryLp0j4nj5x4y1s4t2 >= 4
+x04 - 10000 binaryLp0j4nj5x4y1s4t2 <= 4
+x05 + 10000 binaryLp0j4nj5x4y1s4t2 >= 4
+x05 - 10000 binaryLp0j4nj5x4y1s4t2 <= 4
+y04 - 10000 binaryLp0j4nj5x4y1s4t2 <= 1
+y05 + 10000 binaryLp0j4nj5x4y1s4t2 >= 2
+x04 + 10000 binaryRp0j4nj5x4y1s4t2 >= 4
+x04 - 10000 binaryRp0j4nj5x4y1s4t2 <= 4
+x05 + 10000 binaryRp0j4nj5x4y1s4t2 >= 4
+x05 - 10000 binaryRp0j4nj5x4y1s4t2 <= 4
+y05 - 10000 binaryRp0j4nj5x4y1s4t2 <= 1
+y04 + 10000 binaryRp0j4nj5x4y1s4t2 >= 2
+x05 + 10000 binaryLp0j5nj6x4y1s4t2 >= 4
+x05 - 10000 binaryLp0j5nj6x4y1s4t2 <= 4
+x06 + 10000 binaryLp0j5nj6x4y1s4t2 >= 4
+x06 - 10000 binaryLp0j5nj6x4y1s4t2 <= 4
+y05 - 10000 binaryLp0j5nj6x4y1s4t2 <= 1
+y06 + 10000 binaryLp0j5nj6x4y1s4t2 >= 2
+x05 + 10000 binaryRp0j5nj6x4y1s4t2 >= 4
+x05 - 10000 binaryRp0j5nj6x4y1s4t2 <= 4
+x06 + 10000 binaryRp0j5nj6x4y1s4t2 >= 4
+x06 - 10000 binaryRp0j5nj6x4y1s4t2 <= 4
+y06 - 10000 binaryRp0j5nj6x4y1s4t2 <= 1
+y05 + 10000 binaryRp0j5nj6x4y1s4t2 >= 2
+x06 + 10000 binaryLp0j6nj7x4y1s4t2 >= 4
+x06 - 10000 binaryLp0j6nj7x4y1s4t2 <= 4
+x07 + 10000 binaryLp0j6nj7x4y1s4t2 >= 4
+x07 - 10000 binaryLp0j6nj7x4y1s4t2 <= 4
+y06 - 10000 binaryLp0j6nj7x4y1s4t2 <= 1
+y07 + 10000 binaryLp0j6nj7x4y1s4t2 >= 2
+x06 + 10000 binaryRp0j6nj7x4y1s4t2 >= 4
+x06 - 10000 binaryRp0j6nj7x4y1s4t2 <= 4
+x07 + 10000 binaryRp0j6nj7x4y1s4t2 >= 4
+x07 - 10000 binaryRp0j6nj7x4y1s4t2 <= 4
+y07 - 10000 binaryRp0j6nj7x4y1s4t2 <= 1
+y06 + 10000 binaryRp0j6nj7x4y1s4t2 >= 2
+x07 + 10000 binaryLp0j7nj8x4y1s4t2 >= 4
+x07 - 10000 binaryLp0j7nj8x4y1s4t2 <= 4
+x08 + 10000 binaryLp0j7nj8x4y1s4t2 >= 4
+x08 - 10000 binaryLp0j7nj8x4y1s4t2 <= 4
+y07 - 10000 binaryLp0j7nj8x4y1s4t2 <= 1
+y08 + 10000 binaryLp0j7nj8x4y1s4t2 >= 2
+x07 + 10000 binaryRp0j7nj8x4y1s4t2 >= 4
+x07 - 10000 binaryRp0j7nj8x4y1s4t2 <= 4
+x08 + 10000 binaryRp0j7nj8x4y1s4t2 >= 4
+x08 - 10000 binaryRp0j7nj8x4y1s4t2 <= 4
+y08 - 10000 binaryRp0j7nj8x4y1s4t2 <= 1
+y07 + 10000 binaryRp0j7nj8x4y1s4t2 >= 2
+x08 + 10000 binaryLp0j8nj9x4y1s4t2 >= 4
+x08 - 10000 binaryLp0j8nj9x4y1s4t2 <= 4
+x09 + 10000 binaryLp0j8nj9x4y1s4t2 >= 4
+x09 - 10000 binaryLp0j8nj9x4y1s4t2 <= 4
+y08 - 10000 binaryLp0j8nj9x4y1s4t2 <= 1
+y09 + 10000 binaryLp0j8nj9x4y1s4t2 >= 2
+x08 + 10000 binaryRp0j8nj9x4y1s4t2 >= 4
+x08 - 10000 binaryRp0j8nj9x4y1s4t2 <= 4
+x09 + 10000 binaryRp0j8nj9x4y1s4t2 >= 4
+x09 - 10000 binaryRp0j8nj9x4y1s4t2 <= 4
+y09 - 10000 binaryRp0j8nj9x4y1s4t2 <= 1
+y08 + 10000 binaryRp0j8nj9x4y1s4t2 >= 2
+x10 + 10000 binaryLp1j0nj1x4y1s4t2 >= 4
+x10 - 10000 binaryLp1j0nj1x4y1s4t2 <= 4
+x11 + 10000 binaryLp1j0nj1x4y1s4t2 >= 4
+x11 - 10000 binaryLp1j0nj1x4y1s4t2 <= 4
+y10 - 10000 binaryLp1j0nj1x4y1s4t2 <= 1
+y11 + 10000 binaryLp1j0nj1x4y1s4t2 >= 2
+x10 + 10000 binaryRp1j0nj1x4y1s4t2 >= 4
+x10 - 10000 binaryRp1j0nj1x4y1s4t2 <= 4
+x11 + 10000 binaryRp1j0nj1x4y1s4t2 >= 4
+x11 - 10000 binaryRp1j0nj1x4y1s4t2 <= 4
+y11 - 10000 binaryRp1j0nj1x4y1s4t2 <= 1
+y10 + 10000 binaryRp1j0nj1x4y1s4t2 >= 2
+x11 + 10000 binaryLp1j1nj2x4y1s4t2 >= 4
+x11 - 10000 binaryLp1j1nj2x4y1s4t2 <= 4
+x12 + 10000 binaryLp1j1nj2x4y1s4t2 >= 4
+x12 - 10000 binaryLp1j1nj2x4y1s4t2 <= 4
+y11 - 10000 binaryLp1j1nj2x4y1s4t2 <= 1
+y12 + 10000 binaryLp1j1nj2x4y1s4t2 >= 2
+x11 + 10000 binaryRp1j1nj2x4y1s4t2 >= 4
+x11 - 10000 binaryRp1j1nj2x4y1s4t2 <= 4
+x12 + 10000 binaryRp1j1nj2x4y1s4t2 >= 4
+x12 - 10000 binaryRp1j1nj2x4y1s4t2 <= 4
+y12 - 10000 binaryRp1j1nj2x4y1s4t2 <= 1
+y11 + 10000 binaryRp1j1nj2x4y1s4t2 >= 2
+x12 + 10000 binaryLp1j2nj3x4y1s4t2 >= 4
+x12 - 10000 binaryLp1j2nj3x4y1s4t2 <= 4
+x13 + 10000 binaryLp1j2nj3x4y1s4t2 >= 4
+x13 - 10000 binaryLp1j2nj3x4y1s4t2 <= 4
+y12 - 10000 binaryLp1j2nj3x4y1s4t2 <= 1
+y13 + 10000 binaryLp1j2nj3x4y1s4t2 >= 2
+x12 + 10000 binaryRp1j2nj3x4y1s4t2 >= 4
+x12 - 10000 binaryRp1j2nj3x4y1s4t2 <= 4
+x13 + 10000 binaryRp1j2nj3x4y1s4t2 >= 4
+x13 - 10000 binaryRp1j2nj3x4y1s4t2 <= 4
+y13 - 10000 binaryRp1j2nj3x4y1s4t2 <= 1
+y12 + 10000 binaryRp1j2nj3x4y1s4t2 >= 2
+x13 + 10000 binaryLp1j3nj4x4y1s4t2 >= 4
+x13 - 10000 binaryLp1j3nj4x4y1s4t2 <= 4
+x14 + 10000 binaryLp1j3nj4x4y1s4t2 >= 4
+x14 - 10000 binaryLp1j3nj4x4y1s4t2 <= 4
+y13 - 10000 binaryLp1j3nj4x4y1s4t2 <= 1
+y14 + 10000 binaryLp1j3nj4x4y1s4t2 >= 2
+x13 + 10000 binaryRp1j3nj4x4y1s4t2 >= 4
+x13 - 10000 binaryRp1j3nj4x4y1s4t2 <= 4
+x14 + 10000 binaryRp1j3nj4x4y1s4t2 >= 4
+x14 - 10000 binaryRp1j3nj4x4y1s4t2 <= 4
+y14 - 10000 binaryRp1j3nj4x4y1s4t2 <= 1
+y13 + 10000 binaryRp1j3nj4x4y1s4t2 >= 2
+x14 + 10000 binaryLp1j4nj5x4y1s4t2 >= 4
+x14 - 10000 binaryLp1j4nj5x4y1s4t2 <= 4
+x15 + 10000 binaryLp1j4nj5x4y1s4t2 >= 4
+x15 - 10000 binaryLp1j4nj5x4y1s4t2 <= 4
+y14 - 10000 binaryLp1j4nj5x4y1s4t2 <= 1
+y15 + 10000 binaryLp1j4nj5x4y1s4t2 >= 2
+x14 + 10000 binaryRp1j4nj5x4y1s4t2 >= 4
+x14 - 10000 binaryRp1j4nj5x4y1s4t2 <= 4
+x15 + 10000 binaryRp1j4nj5x4y1s4t2 >= 4
+x15 - 10000 binaryRp1j4nj5x4y1s4t2 <= 4
+y15 - 10000 binaryRp1j4nj5x4y1s4t2 <= 1
+y14 + 10000 binaryRp1j4nj5x4y1s4t2 >= 2
+x15 + 10000 binaryLp1j5nj6x4y1s4t2 >= 4
+x15 - 10000 binaryLp1j5nj6x4y1s4t2 <= 4
+x16 + 10000 binaryLp1j5nj6x4y1s4t2 >= 4
+x16 - 10000 binaryLp1j5nj6x4y1s4t2 <= 4
+y15 - 10000 binaryLp1j5nj6x4y1s4t2 <= 1
+y16 + 10000 binaryLp1j5nj6x4y1s4t2 >= 2
+x15 + 10000 binaryRp1j5nj6x4y1s4t2 >= 4
+x15 - 10000 binaryRp1j5nj6x4y1s4t2 <= 4
+x16 + 10000 binaryRp1j5nj6x4y1s4t2 >= 4
+x16 - 10000 binaryRp1j5nj6x4y1s4t2 <= 4
+y16 - 10000 binaryRp1j5nj6x4y1s4t2 <= 1
+y15 + 10000 binaryRp1j5nj6x4y1s4t2 >= 2
+x16 + 10000 binaryLp1j6nj7x4y1s4t2 >= 4
+x16 - 10000 binaryLp1j6nj7x4y1s4t2 <= 4
+x17 + 10000 binaryLp1j6nj7x4y1s4t2 >= 4
+x17 - 10000 binaryLp1j6nj7x4y1s4t2 <= 4
+y16 - 10000 binaryLp1j6nj7x4y1s4t2 <= 1
+y17 + 10000 binaryLp1j6nj7x4y1s4t2 >= 2
+x16 + 10000 binaryRp1j6nj7x4y1s4t2 >= 4
+x16 - 10000 binaryRp1j6nj7x4y1s4t2 <= 4
+x17 + 10000 binaryRp1j6nj7x4y1s4t2 >= 4
+x17 - 10000 binaryRp1j6nj7x4y1s4t2 <= 4
+y17 - 10000 binaryRp1j6nj7x4y1s4t2 <= 1
+y16 + 10000 binaryRp1j6nj7x4y1s4t2 >= 2
+x17 + 10000 binaryLp1j7nj8x4y1s4t2 >= 4
+x17 - 10000 binaryLp1j7nj8x4y1s4t2 <= 4
+x18 + 10000 binaryLp1j7nj8x4y1s4t2 >= 4
+x18 - 10000 binaryLp1j7nj8x4y1s4t2 <= 4
+y17 - 10000 binaryLp1j7nj8x4y1s4t2 <= 1
+y18 + 10000 binaryLp1j7nj8x4y1s4t2 >= 2
+x17 + 10000 binaryRp1j7nj8x4y1s4t2 >= 4
+x17 - 10000 binaryRp1j7nj8x4y1s4t2 <= 4
+x18 + 10000 binaryRp1j7nj8x4y1s4t2 >= 4
+x18 - 10000 binaryRp1j7nj8x4y1s4t2 <= 4
+y18 - 10000 binaryRp1j7nj8x4y1s4t2 <= 1
+y17 + 10000 binaryRp1j7nj8x4y1s4t2 >= 2
+x18 + 10000 binaryLp1j8nj9x4y1s4t2 >= 4
+x18 - 10000 binaryLp1j8nj9x4y1s4t2 <= 4
+x19 + 10000 binaryLp1j8nj9x4y1s4t2 >= 4
+x19 - 10000 binaryLp1j8nj9x4y1s4t2 <= 4
+y18 - 10000 binaryLp1j8nj9x4y1s4t2 <= 1
+y19 + 10000 binaryLp1j8nj9x4y1s4t2 >= 2
+x18 + 10000 binaryRp1j8nj9x4y1s4t2 >= 4
+x18 - 10000 binaryRp1j8nj9x4y1s4t2 <= 4
+x19 + 10000 binaryRp1j8nj9x4y1s4t2 >= 4
+x19 - 10000 binaryRp1j8nj9x4y1s4t2 <= 4
+y19 - 10000 binaryRp1j8nj9x4y1s4t2 <= 1
+y18 + 10000 binaryRp1j8nj9x4y1s4t2 >= 2
+ + binaryLp0j0nj1x4y1s4t2 + binaryRp0j0nj1x4y1s4t2 + binaryLp0j1nj2x4y1s4t2 + binaryRp0j1nj2x4y1s4t2 + binaryLp0j2nj3x4y1s4t2 + binaryRp0j2nj3x4y1s4t2 + binaryLp0j3nj4x4y1s4t2 + binaryRp0j3nj4x4y1s4t2 + binaryLp0j4nj5x4y1s4t2 + binaryRp0j4nj5x4y1s4t2 + binaryLp0j5nj6x4y1s4t2 + binaryRp0j5nj6x4y1s4t2 + binaryLp0j6nj7x4y1s4t2 + binaryRp0j6nj7x4y1s4t2 + binaryLp0j7nj8x4y1s4t2 + binaryRp0j7nj8x4y1s4t2 + binaryLp0j8nj9x4y1s4t2 + binaryRp0j8nj9x4y1s4t2 + binaryLp1j0nj1x4y1s4t2 + binaryRp1j0nj1x4y1s4t2 + binaryLp1j1nj2x4y1s4t2 + binaryRp1j1nj2x4y1s4t2 + binaryLp1j2nj3x4y1s4t2 + binaryRp1j2nj3x4y1s4t2 + binaryLp1j3nj4x4y1s4t2 + binaryRp1j3nj4x4y1s4t2 + binaryLp1j4nj5x4y1s4t2 + binaryRp1j4nj5x4y1s4t2 + binaryLp1j5nj6x4y1s4t2 + binaryRp1j5nj6x4y1s4t2 + binaryLp1j6nj7x4y1s4t2 + binaryRp1j6nj7x4y1s4t2 + binaryLp1j7nj8x4y1s4t2 + binaryRp1j7nj8x4y1s4t2 + binaryLp1j8nj9x4y1s4t2 + binaryRp1j8nj9x4y1s4t2 <= 35
+y00 + 10000 binaryUp0j0nj1x3y2s4t2 >= 2
+y00 - 10000 binaryUp0j0nj1x3y2s4t2 <=  2
+y01 + 10000 binaryUp0j0nj1x3y2s4t2 >= 2
+y01 - 10000 binaryUp0j0nj1x3y2s4t2 <= 2
+x00 - 10000 binaryUp0j0nj1x3y2s4t2 <= 3
+x01 + 10000 binaryUp0j0nj1x3y2s4t2 >= 4
+y00 + 10000 binaryDp0j0nj1x3y2s4t2 >= 2
+y00 - 10000 binaryDp0j0nj1x3y2s4t2 <= 2
+y01 + 10000 binaryDp0j0nj1x3y2s4t2 >= 2
+y01 - 10000 binaryDp0j0nj1x3y2s4t2 <= 2
+x01 - 10000 binaryDp0j0nj1x3y2s4t2 <= 3
+x00 + 10000 binaryDp0j0nj1x3y2s4t2 >= 4
+y01 + 10000 binaryUp0j1nj2x3y2s4t2 >= 2
+y01 - 10000 binaryUp0j1nj2x3y2s4t2 <=  2
+y02 + 10000 binaryUp0j1nj2x3y2s4t2 >= 2
+y02 - 10000 binaryUp0j1nj2x3y2s4t2 <= 2
+x01 - 10000 binaryUp0j1nj2x3y2s4t2 <= 3
+x02 + 10000 binaryUp0j1nj2x3y2s4t2 >= 4
+y01 + 10000 binaryDp0j1nj2x3y2s4t2 >= 2
+y01 - 10000 binaryDp0j1nj2x3y2s4t2 <= 2
+y02 + 10000 binaryDp0j1nj2x3y2s4t2 >= 2
+y02 - 10000 binaryDp0j1nj2x3y2s4t2 <= 2
+x02 - 10000 binaryDp0j1nj2x3y2s4t2 <= 3
+x01 + 10000 binaryDp0j1nj2x3y2s4t2 >= 4
+y02 + 10000 binaryUp0j2nj3x3y2s4t2 >= 2
+y02 - 10000 binaryUp0j2nj3x3y2s4t2 <=  2
+y03 + 10000 binaryUp0j2nj3x3y2s4t2 >= 2
+y03 - 10000 binaryUp0j2nj3x3y2s4t2 <= 2
+x02 - 10000 binaryUp0j2nj3x3y2s4t2 <= 3
+x03 + 10000 binaryUp0j2nj3x3y2s4t2 >= 4
+y02 + 10000 binaryDp0j2nj3x3y2s4t2 >= 2
+y02 - 10000 binaryDp0j2nj3x3y2s4t2 <= 2
+y03 + 10000 binaryDp0j2nj3x3y2s4t2 >= 2
+y03 - 10000 binaryDp0j2nj3x3y2s4t2 <= 2
+x03 - 10000 binaryDp0j2nj3x3y2s4t2 <= 3
+x02 + 10000 binaryDp0j2nj3x3y2s4t2 >= 4
+y03 + 10000 binaryUp0j3nj4x3y2s4t2 >= 2
+y03 - 10000 binaryUp0j3nj4x3y2s4t2 <=  2
+y04 + 10000 binaryUp0j3nj4x3y2s4t2 >= 2
+y04 - 10000 binaryUp0j3nj4x3y2s4t2 <= 2
+x03 - 10000 binaryUp0j3nj4x3y2s4t2 <= 3
+x04 + 10000 binaryUp0j3nj4x3y2s4t2 >= 4
+y03 + 10000 binaryDp0j3nj4x3y2s4t2 >= 2
+y03 - 10000 binaryDp0j3nj4x3y2s4t2 <= 2
+y04 + 10000 binaryDp0j3nj4x3y2s4t2 >= 2
+y04 - 10000 binaryDp0j3nj4x3y2s4t2 <= 2
+x04 - 10000 binaryDp0j3nj4x3y2s4t2 <= 3
+x03 + 10000 binaryDp0j3nj4x3y2s4t2 >= 4
+y04 + 10000 binaryUp0j4nj5x3y2s4t2 >= 2
+y04 - 10000 binaryUp0j4nj5x3y2s4t2 <=  2
+y05 + 10000 binaryUp0j4nj5x3y2s4t2 >= 2
+y05 - 10000 binaryUp0j4nj5x3y2s4t2 <= 2
+x04 - 10000 binaryUp0j4nj5x3y2s4t2 <= 3
+x05 + 10000 binaryUp0j4nj5x3y2s4t2 >= 4
+y04 + 10000 binaryDp0j4nj5x3y2s4t2 >= 2
+y04 - 10000 binaryDp0j4nj5x3y2s4t2 <= 2
+y05 + 10000 binaryDp0j4nj5x3y2s4t2 >= 2
+y05 - 10000 binaryDp0j4nj5x3y2s4t2 <= 2
+x05 - 10000 binaryDp0j4nj5x3y2s4t2 <= 3
+x04 + 10000 binaryDp0j4nj5x3y2s4t2 >= 4
+y05 + 10000 binaryUp0j5nj6x3y2s4t2 >= 2
+y05 - 10000 binaryUp0j5nj6x3y2s4t2 <=  2
+y06 + 10000 binaryUp0j5nj6x3y2s4t2 >= 2
+y06 - 10000 binaryUp0j5nj6x3y2s4t2 <= 2
+x05 - 10000 binaryUp0j5nj6x3y2s4t2 <= 3
+x06 + 10000 binaryUp0j5nj6x3y2s4t2 >= 4
+y05 + 10000 binaryDp0j5nj6x3y2s4t2 >= 2
+y05 - 10000 binaryDp0j5nj6x3y2s4t2 <= 2
+y06 + 10000 binaryDp0j5nj6x3y2s4t2 >= 2
+y06 - 10000 binaryDp0j5nj6x3y2s4t2 <= 2
+x06 - 10000 binaryDp0j5nj6x3y2s4t2 <= 3
+x05 + 10000 binaryDp0j5nj6x3y2s4t2 >= 4
+y06 + 10000 binaryUp0j6nj7x3y2s4t2 >= 2
+y06 - 10000 binaryUp0j6nj7x3y2s4t2 <=  2
+y07 + 10000 binaryUp0j6nj7x3y2s4t2 >= 2
+y07 - 10000 binaryUp0j6nj7x3y2s4t2 <= 2
+x06 - 10000 binaryUp0j6nj7x3y2s4t2 <= 3
+x07 + 10000 binaryUp0j6nj7x3y2s4t2 >= 4
+y06 + 10000 binaryDp0j6nj7x3y2s4t2 >= 2
+y06 - 10000 binaryDp0j6nj7x3y2s4t2 <= 2
+y07 + 10000 binaryDp0j6nj7x3y2s4t2 >= 2
+y07 - 10000 binaryDp0j6nj7x3y2s4t2 <= 2
+x07 - 10000 binaryDp0j6nj7x3y2s4t2 <= 3
+x06 + 10000 binaryDp0j6nj7x3y2s4t2 >= 4
+y07 + 10000 binaryUp0j7nj8x3y2s4t2 >= 2
+y07 - 10000 binaryUp0j7nj8x3y2s4t2 <=  2
+y08 + 10000 binaryUp0j7nj8x3y2s4t2 >= 2
+y08 - 10000 binaryUp0j7nj8x3y2s4t2 <= 2
+x07 - 10000 binaryUp0j7nj8x3y2s4t2 <= 3
+x08 + 10000 binaryUp0j7nj8x3y2s4t2 >= 4
+y07 + 10000 binaryDp0j7nj8x3y2s4t2 >= 2
+y07 - 10000 binaryDp0j7nj8x3y2s4t2 <= 2
+y08 + 10000 binaryDp0j7nj8x3y2s4t2 >= 2
+y08 - 10000 binaryDp0j7nj8x3y2s4t2 <= 2
+x08 - 10000 binaryDp0j7nj8x3y2s4t2 <= 3
+x07 + 10000 binaryDp0j7nj8x3y2s4t2 >= 4
+y08 + 10000 binaryUp0j8nj9x3y2s4t2 >= 2
+y08 - 10000 binaryUp0j8nj9x3y2s4t2 <=  2
+y09 + 10000 binaryUp0j8nj9x3y2s4t2 >= 2
+y09 - 10000 binaryUp0j8nj9x3y2s4t2 <= 2
+x08 - 10000 binaryUp0j8nj9x3y2s4t2 <= 3
+x09 + 10000 binaryUp0j8nj9x3y2s4t2 >= 4
+y08 + 10000 binaryDp0j8nj9x3y2s4t2 >= 2
+y08 - 10000 binaryDp0j8nj9x3y2s4t2 <= 2
+y09 + 10000 binaryDp0j8nj9x3y2s4t2 >= 2
+y09 - 10000 binaryDp0j8nj9x3y2s4t2 <= 2
+x09 - 10000 binaryDp0j8nj9x3y2s4t2 <= 3
+x08 + 10000 binaryDp0j8nj9x3y2s4t2 >= 4
+y10 + 10000 binaryUp1j0nj1x3y2s4t2 >= 2
+y10 - 10000 binaryUp1j0nj1x3y2s4t2 <=  2
+y11 + 10000 binaryUp1j0nj1x3y2s4t2 >= 2
+y11 - 10000 binaryUp1j0nj1x3y2s4t2 <= 2
+x10 - 10000 binaryUp1j0nj1x3y2s4t2 <= 3
+x11 + 10000 binaryUp1j0nj1x3y2s4t2 >= 4
+y10 + 10000 binaryDp1j0nj1x3y2s4t2 >= 2
+y10 - 10000 binaryDp1j0nj1x3y2s4t2 <= 2
+y11 + 10000 binaryDp1j0nj1x3y2s4t2 >= 2
+y11 - 10000 binaryDp1j0nj1x3y2s4t2 <= 2
+x11 - 10000 binaryDp1j0nj1x3y2s4t2 <= 3
+x10 + 10000 binaryDp1j0nj1x3y2s4t2 >= 4
+y11 + 10000 binaryUp1j1nj2x3y2s4t2 >= 2
+y11 - 10000 binaryUp1j1nj2x3y2s4t2 <=  2
+y12 + 10000 binaryUp1j1nj2x3y2s4t2 >= 2
+y12 - 10000 binaryUp1j1nj2x3y2s4t2 <= 2
+x11 - 10000 binaryUp1j1nj2x3y2s4t2 <= 3
+x12 + 10000 binaryUp1j1nj2x3y2s4t2 >= 4
+y11 + 10000 binaryDp1j1nj2x3y2s4t2 >= 2
+y11 - 10000 binaryDp1j1nj2x3y2s4t2 <= 2
+y12 + 10000 binaryDp1j1nj2x3y2s4t2 >= 2
+y12 - 10000 binaryDp1j1nj2x3y2s4t2 <= 2
+x12 - 10000 binaryDp1j1nj2x3y2s4t2 <= 3
+x11 + 10000 binaryDp1j1nj2x3y2s4t2 >= 4
+y12 + 10000 binaryUp1j2nj3x3y2s4t2 >= 2
+y12 - 10000 binaryUp1j2nj3x3y2s4t2 <=  2
+y13 + 10000 binaryUp1j2nj3x3y2s4t2 >= 2
+y13 - 10000 binaryUp1j2nj3x3y2s4t2 <= 2
+x12 - 10000 binaryUp1j2nj3x3y2s4t2 <= 3
+x13 + 10000 binaryUp1j2nj3x3y2s4t2 >= 4
+y12 + 10000 binaryDp1j2nj3x3y2s4t2 >= 2
+y12 - 10000 binaryDp1j2nj3x3y2s4t2 <= 2
+y13 + 10000 binaryDp1j2nj3x3y2s4t2 >= 2
+y13 - 10000 binaryDp1j2nj3x3y2s4t2 <= 2
+x13 - 10000 binaryDp1j2nj3x3y2s4t2 <= 3
+x12 + 10000 binaryDp1j2nj3x3y2s4t2 >= 4
+y13 + 10000 binaryUp1j3nj4x3y2s4t2 >= 2
+y13 - 10000 binaryUp1j3nj4x3y2s4t2 <=  2
+y14 + 10000 binaryUp1j3nj4x3y2s4t2 >= 2
+y14 - 10000 binaryUp1j3nj4x3y2s4t2 <= 2
+x13 - 10000 binaryUp1j3nj4x3y2s4t2 <= 3
+x14 + 10000 binaryUp1j3nj4x3y2s4t2 >= 4
+y13 + 10000 binaryDp1j3nj4x3y2s4t2 >= 2
+y13 - 10000 binaryDp1j3nj4x3y2s4t2 <= 2
+y14 + 10000 binaryDp1j3nj4x3y2s4t2 >= 2
+y14 - 10000 binaryDp1j3nj4x3y2s4t2 <= 2
+x14 - 10000 binaryDp1j3nj4x3y2s4t2 <= 3
+x13 + 10000 binaryDp1j3nj4x3y2s4t2 >= 4
+y14 + 10000 binaryUp1j4nj5x3y2s4t2 >= 2
+y14 - 10000 binaryUp1j4nj5x3y2s4t2 <=  2
+y15 + 10000 binaryUp1j4nj5x3y2s4t2 >= 2
+y15 - 10000 binaryUp1j4nj5x3y2s4t2 <= 2
+x14 - 10000 binaryUp1j4nj5x3y2s4t2 <= 3
+x15 + 10000 binaryUp1j4nj5x3y2s4t2 >= 4
+y14 + 10000 binaryDp1j4nj5x3y2s4t2 >= 2
+y14 - 10000 binaryDp1j4nj5x3y2s4t2 <= 2
+y15 + 10000 binaryDp1j4nj5x3y2s4t2 >= 2
+y15 - 10000 binaryDp1j4nj5x3y2s4t2 <= 2
+x15 - 10000 binaryDp1j4nj5x3y2s4t2 <= 3
+x14 + 10000 binaryDp1j4nj5x3y2s4t2 >= 4
+y15 + 10000 binaryUp1j5nj6x3y2s4t2 >= 2
+y15 - 10000 binaryUp1j5nj6x3y2s4t2 <=  2
+y16 + 10000 binaryUp1j5nj6x3y2s4t2 >= 2
+y16 - 10000 binaryUp1j5nj6x3y2s4t2 <= 2
+x15 - 10000 binaryUp1j5nj6x3y2s4t2 <= 3
+x16 + 10000 binaryUp1j5nj6x3y2s4t2 >= 4
+y15 + 10000 binaryDp1j5nj6x3y2s4t2 >= 2
+y15 - 10000 binaryDp1j5nj6x3y2s4t2 <= 2
+y16 + 10000 binaryDp1j5nj6x3y2s4t2 >= 2
+y16 - 10000 binaryDp1j5nj6x3y2s4t2 <= 2
+x16 - 10000 binaryDp1j5nj6x3y2s4t2 <= 3
+x15 + 10000 binaryDp1j5nj6x3y2s4t2 >= 4
+y16 + 10000 binaryUp1j6nj7x3y2s4t2 >= 2
+y16 - 10000 binaryUp1j6nj7x3y2s4t2 <=  2
+y17 + 10000 binaryUp1j6nj7x3y2s4t2 >= 2
+y17 - 10000 binaryUp1j6nj7x3y2s4t2 <= 2
+x16 - 10000 binaryUp1j6nj7x3y2s4t2 <= 3
+x17 + 10000 binaryUp1j6nj7x3y2s4t2 >= 4
+y16 + 10000 binaryDp1j6nj7x3y2s4t2 >= 2
+y16 - 10000 binaryDp1j6nj7x3y2s4t2 <= 2
+y17 + 10000 binaryDp1j6nj7x3y2s4t2 >= 2
+y17 - 10000 binaryDp1j6nj7x3y2s4t2 <= 2
+x17 - 10000 binaryDp1j6nj7x3y2s4t2 <= 3
+x16 + 10000 binaryDp1j6nj7x3y2s4t2 >= 4
+y17 + 10000 binaryUp1j7nj8x3y2s4t2 >= 2
+y17 - 10000 binaryUp1j7nj8x3y2s4t2 <=  2
+y18 + 10000 binaryUp1j7nj8x3y2s4t2 >= 2
+y18 - 10000 binaryUp1j7nj8x3y2s4t2 <= 2
+x17 - 10000 binaryUp1j7nj8x3y2s4t2 <= 3
+x18 + 10000 binaryUp1j7nj8x3y2s4t2 >= 4
+y17 + 10000 binaryDp1j7nj8x3y2s4t2 >= 2
+y17 - 10000 binaryDp1j7nj8x3y2s4t2 <= 2
+y18 + 10000 binaryDp1j7nj8x3y2s4t2 >= 2
+y18 - 10000 binaryDp1j7nj8x3y2s4t2 <= 2
+x18 - 10000 binaryDp1j7nj8x3y2s4t2 <= 3
+x17 + 10000 binaryDp1j7nj8x3y2s4t2 >= 4
+y18 + 10000 binaryUp1j8nj9x3y2s4t2 >= 2
+y18 - 10000 binaryUp1j8nj9x3y2s4t2 <=  2
+y19 + 10000 binaryUp1j8nj9x3y2s4t2 >= 2
+y19 - 10000 binaryUp1j8nj9x3y2s4t2 <= 2
+x18 - 10000 binaryUp1j8nj9x3y2s4t2 <= 3
+x19 + 10000 binaryUp1j8nj9x3y2s4t2 >= 4
+y18 + 10000 binaryDp1j8nj9x3y2s4t2 >= 2
+y18 - 10000 binaryDp1j8nj9x3y2s4t2 <= 2
+y19 + 10000 binaryDp1j8nj9x3y2s4t2 >= 2
+y19 - 10000 binaryDp1j8nj9x3y2s4t2 <= 2
+x19 - 10000 binaryDp1j8nj9x3y2s4t2 <= 3
+x18 + 10000 binaryDp1j8nj9x3y2s4t2 >= 4
+ + binaryUp0j0nj1x3y2s4t2 + binaryDp0j0nj1x3y2s4t2 + binaryUp0j1nj2x3y2s4t2 + binaryDp0j1nj2x3y2s4t2 + binaryUp0j2nj3x3y2s4t2 + binaryDp0j2nj3x3y2s4t2 + binaryUp0j3nj4x3y2s4t2 + binaryDp0j3nj4x3y2s4t2 + binaryUp0j4nj5x3y2s4t2 + binaryDp0j4nj5x3y2s4t2 + binaryUp0j5nj6x3y2s4t2 + binaryDp0j5nj6x3y2s4t2 + binaryUp0j6nj7x3y2s4t2 + binaryDp0j6nj7x3y2s4t2 + binaryUp0j7nj8x3y2s4t2 + binaryDp0j7nj8x3y2s4t2 + binaryUp0j8nj9x3y2s4t2 + binaryDp0j8nj9x3y2s4t2 + binaryUp1j0nj1x3y2s4t2 + binaryDp1j0nj1x3y2s4t2 + binaryUp1j1nj2x3y2s4t2 + binaryDp1j1nj2x3y2s4t2 + binaryUp1j2nj3x3y2s4t2 + binaryDp1j2nj3x3y2s4t2 + binaryUp1j3nj4x3y2s4t2 + binaryDp1j3nj4x3y2s4t2 + binaryUp1j4nj5x3y2s4t2 + binaryDp1j4nj5x3y2s4t2 + binaryUp1j5nj6x3y2s4t2 + binaryDp1j5nj6x3y2s4t2 + binaryUp1j6nj7x3y2s4t2 + binaryDp1j6nj7x3y2s4t2 + binaryUp1j7nj8x3y2s4t2 + binaryDp1j7nj8x3y2s4t2 + binaryUp1j8nj9x3y2s4t2 + binaryDp1j8nj9x3y2s4t2 <= 35
+x00 + 10000 binaryLp0j0nj1x2y1s2t2 >= 2
+x00 - 10000 binaryLp0j0nj1x2y1s2t2 <= 2
+x01 + 10000 binaryLp0j0nj1x2y1s2t2 >= 2
+x01 - 10000 binaryLp0j0nj1x2y1s2t2 <= 2
+y00 - 10000 binaryLp0j0nj1x2y1s2t2 <= 1
+y01 + 10000 binaryLp0j0nj1x2y1s2t2 >= 2
+x00 + 10000 binaryRp0j0nj1x2y1s2t2 >= 2
+x00 - 10000 binaryRp0j0nj1x2y1s2t2 <= 2
+x01 + 10000 binaryRp0j0nj1x2y1s2t2 >= 2
+x01 - 10000 binaryRp0j0nj1x2y1s2t2 <= 2
+y01 - 10000 binaryRp0j0nj1x2y1s2t2 <= 1
+y00 + 10000 binaryRp0j0nj1x2y1s2t2 >= 2
+x01 + 10000 binaryLp0j1nj2x2y1s2t2 >= 2
+x01 - 10000 binaryLp0j1nj2x2y1s2t2 <= 2
+x02 + 10000 binaryLp0j1nj2x2y1s2t2 >= 2
+x02 - 10000 binaryLp0j1nj2x2y1s2t2 <= 2
+y01 - 10000 binaryLp0j1nj2x2y1s2t2 <= 1
+y02 + 10000 binaryLp0j1nj2x2y1s2t2 >= 2
+x01 + 10000 binaryRp0j1nj2x2y1s2t2 >= 2
+x01 - 10000 binaryRp0j1nj2x2y1s2t2 <= 2
+x02 + 10000 binaryRp0j1nj2x2y1s2t2 >= 2
+x02 - 10000 binaryRp0j1nj2x2y1s2t2 <= 2
+y02 - 10000 binaryRp0j1nj2x2y1s2t2 <= 1
+y01 + 10000 binaryRp0j1nj2x2y1s2t2 >= 2
+x02 + 10000 binaryLp0j2nj3x2y1s2t2 >= 2
+x02 - 10000 binaryLp0j2nj3x2y1s2t2 <= 2
+x03 + 10000 binaryLp0j2nj3x2y1s2t2 >= 2
+x03 - 10000 binaryLp0j2nj3x2y1s2t2 <= 2
+y02 - 10000 binaryLp0j2nj3x2y1s2t2 <= 1
+y03 + 10000 binaryLp0j2nj3x2y1s2t2 >= 2
+x02 + 10000 binaryRp0j2nj3x2y1s2t2 >= 2
+x02 - 10000 binaryRp0j2nj3x2y1s2t2 <= 2
+x03 + 10000 binaryRp0j2nj3x2y1s2t2 >= 2
+x03 - 10000 binaryRp0j2nj3x2y1s2t2 <= 2
+y03 - 10000 binaryRp0j2nj3x2y1s2t2 <= 1
+y02 + 10000 binaryRp0j2nj3x2y1s2t2 >= 2
+x03 + 10000 binaryLp0j3nj4x2y1s2t2 >= 2
+x03 - 10000 binaryLp0j3nj4x2y1s2t2 <= 2
+x04 + 10000 binaryLp0j3nj4x2y1s2t2 >= 2
+x04 - 10000 binaryLp0j3nj4x2y1s2t2 <= 2
+y03 - 10000 binaryLp0j3nj4x2y1s2t2 <= 1
+y04 + 10000 binaryLp0j3nj4x2y1s2t2 >= 2
+x03 + 10000 binaryRp0j3nj4x2y1s2t2 >= 2
+x03 - 10000 binaryRp0j3nj4x2y1s2t2 <= 2
+x04 + 10000 binaryRp0j3nj4x2y1s2t2 >= 2
+x04 - 10000 binaryRp0j3nj4x2y1s2t2 <= 2
+y04 - 10000 binaryRp0j3nj4x2y1s2t2 <= 1
+y03 + 10000 binaryRp0j3nj4x2y1s2t2 >= 2
+x04 + 10000 binaryLp0j4nj5x2y1s2t2 >= 2
+x04 - 10000 binaryLp0j4nj5x2y1s2t2 <= 2
+x05 + 10000 binaryLp0j4nj5x2y1s2t2 >= 2
+x05 - 10000 binaryLp0j4nj5x2y1s2t2 <= 2
+y04 - 10000 binaryLp0j4nj5x2y1s2t2 <= 1
+y05 + 10000 binaryLp0j4nj5x2y1s2t2 >= 2
+x04 + 10000 binaryRp0j4nj5x2y1s2t2 >= 2
+x04 - 10000 binaryRp0j4nj5x2y1s2t2 <= 2
+x05 + 10000 binaryRp0j4nj5x2y1s2t2 >= 2
+x05 - 10000 binaryRp0j4nj5x2y1s2t2 <= 2
+y05 - 10000 binaryRp0j4nj5x2y1s2t2 <= 1
+y04 + 10000 binaryRp0j4nj5x2y1s2t2 >= 2
+x05 + 10000 binaryLp0j5nj6x2y1s2t2 >= 2
+x05 - 10000 binaryLp0j5nj6x2y1s2t2 <= 2
+x06 + 10000 binaryLp0j5nj6x2y1s2t2 >= 2
+x06 - 10000 binaryLp0j5nj6x2y1s2t2 <= 2
+y05 - 10000 binaryLp0j5nj6x2y1s2t2 <= 1
+y06 + 10000 binaryLp0j5nj6x2y1s2t2 >= 2
+x05 + 10000 binaryRp0j5nj6x2y1s2t2 >= 2
+x05 - 10000 binaryRp0j5nj6x2y1s2t2 <= 2
+x06 + 10000 binaryRp0j5nj6x2y1s2t2 >= 2
+x06 - 10000 binaryRp0j5nj6x2y1s2t2 <= 2
+y06 - 10000 binaryRp0j5nj6x2y1s2t2 <= 1
+y05 + 10000 binaryRp0j5nj6x2y1s2t2 >= 2
+x06 + 10000 binaryLp0j6nj7x2y1s2t2 >= 2
+x06 - 10000 binaryLp0j6nj7x2y1s2t2 <= 2
+x07 + 10000 binaryLp0j6nj7x2y1s2t2 >= 2
+x07 - 10000 binaryLp0j6nj7x2y1s2t2 <= 2
+y06 - 10000 binaryLp0j6nj7x2y1s2t2 <= 1
+y07 + 10000 binaryLp0j6nj7x2y1s2t2 >= 2
+x06 + 10000 binaryRp0j6nj7x2y1s2t2 >= 2
+x06 - 10000 binaryRp0j6nj7x2y1s2t2 <= 2
+x07 + 10000 binaryRp0j6nj7x2y1s2t2 >= 2
+x07 - 10000 binaryRp0j6nj7x2y1s2t2 <= 2
+y07 - 10000 binaryRp0j6nj7x2y1s2t2 <= 1
+y06 + 10000 binaryRp0j6nj7x2y1s2t2 >= 2
+x07 + 10000 binaryLp0j7nj8x2y1s2t2 >= 2
+x07 - 10000 binaryLp0j7nj8x2y1s2t2 <= 2
+x08 + 10000 binaryLp0j7nj8x2y1s2t2 >= 2
+x08 - 10000 binaryLp0j7nj8x2y1s2t2 <= 2
+y07 - 10000 binaryLp0j7nj8x2y1s2t2 <= 1
+y08 + 10000 binaryLp0j7nj8x2y1s2t2 >= 2
+x07 + 10000 binaryRp0j7nj8x2y1s2t2 >= 2
+x07 - 10000 binaryRp0j7nj8x2y1s2t2 <= 2
+x08 + 10000 binaryRp0j7nj8x2y1s2t2 >= 2
+x08 - 10000 binaryRp0j7nj8x2y1s2t2 <= 2
+y08 - 10000 binaryRp0j7nj8x2y1s2t2 <= 1
+y07 + 10000 binaryRp0j7nj8x2y1s2t2 >= 2
+x08 + 10000 binaryLp0j8nj9x2y1s2t2 >= 2
+x08 - 10000 binaryLp0j8nj9x2y1s2t2 <= 2
+x09 + 10000 binaryLp0j8nj9x2y1s2t2 >= 2
+x09 - 10000 binaryLp0j8nj9x2y1s2t2 <= 2
+y08 - 10000 binaryLp0j8nj9x2y1s2t2 <= 1
+y09 + 10000 binaryLp0j8nj9x2y1s2t2 >= 2
+x08 + 10000 binaryRp0j8nj9x2y1s2t2 >= 2
+x08 - 10000 binaryRp0j8nj9x2y1s2t2 <= 2
+x09 + 10000 binaryRp0j8nj9x2y1s2t2 >= 2
+x09 - 10000 binaryRp0j8nj9x2y1s2t2 <= 2
+y09 - 10000 binaryRp0j8nj9x2y1s2t2 <= 1
+y08 + 10000 binaryRp0j8nj9x2y1s2t2 >= 2
+x10 + 10000 binaryLp1j0nj1x2y1s2t2 >= 2
+x10 - 10000 binaryLp1j0nj1x2y1s2t2 <= 2
+x11 + 10000 binaryLp1j0nj1x2y1s2t2 >= 2
+x11 - 10000 binaryLp1j0nj1x2y1s2t2 <= 2
+y10 - 10000 binaryLp1j0nj1x2y1s2t2 <= 1
+y11 + 10000 binaryLp1j0nj1x2y1s2t2 >= 2
+x10 + 10000 binaryRp1j0nj1x2y1s2t2 >= 2
+x10 - 10000 binaryRp1j0nj1x2y1s2t2 <= 2
+x11 + 10000 binaryRp1j0nj1x2y1s2t2 >= 2
+x11 - 10000 binaryRp1j0nj1x2y1s2t2 <= 2
+y11 - 10000 binaryRp1j0nj1x2y1s2t2 <= 1
+y10 + 10000 binaryRp1j0nj1x2y1s2t2 >= 2
+x11 + 10000 binaryLp1j1nj2x2y1s2t2 >= 2
+x11 - 10000 binaryLp1j1nj2x2y1s2t2 <= 2
+x12 + 10000 binaryLp1j1nj2x2y1s2t2 >= 2
+x12 - 10000 binaryLp1j1nj2x2y1s2t2 <= 2
+y11 - 10000 binaryLp1j1nj2x2y1s2t2 <= 1
+y12 + 10000 binaryLp1j1nj2x2y1s2t2 >= 2
+x11 + 10000 binaryRp1j1nj2x2y1s2t2 >= 2
+x11 - 10000 binaryRp1j1nj2x2y1s2t2 <= 2
+x12 + 10000 binaryRp1j1nj2x2y1s2t2 >= 2
+x12 - 10000 binaryRp1j1nj2x2y1s2t2 <= 2
+y12 - 10000 binaryRp1j1nj2x2y1s2t2 <= 1
+y11 + 10000 binaryRp1j1nj2x2y1s2t2 >= 2
+x12 + 10000 binaryLp1j2nj3x2y1s2t2 >= 2
+x12 - 10000 binaryLp1j2nj3x2y1s2t2 <= 2
+x13 + 10000 binaryLp1j2nj3x2y1s2t2 >= 2
+x13 - 10000 binaryLp1j2nj3x2y1s2t2 <= 2
+y12 - 10000 binaryLp1j2nj3x2y1s2t2 <= 1
+y13 + 10000 binaryLp1j2nj3x2y1s2t2 >= 2
+x12 + 10000 binaryRp1j2nj3x2y1s2t2 >= 2
+x12 - 10000 binaryRp1j2nj3x2y1s2t2 <= 2
+x13 + 10000 binaryRp1j2nj3x2y1s2t2 >= 2
+x13 - 10000 binaryRp1j2nj3x2y1s2t2 <= 2
+y13 - 10000 binaryRp1j2nj3x2y1s2t2 <= 1
+y12 + 10000 binaryRp1j2nj3x2y1s2t2 >= 2
+x13 + 10000 binaryLp1j3nj4x2y1s2t2 >= 2
+x13 - 10000 binaryLp1j3nj4x2y1s2t2 <= 2
+x14 + 10000 binaryLp1j3nj4x2y1s2t2 >= 2
+x14 - 10000 binaryLp1j3nj4x2y1s2t2 <= 2
+y13 - 10000 binaryLp1j3nj4x2y1s2t2 <= 1
+y14 + 10000 binaryLp1j3nj4x2y1s2t2 >= 2
+x13 + 10000 binaryRp1j3nj4x2y1s2t2 >= 2
+x13 - 10000 binaryRp1j3nj4x2y1s2t2 <= 2
+x14 + 10000 binaryRp1j3nj4x2y1s2t2 >= 2
+x14 - 10000 binaryRp1j3nj4x2y1s2t2 <= 2
+y14 - 10000 binaryRp1j3nj4x2y1s2t2 <= 1
+y13 + 10000 binaryRp1j3nj4x2y1s2t2 >= 2
+x14 + 10000 binaryLp1j4nj5x2y1s2t2 >= 2
+x14 - 10000 binaryLp1j4nj5x2y1s2t2 <= 2
+x15 + 10000 binaryLp1j4nj5x2y1s2t2 >= 2
+x15 - 10000 binaryLp1j4nj5x2y1s2t2 <= 2
+y14 - 10000 binaryLp1j4nj5x2y1s2t2 <= 1
+y15 + 10000 binaryLp1j4nj5x2y1s2t2 >= 2
+x14 + 10000 binaryRp1j4nj5x2y1s2t2 >= 2
+x14 - 10000 binaryRp1j4nj5x2y1s2t2 <= 2
+x15 + 10000 binaryRp1j4nj5x2y1s2t2 >= 2
+x15 - 10000 binaryRp1j4nj5x2y1s2t2 <= 2
+y15 - 10000 binaryRp1j4nj5x2y1s2t2 <= 1
+y14 + 10000 binaryRp1j4nj5x2y1s2t2 >= 2
+x15 + 10000 binaryLp1j5nj6x2y1s2t2 >= 2
+x15 - 10000 binaryLp1j5nj6x2y1s2t2 <= 2
+x16 + 10000 binaryLp1j5nj6x2y1s2t2 >= 2
+x16 - 10000 binaryLp1j5nj6x2y1s2t2 <= 2
+y15 - 10000 binaryLp1j5nj6x2y1s2t2 <= 1
+y16 + 10000 binaryLp1j5nj6x2y1s2t2 >= 2
+x15 + 10000 binaryRp1j5nj6x2y1s2t2 >= 2
+x15 - 10000 binaryRp1j5nj6x2y1s2t2 <= 2
+x16 + 10000 binaryRp1j5nj6x2y1s2t2 >= 2
+x16 - 10000 binaryRp1j5nj6x2y1s2t2 <= 2
+y16 - 10000 binaryRp1j5nj6x2y1s2t2 <= 1
+y15 + 10000 binaryRp1j5nj6x2y1s2t2 >= 2
+x16 + 10000 binaryLp1j6nj7x2y1s2t2 >= 2
+x16 - 10000 binaryLp1j6nj7x2y1s2t2 <= 2
+x17 + 10000 binaryLp1j6nj7x2y1s2t2 >= 2
+x17 - 10000 binaryLp1j6nj7x2y1s2t2 <= 2
+y16 - 10000 binaryLp1j6nj7x2y1s2t2 <= 1
+y17 + 10000 binaryLp1j6nj7x2y1s2t2 >= 2
+x16 + 10000 binaryRp1j6nj7x2y1s2t2 >= 2
+x16 - 10000 binaryRp1j6nj7x2y1s2t2 <= 2
+x17 + 10000 binaryRp1j6nj7x2y1s2t2 >= 2
+x17 - 10000 binaryRp1j6nj7x2y1s2t2 <= 2
+y17 - 10000 binaryRp1j6nj7x2y1s2t2 <= 1
+y16 + 10000 binaryRp1j6nj7x2y1s2t2 >= 2
+x17 + 10000 binaryLp1j7nj8x2y1s2t2 >= 2
+x17 - 10000 binaryLp1j7nj8x2y1s2t2 <= 2
+x18 + 10000 binaryLp1j7nj8x2y1s2t2 >= 2
+x18 - 10000 binaryLp1j7nj8x2y1s2t2 <= 2
+y17 - 10000 binaryLp1j7nj8x2y1s2t2 <= 1
+y18 + 10000 binaryLp1j7nj8x2y1s2t2 >= 2
+x17 + 10000 binaryRp1j7nj8x2y1s2t2 >= 2
+x17 - 10000 binaryRp1j7nj8x2y1s2t2 <= 2
+x18 + 10000 binaryRp1j7nj8x2y1s2t2 >= 2
+x18 - 10000 binaryRp1j7nj8x2y1s2t2 <= 2
+y18 - 10000 binaryRp1j7nj8x2y1s2t2 <= 1
+y17 + 10000 binaryRp1j7nj8x2y1s2t2 >= 2
+x18 + 10000 binaryLp1j8nj9x2y1s2t2 >= 2
+x18 - 10000 binaryLp1j8nj9x2y1s2t2 <= 2
+x19 + 10000 binaryLp1j8nj9x2y1s2t2 >= 2
+x19 - 10000 binaryLp1j8nj9x2y1s2t2 <= 2
+y18 - 10000 binaryLp1j8nj9x2y1s2t2 <= 1
+y19 + 10000 binaryLp1j8nj9x2y1s2t2 >= 2
+x18 + 10000 binaryRp1j8nj9x2y1s2t2 >= 2
+x18 - 10000 binaryRp1j8nj9x2y1s2t2 <= 2
+x19 + 10000 binaryRp1j8nj9x2y1s2t2 >= 2
+x19 - 10000 binaryRp1j8nj9x2y1s2t2 <= 2
+y19 - 10000 binaryRp1j8nj9x2y1s2t2 <= 1
+y18 + 10000 binaryRp1j8nj9x2y1s2t2 >= 2
+ + binaryLp0j0nj1x2y1s2t2 + binaryRp0j0nj1x2y1s2t2 + binaryLp0j1nj2x2y1s2t2 + binaryRp0j1nj2x2y1s2t2 + binaryLp0j2nj3x2y1s2t2 + binaryRp0j2nj3x2y1s2t2 + binaryLp0j3nj4x2y1s2t2 + binaryRp0j3nj4x2y1s2t2 + binaryLp0j4nj5x2y1s2t2 + binaryRp0j4nj5x2y1s2t2 + binaryLp0j5nj6x2y1s2t2 + binaryRp0j5nj6x2y1s2t2 + binaryLp0j6nj7x2y1s2t2 + binaryRp0j6nj7x2y1s2t2 + binaryLp0j7nj8x2y1s2t2 + binaryRp0j7nj8x2y1s2t2 + binaryLp0j8nj9x2y1s2t2 + binaryRp0j8nj9x2y1s2t2 + binaryLp1j0nj1x2y1s2t2 + binaryRp1j0nj1x2y1s2t2 + binaryLp1j1nj2x2y1s2t2 + binaryRp1j1nj2x2y1s2t2 + binaryLp1j2nj3x2y1s2t2 + binaryRp1j2nj3x2y1s2t2 + binaryLp1j3nj4x2y1s2t2 + binaryRp1j3nj4x2y1s2t2 + binaryLp1j4nj5x2y1s2t2 + binaryRp1j4nj5x2y1s2t2 + binaryLp1j5nj6x2y1s2t2 + binaryRp1j5nj6x2y1s2t2 + binaryLp1j6nj7x2y1s2t2 + binaryRp1j6nj7x2y1s2t2 + binaryLp1j7nj8x2y1s2t2 + binaryRp1j7nj8x2y1s2t2 + binaryLp1j8nj9x2y1s2t2 + binaryRp1j8nj9x2y1s2t2 <= 35
+y00 + 10000 binaryUp0j0nj1x3y0s4t0 >= 0
+y00 - 10000 binaryUp0j0nj1x3y0s4t0 <=  0
+y01 + 10000 binaryUp0j0nj1x3y0s4t0 >= 0
+y01 - 10000 binaryUp0j0nj1x3y0s4t0 <= 0
+x00 - 10000 binaryUp0j0nj1x3y0s4t0 <= 3
+x01 + 10000 binaryUp0j0nj1x3y0s4t0 >= 4
+y00 + 10000 binaryDp0j0nj1x3y0s4t0 >= 0
+y00 - 10000 binaryDp0j0nj1x3y0s4t0 <= 0
+y01 + 10000 binaryDp0j0nj1x3y0s4t0 >= 0
+y01 - 10000 binaryDp0j0nj1x3y0s4t0 <= 0
+x01 - 10000 binaryDp0j0nj1x3y0s4t0 <= 3
+x00 + 10000 binaryDp0j0nj1x3y0s4t0 >= 4
+y01 + 10000 binaryUp0j1nj2x3y0s4t0 >= 0
+y01 - 10000 binaryUp0j1nj2x3y0s4t0 <=  0
+y02 + 10000 binaryUp0j1nj2x3y0s4t0 >= 0
+y02 - 10000 binaryUp0j1nj2x3y0s4t0 <= 0
+x01 - 10000 binaryUp0j1nj2x3y0s4t0 <= 3
+x02 + 10000 binaryUp0j1nj2x3y0s4t0 >= 4
+y01 + 10000 binaryDp0j1nj2x3y0s4t0 >= 0
+y01 - 10000 binaryDp0j1nj2x3y0s4t0 <= 0
+y02 + 10000 binaryDp0j1nj2x3y0s4t0 >= 0
+y02 - 10000 binaryDp0j1nj2x3y0s4t0 <= 0
+x02 - 10000 binaryDp0j1nj2x3y0s4t0 <= 3
+x01 + 10000 binaryDp0j1nj2x3y0s4t0 >= 4
+y02 + 10000 binaryUp0j2nj3x3y0s4t0 >= 0
+y02 - 10000 binaryUp0j2nj3x3y0s4t0 <=  0
+y03 + 10000 binaryUp0j2nj3x3y0s4t0 >= 0
+y03 - 10000 binaryUp0j2nj3x3y0s4t0 <= 0
+x02 - 10000 binaryUp0j2nj3x3y0s4t0 <= 3
+x03 + 10000 binaryUp0j2nj3x3y0s4t0 >= 4
+y02 + 10000 binaryDp0j2nj3x3y0s4t0 >= 0
+y02 - 10000 binaryDp0j2nj3x3y0s4t0 <= 0
+y03 + 10000 binaryDp0j2nj3x3y0s4t0 >= 0
+y03 - 10000 binaryDp0j2nj3x3y0s4t0 <= 0
+x03 - 10000 binaryDp0j2nj3x3y0s4t0 <= 3
+x02 + 10000 binaryDp0j2nj3x3y0s4t0 >= 4
+y03 + 10000 binaryUp0j3nj4x3y0s4t0 >= 0
+y03 - 10000 binaryUp0j3nj4x3y0s4t0 <=  0
+y04 + 10000 binaryUp0j3nj4x3y0s4t0 >= 0
+y04 - 10000 binaryUp0j3nj4x3y0s4t0 <= 0
+x03 - 10000 binaryUp0j3nj4x3y0s4t0 <= 3
+x04 + 10000 binaryUp0j3nj4x3y0s4t0 >= 4
+y03 + 10000 binaryDp0j3nj4x3y0s4t0 >= 0
+y03 - 10000 binaryDp0j3nj4x3y0s4t0 <= 0
+y04 + 10000 binaryDp0j3nj4x3y0s4t0 >= 0
+y04 - 10000 binaryDp0j3nj4x3y0s4t0 <= 0
+x04 - 10000 binaryDp0j3nj4x3y0s4t0 <= 3
+x03 + 10000 binaryDp0j3nj4x3y0s4t0 >= 4
+y04 + 10000 binaryUp0j4nj5x3y0s4t0 >= 0
+y04 - 10000 binaryUp0j4nj5x3y0s4t0 <=  0
+y05 + 10000 binaryUp0j4nj5x3y0s4t0 >= 0
+y05 - 10000 binaryUp0j4nj5x3y0s4t0 <= 0
+x04 - 10000 binaryUp0j4nj5x3y0s4t0 <= 3
+x05 + 10000 binaryUp0j4nj5x3y0s4t0 >= 4
+y04 + 10000 binaryDp0j4nj5x3y0s4t0 >= 0
+y04 - 10000 binaryDp0j4nj5x3y0s4t0 <= 0
+y05 + 10000 binaryDp0j4nj5x3y0s4t0 >= 0
+y05 - 10000 binaryDp0j4nj5x3y0s4t0 <= 0
+x05 - 10000 binaryDp0j4nj5x3y0s4t0 <= 3
+x04 + 10000 binaryDp0j4nj5x3y0s4t0 >= 4
+y05 + 10000 binaryUp0j5nj6x3y0s4t0 >= 0
+y05 - 10000 binaryUp0j5nj6x3y0s4t0 <=  0
+y06 + 10000 binaryUp0j5nj6x3y0s4t0 >= 0
+y06 - 10000 binaryUp0j5nj6x3y0s4t0 <= 0
+x05 - 10000 binaryUp0j5nj6x3y0s4t0 <= 3
+x06 + 10000 binaryUp0j5nj6x3y0s4t0 >= 4
+y05 + 10000 binaryDp0j5nj6x3y0s4t0 >= 0
+y05 - 10000 binaryDp0j5nj6x3y0s4t0 <= 0
+y06 + 10000 binaryDp0j5nj6x3y0s4t0 >= 0
+y06 - 10000 binaryDp0j5nj6x3y0s4t0 <= 0
+x06 - 10000 binaryDp0j5nj6x3y0s4t0 <= 3
+x05 + 10000 binaryDp0j5nj6x3y0s4t0 >= 4
+y06 + 10000 binaryUp0j6nj7x3y0s4t0 >= 0
+y06 - 10000 binaryUp0j6nj7x3y0s4t0 <=  0
+y07 + 10000 binaryUp0j6nj7x3y0s4t0 >= 0
+y07 - 10000 binaryUp0j6nj7x3y0s4t0 <= 0
+x06 - 10000 binaryUp0j6nj7x3y0s4t0 <= 3
+x07 + 10000 binaryUp0j6nj7x3y0s4t0 >= 4
+y06 + 10000 binaryDp0j6nj7x3y0s4t0 >= 0
+y06 - 10000 binaryDp0j6nj7x3y0s4t0 <= 0
+y07 + 10000 binaryDp0j6nj7x3y0s4t0 >= 0
+y07 - 10000 binaryDp0j6nj7x3y0s4t0 <= 0
+x07 - 10000 binaryDp0j6nj7x3y0s4t0 <= 3
+x06 + 10000 binaryDp0j6nj7x3y0s4t0 >= 4
+y07 + 10000 binaryUp0j7nj8x3y0s4t0 >= 0
+y07 - 10000 binaryUp0j7nj8x3y0s4t0 <=  0
+y08 + 10000 binaryUp0j7nj8x3y0s4t0 >= 0
+y08 - 10000 binaryUp0j7nj8x3y0s4t0 <= 0
+x07 - 10000 binaryUp0j7nj8x3y0s4t0 <= 3
+x08 + 10000 binaryUp0j7nj8x3y0s4t0 >= 4
+y07 + 10000 binaryDp0j7nj8x3y0s4t0 >= 0
+y07 - 10000 binaryDp0j7nj8x3y0s4t0 <= 0
+y08 + 10000 binaryDp0j7nj8x3y0s4t0 >= 0
+y08 - 10000 binaryDp0j7nj8x3y0s4t0 <= 0
+x08 - 10000 binaryDp0j7nj8x3y0s4t0 <= 3
+x07 + 10000 binaryDp0j7nj8x3y0s4t0 >= 4
+y08 + 10000 binaryUp0j8nj9x3y0s4t0 >= 0
+y08 - 10000 binaryUp0j8nj9x3y0s4t0 <=  0
+y09 + 10000 binaryUp0j8nj9x3y0s4t0 >= 0
+y09 - 10000 binaryUp0j8nj9x3y0s4t0 <= 0
+x08 - 10000 binaryUp0j8nj9x3y0s4t0 <= 3
+x09 + 10000 binaryUp0j8nj9x3y0s4t0 >= 4
+y08 + 10000 binaryDp0j8nj9x3y0s4t0 >= 0
+y08 - 10000 binaryDp0j8nj9x3y0s4t0 <= 0
+y09 + 10000 binaryDp0j8nj9x3y0s4t0 >= 0
+y09 - 10000 binaryDp0j8nj9x3y0s4t0 <= 0
+x09 - 10000 binaryDp0j8nj9x3y0s4t0 <= 3
+x08 + 10000 binaryDp0j8nj9x3y0s4t0 >= 4
+y10 + 10000 binaryUp1j0nj1x3y0s4t0 >= 0
+y10 - 10000 binaryUp1j0nj1x3y0s4t0 <=  0
+y11 + 10000 binaryUp1j0nj1x3y0s4t0 >= 0
+y11 - 10000 binaryUp1j0nj1x3y0s4t0 <= 0
+x10 - 10000 binaryUp1j0nj1x3y0s4t0 <= 3
+x11 + 10000 binaryUp1j0nj1x3y0s4t0 >= 4
+y10 + 10000 binaryDp1j0nj1x3y0s4t0 >= 0
+y10 - 10000 binaryDp1j0nj1x3y0s4t0 <= 0
+y11 + 10000 binaryDp1j0nj1x3y0s4t0 >= 0
+y11 - 10000 binaryDp1j0nj1x3y0s4t0 <= 0
+x11 - 10000 binaryDp1j0nj1x3y0s4t0 <= 3
+x10 + 10000 binaryDp1j0nj1x3y0s4t0 >= 4
+y11 + 10000 binaryUp1j1nj2x3y0s4t0 >= 0
+y11 - 10000 binaryUp1j1nj2x3y0s4t0 <=  0
+y12 + 10000 binaryUp1j1nj2x3y0s4t0 >= 0
+y12 - 10000 binaryUp1j1nj2x3y0s4t0 <= 0
+x11 - 10000 binaryUp1j1nj2x3y0s4t0 <= 3
+x12 + 10000 binaryUp1j1nj2x3y0s4t0 >= 4
+y11 + 10000 binaryDp1j1nj2x3y0s4t0 >= 0
+y11 - 10000 binaryDp1j1nj2x3y0s4t0 <= 0
+y12 + 10000 binaryDp1j1nj2x3y0s4t0 >= 0
+y12 - 10000 binaryDp1j1nj2x3y0s4t0 <= 0
+x12 - 10000 binaryDp1j1nj2x3y0s4t0 <= 3
+x11 + 10000 binaryDp1j1nj2x3y0s4t0 >= 4
+y12 + 10000 binaryUp1j2nj3x3y0s4t0 >= 0
+y12 - 10000 binaryUp1j2nj3x3y0s4t0 <=  0
+y13 + 10000 binaryUp1j2nj3x3y0s4t0 >= 0
+y13 - 10000 binaryUp1j2nj3x3y0s4t0 <= 0
+x12 - 10000 binaryUp1j2nj3x3y0s4t0 <= 3
+x13 + 10000 binaryUp1j2nj3x3y0s4t0 >= 4
+y12 + 10000 binaryDp1j2nj3x3y0s4t0 >= 0
+y12 - 10000 binaryDp1j2nj3x3y0s4t0 <= 0
+y13 + 10000 binaryDp1j2nj3x3y0s4t0 >= 0
+y13 - 10000 binaryDp1j2nj3x3y0s4t0 <= 0
+x13 - 10000 binaryDp1j2nj3x3y0s4t0 <= 3
+x12 + 10000 binaryDp1j2nj3x3y0s4t0 >= 4
+y13 + 10000 binaryUp1j3nj4x3y0s4t0 >= 0
+y13 - 10000 binaryUp1j3nj4x3y0s4t0 <=  0
+y14 + 10000 binaryUp1j3nj4x3y0s4t0 >= 0
+y14 - 10000 binaryUp1j3nj4x3y0s4t0 <= 0
+x13 - 10000 binaryUp1j3nj4x3y0s4t0 <= 3
+x14 + 10000 binaryUp1j3nj4x3y0s4t0 >= 4
+y13 + 10000 binaryDp1j3nj4x3y0s4t0 >= 0
+y13 - 10000 binaryDp1j3nj4x3y0s4t0 <= 0
+y14 + 10000 binaryDp1j3nj4x3y0s4t0 >= 0
+y14 - 10000 binaryDp1j3nj4x3y0s4t0 <= 0
+x14 - 10000 binaryDp1j3nj4x3y0s4t0 <= 3
+x13 + 10000 binaryDp1j3nj4x3y0s4t0 >= 4
+y14 + 10000 binaryUp1j4nj5x3y0s4t0 >= 0
+y14 - 10000 binaryUp1j4nj5x3y0s4t0 <=  0
+y15 + 10000 binaryUp1j4nj5x3y0s4t0 >= 0
+y15 - 10000 binaryUp1j4nj5x3y0s4t0 <= 0
+x14 - 10000 binaryUp1j4nj5x3y0s4t0 <= 3
+x15 + 10000 binaryUp1j4nj5x3y0s4t0 >= 4
+y14 + 10000 binaryDp1j4nj5x3y0s4t0 >= 0
+y14 - 10000 binaryDp1j4nj5x3y0s4t0 <= 0
+y15 + 10000 binaryDp1j4nj5x3y0s4t0 >= 0
+y15 - 10000 binaryDp1j4nj5x3y0s4t0 <= 0
+x15 - 10000 binaryDp1j4nj5x3y0s4t0 <= 3
+x14 + 10000 binaryDp1j4nj5x3y0s4t0 >= 4
+y15 + 10000 binaryUp1j5nj6x3y0s4t0 >= 0
+y15 - 10000 binaryUp1j5nj6x3y0s4t0 <=  0
+y16 + 10000 binaryUp1j5nj6x3y0s4t0 >= 0
+y16 - 10000 binaryUp1j5nj6x3y0s4t0 <= 0
+x15 - 10000 binaryUp1j5nj6x3y0s4t0 <= 3
+x16 + 10000 binaryUp1j5nj6x3y0s4t0 >= 4
+y15 + 10000 binaryDp1j5nj6x3y0s4t0 >= 0
+y15 - 10000 binaryDp1j5nj6x3y0s4t0 <= 0
+y16 + 10000 binaryDp1j5nj6x3y0s4t0 >= 0
+y16 - 10000 binaryDp1j5nj6x3y0s4t0 <= 0
+x16 - 10000 binaryDp1j5nj6x3y0s4t0 <= 3
+x15 + 10000 binaryDp1j5nj6x3y0s4t0 >= 4
+y16 + 10000 binaryUp1j6nj7x3y0s4t0 >= 0
+y16 - 10000 binaryUp1j6nj7x3y0s4t0 <=  0
+y17 + 10000 binaryUp1j6nj7x3y0s4t0 >= 0
+y17 - 10000 binaryUp1j6nj7x3y0s4t0 <= 0
+x16 - 10000 binaryUp1j6nj7x3y0s4t0 <= 3
+x17 + 10000 binaryUp1j6nj7x3y0s4t0 >= 4
+y16 + 10000 binaryDp1j6nj7x3y0s4t0 >= 0
+y16 - 10000 binaryDp1j6nj7x3y0s4t0 <= 0
+y17 + 10000 binaryDp1j6nj7x3y0s4t0 >= 0
+y17 - 10000 binaryDp1j6nj7x3y0s4t0 <= 0
+x17 - 10000 binaryDp1j6nj7x3y0s4t0 <= 3
+x16 + 10000 binaryDp1j6nj7x3y0s4t0 >= 4
+y17 + 10000 binaryUp1j7nj8x3y0s4t0 >= 0
+y17 - 10000 binaryUp1j7nj8x3y0s4t0 <=  0
+y18 + 10000 binaryUp1j7nj8x3y0s4t0 >= 0
+y18 - 10000 binaryUp1j7nj8x3y0s4t0 <= 0
+x17 - 10000 binaryUp1j7nj8x3y0s4t0 <= 3
+x18 + 10000 binaryUp1j7nj8x3y0s4t0 >= 4
+y17 + 10000 binaryDp1j7nj8x3y0s4t0 >= 0
+y17 - 10000 binaryDp1j7nj8x3y0s4t0 <= 0
+y18 + 10000 binaryDp1j7nj8x3y0s4t0 >= 0
+y18 - 10000 binaryDp1j7nj8x3y0s4t0 <= 0
+x18 - 10000 binaryDp1j7nj8x3y0s4t0 <= 3
+x17 + 10000 binaryDp1j7nj8x3y0s4t0 >= 4
+y18 + 10000 binaryUp1j8nj9x3y0s4t0 >= 0
+y18 - 10000 binaryUp1j8nj9x3y0s4t0 <=  0
+y19 + 10000 binaryUp1j8nj9x3y0s4t0 >= 0
+y19 - 10000 binaryUp1j8nj9x3y0s4t0 <= 0
+x18 - 10000 binaryUp1j8nj9x3y0s4t0 <= 3
+x19 + 10000 binaryUp1j8nj9x3y0s4t0 >= 4
+y18 + 10000 binaryDp1j8nj9x3y0s4t0 >= 0
+y18 - 10000 binaryDp1j8nj9x3y0s4t0 <= 0
+y19 + 10000 binaryDp1j8nj9x3y0s4t0 >= 0
+y19 - 10000 binaryDp1j8nj9x3y0s4t0 <= 0
+x19 - 10000 binaryDp1j8nj9x3y0s4t0 <= 3
+x18 + 10000 binaryDp1j8nj9x3y0s4t0 >= 4
+ + binaryUp0j0nj1x3y0s4t0 + binaryDp0j0nj1x3y0s4t0 + binaryUp0j1nj2x3y0s4t0 + binaryDp0j1nj2x3y0s4t0 + binaryUp0j2nj3x3y0s4t0 + binaryDp0j2nj3x3y0s4t0 + binaryUp0j3nj4x3y0s4t0 + binaryDp0j3nj4x3y0s4t0 + binaryUp0j4nj5x3y0s4t0 + binaryDp0j4nj5x3y0s4t0 + binaryUp0j5nj6x3y0s4t0 + binaryDp0j5nj6x3y0s4t0 + binaryUp0j6nj7x3y0s4t0 + binaryDp0j6nj7x3y0s4t0 + binaryUp0j7nj8x3y0s4t0 + binaryDp0j7nj8x3y0s4t0 + binaryUp0j8nj9x3y0s4t0 + binaryDp0j8nj9x3y0s4t0 + binaryUp1j0nj1x3y0s4t0 + binaryDp1j0nj1x3y0s4t0 + binaryUp1j1nj2x3y0s4t0 + binaryDp1j1nj2x3y0s4t0 + binaryUp1j2nj3x3y0s4t0 + binaryDp1j2nj3x3y0s4t0 + binaryUp1j3nj4x3y0s4t0 + binaryDp1j3nj4x3y0s4t0 + binaryUp1j4nj5x3y0s4t0 + binaryDp1j4nj5x3y0s4t0 + binaryUp1j5nj6x3y0s4t0 + binaryDp1j5nj6x3y0s4t0 + binaryUp1j6nj7x3y0s4t0 + binaryDp1j6nj7x3y0s4t0 + binaryUp1j7nj8x3y0s4t0 + binaryDp1j7nj8x3y0s4t0 + binaryUp1j8nj9x3y0s4t0 + binaryDp1j8nj9x3y0s4t0 <= 35
+y00 + 10000 binaryUp0j0nj1x2y3s3t3 >= 3
+y00 - 10000 binaryUp0j0nj1x2y3s3t3 <=  3
+y01 + 10000 binaryUp0j0nj1x2y3s3t3 >= 3
+y01 - 10000 binaryUp0j0nj1x2y3s3t3 <= 3
+x00 - 10000 binaryUp0j0nj1x2y3s3t3 <= 2
+x01 + 10000 binaryUp0j0nj1x2y3s3t3 >= 3
+y00 + 10000 binaryDp0j0nj1x2y3s3t3 >= 3
+y00 - 10000 binaryDp0j0nj1x2y3s3t3 <= 3
+y01 + 10000 binaryDp0j0nj1x2y3s3t3 >= 3
+y01 - 10000 binaryDp0j0nj1x2y3s3t3 <= 3
+x01 - 10000 binaryDp0j0nj1x2y3s3t3 <= 2
+x00 + 10000 binaryDp0j0nj1x2y3s3t3 >= 3
+y01 + 10000 binaryUp0j1nj2x2y3s3t3 >= 3
+y01 - 10000 binaryUp0j1nj2x2y3s3t3 <=  3
+y02 + 10000 binaryUp0j1nj2x2y3s3t3 >= 3
+y02 - 10000 binaryUp0j1nj2x2y3s3t3 <= 3
+x01 - 10000 binaryUp0j1nj2x2y3s3t3 <= 2
+x02 + 10000 binaryUp0j1nj2x2y3s3t3 >= 3
+y01 + 10000 binaryDp0j1nj2x2y3s3t3 >= 3
+y01 - 10000 binaryDp0j1nj2x2y3s3t3 <= 3
+y02 + 10000 binaryDp0j1nj2x2y3s3t3 >= 3
+y02 - 10000 binaryDp0j1nj2x2y3s3t3 <= 3
+x02 - 10000 binaryDp0j1nj2x2y3s3t3 <= 2
+x01 + 10000 binaryDp0j1nj2x2y3s3t3 >= 3
+y02 + 10000 binaryUp0j2nj3x2y3s3t3 >= 3
+y02 - 10000 binaryUp0j2nj3x2y3s3t3 <=  3
+y03 + 10000 binaryUp0j2nj3x2y3s3t3 >= 3
+y03 - 10000 binaryUp0j2nj3x2y3s3t3 <= 3
+x02 - 10000 binaryUp0j2nj3x2y3s3t3 <= 2
+x03 + 10000 binaryUp0j2nj3x2y3s3t3 >= 3
+y02 + 10000 binaryDp0j2nj3x2y3s3t3 >= 3
+y02 - 10000 binaryDp0j2nj3x2y3s3t3 <= 3
+y03 + 10000 binaryDp0j2nj3x2y3s3t3 >= 3
+y03 - 10000 binaryDp0j2nj3x2y3s3t3 <= 3
+x03 - 10000 binaryDp0j2nj3x2y3s3t3 <= 2
+x02 + 10000 binaryDp0j2nj3x2y3s3t3 >= 3
+y03 + 10000 binaryUp0j3nj4x2y3s3t3 >= 3
+y03 - 10000 binaryUp0j3nj4x2y3s3t3 <=  3
+y04 + 10000 binaryUp0j3nj4x2y3s3t3 >= 3
+y04 - 10000 binaryUp0j3nj4x2y3s3t3 <= 3
+x03 - 10000 binaryUp0j3nj4x2y3s3t3 <= 2
+x04 + 10000 binaryUp0j3nj4x2y3s3t3 >= 3
+y03 + 10000 binaryDp0j3nj4x2y3s3t3 >= 3
+y03 - 10000 binaryDp0j3nj4x2y3s3t3 <= 3
+y04 + 10000 binaryDp0j3nj4x2y3s3t3 >= 3
+y04 - 10000 binaryDp0j3nj4x2y3s3t3 <= 3
+x04 - 10000 binaryDp0j3nj4x2y3s3t3 <= 2
+x03 + 10000 binaryDp0j3nj4x2y3s3t3 >= 3
+y04 + 10000 binaryUp0j4nj5x2y3s3t3 >= 3
+y04 - 10000 binaryUp0j4nj5x2y3s3t3 <=  3
+y05 + 10000 binaryUp0j4nj5x2y3s3t3 >= 3
+y05 - 10000 binaryUp0j4nj5x2y3s3t3 <= 3
+x04 - 10000 binaryUp0j4nj5x2y3s3t3 <= 2
+x05 + 10000 binaryUp0j4nj5x2y3s3t3 >= 3
+y04 + 10000 binaryDp0j4nj5x2y3s3t3 >= 3
+y04 - 10000 binaryDp0j4nj5x2y3s3t3 <= 3
+y05 + 10000 binaryDp0j4nj5x2y3s3t3 >= 3
+y05 - 10000 binaryDp0j4nj5x2y3s3t3 <= 3
+x05 - 10000 binaryDp0j4nj5x2y3s3t3 <= 2
+x04 + 10000 binaryDp0j4nj5x2y3s3t3 >= 3
+y05 + 10000 binaryUp0j5nj6x2y3s3t3 >= 3
+y05 - 10000 binaryUp0j5nj6x2y3s3t3 <=  3
+y06 + 10000 binaryUp0j5nj6x2y3s3t3 >= 3
+y06 - 10000 binaryUp0j5nj6x2y3s3t3 <= 3
+x05 - 10000 binaryUp0j5nj6x2y3s3t3 <= 2
+x06 + 10000 binaryUp0j5nj6x2y3s3t3 >= 3
+y05 + 10000 binaryDp0j5nj6x2y3s3t3 >= 3
+y05 - 10000 binaryDp0j5nj6x2y3s3t3 <= 3
+y06 + 10000 binaryDp0j5nj6x2y3s3t3 >= 3
+y06 - 10000 binaryDp0j5nj6x2y3s3t3 <= 3
+x06 - 10000 binaryDp0j5nj6x2y3s3t3 <= 2
+x05 + 10000 binaryDp0j5nj6x2y3s3t3 >= 3
+y06 + 10000 binaryUp0j6nj7x2y3s3t3 >= 3
+y06 - 10000 binaryUp0j6nj7x2y3s3t3 <=  3
+y07 + 10000 binaryUp0j6nj7x2y3s3t3 >= 3
+y07 - 10000 binaryUp0j6nj7x2y3s3t3 <= 3
+x06 - 10000 binaryUp0j6nj7x2y3s3t3 <= 2
+x07 + 10000 binaryUp0j6nj7x2y3s3t3 >= 3
+y06 + 10000 binaryDp0j6nj7x2y3s3t3 >= 3
+y06 - 10000 binaryDp0j6nj7x2y3s3t3 <= 3
+y07 + 10000 binaryDp0j6nj7x2y3s3t3 >= 3
+y07 - 10000 binaryDp0j6nj7x2y3s3t3 <= 3
+x07 - 10000 binaryDp0j6nj7x2y3s3t3 <= 2
+x06 + 10000 binaryDp0j6nj7x2y3s3t3 >= 3
+y07 + 10000 binaryUp0j7nj8x2y3s3t3 >= 3
+y07 - 10000 binaryUp0j7nj8x2y3s3t3 <=  3
+y08 + 10000 binaryUp0j7nj8x2y3s3t3 >= 3
+y08 - 10000 binaryUp0j7nj8x2y3s3t3 <= 3
+x07 - 10000 binaryUp0j7nj8x2y3s3t3 <= 2
+x08 + 10000 binaryUp0j7nj8x2y3s3t3 >= 3
+y07 + 10000 binaryDp0j7nj8x2y3s3t3 >= 3
+y07 - 10000 binaryDp0j7nj8x2y3s3t3 <= 3
+y08 + 10000 binaryDp0j7nj8x2y3s3t3 >= 3
+y08 - 10000 binaryDp0j7nj8x2y3s3t3 <= 3
+x08 - 10000 binaryDp0j7nj8x2y3s3t3 <= 2
+x07 + 10000 binaryDp0j7nj8x2y3s3t3 >= 3
+y08 + 10000 binaryUp0j8nj9x2y3s3t3 >= 3
+y08 - 10000 binaryUp0j8nj9x2y3s3t3 <=  3
+y09 + 10000 binaryUp0j8nj9x2y3s3t3 >= 3
+y09 - 10000 binaryUp0j8nj9x2y3s3t3 <= 3
+x08 - 10000 binaryUp0j8nj9x2y3s3t3 <= 2
+x09 + 10000 binaryUp0j8nj9x2y3s3t3 >= 3
+y08 + 10000 binaryDp0j8nj9x2y3s3t3 >= 3
+y08 - 10000 binaryDp0j8nj9x2y3s3t3 <= 3
+y09 + 10000 binaryDp0j8nj9x2y3s3t3 >= 3
+y09 - 10000 binaryDp0j8nj9x2y3s3t3 <= 3
+x09 - 10000 binaryDp0j8nj9x2y3s3t3 <= 2
+x08 + 10000 binaryDp0j8nj9x2y3s3t3 >= 3
+y10 + 10000 binaryUp1j0nj1x2y3s3t3 >= 3
+y10 - 10000 binaryUp1j0nj1x2y3s3t3 <=  3
+y11 + 10000 binaryUp1j0nj1x2y3s3t3 >= 3
+y11 - 10000 binaryUp1j0nj1x2y3s3t3 <= 3
+x10 - 10000 binaryUp1j0nj1x2y3s3t3 <= 2
+x11 + 10000 binaryUp1j0nj1x2y3s3t3 >= 3
+y10 + 10000 binaryDp1j0nj1x2y3s3t3 >= 3
+y10 - 10000 binaryDp1j0nj1x2y3s3t3 <= 3
+y11 + 10000 binaryDp1j0nj1x2y3s3t3 >= 3
+y11 - 10000 binaryDp1j0nj1x2y3s3t3 <= 3
+x11 - 10000 binaryDp1j0nj1x2y3s3t3 <= 2
+x10 + 10000 binaryDp1j0nj1x2y3s3t3 >= 3
+y11 + 10000 binaryUp1j1nj2x2y3s3t3 >= 3
+y11 - 10000 binaryUp1j1nj2x2y3s3t3 <=  3
+y12 + 10000 binaryUp1j1nj2x2y3s3t3 >= 3
+y12 - 10000 binaryUp1j1nj2x2y3s3t3 <= 3
+x11 - 10000 binaryUp1j1nj2x2y3s3t3 <= 2
+x12 + 10000 binaryUp1j1nj2x2y3s3t3 >= 3
+y11 + 10000 binaryDp1j1nj2x2y3s3t3 >= 3
+y11 - 10000 binaryDp1j1nj2x2y3s3t3 <= 3
+y12 + 10000 binaryDp1j1nj2x2y3s3t3 >= 3
+y12 - 10000 binaryDp1j1nj2x2y3s3t3 <= 3
+x12 - 10000 binaryDp1j1nj2x2y3s3t3 <= 2
+x11 + 10000 binaryDp1j1nj2x2y3s3t3 >= 3
+y12 + 10000 binaryUp1j2nj3x2y3s3t3 >= 3
+y12 - 10000 binaryUp1j2nj3x2y3s3t3 <=  3
+y13 + 10000 binaryUp1j2nj3x2y3s3t3 >= 3
+y13 - 10000 binaryUp1j2nj3x2y3s3t3 <= 3
+x12 - 10000 binaryUp1j2nj3x2y3s3t3 <= 2
+x13 + 10000 binaryUp1j2nj3x2y3s3t3 >= 3
+y12 + 10000 binaryDp1j2nj3x2y3s3t3 >= 3
+y12 - 10000 binaryDp1j2nj3x2y3s3t3 <= 3
+y13 + 10000 binaryDp1j2nj3x2y3s3t3 >= 3
+y13 - 10000 binaryDp1j2nj3x2y3s3t3 <= 3
+x13 - 10000 binaryDp1j2nj3x2y3s3t3 <= 2
+x12 + 10000 binaryDp1j2nj3x2y3s3t3 >= 3
+y13 + 10000 binaryUp1j3nj4x2y3s3t3 >= 3
+y13 - 10000 binaryUp1j3nj4x2y3s3t3 <=  3
+y14 + 10000 binaryUp1j3nj4x2y3s3t3 >= 3
+y14 - 10000 binaryUp1j3nj4x2y3s3t3 <= 3
+x13 - 10000 binaryUp1j3nj4x2y3s3t3 <= 2
+x14 + 10000 binaryUp1j3nj4x2y3s3t3 >= 3
+y13 + 10000 binaryDp1j3nj4x2y3s3t3 >= 3
+y13 - 10000 binaryDp1j3nj4x2y3s3t3 <= 3
+y14 + 10000 binaryDp1j3nj4x2y3s3t3 >= 3
+y14 - 10000 binaryDp1j3nj4x2y3s3t3 <= 3
+x14 - 10000 binaryDp1j3nj4x2y3s3t3 <= 2
+x13 + 10000 binaryDp1j3nj4x2y3s3t3 >= 3
+y14 + 10000 binaryUp1j4nj5x2y3s3t3 >= 3
+y14 - 10000 binaryUp1j4nj5x2y3s3t3 <=  3
+y15 + 10000 binaryUp1j4nj5x2y3s3t3 >= 3
+y15 - 10000 binaryUp1j4nj5x2y3s3t3 <= 3
+x14 - 10000 binaryUp1j4nj5x2y3s3t3 <= 2
+x15 + 10000 binaryUp1j4nj5x2y3s3t3 >= 3
+y14 + 10000 binaryDp1j4nj5x2y3s3t3 >= 3
+y14 - 10000 binaryDp1j4nj5x2y3s3t3 <= 3
+y15 + 10000 binaryDp1j4nj5x2y3s3t3 >= 3
+y15 - 10000 binaryDp1j4nj5x2y3s3t3 <= 3
+x15 - 10000 binaryDp1j4nj5x2y3s3t3 <= 2
+x14 + 10000 binaryDp1j4nj5x2y3s3t3 >= 3
+y15 + 10000 binaryUp1j5nj6x2y3s3t3 >= 3
+y15 - 10000 binaryUp1j5nj6x2y3s3t3 <=  3
+y16 + 10000 binaryUp1j5nj6x2y3s3t3 >= 3
+y16 - 10000 binaryUp1j5nj6x2y3s3t3 <= 3
+x15 - 10000 binaryUp1j5nj6x2y3s3t3 <= 2
+x16 + 10000 binaryUp1j5nj6x2y3s3t3 >= 3
+y15 + 10000 binaryDp1j5nj6x2y3s3t3 >= 3
+y15 - 10000 binaryDp1j5nj6x2y3s3t3 <= 3
+y16 + 10000 binaryDp1j5nj6x2y3s3t3 >= 3
+y16 - 10000 binaryDp1j5nj6x2y3s3t3 <= 3
+x16 - 10000 binaryDp1j5nj6x2y3s3t3 <= 2
+x15 + 10000 binaryDp1j5nj6x2y3s3t3 >= 3
+y16 + 10000 binaryUp1j6nj7x2y3s3t3 >= 3
+y16 - 10000 binaryUp1j6nj7x2y3s3t3 <=  3
+y17 + 10000 binaryUp1j6nj7x2y3s3t3 >= 3
+y17 - 10000 binaryUp1j6nj7x2y3s3t3 <= 3
+x16 - 10000 binaryUp1j6nj7x2y3s3t3 <= 2
+x17 + 10000 binaryUp1j6nj7x2y3s3t3 >= 3
+y16 + 10000 binaryDp1j6nj7x2y3s3t3 >= 3
+y16 - 10000 binaryDp1j6nj7x2y3s3t3 <= 3
+y17 + 10000 binaryDp1j6nj7x2y3s3t3 >= 3
+y17 - 10000 binaryDp1j6nj7x2y3s3t3 <= 3
+x17 - 10000 binaryDp1j6nj7x2y3s3t3 <= 2
+x16 + 10000 binaryDp1j6nj7x2y3s3t3 >= 3
+y17 + 10000 binaryUp1j7nj8x2y3s3t3 >= 3
+y17 - 10000 binaryUp1j7nj8x2y3s3t3 <=  3
+y18 + 10000 binaryUp1j7nj8x2y3s3t3 >= 3
+y18 - 10000 binaryUp1j7nj8x2y3s3t3 <= 3
+x17 - 10000 binaryUp1j7nj8x2y3s3t3 <= 2
+x18 + 10000 binaryUp1j7nj8x2y3s3t3 >= 3
+y17 + 10000 binaryDp1j7nj8x2y3s3t3 >= 3
+y17 - 10000 binaryDp1j7nj8x2y3s3t3 <= 3
+y18 + 10000 binaryDp1j7nj8x2y3s3t3 >= 3
+y18 - 10000 binaryDp1j7nj8x2y3s3t3 <= 3
+x18 - 10000 binaryDp1j7nj8x2y3s3t3 <= 2
+x17 + 10000 binaryDp1j7nj8x2y3s3t3 >= 3
+y18 + 10000 binaryUp1j8nj9x2y3s3t3 >= 3
+y18 - 10000 binaryUp1j8nj9x2y3s3t3 <=  3
+y19 + 10000 binaryUp1j8nj9x2y3s3t3 >= 3
+y19 - 10000 binaryUp1j8nj9x2y3s3t3 <= 3
+x18 - 10000 binaryUp1j8nj9x2y3s3t3 <= 2
+x19 + 10000 binaryUp1j8nj9x2y3s3t3 >= 3
+y18 + 10000 binaryDp1j8nj9x2y3s3t3 >= 3
+y18 - 10000 binaryDp1j8nj9x2y3s3t3 <= 3
+y19 + 10000 binaryDp1j8nj9x2y3s3t3 >= 3
+y19 - 10000 binaryDp1j8nj9x2y3s3t3 <= 3
+x19 - 10000 binaryDp1j8nj9x2y3s3t3 <= 2
+x18 + 10000 binaryDp1j8nj9x2y3s3t3 >= 3
+ + binaryUp0j0nj1x2y3s3t3 + binaryDp0j0nj1x2y3s3t3 + binaryUp0j1nj2x2y3s3t3 + binaryDp0j1nj2x2y3s3t3 + binaryUp0j2nj3x2y3s3t3 + binaryDp0j2nj3x2y3s3t3 + binaryUp0j3nj4x2y3s3t3 + binaryDp0j3nj4x2y3s3t3 + binaryUp0j4nj5x2y3s3t3 + binaryDp0j4nj5x2y3s3t3 + binaryUp0j5nj6x2y3s3t3 + binaryDp0j5nj6x2y3s3t3 + binaryUp0j6nj7x2y3s3t3 + binaryDp0j6nj7x2y3s3t3 + binaryUp0j7nj8x2y3s3t3 + binaryDp0j7nj8x2y3s3t3 + binaryUp0j8nj9x2y3s3t3 + binaryDp0j8nj9x2y3s3t3 + binaryUp1j0nj1x2y3s3t3 + binaryDp1j0nj1x2y3s3t3 + binaryUp1j1nj2x2y3s3t3 + binaryDp1j1nj2x2y3s3t3 + binaryUp1j2nj3x2y3s3t3 + binaryDp1j2nj3x2y3s3t3 + binaryUp1j3nj4x2y3s3t3 + binaryDp1j3nj4x2y3s3t3 + binaryUp1j4nj5x2y3s3t3 + binaryDp1j4nj5x2y3s3t3 + binaryUp1j5nj6x2y3s3t3 + binaryDp1j5nj6x2y3s3t3 + binaryUp1j6nj7x2y3s3t3 + binaryDp1j6nj7x2y3s3t3 + binaryUp1j7nj8x2y3s3t3 + binaryDp1j7nj8x2y3s3t3 + binaryUp1j8nj9x2y3s3t3 + binaryDp1j8nj9x2y3s3t3 <= 35
+y00 + 10000 binaryUp0j0nj1x1y4s2t4 >= 4
+y00 - 10000 binaryUp0j0nj1x1y4s2t4 <=  4
+y01 + 10000 binaryUp0j0nj1x1y4s2t4 >= 4
+y01 - 10000 binaryUp0j0nj1x1y4s2t4 <= 4
+x00 - 10000 binaryUp0j0nj1x1y4s2t4 <= 1
+x01 + 10000 binaryUp0j0nj1x1y4s2t4 >= 2
+y00 + 10000 binaryDp0j0nj1x1y4s2t4 >= 4
+y00 - 10000 binaryDp0j0nj1x1y4s2t4 <= 4
+y01 + 10000 binaryDp0j0nj1x1y4s2t4 >= 4
+y01 - 10000 binaryDp0j0nj1x1y4s2t4 <= 4
+x01 - 10000 binaryDp0j0nj1x1y4s2t4 <= 1
+x00 + 10000 binaryDp0j0nj1x1y4s2t4 >= 2
+y01 + 10000 binaryUp0j1nj2x1y4s2t4 >= 4
+y01 - 10000 binaryUp0j1nj2x1y4s2t4 <=  4
+y02 + 10000 binaryUp0j1nj2x1y4s2t4 >= 4
+y02 - 10000 binaryUp0j1nj2x1y4s2t4 <= 4
+x01 - 10000 binaryUp0j1nj2x1y4s2t4 <= 1
+x02 + 10000 binaryUp0j1nj2x1y4s2t4 >= 2
+y01 + 10000 binaryDp0j1nj2x1y4s2t4 >= 4
+y01 - 10000 binaryDp0j1nj2x1y4s2t4 <= 4
+y02 + 10000 binaryDp0j1nj2x1y4s2t4 >= 4
+y02 - 10000 binaryDp0j1nj2x1y4s2t4 <= 4
+x02 - 10000 binaryDp0j1nj2x1y4s2t4 <= 1
+x01 + 10000 binaryDp0j1nj2x1y4s2t4 >= 2
+y02 + 10000 binaryUp0j2nj3x1y4s2t4 >= 4
+y02 - 10000 binaryUp0j2nj3x1y4s2t4 <=  4
+y03 + 10000 binaryUp0j2nj3x1y4s2t4 >= 4
+y03 - 10000 binaryUp0j2nj3x1y4s2t4 <= 4
+x02 - 10000 binaryUp0j2nj3x1y4s2t4 <= 1
+x03 + 10000 binaryUp0j2nj3x1y4s2t4 >= 2
+y02 + 10000 binaryDp0j2nj3x1y4s2t4 >= 4
+y02 - 10000 binaryDp0j2nj3x1y4s2t4 <= 4
+y03 + 10000 binaryDp0j2nj3x1y4s2t4 >= 4
+y03 - 10000 binaryDp0j2nj3x1y4s2t4 <= 4
+x03 - 10000 binaryDp0j2nj3x1y4s2t4 <= 1
+x02 + 10000 binaryDp0j2nj3x1y4s2t4 >= 2
+y03 + 10000 binaryUp0j3nj4x1y4s2t4 >= 4
+y03 - 10000 binaryUp0j3nj4x1y4s2t4 <=  4
+y04 + 10000 binaryUp0j3nj4x1y4s2t4 >= 4
+y04 - 10000 binaryUp0j3nj4x1y4s2t4 <= 4
+x03 - 10000 binaryUp0j3nj4x1y4s2t4 <= 1
+x04 + 10000 binaryUp0j3nj4x1y4s2t4 >= 2
+y03 + 10000 binaryDp0j3nj4x1y4s2t4 >= 4
+y03 - 10000 binaryDp0j3nj4x1y4s2t4 <= 4
+y04 + 10000 binaryDp0j3nj4x1y4s2t4 >= 4
+y04 - 10000 binaryDp0j3nj4x1y4s2t4 <= 4
+x04 - 10000 binaryDp0j3nj4x1y4s2t4 <= 1
+x03 + 10000 binaryDp0j3nj4x1y4s2t4 >= 2
+y04 + 10000 binaryUp0j4nj5x1y4s2t4 >= 4
+y04 - 10000 binaryUp0j4nj5x1y4s2t4 <=  4
+y05 + 10000 binaryUp0j4nj5x1y4s2t4 >= 4
+y05 - 10000 binaryUp0j4nj5x1y4s2t4 <= 4
+x04 - 10000 binaryUp0j4nj5x1y4s2t4 <= 1
+x05 + 10000 binaryUp0j4nj5x1y4s2t4 >= 2
+y04 + 10000 binaryDp0j4nj5x1y4s2t4 >= 4
+y04 - 10000 binaryDp0j4nj5x1y4s2t4 <= 4
+y05 + 10000 binaryDp0j4nj5x1y4s2t4 >= 4
+y05 - 10000 binaryDp0j4nj5x1y4s2t4 <= 4
+x05 - 10000 binaryDp0j4nj5x1y4s2t4 <= 1
+x04 + 10000 binaryDp0j4nj5x1y4s2t4 >= 2
+y05 + 10000 binaryUp0j5nj6x1y4s2t4 >= 4
+y05 - 10000 binaryUp0j5nj6x1y4s2t4 <=  4
+y06 + 10000 binaryUp0j5nj6x1y4s2t4 >= 4
+y06 - 10000 binaryUp0j5nj6x1y4s2t4 <= 4
+x05 - 10000 binaryUp0j5nj6x1y4s2t4 <= 1
+x06 + 10000 binaryUp0j5nj6x1y4s2t4 >= 2
+y05 + 10000 binaryDp0j5nj6x1y4s2t4 >= 4
+y05 - 10000 binaryDp0j5nj6x1y4s2t4 <= 4
+y06 + 10000 binaryDp0j5nj6x1y4s2t4 >= 4
+y06 - 10000 binaryDp0j5nj6x1y4s2t4 <= 4
+x06 - 10000 binaryDp0j5nj6x1y4s2t4 <= 1
+x05 + 10000 binaryDp0j5nj6x1y4s2t4 >= 2
+y06 + 10000 binaryUp0j6nj7x1y4s2t4 >= 4
+y06 - 10000 binaryUp0j6nj7x1y4s2t4 <=  4
+y07 + 10000 binaryUp0j6nj7x1y4s2t4 >= 4
+y07 - 10000 binaryUp0j6nj7x1y4s2t4 <= 4
+x06 - 10000 binaryUp0j6nj7x1y4s2t4 <= 1
+x07 + 10000 binaryUp0j6nj7x1y4s2t4 >= 2
+y06 + 10000 binaryDp0j6nj7x1y4s2t4 >= 4
+y06 - 10000 binaryDp0j6nj7x1y4s2t4 <= 4
+y07 + 10000 binaryDp0j6nj7x1y4s2t4 >= 4
+y07 - 10000 binaryDp0j6nj7x1y4s2t4 <= 4
+x07 - 10000 binaryDp0j6nj7x1y4s2t4 <= 1
+x06 + 10000 binaryDp0j6nj7x1y4s2t4 >= 2
+y07 + 10000 binaryUp0j7nj8x1y4s2t4 >= 4
+y07 - 10000 binaryUp0j7nj8x1y4s2t4 <=  4
+y08 + 10000 binaryUp0j7nj8x1y4s2t4 >= 4
+y08 - 10000 binaryUp0j7nj8x1y4s2t4 <= 4
+x07 - 10000 binaryUp0j7nj8x1y4s2t4 <= 1
+x08 + 10000 binaryUp0j7nj8x1y4s2t4 >= 2
+y07 + 10000 binaryDp0j7nj8x1y4s2t4 >= 4
+y07 - 10000 binaryDp0j7nj8x1y4s2t4 <= 4
+y08 + 10000 binaryDp0j7nj8x1y4s2t4 >= 4
+y08 - 10000 binaryDp0j7nj8x1y4s2t4 <= 4
+x08 - 10000 binaryDp0j7nj8x1y4s2t4 <= 1
+x07 + 10000 binaryDp0j7nj8x1y4s2t4 >= 2
+y08 + 10000 binaryUp0j8nj9x1y4s2t4 >= 4
+y08 - 10000 binaryUp0j8nj9x1y4s2t4 <=  4
+y09 + 10000 binaryUp0j8nj9x1y4s2t4 >= 4
+y09 - 10000 binaryUp0j8nj9x1y4s2t4 <= 4
+x08 - 10000 binaryUp0j8nj9x1y4s2t4 <= 1
+x09 + 10000 binaryUp0j8nj9x1y4s2t4 >= 2
+y08 + 10000 binaryDp0j8nj9x1y4s2t4 >= 4
+y08 - 10000 binaryDp0j8nj9x1y4s2t4 <= 4
+y09 + 10000 binaryDp0j8nj9x1y4s2t4 >= 4
+y09 - 10000 binaryDp0j8nj9x1y4s2t4 <= 4
+x09 - 10000 binaryDp0j8nj9x1y4s2t4 <= 1
+x08 + 10000 binaryDp0j8nj9x1y4s2t4 >= 2
+y10 + 10000 binaryUp1j0nj1x1y4s2t4 >= 4
+y10 - 10000 binaryUp1j0nj1x1y4s2t4 <=  4
+y11 + 10000 binaryUp1j0nj1x1y4s2t4 >= 4
+y11 - 10000 binaryUp1j0nj1x1y4s2t4 <= 4
+x10 - 10000 binaryUp1j0nj1x1y4s2t4 <= 1
+x11 + 10000 binaryUp1j0nj1x1y4s2t4 >= 2
+y10 + 10000 binaryDp1j0nj1x1y4s2t4 >= 4
+y10 - 10000 binaryDp1j0nj1x1y4s2t4 <= 4
+y11 + 10000 binaryDp1j0nj1x1y4s2t4 >= 4
+y11 - 10000 binaryDp1j0nj1x1y4s2t4 <= 4
+x11 - 10000 binaryDp1j0nj1x1y4s2t4 <= 1
+x10 + 10000 binaryDp1j0nj1x1y4s2t4 >= 2
+y11 + 10000 binaryUp1j1nj2x1y4s2t4 >= 4
+y11 - 10000 binaryUp1j1nj2x1y4s2t4 <=  4
+y12 + 10000 binaryUp1j1nj2x1y4s2t4 >= 4
+y12 - 10000 binaryUp1j1nj2x1y4s2t4 <= 4
+x11 - 10000 binaryUp1j1nj2x1y4s2t4 <= 1
+x12 + 10000 binaryUp1j1nj2x1y4s2t4 >= 2
+y11 + 10000 binaryDp1j1nj2x1y4s2t4 >= 4
+y11 - 10000 binaryDp1j1nj2x1y4s2t4 <= 4
+y12 + 10000 binaryDp1j1nj2x1y4s2t4 >= 4
+y12 - 10000 binaryDp1j1nj2x1y4s2t4 <= 4
+x12 - 10000 binaryDp1j1nj2x1y4s2t4 <= 1
+x11 + 10000 binaryDp1j1nj2x1y4s2t4 >= 2
+y12 + 10000 binaryUp1j2nj3x1y4s2t4 >= 4
+y12 - 10000 binaryUp1j2nj3x1y4s2t4 <=  4
+y13 + 10000 binaryUp1j2nj3x1y4s2t4 >= 4
+y13 - 10000 binaryUp1j2nj3x1y4s2t4 <= 4
+x12 - 10000 binaryUp1j2nj3x1y4s2t4 <= 1
+x13 + 10000 binaryUp1j2nj3x1y4s2t4 >= 2
+y12 + 10000 binaryDp1j2nj3x1y4s2t4 >= 4
+y12 - 10000 binaryDp1j2nj3x1y4s2t4 <= 4
+y13 + 10000 binaryDp1j2nj3x1y4s2t4 >= 4
+y13 - 10000 binaryDp1j2nj3x1y4s2t4 <= 4
+x13 - 10000 binaryDp1j2nj3x1y4s2t4 <= 1
+x12 + 10000 binaryDp1j2nj3x1y4s2t4 >= 2
+y13 + 10000 binaryUp1j3nj4x1y4s2t4 >= 4
+y13 - 10000 binaryUp1j3nj4x1y4s2t4 <=  4
+y14 + 10000 binaryUp1j3nj4x1y4s2t4 >= 4
+y14 - 10000 binaryUp1j3nj4x1y4s2t4 <= 4
+x13 - 10000 binaryUp1j3nj4x1y4s2t4 <= 1
+x14 + 10000 binaryUp1j3nj4x1y4s2t4 >= 2
+y13 + 10000 binaryDp1j3nj4x1y4s2t4 >= 4
+y13 - 10000 binaryDp1j3nj4x1y4s2t4 <= 4
+y14 + 10000 binaryDp1j3nj4x1y4s2t4 >= 4
+y14 - 10000 binaryDp1j3nj4x1y4s2t4 <= 4
+x14 - 10000 binaryDp1j3nj4x1y4s2t4 <= 1
+x13 + 10000 binaryDp1j3nj4x1y4s2t4 >= 2
+y14 + 10000 binaryUp1j4nj5x1y4s2t4 >= 4
+y14 - 10000 binaryUp1j4nj5x1y4s2t4 <=  4
+y15 + 10000 binaryUp1j4nj5x1y4s2t4 >= 4
+y15 - 10000 binaryUp1j4nj5x1y4s2t4 <= 4
+x14 - 10000 binaryUp1j4nj5x1y4s2t4 <= 1
+x15 + 10000 binaryUp1j4nj5x1y4s2t4 >= 2
+y14 + 10000 binaryDp1j4nj5x1y4s2t4 >= 4
+y14 - 10000 binaryDp1j4nj5x1y4s2t4 <= 4
+y15 + 10000 binaryDp1j4nj5x1y4s2t4 >= 4
+y15 - 10000 binaryDp1j4nj5x1y4s2t4 <= 4
+x15 - 10000 binaryDp1j4nj5x1y4s2t4 <= 1
+x14 + 10000 binaryDp1j4nj5x1y4s2t4 >= 2
+y15 + 10000 binaryUp1j5nj6x1y4s2t4 >= 4
+y15 - 10000 binaryUp1j5nj6x1y4s2t4 <=  4
+y16 + 10000 binaryUp1j5nj6x1y4s2t4 >= 4
+y16 - 10000 binaryUp1j5nj6x1y4s2t4 <= 4
+x15 - 10000 binaryUp1j5nj6x1y4s2t4 <= 1
+x16 + 10000 binaryUp1j5nj6x1y4s2t4 >= 2
+y15 + 10000 binaryDp1j5nj6x1y4s2t4 >= 4
+y15 - 10000 binaryDp1j5nj6x1y4s2t4 <= 4
+y16 + 10000 binaryDp1j5nj6x1y4s2t4 >= 4
+y16 - 10000 binaryDp1j5nj6x1y4s2t4 <= 4
+x16 - 10000 binaryDp1j5nj6x1y4s2t4 <= 1
+x15 + 10000 binaryDp1j5nj6x1y4s2t4 >= 2
+y16 + 10000 binaryUp1j6nj7x1y4s2t4 >= 4
+y16 - 10000 binaryUp1j6nj7x1y4s2t4 <=  4
+y17 + 10000 binaryUp1j6nj7x1y4s2t4 >= 4
+y17 - 10000 binaryUp1j6nj7x1y4s2t4 <= 4
+x16 - 10000 binaryUp1j6nj7x1y4s2t4 <= 1
+x17 + 10000 binaryUp1j6nj7x1y4s2t4 >= 2
+y16 + 10000 binaryDp1j6nj7x1y4s2t4 >= 4
+y16 - 10000 binaryDp1j6nj7x1y4s2t4 <= 4
+y17 + 10000 binaryDp1j6nj7x1y4s2t4 >= 4
+y17 - 10000 binaryDp1j6nj7x1y4s2t4 <= 4
+x17 - 10000 binaryDp1j6nj7x1y4s2t4 <= 1
+x16 + 10000 binaryDp1j6nj7x1y4s2t4 >= 2
+y17 + 10000 binaryUp1j7nj8x1y4s2t4 >= 4
+y17 - 10000 binaryUp1j7nj8x1y4s2t4 <=  4
+y18 + 10000 binaryUp1j7nj8x1y4s2t4 >= 4
+y18 - 10000 binaryUp1j7nj8x1y4s2t4 <= 4
+x17 - 10000 binaryUp1j7nj8x1y4s2t4 <= 1
+x18 + 10000 binaryUp1j7nj8x1y4s2t4 >= 2
+y17 + 10000 binaryDp1j7nj8x1y4s2t4 >= 4
+y17 - 10000 binaryDp1j7nj8x1y4s2t4 <= 4
+y18 + 10000 binaryDp1j7nj8x1y4s2t4 >= 4
+y18 - 10000 binaryDp1j7nj8x1y4s2t4 <= 4
+x18 - 10000 binaryDp1j7nj8x1y4s2t4 <= 1
+x17 + 10000 binaryDp1j7nj8x1y4s2t4 >= 2
+y18 + 10000 binaryUp1j8nj9x1y4s2t4 >= 4
+y18 - 10000 binaryUp1j8nj9x1y4s2t4 <=  4
+y19 + 10000 binaryUp1j8nj9x1y4s2t4 >= 4
+y19 - 10000 binaryUp1j8nj9x1y4s2t4 <= 4
+x18 - 10000 binaryUp1j8nj9x1y4s2t4 <= 1
+x19 + 10000 binaryUp1j8nj9x1y4s2t4 >= 2
+y18 + 10000 binaryDp1j8nj9x1y4s2t4 >= 4
+y18 - 10000 binaryDp1j8nj9x1y4s2t4 <= 4
+y19 + 10000 binaryDp1j8nj9x1y4s2t4 >= 4
+y19 - 10000 binaryDp1j8nj9x1y4s2t4 <= 4
+x19 - 10000 binaryDp1j8nj9x1y4s2t4 <= 1
+x18 + 10000 binaryDp1j8nj9x1y4s2t4 >= 2
+ + binaryUp0j0nj1x1y4s2t4 + binaryDp0j0nj1x1y4s2t4 + binaryUp0j1nj2x1y4s2t4 + binaryDp0j1nj2x1y4s2t4 + binaryUp0j2nj3x1y4s2t4 + binaryDp0j2nj3x1y4s2t4 + binaryUp0j3nj4x1y4s2t4 + binaryDp0j3nj4x1y4s2t4 + binaryUp0j4nj5x1y4s2t4 + binaryDp0j4nj5x1y4s2t4 + binaryUp0j5nj6x1y4s2t4 + binaryDp0j5nj6x1y4s2t4 + binaryUp0j6nj7x1y4s2t4 + binaryDp0j6nj7x1y4s2t4 + binaryUp0j7nj8x1y4s2t4 + binaryDp0j7nj8x1y4s2t4 + binaryUp0j8nj9x1y4s2t4 + binaryDp0j8nj9x1y4s2t4 + binaryUp1j0nj1x1y4s2t4 + binaryDp1j0nj1x1y4s2t4 + binaryUp1j1nj2x1y4s2t4 + binaryDp1j1nj2x1y4s2t4 + binaryUp1j2nj3x1y4s2t4 + binaryDp1j2nj3x1y4s2t4 + binaryUp1j3nj4x1y4s2t4 + binaryDp1j3nj4x1y4s2t4 + binaryUp1j4nj5x1y4s2t4 + binaryDp1j4nj5x1y4s2t4 + binaryUp1j5nj6x1y4s2t4 + binaryDp1j5nj6x1y4s2t4 + binaryUp1j6nj7x1y4s2t4 + binaryDp1j6nj7x1y4s2t4 + binaryUp1j7nj8x1y4s2t4 + binaryDp1j7nj8x1y4s2t4 + binaryUp1j8nj9x1y4s2t4 + binaryDp1j8nj9x1y4s2t4 <= 35
+y00 + 10000 binaryUp0j0nj1x0y2s1t2 >= 2
+y00 - 10000 binaryUp0j0nj1x0y2s1t2 <=  2
+y01 + 10000 binaryUp0j0nj1x0y2s1t2 >= 2
+y01 - 10000 binaryUp0j0nj1x0y2s1t2 <= 2
+x00 - 10000 binaryUp0j0nj1x0y2s1t2 <= 0
+x01 + 10000 binaryUp0j0nj1x0y2s1t2 >= 1
+y00 + 10000 binaryDp0j0nj1x0y2s1t2 >= 2
+y00 - 10000 binaryDp0j0nj1x0y2s1t2 <= 2
+y01 + 10000 binaryDp0j0nj1x0y2s1t2 >= 2
+y01 - 10000 binaryDp0j0nj1x0y2s1t2 <= 2
+x01 - 10000 binaryDp0j0nj1x0y2s1t2 <= 0
+x00 + 10000 binaryDp0j0nj1x0y2s1t2 >= 1
+y01 + 10000 binaryUp0j1nj2x0y2s1t2 >= 2
+y01 - 10000 binaryUp0j1nj2x0y2s1t2 <=  2
+y02 + 10000 binaryUp0j1nj2x0y2s1t2 >= 2
+y02 - 10000 binaryUp0j1nj2x0y2s1t2 <= 2
+x01 - 10000 binaryUp0j1nj2x0y2s1t2 <= 0
+x02 + 10000 binaryUp0j1nj2x0y2s1t2 >= 1
+y01 + 10000 binaryDp0j1nj2x0y2s1t2 >= 2
+y01 - 10000 binaryDp0j1nj2x0y2s1t2 <= 2
+y02 + 10000 binaryDp0j1nj2x0y2s1t2 >= 2
+y02 - 10000 binaryDp0j1nj2x0y2s1t2 <= 2
+x02 - 10000 binaryDp0j1nj2x0y2s1t2 <= 0
+x01 + 10000 binaryDp0j1nj2x0y2s1t2 >= 1
+y02 + 10000 binaryUp0j2nj3x0y2s1t2 >= 2
+y02 - 10000 binaryUp0j2nj3x0y2s1t2 <=  2
+y03 + 10000 binaryUp0j2nj3x0y2s1t2 >= 2
+y03 - 10000 binaryUp0j2nj3x0y2s1t2 <= 2
+x02 - 10000 binaryUp0j2nj3x0y2s1t2 <= 0
+x03 + 10000 binaryUp0j2nj3x0y2s1t2 >= 1
+y02 + 10000 binaryDp0j2nj3x0y2s1t2 >= 2
+y02 - 10000 binaryDp0j2nj3x0y2s1t2 <= 2
+y03 + 10000 binaryDp0j2nj3x0y2s1t2 >= 2
+y03 - 10000 binaryDp0j2nj3x0y2s1t2 <= 2
+x03 - 10000 binaryDp0j2nj3x0y2s1t2 <= 0
+x02 + 10000 binaryDp0j2nj3x0y2s1t2 >= 1
+y03 + 10000 binaryUp0j3nj4x0y2s1t2 >= 2
+y03 - 10000 binaryUp0j3nj4x0y2s1t2 <=  2
+y04 + 10000 binaryUp0j3nj4x0y2s1t2 >= 2
+y04 - 10000 binaryUp0j3nj4x0y2s1t2 <= 2
+x03 - 10000 binaryUp0j3nj4x0y2s1t2 <= 0
+x04 + 10000 binaryUp0j3nj4x0y2s1t2 >= 1
+y03 + 10000 binaryDp0j3nj4x0y2s1t2 >= 2
+y03 - 10000 binaryDp0j3nj4x0y2s1t2 <= 2
+y04 + 10000 binaryDp0j3nj4x0y2s1t2 >= 2
+y04 - 10000 binaryDp0j3nj4x0y2s1t2 <= 2
+x04 - 10000 binaryDp0j3nj4x0y2s1t2 <= 0
+x03 + 10000 binaryDp0j3nj4x0y2s1t2 >= 1
+y04 + 10000 binaryUp0j4nj5x0y2s1t2 >= 2
+y04 - 10000 binaryUp0j4nj5x0y2s1t2 <=  2
+y05 + 10000 binaryUp0j4nj5x0y2s1t2 >= 2
+y05 - 10000 binaryUp0j4nj5x0y2s1t2 <= 2
+x04 - 10000 binaryUp0j4nj5x0y2s1t2 <= 0
+x05 + 10000 binaryUp0j4nj5x0y2s1t2 >= 1
+y04 + 10000 binaryDp0j4nj5x0y2s1t2 >= 2
+y04 - 10000 binaryDp0j4nj5x0y2s1t2 <= 2
+y05 + 10000 binaryDp0j4nj5x0y2s1t2 >= 2
+y05 - 10000 binaryDp0j4nj5x0y2s1t2 <= 2
+x05 - 10000 binaryDp0j4nj5x0y2s1t2 <= 0
+x04 + 10000 binaryDp0j4nj5x0y2s1t2 >= 1
+y05 + 10000 binaryUp0j5nj6x0y2s1t2 >= 2
+y05 - 10000 binaryUp0j5nj6x0y2s1t2 <=  2
+y06 + 10000 binaryUp0j5nj6x0y2s1t2 >= 2
+y06 - 10000 binaryUp0j5nj6x0y2s1t2 <= 2
+x05 - 10000 binaryUp0j5nj6x0y2s1t2 <= 0
+x06 + 10000 binaryUp0j5nj6x0y2s1t2 >= 1
+y05 + 10000 binaryDp0j5nj6x0y2s1t2 >= 2
+y05 - 10000 binaryDp0j5nj6x0y2s1t2 <= 2
+y06 + 10000 binaryDp0j5nj6x0y2s1t2 >= 2
+y06 - 10000 binaryDp0j5nj6x0y2s1t2 <= 2
+x06 - 10000 binaryDp0j5nj6x0y2s1t2 <= 0
+x05 + 10000 binaryDp0j5nj6x0y2s1t2 >= 1
+y06 + 10000 binaryUp0j6nj7x0y2s1t2 >= 2
+y06 - 10000 binaryUp0j6nj7x0y2s1t2 <=  2
+y07 + 10000 binaryUp0j6nj7x0y2s1t2 >= 2
+y07 - 10000 binaryUp0j6nj7x0y2s1t2 <= 2
+x06 - 10000 binaryUp0j6nj7x0y2s1t2 <= 0
+x07 + 10000 binaryUp0j6nj7x0y2s1t2 >= 1
+y06 + 10000 binaryDp0j6nj7x0y2s1t2 >= 2
+y06 - 10000 binaryDp0j6nj7x0y2s1t2 <= 2
+y07 + 10000 binaryDp0j6nj7x0y2s1t2 >= 2
+y07 - 10000 binaryDp0j6nj7x0y2s1t2 <= 2
+x07 - 10000 binaryDp0j6nj7x0y2s1t2 <= 0
+x06 + 10000 binaryDp0j6nj7x0y2s1t2 >= 1
+y07 + 10000 binaryUp0j7nj8x0y2s1t2 >= 2
+y07 - 10000 binaryUp0j7nj8x0y2s1t2 <=  2
+y08 + 10000 binaryUp0j7nj8x0y2s1t2 >= 2
+y08 - 10000 binaryUp0j7nj8x0y2s1t2 <= 2
+x07 - 10000 binaryUp0j7nj8x0y2s1t2 <= 0
+x08 + 10000 binaryUp0j7nj8x0y2s1t2 >= 1
+y07 + 10000 binaryDp0j7nj8x0y2s1t2 >= 2
+y07 - 10000 binaryDp0j7nj8x0y2s1t2 <= 2
+y08 + 10000 binaryDp0j7nj8x0y2s1t2 >= 2
+y08 - 10000 binaryDp0j7nj8x0y2s1t2 <= 2
+x08 - 10000 binaryDp0j7nj8x0y2s1t2 <= 0
+x07 + 10000 binaryDp0j7nj8x0y2s1t2 >= 1
+y08 + 10000 binaryUp0j8nj9x0y2s1t2 >= 2
+y08 - 10000 binaryUp0j8nj9x0y2s1t2 <=  2
+y09 + 10000 binaryUp0j8nj9x0y2s1t2 >= 2
+y09 - 10000 binaryUp0j8nj9x0y2s1t2 <= 2
+x08 - 10000 binaryUp0j8nj9x0y2s1t2 <= 0
+x09 + 10000 binaryUp0j8nj9x0y2s1t2 >= 1
+y08 + 10000 binaryDp0j8nj9x0y2s1t2 >= 2
+y08 - 10000 binaryDp0j8nj9x0y2s1t2 <= 2
+y09 + 10000 binaryDp0j8nj9x0y2s1t2 >= 2
+y09 - 10000 binaryDp0j8nj9x0y2s1t2 <= 2
+x09 - 10000 binaryDp0j8nj9x0y2s1t2 <= 0
+x08 + 10000 binaryDp0j8nj9x0y2s1t2 >= 1
+y10 + 10000 binaryUp1j0nj1x0y2s1t2 >= 2
+y10 - 10000 binaryUp1j0nj1x0y2s1t2 <=  2
+y11 + 10000 binaryUp1j0nj1x0y2s1t2 >= 2
+y11 - 10000 binaryUp1j0nj1x0y2s1t2 <= 2
+x10 - 10000 binaryUp1j0nj1x0y2s1t2 <= 0
+x11 + 10000 binaryUp1j0nj1x0y2s1t2 >= 1
+y10 + 10000 binaryDp1j0nj1x0y2s1t2 >= 2
+y10 - 10000 binaryDp1j0nj1x0y2s1t2 <= 2
+y11 + 10000 binaryDp1j0nj1x0y2s1t2 >= 2
+y11 - 10000 binaryDp1j0nj1x0y2s1t2 <= 2
+x11 - 10000 binaryDp1j0nj1x0y2s1t2 <= 0
+x10 + 10000 binaryDp1j0nj1x0y2s1t2 >= 1
+y11 + 10000 binaryUp1j1nj2x0y2s1t2 >= 2
+y11 - 10000 binaryUp1j1nj2x0y2s1t2 <=  2
+y12 + 10000 binaryUp1j1nj2x0y2s1t2 >= 2
+y12 - 10000 binaryUp1j1nj2x0y2s1t2 <= 2
+x11 - 10000 binaryUp1j1nj2x0y2s1t2 <= 0
+x12 + 10000 binaryUp1j1nj2x0y2s1t2 >= 1
+y11 + 10000 binaryDp1j1nj2x0y2s1t2 >= 2
+y11 - 10000 binaryDp1j1nj2x0y2s1t2 <= 2
+y12 + 10000 binaryDp1j1nj2x0y2s1t2 >= 2
+y12 - 10000 binaryDp1j1nj2x0y2s1t2 <= 2
+x12 - 10000 binaryDp1j1nj2x0y2s1t2 <= 0
+x11 + 10000 binaryDp1j1nj2x0y2s1t2 >= 1
+y12 + 10000 binaryUp1j2nj3x0y2s1t2 >= 2
+y12 - 10000 binaryUp1j2nj3x0y2s1t2 <=  2
+y13 + 10000 binaryUp1j2nj3x0y2s1t2 >= 2
+y13 - 10000 binaryUp1j2nj3x0y2s1t2 <= 2
+x12 - 10000 binaryUp1j2nj3x0y2s1t2 <= 0
+x13 + 10000 binaryUp1j2nj3x0y2s1t2 >= 1
+y12 + 10000 binaryDp1j2nj3x0y2s1t2 >= 2
+y12 - 10000 binaryDp1j2nj3x0y2s1t2 <= 2
+y13 + 10000 binaryDp1j2nj3x0y2s1t2 >= 2
+y13 - 10000 binaryDp1j2nj3x0y2s1t2 <= 2
+x13 - 10000 binaryDp1j2nj3x0y2s1t2 <= 0
+x12 + 10000 binaryDp1j2nj3x0y2s1t2 >= 1
+y13 + 10000 binaryUp1j3nj4x0y2s1t2 >= 2
+y13 - 10000 binaryUp1j3nj4x0y2s1t2 <=  2
+y14 + 10000 binaryUp1j3nj4x0y2s1t2 >= 2
+y14 - 10000 binaryUp1j3nj4x0y2s1t2 <= 2
+x13 - 10000 binaryUp1j3nj4x0y2s1t2 <= 0
+x14 + 10000 binaryUp1j3nj4x0y2s1t2 >= 1
+y13 + 10000 binaryDp1j3nj4x0y2s1t2 >= 2
+y13 - 10000 binaryDp1j3nj4x0y2s1t2 <= 2
+y14 + 10000 binaryDp1j3nj4x0y2s1t2 >= 2
+y14 - 10000 binaryDp1j3nj4x0y2s1t2 <= 2
+x14 - 10000 binaryDp1j3nj4x0y2s1t2 <= 0
+x13 + 10000 binaryDp1j3nj4x0y2s1t2 >= 1
+y14 + 10000 binaryUp1j4nj5x0y2s1t2 >= 2
+y14 - 10000 binaryUp1j4nj5x0y2s1t2 <=  2
+y15 + 10000 binaryUp1j4nj5x0y2s1t2 >= 2
+y15 - 10000 binaryUp1j4nj5x0y2s1t2 <= 2
+x14 - 10000 binaryUp1j4nj5x0y2s1t2 <= 0
+x15 + 10000 binaryUp1j4nj5x0y2s1t2 >= 1
+y14 + 10000 binaryDp1j4nj5x0y2s1t2 >= 2
+y14 - 10000 binaryDp1j4nj5x0y2s1t2 <= 2
+y15 + 10000 binaryDp1j4nj5x0y2s1t2 >= 2
+y15 - 10000 binaryDp1j4nj5x0y2s1t2 <= 2
+x15 - 10000 binaryDp1j4nj5x0y2s1t2 <= 0
+x14 + 10000 binaryDp1j4nj5x0y2s1t2 >= 1
+y15 + 10000 binaryUp1j5nj6x0y2s1t2 >= 2
+y15 - 10000 binaryUp1j5nj6x0y2s1t2 <=  2
+y16 + 10000 binaryUp1j5nj6x0y2s1t2 >= 2
+y16 - 10000 binaryUp1j5nj6x0y2s1t2 <= 2
+x15 - 10000 binaryUp1j5nj6x0y2s1t2 <= 0
+x16 + 10000 binaryUp1j5nj6x0y2s1t2 >= 1
+y15 + 10000 binaryDp1j5nj6x0y2s1t2 >= 2
+y15 - 10000 binaryDp1j5nj6x0y2s1t2 <= 2
+y16 + 10000 binaryDp1j5nj6x0y2s1t2 >= 2
+y16 - 10000 binaryDp1j5nj6x0y2s1t2 <= 2
+x16 - 10000 binaryDp1j5nj6x0y2s1t2 <= 0
+x15 + 10000 binaryDp1j5nj6x0y2s1t2 >= 1
+y16 + 10000 binaryUp1j6nj7x0y2s1t2 >= 2
+y16 - 10000 binaryUp1j6nj7x0y2s1t2 <=  2
+y17 + 10000 binaryUp1j6nj7x0y2s1t2 >= 2
+y17 - 10000 binaryUp1j6nj7x0y2s1t2 <= 2
+x16 - 10000 binaryUp1j6nj7x0y2s1t2 <= 0
+x17 + 10000 binaryUp1j6nj7x0y2s1t2 >= 1
+y16 + 10000 binaryDp1j6nj7x0y2s1t2 >= 2
+y16 - 10000 binaryDp1j6nj7x0y2s1t2 <= 2
+y17 + 10000 binaryDp1j6nj7x0y2s1t2 >= 2
+y17 - 10000 binaryDp1j6nj7x0y2s1t2 <= 2
+x17 - 10000 binaryDp1j6nj7x0y2s1t2 <= 0
+x16 + 10000 binaryDp1j6nj7x0y2s1t2 >= 1
+y17 + 10000 binaryUp1j7nj8x0y2s1t2 >= 2
+y17 - 10000 binaryUp1j7nj8x0y2s1t2 <=  2
+y18 + 10000 binaryUp1j7nj8x0y2s1t2 >= 2
+y18 - 10000 binaryUp1j7nj8x0y2s1t2 <= 2
+x17 - 10000 binaryUp1j7nj8x0y2s1t2 <= 0
+x18 + 10000 binaryUp1j7nj8x0y2s1t2 >= 1
+y17 + 10000 binaryDp1j7nj8x0y2s1t2 >= 2
+y17 - 10000 binaryDp1j7nj8x0y2s1t2 <= 2
+y18 + 10000 binaryDp1j7nj8x0y2s1t2 >= 2
+y18 - 10000 binaryDp1j7nj8x0y2s1t2 <= 2
+x18 - 10000 binaryDp1j7nj8x0y2s1t2 <= 0
+x17 + 10000 binaryDp1j7nj8x0y2s1t2 >= 1
+y18 + 10000 binaryUp1j8nj9x0y2s1t2 >= 2
+y18 - 10000 binaryUp1j8nj9x0y2s1t2 <=  2
+y19 + 10000 binaryUp1j8nj9x0y2s1t2 >= 2
+y19 - 10000 binaryUp1j8nj9x0y2s1t2 <= 2
+x18 - 10000 binaryUp1j8nj9x0y2s1t2 <= 0
+x19 + 10000 binaryUp1j8nj9x0y2s1t2 >= 1
+y18 + 10000 binaryDp1j8nj9x0y2s1t2 >= 2
+y18 - 10000 binaryDp1j8nj9x0y2s1t2 <= 2
+y19 + 10000 binaryDp1j8nj9x0y2s1t2 >= 2
+y19 - 10000 binaryDp1j8nj9x0y2s1t2 <= 2
+x19 - 10000 binaryDp1j8nj9x0y2s1t2 <= 0
+x18 + 10000 binaryDp1j8nj9x0y2s1t2 >= 1
+ + binaryUp0j0nj1x0y2s1t2 + binaryDp0j0nj1x0y2s1t2 + binaryUp0j1nj2x0y2s1t2 + binaryDp0j1nj2x0y2s1t2 + binaryUp0j2nj3x0y2s1t2 + binaryDp0j2nj3x0y2s1t2 + binaryUp0j3nj4x0y2s1t2 + binaryDp0j3nj4x0y2s1t2 + binaryUp0j4nj5x0y2s1t2 + binaryDp0j4nj5x0y2s1t2 + binaryUp0j5nj6x0y2s1t2 + binaryDp0j5nj6x0y2s1t2 + binaryUp0j6nj7x0y2s1t2 + binaryDp0j6nj7x0y2s1t2 + binaryUp0j7nj8x0y2s1t2 + binaryDp0j7nj8x0y2s1t2 + binaryUp0j8nj9x0y2s1t2 + binaryDp0j8nj9x0y2s1t2 + binaryUp1j0nj1x0y2s1t2 + binaryDp1j0nj1x0y2s1t2 + binaryUp1j1nj2x0y2s1t2 + binaryDp1j1nj2x0y2s1t2 + binaryUp1j2nj3x0y2s1t2 + binaryDp1j2nj3x0y2s1t2 + binaryUp1j3nj4x0y2s1t2 + binaryDp1j3nj4x0y2s1t2 + binaryUp1j4nj5x0y2s1t2 + binaryDp1j4nj5x0y2s1t2 + binaryUp1j5nj6x0y2s1t2 + binaryDp1j5nj6x0y2s1t2 + binaryUp1j6nj7x0y2s1t2 + binaryDp1j6nj7x0y2s1t2 + binaryUp1j7nj8x0y2s1t2 + binaryDp1j7nj8x0y2s1t2 + binaryUp1j8nj9x0y2s1t2 + binaryDp1j8nj9x0y2s1t2 <= 35
+x00 + 10000 binaryLp0j0nj1x3y1s3t2 >= 3
+x00 - 10000 binaryLp0j0nj1x3y1s3t2 <= 3
+x01 + 10000 binaryLp0j0nj1x3y1s3t2 >= 3
+x01 - 10000 binaryLp0j0nj1x3y1s3t2 <= 3
+y00 - 10000 binaryLp0j0nj1x3y1s3t2 <= 1
+y01 + 10000 binaryLp0j0nj1x3y1s3t2 >= 2
+x00 + 10000 binaryRp0j0nj1x3y1s3t2 >= 3
+x00 - 10000 binaryRp0j0nj1x3y1s3t2 <= 3
+x01 + 10000 binaryRp0j0nj1x3y1s3t2 >= 3
+x01 - 10000 binaryRp0j0nj1x3y1s3t2 <= 3
+y01 - 10000 binaryRp0j0nj1x3y1s3t2 <= 1
+y00 + 10000 binaryRp0j0nj1x3y1s3t2 >= 2
+x01 + 10000 binaryLp0j1nj2x3y1s3t2 >= 3
+x01 - 10000 binaryLp0j1nj2x3y1s3t2 <= 3
+x02 + 10000 binaryLp0j1nj2x3y1s3t2 >= 3
+x02 - 10000 binaryLp0j1nj2x3y1s3t2 <= 3
+y01 - 10000 binaryLp0j1nj2x3y1s3t2 <= 1
+y02 + 10000 binaryLp0j1nj2x3y1s3t2 >= 2
+x01 + 10000 binaryRp0j1nj2x3y1s3t2 >= 3
+x01 - 10000 binaryRp0j1nj2x3y1s3t2 <= 3
+x02 + 10000 binaryRp0j1nj2x3y1s3t2 >= 3
+x02 - 10000 binaryRp0j1nj2x3y1s3t2 <= 3
+y02 - 10000 binaryRp0j1nj2x3y1s3t2 <= 1
+y01 + 10000 binaryRp0j1nj2x3y1s3t2 >= 2
+x02 + 10000 binaryLp0j2nj3x3y1s3t2 >= 3
+x02 - 10000 binaryLp0j2nj3x3y1s3t2 <= 3
+x03 + 10000 binaryLp0j2nj3x3y1s3t2 >= 3
+x03 - 10000 binaryLp0j2nj3x3y1s3t2 <= 3
+y02 - 10000 binaryLp0j2nj3x3y1s3t2 <= 1
+y03 + 10000 binaryLp0j2nj3x3y1s3t2 >= 2
+x02 + 10000 binaryRp0j2nj3x3y1s3t2 >= 3
+x02 - 10000 binaryRp0j2nj3x3y1s3t2 <= 3
+x03 + 10000 binaryRp0j2nj3x3y1s3t2 >= 3
+x03 - 10000 binaryRp0j2nj3x3y1s3t2 <= 3
+y03 - 10000 binaryRp0j2nj3x3y1s3t2 <= 1
+y02 + 10000 binaryRp0j2nj3x3y1s3t2 >= 2
+x03 + 10000 binaryLp0j3nj4x3y1s3t2 >= 3
+x03 - 10000 binaryLp0j3nj4x3y1s3t2 <= 3
+x04 + 10000 binaryLp0j3nj4x3y1s3t2 >= 3
+x04 - 10000 binaryLp0j3nj4x3y1s3t2 <= 3
+y03 - 10000 binaryLp0j3nj4x3y1s3t2 <= 1
+y04 + 10000 binaryLp0j3nj4x3y1s3t2 >= 2
+x03 + 10000 binaryRp0j3nj4x3y1s3t2 >= 3
+x03 - 10000 binaryRp0j3nj4x3y1s3t2 <= 3
+x04 + 10000 binaryRp0j3nj4x3y1s3t2 >= 3
+x04 - 10000 binaryRp0j3nj4x3y1s3t2 <= 3
+y04 - 10000 binaryRp0j3nj4x3y1s3t2 <= 1
+y03 + 10000 binaryRp0j3nj4x3y1s3t2 >= 2
+x04 + 10000 binaryLp0j4nj5x3y1s3t2 >= 3
+x04 - 10000 binaryLp0j4nj5x3y1s3t2 <= 3
+x05 + 10000 binaryLp0j4nj5x3y1s3t2 >= 3
+x05 - 10000 binaryLp0j4nj5x3y1s3t2 <= 3
+y04 - 10000 binaryLp0j4nj5x3y1s3t2 <= 1
+y05 + 10000 binaryLp0j4nj5x3y1s3t2 >= 2
+x04 + 10000 binaryRp0j4nj5x3y1s3t2 >= 3
+x04 - 10000 binaryRp0j4nj5x3y1s3t2 <= 3
+x05 + 10000 binaryRp0j4nj5x3y1s3t2 >= 3
+x05 - 10000 binaryRp0j4nj5x3y1s3t2 <= 3
+y05 - 10000 binaryRp0j4nj5x3y1s3t2 <= 1
+y04 + 10000 binaryRp0j4nj5x3y1s3t2 >= 2
+x05 + 10000 binaryLp0j5nj6x3y1s3t2 >= 3
+x05 - 10000 binaryLp0j5nj6x3y1s3t2 <= 3
+x06 + 10000 binaryLp0j5nj6x3y1s3t2 >= 3
+x06 - 10000 binaryLp0j5nj6x3y1s3t2 <= 3
+y05 - 10000 binaryLp0j5nj6x3y1s3t2 <= 1
+y06 + 10000 binaryLp0j5nj6x3y1s3t2 >= 2
+x05 + 10000 binaryRp0j5nj6x3y1s3t2 >= 3
+x05 - 10000 binaryRp0j5nj6x3y1s3t2 <= 3
+x06 + 10000 binaryRp0j5nj6x3y1s3t2 >= 3
+x06 - 10000 binaryRp0j5nj6x3y1s3t2 <= 3
+y06 - 10000 binaryRp0j5nj6x3y1s3t2 <= 1
+y05 + 10000 binaryRp0j5nj6x3y1s3t2 >= 2
+x06 + 10000 binaryLp0j6nj7x3y1s3t2 >= 3
+x06 - 10000 binaryLp0j6nj7x3y1s3t2 <= 3
+x07 + 10000 binaryLp0j6nj7x3y1s3t2 >= 3
+x07 - 10000 binaryLp0j6nj7x3y1s3t2 <= 3
+y06 - 10000 binaryLp0j6nj7x3y1s3t2 <= 1
+y07 + 10000 binaryLp0j6nj7x3y1s3t2 >= 2
+x06 + 10000 binaryRp0j6nj7x3y1s3t2 >= 3
+x06 - 10000 binaryRp0j6nj7x3y1s3t2 <= 3
+x07 + 10000 binaryRp0j6nj7x3y1s3t2 >= 3
+x07 - 10000 binaryRp0j6nj7x3y1s3t2 <= 3
+y07 - 10000 binaryRp0j6nj7x3y1s3t2 <= 1
+y06 + 10000 binaryRp0j6nj7x3y1s3t2 >= 2
+x07 + 10000 binaryLp0j7nj8x3y1s3t2 >= 3
+x07 - 10000 binaryLp0j7nj8x3y1s3t2 <= 3
+x08 + 10000 binaryLp0j7nj8x3y1s3t2 >= 3
+x08 - 10000 binaryLp0j7nj8x3y1s3t2 <= 3
+y07 - 10000 binaryLp0j7nj8x3y1s3t2 <= 1
+y08 + 10000 binaryLp0j7nj8x3y1s3t2 >= 2
+x07 + 10000 binaryRp0j7nj8x3y1s3t2 >= 3
+x07 - 10000 binaryRp0j7nj8x3y1s3t2 <= 3
+x08 + 10000 binaryRp0j7nj8x3y1s3t2 >= 3
+x08 - 10000 binaryRp0j7nj8x3y1s3t2 <= 3
+y08 - 10000 binaryRp0j7nj8x3y1s3t2 <= 1
+y07 + 10000 binaryRp0j7nj8x3y1s3t2 >= 2
+x08 + 10000 binaryLp0j8nj9x3y1s3t2 >= 3
+x08 - 10000 binaryLp0j8nj9x3y1s3t2 <= 3
+x09 + 10000 binaryLp0j8nj9x3y1s3t2 >= 3
+x09 - 10000 binaryLp0j8nj9x3y1s3t2 <= 3
+y08 - 10000 binaryLp0j8nj9x3y1s3t2 <= 1
+y09 + 10000 binaryLp0j8nj9x3y1s3t2 >= 2
+x08 + 10000 binaryRp0j8nj9x3y1s3t2 >= 3
+x08 - 10000 binaryRp0j8nj9x3y1s3t2 <= 3
+x09 + 10000 binaryRp0j8nj9x3y1s3t2 >= 3
+x09 - 10000 binaryRp0j8nj9x3y1s3t2 <= 3
+y09 - 10000 binaryRp0j8nj9x3y1s3t2 <= 1
+y08 + 10000 binaryRp0j8nj9x3y1s3t2 >= 2
+x10 + 10000 binaryLp1j0nj1x3y1s3t2 >= 3
+x10 - 10000 binaryLp1j0nj1x3y1s3t2 <= 3
+x11 + 10000 binaryLp1j0nj1x3y1s3t2 >= 3
+x11 - 10000 binaryLp1j0nj1x3y1s3t2 <= 3
+y10 - 10000 binaryLp1j0nj1x3y1s3t2 <= 1
+y11 + 10000 binaryLp1j0nj1x3y1s3t2 >= 2
+x10 + 10000 binaryRp1j0nj1x3y1s3t2 >= 3
+x10 - 10000 binaryRp1j0nj1x3y1s3t2 <= 3
+x11 + 10000 binaryRp1j0nj1x3y1s3t2 >= 3
+x11 - 10000 binaryRp1j0nj1x3y1s3t2 <= 3
+y11 - 10000 binaryRp1j0nj1x3y1s3t2 <= 1
+y10 + 10000 binaryRp1j0nj1x3y1s3t2 >= 2
+x11 + 10000 binaryLp1j1nj2x3y1s3t2 >= 3
+x11 - 10000 binaryLp1j1nj2x3y1s3t2 <= 3
+x12 + 10000 binaryLp1j1nj2x3y1s3t2 >= 3
+x12 - 10000 binaryLp1j1nj2x3y1s3t2 <= 3
+y11 - 10000 binaryLp1j1nj2x3y1s3t2 <= 1
+y12 + 10000 binaryLp1j1nj2x3y1s3t2 >= 2
+x11 + 10000 binaryRp1j1nj2x3y1s3t2 >= 3
+x11 - 10000 binaryRp1j1nj2x3y1s3t2 <= 3
+x12 + 10000 binaryRp1j1nj2x3y1s3t2 >= 3
+x12 - 10000 binaryRp1j1nj2x3y1s3t2 <= 3
+y12 - 10000 binaryRp1j1nj2x3y1s3t2 <= 1
+y11 + 10000 binaryRp1j1nj2x3y1s3t2 >= 2
+x12 + 10000 binaryLp1j2nj3x3y1s3t2 >= 3
+x12 - 10000 binaryLp1j2nj3x3y1s3t2 <= 3
+x13 + 10000 binaryLp1j2nj3x3y1s3t2 >= 3
+x13 - 10000 binaryLp1j2nj3x3y1s3t2 <= 3
+y12 - 10000 binaryLp1j2nj3x3y1s3t2 <= 1
+y13 + 10000 binaryLp1j2nj3x3y1s3t2 >= 2
+x12 + 10000 binaryRp1j2nj3x3y1s3t2 >= 3
+x12 - 10000 binaryRp1j2nj3x3y1s3t2 <= 3
+x13 + 10000 binaryRp1j2nj3x3y1s3t2 >= 3
+x13 - 10000 binaryRp1j2nj3x3y1s3t2 <= 3
+y13 - 10000 binaryRp1j2nj3x3y1s3t2 <= 1
+y12 + 10000 binaryRp1j2nj3x3y1s3t2 >= 2
+x13 + 10000 binaryLp1j3nj4x3y1s3t2 >= 3
+x13 - 10000 binaryLp1j3nj4x3y1s3t2 <= 3
+x14 + 10000 binaryLp1j3nj4x3y1s3t2 >= 3
+x14 - 10000 binaryLp1j3nj4x3y1s3t2 <= 3
+y13 - 10000 binaryLp1j3nj4x3y1s3t2 <= 1
+y14 + 10000 binaryLp1j3nj4x3y1s3t2 >= 2
+x13 + 10000 binaryRp1j3nj4x3y1s3t2 >= 3
+x13 - 10000 binaryRp1j3nj4x3y1s3t2 <= 3
+x14 + 10000 binaryRp1j3nj4x3y1s3t2 >= 3
+x14 - 10000 binaryRp1j3nj4x3y1s3t2 <= 3
+y14 - 10000 binaryRp1j3nj4x3y1s3t2 <= 1
+y13 + 10000 binaryRp1j3nj4x3y1s3t2 >= 2
+x14 + 10000 binaryLp1j4nj5x3y1s3t2 >= 3
+x14 - 10000 binaryLp1j4nj5x3y1s3t2 <= 3
+x15 + 10000 binaryLp1j4nj5x3y1s3t2 >= 3
+x15 - 10000 binaryLp1j4nj5x3y1s3t2 <= 3
+y14 - 10000 binaryLp1j4nj5x3y1s3t2 <= 1
+y15 + 10000 binaryLp1j4nj5x3y1s3t2 >= 2
+x14 + 10000 binaryRp1j4nj5x3y1s3t2 >= 3
+x14 - 10000 binaryRp1j4nj5x3y1s3t2 <= 3
+x15 + 10000 binaryRp1j4nj5x3y1s3t2 >= 3
+x15 - 10000 binaryRp1j4nj5x3y1s3t2 <= 3
+y15 - 10000 binaryRp1j4nj5x3y1s3t2 <= 1
+y14 + 10000 binaryRp1j4nj5x3y1s3t2 >= 2
+x15 + 10000 binaryLp1j5nj6x3y1s3t2 >= 3
+x15 - 10000 binaryLp1j5nj6x3y1s3t2 <= 3
+x16 + 10000 binaryLp1j5nj6x3y1s3t2 >= 3
+x16 - 10000 binaryLp1j5nj6x3y1s3t2 <= 3
+y15 - 10000 binaryLp1j5nj6x3y1s3t2 <= 1
+y16 + 10000 binaryLp1j5nj6x3y1s3t2 >= 2
+x15 + 10000 binaryRp1j5nj6x3y1s3t2 >= 3
+x15 - 10000 binaryRp1j5nj6x3y1s3t2 <= 3
+x16 + 10000 binaryRp1j5nj6x3y1s3t2 >= 3
+x16 - 10000 binaryRp1j5nj6x3y1s3t2 <= 3
+y16 - 10000 binaryRp1j5nj6x3y1s3t2 <= 1
+y15 + 10000 binaryRp1j5nj6x3y1s3t2 >= 2
+x16 + 10000 binaryLp1j6nj7x3y1s3t2 >= 3
+x16 - 10000 binaryLp1j6nj7x3y1s3t2 <= 3
+x17 + 10000 binaryLp1j6nj7x3y1s3t2 >= 3
+x17 - 10000 binaryLp1j6nj7x3y1s3t2 <= 3
+y16 - 10000 binaryLp1j6nj7x3y1s3t2 <= 1
+y17 + 10000 binaryLp1j6nj7x3y1s3t2 >= 2
+x16 + 10000 binaryRp1j6nj7x3y1s3t2 >= 3
+x16 - 10000 binaryRp1j6nj7x3y1s3t2 <= 3
+x17 + 10000 binaryRp1j6nj7x3y1s3t2 >= 3
+x17 - 10000 binaryRp1j6nj7x3y1s3t2 <= 3
+y17 - 10000 binaryRp1j6nj7x3y1s3t2 <= 1
+y16 + 10000 binaryRp1j6nj7x3y1s3t2 >= 2
+x17 + 10000 binaryLp1j7nj8x3y1s3t2 >= 3
+x17 - 10000 binaryLp1j7nj8x3y1s3t2 <= 3
+x18 + 10000 binaryLp1j7nj8x3y1s3t2 >= 3
+x18 - 10000 binaryLp1j7nj8x3y1s3t2 <= 3
+y17 - 10000 binaryLp1j7nj8x3y1s3t2 <= 1
+y18 + 10000 binaryLp1j7nj8x3y1s3t2 >= 2
+x17 + 10000 binaryRp1j7nj8x3y1s3t2 >= 3
+x17 - 10000 binaryRp1j7nj8x3y1s3t2 <= 3
+x18 + 10000 binaryRp1j7nj8x3y1s3t2 >= 3
+x18 - 10000 binaryRp1j7nj8x3y1s3t2 <= 3
+y18 - 10000 binaryRp1j7nj8x3y1s3t2 <= 1
+y17 + 10000 binaryRp1j7nj8x3y1s3t2 >= 2
+x18 + 10000 binaryLp1j8nj9x3y1s3t2 >= 3
+x18 - 10000 binaryLp1j8nj9x3y1s3t2 <= 3
+x19 + 10000 binaryLp1j8nj9x3y1s3t2 >= 3
+x19 - 10000 binaryLp1j8nj9x3y1s3t2 <= 3
+y18 - 10000 binaryLp1j8nj9x3y1s3t2 <= 1
+y19 + 10000 binaryLp1j8nj9x3y1s3t2 >= 2
+x18 + 10000 binaryRp1j8nj9x3y1s3t2 >= 3
+x18 - 10000 binaryRp1j8nj9x3y1s3t2 <= 3
+x19 + 10000 binaryRp1j8nj9x3y1s3t2 >= 3
+x19 - 10000 binaryRp1j8nj9x3y1s3t2 <= 3
+y19 - 10000 binaryRp1j8nj9x3y1s3t2 <= 1
+y18 + 10000 binaryRp1j8nj9x3y1s3t2 >= 2
+ + binaryLp0j0nj1x3y1s3t2 + binaryRp0j0nj1x3y1s3t2 + binaryLp0j1nj2x3y1s3t2 + binaryRp0j1nj2x3y1s3t2 + binaryLp0j2nj3x3y1s3t2 + binaryRp0j2nj3x3y1s3t2 + binaryLp0j3nj4x3y1s3t2 + binaryRp0j3nj4x3y1s3t2 + binaryLp0j4nj5x3y1s3t2 + binaryRp0j4nj5x3y1s3t2 + binaryLp0j5nj6x3y1s3t2 + binaryRp0j5nj6x3y1s3t2 + binaryLp0j6nj7x3y1s3t2 + binaryRp0j6nj7x3y1s3t2 + binaryLp0j7nj8x3y1s3t2 + binaryRp0j7nj8x3y1s3t2 + binaryLp0j8nj9x3y1s3t2 + binaryRp0j8nj9x3y1s3t2 + binaryLp1j0nj1x3y1s3t2 + binaryRp1j0nj1x3y1s3t2 + binaryLp1j1nj2x3y1s3t2 + binaryRp1j1nj2x3y1s3t2 + binaryLp1j2nj3x3y1s3t2 + binaryRp1j2nj3x3y1s3t2 + binaryLp1j3nj4x3y1s3t2 + binaryRp1j3nj4x3y1s3t2 + binaryLp1j4nj5x3y1s3t2 + binaryRp1j4nj5x3y1s3t2 + binaryLp1j5nj6x3y1s3t2 + binaryRp1j5nj6x3y1s3t2 + binaryLp1j6nj7x3y1s3t2 + binaryRp1j6nj7x3y1s3t2 + binaryLp1j7nj8x3y1s3t2 + binaryRp1j7nj8x3y1s3t2 + binaryLp1j8nj9x3y1s3t2 + binaryRp1j8nj9x3y1s3t2 <= 35
+y00 + 10000 binaryUp0j0nj1x3y1s4t1 >= 1
+y00 - 10000 binaryUp0j0nj1x3y1s4t1 <=  1
+y01 + 10000 binaryUp0j0nj1x3y1s4t1 >= 1
+y01 - 10000 binaryUp0j0nj1x3y1s4t1 <= 1
+x00 - 10000 binaryUp0j0nj1x3y1s4t1 <= 3
+x01 + 10000 binaryUp0j0nj1x3y1s4t1 >= 4
+y00 + 10000 binaryDp0j0nj1x3y1s4t1 >= 1
+y00 - 10000 binaryDp0j0nj1x3y1s4t1 <= 1
+y01 + 10000 binaryDp0j0nj1x3y1s4t1 >= 1
+y01 - 10000 binaryDp0j0nj1x3y1s4t1 <= 1
+x01 - 10000 binaryDp0j0nj1x3y1s4t1 <= 3
+x00 + 10000 binaryDp0j0nj1x3y1s4t1 >= 4
+y01 + 10000 binaryUp0j1nj2x3y1s4t1 >= 1
+y01 - 10000 binaryUp0j1nj2x3y1s4t1 <=  1
+y02 + 10000 binaryUp0j1nj2x3y1s4t1 >= 1
+y02 - 10000 binaryUp0j1nj2x3y1s4t1 <= 1
+x01 - 10000 binaryUp0j1nj2x3y1s4t1 <= 3
+x02 + 10000 binaryUp0j1nj2x3y1s4t1 >= 4
+y01 + 10000 binaryDp0j1nj2x3y1s4t1 >= 1
+y01 - 10000 binaryDp0j1nj2x3y1s4t1 <= 1
+y02 + 10000 binaryDp0j1nj2x3y1s4t1 >= 1
+y02 - 10000 binaryDp0j1nj2x3y1s4t1 <= 1
+x02 - 10000 binaryDp0j1nj2x3y1s4t1 <= 3
+x01 + 10000 binaryDp0j1nj2x3y1s4t1 >= 4
+y02 + 10000 binaryUp0j2nj3x3y1s4t1 >= 1
+y02 - 10000 binaryUp0j2nj3x3y1s4t1 <=  1
+y03 + 10000 binaryUp0j2nj3x3y1s4t1 >= 1
+y03 - 10000 binaryUp0j2nj3x3y1s4t1 <= 1
+x02 - 10000 binaryUp0j2nj3x3y1s4t1 <= 3
+x03 + 10000 binaryUp0j2nj3x3y1s4t1 >= 4
+y02 + 10000 binaryDp0j2nj3x3y1s4t1 >= 1
+y02 - 10000 binaryDp0j2nj3x3y1s4t1 <= 1
+y03 + 10000 binaryDp0j2nj3x3y1s4t1 >= 1
+y03 - 10000 binaryDp0j2nj3x3y1s4t1 <= 1
+x03 - 10000 binaryDp0j2nj3x3y1s4t1 <= 3
+x02 + 10000 binaryDp0j2nj3x3y1s4t1 >= 4
+y03 + 10000 binaryUp0j3nj4x3y1s4t1 >= 1
+y03 - 10000 binaryUp0j3nj4x3y1s4t1 <=  1
+y04 + 10000 binaryUp0j3nj4x3y1s4t1 >= 1
+y04 - 10000 binaryUp0j3nj4x3y1s4t1 <= 1
+x03 - 10000 binaryUp0j3nj4x3y1s4t1 <= 3
+x04 + 10000 binaryUp0j3nj4x3y1s4t1 >= 4
+y03 + 10000 binaryDp0j3nj4x3y1s4t1 >= 1
+y03 - 10000 binaryDp0j3nj4x3y1s4t1 <= 1
+y04 + 10000 binaryDp0j3nj4x3y1s4t1 >= 1
+y04 - 10000 binaryDp0j3nj4x3y1s4t1 <= 1
+x04 - 10000 binaryDp0j3nj4x3y1s4t1 <= 3
+x03 + 10000 binaryDp0j3nj4x3y1s4t1 >= 4
+y04 + 10000 binaryUp0j4nj5x3y1s4t1 >= 1
+y04 - 10000 binaryUp0j4nj5x3y1s4t1 <=  1
+y05 + 10000 binaryUp0j4nj5x3y1s4t1 >= 1
+y05 - 10000 binaryUp0j4nj5x3y1s4t1 <= 1
+x04 - 10000 binaryUp0j4nj5x3y1s4t1 <= 3
+x05 + 10000 binaryUp0j4nj5x3y1s4t1 >= 4
+y04 + 10000 binaryDp0j4nj5x3y1s4t1 >= 1
+y04 - 10000 binaryDp0j4nj5x3y1s4t1 <= 1
+y05 + 10000 binaryDp0j4nj5x3y1s4t1 >= 1
+y05 - 10000 binaryDp0j4nj5x3y1s4t1 <= 1
+x05 - 10000 binaryDp0j4nj5x3y1s4t1 <= 3
+x04 + 10000 binaryDp0j4nj5x3y1s4t1 >= 4
+y05 + 10000 binaryUp0j5nj6x3y1s4t1 >= 1
+y05 - 10000 binaryUp0j5nj6x3y1s4t1 <=  1
+y06 + 10000 binaryUp0j5nj6x3y1s4t1 >= 1
+y06 - 10000 binaryUp0j5nj6x3y1s4t1 <= 1
+x05 - 10000 binaryUp0j5nj6x3y1s4t1 <= 3
+x06 + 10000 binaryUp0j5nj6x3y1s4t1 >= 4
+y05 + 10000 binaryDp0j5nj6x3y1s4t1 >= 1
+y05 - 10000 binaryDp0j5nj6x3y1s4t1 <= 1
+y06 + 10000 binaryDp0j5nj6x3y1s4t1 >= 1
+y06 - 10000 binaryDp0j5nj6x3y1s4t1 <= 1
+x06 - 10000 binaryDp0j5nj6x3y1s4t1 <= 3
+x05 + 10000 binaryDp0j5nj6x3y1s4t1 >= 4
+y06 + 10000 binaryUp0j6nj7x3y1s4t1 >= 1
+y06 - 10000 binaryUp0j6nj7x3y1s4t1 <=  1
+y07 + 10000 binaryUp0j6nj7x3y1s4t1 >= 1
+y07 - 10000 binaryUp0j6nj7x3y1s4t1 <= 1
+x06 - 10000 binaryUp0j6nj7x3y1s4t1 <= 3
+x07 + 10000 binaryUp0j6nj7x3y1s4t1 >= 4
+y06 + 10000 binaryDp0j6nj7x3y1s4t1 >= 1
+y06 - 10000 binaryDp0j6nj7x3y1s4t1 <= 1
+y07 + 10000 binaryDp0j6nj7x3y1s4t1 >= 1
+y07 - 10000 binaryDp0j6nj7x3y1s4t1 <= 1
+x07 - 10000 binaryDp0j6nj7x3y1s4t1 <= 3
+x06 + 10000 binaryDp0j6nj7x3y1s4t1 >= 4
+y07 + 10000 binaryUp0j7nj8x3y1s4t1 >= 1
+y07 - 10000 binaryUp0j7nj8x3y1s4t1 <=  1
+y08 + 10000 binaryUp0j7nj8x3y1s4t1 >= 1
+y08 - 10000 binaryUp0j7nj8x3y1s4t1 <= 1
+x07 - 10000 binaryUp0j7nj8x3y1s4t1 <= 3
+x08 + 10000 binaryUp0j7nj8x3y1s4t1 >= 4
+y07 + 10000 binaryDp0j7nj8x3y1s4t1 >= 1
+y07 - 10000 binaryDp0j7nj8x3y1s4t1 <= 1
+y08 + 10000 binaryDp0j7nj8x3y1s4t1 >= 1
+y08 - 10000 binaryDp0j7nj8x3y1s4t1 <= 1
+x08 - 10000 binaryDp0j7nj8x3y1s4t1 <= 3
+x07 + 10000 binaryDp0j7nj8x3y1s4t1 >= 4
+y08 + 10000 binaryUp0j8nj9x3y1s4t1 >= 1
+y08 - 10000 binaryUp0j8nj9x3y1s4t1 <=  1
+y09 + 10000 binaryUp0j8nj9x3y1s4t1 >= 1
+y09 - 10000 binaryUp0j8nj9x3y1s4t1 <= 1
+x08 - 10000 binaryUp0j8nj9x3y1s4t1 <= 3
+x09 + 10000 binaryUp0j8nj9x3y1s4t1 >= 4
+y08 + 10000 binaryDp0j8nj9x3y1s4t1 >= 1
+y08 - 10000 binaryDp0j8nj9x3y1s4t1 <= 1
+y09 + 10000 binaryDp0j8nj9x3y1s4t1 >= 1
+y09 - 10000 binaryDp0j8nj9x3y1s4t1 <= 1
+x09 - 10000 binaryDp0j8nj9x3y1s4t1 <= 3
+x08 + 10000 binaryDp0j8nj9x3y1s4t1 >= 4
+y10 + 10000 binaryUp1j0nj1x3y1s4t1 >= 1
+y10 - 10000 binaryUp1j0nj1x3y1s4t1 <=  1
+y11 + 10000 binaryUp1j0nj1x3y1s4t1 >= 1
+y11 - 10000 binaryUp1j0nj1x3y1s4t1 <= 1
+x10 - 10000 binaryUp1j0nj1x3y1s4t1 <= 3
+x11 + 10000 binaryUp1j0nj1x3y1s4t1 >= 4
+y10 + 10000 binaryDp1j0nj1x3y1s4t1 >= 1
+y10 - 10000 binaryDp1j0nj1x3y1s4t1 <= 1
+y11 + 10000 binaryDp1j0nj1x3y1s4t1 >= 1
+y11 - 10000 binaryDp1j0nj1x3y1s4t1 <= 1
+x11 - 10000 binaryDp1j0nj1x3y1s4t1 <= 3
+x10 + 10000 binaryDp1j0nj1x3y1s4t1 >= 4
+y11 + 10000 binaryUp1j1nj2x3y1s4t1 >= 1
+y11 - 10000 binaryUp1j1nj2x3y1s4t1 <=  1
+y12 + 10000 binaryUp1j1nj2x3y1s4t1 >= 1
+y12 - 10000 binaryUp1j1nj2x3y1s4t1 <= 1
+x11 - 10000 binaryUp1j1nj2x3y1s4t1 <= 3
+x12 + 10000 binaryUp1j1nj2x3y1s4t1 >= 4
+y11 + 10000 binaryDp1j1nj2x3y1s4t1 >= 1
+y11 - 10000 binaryDp1j1nj2x3y1s4t1 <= 1
+y12 + 10000 binaryDp1j1nj2x3y1s4t1 >= 1
+y12 - 10000 binaryDp1j1nj2x3y1s4t1 <= 1
+x12 - 10000 binaryDp1j1nj2x3y1s4t1 <= 3
+x11 + 10000 binaryDp1j1nj2x3y1s4t1 >= 4
+y12 + 10000 binaryUp1j2nj3x3y1s4t1 >= 1
+y12 - 10000 binaryUp1j2nj3x3y1s4t1 <=  1
+y13 + 10000 binaryUp1j2nj3x3y1s4t1 >= 1
+y13 - 10000 binaryUp1j2nj3x3y1s4t1 <= 1
+x12 - 10000 binaryUp1j2nj3x3y1s4t1 <= 3
+x13 + 10000 binaryUp1j2nj3x3y1s4t1 >= 4
+y12 + 10000 binaryDp1j2nj3x3y1s4t1 >= 1
+y12 - 10000 binaryDp1j2nj3x3y1s4t1 <= 1
+y13 + 10000 binaryDp1j2nj3x3y1s4t1 >= 1
+y13 - 10000 binaryDp1j2nj3x3y1s4t1 <= 1
+x13 - 10000 binaryDp1j2nj3x3y1s4t1 <= 3
+x12 + 10000 binaryDp1j2nj3x3y1s4t1 >= 4
+y13 + 10000 binaryUp1j3nj4x3y1s4t1 >= 1
+y13 - 10000 binaryUp1j3nj4x3y1s4t1 <=  1
+y14 + 10000 binaryUp1j3nj4x3y1s4t1 >= 1
+y14 - 10000 binaryUp1j3nj4x3y1s4t1 <= 1
+x13 - 10000 binaryUp1j3nj4x3y1s4t1 <= 3
+x14 + 10000 binaryUp1j3nj4x3y1s4t1 >= 4
+y13 + 10000 binaryDp1j3nj4x3y1s4t1 >= 1
+y13 - 10000 binaryDp1j3nj4x3y1s4t1 <= 1
+y14 + 10000 binaryDp1j3nj4x3y1s4t1 >= 1
+y14 - 10000 binaryDp1j3nj4x3y1s4t1 <= 1
+x14 - 10000 binaryDp1j3nj4x3y1s4t1 <= 3
+x13 + 10000 binaryDp1j3nj4x3y1s4t1 >= 4
+y14 + 10000 binaryUp1j4nj5x3y1s4t1 >= 1
+y14 - 10000 binaryUp1j4nj5x3y1s4t1 <=  1
+y15 + 10000 binaryUp1j4nj5x3y1s4t1 >= 1
+y15 - 10000 binaryUp1j4nj5x3y1s4t1 <= 1
+x14 - 10000 binaryUp1j4nj5x3y1s4t1 <= 3
+x15 + 10000 binaryUp1j4nj5x3y1s4t1 >= 4
+y14 + 10000 binaryDp1j4nj5x3y1s4t1 >= 1
+y14 - 10000 binaryDp1j4nj5x3y1s4t1 <= 1
+y15 + 10000 binaryDp1j4nj5x3y1s4t1 >= 1
+y15 - 10000 binaryDp1j4nj5x3y1s4t1 <= 1
+x15 - 10000 binaryDp1j4nj5x3y1s4t1 <= 3
+x14 + 10000 binaryDp1j4nj5x3y1s4t1 >= 4
+y15 + 10000 binaryUp1j5nj6x3y1s4t1 >= 1
+y15 - 10000 binaryUp1j5nj6x3y1s4t1 <=  1
+y16 + 10000 binaryUp1j5nj6x3y1s4t1 >= 1
+y16 - 10000 binaryUp1j5nj6x3y1s4t1 <= 1
+x15 - 10000 binaryUp1j5nj6x3y1s4t1 <= 3
+x16 + 10000 binaryUp1j5nj6x3y1s4t1 >= 4
+y15 + 10000 binaryDp1j5nj6x3y1s4t1 >= 1
+y15 - 10000 binaryDp1j5nj6x3y1s4t1 <= 1
+y16 + 10000 binaryDp1j5nj6x3y1s4t1 >= 1
+y16 - 10000 binaryDp1j5nj6x3y1s4t1 <= 1
+x16 - 10000 binaryDp1j5nj6x3y1s4t1 <= 3
+x15 + 10000 binaryDp1j5nj6x3y1s4t1 >= 4
+y16 + 10000 binaryUp1j6nj7x3y1s4t1 >= 1
+y16 - 10000 binaryUp1j6nj7x3y1s4t1 <=  1
+y17 + 10000 binaryUp1j6nj7x3y1s4t1 >= 1
+y17 - 10000 binaryUp1j6nj7x3y1s4t1 <= 1
+x16 - 10000 binaryUp1j6nj7x3y1s4t1 <= 3
+x17 + 10000 binaryUp1j6nj7x3y1s4t1 >= 4
+y16 + 10000 binaryDp1j6nj7x3y1s4t1 >= 1
+y16 - 10000 binaryDp1j6nj7x3y1s4t1 <= 1
+y17 + 10000 binaryDp1j6nj7x3y1s4t1 >= 1
+y17 - 10000 binaryDp1j6nj7x3y1s4t1 <= 1
+x17 - 10000 binaryDp1j6nj7x3y1s4t1 <= 3
+x16 + 10000 binaryDp1j6nj7x3y1s4t1 >= 4
+y17 + 10000 binaryUp1j7nj8x3y1s4t1 >= 1
+y17 - 10000 binaryUp1j7nj8x3y1s4t1 <=  1
+y18 + 10000 binaryUp1j7nj8x3y1s4t1 >= 1
+y18 - 10000 binaryUp1j7nj8x3y1s4t1 <= 1
+x17 - 10000 binaryUp1j7nj8x3y1s4t1 <= 3
+x18 + 10000 binaryUp1j7nj8x3y1s4t1 >= 4
+y17 + 10000 binaryDp1j7nj8x3y1s4t1 >= 1
+y17 - 10000 binaryDp1j7nj8x3y1s4t1 <= 1
+y18 + 10000 binaryDp1j7nj8x3y1s4t1 >= 1
+y18 - 10000 binaryDp1j7nj8x3y1s4t1 <= 1
+x18 - 10000 binaryDp1j7nj8x3y1s4t1 <= 3
+x17 + 10000 binaryDp1j7nj8x3y1s4t1 >= 4
+y18 + 10000 binaryUp1j8nj9x3y1s4t1 >= 1
+y18 - 10000 binaryUp1j8nj9x3y1s4t1 <=  1
+y19 + 10000 binaryUp1j8nj9x3y1s4t1 >= 1
+y19 - 10000 binaryUp1j8nj9x3y1s4t1 <= 1
+x18 - 10000 binaryUp1j8nj9x3y1s4t1 <= 3
+x19 + 10000 binaryUp1j8nj9x3y1s4t1 >= 4
+y18 + 10000 binaryDp1j8nj9x3y1s4t1 >= 1
+y18 - 10000 binaryDp1j8nj9x3y1s4t1 <= 1
+y19 + 10000 binaryDp1j8nj9x3y1s4t1 >= 1
+y19 - 10000 binaryDp1j8nj9x3y1s4t1 <= 1
+x19 - 10000 binaryDp1j8nj9x3y1s4t1 <= 3
+x18 + 10000 binaryDp1j8nj9x3y1s4t1 >= 4
+ + binaryUp0j0nj1x3y1s4t1 + binaryDp0j0nj1x3y1s4t1 + binaryUp0j1nj2x3y1s4t1 + binaryDp0j1nj2x3y1s4t1 + binaryUp0j2nj3x3y1s4t1 + binaryDp0j2nj3x3y1s4t1 + binaryUp0j3nj4x3y1s4t1 + binaryDp0j3nj4x3y1s4t1 + binaryUp0j4nj5x3y1s4t1 + binaryDp0j4nj5x3y1s4t1 + binaryUp0j5nj6x3y1s4t1 + binaryDp0j5nj6x3y1s4t1 + binaryUp0j6nj7x3y1s4t1 + binaryDp0j6nj7x3y1s4t1 + binaryUp0j7nj8x3y1s4t1 + binaryDp0j7nj8x3y1s4t1 + binaryUp0j8nj9x3y1s4t1 + binaryDp0j8nj9x3y1s4t1 + binaryUp1j0nj1x3y1s4t1 + binaryDp1j0nj1x3y1s4t1 + binaryUp1j1nj2x3y1s4t1 + binaryDp1j1nj2x3y1s4t1 + binaryUp1j2nj3x3y1s4t1 + binaryDp1j2nj3x3y1s4t1 + binaryUp1j3nj4x3y1s4t1 + binaryDp1j3nj4x3y1s4t1 + binaryUp1j4nj5x3y1s4t1 + binaryDp1j4nj5x3y1s4t1 + binaryUp1j5nj6x3y1s4t1 + binaryDp1j5nj6x3y1s4t1 + binaryUp1j6nj7x3y1s4t1 + binaryDp1j6nj7x3y1s4t1 + binaryUp1j7nj8x3y1s4t1 + binaryDp1j7nj8x3y1s4t1 + binaryUp1j8nj9x3y1s4t1 + binaryDp1j8nj9x3y1s4t1 <= 35
+y00 + 10000 binaryUp0j0nj1x1y3s2t3 >= 3
+y00 - 10000 binaryUp0j0nj1x1y3s2t3 <=  3
+y01 + 10000 binaryUp0j0nj1x1y3s2t3 >= 3
+y01 - 10000 binaryUp0j0nj1x1y3s2t3 <= 3
+x00 - 10000 binaryUp0j0nj1x1y3s2t3 <= 1
+x01 + 10000 binaryUp0j0nj1x1y3s2t3 >= 2
+y00 + 10000 binaryDp0j0nj1x1y3s2t3 >= 3
+y00 - 10000 binaryDp0j0nj1x1y3s2t3 <= 3
+y01 + 10000 binaryDp0j0nj1x1y3s2t3 >= 3
+y01 - 10000 binaryDp0j0nj1x1y3s2t3 <= 3
+x01 - 10000 binaryDp0j0nj1x1y3s2t3 <= 1
+x00 + 10000 binaryDp0j0nj1x1y3s2t3 >= 2
+y01 + 10000 binaryUp0j1nj2x1y3s2t3 >= 3
+y01 - 10000 binaryUp0j1nj2x1y3s2t3 <=  3
+y02 + 10000 binaryUp0j1nj2x1y3s2t3 >= 3
+y02 - 10000 binaryUp0j1nj2x1y3s2t3 <= 3
+x01 - 10000 binaryUp0j1nj2x1y3s2t3 <= 1
+x02 + 10000 binaryUp0j1nj2x1y3s2t3 >= 2
+y01 + 10000 binaryDp0j1nj2x1y3s2t3 >= 3
+y01 - 10000 binaryDp0j1nj2x1y3s2t3 <= 3
+y02 + 10000 binaryDp0j1nj2x1y3s2t3 >= 3
+y02 - 10000 binaryDp0j1nj2x1y3s2t3 <= 3
+x02 - 10000 binaryDp0j1nj2x1y3s2t3 <= 1
+x01 + 10000 binaryDp0j1nj2x1y3s2t3 >= 2
+y02 + 10000 binaryUp0j2nj3x1y3s2t3 >= 3
+y02 - 10000 binaryUp0j2nj3x1y3s2t3 <=  3
+y03 + 10000 binaryUp0j2nj3x1y3s2t3 >= 3
+y03 - 10000 binaryUp0j2nj3x1y3s2t3 <= 3
+x02 - 10000 binaryUp0j2nj3x1y3s2t3 <= 1
+x03 + 10000 binaryUp0j2nj3x1y3s2t3 >= 2
+y02 + 10000 binaryDp0j2nj3x1y3s2t3 >= 3
+y02 - 10000 binaryDp0j2nj3x1y3s2t3 <= 3
+y03 + 10000 binaryDp0j2nj3x1y3s2t3 >= 3
+y03 - 10000 binaryDp0j2nj3x1y3s2t3 <= 3
+x03 - 10000 binaryDp0j2nj3x1y3s2t3 <= 1
+x02 + 10000 binaryDp0j2nj3x1y3s2t3 >= 2
+y03 + 10000 binaryUp0j3nj4x1y3s2t3 >= 3
+y03 - 10000 binaryUp0j3nj4x1y3s2t3 <=  3
+y04 + 10000 binaryUp0j3nj4x1y3s2t3 >= 3
+y04 - 10000 binaryUp0j3nj4x1y3s2t3 <= 3
+x03 - 10000 binaryUp0j3nj4x1y3s2t3 <= 1
+x04 + 10000 binaryUp0j3nj4x1y3s2t3 >= 2
+y03 + 10000 binaryDp0j3nj4x1y3s2t3 >= 3
+y03 - 10000 binaryDp0j3nj4x1y3s2t3 <= 3
+y04 + 10000 binaryDp0j3nj4x1y3s2t3 >= 3
+y04 - 10000 binaryDp0j3nj4x1y3s2t3 <= 3
+x04 - 10000 binaryDp0j3nj4x1y3s2t3 <= 1
+x03 + 10000 binaryDp0j3nj4x1y3s2t3 >= 2
+y04 + 10000 binaryUp0j4nj5x1y3s2t3 >= 3
+y04 - 10000 binaryUp0j4nj5x1y3s2t3 <=  3
+y05 + 10000 binaryUp0j4nj5x1y3s2t3 >= 3
+y05 - 10000 binaryUp0j4nj5x1y3s2t3 <= 3
+x04 - 10000 binaryUp0j4nj5x1y3s2t3 <= 1
+x05 + 10000 binaryUp0j4nj5x1y3s2t3 >= 2
+y04 + 10000 binaryDp0j4nj5x1y3s2t3 >= 3
+y04 - 10000 binaryDp0j4nj5x1y3s2t3 <= 3
+y05 + 10000 binaryDp0j4nj5x1y3s2t3 >= 3
+y05 - 10000 binaryDp0j4nj5x1y3s2t3 <= 3
+x05 - 10000 binaryDp0j4nj5x1y3s2t3 <= 1
+x04 + 10000 binaryDp0j4nj5x1y3s2t3 >= 2
+y05 + 10000 binaryUp0j5nj6x1y3s2t3 >= 3
+y05 - 10000 binaryUp0j5nj6x1y3s2t3 <=  3
+y06 + 10000 binaryUp0j5nj6x1y3s2t3 >= 3
+y06 - 10000 binaryUp0j5nj6x1y3s2t3 <= 3
+x05 - 10000 binaryUp0j5nj6x1y3s2t3 <= 1
+x06 + 10000 binaryUp0j5nj6x1y3s2t3 >= 2
+y05 + 10000 binaryDp0j5nj6x1y3s2t3 >= 3
+y05 - 10000 binaryDp0j5nj6x1y3s2t3 <= 3
+y06 + 10000 binaryDp0j5nj6x1y3s2t3 >= 3
+y06 - 10000 binaryDp0j5nj6x1y3s2t3 <= 3
+x06 - 10000 binaryDp0j5nj6x1y3s2t3 <= 1
+x05 + 10000 binaryDp0j5nj6x1y3s2t3 >= 2
+y06 + 10000 binaryUp0j6nj7x1y3s2t3 >= 3
+y06 - 10000 binaryUp0j6nj7x1y3s2t3 <=  3
+y07 + 10000 binaryUp0j6nj7x1y3s2t3 >= 3
+y07 - 10000 binaryUp0j6nj7x1y3s2t3 <= 3
+x06 - 10000 binaryUp0j6nj7x1y3s2t3 <= 1
+x07 + 10000 binaryUp0j6nj7x1y3s2t3 >= 2
+y06 + 10000 binaryDp0j6nj7x1y3s2t3 >= 3
+y06 - 10000 binaryDp0j6nj7x1y3s2t3 <= 3
+y07 + 10000 binaryDp0j6nj7x1y3s2t3 >= 3
+y07 - 10000 binaryDp0j6nj7x1y3s2t3 <= 3
+x07 - 10000 binaryDp0j6nj7x1y3s2t3 <= 1
+x06 + 10000 binaryDp0j6nj7x1y3s2t3 >= 2
+y07 + 10000 binaryUp0j7nj8x1y3s2t3 >= 3
+y07 - 10000 binaryUp0j7nj8x1y3s2t3 <=  3
+y08 + 10000 binaryUp0j7nj8x1y3s2t3 >= 3
+y08 - 10000 binaryUp0j7nj8x1y3s2t3 <= 3
+x07 - 10000 binaryUp0j7nj8x1y3s2t3 <= 1
+x08 + 10000 binaryUp0j7nj8x1y3s2t3 >= 2
+y07 + 10000 binaryDp0j7nj8x1y3s2t3 >= 3
+y07 - 10000 binaryDp0j7nj8x1y3s2t3 <= 3
+y08 + 10000 binaryDp0j7nj8x1y3s2t3 >= 3
+y08 - 10000 binaryDp0j7nj8x1y3s2t3 <= 3
+x08 - 10000 binaryDp0j7nj8x1y3s2t3 <= 1
+x07 + 10000 binaryDp0j7nj8x1y3s2t3 >= 2
+y08 + 10000 binaryUp0j8nj9x1y3s2t3 >= 3
+y08 - 10000 binaryUp0j8nj9x1y3s2t3 <=  3
+y09 + 10000 binaryUp0j8nj9x1y3s2t3 >= 3
+y09 - 10000 binaryUp0j8nj9x1y3s2t3 <= 3
+x08 - 10000 binaryUp0j8nj9x1y3s2t3 <= 1
+x09 + 10000 binaryUp0j8nj9x1y3s2t3 >= 2
+y08 + 10000 binaryDp0j8nj9x1y3s2t3 >= 3
+y08 - 10000 binaryDp0j8nj9x1y3s2t3 <= 3
+y09 + 10000 binaryDp0j8nj9x1y3s2t3 >= 3
+y09 - 10000 binaryDp0j8nj9x1y3s2t3 <= 3
+x09 - 10000 binaryDp0j8nj9x1y3s2t3 <= 1
+x08 + 10000 binaryDp0j8nj9x1y3s2t3 >= 2
+y10 + 10000 binaryUp1j0nj1x1y3s2t3 >= 3
+y10 - 10000 binaryUp1j0nj1x1y3s2t3 <=  3
+y11 + 10000 binaryUp1j0nj1x1y3s2t3 >= 3
+y11 - 10000 binaryUp1j0nj1x1y3s2t3 <= 3
+x10 - 10000 binaryUp1j0nj1x1y3s2t3 <= 1
+x11 + 10000 binaryUp1j0nj1x1y3s2t3 >= 2
+y10 + 10000 binaryDp1j0nj1x1y3s2t3 >= 3
+y10 - 10000 binaryDp1j0nj1x1y3s2t3 <= 3
+y11 + 10000 binaryDp1j0nj1x1y3s2t3 >= 3
+y11 - 10000 binaryDp1j0nj1x1y3s2t3 <= 3
+x11 - 10000 binaryDp1j0nj1x1y3s2t3 <= 1
+x10 + 10000 binaryDp1j0nj1x1y3s2t3 >= 2
+y11 + 10000 binaryUp1j1nj2x1y3s2t3 >= 3
+y11 - 10000 binaryUp1j1nj2x1y3s2t3 <=  3
+y12 + 10000 binaryUp1j1nj2x1y3s2t3 >= 3
+y12 - 10000 binaryUp1j1nj2x1y3s2t3 <= 3
+x11 - 10000 binaryUp1j1nj2x1y3s2t3 <= 1
+x12 + 10000 binaryUp1j1nj2x1y3s2t3 >= 2
+y11 + 10000 binaryDp1j1nj2x1y3s2t3 >= 3
+y11 - 10000 binaryDp1j1nj2x1y3s2t3 <= 3
+y12 + 10000 binaryDp1j1nj2x1y3s2t3 >= 3
+y12 - 10000 binaryDp1j1nj2x1y3s2t3 <= 3
+x12 - 10000 binaryDp1j1nj2x1y3s2t3 <= 1
+x11 + 10000 binaryDp1j1nj2x1y3s2t3 >= 2
+y12 + 10000 binaryUp1j2nj3x1y3s2t3 >= 3
+y12 - 10000 binaryUp1j2nj3x1y3s2t3 <=  3
+y13 + 10000 binaryUp1j2nj3x1y3s2t3 >= 3
+y13 - 10000 binaryUp1j2nj3x1y3s2t3 <= 3
+x12 - 10000 binaryUp1j2nj3x1y3s2t3 <= 1
+x13 + 10000 binaryUp1j2nj3x1y3s2t3 >= 2
+y12 + 10000 binaryDp1j2nj3x1y3s2t3 >= 3
+y12 - 10000 binaryDp1j2nj3x1y3s2t3 <= 3
+y13 + 10000 binaryDp1j2nj3x1y3s2t3 >= 3
+y13 - 10000 binaryDp1j2nj3x1y3s2t3 <= 3
+x13 - 10000 binaryDp1j2nj3x1y3s2t3 <= 1
+x12 + 10000 binaryDp1j2nj3x1y3s2t3 >= 2
+y13 + 10000 binaryUp1j3nj4x1y3s2t3 >= 3
+y13 - 10000 binaryUp1j3nj4x1y3s2t3 <=  3
+y14 + 10000 binaryUp1j3nj4x1y3s2t3 >= 3
+y14 - 10000 binaryUp1j3nj4x1y3s2t3 <= 3
+x13 - 10000 binaryUp1j3nj4x1y3s2t3 <= 1
+x14 + 10000 binaryUp1j3nj4x1y3s2t3 >= 2
+y13 + 10000 binaryDp1j3nj4x1y3s2t3 >= 3
+y13 - 10000 binaryDp1j3nj4x1y3s2t3 <= 3
+y14 + 10000 binaryDp1j3nj4x1y3s2t3 >= 3
+y14 - 10000 binaryDp1j3nj4x1y3s2t3 <= 3
+x14 - 10000 binaryDp1j3nj4x1y3s2t3 <= 1
+x13 + 10000 binaryDp1j3nj4x1y3s2t3 >= 2
+y14 + 10000 binaryUp1j4nj5x1y3s2t3 >= 3
+y14 - 10000 binaryUp1j4nj5x1y3s2t3 <=  3
+y15 + 10000 binaryUp1j4nj5x1y3s2t3 >= 3
+y15 - 10000 binaryUp1j4nj5x1y3s2t3 <= 3
+x14 - 10000 binaryUp1j4nj5x1y3s2t3 <= 1
+x15 + 10000 binaryUp1j4nj5x1y3s2t3 >= 2
+y14 + 10000 binaryDp1j4nj5x1y3s2t3 >= 3
+y14 - 10000 binaryDp1j4nj5x1y3s2t3 <= 3
+y15 + 10000 binaryDp1j4nj5x1y3s2t3 >= 3
+y15 - 10000 binaryDp1j4nj5x1y3s2t3 <= 3
+x15 - 10000 binaryDp1j4nj5x1y3s2t3 <= 1
+x14 + 10000 binaryDp1j4nj5x1y3s2t3 >= 2
+y15 + 10000 binaryUp1j5nj6x1y3s2t3 >= 3
+y15 - 10000 binaryUp1j5nj6x1y3s2t3 <=  3
+y16 + 10000 binaryUp1j5nj6x1y3s2t3 >= 3
+y16 - 10000 binaryUp1j5nj6x1y3s2t3 <= 3
+x15 - 10000 binaryUp1j5nj6x1y3s2t3 <= 1
+x16 + 10000 binaryUp1j5nj6x1y3s2t3 >= 2
+y15 + 10000 binaryDp1j5nj6x1y3s2t3 >= 3
+y15 - 10000 binaryDp1j5nj6x1y3s2t3 <= 3
+y16 + 10000 binaryDp1j5nj6x1y3s2t3 >= 3
+y16 - 10000 binaryDp1j5nj6x1y3s2t3 <= 3
+x16 - 10000 binaryDp1j5nj6x1y3s2t3 <= 1
+x15 + 10000 binaryDp1j5nj6x1y3s2t3 >= 2
+y16 + 10000 binaryUp1j6nj7x1y3s2t3 >= 3
+y16 - 10000 binaryUp1j6nj7x1y3s2t3 <=  3
+y17 + 10000 binaryUp1j6nj7x1y3s2t3 >= 3
+y17 - 10000 binaryUp1j6nj7x1y3s2t3 <= 3
+x16 - 10000 binaryUp1j6nj7x1y3s2t3 <= 1
+x17 + 10000 binaryUp1j6nj7x1y3s2t3 >= 2
+y16 + 10000 binaryDp1j6nj7x1y3s2t3 >= 3
+y16 - 10000 binaryDp1j6nj7x1y3s2t3 <= 3
+y17 + 10000 binaryDp1j6nj7x1y3s2t3 >= 3
+y17 - 10000 binaryDp1j6nj7x1y3s2t3 <= 3
+x17 - 10000 binaryDp1j6nj7x1y3s2t3 <= 1
+x16 + 10000 binaryDp1j6nj7x1y3s2t3 >= 2
+y17 + 10000 binaryUp1j7nj8x1y3s2t3 >= 3
+y17 - 10000 binaryUp1j7nj8x1y3s2t3 <=  3
+y18 + 10000 binaryUp1j7nj8x1y3s2t3 >= 3
+y18 - 10000 binaryUp1j7nj8x1y3s2t3 <= 3
+x17 - 10000 binaryUp1j7nj8x1y3s2t3 <= 1
+x18 + 10000 binaryUp1j7nj8x1y3s2t3 >= 2
+y17 + 10000 binaryDp1j7nj8x1y3s2t3 >= 3
+y17 - 10000 binaryDp1j7nj8x1y3s2t3 <= 3
+y18 + 10000 binaryDp1j7nj8x1y3s2t3 >= 3
+y18 - 10000 binaryDp1j7nj8x1y3s2t3 <= 3
+x18 - 10000 binaryDp1j7nj8x1y3s2t3 <= 1
+x17 + 10000 binaryDp1j7nj8x1y3s2t3 >= 2
+y18 + 10000 binaryUp1j8nj9x1y3s2t3 >= 3
+y18 - 10000 binaryUp1j8nj9x1y3s2t3 <=  3
+y19 + 10000 binaryUp1j8nj9x1y3s2t3 >= 3
+y19 - 10000 binaryUp1j8nj9x1y3s2t3 <= 3
+x18 - 10000 binaryUp1j8nj9x1y3s2t3 <= 1
+x19 + 10000 binaryUp1j8nj9x1y3s2t3 >= 2
+y18 + 10000 binaryDp1j8nj9x1y3s2t3 >= 3
+y18 - 10000 binaryDp1j8nj9x1y3s2t3 <= 3
+y19 + 10000 binaryDp1j8nj9x1y3s2t3 >= 3
+y19 - 10000 binaryDp1j8nj9x1y3s2t3 <= 3
+x19 - 10000 binaryDp1j8nj9x1y3s2t3 <= 1
+x18 + 10000 binaryDp1j8nj9x1y3s2t3 >= 2
+ + binaryUp0j0nj1x1y3s2t3 + binaryDp0j0nj1x1y3s2t3 + binaryUp0j1nj2x1y3s2t3 + binaryDp0j1nj2x1y3s2t3 + binaryUp0j2nj3x1y3s2t3 + binaryDp0j2nj3x1y3s2t3 + binaryUp0j3nj4x1y3s2t3 + binaryDp0j3nj4x1y3s2t3 + binaryUp0j4nj5x1y3s2t3 + binaryDp0j4nj5x1y3s2t3 + binaryUp0j5nj6x1y3s2t3 + binaryDp0j5nj6x1y3s2t3 + binaryUp0j6nj7x1y3s2t3 + binaryDp0j6nj7x1y3s2t3 + binaryUp0j7nj8x1y3s2t3 + binaryDp0j7nj8x1y3s2t3 + binaryUp0j8nj9x1y3s2t3 + binaryDp0j8nj9x1y3s2t3 + binaryUp1j0nj1x1y3s2t3 + binaryDp1j0nj1x1y3s2t3 + binaryUp1j1nj2x1y3s2t3 + binaryDp1j1nj2x1y3s2t3 + binaryUp1j2nj3x1y3s2t3 + binaryDp1j2nj3x1y3s2t3 + binaryUp1j3nj4x1y3s2t3 + binaryDp1j3nj4x1y3s2t3 + binaryUp1j4nj5x1y3s2t3 + binaryDp1j4nj5x1y3s2t3 + binaryUp1j5nj6x1y3s2t3 + binaryDp1j5nj6x1y3s2t3 + binaryUp1j6nj7x1y3s2t3 + binaryDp1j6nj7x1y3s2t3 + binaryUp1j7nj8x1y3s2t3 + binaryDp1j7nj8x1y3s2t3 + binaryUp1j8nj9x1y3s2t3 + binaryDp1j8nj9x1y3s2t3 <= 35
+x00 + 10000 binaryLp0j0nj1x1y3s1t4 >= 1
+x00 - 10000 binaryLp0j0nj1x1y3s1t4 <= 1
+x01 + 10000 binaryLp0j0nj1x1y3s1t4 >= 1
+x01 - 10000 binaryLp0j0nj1x1y3s1t4 <= 1
+y00 - 10000 binaryLp0j0nj1x1y3s1t4 <= 3
+y01 + 10000 binaryLp0j0nj1x1y3s1t4 >= 4
+x00 + 10000 binaryRp0j0nj1x1y3s1t4 >= 1
+x00 - 10000 binaryRp0j0nj1x1y3s1t4 <= 1
+x01 + 10000 binaryRp0j0nj1x1y3s1t4 >= 1
+x01 - 10000 binaryRp0j0nj1x1y3s1t4 <= 1
+y01 - 10000 binaryRp0j0nj1x1y3s1t4 <= 3
+y00 + 10000 binaryRp0j0nj1x1y3s1t4 >= 4
+x01 + 10000 binaryLp0j1nj2x1y3s1t4 >= 1
+x01 - 10000 binaryLp0j1nj2x1y3s1t4 <= 1
+x02 + 10000 binaryLp0j1nj2x1y3s1t4 >= 1
+x02 - 10000 binaryLp0j1nj2x1y3s1t4 <= 1
+y01 - 10000 binaryLp0j1nj2x1y3s1t4 <= 3
+y02 + 10000 binaryLp0j1nj2x1y3s1t4 >= 4
+x01 + 10000 binaryRp0j1nj2x1y3s1t4 >= 1
+x01 - 10000 binaryRp0j1nj2x1y3s1t4 <= 1
+x02 + 10000 binaryRp0j1nj2x1y3s1t4 >= 1
+x02 - 10000 binaryRp0j1nj2x1y3s1t4 <= 1
+y02 - 10000 binaryRp0j1nj2x1y3s1t4 <= 3
+y01 + 10000 binaryRp0j1nj2x1y3s1t4 >= 4
+x02 + 10000 binaryLp0j2nj3x1y3s1t4 >= 1
+x02 - 10000 binaryLp0j2nj3x1y3s1t4 <= 1
+x03 + 10000 binaryLp0j2nj3x1y3s1t4 >= 1
+x03 - 10000 binaryLp0j2nj3x1y3s1t4 <= 1
+y02 - 10000 binaryLp0j2nj3x1y3s1t4 <= 3
+y03 + 10000 binaryLp0j2nj3x1y3s1t4 >= 4
+x02 + 10000 binaryRp0j2nj3x1y3s1t4 >= 1
+x02 - 10000 binaryRp0j2nj3x1y3s1t4 <= 1
+x03 + 10000 binaryRp0j2nj3x1y3s1t4 >= 1
+x03 - 10000 binaryRp0j2nj3x1y3s1t4 <= 1
+y03 - 10000 binaryRp0j2nj3x1y3s1t4 <= 3
+y02 + 10000 binaryRp0j2nj3x1y3s1t4 >= 4
+x03 + 10000 binaryLp0j3nj4x1y3s1t4 >= 1
+x03 - 10000 binaryLp0j3nj4x1y3s1t4 <= 1
+x04 + 10000 binaryLp0j3nj4x1y3s1t4 >= 1
+x04 - 10000 binaryLp0j3nj4x1y3s1t4 <= 1
+y03 - 10000 binaryLp0j3nj4x1y3s1t4 <= 3
+y04 + 10000 binaryLp0j3nj4x1y3s1t4 >= 4
+x03 + 10000 binaryRp0j3nj4x1y3s1t4 >= 1
+x03 - 10000 binaryRp0j3nj4x1y3s1t4 <= 1
+x04 + 10000 binaryRp0j3nj4x1y3s1t4 >= 1
+x04 - 10000 binaryRp0j3nj4x1y3s1t4 <= 1
+y04 - 10000 binaryRp0j3nj4x1y3s1t4 <= 3
+y03 + 10000 binaryRp0j3nj4x1y3s1t4 >= 4
+x04 + 10000 binaryLp0j4nj5x1y3s1t4 >= 1
+x04 - 10000 binaryLp0j4nj5x1y3s1t4 <= 1
+x05 + 10000 binaryLp0j4nj5x1y3s1t4 >= 1
+x05 - 10000 binaryLp0j4nj5x1y3s1t4 <= 1
+y04 - 10000 binaryLp0j4nj5x1y3s1t4 <= 3
+y05 + 10000 binaryLp0j4nj5x1y3s1t4 >= 4
+x04 + 10000 binaryRp0j4nj5x1y3s1t4 >= 1
+x04 - 10000 binaryRp0j4nj5x1y3s1t4 <= 1
+x05 + 10000 binaryRp0j4nj5x1y3s1t4 >= 1
+x05 - 10000 binaryRp0j4nj5x1y3s1t4 <= 1
+y05 - 10000 binaryRp0j4nj5x1y3s1t4 <= 3
+y04 + 10000 binaryRp0j4nj5x1y3s1t4 >= 4
+x05 + 10000 binaryLp0j5nj6x1y3s1t4 >= 1
+x05 - 10000 binaryLp0j5nj6x1y3s1t4 <= 1
+x06 + 10000 binaryLp0j5nj6x1y3s1t4 >= 1
+x06 - 10000 binaryLp0j5nj6x1y3s1t4 <= 1
+y05 - 10000 binaryLp0j5nj6x1y3s1t4 <= 3
+y06 + 10000 binaryLp0j5nj6x1y3s1t4 >= 4
+x05 + 10000 binaryRp0j5nj6x1y3s1t4 >= 1
+x05 - 10000 binaryRp0j5nj6x1y3s1t4 <= 1
+x06 + 10000 binaryRp0j5nj6x1y3s1t4 >= 1
+x06 - 10000 binaryRp0j5nj6x1y3s1t4 <= 1
+y06 - 10000 binaryRp0j5nj6x1y3s1t4 <= 3
+y05 + 10000 binaryRp0j5nj6x1y3s1t4 >= 4
+x06 + 10000 binaryLp0j6nj7x1y3s1t4 >= 1
+x06 - 10000 binaryLp0j6nj7x1y3s1t4 <= 1
+x07 + 10000 binaryLp0j6nj7x1y3s1t4 >= 1
+x07 - 10000 binaryLp0j6nj7x1y3s1t4 <= 1
+y06 - 10000 binaryLp0j6nj7x1y3s1t4 <= 3
+y07 + 10000 binaryLp0j6nj7x1y3s1t4 >= 4
+x06 + 10000 binaryRp0j6nj7x1y3s1t4 >= 1
+x06 - 10000 binaryRp0j6nj7x1y3s1t4 <= 1
+x07 + 10000 binaryRp0j6nj7x1y3s1t4 >= 1
+x07 - 10000 binaryRp0j6nj7x1y3s1t4 <= 1
+y07 - 10000 binaryRp0j6nj7x1y3s1t4 <= 3
+y06 + 10000 binaryRp0j6nj7x1y3s1t4 >= 4
+x07 + 10000 binaryLp0j7nj8x1y3s1t4 >= 1
+x07 - 10000 binaryLp0j7nj8x1y3s1t4 <= 1
+x08 + 10000 binaryLp0j7nj8x1y3s1t4 >= 1
+x08 - 10000 binaryLp0j7nj8x1y3s1t4 <= 1
+y07 - 10000 binaryLp0j7nj8x1y3s1t4 <= 3
+y08 + 10000 binaryLp0j7nj8x1y3s1t4 >= 4
+x07 + 10000 binaryRp0j7nj8x1y3s1t4 >= 1
+x07 - 10000 binaryRp0j7nj8x1y3s1t4 <= 1
+x08 + 10000 binaryRp0j7nj8x1y3s1t4 >= 1
+x08 - 10000 binaryRp0j7nj8x1y3s1t4 <= 1
+y08 - 10000 binaryRp0j7nj8x1y3s1t4 <= 3
+y07 + 10000 binaryRp0j7nj8x1y3s1t4 >= 4
+x08 + 10000 binaryLp0j8nj9x1y3s1t4 >= 1
+x08 - 10000 binaryLp0j8nj9x1y3s1t4 <= 1
+x09 + 10000 binaryLp0j8nj9x1y3s1t4 >= 1
+x09 - 10000 binaryLp0j8nj9x1y3s1t4 <= 1
+y08 - 10000 binaryLp0j8nj9x1y3s1t4 <= 3
+y09 + 10000 binaryLp0j8nj9x1y3s1t4 >= 4
+x08 + 10000 binaryRp0j8nj9x1y3s1t4 >= 1
+x08 - 10000 binaryRp0j8nj9x1y3s1t4 <= 1
+x09 + 10000 binaryRp0j8nj9x1y3s1t4 >= 1
+x09 - 10000 binaryRp0j8nj9x1y3s1t4 <= 1
+y09 - 10000 binaryRp0j8nj9x1y3s1t4 <= 3
+y08 + 10000 binaryRp0j8nj9x1y3s1t4 >= 4
+x10 + 10000 binaryLp1j0nj1x1y3s1t4 >= 1
+x10 - 10000 binaryLp1j0nj1x1y3s1t4 <= 1
+x11 + 10000 binaryLp1j0nj1x1y3s1t4 >= 1
+x11 - 10000 binaryLp1j0nj1x1y3s1t4 <= 1
+y10 - 10000 binaryLp1j0nj1x1y3s1t4 <= 3
+y11 + 10000 binaryLp1j0nj1x1y3s1t4 >= 4
+x10 + 10000 binaryRp1j0nj1x1y3s1t4 >= 1
+x10 - 10000 binaryRp1j0nj1x1y3s1t4 <= 1
+x11 + 10000 binaryRp1j0nj1x1y3s1t4 >= 1
+x11 - 10000 binaryRp1j0nj1x1y3s1t4 <= 1
+y11 - 10000 binaryRp1j0nj1x1y3s1t4 <= 3
+y10 + 10000 binaryRp1j0nj1x1y3s1t4 >= 4
+x11 + 10000 binaryLp1j1nj2x1y3s1t4 >= 1
+x11 - 10000 binaryLp1j1nj2x1y3s1t4 <= 1
+x12 + 10000 binaryLp1j1nj2x1y3s1t4 >= 1
+x12 - 10000 binaryLp1j1nj2x1y3s1t4 <= 1
+y11 - 10000 binaryLp1j1nj2x1y3s1t4 <= 3
+y12 + 10000 binaryLp1j1nj2x1y3s1t4 >= 4
+x11 + 10000 binaryRp1j1nj2x1y3s1t4 >= 1
+x11 - 10000 binaryRp1j1nj2x1y3s1t4 <= 1
+x12 + 10000 binaryRp1j1nj2x1y3s1t4 >= 1
+x12 - 10000 binaryRp1j1nj2x1y3s1t4 <= 1
+y12 - 10000 binaryRp1j1nj2x1y3s1t4 <= 3
+y11 + 10000 binaryRp1j1nj2x1y3s1t4 >= 4
+x12 + 10000 binaryLp1j2nj3x1y3s1t4 >= 1
+x12 - 10000 binaryLp1j2nj3x1y3s1t4 <= 1
+x13 + 10000 binaryLp1j2nj3x1y3s1t4 >= 1
+x13 - 10000 binaryLp1j2nj3x1y3s1t4 <= 1
+y12 - 10000 binaryLp1j2nj3x1y3s1t4 <= 3
+y13 + 10000 binaryLp1j2nj3x1y3s1t4 >= 4
+x12 + 10000 binaryRp1j2nj3x1y3s1t4 >= 1
+x12 - 10000 binaryRp1j2nj3x1y3s1t4 <= 1
+x13 + 10000 binaryRp1j2nj3x1y3s1t4 >= 1
+x13 - 10000 binaryRp1j2nj3x1y3s1t4 <= 1
+y13 - 10000 binaryRp1j2nj3x1y3s1t4 <= 3
+y12 + 10000 binaryRp1j2nj3x1y3s1t4 >= 4
+x13 + 10000 binaryLp1j3nj4x1y3s1t4 >= 1
+x13 - 10000 binaryLp1j3nj4x1y3s1t4 <= 1
+x14 + 10000 binaryLp1j3nj4x1y3s1t4 >= 1
+x14 - 10000 binaryLp1j3nj4x1y3s1t4 <= 1
+y13 - 10000 binaryLp1j3nj4x1y3s1t4 <= 3
+y14 + 10000 binaryLp1j3nj4x1y3s1t4 >= 4
+x13 + 10000 binaryRp1j3nj4x1y3s1t4 >= 1
+x13 - 10000 binaryRp1j3nj4x1y3s1t4 <= 1
+x14 + 10000 binaryRp1j3nj4x1y3s1t4 >= 1
+x14 - 10000 binaryRp1j3nj4x1y3s1t4 <= 1
+y14 - 10000 binaryRp1j3nj4x1y3s1t4 <= 3
+y13 + 10000 binaryRp1j3nj4x1y3s1t4 >= 4
+x14 + 10000 binaryLp1j4nj5x1y3s1t4 >= 1
+x14 - 10000 binaryLp1j4nj5x1y3s1t4 <= 1
+x15 + 10000 binaryLp1j4nj5x1y3s1t4 >= 1
+x15 - 10000 binaryLp1j4nj5x1y3s1t4 <= 1
+y14 - 10000 binaryLp1j4nj5x1y3s1t4 <= 3
+y15 + 10000 binaryLp1j4nj5x1y3s1t4 >= 4
+x14 + 10000 binaryRp1j4nj5x1y3s1t4 >= 1
+x14 - 10000 binaryRp1j4nj5x1y3s1t4 <= 1
+x15 + 10000 binaryRp1j4nj5x1y3s1t4 >= 1
+x15 - 10000 binaryRp1j4nj5x1y3s1t4 <= 1
+y15 - 10000 binaryRp1j4nj5x1y3s1t4 <= 3
+y14 + 10000 binaryRp1j4nj5x1y3s1t4 >= 4
+x15 + 10000 binaryLp1j5nj6x1y3s1t4 >= 1
+x15 - 10000 binaryLp1j5nj6x1y3s1t4 <= 1
+x16 + 10000 binaryLp1j5nj6x1y3s1t4 >= 1
+x16 - 10000 binaryLp1j5nj6x1y3s1t4 <= 1
+y15 - 10000 binaryLp1j5nj6x1y3s1t4 <= 3
+y16 + 10000 binaryLp1j5nj6x1y3s1t4 >= 4
+x15 + 10000 binaryRp1j5nj6x1y3s1t4 >= 1
+x15 - 10000 binaryRp1j5nj6x1y3s1t4 <= 1
+x16 + 10000 binaryRp1j5nj6x1y3s1t4 >= 1
+x16 - 10000 binaryRp1j5nj6x1y3s1t4 <= 1
+y16 - 10000 binaryRp1j5nj6x1y3s1t4 <= 3
+y15 + 10000 binaryRp1j5nj6x1y3s1t4 >= 4
+x16 + 10000 binaryLp1j6nj7x1y3s1t4 >= 1
+x16 - 10000 binaryLp1j6nj7x1y3s1t4 <= 1
+x17 + 10000 binaryLp1j6nj7x1y3s1t4 >= 1
+x17 - 10000 binaryLp1j6nj7x1y3s1t4 <= 1
+y16 - 10000 binaryLp1j6nj7x1y3s1t4 <= 3
+y17 + 10000 binaryLp1j6nj7x1y3s1t4 >= 4
+x16 + 10000 binaryRp1j6nj7x1y3s1t4 >= 1
+x16 - 10000 binaryRp1j6nj7x1y3s1t4 <= 1
+x17 + 10000 binaryRp1j6nj7x1y3s1t4 >= 1
+x17 - 10000 binaryRp1j6nj7x1y3s1t4 <= 1
+y17 - 10000 binaryRp1j6nj7x1y3s1t4 <= 3
+y16 + 10000 binaryRp1j6nj7x1y3s1t4 >= 4
+x17 + 10000 binaryLp1j7nj8x1y3s1t4 >= 1
+x17 - 10000 binaryLp1j7nj8x1y3s1t4 <= 1
+x18 + 10000 binaryLp1j7nj8x1y3s1t4 >= 1
+x18 - 10000 binaryLp1j7nj8x1y3s1t4 <= 1
+y17 - 10000 binaryLp1j7nj8x1y3s1t4 <= 3
+y18 + 10000 binaryLp1j7nj8x1y3s1t4 >= 4
+x17 + 10000 binaryRp1j7nj8x1y3s1t4 >= 1
+x17 - 10000 binaryRp1j7nj8x1y3s1t4 <= 1
+x18 + 10000 binaryRp1j7nj8x1y3s1t4 >= 1
+x18 - 10000 binaryRp1j7nj8x1y3s1t4 <= 1
+y18 - 10000 binaryRp1j7nj8x1y3s1t4 <= 3
+y17 + 10000 binaryRp1j7nj8x1y3s1t4 >= 4
+x18 + 10000 binaryLp1j8nj9x1y3s1t4 >= 1
+x18 - 10000 binaryLp1j8nj9x1y3s1t4 <= 1
+x19 + 10000 binaryLp1j8nj9x1y3s1t4 >= 1
+x19 - 10000 binaryLp1j8nj9x1y3s1t4 <= 1
+y18 - 10000 binaryLp1j8nj9x1y3s1t4 <= 3
+y19 + 10000 binaryLp1j8nj9x1y3s1t4 >= 4
+x18 + 10000 binaryRp1j8nj9x1y3s1t4 >= 1
+x18 - 10000 binaryRp1j8nj9x1y3s1t4 <= 1
+x19 + 10000 binaryRp1j8nj9x1y3s1t4 >= 1
+x19 - 10000 binaryRp1j8nj9x1y3s1t4 <= 1
+y19 - 10000 binaryRp1j8nj9x1y3s1t4 <= 3
+y18 + 10000 binaryRp1j8nj9x1y3s1t4 >= 4
+ + binaryLp0j0nj1x1y3s1t4 + binaryRp0j0nj1x1y3s1t4 + binaryLp0j1nj2x1y3s1t4 + binaryRp0j1nj2x1y3s1t4 + binaryLp0j2nj3x1y3s1t4 + binaryRp0j2nj3x1y3s1t4 + binaryLp0j3nj4x1y3s1t4 + binaryRp0j3nj4x1y3s1t4 + binaryLp0j4nj5x1y3s1t4 + binaryRp0j4nj5x1y3s1t4 + binaryLp0j5nj6x1y3s1t4 + binaryRp0j5nj6x1y3s1t4 + binaryLp0j6nj7x1y3s1t4 + binaryRp0j6nj7x1y3s1t4 + binaryLp0j7nj8x1y3s1t4 + binaryRp0j7nj8x1y3s1t4 + binaryLp0j8nj9x1y3s1t4 + binaryRp0j8nj9x1y3s1t4 + binaryLp1j0nj1x1y3s1t4 + binaryRp1j0nj1x1y3s1t4 + binaryLp1j1nj2x1y3s1t4 + binaryRp1j1nj2x1y3s1t4 + binaryLp1j2nj3x1y3s1t4 + binaryRp1j2nj3x1y3s1t4 + binaryLp1j3nj4x1y3s1t4 + binaryRp1j3nj4x1y3s1t4 + binaryLp1j4nj5x1y3s1t4 + binaryRp1j4nj5x1y3s1t4 + binaryLp1j5nj6x1y3s1t4 + binaryRp1j5nj6x1y3s1t4 + binaryLp1j6nj7x1y3s1t4 + binaryRp1j6nj7x1y3s1t4 + binaryLp1j7nj8x1y3s1t4 + binaryRp1j7nj8x1y3s1t4 + binaryLp1j8nj9x1y3s1t4 + binaryRp1j8nj9x1y3s1t4 <= 35
 Binaries
-headGroupp0gp0
-tailGroupp0tp0
-useHeadp0gp0Head12
-useHeadp0gp0Head13
-useTailp0gp0tail33
-headGroupp0gp1
-tailGroupp0tp1
-useHeadp0gp1Head21
-useHeadp0gp1Head31
-useTailp0gp1tail33
-headGroupp1gp0
-tailGroupp1tp0
-useHeadp1gp0Head12
-useHeadp1gp0Head13
-useTailp1gp0tail33
-headGroupp1gp1
-tailGroupp1tp1
-useHeadp1gp1Head21
-useHeadp1gp1Head31
-useTailp1gp1tail33
-headGroupp2gp0
-tailGroupp2tp0
-useHeadp2gp0Head12
-useHeadp2gp0Head13
-useTailp2gp0tail33
-headGroupp2gp1
-tailGroupp2tp1
-useHeadp2gp1Head21
-useHeadp2gp1Head31
-useTailp2gp1tail33
-headGroupp3gp0
-tailGroupp3tp0
-useHeadp3gp0Head12
-useHeadp3gp0Head13
-useTailp3gp0tail33
-headGroupp3gp1
-tailGroupp3tp1
-useHeadp3gp1Head21
-useHeadp3gp1Head31
-useTailp3gp1tail33
 xEqualslx01
 yEqualsly01
 xEqualslx02
@@ -2073,6 +9815,116 @@ u0y3y1
 u0y1y3
 xEqualslx04
 yEqualsly04
+u0x4x0
+u0x0x4
+u0y4y0
+u0y0y4
+u0x4x1
+u0x1x4
+u0y4y1
+u0y1y4
+u0x4x2
+u0x2x4
+u0y4y2
+u0y2y4
+xEqualslx05
+yEqualsly05
+u0x5x0
+u0x0x5
+u0y5y0
+u0y0y5
+u0x5x1
+u0x1x5
+u0y5y1
+u0y1y5
+u0x5x2
+u0x2x5
+u0y5y2
+u0y2y5
+u0x5x3
+u0x3x5
+u0y5y3
+u0y3y5
+xEqualslx06
+yEqualsly06
+u0x6x0
+u0x0x6
+u0y6y0
+u0y0y6
+u0x6x1
+u0x1x6
+u0y6y1
+u0y1y6
+u0x6x2
+u0x2x6
+u0y6y2
+u0y2y6
+u0x6x3
+u0x3x6
+u0y6y3
+u0y3y6
+u0x6x4
+u0x4x6
+u0y6y4
+u0y4y6
+xEqualslx07
+yEqualsly07
+u0x7x0
+u0x0x7
+u0y7y0
+u0y0y7
+u0x7x1
+u0x1x7
+u0y7y1
+u0y1y7
+u0x7x2
+u0x2x7
+u0y7y2
+u0y2y7
+u0x7x3
+u0x3x7
+u0y7y3
+u0y3y7
+u0x7x4
+u0x4x7
+u0y7y4
+u0y4y7
+u0x7x5
+u0x5x7
+u0y7y5
+u0y5y7
+xEqualslx08
+yEqualsly08
+u0x8x0
+u0x0x8
+u0y8y0
+u0y0y8
+u0x8x1
+u0x1x8
+u0y8y1
+u0y1y8
+u0x8x2
+u0x2x8
+u0y8y2
+u0y2y8
+u0x8x3
+u0x3x8
+u0y8y3
+u0y3y8
+u0x8x4
+u0x4x8
+u0y8y4
+u0y4y8
+u0x8x5
+u0x5x8
+u0y8y5
+u0y5y8
+u0x8x6
+u0x6x8
+u0y8y6
+u0y6y8
+xEqualslx09
+yEqualsly09
 xEqualslx11
 yEqualsly11
 xEqualslx12
@@ -2093,174 +9945,404 @@ u1y3y1
 u1y1y3
 xEqualslx14
 yEqualsly14
-xEqualslx21
-yEqualsly21
-xEqualslx22
-yEqualsly22
-u2x2x0
-u2x0x2
-u2y2y0
-u2y0y2
-xEqualslx23
-yEqualsly23
-u2x3x0
-u2x0x3
-u2y3y0
-u2y0y3
-u2x3x1
-u2x1x3
-u2y3y1
-u2y1y3
-xEqualslx24
-yEqualsly24
-xEqualslx31
-yEqualsly31
-xEqualslx32
-yEqualsly32
-u3x2x0
-u3x0x2
-u3y2y0
-u3y0y2
-xEqualslx33
-yEqualsly33
-u3x3x0
-u3x0x3
-u3y3y0
-u3y0y3
-u3x3x1
-u3x1x3
-u3y3y1
-u3y1y3
-xEqualslx34
-yEqualsly34
-binaryLp0j0nj1x2y1s2t2
-binaryRp0j0nj1x2y1s2t2
-binaryLp0j1nj2x2y1s2t2
-binaryRp0j1nj2x2y1s2t2
-binaryLp0j2nj3x2y1s2t2
-binaryRp0j2nj3x2y1s2t2
-binaryLp0j3nj4x2y1s2t2
-binaryRp0j3nj4x2y1s2t2
-binaryLp1j0nj1x2y1s2t2
-binaryRp1j0nj1x2y1s2t2
-binaryLp1j1nj2x2y1s2t2
-binaryRp1j1nj2x2y1s2t2
-binaryLp1j2nj3x2y1s2t2
-binaryRp1j2nj3x2y1s2t2
-binaryLp1j3nj4x2y1s2t2
-binaryRp1j3nj4x2y1s2t2
-binaryLp2j0nj1x2y1s2t2
-binaryRp2j0nj1x2y1s2t2
-binaryLp2j1nj2x2y1s2t2
-binaryRp2j1nj2x2y1s2t2
-binaryLp2j2nj3x2y1s2t2
-binaryRp2j2nj3x2y1s2t2
-binaryLp2j3nj4x2y1s2t2
-binaryRp2j3nj4x2y1s2t2
-binaryLp3j0nj1x2y1s2t2
-binaryRp3j0nj1x2y1s2t2
-binaryLp3j1nj2x2y1s2t2
-binaryRp3j1nj2x2y1s2t2
-binaryLp3j2nj3x2y1s2t2
-binaryRp3j2nj3x2y1s2t2
-binaryLp3j3nj4x2y1s2t2
-binaryRp3j3nj4x2y1s2t2
-binaryUp0j0nj1x2y3s3t3
-binaryDp0j0nj1x2y3s3t3
-binaryUp0j1nj2x2y3s3t3
-binaryDp0j1nj2x2y3s3t3
-binaryUp0j2nj3x2y3s3t3
-binaryDp0j2nj3x2y3s3t3
-binaryUp0j3nj4x2y3s3t3
-binaryDp0j3nj4x2y3s3t3
-binaryUp1j0nj1x2y3s3t3
-binaryDp1j0nj1x2y3s3t3
-binaryUp1j1nj2x2y3s3t3
-binaryDp1j1nj2x2y3s3t3
-binaryUp1j2nj3x2y3s3t3
-binaryDp1j2nj3x2y3s3t3
-binaryUp1j3nj4x2y3s3t3
-binaryDp1j3nj4x2y3s3t3
-binaryUp2j0nj1x2y3s3t3
-binaryDp2j0nj1x2y3s3t3
-binaryUp2j1nj2x2y3s3t3
-binaryDp2j1nj2x2y3s3t3
-binaryUp2j2nj3x2y3s3t3
-binaryDp2j2nj3x2y3s3t3
-binaryUp2j3nj4x2y3s3t3
-binaryDp2j3nj4x2y3s3t3
-binaryUp3j0nj1x2y3s3t3
-binaryDp3j0nj1x2y3s3t3
-binaryUp3j1nj2x2y3s3t3
-binaryDp3j1nj2x2y3s3t3
-binaryUp3j2nj3x2y3s3t3
-binaryDp3j2nj3x2y3s3t3
-binaryUp3j3nj4x2y3s3t3
-binaryDp3j3nj4x2y3s3t3
-binaryUp0j0nj1x2y2s3t2
-binaryDp0j0nj1x2y2s3t2
-binaryUp0j1nj2x2y2s3t2
-binaryDp0j1nj2x2y2s3t2
-binaryUp0j2nj3x2y2s3t2
-binaryDp0j2nj3x2y2s3t2
-binaryUp0j3nj4x2y2s3t2
-binaryDp0j3nj4x2y2s3t2
-binaryUp1j0nj1x2y2s3t2
-binaryDp1j0nj1x2y2s3t2
-binaryUp1j1nj2x2y2s3t2
-binaryDp1j1nj2x2y2s3t2
-binaryUp1j2nj3x2y2s3t2
-binaryDp1j2nj3x2y2s3t2
-binaryUp1j3nj4x2y2s3t2
-binaryDp1j3nj4x2y2s3t2
-binaryUp2j0nj1x2y2s3t2
-binaryDp2j0nj1x2y2s3t2
-binaryUp2j1nj2x2y2s3t2
-binaryDp2j1nj2x2y2s3t2
-binaryUp2j2nj3x2y2s3t2
-binaryDp2j2nj3x2y2s3t2
-binaryUp2j3nj4x2y2s3t2
-binaryDp2j3nj4x2y2s3t2
-binaryUp3j0nj1x2y2s3t2
-binaryDp3j0nj1x2y2s3t2
-binaryUp3j1nj2x2y2s3t2
-binaryDp3j1nj2x2y2s3t2
-binaryUp3j2nj3x2y2s3t2
-binaryDp3j2nj3x2y2s3t2
-binaryUp3j3nj4x2y2s3t2
-binaryDp3j3nj4x2y2s3t2
-binaryLp0j0nj1x3y1s3t2
-binaryRp0j0nj1x3y1s3t2
-binaryLp0j1nj2x3y1s3t2
-binaryRp0j1nj2x3y1s3t2
-binaryLp0j2nj3x3y1s3t2
-binaryRp0j2nj3x3y1s3t2
-binaryLp0j3nj4x3y1s3t2
-binaryRp0j3nj4x3y1s3t2
-binaryLp1j0nj1x3y1s3t2
-binaryRp1j0nj1x3y1s3t2
-binaryLp1j1nj2x3y1s3t2
-binaryRp1j1nj2x3y1s3t2
-binaryLp1j2nj3x3y1s3t2
-binaryRp1j2nj3x3y1s3t2
-binaryLp1j3nj4x3y1s3t2
-binaryRp1j3nj4x3y1s3t2
-binaryLp2j0nj1x3y1s3t2
-binaryRp2j0nj1x3y1s3t2
-binaryLp2j1nj2x3y1s3t2
-binaryRp2j1nj2x3y1s3t2
-binaryLp2j2nj3x3y1s3t2
-binaryRp2j2nj3x3y1s3t2
-binaryLp2j3nj4x3y1s3t2
-binaryRp2j3nj4x3y1s3t2
-binaryLp3j0nj1x3y1s3t2
-binaryRp3j0nj1x3y1s3t2
-binaryLp3j1nj2x3y1s3t2
-binaryRp3j1nj2x3y1s3t2
-binaryLp3j2nj3x3y1s3t2
-binaryRp3j2nj3x3y1s3t2
-binaryLp3j3nj4x3y1s3t2
-binaryRp3j3nj4x3y1s3t2
+u1x4x0
+u1x0x4
+u1y4y0
+u1y0y4
+u1x4x1
+u1x1x4
+u1y4y1
+u1y1y4
+u1x4x2
+u1x2x4
+u1y4y2
+u1y2y4
+xEqualslx15
+yEqualsly15
+u1x5x0
+u1x0x5
+u1y5y0
+u1y0y5
+u1x5x1
+u1x1x5
+u1y5y1
+u1y1y5
+u1x5x2
+u1x2x5
+u1y5y2
+u1y2y5
+u1x5x3
+u1x3x5
+u1y5y3
+u1y3y5
+xEqualslx16
+yEqualsly16
+u1x6x0
+u1x0x6
+u1y6y0
+u1y0y6
+u1x6x1
+u1x1x6
+u1y6y1
+u1y1y6
+u1x6x2
+u1x2x6
+u1y6y2
+u1y2y6
+u1x6x3
+u1x3x6
+u1y6y3
+u1y3y6
+u1x6x4
+u1x4x6
+u1y6y4
+u1y4y6
+xEqualslx17
+yEqualsly17
+u1x7x0
+u1x0x7
+u1y7y0
+u1y0y7
+u1x7x1
+u1x1x7
+u1y7y1
+u1y1y7
+u1x7x2
+u1x2x7
+u1y7y2
+u1y2y7
+u1x7x3
+u1x3x7
+u1y7y3
+u1y3y7
+u1x7x4
+u1x4x7
+u1y7y4
+u1y4y7
+u1x7x5
+u1x5x7
+u1y7y5
+u1y5y7
+xEqualslx18
+yEqualsly18
+u1x8x0
+u1x0x8
+u1y8y0
+u1y0y8
+u1x8x1
+u1x1x8
+u1y8y1
+u1y1y8
+u1x8x2
+u1x2x8
+u1y8y2
+u1y2y8
+u1x8x3
+u1x3x8
+u1y8y3
+u1y3y8
+u1x8x4
+u1x4x8
+u1y8y4
+u1y4y8
+u1x8x5
+u1x5x8
+u1y8y5
+u1y5y8
+u1x8x6
+u1x6x8
+u1y8y6
+u1y6y8
+xEqualslx19
+yEqualsly19
+binaryLp0j0nj1x0y0s0t1
+binaryRp0j0nj1x0y0s0t1
+binaryLp0j1nj2x0y0s0t1
+binaryRp0j1nj2x0y0s0t1
+binaryLp0j2nj3x0y0s0t1
+binaryRp0j2nj3x0y0s0t1
+binaryLp0j3nj4x0y0s0t1
+binaryRp0j3nj4x0y0s0t1
+binaryLp0j4nj5x0y0s0t1
+binaryRp0j4nj5x0y0s0t1
+binaryLp0j5nj6x0y0s0t1
+binaryRp0j5nj6x0y0s0t1
+binaryLp0j6nj7x0y0s0t1
+binaryRp0j6nj7x0y0s0t1
+binaryLp0j7nj8x0y0s0t1
+binaryRp0j7nj8x0y0s0t1
+binaryLp0j8nj9x0y0s0t1
+binaryRp0j8nj9x0y0s0t1
+binaryLp1j0nj1x0y0s0t1
+binaryRp1j0nj1x0y0s0t1
+binaryLp1j1nj2x0y0s0t1
+binaryRp1j1nj2x0y0s0t1
+binaryLp1j2nj3x0y0s0t1
+binaryRp1j2nj3x0y0s0t1
+binaryLp1j3nj4x0y0s0t1
+binaryRp1j3nj4x0y0s0t1
+binaryLp1j4nj5x0y0s0t1
+binaryRp1j4nj5x0y0s0t1
+binaryLp1j5nj6x0y0s0t1
+binaryRp1j5nj6x0y0s0t1
+binaryLp1j6nj7x0y0s0t1
+binaryRp1j6nj7x0y0s0t1
+binaryLp1j7nj8x0y0s0t1
+binaryRp1j7nj8x0y0s0t1
+binaryLp1j8nj9x0y0s0t1
+binaryRp1j8nj9x0y0s0t1
+binaryLp0j0nj1x3y3s3t4
+binaryRp0j0nj1x3y3s3t4
+binaryLp0j1nj2x3y3s3t4
+binaryRp0j1nj2x3y3s3t4
+binaryLp0j2nj3x3y3s3t4
+binaryRp0j2nj3x3y3s3t4
+binaryLp0j3nj4x3y3s3t4
+binaryRp0j3nj4x3y3s3t4
+binaryLp0j4nj5x3y3s3t4
+binaryRp0j4nj5x3y3s3t4
+binaryLp0j5nj6x3y3s3t4
+binaryRp0j5nj6x3y3s3t4
+binaryLp0j6nj7x3y3s3t4
+binaryRp0j6nj7x3y3s3t4
+binaryLp0j7nj8x3y3s3t4
+binaryRp0j7nj8x3y3s3t4
+binaryLp0j8nj9x3y3s3t4
+binaryRp0j8nj9x3y3s3t4
+binaryLp1j0nj1x3y3s3t4
+binaryRp1j0nj1x3y3s3t4
+binaryLp1j1nj2x3y3s3t4
+binaryRp1j1nj2x3y3s3t4
+binaryLp1j2nj3x3y3s3t4
+binaryRp1j2nj3x3y3s3t4
+binaryLp1j3nj4x3y3s3t4
+binaryRp1j3nj4x3y3s3t4
+binaryLp1j4nj5x3y3s3t4
+binaryRp1j4nj5x3y3s3t4
+binaryLp1j5nj6x3y3s3t4
+binaryRp1j5nj6x3y3s3t4
+binaryLp1j6nj7x3y3s3t4
+binaryRp1j6nj7x3y3s3t4
+binaryLp1j7nj8x3y3s3t4
+binaryRp1j7nj8x3y3s3t4
+binaryLp1j8nj9x3y3s3t4
+binaryRp1j8nj9x3y3s3t4
+binaryUp0j0nj1x2y4s3t4
+binaryDp0j0nj1x2y4s3t4
+binaryUp0j1nj2x2y4s3t4
+binaryDp0j1nj2x2y4s3t4
+binaryUp0j2nj3x2y4s3t4
+binaryDp0j2nj3x2y4s3t4
+binaryUp0j3nj4x2y4s3t4
+binaryDp0j3nj4x2y4s3t4
+binaryUp0j4nj5x2y4s3t4
+binaryDp0j4nj5x2y4s3t4
+binaryUp0j5nj6x2y4s3t4
+binaryDp0j5nj6x2y4s3t4
+binaryUp0j6nj7x2y4s3t4
+binaryDp0j6nj7x2y4s3t4
+binaryUp0j7nj8x2y4s3t4
+binaryDp0j7nj8x2y4s3t4
+binaryUp0j8nj9x2y4s3t4
+binaryDp0j8nj9x2y4s3t4
+binaryUp1j0nj1x2y4s3t4
+binaryDp1j0nj1x2y4s3t4
+binaryUp1j1nj2x2y4s3t4
+binaryDp1j1nj2x2y4s3t4
+binaryUp1j2nj3x2y4s3t4
+binaryDp1j2nj3x2y4s3t4
+binaryUp1j3nj4x2y4s3t4
+binaryDp1j3nj4x2y4s3t4
+binaryUp1j4nj5x2y4s3t4
+binaryDp1j4nj5x2y4s3t4
+binaryUp1j5nj6x2y4s3t4
+binaryDp1j5nj6x2y4s3t4
+binaryUp1j6nj7x2y4s3t4
+binaryDp1j6nj7x2y4s3t4
+binaryUp1j7nj8x2y4s3t4
+binaryDp1j7nj8x2y4s3t4
+binaryUp1j8nj9x2y4s3t4
+binaryDp1j8nj9x2y4s3t4
+binaryLp0j0nj1x4y0s4t1
+binaryRp0j0nj1x4y0s4t1
+binaryLp0j1nj2x4y0s4t1
+binaryRp0j1nj2x4y0s4t1
+binaryLp0j2nj3x4y0s4t1
+binaryRp0j2nj3x4y0s4t1
+binaryLp0j3nj4x4y0s4t1
+binaryRp0j3nj4x4y0s4t1
+binaryLp0j4nj5x4y0s4t1
+binaryRp0j4nj5x4y0s4t1
+binaryLp0j5nj6x4y0s4t1
+binaryRp0j5nj6x4y0s4t1
+binaryLp0j6nj7x4y0s4t1
+binaryRp0j6nj7x4y0s4t1
+binaryLp0j7nj8x4y0s4t1
+binaryRp0j7nj8x4y0s4t1
+binaryLp0j8nj9x4y0s4t1
+binaryRp0j8nj9x4y0s4t1
+binaryLp1j0nj1x4y0s4t1
+binaryRp1j0nj1x4y0s4t1
+binaryLp1j1nj2x4y0s4t1
+binaryRp1j1nj2x4y0s4t1
+binaryLp1j2nj3x4y0s4t1
+binaryRp1j2nj3x4y0s4t1
+binaryLp1j3nj4x4y0s4t1
+binaryRp1j3nj4x4y0s4t1
+binaryLp1j4nj5x4y0s4t1
+binaryRp1j4nj5x4y0s4t1
+binaryLp1j5nj6x4y0s4t1
+binaryRp1j5nj6x4y0s4t1
+binaryLp1j6nj7x4y0s4t1
+binaryRp1j6nj7x4y0s4t1
+binaryLp1j7nj8x4y0s4t1
+binaryRp1j7nj8x4y0s4t1
+binaryLp1j8nj9x4y0s4t1
+binaryRp1j8nj9x4y0s4t1
+binaryUp0j0nj1x1y0s2t0
+binaryDp0j0nj1x1y0s2t0
+binaryUp0j1nj2x1y0s2t0
+binaryDp0j1nj2x1y0s2t0
+binaryUp0j2nj3x1y0s2t0
+binaryDp0j2nj3x1y0s2t0
+binaryUp0j3nj4x1y0s2t0
+binaryDp0j3nj4x1y0s2t0
+binaryUp0j4nj5x1y0s2t0
+binaryDp0j4nj5x1y0s2t0
+binaryUp0j5nj6x1y0s2t0
+binaryDp0j5nj6x1y0s2t0
+binaryUp0j6nj7x1y0s2t0
+binaryDp0j6nj7x1y0s2t0
+binaryUp0j7nj8x1y0s2t0
+binaryDp0j7nj8x1y0s2t0
+binaryUp0j8nj9x1y0s2t0
+binaryDp0j8nj9x1y0s2t0
+binaryUp1j0nj1x1y0s2t0
+binaryDp1j0nj1x1y0s2t0
+binaryUp1j1nj2x1y0s2t0
+binaryDp1j1nj2x1y0s2t0
+binaryUp1j2nj3x1y0s2t0
+binaryDp1j2nj3x1y0s2t0
+binaryUp1j3nj4x1y0s2t0
+binaryDp1j3nj4x1y0s2t0
+binaryUp1j4nj5x1y0s2t0
+binaryDp1j4nj5x1y0s2t0
+binaryUp1j5nj6x1y0s2t0
+binaryDp1j5nj6x1y0s2t0
+binaryUp1j6nj7x1y0s2t0
+binaryDp1j6nj7x1y0s2t0
+binaryUp1j7nj8x1y0s2t0
+binaryDp1j7nj8x1y0s2t0
+binaryUp1j8nj9x1y0s2t0
+binaryDp1j8nj9x1y0s2t0
+binaryLp0j0nj1x1y1s1t2
+binaryRp0j0nj1x1y1s1t2
+binaryLp0j1nj2x1y1s1t2
+binaryRp0j1nj2x1y1s1t2
+binaryLp0j2nj3x1y1s1t2
+binaryRp0j2nj3x1y1s1t2
+binaryLp0j3nj4x1y1s1t2
+binaryRp0j3nj4x1y1s1t2
+binaryLp0j4nj5x1y1s1t2
+binaryRp0j4nj5x1y1s1t2
+binaryLp0j5nj6x1y1s1t2
+binaryRp0j5nj6x1y1s1t2
+binaryLp0j6nj7x1y1s1t2
+binaryRp0j6nj7x1y1s1t2
+binaryLp0j7nj8x1y1s1t2
+binaryRp0j7nj8x1y1s1t2
+binaryLp0j8nj9x1y1s1t2
+binaryRp0j8nj9x1y1s1t2
+binaryLp1j0nj1x1y1s1t2
+binaryRp1j0nj1x1y1s1t2
+binaryLp1j1nj2x1y1s1t2
+binaryRp1j1nj2x1y1s1t2
+binaryLp1j2nj3x1y1s1t2
+binaryRp1j2nj3x1y1s1t2
+binaryLp1j3nj4x1y1s1t2
+binaryRp1j3nj4x1y1s1t2
+binaryLp1j4nj5x1y1s1t2
+binaryRp1j4nj5x1y1s1t2
+binaryLp1j5nj6x1y1s1t2
+binaryRp1j5nj6x1y1s1t2
+binaryLp1j6nj7x1y1s1t2
+binaryRp1j6nj7x1y1s1t2
+binaryLp1j7nj8x1y1s1t2
+binaryRp1j7nj8x1y1s1t2
+binaryLp1j8nj9x1y1s1t2
+binaryRp1j8nj9x1y1s1t2
+binaryUp0j0nj1x2y0s3t0
+binaryDp0j0nj1x2y0s3t0
+binaryUp0j1nj2x2y0s3t0
+binaryDp0j1nj2x2y0s3t0
+binaryUp0j2nj3x2y0s3t0
+binaryDp0j2nj3x2y0s3t0
+binaryUp0j3nj4x2y0s3t0
+binaryDp0j3nj4x2y0s3t0
+binaryUp0j4nj5x2y0s3t0
+binaryDp0j4nj5x2y0s3t0
+binaryUp0j5nj6x2y0s3t0
+binaryDp0j5nj6x2y0s3t0
+binaryUp0j6nj7x2y0s3t0
+binaryDp0j6nj7x2y0s3t0
+binaryUp0j7nj8x2y0s3t0
+binaryDp0j7nj8x2y0s3t0
+binaryUp0j8nj9x2y0s3t0
+binaryDp0j8nj9x2y0s3t0
+binaryUp1j0nj1x2y0s3t0
+binaryDp1j0nj1x2y0s3t0
+binaryUp1j1nj2x2y0s3t0
+binaryDp1j1nj2x2y0s3t0
+binaryUp1j2nj3x2y0s3t0
+binaryDp1j2nj3x2y0s3t0
+binaryUp1j3nj4x2y0s3t0
+binaryDp1j3nj4x2y0s3t0
+binaryUp1j4nj5x2y0s3t0
+binaryDp1j4nj5x2y0s3t0
+binaryUp1j5nj6x2y0s3t0
+binaryDp1j5nj6x2y0s3t0
+binaryUp1j6nj7x2y0s3t0
+binaryDp1j6nj7x2y0s3t0
+binaryUp1j7nj8x2y0s3t0
+binaryDp1j7nj8x2y0s3t0
+binaryUp1j8nj9x2y0s3t0
+binaryDp1j8nj9x2y0s3t0
+binaryLp0j0nj1x0y3s0t4
+binaryRp0j0nj1x0y3s0t4
+binaryLp0j1nj2x0y3s0t4
+binaryRp0j1nj2x0y3s0t4
+binaryLp0j2nj3x0y3s0t4
+binaryRp0j2nj3x0y3s0t4
+binaryLp0j3nj4x0y3s0t4
+binaryRp0j3nj4x0y3s0t4
+binaryLp0j4nj5x0y3s0t4
+binaryRp0j4nj5x0y3s0t4
+binaryLp0j5nj6x0y3s0t4
+binaryRp0j5nj6x0y3s0t4
+binaryLp0j6nj7x0y3s0t4
+binaryRp0j6nj7x0y3s0t4
+binaryLp0j7nj8x0y3s0t4
+binaryRp0j7nj8x0y3s0t4
+binaryLp0j8nj9x0y3s0t4
+binaryRp0j8nj9x0y3s0t4
+binaryLp1j0nj1x0y3s0t4
+binaryRp1j0nj1x0y3s0t4
+binaryLp1j1nj2x0y3s0t4
+binaryRp1j1nj2x0y3s0t4
+binaryLp1j2nj3x0y3s0t4
+binaryRp1j2nj3x0y3s0t4
+binaryLp1j3nj4x0y3s0t4
+binaryRp1j3nj4x0y3s0t4
+binaryLp1j4nj5x0y3s0t4
+binaryRp1j4nj5x0y3s0t4
+binaryLp1j5nj6x0y3s0t4
+binaryRp1j5nj6x0y3s0t4
+binaryLp1j6nj7x0y3s0t4
+binaryRp1j6nj7x0y3s0t4
+binaryLp1j7nj8x0y3s0t4
+binaryRp1j7nj8x0y3s0t4
+binaryLp1j8nj9x0y3s0t4
+binaryRp1j8nj9x0y3s0t4
 binaryLp0j0nj1x2y2s2t3
 binaryRp0j0nj1x2y2s2t3
 binaryLp0j1nj2x2y2s2t3
@@ -2269,6 +10351,16 @@ binaryLp0j2nj3x2y2s2t3
 binaryRp0j2nj3x2y2s2t3
 binaryLp0j3nj4x2y2s2t3
 binaryRp0j3nj4x2y2s2t3
+binaryLp0j4nj5x2y2s2t3
+binaryRp0j4nj5x2y2s2t3
+binaryLp0j5nj6x2y2s2t3
+binaryRp0j5nj6x2y2s2t3
+binaryLp0j6nj7x2y2s2t3
+binaryRp0j6nj7x2y2s2t3
+binaryLp0j7nj8x2y2s2t3
+binaryRp0j7nj8x2y2s2t3
+binaryLp0j8nj9x2y2s2t3
+binaryRp0j8nj9x2y2s2t3
 binaryLp1j0nj1x2y2s2t3
 binaryRp1j0nj1x2y2s2t3
 binaryLp1j1nj2x2y2s2t3
@@ -2277,22 +10369,16 @@ binaryLp1j2nj3x2y2s2t3
 binaryRp1j2nj3x2y2s2t3
 binaryLp1j3nj4x2y2s2t3
 binaryRp1j3nj4x2y2s2t3
-binaryLp2j0nj1x2y2s2t3
-binaryRp2j0nj1x2y2s2t3
-binaryLp2j1nj2x2y2s2t3
-binaryRp2j1nj2x2y2s2t3
-binaryLp2j2nj3x2y2s2t3
-binaryRp2j2nj3x2y2s2t3
-binaryLp2j3nj4x2y2s2t3
-binaryRp2j3nj4x2y2s2t3
-binaryLp3j0nj1x2y2s2t3
-binaryRp3j0nj1x2y2s2t3
-binaryLp3j1nj2x2y2s2t3
-binaryRp3j1nj2x2y2s2t3
-binaryLp3j2nj3x2y2s2t3
-binaryRp3j2nj3x2y2s2t3
-binaryLp3j3nj4x2y2s2t3
-binaryRp3j3nj4x2y2s2t3
+binaryLp1j4nj5x2y2s2t3
+binaryRp1j4nj5x2y2s2t3
+binaryLp1j5nj6x2y2s2t3
+binaryRp1j5nj6x2y2s2t3
+binaryLp1j6nj7x2y2s2t3
+binaryRp1j6nj7x2y2s2t3
+binaryLp1j7nj8x2y2s2t3
+binaryRp1j7nj8x2y2s2t3
+binaryLp1j8nj9x2y2s2t3
+binaryRp1j8nj9x2y2s2t3
 binaryLp0j0nj1x3y2s3t3
 binaryRp0j0nj1x3y2s3t3
 binaryLp0j1nj2x3y2s3t3
@@ -2301,6 +10387,16 @@ binaryLp0j2nj3x3y2s3t3
 binaryRp0j2nj3x3y2s3t3
 binaryLp0j3nj4x3y2s3t3
 binaryRp0j3nj4x3y2s3t3
+binaryLp0j4nj5x3y2s3t3
+binaryRp0j4nj5x3y2s3t3
+binaryLp0j5nj6x3y2s3t3
+binaryRp0j5nj6x3y2s3t3
+binaryLp0j6nj7x3y2s3t3
+binaryRp0j6nj7x3y2s3t3
+binaryLp0j7nj8x3y2s3t3
+binaryRp0j7nj8x3y2s3t3
+binaryLp0j8nj9x3y2s3t3
+binaryRp0j8nj9x3y2s3t3
 binaryLp1j0nj1x3y2s3t3
 binaryRp1j0nj1x3y2s3t3
 binaryLp1j1nj2x3y2s3t3
@@ -2309,54 +10405,592 @@ binaryLp1j2nj3x3y2s3t3
 binaryRp1j2nj3x3y2s3t3
 binaryLp1j3nj4x3y2s3t3
 binaryRp1j3nj4x3y2s3t3
-binaryLp2j0nj1x3y2s3t3
-binaryRp2j0nj1x3y2s3t3
-binaryLp2j1nj2x3y2s3t3
-binaryRp2j1nj2x3y2s3t3
-binaryLp2j2nj3x3y2s3t3
-binaryRp2j2nj3x3y2s3t3
-binaryLp2j3nj4x3y2s3t3
-binaryRp2j3nj4x3y2s3t3
-binaryLp3j0nj1x3y2s3t3
-binaryRp3j0nj1x3y2s3t3
-binaryLp3j1nj2x3y2s3t3
-binaryRp3j1nj2x3y2s3t3
-binaryLp3j2nj3x3y2s3t3
-binaryRp3j2nj3x3y2s3t3
-binaryLp3j3nj4x3y2s3t3
-binaryRp3j3nj4x3y2s3t3
-binaryUp0j0nj1x1y3s2t3
-binaryDp0j0nj1x1y3s2t3
-binaryUp0j1nj2x1y3s2t3
-binaryDp0j1nj2x1y3s2t3
-binaryUp0j2nj3x1y3s2t3
-binaryDp0j2nj3x1y3s2t3
-binaryUp0j3nj4x1y3s2t3
-binaryDp0j3nj4x1y3s2t3
-binaryUp1j0nj1x1y3s2t3
-binaryDp1j0nj1x1y3s2t3
-binaryUp1j1nj2x1y3s2t3
-binaryDp1j1nj2x1y3s2t3
-binaryUp1j2nj3x1y3s2t3
-binaryDp1j2nj3x1y3s2t3
-binaryUp1j3nj4x1y3s2t3
-binaryDp1j3nj4x1y3s2t3
-binaryUp2j0nj1x1y3s2t3
-binaryDp2j0nj1x1y3s2t3
-binaryUp2j1nj2x1y3s2t3
-binaryDp2j1nj2x1y3s2t3
-binaryUp2j2nj3x1y3s2t3
-binaryDp2j2nj3x1y3s2t3
-binaryUp2j3nj4x1y3s2t3
-binaryDp2j3nj4x1y3s2t3
-binaryUp3j0nj1x1y3s2t3
-binaryDp3j0nj1x1y3s2t3
-binaryUp3j1nj2x1y3s2t3
-binaryDp3j1nj2x1y3s2t3
-binaryUp3j2nj3x1y3s2t3
-binaryDp3j2nj3x1y3s2t3
-binaryUp3j3nj4x1y3s2t3
-binaryDp3j3nj4x1y3s2t3
+binaryLp1j4nj5x3y2s3t3
+binaryRp1j4nj5x3y2s3t3
+binaryLp1j5nj6x3y2s3t3
+binaryRp1j5nj6x3y2s3t3
+binaryLp1j6nj7x3y2s3t3
+binaryRp1j6nj7x3y2s3t3
+binaryLp1j7nj8x3y2s3t3
+binaryRp1j7nj8x3y2s3t3
+binaryLp1j8nj9x3y2s3t3
+binaryRp1j8nj9x3y2s3t3
+binaryUp0j0nj1x0y1s1t1
+binaryDp0j0nj1x0y1s1t1
+binaryUp0j1nj2x0y1s1t1
+binaryDp0j1nj2x0y1s1t1
+binaryUp0j2nj3x0y1s1t1
+binaryDp0j2nj3x0y1s1t1
+binaryUp0j3nj4x0y1s1t1
+binaryDp0j3nj4x0y1s1t1
+binaryUp0j4nj5x0y1s1t1
+binaryDp0j4nj5x0y1s1t1
+binaryUp0j5nj6x0y1s1t1
+binaryDp0j5nj6x0y1s1t1
+binaryUp0j6nj7x0y1s1t1
+binaryDp0j6nj7x0y1s1t1
+binaryUp0j7nj8x0y1s1t1
+binaryDp0j7nj8x0y1s1t1
+binaryUp0j8nj9x0y1s1t1
+binaryDp0j8nj9x0y1s1t1
+binaryUp1j0nj1x0y1s1t1
+binaryDp1j0nj1x0y1s1t1
+binaryUp1j1nj2x0y1s1t1
+binaryDp1j1nj2x0y1s1t1
+binaryUp1j2nj3x0y1s1t1
+binaryDp1j2nj3x0y1s1t1
+binaryUp1j3nj4x0y1s1t1
+binaryDp1j3nj4x0y1s1t1
+binaryUp1j4nj5x0y1s1t1
+binaryDp1j4nj5x0y1s1t1
+binaryUp1j5nj6x0y1s1t1
+binaryDp1j5nj6x0y1s1t1
+binaryUp1j6nj7x0y1s1t1
+binaryDp1j6nj7x0y1s1t1
+binaryUp1j7nj8x0y1s1t1
+binaryDp1j7nj8x0y1s1t1
+binaryUp1j8nj9x0y1s1t1
+binaryDp1j8nj9x0y1s1t1
+binaryUp0j0nj1x0y4s1t4
+binaryDp0j0nj1x0y4s1t4
+binaryUp0j1nj2x0y4s1t4
+binaryDp0j1nj2x0y4s1t4
+binaryUp0j2nj3x0y4s1t4
+binaryDp0j2nj3x0y4s1t4
+binaryUp0j3nj4x0y4s1t4
+binaryDp0j3nj4x0y4s1t4
+binaryUp0j4nj5x0y4s1t4
+binaryDp0j4nj5x0y4s1t4
+binaryUp0j5nj6x0y4s1t4
+binaryDp0j5nj6x0y4s1t4
+binaryUp0j6nj7x0y4s1t4
+binaryDp0j6nj7x0y4s1t4
+binaryUp0j7nj8x0y4s1t4
+binaryDp0j7nj8x0y4s1t4
+binaryUp0j8nj9x0y4s1t4
+binaryDp0j8nj9x0y4s1t4
+binaryUp1j0nj1x0y4s1t4
+binaryDp1j0nj1x0y4s1t4
+binaryUp1j1nj2x0y4s1t4
+binaryDp1j1nj2x0y4s1t4
+binaryUp1j2nj3x0y4s1t4
+binaryDp1j2nj3x0y4s1t4
+binaryUp1j3nj4x0y4s1t4
+binaryDp1j3nj4x0y4s1t4
+binaryUp1j4nj5x0y4s1t4
+binaryDp1j4nj5x0y4s1t4
+binaryUp1j5nj6x0y4s1t4
+binaryDp1j5nj6x0y4s1t4
+binaryUp1j6nj7x0y4s1t4
+binaryDp1j6nj7x0y4s1t4
+binaryUp1j7nj8x0y4s1t4
+binaryDp1j7nj8x0y4s1t4
+binaryUp1j8nj9x0y4s1t4
+binaryDp1j8nj9x0y4s1t4
+binaryUp0j0nj1x1y1s2t1
+binaryDp0j0nj1x1y1s2t1
+binaryUp0j1nj2x1y1s2t1
+binaryDp0j1nj2x1y1s2t1
+binaryUp0j2nj3x1y1s2t1
+binaryDp0j2nj3x1y1s2t1
+binaryUp0j3nj4x1y1s2t1
+binaryDp0j3nj4x1y1s2t1
+binaryUp0j4nj5x1y1s2t1
+binaryDp0j4nj5x1y1s2t1
+binaryUp0j5nj6x1y1s2t1
+binaryDp0j5nj6x1y1s2t1
+binaryUp0j6nj7x1y1s2t1
+binaryDp0j6nj7x1y1s2t1
+binaryUp0j7nj8x1y1s2t1
+binaryDp0j7nj8x1y1s2t1
+binaryUp0j8nj9x1y1s2t1
+binaryDp0j8nj9x1y1s2t1
+binaryUp1j0nj1x1y1s2t1
+binaryDp1j0nj1x1y1s2t1
+binaryUp1j1nj2x1y1s2t1
+binaryDp1j1nj2x1y1s2t1
+binaryUp1j2nj3x1y1s2t1
+binaryDp1j2nj3x1y1s2t1
+binaryUp1j3nj4x1y1s2t1
+binaryDp1j3nj4x1y1s2t1
+binaryUp1j4nj5x1y1s2t1
+binaryDp1j4nj5x1y1s2t1
+binaryUp1j5nj6x1y1s2t1
+binaryDp1j5nj6x1y1s2t1
+binaryUp1j6nj7x1y1s2t1
+binaryDp1j6nj7x1y1s2t1
+binaryUp1j7nj8x1y1s2t1
+binaryDp1j7nj8x1y1s2t1
+binaryUp1j8nj9x1y1s2t1
+binaryDp1j8nj9x1y1s2t1
+binaryLp0j0nj1x0y2s0t3
+binaryRp0j0nj1x0y2s0t3
+binaryLp0j1nj2x0y2s0t3
+binaryRp0j1nj2x0y2s0t3
+binaryLp0j2nj3x0y2s0t3
+binaryRp0j2nj3x0y2s0t3
+binaryLp0j3nj4x0y2s0t3
+binaryRp0j3nj4x0y2s0t3
+binaryLp0j4nj5x0y2s0t3
+binaryRp0j4nj5x0y2s0t3
+binaryLp0j5nj6x0y2s0t3
+binaryRp0j5nj6x0y2s0t3
+binaryLp0j6nj7x0y2s0t3
+binaryRp0j6nj7x0y2s0t3
+binaryLp0j7nj8x0y2s0t3
+binaryRp0j7nj8x0y2s0t3
+binaryLp0j8nj9x0y2s0t3
+binaryRp0j8nj9x0y2s0t3
+binaryLp1j0nj1x0y2s0t3
+binaryRp1j0nj1x0y2s0t3
+binaryLp1j1nj2x0y2s0t3
+binaryRp1j1nj2x0y2s0t3
+binaryLp1j2nj3x0y2s0t3
+binaryRp1j2nj3x0y2s0t3
+binaryLp1j3nj4x0y2s0t3
+binaryRp1j3nj4x0y2s0t3
+binaryLp1j4nj5x0y2s0t3
+binaryRp1j4nj5x0y2s0t3
+binaryLp1j5nj6x0y2s0t3
+binaryRp1j5nj6x0y2s0t3
+binaryLp1j6nj7x0y2s0t3
+binaryRp1j6nj7x0y2s0t3
+binaryLp1j7nj8x0y2s0t3
+binaryRp1j7nj8x0y2s0t3
+binaryLp1j8nj9x0y2s0t3
+binaryRp1j8nj9x0y2s0t3
+binaryUp0j0nj1x2y1s3t1
+binaryDp0j0nj1x2y1s3t1
+binaryUp0j1nj2x2y1s3t1
+binaryDp0j1nj2x2y1s3t1
+binaryUp0j2nj3x2y1s3t1
+binaryDp0j2nj3x2y1s3t1
+binaryUp0j3nj4x2y1s3t1
+binaryDp0j3nj4x2y1s3t1
+binaryUp0j4nj5x2y1s3t1
+binaryDp0j4nj5x2y1s3t1
+binaryUp0j5nj6x2y1s3t1
+binaryDp0j5nj6x2y1s3t1
+binaryUp0j6nj7x2y1s3t1
+binaryDp0j6nj7x2y1s3t1
+binaryUp0j7nj8x2y1s3t1
+binaryDp0j7nj8x2y1s3t1
+binaryUp0j8nj9x2y1s3t1
+binaryDp0j8nj9x2y1s3t1
+binaryUp1j0nj1x2y1s3t1
+binaryDp1j0nj1x2y1s3t1
+binaryUp1j1nj2x2y1s3t1
+binaryDp1j1nj2x2y1s3t1
+binaryUp1j2nj3x2y1s3t1
+binaryDp1j2nj3x2y1s3t1
+binaryUp1j3nj4x2y1s3t1
+binaryDp1j3nj4x2y1s3t1
+binaryUp1j4nj5x2y1s3t1
+binaryDp1j4nj5x2y1s3t1
+binaryUp1j5nj6x2y1s3t1
+binaryDp1j5nj6x2y1s3t1
+binaryUp1j6nj7x2y1s3t1
+binaryDp1j6nj7x2y1s3t1
+binaryUp1j7nj8x2y1s3t1
+binaryDp1j7nj8x2y1s3t1
+binaryUp1j8nj9x2y1s3t1
+binaryDp1j8nj9x2y1s3t1
+binaryUp0j0nj1x3y4s4t4
+binaryDp0j0nj1x3y4s4t4
+binaryUp0j1nj2x3y4s4t4
+binaryDp0j1nj2x3y4s4t4
+binaryUp0j2nj3x3y4s4t4
+binaryDp0j2nj3x3y4s4t4
+binaryUp0j3nj4x3y4s4t4
+binaryDp0j3nj4x3y4s4t4
+binaryUp0j4nj5x3y4s4t4
+binaryDp0j4nj5x3y4s4t4
+binaryUp0j5nj6x3y4s4t4
+binaryDp0j5nj6x3y4s4t4
+binaryUp0j6nj7x3y4s4t4
+binaryDp0j6nj7x3y4s4t4
+binaryUp0j7nj8x3y4s4t4
+binaryDp0j7nj8x3y4s4t4
+binaryUp0j8nj9x3y4s4t4
+binaryDp0j8nj9x3y4s4t4
+binaryUp1j0nj1x3y4s4t4
+binaryDp1j0nj1x3y4s4t4
+binaryUp1j1nj2x3y4s4t4
+binaryDp1j1nj2x3y4s4t4
+binaryUp1j2nj3x3y4s4t4
+binaryDp1j2nj3x3y4s4t4
+binaryUp1j3nj4x3y4s4t4
+binaryDp1j3nj4x3y4s4t4
+binaryUp1j4nj5x3y4s4t4
+binaryDp1j4nj5x3y4s4t4
+binaryUp1j5nj6x3y4s4t4
+binaryDp1j5nj6x3y4s4t4
+binaryUp1j6nj7x3y4s4t4
+binaryDp1j6nj7x3y4s4t4
+binaryUp1j7nj8x3y4s4t4
+binaryDp1j7nj8x3y4s4t4
+binaryUp1j8nj9x3y4s4t4
+binaryDp1j8nj9x3y4s4t4
+binaryLp0j0nj1x2y3s2t4
+binaryRp0j0nj1x2y3s2t4
+binaryLp0j1nj2x2y3s2t4
+binaryRp0j1nj2x2y3s2t4
+binaryLp0j2nj3x2y3s2t4
+binaryRp0j2nj3x2y3s2t4
+binaryLp0j3nj4x2y3s2t4
+binaryRp0j3nj4x2y3s2t4
+binaryLp0j4nj5x2y3s2t4
+binaryRp0j4nj5x2y3s2t4
+binaryLp0j5nj6x2y3s2t4
+binaryRp0j5nj6x2y3s2t4
+binaryLp0j6nj7x2y3s2t4
+binaryRp0j6nj7x2y3s2t4
+binaryLp0j7nj8x2y3s2t4
+binaryRp0j7nj8x2y3s2t4
+binaryLp0j8nj9x2y3s2t4
+binaryRp0j8nj9x2y3s2t4
+binaryLp1j0nj1x2y3s2t4
+binaryRp1j0nj1x2y3s2t4
+binaryLp1j1nj2x2y3s2t4
+binaryRp1j1nj2x2y3s2t4
+binaryLp1j2nj3x2y3s2t4
+binaryRp1j2nj3x2y3s2t4
+binaryLp1j3nj4x2y3s2t4
+binaryRp1j3nj4x2y3s2t4
+binaryLp1j4nj5x2y3s2t4
+binaryRp1j4nj5x2y3s2t4
+binaryLp1j5nj6x2y3s2t4
+binaryRp1j5nj6x2y3s2t4
+binaryLp1j6nj7x2y3s2t4
+binaryRp1j6nj7x2y3s2t4
+binaryLp1j7nj8x2y3s2t4
+binaryRp1j7nj8x2y3s2t4
+binaryLp1j8nj9x2y3s2t4
+binaryRp1j8nj9x2y3s2t4
+binaryLp0j0nj1x1y2s1t3
+binaryRp0j0nj1x1y2s1t3
+binaryLp0j1nj2x1y2s1t3
+binaryRp0j1nj2x1y2s1t3
+binaryLp0j2nj3x1y2s1t3
+binaryRp0j2nj3x1y2s1t3
+binaryLp0j3nj4x1y2s1t3
+binaryRp0j3nj4x1y2s1t3
+binaryLp0j4nj5x1y2s1t3
+binaryRp0j4nj5x1y2s1t3
+binaryLp0j5nj6x1y2s1t3
+binaryRp0j5nj6x1y2s1t3
+binaryLp0j6nj7x1y2s1t3
+binaryRp0j6nj7x1y2s1t3
+binaryLp0j7nj8x1y2s1t3
+binaryRp0j7nj8x1y2s1t3
+binaryLp0j8nj9x1y2s1t3
+binaryRp0j8nj9x1y2s1t3
+binaryLp1j0nj1x1y2s1t3
+binaryRp1j0nj1x1y2s1t3
+binaryLp1j1nj2x1y2s1t3
+binaryRp1j1nj2x1y2s1t3
+binaryLp1j2nj3x1y2s1t3
+binaryRp1j2nj3x1y2s1t3
+binaryLp1j3nj4x1y2s1t3
+binaryRp1j3nj4x1y2s1t3
+binaryLp1j4nj5x1y2s1t3
+binaryRp1j4nj5x1y2s1t3
+binaryLp1j5nj6x1y2s1t3
+binaryRp1j5nj6x1y2s1t3
+binaryLp1j6nj7x1y2s1t3
+binaryRp1j6nj7x1y2s1t3
+binaryLp1j7nj8x1y2s1t3
+binaryRp1j7nj8x1y2s1t3
+binaryLp1j8nj9x1y2s1t3
+binaryRp1j8nj9x1y2s1t3
+binaryUp0j0nj1x0y3s1t3
+binaryDp0j0nj1x0y3s1t3
+binaryUp0j1nj2x0y3s1t3
+binaryDp0j1nj2x0y3s1t3
+binaryUp0j2nj3x0y3s1t3
+binaryDp0j2nj3x0y3s1t3
+binaryUp0j3nj4x0y3s1t3
+binaryDp0j3nj4x0y3s1t3
+binaryUp0j4nj5x0y3s1t3
+binaryDp0j4nj5x0y3s1t3
+binaryUp0j5nj6x0y3s1t3
+binaryDp0j5nj6x0y3s1t3
+binaryUp0j6nj7x0y3s1t3
+binaryDp0j6nj7x0y3s1t3
+binaryUp0j7nj8x0y3s1t3
+binaryDp0j7nj8x0y3s1t3
+binaryUp0j8nj9x0y3s1t3
+binaryDp0j8nj9x0y3s1t3
+binaryUp1j0nj1x0y3s1t3
+binaryDp1j0nj1x0y3s1t3
+binaryUp1j1nj2x0y3s1t3
+binaryDp1j1nj2x0y3s1t3
+binaryUp1j2nj3x0y3s1t3
+binaryDp1j2nj3x0y3s1t3
+binaryUp1j3nj4x0y3s1t3
+binaryDp1j3nj4x0y3s1t3
+binaryUp1j4nj5x0y3s1t3
+binaryDp1j4nj5x0y3s1t3
+binaryUp1j5nj6x0y3s1t3
+binaryDp1j5nj6x0y3s1t3
+binaryUp1j6nj7x0y3s1t3
+binaryDp1j6nj7x0y3s1t3
+binaryUp1j7nj8x0y3s1t3
+binaryDp1j7nj8x0y3s1t3
+binaryUp1j8nj9x0y3s1t3
+binaryDp1j8nj9x0y3s1t3
+binaryUp0j0nj1x0y0s1t0
+binaryDp0j0nj1x0y0s1t0
+binaryUp0j1nj2x0y0s1t0
+binaryDp0j1nj2x0y0s1t0
+binaryUp0j2nj3x0y0s1t0
+binaryDp0j2nj3x0y0s1t0
+binaryUp0j3nj4x0y0s1t0
+binaryDp0j3nj4x0y0s1t0
+binaryUp0j4nj5x0y0s1t0
+binaryDp0j4nj5x0y0s1t0
+binaryUp0j5nj6x0y0s1t0
+binaryDp0j5nj6x0y0s1t0
+binaryUp0j6nj7x0y0s1t0
+binaryDp0j6nj7x0y0s1t0
+binaryUp0j7nj8x0y0s1t0
+binaryDp0j7nj8x0y0s1t0
+binaryUp0j8nj9x0y0s1t0
+binaryDp0j8nj9x0y0s1t0
+binaryUp1j0nj1x0y0s1t0
+binaryDp1j0nj1x0y0s1t0
+binaryUp1j1nj2x0y0s1t0
+binaryDp1j1nj2x0y0s1t0
+binaryUp1j2nj3x0y0s1t0
+binaryDp1j2nj3x0y0s1t0
+binaryUp1j3nj4x0y0s1t0
+binaryDp1j3nj4x0y0s1t0
+binaryUp1j4nj5x0y0s1t0
+binaryDp1j4nj5x0y0s1t0
+binaryUp1j5nj6x0y0s1t0
+binaryDp1j5nj6x0y0s1t0
+binaryUp1j6nj7x0y0s1t0
+binaryDp1j6nj7x0y0s1t0
+binaryUp1j7nj8x0y0s1t0
+binaryDp1j7nj8x0y0s1t0
+binaryUp1j8nj9x0y0s1t0
+binaryDp1j8nj9x0y0s1t0
+binaryLp0j0nj1x2y0s2t1
+binaryRp0j0nj1x2y0s2t1
+binaryLp0j1nj2x2y0s2t1
+binaryRp0j1nj2x2y0s2t1
+binaryLp0j2nj3x2y0s2t1
+binaryRp0j2nj3x2y0s2t1
+binaryLp0j3nj4x2y0s2t1
+binaryRp0j3nj4x2y0s2t1
+binaryLp0j4nj5x2y0s2t1
+binaryRp0j4nj5x2y0s2t1
+binaryLp0j5nj6x2y0s2t1
+binaryRp0j5nj6x2y0s2t1
+binaryLp0j6nj7x2y0s2t1
+binaryRp0j6nj7x2y0s2t1
+binaryLp0j7nj8x2y0s2t1
+binaryRp0j7nj8x2y0s2t1
+binaryLp0j8nj9x2y0s2t1
+binaryRp0j8nj9x2y0s2t1
+binaryLp1j0nj1x2y0s2t1
+binaryRp1j0nj1x2y0s2t1
+binaryLp1j1nj2x2y0s2t1
+binaryRp1j1nj2x2y0s2t1
+binaryLp1j2nj3x2y0s2t1
+binaryRp1j2nj3x2y0s2t1
+binaryLp1j3nj4x2y0s2t1
+binaryRp1j3nj4x2y0s2t1
+binaryLp1j4nj5x2y0s2t1
+binaryRp1j4nj5x2y0s2t1
+binaryLp1j5nj6x2y0s2t1
+binaryRp1j5nj6x2y0s2t1
+binaryLp1j6nj7x2y0s2t1
+binaryRp1j6nj7x2y0s2t1
+binaryLp1j7nj8x2y0s2t1
+binaryRp1j7nj8x2y0s2t1
+binaryLp1j8nj9x2y0s2t1
+binaryRp1j8nj9x2y0s2t1
+binaryUp0j0nj1x2y2s3t2
+binaryDp0j0nj1x2y2s3t2
+binaryUp0j1nj2x2y2s3t2
+binaryDp0j1nj2x2y2s3t2
+binaryUp0j2nj3x2y2s3t2
+binaryDp0j2nj3x2y2s3t2
+binaryUp0j3nj4x2y2s3t2
+binaryDp0j3nj4x2y2s3t2
+binaryUp0j4nj5x2y2s3t2
+binaryDp0j4nj5x2y2s3t2
+binaryUp0j5nj6x2y2s3t2
+binaryDp0j5nj6x2y2s3t2
+binaryUp0j6nj7x2y2s3t2
+binaryDp0j6nj7x2y2s3t2
+binaryUp0j7nj8x2y2s3t2
+binaryDp0j7nj8x2y2s3t2
+binaryUp0j8nj9x2y2s3t2
+binaryDp0j8nj9x2y2s3t2
+binaryUp1j0nj1x2y2s3t2
+binaryDp1j0nj1x2y2s3t2
+binaryUp1j1nj2x2y2s3t2
+binaryDp1j1nj2x2y2s3t2
+binaryUp1j2nj3x2y2s3t2
+binaryDp1j2nj3x2y2s3t2
+binaryUp1j3nj4x2y2s3t2
+binaryDp1j3nj4x2y2s3t2
+binaryUp1j4nj5x2y2s3t2
+binaryDp1j4nj5x2y2s3t2
+binaryUp1j5nj6x2y2s3t2
+binaryDp1j5nj6x2y2s3t2
+binaryUp1j6nj7x2y2s3t2
+binaryDp1j6nj7x2y2s3t2
+binaryUp1j7nj8x2y2s3t2
+binaryDp1j7nj8x2y2s3t2
+binaryUp1j8nj9x2y2s3t2
+binaryDp1j8nj9x2y2s3t2
+binaryLp0j0nj1x4y2s4t3
+binaryRp0j0nj1x4y2s4t3
+binaryLp0j1nj2x4y2s4t3
+binaryRp0j1nj2x4y2s4t3
+binaryLp0j2nj3x4y2s4t3
+binaryRp0j2nj3x4y2s4t3
+binaryLp0j3nj4x4y2s4t3
+binaryRp0j3nj4x4y2s4t3
+binaryLp0j4nj5x4y2s4t3
+binaryRp0j4nj5x4y2s4t3
+binaryLp0j5nj6x4y2s4t3
+binaryRp0j5nj6x4y2s4t3
+binaryLp0j6nj7x4y2s4t3
+binaryRp0j6nj7x4y2s4t3
+binaryLp0j7nj8x4y2s4t3
+binaryRp0j7nj8x4y2s4t3
+binaryLp0j8nj9x4y2s4t3
+binaryRp0j8nj9x4y2s4t3
+binaryLp1j0nj1x4y2s4t3
+binaryRp1j0nj1x4y2s4t3
+binaryLp1j1nj2x4y2s4t3
+binaryRp1j1nj2x4y2s4t3
+binaryLp1j2nj3x4y2s4t3
+binaryRp1j2nj3x4y2s4t3
+binaryLp1j3nj4x4y2s4t3
+binaryRp1j3nj4x4y2s4t3
+binaryLp1j4nj5x4y2s4t3
+binaryRp1j4nj5x4y2s4t3
+binaryLp1j5nj6x4y2s4t3
+binaryRp1j5nj6x4y2s4t3
+binaryLp1j6nj7x4y2s4t3
+binaryRp1j6nj7x4y2s4t3
+binaryLp1j7nj8x4y2s4t3
+binaryRp1j7nj8x4y2s4t3
+binaryLp1j8nj9x4y2s4t3
+binaryRp1j8nj9x4y2s4t3
+binaryLp0j0nj1x4y3s4t4
+binaryRp0j0nj1x4y3s4t4
+binaryLp0j1nj2x4y3s4t4
+binaryRp0j1nj2x4y3s4t4
+binaryLp0j2nj3x4y3s4t4
+binaryRp0j2nj3x4y3s4t4
+binaryLp0j3nj4x4y3s4t4
+binaryRp0j3nj4x4y3s4t4
+binaryLp0j4nj5x4y3s4t4
+binaryRp0j4nj5x4y3s4t4
+binaryLp0j5nj6x4y3s4t4
+binaryRp0j5nj6x4y3s4t4
+binaryLp0j6nj7x4y3s4t4
+binaryRp0j6nj7x4y3s4t4
+binaryLp0j7nj8x4y3s4t4
+binaryRp0j7nj8x4y3s4t4
+binaryLp0j8nj9x4y3s4t4
+binaryRp0j8nj9x4y3s4t4
+binaryLp1j0nj1x4y3s4t4
+binaryRp1j0nj1x4y3s4t4
+binaryLp1j1nj2x4y3s4t4
+binaryRp1j1nj2x4y3s4t4
+binaryLp1j2nj3x4y3s4t4
+binaryRp1j2nj3x4y3s4t4
+binaryLp1j3nj4x4y3s4t4
+binaryRp1j3nj4x4y3s4t4
+binaryLp1j4nj5x4y3s4t4
+binaryRp1j4nj5x4y3s4t4
+binaryLp1j5nj6x4y3s4t4
+binaryRp1j5nj6x4y3s4t4
+binaryLp1j6nj7x4y3s4t4
+binaryRp1j6nj7x4y3s4t4
+binaryLp1j7nj8x4y3s4t4
+binaryRp1j7nj8x4y3s4t4
+binaryLp1j8nj9x4y3s4t4
+binaryRp1j8nj9x4y3s4t4
+binaryUp0j0nj1x3y3s4t3
+binaryDp0j0nj1x3y3s4t3
+binaryUp0j1nj2x3y3s4t3
+binaryDp0j1nj2x3y3s4t3
+binaryUp0j2nj3x3y3s4t3
+binaryDp0j2nj3x3y3s4t3
+binaryUp0j3nj4x3y3s4t3
+binaryDp0j3nj4x3y3s4t3
+binaryUp0j4nj5x3y3s4t3
+binaryDp0j4nj5x3y3s4t3
+binaryUp0j5nj6x3y3s4t3
+binaryDp0j5nj6x3y3s4t3
+binaryUp0j6nj7x3y3s4t3
+binaryDp0j6nj7x3y3s4t3
+binaryUp0j7nj8x3y3s4t3
+binaryDp0j7nj8x3y3s4t3
+binaryUp0j8nj9x3y3s4t3
+binaryDp0j8nj9x3y3s4t3
+binaryUp1j0nj1x3y3s4t3
+binaryDp1j0nj1x3y3s4t3
+binaryUp1j1nj2x3y3s4t3
+binaryDp1j1nj2x3y3s4t3
+binaryUp1j2nj3x3y3s4t3
+binaryDp1j2nj3x3y3s4t3
+binaryUp1j3nj4x3y3s4t3
+binaryDp1j3nj4x3y3s4t3
+binaryUp1j4nj5x3y3s4t3
+binaryDp1j4nj5x3y3s4t3
+binaryUp1j5nj6x3y3s4t3
+binaryDp1j5nj6x3y3s4t3
+binaryUp1j6nj7x3y3s4t3
+binaryDp1j6nj7x3y3s4t3
+binaryUp1j7nj8x3y3s4t3
+binaryDp1j7nj8x3y3s4t3
+binaryUp1j8nj9x3y3s4t3
+binaryDp1j8nj9x3y3s4t3
+binaryLp0j0nj1x3y0s3t1
+binaryRp0j0nj1x3y0s3t1
+binaryLp0j1nj2x3y0s3t1
+binaryRp0j1nj2x3y0s3t1
+binaryLp0j2nj3x3y0s3t1
+binaryRp0j2nj3x3y0s3t1
+binaryLp0j3nj4x3y0s3t1
+binaryRp0j3nj4x3y0s3t1
+binaryLp0j4nj5x3y0s3t1
+binaryRp0j4nj5x3y0s3t1
+binaryLp0j5nj6x3y0s3t1
+binaryRp0j5nj6x3y0s3t1
+binaryLp0j6nj7x3y0s3t1
+binaryRp0j6nj7x3y0s3t1
+binaryLp0j7nj8x3y0s3t1
+binaryRp0j7nj8x3y0s3t1
+binaryLp0j8nj9x3y0s3t1
+binaryRp0j8nj9x3y0s3t1
+binaryLp1j0nj1x3y0s3t1
+binaryRp1j0nj1x3y0s3t1
+binaryLp1j1nj2x3y0s3t1
+binaryRp1j1nj2x3y0s3t1
+binaryLp1j2nj3x3y0s3t1
+binaryRp1j2nj3x3y0s3t1
+binaryLp1j3nj4x3y0s3t1
+binaryRp1j3nj4x3y0s3t1
+binaryLp1j4nj5x3y0s3t1
+binaryRp1j4nj5x3y0s3t1
+binaryLp1j5nj6x3y0s3t1
+binaryRp1j5nj6x3y0s3t1
+binaryLp1j6nj7x3y0s3t1
+binaryRp1j6nj7x3y0s3t1
+binaryLp1j7nj8x3y0s3t1
+binaryRp1j7nj8x3y0s3t1
+binaryLp1j8nj9x3y0s3t1
+binaryRp1j8nj9x3y0s3t1
 binaryUp0j0nj1x1y2s2t2
 binaryDp0j0nj1x1y2s2t2
 binaryUp0j1nj2x1y2s2t2
@@ -2365,6 +10999,16 @@ binaryUp0j2nj3x1y2s2t2
 binaryDp0j2nj3x1y2s2t2
 binaryUp0j3nj4x1y2s2t2
 binaryDp0j3nj4x1y2s2t2
+binaryUp0j4nj5x1y2s2t2
+binaryDp0j4nj5x1y2s2t2
+binaryUp0j5nj6x1y2s2t2
+binaryDp0j5nj6x1y2s2t2
+binaryUp0j6nj7x1y2s2t2
+binaryDp0j6nj7x1y2s2t2
+binaryUp0j7nj8x1y2s2t2
+binaryDp0j7nj8x1y2s2t2
+binaryUp0j8nj9x1y2s2t2
+binaryDp0j8nj9x1y2s2t2
 binaryUp1j0nj1x1y2s2t2
 binaryDp1j0nj1x1y2s2t2
 binaryUp1j1nj2x1y2s2t2
@@ -2373,22 +11017,484 @@ binaryUp1j2nj3x1y2s2t2
 binaryDp1j2nj3x1y2s2t2
 binaryUp1j3nj4x1y2s2t2
 binaryDp1j3nj4x1y2s2t2
-binaryUp2j0nj1x1y2s2t2
-binaryDp2j0nj1x1y2s2t2
-binaryUp2j1nj2x1y2s2t2
-binaryDp2j1nj2x1y2s2t2
-binaryUp2j2nj3x1y2s2t2
-binaryDp2j2nj3x1y2s2t2
-binaryUp2j3nj4x1y2s2t2
-binaryDp2j3nj4x1y2s2t2
-binaryUp3j0nj1x1y2s2t2
-binaryDp3j0nj1x1y2s2t2
-binaryUp3j1nj2x1y2s2t2
-binaryDp3j1nj2x1y2s2t2
-binaryUp3j2nj3x1y2s2t2
-binaryDp3j2nj3x1y2s2t2
-binaryUp3j3nj4x1y2s2t2
-binaryDp3j3nj4x1y2s2t2
+binaryUp1j4nj5x1y2s2t2
+binaryDp1j4nj5x1y2s2t2
+binaryUp1j5nj6x1y2s2t2
+binaryDp1j5nj6x1y2s2t2
+binaryUp1j6nj7x1y2s2t2
+binaryDp1j6nj7x1y2s2t2
+binaryUp1j7nj8x1y2s2t2
+binaryDp1j7nj8x1y2s2t2
+binaryUp1j8nj9x1y2s2t2
+binaryDp1j8nj9x1y2s2t2
+binaryLp0j0nj1x0y1s0t2
+binaryRp0j0nj1x0y1s0t2
+binaryLp0j1nj2x0y1s0t2
+binaryRp0j1nj2x0y1s0t2
+binaryLp0j2nj3x0y1s0t2
+binaryRp0j2nj3x0y1s0t2
+binaryLp0j3nj4x0y1s0t2
+binaryRp0j3nj4x0y1s0t2
+binaryLp0j4nj5x0y1s0t2
+binaryRp0j4nj5x0y1s0t2
+binaryLp0j5nj6x0y1s0t2
+binaryRp0j5nj6x0y1s0t2
+binaryLp0j6nj7x0y1s0t2
+binaryRp0j6nj7x0y1s0t2
+binaryLp0j7nj8x0y1s0t2
+binaryRp0j7nj8x0y1s0t2
+binaryLp0j8nj9x0y1s0t2
+binaryRp0j8nj9x0y1s0t2
+binaryLp1j0nj1x0y1s0t2
+binaryRp1j0nj1x0y1s0t2
+binaryLp1j1nj2x0y1s0t2
+binaryRp1j1nj2x0y1s0t2
+binaryLp1j2nj3x0y1s0t2
+binaryRp1j2nj3x0y1s0t2
+binaryLp1j3nj4x0y1s0t2
+binaryRp1j3nj4x0y1s0t2
+binaryLp1j4nj5x0y1s0t2
+binaryRp1j4nj5x0y1s0t2
+binaryLp1j5nj6x0y1s0t2
+binaryRp1j5nj6x0y1s0t2
+binaryLp1j6nj7x0y1s0t2
+binaryRp1j6nj7x0y1s0t2
+binaryLp1j7nj8x0y1s0t2
+binaryRp1j7nj8x0y1s0t2
+binaryLp1j8nj9x0y1s0t2
+binaryRp1j8nj9x0y1s0t2
+binaryLp0j0nj1x1y0s1t1
+binaryRp0j0nj1x1y0s1t1
+binaryLp0j1nj2x1y0s1t1
+binaryRp0j1nj2x1y0s1t1
+binaryLp0j2nj3x1y0s1t1
+binaryRp0j2nj3x1y0s1t1
+binaryLp0j3nj4x1y0s1t1
+binaryRp0j3nj4x1y0s1t1
+binaryLp0j4nj5x1y0s1t1
+binaryRp0j4nj5x1y0s1t1
+binaryLp0j5nj6x1y0s1t1
+binaryRp0j5nj6x1y0s1t1
+binaryLp0j6nj7x1y0s1t1
+binaryRp0j6nj7x1y0s1t1
+binaryLp0j7nj8x1y0s1t1
+binaryRp0j7nj8x1y0s1t1
+binaryLp0j8nj9x1y0s1t1
+binaryRp0j8nj9x1y0s1t1
+binaryLp1j0nj1x1y0s1t1
+binaryRp1j0nj1x1y0s1t1
+binaryLp1j1nj2x1y0s1t1
+binaryRp1j1nj2x1y0s1t1
+binaryLp1j2nj3x1y0s1t1
+binaryRp1j2nj3x1y0s1t1
+binaryLp1j3nj4x1y0s1t1
+binaryRp1j3nj4x1y0s1t1
+binaryLp1j4nj5x1y0s1t1
+binaryRp1j4nj5x1y0s1t1
+binaryLp1j5nj6x1y0s1t1
+binaryRp1j5nj6x1y0s1t1
+binaryLp1j6nj7x1y0s1t1
+binaryRp1j6nj7x1y0s1t1
+binaryLp1j7nj8x1y0s1t1
+binaryRp1j7nj8x1y0s1t1
+binaryLp1j8nj9x1y0s1t1
+binaryRp1j8nj9x1y0s1t1
+binaryLp0j0nj1x4y1s4t2
+binaryRp0j0nj1x4y1s4t2
+binaryLp0j1nj2x4y1s4t2
+binaryRp0j1nj2x4y1s4t2
+binaryLp0j2nj3x4y1s4t2
+binaryRp0j2nj3x4y1s4t2
+binaryLp0j3nj4x4y1s4t2
+binaryRp0j3nj4x4y1s4t2
+binaryLp0j4nj5x4y1s4t2
+binaryRp0j4nj5x4y1s4t2
+binaryLp0j5nj6x4y1s4t2
+binaryRp0j5nj6x4y1s4t2
+binaryLp0j6nj7x4y1s4t2
+binaryRp0j6nj7x4y1s4t2
+binaryLp0j7nj8x4y1s4t2
+binaryRp0j7nj8x4y1s4t2
+binaryLp0j8nj9x4y1s4t2
+binaryRp0j8nj9x4y1s4t2
+binaryLp1j0nj1x4y1s4t2
+binaryRp1j0nj1x4y1s4t2
+binaryLp1j1nj2x4y1s4t2
+binaryRp1j1nj2x4y1s4t2
+binaryLp1j2nj3x4y1s4t2
+binaryRp1j2nj3x4y1s4t2
+binaryLp1j3nj4x4y1s4t2
+binaryRp1j3nj4x4y1s4t2
+binaryLp1j4nj5x4y1s4t2
+binaryRp1j4nj5x4y1s4t2
+binaryLp1j5nj6x4y1s4t2
+binaryRp1j5nj6x4y1s4t2
+binaryLp1j6nj7x4y1s4t2
+binaryRp1j6nj7x4y1s4t2
+binaryLp1j7nj8x4y1s4t2
+binaryRp1j7nj8x4y1s4t2
+binaryLp1j8nj9x4y1s4t2
+binaryRp1j8nj9x4y1s4t2
+binaryUp0j0nj1x3y2s4t2
+binaryDp0j0nj1x3y2s4t2
+binaryUp0j1nj2x3y2s4t2
+binaryDp0j1nj2x3y2s4t2
+binaryUp0j2nj3x3y2s4t2
+binaryDp0j2nj3x3y2s4t2
+binaryUp0j3nj4x3y2s4t2
+binaryDp0j3nj4x3y2s4t2
+binaryUp0j4nj5x3y2s4t2
+binaryDp0j4nj5x3y2s4t2
+binaryUp0j5nj6x3y2s4t2
+binaryDp0j5nj6x3y2s4t2
+binaryUp0j6nj7x3y2s4t2
+binaryDp0j6nj7x3y2s4t2
+binaryUp0j7nj8x3y2s4t2
+binaryDp0j7nj8x3y2s4t2
+binaryUp0j8nj9x3y2s4t2
+binaryDp0j8nj9x3y2s4t2
+binaryUp1j0nj1x3y2s4t2
+binaryDp1j0nj1x3y2s4t2
+binaryUp1j1nj2x3y2s4t2
+binaryDp1j1nj2x3y2s4t2
+binaryUp1j2nj3x3y2s4t2
+binaryDp1j2nj3x3y2s4t2
+binaryUp1j3nj4x3y2s4t2
+binaryDp1j3nj4x3y2s4t2
+binaryUp1j4nj5x3y2s4t2
+binaryDp1j4nj5x3y2s4t2
+binaryUp1j5nj6x3y2s4t2
+binaryDp1j5nj6x3y2s4t2
+binaryUp1j6nj7x3y2s4t2
+binaryDp1j6nj7x3y2s4t2
+binaryUp1j7nj8x3y2s4t2
+binaryDp1j7nj8x3y2s4t2
+binaryUp1j8nj9x3y2s4t2
+binaryDp1j8nj9x3y2s4t2
+binaryLp0j0nj1x2y1s2t2
+binaryRp0j0nj1x2y1s2t2
+binaryLp0j1nj2x2y1s2t2
+binaryRp0j1nj2x2y1s2t2
+binaryLp0j2nj3x2y1s2t2
+binaryRp0j2nj3x2y1s2t2
+binaryLp0j3nj4x2y1s2t2
+binaryRp0j3nj4x2y1s2t2
+binaryLp0j4nj5x2y1s2t2
+binaryRp0j4nj5x2y1s2t2
+binaryLp0j5nj6x2y1s2t2
+binaryRp0j5nj6x2y1s2t2
+binaryLp0j6nj7x2y1s2t2
+binaryRp0j6nj7x2y1s2t2
+binaryLp0j7nj8x2y1s2t2
+binaryRp0j7nj8x2y1s2t2
+binaryLp0j8nj9x2y1s2t2
+binaryRp0j8nj9x2y1s2t2
+binaryLp1j0nj1x2y1s2t2
+binaryRp1j0nj1x2y1s2t2
+binaryLp1j1nj2x2y1s2t2
+binaryRp1j1nj2x2y1s2t2
+binaryLp1j2nj3x2y1s2t2
+binaryRp1j2nj3x2y1s2t2
+binaryLp1j3nj4x2y1s2t2
+binaryRp1j3nj4x2y1s2t2
+binaryLp1j4nj5x2y1s2t2
+binaryRp1j4nj5x2y1s2t2
+binaryLp1j5nj6x2y1s2t2
+binaryRp1j5nj6x2y1s2t2
+binaryLp1j6nj7x2y1s2t2
+binaryRp1j6nj7x2y1s2t2
+binaryLp1j7nj8x2y1s2t2
+binaryRp1j7nj8x2y1s2t2
+binaryLp1j8nj9x2y1s2t2
+binaryRp1j8nj9x2y1s2t2
+binaryUp0j0nj1x3y0s4t0
+binaryDp0j0nj1x3y0s4t0
+binaryUp0j1nj2x3y0s4t0
+binaryDp0j1nj2x3y0s4t0
+binaryUp0j2nj3x3y0s4t0
+binaryDp0j2nj3x3y0s4t0
+binaryUp0j3nj4x3y0s4t0
+binaryDp0j3nj4x3y0s4t0
+binaryUp0j4nj5x3y0s4t0
+binaryDp0j4nj5x3y0s4t0
+binaryUp0j5nj6x3y0s4t0
+binaryDp0j5nj6x3y0s4t0
+binaryUp0j6nj7x3y0s4t0
+binaryDp0j6nj7x3y0s4t0
+binaryUp0j7nj8x3y0s4t0
+binaryDp0j7nj8x3y0s4t0
+binaryUp0j8nj9x3y0s4t0
+binaryDp0j8nj9x3y0s4t0
+binaryUp1j0nj1x3y0s4t0
+binaryDp1j0nj1x3y0s4t0
+binaryUp1j1nj2x3y0s4t0
+binaryDp1j1nj2x3y0s4t0
+binaryUp1j2nj3x3y0s4t0
+binaryDp1j2nj3x3y0s4t0
+binaryUp1j3nj4x3y0s4t0
+binaryDp1j3nj4x3y0s4t0
+binaryUp1j4nj5x3y0s4t0
+binaryDp1j4nj5x3y0s4t0
+binaryUp1j5nj6x3y0s4t0
+binaryDp1j5nj6x3y0s4t0
+binaryUp1j6nj7x3y0s4t0
+binaryDp1j6nj7x3y0s4t0
+binaryUp1j7nj8x3y0s4t0
+binaryDp1j7nj8x3y0s4t0
+binaryUp1j8nj9x3y0s4t0
+binaryDp1j8nj9x3y0s4t0
+binaryUp0j0nj1x2y3s3t3
+binaryDp0j0nj1x2y3s3t3
+binaryUp0j1nj2x2y3s3t3
+binaryDp0j1nj2x2y3s3t3
+binaryUp0j2nj3x2y3s3t3
+binaryDp0j2nj3x2y3s3t3
+binaryUp0j3nj4x2y3s3t3
+binaryDp0j3nj4x2y3s3t3
+binaryUp0j4nj5x2y3s3t3
+binaryDp0j4nj5x2y3s3t3
+binaryUp0j5nj6x2y3s3t3
+binaryDp0j5nj6x2y3s3t3
+binaryUp0j6nj7x2y3s3t3
+binaryDp0j6nj7x2y3s3t3
+binaryUp0j7nj8x2y3s3t3
+binaryDp0j7nj8x2y3s3t3
+binaryUp0j8nj9x2y3s3t3
+binaryDp0j8nj9x2y3s3t3
+binaryUp1j0nj1x2y3s3t3
+binaryDp1j0nj1x2y3s3t3
+binaryUp1j1nj2x2y3s3t3
+binaryDp1j1nj2x2y3s3t3
+binaryUp1j2nj3x2y3s3t3
+binaryDp1j2nj3x2y3s3t3
+binaryUp1j3nj4x2y3s3t3
+binaryDp1j3nj4x2y3s3t3
+binaryUp1j4nj5x2y3s3t3
+binaryDp1j4nj5x2y3s3t3
+binaryUp1j5nj6x2y3s3t3
+binaryDp1j5nj6x2y3s3t3
+binaryUp1j6nj7x2y3s3t3
+binaryDp1j6nj7x2y3s3t3
+binaryUp1j7nj8x2y3s3t3
+binaryDp1j7nj8x2y3s3t3
+binaryUp1j8nj9x2y3s3t3
+binaryDp1j8nj9x2y3s3t3
+binaryUp0j0nj1x1y4s2t4
+binaryDp0j0nj1x1y4s2t4
+binaryUp0j1nj2x1y4s2t4
+binaryDp0j1nj2x1y4s2t4
+binaryUp0j2nj3x1y4s2t4
+binaryDp0j2nj3x1y4s2t4
+binaryUp0j3nj4x1y4s2t4
+binaryDp0j3nj4x1y4s2t4
+binaryUp0j4nj5x1y4s2t4
+binaryDp0j4nj5x1y4s2t4
+binaryUp0j5nj6x1y4s2t4
+binaryDp0j5nj6x1y4s2t4
+binaryUp0j6nj7x1y4s2t4
+binaryDp0j6nj7x1y4s2t4
+binaryUp0j7nj8x1y4s2t4
+binaryDp0j7nj8x1y4s2t4
+binaryUp0j8nj9x1y4s2t4
+binaryDp0j8nj9x1y4s2t4
+binaryUp1j0nj1x1y4s2t4
+binaryDp1j0nj1x1y4s2t4
+binaryUp1j1nj2x1y4s2t4
+binaryDp1j1nj2x1y4s2t4
+binaryUp1j2nj3x1y4s2t4
+binaryDp1j2nj3x1y4s2t4
+binaryUp1j3nj4x1y4s2t4
+binaryDp1j3nj4x1y4s2t4
+binaryUp1j4nj5x1y4s2t4
+binaryDp1j4nj5x1y4s2t4
+binaryUp1j5nj6x1y4s2t4
+binaryDp1j5nj6x1y4s2t4
+binaryUp1j6nj7x1y4s2t4
+binaryDp1j6nj7x1y4s2t4
+binaryUp1j7nj8x1y4s2t4
+binaryDp1j7nj8x1y4s2t4
+binaryUp1j8nj9x1y4s2t4
+binaryDp1j8nj9x1y4s2t4
+binaryUp0j0nj1x0y2s1t2
+binaryDp0j0nj1x0y2s1t2
+binaryUp0j1nj2x0y2s1t2
+binaryDp0j1nj2x0y2s1t2
+binaryUp0j2nj3x0y2s1t2
+binaryDp0j2nj3x0y2s1t2
+binaryUp0j3nj4x0y2s1t2
+binaryDp0j3nj4x0y2s1t2
+binaryUp0j4nj5x0y2s1t2
+binaryDp0j4nj5x0y2s1t2
+binaryUp0j5nj6x0y2s1t2
+binaryDp0j5nj6x0y2s1t2
+binaryUp0j6nj7x0y2s1t2
+binaryDp0j6nj7x0y2s1t2
+binaryUp0j7nj8x0y2s1t2
+binaryDp0j7nj8x0y2s1t2
+binaryUp0j8nj9x0y2s1t2
+binaryDp0j8nj9x0y2s1t2
+binaryUp1j0nj1x0y2s1t2
+binaryDp1j0nj1x0y2s1t2
+binaryUp1j1nj2x0y2s1t2
+binaryDp1j1nj2x0y2s1t2
+binaryUp1j2nj3x0y2s1t2
+binaryDp1j2nj3x0y2s1t2
+binaryUp1j3nj4x0y2s1t2
+binaryDp1j3nj4x0y2s1t2
+binaryUp1j4nj5x0y2s1t2
+binaryDp1j4nj5x0y2s1t2
+binaryUp1j5nj6x0y2s1t2
+binaryDp1j5nj6x0y2s1t2
+binaryUp1j6nj7x0y2s1t2
+binaryDp1j6nj7x0y2s1t2
+binaryUp1j7nj8x0y2s1t2
+binaryDp1j7nj8x0y2s1t2
+binaryUp1j8nj9x0y2s1t2
+binaryDp1j8nj9x0y2s1t2
+binaryLp0j0nj1x3y1s3t2
+binaryRp0j0nj1x3y1s3t2
+binaryLp0j1nj2x3y1s3t2
+binaryRp0j1nj2x3y1s3t2
+binaryLp0j2nj3x3y1s3t2
+binaryRp0j2nj3x3y1s3t2
+binaryLp0j3nj4x3y1s3t2
+binaryRp0j3nj4x3y1s3t2
+binaryLp0j4nj5x3y1s3t2
+binaryRp0j4nj5x3y1s3t2
+binaryLp0j5nj6x3y1s3t2
+binaryRp0j5nj6x3y1s3t2
+binaryLp0j6nj7x3y1s3t2
+binaryRp0j6nj7x3y1s3t2
+binaryLp0j7nj8x3y1s3t2
+binaryRp0j7nj8x3y1s3t2
+binaryLp0j8nj9x3y1s3t2
+binaryRp0j8nj9x3y1s3t2
+binaryLp1j0nj1x3y1s3t2
+binaryRp1j0nj1x3y1s3t2
+binaryLp1j1nj2x3y1s3t2
+binaryRp1j1nj2x3y1s3t2
+binaryLp1j2nj3x3y1s3t2
+binaryRp1j2nj3x3y1s3t2
+binaryLp1j3nj4x3y1s3t2
+binaryRp1j3nj4x3y1s3t2
+binaryLp1j4nj5x3y1s3t2
+binaryRp1j4nj5x3y1s3t2
+binaryLp1j5nj6x3y1s3t2
+binaryRp1j5nj6x3y1s3t2
+binaryLp1j6nj7x3y1s3t2
+binaryRp1j6nj7x3y1s3t2
+binaryLp1j7nj8x3y1s3t2
+binaryRp1j7nj8x3y1s3t2
+binaryLp1j8nj9x3y1s3t2
+binaryRp1j8nj9x3y1s3t2
+binaryUp0j0nj1x3y1s4t1
+binaryDp0j0nj1x3y1s4t1
+binaryUp0j1nj2x3y1s4t1
+binaryDp0j1nj2x3y1s4t1
+binaryUp0j2nj3x3y1s4t1
+binaryDp0j2nj3x3y1s4t1
+binaryUp0j3nj4x3y1s4t1
+binaryDp0j3nj4x3y1s4t1
+binaryUp0j4nj5x3y1s4t1
+binaryDp0j4nj5x3y1s4t1
+binaryUp0j5nj6x3y1s4t1
+binaryDp0j5nj6x3y1s4t1
+binaryUp0j6nj7x3y1s4t1
+binaryDp0j6nj7x3y1s4t1
+binaryUp0j7nj8x3y1s4t1
+binaryDp0j7nj8x3y1s4t1
+binaryUp0j8nj9x3y1s4t1
+binaryDp0j8nj9x3y1s4t1
+binaryUp1j0nj1x3y1s4t1
+binaryDp1j0nj1x3y1s4t1
+binaryUp1j1nj2x3y1s4t1
+binaryDp1j1nj2x3y1s4t1
+binaryUp1j2nj3x3y1s4t1
+binaryDp1j2nj3x3y1s4t1
+binaryUp1j3nj4x3y1s4t1
+binaryDp1j3nj4x3y1s4t1
+binaryUp1j4nj5x3y1s4t1
+binaryDp1j4nj5x3y1s4t1
+binaryUp1j5nj6x3y1s4t1
+binaryDp1j5nj6x3y1s4t1
+binaryUp1j6nj7x3y1s4t1
+binaryDp1j6nj7x3y1s4t1
+binaryUp1j7nj8x3y1s4t1
+binaryDp1j7nj8x3y1s4t1
+binaryUp1j8nj9x3y1s4t1
+binaryDp1j8nj9x3y1s4t1
+binaryUp0j0nj1x1y3s2t3
+binaryDp0j0nj1x1y3s2t3
+binaryUp0j1nj2x1y3s2t3
+binaryDp0j1nj2x1y3s2t3
+binaryUp0j2nj3x1y3s2t3
+binaryDp0j2nj3x1y3s2t3
+binaryUp0j3nj4x1y3s2t3
+binaryDp0j3nj4x1y3s2t3
+binaryUp0j4nj5x1y3s2t3
+binaryDp0j4nj5x1y3s2t3
+binaryUp0j5nj6x1y3s2t3
+binaryDp0j5nj6x1y3s2t3
+binaryUp0j6nj7x1y3s2t3
+binaryDp0j6nj7x1y3s2t3
+binaryUp0j7nj8x1y3s2t3
+binaryDp0j7nj8x1y3s2t3
+binaryUp0j8nj9x1y3s2t3
+binaryDp0j8nj9x1y3s2t3
+binaryUp1j0nj1x1y3s2t3
+binaryDp1j0nj1x1y3s2t3
+binaryUp1j1nj2x1y3s2t3
+binaryDp1j1nj2x1y3s2t3
+binaryUp1j2nj3x1y3s2t3
+binaryDp1j2nj3x1y3s2t3
+binaryUp1j3nj4x1y3s2t3
+binaryDp1j3nj4x1y3s2t3
+binaryUp1j4nj5x1y3s2t3
+binaryDp1j4nj5x1y3s2t3
+binaryUp1j5nj6x1y3s2t3
+binaryDp1j5nj6x1y3s2t3
+binaryUp1j6nj7x1y3s2t3
+binaryDp1j6nj7x1y3s2t3
+binaryUp1j7nj8x1y3s2t3
+binaryDp1j7nj8x1y3s2t3
+binaryUp1j8nj9x1y3s2t3
+binaryDp1j8nj9x1y3s2t3
+binaryLp0j0nj1x1y3s1t4
+binaryRp0j0nj1x1y3s1t4
+binaryLp0j1nj2x1y3s1t4
+binaryRp0j1nj2x1y3s1t4
+binaryLp0j2nj3x1y3s1t4
+binaryRp0j2nj3x1y3s1t4
+binaryLp0j3nj4x1y3s1t4
+binaryRp0j3nj4x1y3s1t4
+binaryLp0j4nj5x1y3s1t4
+binaryRp0j4nj5x1y3s1t4
+binaryLp0j5nj6x1y3s1t4
+binaryRp0j5nj6x1y3s1t4
+binaryLp0j6nj7x1y3s1t4
+binaryRp0j6nj7x1y3s1t4
+binaryLp0j7nj8x1y3s1t4
+binaryRp0j7nj8x1y3s1t4
+binaryLp0j8nj9x1y3s1t4
+binaryRp0j8nj9x1y3s1t4
+binaryLp1j0nj1x1y3s1t4
+binaryRp1j0nj1x1y3s1t4
+binaryLp1j1nj2x1y3s1t4
+binaryRp1j1nj2x1y3s1t4
+binaryLp1j2nj3x1y3s1t4
+binaryRp1j2nj3x1y3s1t4
+binaryLp1j3nj4x1y3s1t4
+binaryRp1j3nj4x1y3s1t4
+binaryLp1j4nj5x1y3s1t4
+binaryRp1j4nj5x1y3s1t4
+binaryLp1j5nj6x1y3s1t4
+binaryRp1j5nj6x1y3s1t4
+binaryLp1j6nj7x1y3s1t4
+binaryRp1j6nj7x1y3s1t4
+binaryLp1j7nj8x1y3s1t4
+binaryRp1j7nj8x1y3s1t4
+binaryLp1j8nj9x1y3s1t4
+binaryRp1j8nj9x1y3s1t4
 Generals
 x00
 y00
@@ -2400,6 +11506,16 @@ x03
 y03
 x04
 y04
+x05
+y05
+x06
+y06
+x07
+y07
+x08
+y08
+x09
+y09
 x10
 y10
 x11
@@ -2410,24 +11526,14 @@ x13
 y13
 x14
 y14
-x20
-y20
-x21
-y21
-x22
-y22
-x23
-y23
-x24
-y24
-x30
-y30
-x31
-y31
-x32
-y32
-x33
-y33
-x34
-y34
+x15
+y15
+x16
+y16
+x17
+y17
+x18
+y18
+x19
+y19
 END

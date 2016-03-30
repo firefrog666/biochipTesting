@@ -11,6 +11,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.ArrayList;
@@ -20,8 +21,8 @@ import java.util.Stack;
 //import gurobi.GRBException;
 
 public class TestBench {
-	private static int WIDTH = 4;
-	private static int HEIGHT = 4;
+	private static int WIDTH = 5;
+	private static int HEIGHT = 5;
 			
 	private static final String dataPath =  "/home/ga63quk/workspace/biochipTestGit/biochipTesting/src/data.xml";
 	
@@ -36,11 +37,23 @@ public class TestBench {
 		//readXml(dataPath,walls,holes);
 		Graph graph;
 		graph = new Graph(WIDTH,HEIGHT);
-		graph.splitY = new ArrayList<Double>();
-		graph.splitX = new ArrayList<Double>();
-		graph.splitY.add(-0.5);graph.splitY.add(1.5);graph.splitY.add(3.5);
-		graph.splitX.add(-0.5);graph.splitX.add(1.5);graph.splitX.add(3.5);
-		graph.splitGraph();
+		graph.getAcyclicILPExactRoute();
+//		graph.setHeadsTails(direction.Source, direction.Terminal);
+//		graph.splitGraph(5, 5);
+//		try {
+//			graph.getPaths();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		
+		
+//		graph.splitY = new ArrayList<Double>();
+//		graph.splitX = new ArrayList<Double>();
+//		graph.splitY.add(-0.5);graph.splitY.add(1.5);graph.splitY.add(3.5);
+//		graph.splitX.add(-0.5);graph.splitX.add(1.5);graph.splitX.add(3.5);
+		//graph.splitGraph();
 		
  		//graph = new Graph(WIDTH,HEIGHT, true); //generate cut
 // 		graph.setHoles(holes);
