@@ -12,11 +12,11 @@ import java.util.HashMap;
 
 public class solveFile {
 	public static HashMap<String,Integer> hashResults;
-	
+	public static boolean isFeasiable;
 		  public static void solve(String args) {
 			
 			hashResults = new HashMap<String,Integer>();
-			  
+			isFeasiable = false;
 		
 
 		    try {
@@ -34,22 +34,33 @@ public class solveFile {
 		      }
 
 		      if (optimstatus == GRB.Status.OPTIMAL) {
+		    	  isFeasiable = true;
 		    	  GRBVar[] vars  = model.getVars();
+		    	  String name ;
+		    	  int result;
+		    	 
 		    	  for(GRBVar var:vars){
-		    		  hashResults.put(var.get(GRB.StringAttr.VarName), (int)var.get(GRB.DoubleAttr.X));
+		    		  
+		    		  name = var.get(GRB.StringAttr.VarName);
+		    		  result = (int) Math.rint(var.get(GRB.DoubleAttr.X)); 		
+		    			 
+		    		  hashResults.put(name,result);
 		    	  }
 		    	
 		        double objval = model.get(GRB.DoubleAttr.ObjVal);
 		        System.out.println("Optimal objective: " + objval);
 		      } else if (optimstatus == GRB.Status.INFEASIBLE) {
+		    	  isFeasiable = false;
 		        System.out.println("Model is infeasible");
 
 		        // Compute and write out IIS
-		        model.computeIIS();
-		        model.write("model.ilp");
+		       // model.computeIIS();
+		       // model.write("model.ilp");
 		      } else if (optimstatus == GRB.Status.UNBOUNDED) {
+		    	  isFeasiable = false;
 		        System.out.println("Model is unbounded");
 		      } else {
+		    	  isFeasiable = false;
 		        System.out.println("Optimization was stopped with status = "
 		                           + optimstatus);
 		      }

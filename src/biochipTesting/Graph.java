@@ -33,6 +33,7 @@ public class Graph {
 	 
 	public HashMap<String,Integer> pathReuslts;
 	public ArrayList<ArrayList<Int2>> pathsVertex;
+	public ArrayList<ArrayList<Edge>> pathsEdges;
 	private ArrayList<Node> nodes;
 //	private ArrayList<Node> nodes;
 	private ArrayList<Edge> edges;
@@ -65,6 +66,9 @@ public class Graph {
 	private ArrayList<ArrayList<Edge>> cuts;
 	
 	
+	public int splitRow;
+	public int splitCol;
+	
 	
 	public Int4 boundingBox;
 	public Int2 center;
@@ -84,8 +88,20 @@ public class Graph {
 		variableTypes = new ArrayList<Integer>();
 		variables = new ArrayList<String>();
 		isSplit = false;
-	}	
+	}
 	
+	//delete me!	
+	public void  test(){
+		try {
+			pathsVertex = getPaths();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		findMorePaths(5);
+		
+	
+	}
 	
 	
 	
@@ -306,7 +322,12 @@ public class Graph {
 				subGraph.height = subGraph.boundingBox.s - subGraph.boundingBox.x;
 				
 				hashSubGraphs.put(subGraph.center, subGraph);
-				//if(subGraph.width >= 10)
+				if(subGraph.width >= 10){
+					subGraph.isSplit = true;
+					subGraph.splitRow = 5;
+					subGraph.splitCol = 5;							
+				}
+					
 				//	subGraph.splitGraph(5,5);
 				subGraphs.add(subGraph);
 			}			
@@ -513,6 +534,494 @@ public class Graph {
 			}
 			
 		}
+	}
+	
+	public boolean thereIsAnotherPath(Edge a,Edge b){
+		boolean en = false;
+		variables = new ArrayList<String>();
+		variableTypes = new ArrayList<Integer>();
+		String xVariable;
+		String wVariable;
+		String yVariable; // if a node is used in a subgraph; 0 used, 1 unused
+	
+		String fVariable; // flow on each edge
+		String gTVariable; //flow from graph to souper sink
+		String sGVariable; //flow from super source to one node in Graph
+		String constraint = "";
+		
+		HashMap<Edge, String> hashWVariables1dim;
+		HashMap<Edge,String> hashFVariables1dim; 
+		
+		HashMap<Node,String> hashYVariables1dim;
+		HashMap<Node,String> hashGTVariables1dim = null; //flow from Graph to super sink
+		
+		
+		
+		
+		int p = 0;
+			hashWVariables1dim = new HashMap<Edge,String>(); 
+			hashFVariables1dim= new HashMap<Edge,String>();
+			sGVariable = "flowStoG" + p; 
+			for(Edge edge:edges){
+				wVariable = "w" + p +  edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t;
+				fVariable= "f" + p + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t; // flow on each edge
+				if(!hashWVariables1dim.containsKey(edge)){
+					hashWVariables1dim.put(edge, wVariable);
+					hashFVariables1dim.put(edge, fVariable);
+					variables.add(wVariable);
+					variableTypes.add(1);
+					variables.add(fVariable);
+					variableTypes.add(0);
+				}	
+				
+			}
+			hashWVariables.put(p, hashWVariables1dim);
+			hashFVariables.put(p, hashFVariables1dim);
+			
+			hashYVariables1dim = new HashMap<Node,String>();
+			hashGTVariables1dim = new HashMap<Node,String>();
+			for(Node node:nodes){
+				yVariable = "y" + p + node.coord.x + node.coord.y;
+				gTVariable = "gT" + p + node.coord.x + node.coord.y;
+				if(!hashYVariables1dim.containsKey(node)){
+					hashYVariables1dim.put(node,yVariable);
+					hashGTVariables1dim.put(node, gTVariable);
+					
+					variables.add(yVariable);
+					variableTypes.add(1);
+					variables.add(gTVariable);
+					variableTypes.add(0);
+				}
+				for(Node cnctNode:getConnectedNodes(node)){
+					Edge edge = getEdge(node,cnctNode);
+					wVariable = hashWVariables1dim.get(edge); 
+					constraint = constraint + wVariable + " + ";					
+				}
+				
+				if(node == entrance || node == exit){
+					constraint =constraint + " " + yVariable + " = 1"; 
+				}
+				else{
+					constraint = constraint + "2" + " " + yVariable + " = 2";
+				}
+				ILP.add(constraint);
+				constraint = "";
+			}
+			
+			
+			
+			// current conservation
+			// f01 + f02 + f03 + f04 - f(g,t)= 0
+			String fConstraint = "";			
+			
+			for(Node node:nodes){
+				gTVariable = hashGTVariables1dim.get(node);		
+				for(Node cnctNode:getConnectedNodes(node)){
+					Edge edge = getEdge(node,cnctNode);
+					fVariable = hashFVariables1dim.get(edge);
+					
+					wVariable = hashWVariables1dim.get(edge);
+					if(aLeftOrUnderb(node,cnctNode)){
+						fVariable = " + " + fVariable;
+					}
+					else
+					{
+						fVariable = " - " + fVariable;
+					}		
+					
+					fConstraint +=  " " + fVariable;
+				}
+				
+				if(fConstraint == "")
+					continue;
+					
+				//if node == entrance, flowStoG + other flow - flowGtoT= 0
+				//else other flow -flowGtoT = 0
+				if(node == entrance){
+					fConstraint = fConstraint + " + " + sGVariable + " - " + gTVariable ; 
+					fConstraint += " = 0 ";
+				}
+				else{
+					fConstraint = fConstraint + " - " + gTVariable ; 
+					fConstraint += " = 0 ";
+				}
+				
+				ILP.add(fConstraint);
+				fConstraint = "";
+			
+			}
+			
+			// for wVariable on Wall wVariable =0
+			// for flow on edge of graph -M * w =<flow <= M * w
+			for(Edge edge:edges){
+				wVariable = hashWVariables1dim.get(edge);
+				fVariable = hashFVariables1dim.get(edge);
+				if(edge instanceof Wall){
+					constraint = " " + wVariable + " = 0";
+					ILP.add(constraint);
+					constraint = "";
+				}
+				
+				constraint = fVariable + " + " +  M + " " +wVariable + " >= 0";
+				ILP.add(constraint);
+				constraint = "";
+				constraint = fVariable + " - " + M + " " +wVariable + " <= 0";
+				ILP.add(constraint);
+				constraint = "";					
+			}	
+			
+			
+			
+			
+			
+			// for flow super source to graph. flow >= 0
+			constraint = sGVariable + " >= 0";
+			ILP.add(constraint);
+			constraint = "";
+			variables.add(sGVariable);
+			variableTypes.add(0);
+			
+			//maximum flow == number of nodes the subgraph
+			// sToG = (1-y0) + (1-y1) + ....
+			// sToG + y0 + y1 + ...  = n
+			constraint = sGVariable;
+			int numNodes = 0;
+			for(Node node:nodes){
+				numNodes ++;
+				yVariable = hashYVariables1dim.get(node);
+				constraint += " + " + yVariable; 
+			}			
+			constraint = constraint + " = " + numNodes;
+			ILP.add(constraint);
+			constraint = "";
+			
+
+	
+		
+		
+		constraint = "";
+		
+		String wVariablaA = hashWVariables1dim.get(a);
+		String wVaribaleB = hashWVariables1dim.get(b);
+		
+		ILP.add(wVariablaA + " + " +  wVaribaleB + " = 1 ");
+		
+		try {
+			writeILP();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		solveFile.solve("./lp.lp");
+		
+		en = solveFile.isFeasiable;
+		
+		return en;
+	}
+	
+	
+	//give some paths, find more paths that covers only 1 valve of two next edges
+	public void findMorePaths(int path){
+		ArrayList<Edge> pEdge;
+		ArrayList<Edge> edgePair1 = new ArrayList<Edge>();
+		ArrayList<Edge> edgePair2 = new ArrayList<Edge>();
+		Edge ea,eb;
+		for(int i = 0; i <= pathsVertex.size()-1;i++){
+			pEdge = pathVertexTopathEdge(pathsVertex.get(i));
+			for(int j = 0; j <= pEdge.size()-2; j++){
+				ea = pEdge.get(j);
+				eb = pEdge.get(j+1);
+				
+				edgePair1.add(ea);
+				edgePair2.add(eb);
+			}	
+			
+		}
+		
+		for(int i = 0; i <= edgePair1.size()-1; i++){
+			if(!thereIsAnotherPath(edgePair1.get(i),edgePair2.get(i))){
+				edgePair1.remove(i);
+				edgePair2.remove(i);
+			}				
+		}
+		
+		variables = new ArrayList<String>();
+		variableTypes = new ArrayList<Integer>();
+		ILP = new ArrayList<String>();
+		String xVariable;
+		String wVariable;
+		String yVariable; // if a node is used in a subgraph; 0 used, 1 unused
+	
+		String fVariable; // flow on each edge
+		String gTVariable; //flow from graph to souper sink
+		String sGVariable; //flow from super source to one node in Graph
+		String constraint = "";
+		
+		HashMap<Edge, String> hashWVariables1dim = new HashMap<Edge,String>();
+		HashMap<Edge,String> hashFVariables1dim = new HashMap<Edge,String>(); 
+		
+		HashMap<Node,String> hashYVariables1dim;
+		HashMap<Node,String> hashGTVariables1dim = null; //flow from Graph to super sink
+		
+		
+		
+		
+		for(int p=0; p<=path-1; p++){
+			hashWVariables1dim = new HashMap<Edge,String>(); 
+			hashFVariables1dim= new HashMap<Edge,String>();
+			sGVariable = "flowStoG" + p; 
+			for(Edge edge:edges){
+				wVariable = "w" + p +  edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t;
+				fVariable= "f" + p + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t; // flow on each edge
+				if(!hashWVariables1dim.containsKey(edge)){
+					hashWVariables1dim.put(edge, wVariable);
+					hashFVariables1dim.put(edge, fVariable);
+					variables.add(wVariable);
+					variableTypes.add(1);
+					variables.add(fVariable);
+					variableTypes.add(0);
+				}	
+				
+			}
+			hashWVariables.put(p, hashWVariables1dim);
+			hashFVariables.put(p, hashFVariables1dim);
+			
+			hashYVariables1dim = new HashMap<Node,String>();
+			hashGTVariables1dim = new HashMap<Node,String>();
+			for(Node node:nodes){
+				yVariable = "y" + p + node.coord.x + node.coord.y;
+				gTVariable = "gT" + p + node.coord.x + node.coord.y;
+				if(!hashYVariables1dim.containsKey(node)){
+					hashYVariables1dim.put(node,yVariable);
+					hashGTVariables1dim.put(node, gTVariable);
+					
+					variables.add(yVariable);
+					variableTypes.add(1);
+					variables.add(gTVariable);
+					variableTypes.add(0);
+				}
+				for(Node cnctNode:getConnectedNodes(node)){
+					Edge edge = getEdge(node,cnctNode);
+					wVariable = hashWVariables1dim.get(edge); 
+					constraint = constraint + wVariable + " + ";					
+				}
+				
+				if(node == entrance || node == exit){
+					constraint =constraint + " " + yVariable + " = 1"; 
+				}
+				else{
+					constraint = constraint + "2" + " " + yVariable + " = 2";
+				}
+				ILP.add(constraint);
+				constraint = "";
+			}
+			
+			
+			
+			// current conservation
+			// f01 + f02 + f03 + f04 - f(g,t)= 0
+			String fConstraint = "";			
+			
+			for(Node node:nodes){
+				gTVariable = hashGTVariables1dim.get(node);		
+				for(Node cnctNode:getConnectedNodes(node)){
+					Edge edge = getEdge(node,cnctNode);
+					fVariable = hashFVariables1dim.get(edge);
+					
+					wVariable = hashWVariables1dim.get(edge);
+					if(aLeftOrUnderb(node,cnctNode)){
+						fVariable = " + " + fVariable;
+					}
+					else
+					{
+						fVariable = " - " + fVariable;
+					}		
+					
+					fConstraint +=  " " + fVariable;
+				}
+				
+				if(fConstraint == "")
+					continue;
+					
+				//if node == entrance, flowStoG + other flow - flowGtoT= 0
+				//else other flow -flowGtoT = 0
+				if(node == entrance){
+					fConstraint = fConstraint + " + " + sGVariable + " - " + gTVariable ; 
+					fConstraint += " = 0 ";
+				}
+				else{
+					fConstraint = fConstraint + " - " + gTVariable ; 
+					fConstraint += " = 0 ";
+				}
+				
+				ILP.add(fConstraint);
+				fConstraint = "";
+			
+			}
+			
+			// for wVariable on Wall wVariable =0
+			// for flow on edge of graph -M * w =<flow <= M * w
+			for(Edge edge:edges){
+				wVariable = hashWVariables1dim.get(edge);
+				fVariable = hashFVariables1dim.get(edge);
+				if(edge instanceof Wall){
+					constraint = " " + wVariable + " = 0";
+					ILP.add(constraint);
+					constraint = "";
+				}
+				
+				constraint = fVariable + " + " +  M + " " +wVariable + " >= 0";
+				ILP.add(constraint);
+				constraint = "";
+				constraint = fVariable + " - " + M + " " +wVariable + " <= 0";
+				ILP.add(constraint);
+				constraint = "";					
+			}	
+			
+			
+			
+			
+			
+			// for flow super source to graph. flow >= 0
+			constraint = sGVariable + " >= 0";
+			ILP.add(constraint);
+			constraint = "";
+			variables.add(sGVariable);
+			variableTypes.add(0);
+			
+			//maximum flow == number of nodes the subgraph
+			// sToG = (1-y0) + (1-y1) + ....
+			// sToG + y0 + y1 + ...  = n
+			constraint = sGVariable;
+			int numNodes = 0;
+			for(Node node:nodes){
+				numNodes ++;
+				yVariable = hashYVariables1dim.get(node);
+				constraint += " + " + yVariable; 
+			}			
+			constraint = constraint + " = " + numNodes;
+			ILP.add(constraint);
+			constraint = "";
+			
+
+	
+		
+		
+		constraint = "";
+	}
+		String wVariablaA;
+		String wVariableB;
+		String pairTrue;
+		constraint = "";
+	for(int p = 0; p <= path -1 ; p++){
+	
+		for(int i=0; i <= edgePair1.size()-1; i++ ){
+			wVariablaA = hashWVariables.get(p).get(edgePair1.get(i));
+			wVariableB = hashWVariables.get(p).get(edgePair2.get(i));
+			pairTrue = "pairTrue" + "p" + p + "index" + i;
+			variables.add(pairTrue);variableTypes.add(1);
+			// c  = a | b
+			// c >= a, c >= b, c <= a+b
+			ILP.add(pairTrue + " - " + wVariablaA  + " >= 0");			
+			ILP.add(pairTrue + " - " + wVariableB  + " >= 0");
+			ILP.add(pairTrue + " - " + wVariablaA + " - " +  wVariableB + " <= 0");
+			
+		
+			
+		}
+		
+	
+		
+	}
+	
+	for(int i = 0; i <= edgePair1.size()-1; i++){
+		constraint = "";
+		for(int p = 0; p <= path-1; p++){
+			pairTrue = "pairTrue" + "p" + p + "index" + i;
+			constraint += " + " + pairTrue;
+		}
+		
+		constraint += " >= 1";
+		ILP.add(constraint);
+		constraint = ""; 
+	}
+		
+		
+		
+		
+		try {
+			writeILP();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		solveFile.solve("./lp.lp");
+		
+		
+		
+		
+		
+		
+	}
+	
+	public ArrayList<Edge> pathVertexTopathEdge(ArrayList<Int2> pathVertex){
+		ArrayList<Edge> pEdge = new ArrayList<Edge>();
+		ArrayList<Int2> pVU= (ArrayList<Int2>)pathVertex.clone();
+		uniqueElement(pVU);
+		Node a,b;
+		Edge e; 
+		Int2 first,second;
+		for(int i = 0; i <= pVU.size()-2; i++){
+			first = pVU.get(i);
+			second = pVU.get(i+1);
+			
+			if(first.x == second.x){
+				if(first.y < second.y){
+					for(int j = first.y; j <= second.y -1; j++ ){
+						a = getNode(first.x,j);
+						b = getNode(first.x,j+1);
+						e =getEdge(a,b);
+						pEdge.add(e);
+					}
+				}
+				else{
+					for(int j = first.y; j >= second.y + 1; j-- ){
+						a = getNode(first.x,j);
+						b = getNode(first.x,j-1);
+						e =getEdge(a,b);
+						pEdge.add(e);
+					}
+					
+				}
+			}
+			
+
+			if(first.y == second.y){
+				if(first.x < second.x){
+					for(int j = first.x; j <= second.x -1; j++ ){
+						a = getNode(j,first.y);
+						b = getNode(j+1,first.y);
+						e =getEdge(a,b);
+						pEdge.add(e);
+					}
+				}
+				else{
+					for(int j = first.x; j >= second.x + 1; j-- ){
+						a = getNode(j,first.y);
+						b = getNode(j-1,first.y);
+						e =getEdge(a,b);
+						pEdge.add(e);
+					}
+					
+				}
+			}
+			
+		}
+		
+		
+		return pEdge;
+		
+		
 	}
 	
 	public void setHeadsTails(direction head,direction tail){
@@ -825,6 +1334,17 @@ private void getHashEdgesCut(){
 	}
 	
 	public ArrayList<ArrayList<Int2>> getSplitPaths(){
+		
+		try {
+			splitGraph();
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		ArrayList<ArrayList<Int2>> ps = new ArrayList<ArrayList<Int2>>();;
 		ArrayList<Int2> p = null;
 		ArrayList<Node> pathNode;
@@ -1047,6 +1567,10 @@ private void getHashEdgesCut(){
 		
 		getHeadTailPath();
 		writeILP();
+		solveFile.solve("./lp.lp");
+		pathReuslts = (HashMap<String, Integer>) solveFile.hashResults.clone();
+		
+		
 		for(int path = 0; path <= maxPaths -1; path++  ){
 			ArrayList<Int2> p = new ArrayList<Int2>(); 
 			for(int joint = 0; joint <= numberOfJoints -1; joint ++){
@@ -1117,6 +1641,29 @@ private void getHashEdgesCut(){
 		variableTypes = new ArrayList<Integer>();
 		String x; //x position of a joint 
 		String y; //y position of a joint
+
+	
+		
+		String constraint = "";
+		
+		HashMap<Integer, String> hashX = new HashMap<Integer, String>();
+		HashMap<Integer, String> hashY= new HashMap<Integer, String>();		 
+
+		String lastJointX;
+		String lastJointY ;
+		
+		String jointLX;						
+		String jointLY;
+		String jointRX;						
+		String jointRY;
+		String jointX,jointY,nextJointX,nextJointY;
+		String lastJointLX;
+		String lastJointLY;
+		String lastJointRX;
+		String lastJointRY;
+		
+		
+		//init variables
 		
 		int numPath = 0;
 		for(int i  = 0; i <= heads.size()-1; i++){
@@ -1127,17 +1674,6 @@ private void getHashEdgesCut(){
 		
 		numPath = max(2,numPath);
 		
-		
-	
-		
-		String constraint = "";
-		
-		HashMap<Integer, String> hashX = new HashMap<Integer, String>();
-		HashMap<Integer, String> hashY= new HashMap<Integer, String>();
-		
-		
-		
-		//init variables
 		
 		for(int i=0; i <= numPath -1; i++){
 			for(int joint =0; joint<= numberOfJoints -1 ; joint++){
@@ -1154,6 +1690,7 @@ private void getHashEdgesCut(){
 				
 			}
 		}
+		
 		
 		for(int path = 0; path <= numPath -1; path++){
 			int countHead = 0;
@@ -1254,27 +1791,32 @@ private void getHashEdgesCut(){
 		
 		for(int path = 0; path <= numPath -1; path++ ){
 			for( int joint =0; joint <= numberOfJoints-1; joint++ ){
+				String xEqualslx, yEqualsly;
 				x = hashX.get(hash2Int(path,joint));
 				y = hashY.get(hash2Int(path,joint));
 			
 				if(joint > 0){
-					String lastJointX = hashX.get(hash2Int(path,joint-1));
-					String lastJointY = hashY.get(hash2Int(path,joint-1));
-					String xEqualslx, yEqualsly;
+					lastJointX = hashX.get(hash2Int(path,joint-1));
+					lastJointY = hashY.get(hash2Int(path,joint-1));
+					
 					xEqualslx = "xEqualslx" + path + joint;
 					yEqualsly = "yEqualsly" + path + joint;
 					variables.add(xEqualslx);variableTypes.add(1);
 					variables.add(yEqualsly);variableTypes.add(1);
-					// -M * binary < = x - lx <= M * binary
-					// -M * binary < = y - ly <= M * binary
-					ILP.add(x + " - " + lastJointX + " + "+M + " "+ xEqualslx + " >= 0"  );
-					ILP.add(x + "  - " + lastJointX + " - "+ M + " "+ xEqualslx + " <= 0"  );
-					ILP.add(y + " - " + lastJointY + " + "+M + " "+ yEqualsly + " >= 0"  );
-					ILP.add(y + "  - " + lastJointY + " - "+M + " "+ yEqualsly + " <= 0"  );
-					ILP.add(xEqualslx + " + "  + yEqualsly + " <= 1");					
+					// -M + " "  * binary < = x - lx <= M + " "  * binary
+					// -M + " "  * binary < = y - ly <= M + " "  * binary
+					ILP.add(x + " - " + lastJointX + " + "+M + " "  + xEqualslx + " >= 0"  );
+					ILP.add(x + "  - " + lastJointX + " - "+ M + " "  + xEqualslx + " <= 0"  );
+					ILP.add(y + " - " + lastJointY + " + "+M + " " + yEqualsly + " >= 0"  );
+					ILP.add(y + "  - " + lastJointY + " - "+M + " "  + yEqualsly + " <= 0"  );
+					ILP.add(xEqualslx + " + "  + yEqualsly + " <= 1");
+					
+					
+					
 					
 				}
 				
+			
 				if(joint != 0 && joint != numberOfJoints-1){
 					// 0 <= x <= height   0 <= y <= widht 
 					ILP.add(x + " >= " + this.boundingBox.x);
@@ -1284,6 +1826,8 @@ private void getHashEdgesCut(){
 			
 
 				}
+			
+
 				
 				
 				//neither 2 of bend cross each other
@@ -1300,35 +1844,35 @@ private void getHashEdgesCut(){
 						variables.add(uy1y2);variableTypes.add(1);
 						variables.add(uy2y1);variableTypes.add(1);
 						
-						String jointLX = hashX.get(hash2Int(path,joint));						
-						String jointLY = hashY.get(hash2Int(path,joint));
-						String jointRX = hashX.get(hash2Int(path,joint+1));						
-						String jointRY = hashY.get(hash2Int(path,joint+1));
+						jointLX = hashX.get(hash2Int(path,joint));						
+						jointLY = hashY.get(hash2Int(path,joint));
+						jointRX = hashX.get(hash2Int(path,joint+1));						
+						jointRY = hashY.get(hash2Int(path,joint+1));
 						
-						String lastJointLX = hashX.get(hash2Int(path,lastJoint));
-						String lastJointLY = hashY.get(hash2Int(path,lastJoint));
-						String lastJointRX = hashX.get(hash2Int(path,lastJoint+1));
-						String lastJointRY = hashY.get(hash2Int(path,lastJoint+1));
+						lastJointLX = hashX.get(hash2Int(path,lastJoint));
+						lastJointLY = hashY.get(hash2Int(path,lastJoint));
+						lastJointRX = hashX.get(hash2Int(path,lastJoint+1));
+						lastJointRY = hashY.get(hash2Int(path,lastJoint+1));
 					
 						
 						
-						ILP.add(jointLX +" - " + lastJointLX + " - " + M + " " +ux1x2 + " < 0");
-						ILP.add(jointRX +" - " + lastJointLX + " - " + M + " " +ux1x2 + " < 0");
-						ILP.add(jointLX +" - " + lastJointRX + " - " + M + " " +ux1x2 + " < 0");
-						ILP.add(jointRX +" - " + lastJointRX + " - " + M + " " +ux1x2 + " < 0");
-						ILP.add(lastJointLX +" - " + jointLX + " - " + M + " " +ux2x1 + " < 0");
-						ILP.add(lastJointLX +" - " + jointRX + " - " + M + " " +ux2x1 + " < 0");
-						ILP.add(lastJointRX +" - " + jointLX + " - " + M + " " +ux2x1 + " < 0");
-						ILP.add(lastJointRX +" - " + jointRX + " - " + M + " " +ux2x1 + " < 0");
+						ILP.add(jointLX +" - " + lastJointLX + " - " + M + " "  + ux1x2 + " <= -1");
+						ILP.add(jointRX +" - " + lastJointLX + " - " + M + " "  + ux1x2 + " <= -1");
+						ILP.add(jointLX +" - " + lastJointRX + " - " + M + " "  + ux1x2 + " <= -1");
+						ILP.add(jointRX +" - " + lastJointRX + " - " + M + " "  + ux1x2 + " <= -1");
+						ILP.add(lastJointLX +" - " + jointLX + " - " + M + " "  + ux2x1 + " <= -1");
+						ILP.add(lastJointLX +" - " + jointRX + " - " + M + " "  + ux2x1 + " <= -1");
+						ILP.add(lastJointRX +" - " + jointLX + " - " + M + " "  + ux2x1 + " <= -1");
+						ILP.add(lastJointRX +" - " + jointRX + " - " + M + " "  + ux2x1 + " <= -1");
 						
-						ILP.add(jointLY +" - " + lastJointLY + " - " + M + " " +uy1y2 + " < 0");						
-						ILP.add(jointRY +" - " + lastJointLY + " - " + M + " " +uy1y2 + " < 0");
-						ILP.add(jointLY +" - " + lastJointRY + " - " + M + " " +uy1y2 + " < 0");
-						ILP.add(jointRY +" - " + lastJointRY + " - " + M + " " +uy1y2 + " < 0");
-						ILP.add(lastJointLY +" - " + jointLY + " - " + M + " " +uy2y1 + " < 0");
-						ILP.add(lastJointLY +" - " + jointRY + " - " + M + " " +uy2y1 + " < 0");
-						ILP.add(lastJointRY +" - " + jointLY + " - " + M + " " +uy2y1 + " < 0");
-						ILP.add(lastJointRY +" - " + jointRY + " - " + M + " " +uy2y1 + " < 0");
+						ILP.add(jointLY +" - " + lastJointLY + " - " + M + " "  + uy1y2 + " <= -1");						
+						ILP.add(jointRY +" - " + lastJointLY + " - " + M + " "  + uy1y2 + " <= -1");
+						ILP.add(jointLY +" - " + lastJointRY + " - " + M + " "  + uy1y2 + " <= -1");
+						ILP.add(jointRY +" - " + lastJointRY + " - " + M + " "  + uy1y2 + " <= -1");
+						ILP.add(lastJointLY +" - " + jointLY + " - " + M + " "  + uy2y1 + " <= -1");
+						ILP.add(lastJointLY +" - " + jointRY + " - " + M + " "  + uy2y1 + " <= -1");
+						ILP.add(lastJointRY +" - " + jointLY + " - " + M + " "  + uy2y1 + " <= -1");
+						ILP.add(lastJointRY +" - " + jointRY + " - " + M + " "  + uy2y1 + " <= -1");
 						
 						ILP.add( ux1x2 + " + "+ ux2x1 + " + " +uy1y2 + " + " + uy2y1 + " <= 3"); 
 						
@@ -1340,15 +1884,16 @@ private void getHashEdgesCut(){
 			}
 		
 		}
-		
+		int loop = 0;
 		for(Edge edge:edges){
+			loop++;
 			int edgeX = edge.coord.x;
 			int edgeY = edge.coord.y;
 			int edgeS = edge.coord.s;
 			int edgeT = edge.coord.t;
 			int count = 0;
-			String binaryL,binaryR,binaryU,binaryD,jointX,jointY,nextJointX,nextJointY;
-			if(edge instanceof Hole){
+			String binaryL,binaryR,binaryU,binaryD;
+			if(edge instanceof Wall){
 				
 				//horizontal wall
 				if (edge.coord.x == edge.coord.s){					
@@ -1366,13 +1911,13 @@ private void getHashEdgesCut(){
 							variables.add(binaryL);variableTypes.add(1);
 							binaryR = "binaryR" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
 							variables.add(binaryR);variableTypes.add(1);
-							// x0 + M * binaryR >=  s, x1  + M * binaryR >= s							
-							// x0  -M * binaryL <=x, x1  - M * binaryL <= x 
+							// x0 + M + " "  * binaryR >=  s, x1  + M + " "  * binaryR >= s							
+							// x0  -M + " "  * binaryL <=x, x1  - M + " "  * binaryL <= x 
 							
-							ILP.add(jointX +  " - "  + M  +" " + binaryL+ " <= " + edgeX );
-							ILP.add(nextJointX +  " - " + M  +" " + binaryL+ " <= " + edgeX);
-							ILP.add(jointX +  " + "  + M  +" " + binaryR+ " >= " + edgeS);
-							ILP.add(nextJointX  + " + "  + M  +" " + binaryL+ " >= " +  edgeS);
+							ILP.add(jointX +  " - "  + M + " "   + binaryL+ " <= " + edgeX );
+							ILP.add(nextJointX +  " - " + M + " "   + binaryL+ " <= " + edgeX);
+							ILP.add(jointX +  " + "  + M + " "   + binaryR+ " >= " + edgeS);
+							ILP.add(nextJointX  + " + "  + M + " "   + binaryL+ " >= " +  edgeS);
 							
 							ILP.add(binaryL + " + " + binaryR + " <= 1" );
 							
@@ -1397,13 +1942,13 @@ private void getHashEdgesCut(){
 							variables.add(binaryU);variableTypes.add(1);
 							binaryD = "binaryD" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
 							variables.add(binaryD);variableTypes.add(1);
-							// y0 + M * binaryU >=  y, y1  + M * binaryU >= t							
-							// y0  -M * binaryD <=y, y1  - M * binaryD <= y 
+							// y0 + M + " "  * binaryU >=  y, y1  + M + " "  * binaryU >= t							
+							// y0  -M + " "  * binaryD <=y, y1  - M + " "  * binaryD <= y 
 							
-							ILP.add(jointY +  " - "  + M  + " " +binaryD+ " <= " + edgeY );
-							ILP.add(nextJointY +  " - " + M  +" " + binaryD+ " <= " + edgeY);
-							ILP.add(jointY +  " + "  + M  + " " +binaryU+ " >= " + edgeT);
-							ILP.add(nextJointY  + " + "  + M  +" " + binaryU+ " >= " +  edgeT);
+							ILP.add(jointY +  " - "  + M + " "   + binaryD+ " <= " + edgeY );
+							ILP.add(nextJointY +  " - " + M + " "   + binaryD+ " <= " + edgeY);
+							ILP.add(jointY +  " + "  + M + " "   + binaryU+ " >= " + edgeT);
+							ILP.add(nextJointY  + " + "  + M + " "   + binaryU+ " >= " +  edgeT);
 							
 							ILP.add(binaryU + " + " + binaryD + " <= 1" );
 							
@@ -1434,24 +1979,24 @@ private void getHashEdgesCut(){
 						variables.add(binaryL);variableTypes.add(1);
 						binaryR = "binaryR" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
 						variables.add(binaryR);variableTypes.add(1);
-						// -M * binary<=x0-i <= M*binary
-						// -M * binary <= x1-i <= M*binary
-						// y0 <= j + M * binary, y1 + M * binary >= j+1 
-						ILP.add(jointX +  " + "  + M  + " " +binaryL+ " >= " + edgeX );
-						ILP.add(jointX +  " - " + M  + " " +binaryL+ " <= " + edgeX);
-						ILP.add(nextJointX +  " + "  + M  + " " +binaryL+ " >= " + edgeX);
-						ILP.add(nextJointX  + " - "  + M  + " " +binaryL+ " <= " +  edgeX);
+						// -M + " "  * binary<=x0-i <= M + " " *binary
+						// -M + " "  * binary <= x1-i <= M + " " *binary
+						// y0 <= j + M + " "  * binary, y1 + M + " "  * binary >= j+1 
+						ILP.add(jointX +  " + "  + M + " "   + binaryL+ " >= " + edgeX );
+						ILP.add(jointX +  " - " + M + " "   + binaryL+ " <= " + edgeX);
+						ILP.add(nextJointX +  " + "  + M + " "   + binaryL+ " >= " + edgeX);
+						ILP.add(nextJointX  + " - "  + M + " "   + binaryL+ " <= " +  edgeX);
 						
-						ILP.add(jointY +   " - " + M + " " +binaryL + " <= "  + edgeY );
-						ILP.add(nextJointY   + " + " + M + " " +binaryL + " >= " + edgeT);
+						ILP.add(jointY +   " - " + M + " "  + binaryL + " <= "  + edgeY );
+						ILP.add(nextJointY   + " + " + M + " "  + binaryL + " >= " + edgeT);
 						
-						ILP.add(jointX  + " + "  + M  + " " +binaryR+ " >= " + edgeX);
-						ILP.add(jointX  + " - "  + M  + " " +binaryR+ " <= " + edgeX);
-						ILP.add(nextJointX  + " + "  + M  +" " + binaryR+ " >= "  + edgeX);
-						ILP.add(nextJointX  + " - "  + M  +" " + binaryR+ " <= "  + edgeX);
+						ILP.add(jointX  + " + "  + M + " "   + binaryR+ " >= " + edgeX);
+						ILP.add(jointX  + " - "  + M + " "   + binaryR+ " <= " + edgeX);
+						ILP.add(nextJointX  + " + "  + M + " "   + binaryR+ " >= "  + edgeX);
+						ILP.add(nextJointX  + " - "  + M + " "   + binaryR+ " <= "  + edgeX);
 						
-						ILP.add(nextJointY  + " - " + M + " " +binaryR + " <= " + edgeY );
-						ILP.add(jointY  + " + " + M + " " +binaryR + " >= " +  edgeT );
+						ILP.add(nextJointY  + " - " + M + " "  + binaryR + " <= " + edgeY );
+						ILP.add(jointY  + " + " + M + " "  + binaryR + " >= " +  edgeT );
 						
 						
 						constraint += " + " + binaryL + " + " + binaryR;
@@ -1486,24 +2031,24 @@ private void getHashEdgesCut(){
 						variables.add(binaryU);variableTypes.add(1);
 						binaryD = "binaryD" + "p"+path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
 						variables.add(binaryD);variableTypes.add(1);
-						// -M * binary<=y0-j <= M*binary
-						// -M * binary <= y1-j <= M*binary
-						// x0 <= i + M * binary, x1 + M * binary >= i+1 
-						ILP.add(jointY  + " + "  + M  + " " +binaryU+ " >= "+ edgeY);
-						ILP.add(jointY   + " - "  + M  +" " + binaryU+ " <=  " + edgeY);
-						ILP.add(nextJointY  + " + "  + M  +" " + binaryU+ " >= " +  edgeY);
-						ILP.add(nextJointY   + " - "  + M  +" " + binaryU+ " <= " + edgeY);
+						// -M + " "  * binary<=y0-j <= M + " " *binary
+						// -M + " "  * binary <= y1-j <= M + " " *binary
+						// x0 <= i + M + " "  * binary, x1 + M + " "  * binary >= i+1 
+						ILP.add(jointY  + " + "  + M + " "   + binaryU+ " >= "+ edgeY);
+						ILP.add(jointY   + " - "  + M + " "   + binaryU+ " <=  " + edgeY);
+						ILP.add(nextJointY  + " + "  + M + " "   + binaryU+ " >= " +  edgeY);
+						ILP.add(nextJointY   + " - "  + M + " "   + binaryU+ " <= " + edgeY);
 						
-						ILP.add(jointX  + " - " + M + " " +binaryU + " <= " + edgeX );
-						ILP.add(nextJointX + " + " + M + " " +binaryU + " >= "+ edgeS );
+						ILP.add(jointX  + " - " + M + " "  + binaryU + " <= " + edgeX );
+						ILP.add(nextJointX + " + " + M + " "  + binaryU + " >= "+ edgeS );
 						
-						ILP.add(jointY + " + "  + M  + " " +binaryD+ " >= "+ edgeY);
-						ILP.add(jointY  + " - "  + M  + " " +binaryD+ " <= " + edgeY);
-						ILP.add(nextJointY  + " + "  + M  +" " + binaryD+ " >= " + edgeY);
-						ILP.add(nextJointY  + " - "  + M  + " " +binaryD+ " <= "+ edgeY );
+						ILP.add(jointY + " + "  + M + " "   + binaryD+ " >= "+ edgeY);
+						ILP.add(jointY  + " - "  + M + " "   + binaryD+ " <= " + edgeY);
+						ILP.add(nextJointY  + " + "  + M + " "   + binaryD+ " >= " + edgeY);
+						ILP.add(nextJointY  + " - "  + M + " "   + binaryD+ " <= "+ edgeY );
 						
-						ILP.add(nextJointX   + " - " + M +" " + binaryD + " <= "+ edgeX );
-						ILP.add(jointX  + " + " + M + " " +binaryD + " >= " + edgeS );
+						ILP.add(nextJointX   + " - " + M + " "  + binaryD + " <= "+ edgeX );
+						ILP.add(jointX  + " + " + M + " "  + binaryD + " >= " + edgeS );
 						constraint += " + " + binaryU + " + " + binaryD;
 						count ++;
 					}
@@ -1526,6 +2071,17 @@ private void getHashEdgesCut(){
 		//set obj 
 		
 		obj = "x00 + x01";
+		
+		
+		
+	
+		
+		
+	
+		
+		
+		
+
 	}
 	
 	private int max(int i, int j) {
@@ -2255,8 +2811,8 @@ private void getHashEdgesCut(){
 	public void getAcyclicILPExactRoute(){
 		variables = new ArrayList<String>();
 		variableTypes = new ArrayList<Integer>();
-		String xVariable; //x position of a joint 
-		String yVariable; //y position of a joint
+		String x; //x position of a joint 
+		String y; //y position of a joint
 	
 		
 		String constraint = "";
@@ -2282,14 +2838,14 @@ private void getHashEdgesCut(){
 		
 		for(int i=0; i <= maxPaths -1; i++){
 			for(int joint =0; joint<= numberOfJoints -1 ; joint++){
-				xVariable = "x" + i + joint;
-				hashX.put(hash2Int(i,joint), xVariable);
-				variables.add(xVariable);
+				x = "x" + i + joint;
+				hashX.put(hash2Int(i,joint), x);
+				variables.add(x);
 				variableTypes.add(0);
 				
-				yVariable = "y" + i + joint;
-				hashY.put(hash2Int(i,joint), yVariable);
-				variables.add(yVariable);
+				y = "y" + i + joint;
+				hashY.put(hash2Int(i,joint), y);
+				variables.add(y);
 				variableTypes.add(0);				
 
 				
@@ -2299,8 +2855,8 @@ private void getHashEdgesCut(){
 		for(int path = 0; path <= maxPaths -1; path++ ){
 			for( int joint =0; joint <= numberOfJoints-1; joint++ ){
 				String xEqualslx, yEqualsly;
-				xVariable = hashX.get(hash2Int(path,joint));
-				yVariable = hashY.get(hash2Int(path,joint));
+				x = hashX.get(hash2Int(path,joint));
+				y = hashY.get(hash2Int(path,joint));
 			
 				if(joint > 0){
 					lastJointX = hashX.get(hash2Int(path,joint-1));
@@ -2312,10 +2868,10 @@ private void getHashEdgesCut(){
 					variables.add(yEqualsly);variableTypes.add(1);
 					// -M + " "  * binary < = x - lx <= M + " "  * binary
 					// -M + " "  * binary < = y - ly <= M + " "  * binary
-					ILP.add(xVariable + " - " + lastJointX + " + "+M + " "  + xEqualslx + " >= 0"  );
-					ILP.add(xVariable + "  - " + lastJointX + " - "+ M + " "  + xEqualslx + " <= 0"  );
-					ILP.add(yVariable + " - " + lastJointY + " + "+M + " " + yEqualsly + " >= 0"  );
-					ILP.add(yVariable + "  - " + lastJointY + " - "+M + " "  + yEqualsly + " <= 0"  );
+					ILP.add(x + " - " + lastJointX + " + "+M + " "  + xEqualslx + " >= 0"  );
+					ILP.add(x + "  - " + lastJointX + " - "+ M + " "  + xEqualslx + " <= 0"  );
+					ILP.add(y + " - " + lastJointY + " + "+M + " " + yEqualsly + " >= 0"  );
+					ILP.add(y + "  - " + lastJointY + " - "+M + " "  + yEqualsly + " <= 0"  );
 					ILP.add(xEqualslx + " + "  + yEqualsly + " <= 1");
 					
 					
@@ -2324,17 +2880,17 @@ private void getHashEdgesCut(){
 				}
 				
 				if(joint==0){
-					constraint = xVariable + " = "  + entrance.getCoordinate().x;
+					constraint = x + " = "  + entrance.getCoordinate().x;
 					ILP.add(constraint);
-					constraint = yVariable + " = "  + entrance.getCoordinate().y;
+					constraint = y + " = "  + entrance.getCoordinate().y;
 					ILP.add(constraint);
 					constraint = "";
 							
 				}
 				else if(joint == numberOfJoints -1){
-					constraint = xVariable + " = "  + exit.getCoordinate().x;
+					constraint = x + " = "  + exit.getCoordinate().x;
 					ILP.add(constraint);
-					constraint = yVariable + " = "  + exit.getCoordinate().y;
+					constraint = y + " = "  + exit.getCoordinate().y;
 					ILP.add(constraint);
 					constraint = "";
 					
@@ -2343,10 +2899,10 @@ private void getHashEdgesCut(){
 				// 0=<x(j)-x(j-1) <= M + " "  * dr
 				else{
 					// 0 <= x <= height   0 <= y <= widht 
-					ILP.add(xVariable + " >= 0");
-					ILP.add(xVariable + " <= " + (height-1));
-					ILP.add(yVariable + " >= 0");
-					ILP.add(yVariable + " <= " + (width-1));
+					ILP.add(x + " >= 0");
+					ILP.add(x + " <= " + (height-1));
+					ILP.add(y + " >= 0");
+					ILP.add(y + " <= " + (width-1));
 			
 
 				}
@@ -2603,12 +3159,12 @@ private void getHashEdgesCut(){
 		for(int path = 0; path <= maxPaths -1; path++  ){
 			ArrayList<Int2> p = new ArrayList<Int2>(); 
 			for(int joint = 0; joint <= numberOfJoints -1; joint ++){
-				String x = "x" + path + joint;
-				String y = "y" + path + joint;
+				String xV = "x" + path + joint;
+				String yV = "y" + path + joint;
 				
 				int xValue, yValue;
-				xValue = pathReuslts.get(x);
-				yValue = pathReuslts.get(y);
+				xValue = pathReuslts.get(xV);
+				yValue = pathReuslts.get(yV);
 				
 				p.add(new Int2(xValue,yValue));						
 			}
@@ -2784,240 +3340,7 @@ private void getHashEdgesCut(){
 			ILP.add(constraint);
 			constraint = "";
 			
-//			hashIVariables1dim = new HashMap<Edge,String>();
-//			hashVVariables1dim = new HashMap<Edge,String>();
-//			for(Edge edge:edges){
-//				if(!(edge instanceof Wall)){					
-//					iVariable = "i" + i + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t;	
-//					vVariable = "v" + i + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t;
-//					if(!hashIVariables1dim.containsKey(edge)){
-//						hashIVariables1dim.put(edge, iVariable);
-//						hashVVariables1dim.put(edge,vVariable);
-//						variables.add(iVariable);
-//						
-//						variableTypes.add(0);
-//						variables.add(vVariable);
-//						variableTypes.add(0);
-//					}
-//					
-//				}
-//			}
-//			
-//			//set Kirchhoff Circuit Laws to calculate i on each edge
-//			//each used edge (w(edge) = 1), i(edge) <> 0
-//			
-//			//create iVariable vVariable for every edge  
-//			
-//			// current conservation
-//			// i01 + i02 + i03 + i04 = 0
-//			String iConstraint = "";
-//			
-//			iConstraint1dim = new ArrayList<String>();
-//			
-//			for(Node node:nodes){
-//				if(node != entrance && node != exit){					
-//					for(Node cnctNode:getConnectedNodes(node)){
-//						Edge edge = getEdge(node,cnctNode);
-//						iVariable = hashIVariables1dim.get(edge);
-//						wVariable = hashWVariables1dim.get(edge);
-//						if(aLeftOrUnderb(node,cnctNode)){
-//							iVariable = "+" + iVariable;
-//						}
-//						else
-//						{
-//							iVariable = "-" + iVariable;
-//						}
-//						String key = "i" + edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t; 
-//						constraint = iVariable + "-" + M + wVariable + "<= 0";
-//						if(!iConstraint1dim.contains(key)){							
-//							ILP.add(constraint);
-//							constraint = "";
-//						}
-//						
-//						constraint = iVariable + "+" + M + wVariable + ">= 0";
-//						if(!iConstraint1dim.contains(key)){						
-//							ILP.add(constraint);
-//							constraint = "";
-//						}
-//						
-//						iConstraint +=  iVariable;
-//					}
-//					
-//					if(iConstraint == "")
-//						continue;
-//						
-//					
-//					
-//					iConstraint += "=0";
-//					ILP.add(iConstraint);
-//					iConstraint = "";
-//				}
-//		}
-			
-		
-//			/*
-//		// voltage conservation	
-//		// v01 + v12 + v23 + v34 = 0;
-//		
-//		for(int j = 0; j <= width - 1 -1; j++){
-//			for(int k = 0; k <= height -1 -1; k++){
-//				Node node0,node1,node2,node3;
-//				Edge edge0,edge1,edge2,edge3;
-//				node0 = getNode(j,k);
-//				node1 = getNode(j,k+1);
-//				node2 = getNode(j +1,k+1);
-//				node3 = getNode(j+1,k);
-//				
-//				edge0 = getEdge(node0,node1);
-//				edge1 = getEdge(node1,node2);
-//				edge2 = getEdge(node2,node3);
-//				edge3 = getEdge(node3,node0);
-//				
-//				
-//				String iVariable0,vVariable0,wVariable0;
-//				String iVariable1,vVariable1,wVariable1;
-//				String iVariable2,vVariable2,wVariable2;
-//				String iVariable3,vVariable3,wVariable3;
-//				
-//				//edge0
-//				if(!(edge0 instanceof Wall)){
-//					iVariable0 = hashIVariables1dim.get(edge0);
-//					vVariable0 = hashVVariables1dim.get(edge0);
-//					wVariable0 = hashWVariables1dim.get(edge0);
-//				}
-//				else
-//				{
-//					iVariable0 = "i" + i +  edge0.coord.x + edge0.coord.y + edge0.coord.s+edge0.coord.t;
-//					vVariable0 = "v" + i +  edge0.coord.x + edge0.coord.y + edge0.coord.s+edge0.coord.t;
-//					wVariable0 = "w" + i +  edge0.coord.x + edge0.coord.y + edge0.coord.s+edge0.coord.t;
-//					hashWVariables1dim.put(edge0,wVariable0); variables.add(wVariable0);variableTypes.add(1);
-//					hashIVariables1dim.put(edge0,iVariable0); variables.add(iVariable0);variableTypes.add(0);
-//					hashVVariables1dim.put(edge0,vVariable0); variables.add(vVariable0); variableTypes.add(0);
-//					constraint = wVariable0 + "=0";
-//				}
-//				
-//				//edge1
-//				if(!(edge1 instanceof Wall)){
-//					iVariable1= hashIVariables1dim.get(edge1);
-//					vVariable1 = hashVVariables1dim.get(edge1);
-//					wVariable1 = hashWVariables1dim.get(edge1);
-//				}
-//				else
-//				{
-//					iVariable1 = "i" + i +  edge1.coord.x + edge1.coord.y + edge1.coord.s+edge1.coord.t;
-//					vVariable1 = "v" + i +  edge1.coord.x + edge1.coord.y + edge1.coord.s+edge1.coord.t;
-//					wVariable1 = "w" + i +  edge1.coord.x + edge1.coord.y + edge1.coord.s+edge1.coord.t;
-//					hashWVariables1dim.put(edge1,wVariable1); variables.add(wVariable1);variableTypes.add(1);
-//					hashIVariables1dim.put(edge1,iVariable1); variables.add(iVariable1);variableTypes.add(0);
-//					hashVVariables1dim.put(edge1,vVariable1); variables.add(vVariable1); variableTypes.add(0);
-//					constraint = wVariable1 + "=0";
-//				}
-//				
-//				//edge2
-//				if(!(edge2 instanceof Wall)){
-//					iVariable2= hashIVariables1dim.get(edge2);
-//					vVariable2 = hashVVariables1dim.get(edge2);
-//					wVariable2 = hashWVariables1dim.get(edge2);
-//				}
-//				else
-//				{
-//					iVariable2 = "i" + i +  edge2.coord.x + edge2.coord.y + edge2.coord.s+edge2.coord.t;
-//					vVariable2 = "v" + i +  edge2.coord.x + edge2.coord.y + edge2.coord.s+edge2.coord.t;
-//					wVariable2 = "w" + i +  edge2.coord.x + edge2.coord.y + edge2.coord.s+edge2.coord.t;
-//					hashWVariables1dim.put(edge2,wVariable2); variables.add(wVariable2);variableTypes.add(1);
-//					hashIVariables1dim.put(edge2,iVariable2); variables.add(iVariable2);variableTypes.add(0);
-//					hashVVariables1dim.put(edge2,vVariable2); variables.add(vVariable2); variableTypes.add(0);
-//					constraint = wVariable2 + "=0";
-//				}
-//				
-//				//edge3
-//				if(!(edge3 instanceof Wall)){
-//					iVariable3= hashIVariables1dim.get(edge3);
-//					vVariable3 = hashVVariables1dim.get(edge3);
-//					wVariable3 = hashWVariables1dim.get(edge3);
-//				}
-//				else
-//				{
-//					iVariable3 = "i" + i +  edge3.coord.x + edge3.coord.y + edge3.coord.s+edge3.coord.t;
-//					vVariable3 = "v" + i +  edge3.coord.x + edge3.coord.y + edge3.coord.s+edge3.coord.t;
-//					wVariable3 = "w" + i +  edge3.coord.x + edge3.coord.y + edge3.coord.s+edge3.coord.t;
-//					hashWVariables1dim.put(edge3,wVariable3); variables.add(wVariable3);variableTypes.add(1);
-//					hashIVariables1dim.put(edge3,iVariable3); variables.add(iVariable3);variableTypes.add(0);
-//					hashVVariables1dim.put(edge3,vVariable3); variables.add(vVariable3); variableTypes.add(0);
-//					constraint = wVariable3 + "=0";
-//				}
-//				
-//				
-//				
-//				// -M(1-w) <= v <= M(1-w), -M*W <= i <= M*w
-//				//v+M*W <= M			
-//				//v - M*w >= -M
-//				// i+ m*w >=0
-//				// i - M*W <= 0
-//				
-//				String c00 = vVariable0 +  "+" + M + wVariable0 + "<=" + M;
-//				String c01 = vVariable0 + "-" + M + wVariable0 + ">=" + "-" + M;
-//				String c02 = iVariable0 + "-" + M + wVariable0 + "<=0";
-//				String c03 = iVariable0 + "+" + M +  wVariable0 + ">=0";
-//				ILP.add(c00);ILP.add(c01);
-//				//ILP.add(c02);ILP.add(c03);
-//				
-//				String c10 = vVariable1 + "+" + M + wVariable1 + "<=" + M;
-//				String c11 = vVariable1 + "-" + M + wVariable1 + ">=" + "-" + M;
-//				String c12 = iVariable1 + "-" + M + wVariable1 + "<=0";
-//				String c13 = iVariable1 + "+" + M +  wVariable1 + ">=0";
-//				ILP.add(c10);ILP.add(c11);
-//				//ILP.add(c12);ILP.add(c13);
-//				
-//				String c20 = vVariable2 + "+" + M + wVariable2 + "<=" + M;
-//				String c21 = vVariable2 + "-" + M + wVariable2 + ">=" + "-" + M;
-//				String c22 = iVariable2 + "-" + M + wVariable2 + "<=0";
-//				String c23 = iVariable2 + "+" + M +  wVariable2 + ">=0";
-//				ILP.add(c20);ILP.add(c21);
-//				//ILP.add(c22);ILP.add(c23);
-//				
-//				String c30 = vVariable3 + "+" + M + wVariable3 + "<=" + M;
-//				String c31 = vVariable3 + "-" + M + wVariable3 + ">=" + "-" + M;
-//				String c32 = iVariable3 + "-" + M + wVariable3 + "<=0";
-//				String c33 = iVariable3 + "+" + M +  wVariable3 + ">=0";
-//				ILP.add(c30);ILP.add(c31);
-//				//ILP.add(c32);ILP.add(c33);
-//				
-//				//v1 + v2 + v3 + v4 = 0
-//				
-//				constraint = iVariable0 + "+" +  vVariable0 + 
-//						"+" + iVariable1 + "+" + vVariable1 +
-//						"+" + iVariable2 + "+"  + vVariable2 +
-//						"-" + iVariable3 + "-"  + vVariable3 + " = 0";
-//				ILP.add(constraint);
-//				constraint = "";
-//			}
-//		}
-//		
-//		
-//		// if w = 1, then i <> 0
-//		for(Edge edge:edges){
-//			String bVariable = "b" + i + edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t; // a temp binary variable
-//			variables.add(bVariable);
-//			variableTypes.add(1);
-//			
-//			wVariable = hashWVariables1dim.get(edge);
-//			iVariable = hashIVariables1dim.get(edge); 
-//			//constraint = iVariable + "+" +M + wVariable + ">=0"; ILP.add(constraint);
-//			//constraint = iVariable + "-" +M + wVariable + "<=0"; ILP.add(constraint);
-//			//i + w -1 >(b-1)M, i+w -1 <bM
-//			//i + w -M*b>1-M, i+w - M*b < 1
-//			//means i+w - M*b >= 1 - M + 1, i + w - M*b <= 0 
-//			constraint = iVariable +"+"+ wVariable + "-" + M + bVariable + ">=" + (1-M +1); ILP.add(constraint);
-//			constraint = "";
-//			constraint = iVariable + "+" + wVariable + "-" + M + bVariable + "<=0"; ILP.add(constraint);
-//			constraint = "";
-//		}
-//			
-//			
-//			
-//			
-//			
+
 	}
 		
 		obj = "";
@@ -3656,26 +3979,17 @@ private void getHashEdgesCut(){
 		
 			//System.out.println("this is good");
 			writer.flush();
-			writer.close();
+			writer.close();		
 			
-			solveFile.solve("./lp.lp");
-			pathReuslts = (HashMap<String, Integer>) solveFile.hashResults.clone();
-			//System.out.println("this is a print");
 			
-//			Process p = Runtime.getRuntime().exec(new String[]{"bash","-c","/home/ga63quk/workspace/goodLuck/Debug/goodLuck","/home/ga63quk/workspace/goodLuck/Debug/test.lp"});
-//			
-////			ProcessBuilder pb = new ProcessBuilder("/home/ga63quk/workspace/goodLuck/Debug/goodLuck.exe"); 
-////					//"/home/ga63quk/workspace/IlpSolverCpp/Release/IlpSolverCpp.exe");
-////					//,"/home/ga63quk/workspace/IlpSolverCpp/Release/lp.lp");
-////			Process p = pb.start();
-//			try {
-//				p.waitFor();
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
 			
 	}
+	
+	
+	
+	
+	
+	
 //	public boolean reverseDirContainEdge(Node node, Dir searchDir,HashMap<Integer,Edge> targetEdges){
 //		
 //		switch(searchDir){
@@ -4756,6 +5070,297 @@ private void getHashEdgesCut(){
 //	obj = setILPObj();
 //	
 //}
+	
+	
+//	//init variables
+//	
+//	for(int i=0; i <= numPath -1; i++){
+//		for(int joint =0; joint<= numberOfJoints -1 ; joint++){
+//			x = "x" + i + joint;
+//			hashX.put(hash2Int(i,joint), x);
+//			variables.add(x);
+//			variableTypes.add(0);
+//			
+//			y = "y" + i + joint;
+//			hashY.put(hash2Int(i,joint), y);
+//			variables.add(y);
+//			variableTypes.add(0);				
+//
+//			
+//		}
+//	}
+//	
+//	
+//	
+//	
+//
+//	
+//	for(int path = 0; path <= numPath -1; path++ ){
+//		for( int joint =0; joint <= numberOfJoints-1; joint++ ){
+//			x = hashX.get(hash2Int(path,joint));
+//			y = hashY.get(hash2Int(path,joint));
+//		
+//			if(joint > 0){
+//				lastJointX = hashX.get(hash2Int(path,joint-1));
+//				lastJointY = hashY.get(hash2Int(path,joint-1));
+//				String xEqualslx, yEqualsly;
+//				xEqualslx = "xEqualslx" + path + joint;
+//				yEqualsly = "yEqualsly" + path + joint;
+//				variables.add(xEqualslx);variableTypes.add(1);
+//				variables.add(yEqualsly);variableTypes.add(1);
+//				// -M * binary < = x - lx <= M * binary
+//				// -M * binary < = y - ly <= M * binary
+//				ILP.add(x + " - " + lastJointX + " + "+M + " "+ xEqualslx + " >= 0"  );
+//				ILP.add(x + "  - " + lastJointX + " - "+ M + " "+ xEqualslx + " <= 0"  );
+//				ILP.add(y + " - " + lastJointY + " + "+M + " "+ yEqualsly + " >= 0"  );
+//				ILP.add(y + "  - " + lastJointY + " - "+M + " "+ yEqualsly + " <= 0"  );
+//				ILP.add(xEqualslx + " + "  + yEqualsly + " <= 1");					
+//				
+//			}
+//			
+//			
+//			
+//			
+//			//neither 2 of bend cross each other
+//			if(joint >= 2 && joint <= numberOfJoints - 2){
+//				for(int lastJoint = 0; lastJoint <= joint-2; lastJoint++){
+//					String ux1x2,ux2x1,uy1y2,uy2y1;
+//					
+//					ux1x2 = "u" + path +"x" + joint +"x"+ lastJoint; // x1 > x2?
+//					ux2x1 = "u" + path +"x" + lastJoint +"x"+ joint;
+//					uy1y2 = "u" + path +"y" + joint +"y"+ lastJoint;
+//					uy2y1 = "u" + path +"y" + lastJoint +"y"+ joint;
+//					variables.add(ux1x2);variableTypes.add(1);
+//					variables.add(ux2x1);variableTypes.add(1);
+//					variables.add(uy1y2);variableTypes.add(1);
+//					variables.add(uy2y1);variableTypes.add(1);
+//					
+//					jointLX = hashX.get(hash2Int(path,joint));						
+//					jointLY = hashY.get(hash2Int(path,joint));
+//					jointRX = hashX.get(hash2Int(path,joint+1));						
+//					jointRY = hashY.get(hash2Int(path,joint+1));
+//					
+//					lastJointLX = hashX.get(hash2Int(path,lastJoint));
+//					lastJointLY = hashY.get(hash2Int(path,lastJoint));
+//					lastJointRX = hashX.get(hash2Int(path,lastJoint+1));
+//					lastJointRY = hashY.get(hash2Int(path,lastJoint+1));
+//				
+//					
+//					
+//					ILP.add(jointLX +" - " + lastJointLX + " - " + M + " " +ux1x2 + " < 0");
+//					ILP.add(jointRX +" - " + lastJointLX + " - " + M + " " +ux1x2 + " < 0");
+//					ILP.add(jointLX +" - " + lastJointRX + " - " + M + " " +ux1x2 + " < 0");
+//					ILP.add(jointRX +" - " + lastJointRX + " - " + M + " " +ux1x2 + " < 0");
+//					ILP.add(lastJointLX +" - " + jointLX + " - " + M + " " +ux2x1 + " < 0");
+//					ILP.add(lastJointLX +" - " + jointRX + " - " + M + " " +ux2x1 + " < 0");
+//					ILP.add(lastJointRX +" - " + jointLX + " - " + M + " " +ux2x1 + " < 0");
+//					ILP.add(lastJointRX +" - " + jointRX + " - " + M + " " +ux2x1 + " < 0");
+//					
+//					ILP.add(jointLY +" - " + lastJointLY + " - " + M + " " +uy1y2 + " < 0");						
+//					ILP.add(jointRY +" - " + lastJointLY + " - " + M + " " +uy1y2 + " < 0");
+//					ILP.add(jointLY +" - " + lastJointRY + " - " + M + " " +uy1y2 + " < 0");
+//					ILP.add(jointRY +" - " + lastJointRY + " - " + M + " " +uy1y2 + " < 0");
+//					ILP.add(lastJointLY +" - " + jointLY + " - " + M + " " +uy2y1 + " < 0");
+//					ILP.add(lastJointLY +" - " + jointRY + " - " + M + " " +uy2y1 + " < 0");
+//					ILP.add(lastJointRY +" - " + jointLY + " - " + M + " " +uy2y1 + " < 0");
+//					ILP.add(lastJointRY +" - " + jointRY + " - " + M + " " +uy2y1 + " < 0");
+//					
+//					ILP.add( ux1x2 + " + "+ ux2x1 + " + " +uy1y2 + " + " + uy2y1 + " <= 3"); 
+//					
+//				}
+//			}//neither 2 of bend cross each other
+//			
+//		
+//			
+//		}
+//	
+//	}
+//	
+//	for(Edge edge:edges){
+//		int edgeX = edge.coord.x;
+//		int edgeY = edge.coord.y;
+//		int edgeS = edge.coord.s;
+//		int edgeT = edge.coord.t;
+//		int count = 0;
+//		String binaryL,binaryR,binaryU,binaryD;
+//		if(edge instanceof Hole){
+//			
+//			//horizontal wall
+//			if (edge.coord.x == edge.coord.s){					
+//				
+//				
+//				for(int path = 0; path <= numPath -1 ; path++){
+//					for(int joint = 0; joint <= numberOfJoints-2; joint++){
+//						int nextJoint = joint + 1;						
+//						
+//						jointX = hashX.get(hash2Int(path,joint));
+//						jointY = hashY.get(hash2Int(path,joint));
+//						nextJointX = hashX.get(hash2Int(path,nextJoint));
+//						nextJointY = hashY.get(hash2Int(path,nextJoint));
+//						binaryL = "binaryL" +"p" + path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//						variables.add(binaryL);variableTypes.add(1);
+//						binaryR = "binaryR" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//						variables.add(binaryR);variableTypes.add(1);
+//						// x0 + M * binaryR >=  s, x1  + M * binaryR >= s							
+//						// x0  -M * binaryL <=x, x1  - M * binaryL <= x 
+//						
+//						ILP.add(jointX +  " - "  + M  +" " + binaryL+ " <= " + edgeX );
+//						ILP.add(nextJointX +  " - " + M  +" " + binaryL+ " <= " + edgeX);
+//						ILP.add(jointX +  " + "  + M  +" " + binaryR+ " >= " + edgeS);
+//						ILP.add(nextJointX  + " + "  + M  +" " + binaryL+ " >= " +  edgeS);
+//						
+//						ILP.add(binaryL + " + " + binaryR + " <= 1" );
+//						
+//						
+//						
+//					}
+//					
+//				}
+//				
+//			}
+//			//vertical wall
+//			else{
+//				for(int path = 0; path <= numPath -1 ; path++){
+//					for(int joint = 0; joint <= numberOfJoints-2; joint++){
+//						int nextJoint = joint + 1;						
+//						
+//						jointX = hashX.get(hash2Int(path,joint));
+//						jointY = hashY.get(hash2Int(path,joint));
+//						nextJointX = hashX.get(hash2Int(path,nextJoint));
+//						nextJointY = hashY.get(hash2Int(path,nextJoint));
+//						binaryU = "binaryU" +"p" + path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//						variables.add(binaryU);variableTypes.add(1);
+//						binaryD = "binaryD" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//						variables.add(binaryD);variableTypes.add(1);
+//						// y0 + M * binaryU >=  y, y1  + M * binaryU >= t							
+//						// y0  -M * binaryD <=y, y1  - M * binaryD <= y 
+//						
+//						ILP.add(jointY +  " - "  + M  + " " +binaryD+ " <= " + edgeY );
+//						ILP.add(nextJointY +  " - " + M  +" " + binaryD+ " <= " + edgeY);
+//						ILP.add(jointY +  " + "  + M  + " " +binaryU+ " >= " + edgeT);
+//						ILP.add(nextJointY  + " + "  + M  +" " + binaryU+ " >= " +  edgeT);
+//						
+//						ILP.add(binaryU + " + " + binaryD + " <= 1" );
+//						
+//						
+//						
+//					}
+//					
+//				}
+//			}
+//				
+//		}
+//		else if (edge.coord.x == edge.coord.s){
+//		//if edge is horizontal
+//			//edge(i,j,i,j+1)
+//			
+//			constraint = "";
+//			
+//		
+//			for(int path = 0; path <= numPath -1 ; path++){
+//				for(int joint = 0; joint <= numberOfJoints-2; joint++){
+//					int nextJoint = joint + 1;						
+//					
+//					jointX = hashX.get(hash2Int(path,joint));
+//					jointY = hashY.get(hash2Int(path,joint));
+//					nextJointX = hashX.get(hash2Int(path,nextJoint));
+//					nextJointY = hashY.get(hash2Int(path,nextJoint));
+//					binaryL = "binaryL" +"p" + path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//					variables.add(binaryL);variableTypes.add(1);
+//					binaryR = "binaryR" + "p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//					variables.add(binaryR);variableTypes.add(1);
+//					// -M * binary<=x0-i <= M*binary
+//					// -M * binary <= x1-i <= M*binary
+//					// y0 <= j + M * binary, y1 + M * binary >= j+1 
+//					ILP.add(jointX +  " + "  + M  + " " +binaryL+ " >= " + edgeX );
+//					ILP.add(jointX +  " - " + M  + " " +binaryL+ " <= " + edgeX);
+//					ILP.add(nextJointX +  " + "  + M  + " " +binaryL+ " >= " + edgeX);
+//					ILP.add(nextJointX  + " - "  + M  + " " +binaryL+ " <= " +  edgeX);
+//					
+//					ILP.add(jointY +   " - " + M + " " +binaryL + " <= "  + edgeY );
+//					ILP.add(nextJointY   + " + " + M + " " +binaryL + " >= " + edgeT);
+//					
+//					ILP.add(jointX  + " + "  + M  + " " +binaryR+ " >= " + edgeX);
+//					ILP.add(jointX  + " - "  + M  + " " +binaryR+ " <= " + edgeX);
+//					ILP.add(nextJointX  + " + "  + M  +" " + binaryR+ " >= "  + edgeX);
+//					ILP.add(nextJointX  + " - "  + M  +" " + binaryR+ " <= "  + edgeX);
+//					
+//					ILP.add(nextJointY  + " - " + M + " " +binaryR + " <= " + edgeY );
+//					ILP.add(jointY  + " + " + M + " " +binaryR + " >= " +  edgeT );
+//					
+//					
+//					constraint += " + " + binaryL + " + " + binaryR;
+//					count++;
+//				}
+//				
+//			}
+//			constraint += " <= " + (2*count-1);
+//			
+//				
+//				ILP.add(constraint);
+//			
+//			
+//			constraint = "";
+//			count = 0;
+//		}
+//		//if edge is vertical
+//		else if(edge.coord.y == edge.coord.t){
+//			//edge(i,j,i+1,j)
+//		
+//			
+//			for(int path = 0; path <= numPath -1 ; path++){
+//				for(int joint = 0; joint <= numberOfJoints-2; joint++){
+//					int nextJoint = joint + 1;
+//					
+//					
+//					jointX = hashX.get(hash2Int(path,joint));
+//					jointY = hashY.get(hash2Int(path,joint));
+//					nextJointX = hashX.get(hash2Int(path,nextJoint));
+//					nextJointY = hashY.get(hash2Int(path,nextJoint));
+//					binaryU = "binaryU" +"p" +path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//					variables.add(binaryU);variableTypes.add(1);
+//					binaryD = "binaryD" + "p"+path + "j"+joint +"nj"+ nextJoint +"x"+ edgeX + "y"+edgeY + "s"+edgeS +"t" +edgeT;
+//					variables.add(binaryD);variableTypes.add(1);
+//					// -M * binary<=y0-j <= M*binary
+//					// -M * binary <= y1-j <= M*binary
+//					// x0 <= i + M * binary, x1 + M * binary >= i+1 
+//					ILP.add(jointY  + " + "  + M  + " " +binaryU+ " >= "+ edgeY);
+//					ILP.add(jointY   + " - "  + M  +" " + binaryU+ " <=  " + edgeY);
+//					ILP.add(nextJointY  + " + "  + M  +" " + binaryU+ " >= " +  edgeY);
+//					ILP.add(nextJointY   + " - "  + M  +" " + binaryU+ " <= " + edgeY);
+//					
+//					ILP.add(jointX  + " - " + M + " " +binaryU + " <= " + edgeX );
+//					ILP.add(nextJointX + " + " + M + " " +binaryU + " >= "+ edgeS );
+//					
+//					ILP.add(jointY + " + "  + M  + " " +binaryD+ " >= "+ edgeY);
+//					ILP.add(jointY  + " - "  + M  + " " +binaryD+ " <= " + edgeY);
+//					ILP.add(nextJointY  + " + "  + M  +" " + binaryD+ " >= " + edgeY);
+//					ILP.add(nextJointY  + " - "  + M  + " " +binaryD+ " <= "+ edgeY );
+//					
+//					ILP.add(nextJointX   + " - " + M +" " + binaryD + " <= "+ edgeX );
+//					ILP.add(jointX  + " + " + M + " " +binaryD + " >= " + edgeS );
+//					constraint += " + " + binaryU + " + " + binaryD;
+//					count ++;
+//				}
+//			}
+//			
+//			constraint += " <= " + (2*(count) - 1);
+//
+//				
+//			ILP.add(constraint);
+//
+//			constraint = "";
+//			count = 0 ;
+//			
+//		}
+//		
+//	}
+//
+//	
+//	
+//	//set obj 
+//	
+//	obj = "x00 + x01";
 }
 	
 	

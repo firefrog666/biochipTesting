@@ -37,15 +37,19 @@ public class TestBench {
 		//readXml(dataPath,walls,holes);
 		Graph graph;
 		graph = new Graph(WIDTH,HEIGHT);
-		graph.getAcyclicILPExactRoute();
-//		graph.setHeadsTails(direction.Source, direction.Terminal);
-//		graph.splitGraph(5, 5);
-//		try {
-//			graph.getPaths();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		graph.setHeadsTails(direction.Source, direction.Terminal);
+		graph.test();
+/*		graph.getAcyclicILPExactRoute();
+		graph.setHeadsTails(direction.Source, direction.Terminal);
+		graph.splitRow = 5;
+		graph.splitCol = 5;
+*/		
+		try {
+			graph.getPaths();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		
