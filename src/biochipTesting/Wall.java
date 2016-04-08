@@ -7,6 +7,11 @@ public class Wall extends Edge {
 		this.on  = false;
 	}
 	
+	
+	
+	public Wall(int a, int b, int c, int d){
+		super(a , b, c, d);
+	}
 	public Wall(int i){
 		this.number = i;
 		SA1 = false;

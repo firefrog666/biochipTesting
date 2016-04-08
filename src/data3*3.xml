@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<bioChip width="3" height="3">
+	
+	
+	
+	
+	<wall id="0001" x = "0" y= "0" s ="0" t = "1">
+	</wall>
+		<wall id="0102" x = "0" y= "1" s ="0" t = "2">
+	</wall>
+		<wall id="0010" x = "0" y= "0" s ="1" t = "0">
+	</wall>
+		<wall id="1020" x = "1" y= "0" s ="2" t = "0">
+	</wall>
+		<wall id="2021" x = "2" y= "0" s ="2" t = "1">
+	</wall>
+		<wall id="2122" x = "2" y= "1" s ="2" t = "2">
+	</wall>
+		<wall id="1222" x = "1" y= "2" s ="2" t = "2">
+	</wall>
+		<wall id="0212" x = "0" y= "2" s ="1" t = "2">
+	</wall>
+		
+	
+	
+	
+	<!---hole id="2001" x ="0" y="0" s="1" t="0">	
+	</hole-->
+</bioChip>

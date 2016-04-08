@@ -12,6 +12,10 @@ public class Hole extends Edge{
 		SA0 = false;
 	}
 	
+	public Hole(int a, int b, int c, int d){
+		super(a , b, c, d);
+	}
+	
 	public void turnOn(){
 		if(this.SA0)
 			this.on = false;

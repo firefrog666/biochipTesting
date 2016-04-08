@@ -1,7 +1,59 @@
 <?xml version="1.0"?>
-<bioChip width="3" height="3">
-	<!---wall id="1001" x ="1" y="0" s="1" t="1">
-	</wall-->
+<bioChip width="20" height="20">
+	
+	
+	
+		
+	<wall id="1011" x = "1" y= "0" s ="1" t = "1">
+	</wall>
+		<wall id="1213" x = "1" y= "2" s ="1" t = "3">
+	</wall>
+		<wall id="2012" x = "2" y= "0" s ="2" t = "1">
+	</wall>
+		<wall id="2223" x = "2" y= "2" s ="2" t = "3">
+	</wall>
+		<wall id="2131" x = "2" y= "1" s ="3" t = "1">
+	</wall>
+		<wall id="2232" x = "2" y= "2" s ="3" t = "2">
+	</wall>
+		<wall id="2333" x = "2" y= "3" s ="3" t = "3">
+	</wall>
+		<wall id="3141" x = "3" y= "1" s ="4" t = "1">
+	</wall>
+	<wall id="3242" x = "3" y= "2" s ="4" t = "2">
+	</wall>
+		<wall id="3343" x = "3" y= "3" s ="4" t = "3">
+	</wall>
+
+			
+	<wall id="110111" x = "11" y= "0" s ="11" t = "1">
+	</wall>
+		<wall id="1213" x = "11" y= "2" s ="11" t = "3">
+	</wall>
+		<wall id="2012" x = "12" y= "0" s ="12" t = "1">
+	</wall>
+		<wall id="2223" x = "12" y= "2" s ="12" t = "3">
+	</wall>
+		<wall id="2131" x = "12" y= "1" s ="13" t = "1">
+	</wall>
+		<wall id="2232" x = "12" y= "2" s ="13" t = "2">
+	</wall>
+		<wall id="2333" x = "12" y= "3" s ="13" t = "3">
+	</wall>
+		<wall id="3141" x = "13" y= "1" s ="14" t = "1">
+	</wall>
+	<wall id="3242" x = "13" y= "2" s ="14" t = "2">
+	</wall>
+		<wall id="3343" x = "13" y= "3" s ="14" t = "3">
+	</wall>
+	
+	
+	
+	
+		
+	
+	
+	
 	<!---hole id="2001" x ="0" y="0" s="1" t="0">	
 	</hole-->
 </bioChip>

@@ -1,0 +1,132 @@
+Maximize
+Subject to
+headGroupp0gp0 - tailGroupp0tp0 = 0 
+wp0e1112 +  yp0n12 = 1
+ + yp0n12 + headGroupp0gp0 = 1
+wp0e1011 +  yp0n10 = 1
+ + yp0n10 + tailGroupp0tp0 = 1
+headGroupp0gp1 - tailGroupp0tp1 = 0 
+wp0e1121 +  yp0n21 = 1
+ + yp0n21 + headGroupp0gp1 = 1
+wp0e0111 +  yp0n01 = 1
+ + yp0n01 + tailGroupp0tp1 = 1
+ + yp0n12 + yp0n21 = 1
+ + yp0n10 + yp0n01 = 1
+ + tailGroupp0tp0 + tailGroupp0tp1 > 0
+ + headGroupp0gp0 + headGroupp0gp1 > 0
+wp0e0111 + wp0e1011 + wp0e1112 + wp0e1121 + 2 yp0n11 = 2
+  - fp0e0111 - gTp0n01 = 0 
+  - fp0e1011 - gTp0n10 = 0 
+  + fp0e0111  + fp0e1011  - fp0e1112  - fp0e1121 - gTp0n11 = 0 
+flowStoGp0n12 - 10000yp0n12 >= -10000
+flowStoGp0n12 + 10000yp0n12 <= 10000
+  + fp0e1112 + flowStoGp0n12 - gTp0n12 = 0 
+flowStoGp0n21 - 10000yp0n21 >= -10000 asdfas
+flowStoGp0n21 + 10000yp0n21 <= 10000
+  + fp0e1121 + flowStoGp0n21 - gTp0n21 = 0 
+fp0e1011 + 10000 wp0e1011 >= 0
+fp0e1011 - 10000 wp0e1011 <= 0
+fp0e1121 + 10000 wp0e1121 >= 0
+fp0e1121 - 10000 wp0e1121 <= 0
+fp0e1112 + 10000 wp0e1112 >= 0
+fp0e1112 - 10000 wp0e1112 <= 0
+fp0e0111 + 10000 wp0e0111 >= 0
+fp0e0111 - 10000 wp0e0111 <= 0
+ + yp0n01 + gTp0n01 + yp0n10 + gTp0n10 + yp0n11 + gTp0n11 + yp0n12 + gTp0n12 + yp0n21 + gTp0n21 = 5
+headGroupp1gp0 - tailGroupp1tp0 = 0 
+wp1e1112 +  yp1n12 = 1
+ + yp1n12 + headGroupp1gp0 = 1
+wp1e1011 +  yp1n10 = 1
+ + yp1n10 + tailGroupp1tp0 = 1
+headGroupp1gp1 - tailGroupp1tp1 = 0 
+wp1e1121 +  yp1n21 = 1
+ + yp1n21 + headGroupp1gp1 = 1
+wp1e0111 +  yp1n01 = 1
+ + yp1n01 + tailGroupp1tp1 = 1
+ + yp1n12 + yp1n21 = 1
+ + yp1n10 + yp1n01 = 1
+ + tailGroupp1tp0 + tailGroupp1tp1 > 0
+ + headGroupp1gp0 + headGroupp1gp1 > 0
+wp1e0111 + wp1e1011 + wp1e1112 + wp1e1121 + 2 yp1n11 = 2
+  - fp1e0111 - gTp1n01 = 0 
+  - fp1e1011 - gTp1n10 = 0 
+  + fp1e0111  + fp1e1011  - fp1e1112  - fp1e1121 - gTp1n11 = 0 
+flowStoGp1n12 - 10000yp1n12 >= -10000
+flowStoGp1n12 + 10000yp1n12 <= 10000
+  + fp1e1112 + flowStoGp1n12 - gTp1n12 = 0 
+flowStoGp1n21 - 10000yp1n21 >= -10000
+flowStoGp1n21 + 10000yp1n21 <= 10000
+  + fp1e1121 + flowStoGp1n21 - gTp1n21 = 0 
+fp1e1011 + 10000 wp1e1011 >= 0
+fp1e1011 - 10000 wp1e1011 <= 0
+fp1e1121 + 10000 wp1e1121 >= 0
+fp1e1121 - 10000 wp1e1121 <= 0
+fp1e1112 + 10000 wp1e1112 >= 0
+fp1e1112 - 10000 wp1e1112 <= 0
+fp1e0111 + 10000 wp1e0111 >= 0
+fp1e0111 - 10000 wp1e0111 <= 0
+ + yp1n01 + gTp1n01 + yp1n10 + gTp1n10 + yp1n11 + gTp1n11 + yp1n12 + gTp1n12 + yp1n21 + gTp1n21 = 5
+ + wp0e1011 + wp1e1011 >= 1
+ + wp0e1121 + wp1e1121 >= 1
+ + wp0e1112 + wp1e1112 >= 1
+ + wp0e0111 + wp1e0111 >= 1
+Bounds
+-10000 <= fp0e1011 <= 10000
+-10000 <= fp0e1121 <= 10000
+-10000 <= fp0e1112 <= 10000
+-10000 <= fp0e0111 <= 10000
+-10000 <= fp1e1011 <= 10000
+-10000 <= fp1e1121 <= 10000
+-10000 <= fp1e1112 <= 10000
+-10000 <= fp1e0111 <= 10000
+Binaries
+wp0e1011
+wp0e1121
+wp0e1112
+wp0e0111
+headGroupp0gp0
+tailGroupp0tp0
+yp0n12
+gTp0n12
+yp0n10
+gTp0n10
+headGroupp0gp1
+tailGroupp0tp1
+yp0n21
+gTp0n21
+yp0n01
+gTp0n01
+yp0n11
+gTp0n11
+wp1e1011
+wp1e1121
+wp1e1112
+wp1e0111
+headGroupp1gp0
+tailGroupp1tp0
+yp1n12
+gTp1n12
+yp1n10
+gTp1n10
+headGroupp1gp1
+tailGroupp1tp1
+yp1n21
+gTp1n21
+yp1n01
+gTp1n01
+yp1n11
+gTp1n11
+Generals
+fp0e1011
+fp0e1121
+fp0e1112
+fp0e0111
+flowStoGp0n12
+flowStoGp0n21
+fp1e1011
+fp1e1121
+fp1e1112
+fp1e0111
+flowStoGp1n12
+flowStoGp1n21
+END

@@ -1,0 +1,106 @@
+Maximize
+Subject to
+headGroupp0gp0 - tailGroupp0tp0 = 0 
+wp0e1121 +  yp0n21 = 1
+wp0e1020 +  yp0n20 = 1
+ + yp0n21 + yp0n20 + headGroupp0gp0 = 2
+wp0e0001 + wp0e0010 +  yp0n00 = 1
+ + yp0n00 + tailGroupp0tp0 = 1 sdfsdf
+headGroupp0gp1 - tailGroupp0tp1 = 0 
+wp0e1112 +  yp0n12 = 1
+wp0e0102 +  yp0n02 = 1
+ + yp0n12 + yp0n02 + headGroupp0gp1 = 2
+wp0e0001 + wp0e0010 +  yp0n00 = 1
+ + yp0n00 + tailGroupp0tp1 = 1
+ + yp0n21 + yp0n20 + yp0n12 + yp0n02 = 3
+ + yp0n00 = 0
+ + tailGroupp0tp0 + tailGroupp0tp1 > 0
+ + headGroupp0gp0 + headGroupp0gp1 > 0
+wp0e0001 + wp0e0102 + wp0e0111 + 2 yp0n01 = 2
+wp0e0010 + wp0e1011 + wp0e1020 + 2 yp0n10 = 2
+wp0e0111 + wp0e1011 + wp0e1112 + wp0e1121 + 2 yp0n11 = 2
+flowStoGp0n12 - 10000 yp0n12 >= -10000
+flowStoGp0n12 + 10000 yp0n12 <= 10000
+  + fp0e1112 + flowStoGp0n12 - gTp0n12 = 0 
+  - fp0e0001  - fp0e0010 - gTp0n00 = 0 
+  + fp0e0001  - fp0e0102  - fp0e0111 - gTp0n01 = 0 
+flowStoGp0n02 - 10000 yp0n02 >= -10000
+flowStoGp0n02 + 10000 yp0n02 <= 10000
+  + fp0e0102 + flowStoGp0n02 - gTp0n02 = 0 
+  + fp0e0010  - fp0e1011  - fp0e1020 - gTp0n10 = 0 
+  + fp0e0111  + fp0e1011  - fp0e1112  - fp0e1121 - gTp0n11 = 0 
+flowStoGp0n21 - 10000 yp0n21 >= -10000
+flowStoGp0n21 + 10000 yp0n21 <= 10000
+  + fp0e1121 + flowStoGp0n21 - gTp0n21 = 0 
+flowStoGp0n20 - 10000 yp0n20 >= -10000
+flowStoGp0n20 + 10000 yp0n20 <= 10000
+  + fp0e1020 + flowStoGp0n20 - gTp0n20 = 0 
+fp0e1011 + 10000 wp0e1011 >= 0
+fp0e1011 - 10000 wp0e1011 <= 0
+fp0e0001 + 10000 wp0e0001 >= 0
+fp0e0001 - 10000 wp0e0001 <= 0
+fp0e0010 + 10000 wp0e0010 >= 0
+fp0e0010 - 10000 wp0e0010 <= 0
+fp0e1121 + 10000 wp0e1121 >= 0
+fp0e1121 - 10000 wp0e1121 <= 0
+fp0e1020 + 10000 wp0e1020 >= 0
+fp0e1020 - 10000 wp0e1020 <= 0
+fp0e1112 + 10000 wp0e1112 >= 0
+fp0e1112 - 10000 wp0e1112 <= 0
+fp0e0111 + 10000 wp0e0111 >= 0
+fp0e0111 - 10000 wp0e0111 <= 0
+fp0e0102 + 10000 wp0e0102 >= 0
+fp0e0102 - 10000 wp0e0102 <= 0
+ + yp0n12 + gTp0n12 + yp0n00 + gTp0n00 + yp0n01 + gTp0n01 + yp0n02 + gTp0n02 + yp0n10 + gTp0n10 + yp0n11 + gTp0n11 + yp0n21 + gTp0n21 + yp0n20 + gTp0n20 = 8
+Bounds
+-10000 <= fp0e1011 <= 10000
+-10000 <= fp0e0001 <= 10000
+-10000 <= fp0e0010 <= 10000
+-10000 <= fp0e1121 <= 10000
+-10000 <= fp0e1020 <= 10000
+-10000 <= fp0e1112 <= 10000
+-10000 <= fp0e0111 <= 10000
+-10000 <= fp0e0102 <= 10000
+
+Binaries
+wp0e1011
+wp0e0001
+wp0e0010
+wp0e1121
+wp0e1020
+wp0e1112
+wp0e0111
+wp0e0102
+headGroupp0gp0
+tailGroupp0tp0
+yp0n21
+gTp0n21
+yp0n20
+gTp0n20
+yp0n00
+gTp0n00
+headGroupp0gp1
+tailGroupp0tp1
+yp0n12
+gTp0n12
+yp0n02
+gTp0n02
+yp0n01
+gTp0n01
+yp0n10
+gTp0n10
+yp0n11
+gTp0n11
+Generals
+fp0e1011
+fp0e0001
+fp0e0010
+fp0e1121
+fp0e1020
+fp0e1112
+fp0e0111
+fp0e0102
+flowStoGp0n12
+flowStoGp0n02
+flowStoGp0n21
+flowStoGp0n20

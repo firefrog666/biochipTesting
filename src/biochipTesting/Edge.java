@@ -13,12 +13,27 @@ public class Edge extends Node{
 		SA1 = e.SA1;
 		SA0 = e.SA0;
 		isHorizontal = e.isHorizontal;
-		coord = e.coord;
+		coord = new Int4();
+		coord.x = e.coord.x;
+		coord.y = e.coord.y;
+		coord.s = e.coord.s;
+		coord.t = e.coord.t;
+		ifHorizantol();
 	}
 	
 	public Edge(){
 		super();
 		//coordinate = new Int4();
+		ifHorizantol();
+	}
+	
+	public Edge(int a,int b, int c, int d){
+		coord = new Int4();
+		coord.x = a;
+		coord.y = b;
+		coord.s = c;
+		coord.t = d;
+		ifHorizantol();
 	}
 	
 	public Edge(Node a, Node b){
@@ -30,13 +45,13 @@ public class Edge extends Node{
 			a = b;
 			b = temp;
 		}
-		
+		coord = new Int4();
 		coord.x = a.coord.x;
 		coord.y = a.coord.y;
 		coord.s = b.coord.x;
 		coord.t = b.coord.y;
 			
-		
+		ifHorizantol();
 		
 	}
 	
@@ -77,7 +92,16 @@ public class Edge extends Node{
 		coord.y = y;
 		coord.s = s;
 		coord.t = t;
+		
 	}
+	
+	private void ifHorizantol(){
+		if(coord.x != coord.s)
+			isHorizontal = false;
+		if(coord.y != coord.t)
+			isHorizontal = true;
+	}
+	
 	
 	public int hashValue(){
 		int hash = coord.x * 1000000 + coord.y * 10000 + coord.s * 100 + coord.t;
