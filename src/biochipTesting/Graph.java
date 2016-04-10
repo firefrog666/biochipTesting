@@ -2894,7 +2894,7 @@ private void getHashEdgesCut(){
 		for(int path = 0; path <= maxPaths -1; path++  ){
 			ArrayList<Edge> p = new ArrayList<Edge>(); 
 			for(Edge edge: edges){
-				String wVariable = "w" + "p" + path + "e"+ edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t;		
+				String wVariable = "w" + "p" + path + "e"+ "x"+edge.coord.x +"y"+ edge.coord.y + "s"+edge.coord.s+"t"+edge.coord.t;		
 				
 				int xValue;
 				xValue = pathReuslts.get(wVariable);
@@ -4532,8 +4532,8 @@ private void getHashEdgesCut(){
 			hashFVariables1dim= new HashMap<Edge,String>();
 			sGVariable = "flowStoG" + i; 
 			for(Edge edge:edges){
-				wVariable = "w" + "p"+i + "e"+ edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t;
-				fVariable= "f" + "p"+ i +"e"+ edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t; // flow on each edge
+				wVariable = "w" + "p"+i + "e"+ "x"+edge.coord.x + "y" +edge.coord.y + "s"+edge.coord.s+"t"+edge.coord.t;
+				fVariable= "f" + "p"+ i +"e"+ "x" +edge.coord.x + "y"+ edge.coord.y + "s"+ edge.coord.s + "t"+edge.coord.t; // flow on each edge
 				if(!hashWVariables1dim.containsKey(edge)){
 					hashWVariables1dim.put(edge, wVariable);
 					hashFVariables1dim.put(edge, fVariable);
@@ -4551,8 +4551,8 @@ private void getHashEdgesCut(){
 			hashYVariables1dim = new HashMap<Node,String>();
 			hashGTVariables1dim = new HashMap<Node,String>();
 			for(Node node:nodes){
-				yVariable = "y" + "p"+i +"n"+ node.coord.x + node.coord.y;
-				gTVariable = "gT" + "p"+ i + "n"+node.coord.x + node.coord.y;
+				yVariable = "y" + "p"+i +"n"+ "x"+node.coord.x + "y"+node.coord.y;
+				gTVariable = "gT" + "p"+ i + "n"+"x"+node.coord.x +"y"+ node.coord.y;
 				if(!hashYVariables1dim.containsKey(node)){
 					hashYVariables1dim.put(node,yVariable);
 					hashGTVariables1dim.put(node, gTVariable);
@@ -4786,8 +4786,8 @@ private void getHashEdgesCut(){
 			hashFVariables1dim= new HashMap<Edge,String>();
 			
 			for(Edge edge:edges){
-				wVariable = "w" + "p"+path + "e"+ edge.coord.x + edge.coord.y + edge.coord.s+edge.coord.t;
-				fVariable= "f" + "p"+ path +"e"+ edge.coord.x + edge.coord.y + edge.coord.s + edge.coord.t; // flow on each edge
+				wVariable = "w" + "p"+path + "e"+ "x" +edge.coord.x + "y"+edge.coord.y + "s"+edge.coord.s+"t"+edge.coord.t;
+				fVariable= "f" + "p"+ path +"e"+ "x" +edge.coord.x + "y"+edge.coord.y + "s"+edge.coord.s+"t"+edge.coord.t; // flow on each edge
 				if(!hashWVariables1dim.containsKey(edge)){
 					hashWVariables1dim.put(edge, wVariable);
 					hashFVariables1dim.put(edge, fVariable);
@@ -4807,8 +4807,8 @@ private void getHashEdgesCut(){
 			hashGTVariables1dim = new HashMap<Node,String>();
 			
 			for(Node node:nodes){
-				yVariable = "y" + "p"+path +"n"+ node.coord.x + node.coord.y;
-				gTVariable = "gT" + "p"+ path + "n"+node.coord.x + node.coord.y;
+				yVariable = "y" + "p"+path +"n"+"x"+ node.coord.x + "y"+node.coord.y;
+				gTVariable = "gT" + "p"+ path + "n"+"x"+node.coord.x +"y"+ node.coord.y;
 				if(!hashYVariables1dim.containsKey(node)){
 					hashYVariables1dim.put(node,yVariable);
 					hashGTVariables1dim.put(node, gTVariable);					
@@ -5067,8 +5067,8 @@ private void getHashEdgesCut(){
 			//for other nodes
 			for(Node node:nodes){
 				if(!allheadTailNodes.contains(node)){
-					yVariable = "y" + "p"+path +"n"+ node.coord.x + node.coord.y;
-					gTVariable = "gT" + "p"+ path + "n"+node.coord.x + node.coord.y;
+					yVariable = "y" + "p"+path +"n"+ "x"+node.coord.x + "y"+node.coord.y;
+					gTVariable = "gT" + "p"+ path + "n"+"x"+node.coord.x +"y"+ node.coord.y;
 					if(!hashYVariables1dim.containsKey(node)){
 						hashYVariables1dim.put(node,yVariable);
 						hashGTVariables1dim.put(node, gTVariable);
@@ -5127,7 +5127,7 @@ private void getHashEdgesCut(){
 				//flowGtoT - M * y >= -M
 				//flowGtoT+M*y <= M
 				if(allheadNodes.contains(node)){
-					sGVariable = "flowStoG" + "p"+path+ "n" + node.coord.x + node.coord.y;
+					sGVariable = "flowStoG" + "p"+path+ "n" +"x"+ node.coord.x +"y"+ node.coord.y;
 					variables.add(sGVariable); variableTypes.add(0);
 					yVariable = hashYVariables1dim.get(node);
 					fConstraint = fConstraint + " + " + sGVariable + " - " + gTVariable ; 

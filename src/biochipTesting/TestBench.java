@@ -21,8 +21,8 @@ import java.util.Stack;
 //import gurobi.GRBException;
 
 public class TestBench {
-	private static int WIDTH = 45;
-	private static int HEIGHT = 45;
+	private static int WIDTH = 5;
+	private static int HEIGHT = 5;
 	private static int maxPaths = 2;
 			
 	private static final String dataPath =  "/home/ga63quk/workspace/biochipTestGit/biochipTesting/src/data.xml";
@@ -41,7 +41,7 @@ public class TestBench {
 		graph.setHoles(holes);
  		graph.setWalls(walls);
  		graph.setHeadsTails(direction.Source, direction.Terminal);
- 		graph.splitGraph(9, 9);
+ 		//graph.splitGraph(9, 9);
  		try {
 			graph.getPaths(maxPaths);
 			graph.findMorePaths();
